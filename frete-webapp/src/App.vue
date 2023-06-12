@@ -6,9 +6,9 @@ const route = useRoute()
 </script>
 
 <template> 
-  <TheNavigation></TheNavigation>  
 <div class="container">
 
+  <TheNavigation></TheNavigation>  
   <RouterView :key="route.path"/>
 </div>
 </template>
