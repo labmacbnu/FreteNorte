@@ -6,10 +6,14 @@ const user  = useUserStore()
 </script>
 
 <template>
- Home
- <a @click="user.logout" href="#">Sair</a>
-
- {{ user.email }}
- {{ user.role }}
+    <!-- <img class="float-end" :src="user.photoURL"> -->
+    <div class="row my-3">
+        <div class="col">
+ <h2>{{user.displayName}}</h2>
+ <p class="fst-italic"> {{ user.email }} 
+ <span class="badge text-bg-warning">{{ user.role }}</span></p>
+ <!-- {{ user }} -->
+ </div></div>
+ <a class="btn btn-primary float-end" @click="user.logout" href="#">Sair</a>
 </template>
 

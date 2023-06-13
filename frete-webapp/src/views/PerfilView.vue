@@ -4,8 +4,7 @@ import { useRoute } from 'vue-router';
 const route = useRoute()
 </script>
 
-<template>
- Perfil
+<template> 
  <RouterView :key="route.path"/>
 </template>
 
