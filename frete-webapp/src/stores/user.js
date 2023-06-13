@@ -26,7 +26,8 @@ async function getUserRole(email){
 
 async function loginWithGoogle() {
     const provider = new GoogleAuthProvider();
-    const auth = getAuth(firebaseApp);
+    const auth = getAuth(firebaseApp); 
+
     var result = await signInWithPopup(auth, provider)
     if (!result.errorCode) {
         // This gives you a Google Access Token. You can use it to access the Google API.
@@ -84,14 +85,16 @@ export const useUserStore = () => {
         
                 this.resetDisc()
             },
-            fromDisc() {
-                const localUser = JSON.parse(localStorage.getItem('user'))
-                if (localUser) {
+            autologin() {
+                const auth = getAuth(firebaseApp); 
+                const user = auth.currentUser;
+                if (user) {
+
                     this.$patch({
                         isLogged: true,
-                        ...localUser
+                        ...user
                     })
-                }
+                 } 
             },
             resetDisc() {
                 localStorage.removeItem("user")
@@ -100,7 +103,7 @@ export const useUserStore = () => {
     })
     const user = innerStore()
     if (!user.isLogged) {
-        user.fromDisc()
+        user.autologin()
     }
     return user;
 }
