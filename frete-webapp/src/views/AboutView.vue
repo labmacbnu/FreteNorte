@@ -1,4 +1,0 @@
-<template>
- Perfil
-</template>
-
