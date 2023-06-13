@@ -1,1 +1,35 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+.DS_Store
+dist
+dist-ssr
+coverage
+*.local
+
+/cypress/videos/
+/cypress/screenshots/
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*firebaseConfig.js
+frete-norte-ufsc-blumenau-firebase-adminsdk-3qdzb-b4fc0b840c.json
+pythonSDK/json/ambientes.json
+pythonSDK/json/edificios.json
+pythonSDK/json/permanentes.json
+pythonSDK/.env
 frete-webapp/.firebase/hosting.ZGlzdA.cache
