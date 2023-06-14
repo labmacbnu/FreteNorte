@@ -44,7 +44,7 @@ function load_on_input() {
     <div class="accordion" id="acordeao">
         <AcordeaoChild v-for="(valor, chave, n) in items.dados_agrupados" pai="acordeao" :aid="'acord' + n">
             <template #titulo>
-                <span class="badge text-bg-info mx-1">{{valor.length}}</span> {{chave}} 
+                <span class="badge rounded-pill text-bg-secondary mx-1">{{valor.length}}</span> {{chave}} 
             </template>
             
             <template #corpo>
