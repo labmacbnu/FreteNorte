@@ -1,7 +1,10 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import { useUserStore } from '../stores/user'
+import { getAuth } from 'firebase/auth'
+import { firebaseApp } from '../firebaseConfig'
 
+const auth = getAuth(firebaseApp)
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -86,9 +89,9 @@ const router = createRouter({
 router.beforeEach(async (to, from) => {
   // routes with `meta: { requiresAuth: true }` will check for the users, others won't
   if (to.meta.requiresAuth) { 
-    const user = useUserStore();
+    const user = auth.currentUser
     // if the user is not logged in, redirect to the login page
-    if (!user.isLogged) {
+    if (!user) {
       return {
         name: 'login', 
         query: {
