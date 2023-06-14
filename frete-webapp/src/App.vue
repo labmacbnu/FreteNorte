@@ -9,7 +9,6 @@ const user = useUserStore();
 const ambientes = useAmbientesStore() 
 const route = useRoute()
 
-onBeforeMount( async () => ambientes.load_data())
 
 </script>
 
@@ -22,4 +21,7 @@ onBeforeMount( async () => ambientes.load_data())
 </template>
 
 <style scoped> 
+.container{
+  padding-bottom: 100px;
+}
 </style>
