@@ -48,7 +48,13 @@ const router = createRouter({
       component: () => import('../views/ItemsView.vue'),
       meta: {
         requiresAuth: true
-      }
+      },
+      children: [
+        {name: 'items-ambiente',
+        path: '/items/ambiente/:ambiente',
+        component: () => import('../views/ItemsAmbiente.vue')
+       }
+      ]
     }, 
     {
       path: '/pacotes',
