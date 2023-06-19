@@ -7,15 +7,19 @@ import { firebaseApp } from '../firebaseConfig'
 
 export const useAmbientesStore = defineStore('ambientes', ()=>{ 
     const db = getFirestore(firebaseApp)
-    const dados = ref([])
-    const selected = ref("")
+    const dados = ref([]) 
+    const selected = ref("") 
+    var loaded = false; 
     async function load_data(){
-        const querySnapshot = await getDocs(collection(db, "ambientes"));
-        querySnapshot.forEach( function (doc) { 
-            var docdt = doc.data()
-            docdt.valor = docdt.ambiente_codigo + ' - ' + docdt.ambiente_nome 
-            dados.value.push(docdt) 
-        } )
+        if(!loaded) {
+            const querySnapshot = await getDocs(collection(db, "ambientes"));
+            querySnapshot.forEach( function (doc) { 
+                var docdt = doc.data()
+                docdt.valor = docdt.ambiente_codigo + ' - ' + docdt.ambiente_nome 
+                dados.value.push(docdt) 
+            })
+            loaded = true;
+        }
     }
 
     return {dados, load_data} 
