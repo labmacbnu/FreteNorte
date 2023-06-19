@@ -8,6 +8,7 @@ import { firebaseApp } from '../firebaseConfig'
 export const useAmbientesStore = defineStore('ambientes', ()=>{ 
     const db = getFirestore(firebaseApp)
     const dados = ref([])
+    const selected = ref("")
     async function load_data(){
         const querySnapshot = await getDocs(collection(db, "ambientes"));
         querySnapshot.forEach( function (doc) { 
@@ -16,5 +17,6 @@ export const useAmbientesStore = defineStore('ambientes', ()=>{
             dados.value.push(docdt) 
         } )
     }
+
     return {dados, load_data} 
 })
