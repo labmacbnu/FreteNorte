@@ -69,11 +69,5 @@ export const useItemsStore = defineStore('items', ()=>{
         }
     })
 
-    const chaves_ordenadas = computed(() => {
-        if(dados.value) {
-            lista.sort()
-            return lista
-        }
-    })
-    return {ambiente, dados, load_data, dados_agrupados, chaves_ordenadas}
+    return {ambiente, dados, load_data, dados_agrupados}
 })
