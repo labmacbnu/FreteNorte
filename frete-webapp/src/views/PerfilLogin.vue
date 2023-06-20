@@ -1,15 +1,13 @@
 <script setup>
 import { useRoute, useRouter } from "vue-router";
 import { useUserStore } from "../stores/user";
-import { computed, onBeforeUpdate } from "vue";
-import { onBeforeMount } from "vue";
+import {  onBeforeMount, onBeforeUpdate } from "vue"; 
 
 const router = useRouter();
-const user = useUserStore();
+const user = useUserStore()
+const route = useRoute()
 
-
-function redirectproperly() {
-    const route = useRoute()
+function redirectproperly() { 
     var next = route.query.redirect
     if (!next) {
         var next = { name: 'perfil' }
@@ -20,8 +18,8 @@ function redirectproperly() {
 
 }
 
-onBeforeMount(redirectproperly )
-onBeforeUpdate(redirectproperly )
+onBeforeMount(() => redirectproperly)
+onBeforeUpdate(redirectproperly)
 
 </script>
 
