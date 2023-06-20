@@ -89,7 +89,6 @@ export const useUserStore = () => {
                 const auth = getAuth(firebaseApp); 
                 const user = auth.currentUser;
                 if (user) {
-
                     this.$patch({
                         isLogged: true,
                         ...user
