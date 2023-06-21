@@ -30,7 +30,7 @@ const links = reactive([{
 </script>
 
 <template>
-    <nav id="lemanavbar" class="navbar navbar-expand fixed-bottom">
+    <nav id="lemanavbar" class="navbar navbar-expand fixed-top">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
                 aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
@@ -44,7 +44,7 @@ const links = reactive([{
                     </li>
                 </ul>
                 <form class="d-flex" role="search">
-                    <NavLink :rto="{ name: 'perfil' }" icon="bi-person" label="Perfil"></NavLink>
+                    <NavLink :rto="{ name: 'login' }" icon="bi-person" label="Perfil"></NavLink>
                 </form>
             </div>
         </div>

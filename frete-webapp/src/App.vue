@@ -22,6 +22,6 @@ const route = useRoute()
 
 <style scoped> 
 .container{
-  padding-bottom: 100px;
+  padding-top: 100px;
 }
 </style>
