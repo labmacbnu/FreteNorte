@@ -30,7 +30,7 @@ const links = reactive([{
 </script>
 
 <template>
-    <nav id="lemanavbar" class="navbar navbar-expand fixed-top">
+    <nav id="lemanavbar" class="navbar navbar-expand fixed-top d-print-none">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
                 aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
