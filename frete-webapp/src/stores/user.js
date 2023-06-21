@@ -57,7 +57,7 @@ export async function globalLogout(){
 }
 
 export const useUserPermissionsStore = defineStore("permissoesusuarios", {
-        state: () => ({role: null, email: null}),
+        state: () => ({role: null, email: null, ambientes: null}),
         actions: {
             async get_permissions(){
                 if(this.role == null){ 
