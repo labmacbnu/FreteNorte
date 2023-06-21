@@ -3,12 +3,10 @@ import { computed, onBeforeMount, ref } from 'vue';
 import { useAmbientesStore } from '../stores/ambientes';
 import { useItemsStore } from '../stores/items'
 import AcordeaoChild from '../components/AcordeaoChild.vue';
-import { RouterLink, RouterView, useRoute } from 'vue-router';
-import { useUserStore } from '../stores/user';
+import { RouterLink, RouterView, useRoute } from 'vue-router'; 
 
 const route = useRoute()
 const ambientes = useAmbientesStore() 
-const user  = useUserStore()
 
 const selected = ref("")
 

@@ -1,46 +1,50 @@
-<script setup> 
-import { loginWithGoogle, globalLogout, useUserStore } from '../stores/user'
-import { useRoute, useRouter } from "vue-router"; 
-import {  computed, inject, onBeforeMount, onBeforeUpdate } from "vue"; 
+<script setup>
+import { loginWithGoogle, globalLogout, useUserPermissionsStore } from '../stores/user'
+import { useRoute, useRouter } from "vue-router";
+import { computed, inject, onBeforeMount, onBeforeUpdate, onMounted } from "vue";
+import { getUserPermissions } from '../stores/user';
 
-const user = useUserStore();
-const {globaluser, updateUser} = inject('globaluser') 
 const router = useRouter();
+const { globaluser, updateUser } = inject('globaluser')
+const permission = useUserPermissionsStore();
 
 function redirectproperly() {
-    const {globaluser, updateUser} = inject('globaluser') 
+    const { globaluser, updateUser } = inject('globaluser')
     const route = useRoute();
-    const proximo = route.query.redirect 
+    const proximo = route.query.redirect
     if (globaluser.value) {
-        if(proximo != null) {
+        if (proximo != null) {
             //console.log(proximo)
-            router.push({path: proximo})
+            router.push({ path: proximo })
         } else {
             console.log("mas que caralho")
         }
     } else {
         console.log('que inferno')
-            //router.push({name: "login"})
+        //router.push({name: "login"})
     }
 }
-onBeforeMount(redirectproperly)
+ 
+
+onBeforeMount(redirectproperly) 
 onBeforeUpdate(redirectproperly)
 
 </script>
 
 <template>
- <template v-if="globaluser">
-    <div class="row">
-    <div class="col">
-         <h2>{{globaluser.displayName}}</h2>
-            <p class="fst-italic"> {{ globaluser.email }} 
-            <span class="badge text-bg-warning">{{ user.role }}</span></p> 
+    <template v-if="globaluser">
+        <div class="row">
+            <div class="col">
+                <h2>{{ globaluser.displayName }}</h2>
+                <p class="fst-italic"> {{ globaluser.email }}
+                    <span class="badge text-bg-warning">{{ permission.role }}</span>
+                </p>
+            </div>
+            <div class="col">
+                <button class="btn btn-primary" @click="globalLogout">Logout</button>
+            </div> 
         </div>
-        <div class="col">
-            <button class="btn btn-primary" @click="globalLogout">Logout</button>
-        </div>
-        </div>
-       
+
     </template>
     <template v-else>
         O recurso que você está querendo acessar requer que você faça login.
