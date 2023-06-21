@@ -14,11 +14,11 @@ export async function registra_atividade(email, atividade){
     } )
 }
 
-export async function getUserRole(email){ 
+export async function getUserPermissions(email){ 
     const user_registry = await getDoc(doc(db, "permissoes", email))
     if (user_registry.exists()) {
         const permissoes = user_registry.data()
-        return permissoes.role
+        return permissoes
       } else {
         return null
       }
@@ -56,42 +56,20 @@ export async function globalLogout(){
     await signOut(auth)
 }
 
-export const useUserStore = defineStore("usuario", { 
-        state: () => ({ 
-            displayName: "",
-            email: "",
-            photoURL: "",
-            role: ""
-        }),
-        actions: { 
-            async login() {
-                const user = await loginWithGoogle()
-                await registra_atividade( this.email, "login")
-                this.$patch({ 
-                    ...user
-                })
-                const role = await getUserRole(this.email)
-                this.$patch({role: role})
+export const useUserPermissionsStore = defineStore("permissoesusuarios", {
+        state: () => ({role: null, email: null}),
+        actions: {
+            async get_permissions(){
+                if(this.role == null){ 
+                    const permissoes = await getUserPermissions(this.email) 
+                    this.$patch({...permissoes})
+                }
             },
-            async logout() { 
-                await registra_atividade( this.email, "logout")
-                await globalLogout()
-                this.$patch({
-                    displayName: "",
-                    email: "",
-                    photoURL: "",
-                    role: ""
-                })
- 
+            set_email(new_mail) {
+                this.email = new_mail
             },
-            async get_properties(){
-                const role = await getUserRole(this.email)
-                this.$patch({role: role})
-            },
-            async load_global(){
-                const globaluser = inject("globaluser")
-                this.$patch({...globaluser})
+            reset(){
+                this.$reset()
             }
-            
         }
-})  
+}) 
