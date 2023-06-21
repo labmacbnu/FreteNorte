@@ -4,10 +4,13 @@ import { useAmbientesStore } from '../stores/ambientes';
 import { useItemsStore } from '../stores/items'
 import AcordeaoChild from '../components/AcordeaoChild.vue';
 import { RouterLink, RouterView, useRoute } from 'vue-router';
+import { useUserPermissionsStore } from '../stores/user';
 
 const route = useRoute()
 const ambientes = useAmbientesStore()
 const items = useItemsStore()
+const permissions = useUserPermissionsStore()
+
 
 const selected = ref("")
 
@@ -20,8 +23,10 @@ const ambientes_filtrados = computed(() => {
     }
 })
 
+const meus_ambientes = computed( () => {
+    return ambientes.dados.filter( obj =>  permissions.ambientes.includes(obj.ambiente_codigo))
 
-//onBeforeMount(async () => ambientes.load_data())
+})
 
 
 </script>
@@ -29,6 +34,13 @@ const ambientes_filtrados = computed(() => {
 
 <template>
     <h1>Items</h1>
+    <h2>Seus ambientes</h2> 
+    <div class="my-3">
+        <p v-for="x in meus_ambientes">
+        <RouterLink  :to="{ name: 'items-ambiente', params: { ambiente: x.ambiente_codigo } }">{{x.valor}}</RouterLink>
+        </p>
+    </div>
+    <h3 >Pesquisa por ambiente</h3>
     <p>Começe a digitar o nome do ambiente e selecione da lista que aparecer. Após, pressione o botão <em>Carregar</em> para
         listar os itens desse ambiente</p>
     <div class="input-group mb-3">
@@ -43,4 +55,6 @@ const ambientes_filtrados = computed(() => {
             </RouterLink>
         </li>
     </ul> 
+
+
 </template>
