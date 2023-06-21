@@ -1,19 +1,28 @@
 <script setup>
-import { useUserStore } from '../stores/user';
+import { inject } from "vue";
+import { useUserStore } from "../stores/user";
+import { RouterLink } from "vue-router";
 
-const user  = useUserStore()
+const globaluser = inject("globaluser")
+const user = useUserStore()
 
 </script>
 
 <template>
     <!-- <img class="float-end" :src="user.photoURL"> -->
-    <div class="row my-3">
+    <div v-if="globaluser" class="row my-3">
         <div class="col">
- <h2>{{user.displayName}}</h2>
- <p class="fst-italic"> {{ user.email }} 
- <span class="badge text-bg-warning">{{ user.role }}</span></p>
+         <h2>{{globaluser.displayName}}</h2>
+            <p class="fst-italic"> {{ globaluser.email }} 
+            <span class="badge text-bg-warning">{{ user.role }}</span></p>
  <!-- {{ user }} -->
- </div></div>
- <a class="btn btn-primary float-end" @click="user.logout" href="#">Sair</a>
+        </div>
+        </div>
+
+        {{ globaluser }}
+        {{ user }}
+        
+        <RouterLink :to="{name: 'login'}">login</RouterLink>
+ <a class="btn btn-primary float-end" @click="() => user.logout()" href="#">Sair</a>
 </template>
 
