@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import { useUserStore } from '../stores/user'
 import { getAuth } from 'firebase/auth'
 import { firebaseApp } from '../firebaseConfig'
+import { inject } from 'vue'
 
 const auth = getAuth(firebaseApp)  
 
@@ -17,28 +18,13 @@ const router = createRouter({
         requiresAuth: false
       }
     },
-    {
-      path: '/perfil',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.  
-      component: () => import('../views/PerfilView.vue'),
-      children: [
-        {
-          name: 'perfil',
-          path: '',
-          component: () => import('../views/PerfilHome.vue'),
-          meta: {
-            requiresAuth: true
-          }
-        },
-        {
-          name: 'login',
-          path: 'login',
-          component: () => import('../views/PerfilLogin.vue')
-        }
-
-      ]
+    { 
+        name: 'login',
+        path: '/login',
+        component: () => import('../views/PerfilLogin.vue'),
+      meta: {
+        requiresAuth: false
+      }
     },
     {
       path: '/items', 
@@ -103,23 +89,5 @@ const router = createRouter({
   ]
 })
 
-router.beforeEach(async (to, from) => {
-
-  const user = useUserStore()
-  // routes with `meta: { requiresAuth: true }` will check for the users, others won't
-  if (to.meta.requiresAuth) {
-    // if the user is not logged in, redirect to the login page
-    if (!user.isLogged) {
-      return {
-        name: 'login',
-        query: {
-          // we keep the current path in the query so we can redirect to it after login
-          // with `router.push(route.query.redirect || '/')`
-          redirect: to.fullPath,
-        },
-      }
-    }
-  }
-})
 
 export default router
