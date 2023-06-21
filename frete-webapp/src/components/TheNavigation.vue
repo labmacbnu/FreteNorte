@@ -12,9 +12,9 @@ const links = reactive([{
     icon: 'bi-clipboard-check',
     label: "Items"
 }, {
-    rto: { name: 'pacotes' },
+    rto: { name: 'volumes' },
     icon: 'bi-box-seam',
-    label: 'Pacotes'
+    label: 'Volumes'
 }, {
     rto: { name: 'lotes' },
     icon: 'bi-boxes',
