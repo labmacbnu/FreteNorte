@@ -5,6 +5,7 @@ import { useAmbientesStore } from './stores/ambientes';
 import {  provide, ref } from 'vue';
 import { getAuth, onAuthStateChanged } from 'firebase/auth'
 import { firebaseApp } from './firebaseConfig'
+import { useUserPermissionsStore } from './stores/user';
  
  
 const ambientes = useAmbientesStore() 
@@ -12,7 +13,8 @@ const route = useRoute()
 const router = useRouter()
 
 
-const globaluser = ref(null)
+const globaluser = ref(null) 
+const permission = useUserPermissionsStore();
 
 function updateUser(state) {
     globaluser.value = state
@@ -23,12 +25,16 @@ const auth = getAuth(firebaseApp);
 onAuthStateChanged(auth, (user) => {
   if (user) {
     updateUser(user)
+    permission.set_email(user.email)
+    permission.get_permissions()
   } else {
     updateUser(null)
+    permission.reset()
   }
 });
 
 provide('globaluser', {globaluser, updateUser})
+
 
 router.beforeEach( (to, from, next) => { 
   // routes with `meta: { requiresAuth: true }` will check for the users, others won't
