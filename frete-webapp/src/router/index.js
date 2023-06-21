@@ -1,6 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
-import { useUserStore } from '../stores/user'
+import HomeView from '../views/HomeView.vue' 
 import { getAuth } from 'firebase/auth'
 import { firebaseApp } from '../firebaseConfig'
 import { inject } from 'vue'
