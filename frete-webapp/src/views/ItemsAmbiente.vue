@@ -1,12 +1,12 @@
 <script setup>
 import { computed, onBeforeMount, onBeforeUpdate, onMounted, onUpdated, ref } from 'vue';
 import { useAmbientesStore } from '../stores/ambientes';
-import { useItemsStore } from '../stores/items'
+import { useItemsAmbienteStore } from '../stores/items'
 import AcordeaoChild from '../components/AcordeaoChild.vue';
 import { RouterLink, useRoute } from 'vue-router';
 
 const ambientes = useAmbientesStore()
-const items = useItemsStore()
+const items = useItemsAmbienteStore()
 const route = useRoute()
 
 const ambiente_completo = computed( () => {
