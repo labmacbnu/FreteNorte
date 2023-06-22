@@ -50,6 +50,11 @@ const router = createRouter({
           path: 'cod/:codigo',
           component: () => import('../views/ItemsCod.vue')
         },
+        {
+          name: 'item-descricao',
+          path: 'descricao',
+          component: () => import('../views/ItemsDescricao.vue')
+        }
       ]
     },
     {

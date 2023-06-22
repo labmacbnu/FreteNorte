@@ -35,7 +35,7 @@ function groupBy(list, keyGetter) {
  
 
 
-export const useItemsStore = defineStore('items', ()=>{
+export const useItemsAmbienteStore = defineStore('items-ambiente', ()=>{
  const ambiente = ref(null)
  
  const inner_db = reactive({})
@@ -71,3 +71,55 @@ export const useItemsStore = defineStore('items', ()=>{
 
     return {ambiente, dados, load_data, dados_agrupados}
 })
+
+export const useDescricoesStore = defineStore("short-descricoes", {
+    state: () => ({short_descricoes: null}),
+    actions: {
+        async load_data(){
+            const docRef = doc(db, "agregados", "items");
+            const docSnap = await getDoc(docRef);
+            const $doc = docSnap.data()
+            this.$patch({... $doc})
+        }
+    }
+
+})
+
+
+
+export const useItemsDescricaoStore = defineStore('items-descricao', ()=>{
+    const short_descricao = ref(null)
+    
+    const inner_db = reactive({})
+    const dados = computed( () => {
+       if(short_descricao.value){
+           return inner_db[short_descricao.value]
+       }})
+   
+    async function load_data(){
+       // só carrega o que não tá na inner_bd
+       if (! inner_db.hasOwnProperty(short_descricao.value) ){
+           const q = query(collection(db, "items"), where('short_descricao', '==', short_descricao.value))
+           const querySnapshot = await getDocs(q);
+           inner_db[short_descricao.value] = [];
+           querySnapshot.forEach( function (doc) {  
+               inner_db[short_descricao.value].push(doc.data()) 
+            })
+           }
+       }
+   
+       const dados_agrupados = computed( () =>  { 
+           if(dados.value) {
+               var mapa = groupBy(dados.value, x => x.ambiente);
+               var chaves = Array.from(mapa.keys())
+               chaves.sort()
+               var objeto_organizado = {}
+               for(var k of chaves){
+                   objeto_organizado[k] = mapa.get(k)
+               }
+               return objeto_organizado
+           }
+       })
+   
+       return {short_descricao, dados, load_data, dados_agrupados}
+   })
