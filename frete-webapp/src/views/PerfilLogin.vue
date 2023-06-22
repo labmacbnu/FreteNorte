@@ -17,11 +17,10 @@ function redirectproperly() {
             //console.log(proximo)
             router.push({ path: proximo })
         } else {
-            console.log("mas que caralho")
+            
         }
-    } else {
-        console.log('que inferno')
-        //router.push({name: "login"})
+    } else { 
+        
     }
 }
  
