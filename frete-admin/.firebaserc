@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "frete-norte-ufsc-blumenau"
+  },
+  "targets": {
+    "frete-norte-ufsc-blumenau": {
+      "hosting": {
+        "admin": [
+          "admin-frete-norte-ufsc-blumenau"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
