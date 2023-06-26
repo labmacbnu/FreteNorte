@@ -37,9 +37,10 @@ const ambiente_completo = computed( () => {
             
             <template #corpo>
             <ul class="list-group">
-                <li class="list-group-item" v-for="subitem in valor">
+                <li class="list-group-item d-flex justify-content-between align-items-center" v-for="subitem in valor">
                     {{ subitem.descricao }}
-                    <RouterLink :to="{name: 'item-codigo', params: {codigo: subitem.key }}">Ver item</RouterLink>
+                    <span class="badge badge-primary badge-pill">
+                    <RouterLink :to="{name: 'item-codigo', params: {codigo: subitem.key }}">Ver item</RouterLink></span>
                 </li>
             </ul>
         </template>
