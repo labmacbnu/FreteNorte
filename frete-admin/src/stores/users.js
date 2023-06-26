@@ -33,6 +33,12 @@ export const useUsuariosStore = defineStore("userscontrol", () => {
         const docref = doc(db, "permissoes", email)
         const uptime = await updateDoc(docref, {ambientes: arrayRemove(ambiente)})
     }
+    async function update_user(user) {
+        const docref = doc(db, "permissoes", user.email)
+        const uptime = await updateDoc(docref, {ambientes: user.ambientes, role: user.role})
+        return uptime
+    }
 
-    return {usuarios, load_data, update_role, add_ambiente, remove_ambiente}
+
+    return {usuarios, load_data, update_user}
 })
