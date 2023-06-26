@@ -91,7 +91,7 @@ onBeforeMount(async () => await usuarios.load_data())
                 <td> <code>{{ user.email }}</code> </td>
                 <td> {{ user.role }} </td>
                 <td> <span class="badge text-bg-primary m-1" v-for="x in user.ambientes">{{x}}</span></td>
-                <td> <button class="btn btn-secondary no-wrap" data-bs-target="#BossaModal" data-bs-toggle="modal"
+                <td> <button title="Editar usuário" class="btn btn-secondary no-wrap" data-bs-target="#BossaModal" data-bs-toggle="modal"
                     @click="() => selectmail = user.email"><i class="bi bi-pencil"></i></button> </td>
             </tr>
         </tbody>
