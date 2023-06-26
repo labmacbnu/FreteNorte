@@ -38,6 +38,20 @@ function update_user(email){
     usuarios.update_user(referencia)
 }
 
+const pesquisa_usuario = ref(null)
+
+const usuarios_filtrados = computed(() => {
+    const lista_usuarios = Object.values(usuarios.usuarios) 
+    if(pesquisa_usuario.value) {
+        const regex = new RegExp(`.*${pesquisa_usuario.value}.*`, 'i')
+        const filtrado = lista_usuarios.filter( elem => regex.test(elem.nome) || regex.test(elem.email) )
+        return filtrado
+    } else {
+        return lista_usuarios
+    }
+
+})
+
 onBeforeMount(async () => await usuarios.load_data())
 </script>
 <template>
@@ -83,10 +97,9 @@ onBeforeMount(async () => await usuarios.load_data())
         </thead>
         <tbody>
             <tr>
-                <td colspan="5"><input placeholder="Digite para pesquisar" class="form-control" ></td>
-                
+                <td colspan="5"><input v-model="pesquisa_usuario" placeholder="Digite para pesquisar" class="form-control" ></td>
             </tr>
-            <tr v-for="(user, email) in usuarios.usuarios">
+            <tr v-for="(user, index) in usuarios_filtrados">
                 <td> {{ user.nome }} </td>
                 <td> <code>{{ user.email }}</code> </td>
                 <td> {{ user.role }} </td>
