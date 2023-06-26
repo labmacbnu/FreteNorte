@@ -32,7 +32,8 @@ onBeforeMount(lista_ambientes.load_data)
 </script>
 <template>  
 <div class="mt-3">
-<input @keydown.enter="checkadd" v-model="ambiente_input" placeholder="Digite para adicionar" class="form-control mb-1" list="ambientes">
+<input @keydown.enter="checkadd" v-model="ambiente_input" 
+placeholder="Digite para pesquisar, <Enter> para adicionar" class="form-control mb-1" list="ambientes">
 <datalist id="ambientes">
   <option v-for="amb in lista_selecionavel">{{ amb }}</option>
 </datalist>
