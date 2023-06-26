@@ -16,9 +16,15 @@ const user_edit = computed( () => {
 }
 })
 
+function update_role(email, role){
+    usuarios.usuarios[email].role = role
+}
+
+
 function add_ambiente(email, ambiente){
     usuarios.usuarios[email].ambientes.push(ambiente)
 }
+
 
 
 function remove_ambiente(email, ambiente){
@@ -27,10 +33,15 @@ function remove_ambiente(email, ambiente){
     
 }
 
+function update_user(email){
+    const referencia = usuarios.usuarios[email]
+    usuarios.update_user(referencia)
+}
+
 onBeforeMount(async () => await usuarios.load_data())
 </script>
 <template>
-    <Modal modalid="BossaModal">
+    <Modal modalid="BossaModal" :salve_callback="() => update_user(user_edit.email)">
  <template #titulo>Editar usuário</template>
  <template #corpo>
     <div class="mb-3">
@@ -45,7 +56,9 @@ onBeforeMount(async () => await usuarios.load_data())
 
     <div class="mb-3">
     <label for="perfil" class="form-label">Perfil</label>
-    <UserRole id="perfil" :role="user_edit.role" label="Perfil"></UserRole>
+    <UserRole id="perfil" :role="user_edit.role" label="Perfil"
+    @updaterole="(x) => update_role(user_edit.email, x)"
+    ></UserRole>
     </div>  
 
     <div class="mb-3">
