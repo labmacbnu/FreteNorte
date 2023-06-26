@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia'
 import { reactive, ref } from 'vue';
-import { getFirestore, doc, addDoc, collection, getDocs } from 'firebase/firestore'
+import { getFirestore, doc, addDoc, collection, getDocs, updateDoc, arrayRemove, arrayUnion } from 'firebase/firestore'
 import { firebaseApp } from '../firebaseConfig'
 
 const db = getFirestore(firebaseApp)
@@ -13,11 +13,26 @@ export const useUsuariosStore = defineStore("userscontrol", () => {
             const querySnapshot = await getDocs(collection(db, "permissoes"));
             querySnapshot.forEach( function (doc) { 
                 var docdt = doc.data() 
-                var id = doc.id
-                usuarios[id] = docdt
+                var email = doc.id
+                docdt["email"] = email
+                usuarios[email] =  docdt 
             }) 
             loaded.value = true
         }
     }
-    return {usuarios, load_data}
+
+    async function update_role(email, role){
+        const docref = doc(db, "permissoes", email)
+        const uptime = await updateDoc(docref, {role: role})
+    } 
+    async function add_ambiente(email, ambiente){
+        const docref = doc(db, "permissoes", email)
+        const uptime = await updateDoc(docref, {ambientes: arrayUnion(ambiente)})
+    } 
+    async function remove_ambiente(email, ambiente){
+        const docref = doc(db, "permissoes", email)
+        const uptime = await updateDoc(docref, {ambientes: arrayRemove(ambiente)})
+    }
+
+    return {usuarios, load_data, update_role, add_ambiente, remove_ambiente}
 })
