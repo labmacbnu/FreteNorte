@@ -1,14 +1,12 @@
 <script setup>
 import {  RouterView, useRoute, useRouter } from 'vue-router' 
-import TheNavigation from './components/TheNavigation.vue'; 
-import { useAmbientesStore } from './stores/ambientes';
+import TheNavigation from './components/TheNavigation.vue';  
 import {  provide, ref } from 'vue';
 import { getAuth, onAuthStateChanged } from 'firebase/auth'
 import { firebaseApp } from './firebaseConfig'
-import { useUserPermissionsStore } from './stores/user';
+import { useUserPermissionsStore } from './stores/user'; 
  
- 
-const ambientes = useAmbientesStore() 
+  
 const route = useRoute()
 const router = useRouter()
 
@@ -61,15 +59,14 @@ router.beforeEach( (to, from, next) => {
 </script>
 
 <template> 
-<div class="container">
-
-  <TheNavigation></TheNavigation>  
+  <div id="maincontainer" class="container">
+ <TheNavigation></TheNavigation>   
   <RouterView :key="route.path"/>
 </div>
 </template>
 
 <style scoped> 
-.container{
-  padding-top: 100px;
+#maincontainer{
+  margin-top: 100px;
 }
 </style>
