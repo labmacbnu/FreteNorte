@@ -1,5 +1,5 @@
 <template>
-    <div :id="modalid" class="modal" tabindex="-1">
+    <div :id="props.modalid" class="modal" tabindex="-1">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -12,8 +12,8 @@
                     <slot name="corpo"></slot>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" :data-bs-target="modalid">Fechar</button>
-                    <button type="button" class="btn btn-primary">Salvar</button>
+                    <button :id="'close-' + props.modalid" type="button" class="btn btn-secondary" data-bs-dismiss="modal" :data-bs-target="modalid">Fechar</button>
+                    <button type="button" @click="callback_and_close" class="btn btn-primary">Salvar</button>
                 </div>
             </div>
         </div>
@@ -21,12 +21,19 @@
 </template>
 <script setup> 
 
-defineProps({
+const props  = defineProps({
     modalid: {
         type: String,
         default: "myModal"
-    }
+    },
+    salve_callback: Function
 })
+ 
 
+function callback_and_close(){
+    props.salve_callback()
+    const closebutton = document.getElementById(`close-${props.modalid}`)
+    closebutton.click()
+}
 
 </script>
