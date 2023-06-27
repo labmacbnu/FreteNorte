@@ -1,4 +1,4 @@
-import { reactive, ref } from 'vue'
+import { reactive, readonly, ref } from 'vue'
 import { defineStore } from 'pinia'
 import { getFirestore, doc,  collection, getDoc } from 'firebase/firestore'
 import { firebaseApp } from '../firebaseConfig'
@@ -25,14 +25,16 @@ export const useAmbientesStore = defineStore('ambientes', ()=>{
 
 export const useListaAmbientes = defineStore('lista-ambientes', ()=>{ 
     const db = getFirestore(firebaseApp)
-    const dados = ref([])  
+    const todos = ref([])  
+    const liderados = ref([])
     async function load_data(){
-        if(dados.value.length == 0) {
+        if(todos.value.length == 0) {
             const querySnapshot = await getDoc(doc(db, "agregados", "ambientes")); 
             var docdt = querySnapshot.data() 
-            dados.value = docdt.codigos
+            todos.value = docdt.codigos
+            liderados.value = docdt.liderados
         }
     }
 
-    return {dados, load_data} 
+    return {todos, liderados, load_data} 
 })

@@ -23,6 +23,7 @@ function update_role(email, role){
 
 function add_ambiente(email, ambiente){
     usuarios.usuarios[email].ambientes.push(ambiente)
+    usuarios.edit_array.push(["add", email, ambiente ])
 }
 
 
@@ -30,12 +31,13 @@ function add_ambiente(email, ambiente){
 function remove_ambiente(email, ambiente){
     const filtrado = usuarios.usuarios[email].ambientes.filter( x=> x !== ambiente)
     usuarios.usuarios[email].ambientes = filtrado 
-    
+    usuarios.edit_array.push(["remove", email, ambiente])   
 }
 
 function update_user(email){
     const referencia = usuarios.usuarios[email]
     usuarios.update_user(referencia)
+
 }
 
 const pesquisa_usuario = ref(null)
