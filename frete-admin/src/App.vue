@@ -1,12 +1,19 @@
 <script setup>
 import {  RouterView, useRoute, useRouter } from 'vue-router' 
 import TheNavigation from './components/TheNavigation.vue';  
-import {  provide, ref } from 'vue';
+import {  onBeforeMount, provide, ref } from 'vue';
 import { getAuth, onAuthStateChanged } from 'firebase/auth'
 import { firebaseApp } from './firebaseConfig'
 import { useUserPermissionsStore } from './stores/user'; 
- 
-  
+import { useUsuariosStore } from './stores/users';
+import { useAmbientesStore } from './stores/ambientes';
+
+const usuarios = useUsuariosStore()
+const ambiente = useAmbientesStore()
+
+onBeforeMount(usuarios.load_data)
+onBeforeMount(ambiente.load_data)
+
 const route = useRoute()
 const router = useRouter()
 
