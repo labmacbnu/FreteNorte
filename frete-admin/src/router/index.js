@@ -33,6 +33,14 @@ const router = createRouter({
         requiresAuth: true
       }
     },
+    {
+      path: '/ambientes',
+      name: 'ambientes',
+      component: () => import('../views/AmbientesView.vue'),
+      meta: {
+        requiresAuth: true
+      }
+    },
   ]
 })
 
