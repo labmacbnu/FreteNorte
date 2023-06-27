@@ -8,33 +8,33 @@ import { useUsuariosStore } from '../stores/users';
 const usuarios = useUsuariosStore()
 const selectmail = ref(false)
 
-const user_edit = computed( () => { 
-    if(selectmail.value && usuarios.usuarios ) {
-    return  usuarios.usuarios[selectmail.value]  
-} else {
-    return {nome: "", email: "", role: "", ambientes: []}
-}
+const user_edit = computed(() => {
+    if (selectmail.value && usuarios.usuarios) {
+        return usuarios.usuarios[selectmail.value]
+    } else {
+        return { nome: "", email: "", role: "", ambientes: [] }
+    }
 })
 
-function update_role(email, role){
+function update_role(email, role) {
     usuarios.usuarios[email].role = role
 }
 
 
-function add_ambiente(email, ambiente){
+function add_ambiente(email, ambiente) {
     usuarios.usuarios[email].ambientes.push(ambiente)
-    usuarios.edit_array.push(["add", email, ambiente ])
+    usuarios.edit_array.push(["add", email, ambiente])
 }
 
 
 
-function remove_ambiente(email, ambiente){
-    const filtrado = usuarios.usuarios[email].ambientes.filter( x=> x !== ambiente)
-    usuarios.usuarios[email].ambientes = filtrado 
-    usuarios.edit_array.push(["remove", email, ambiente])   
+function remove_ambiente(email, ambiente) {
+    const filtrado = usuarios.usuarios[email].ambientes.filter(x => x !== ambiente)
+    usuarios.usuarios[email].ambientes = filtrado
+    usuarios.edit_array.push(["remove", email, ambiente])
 }
 
-function update_user(email){
+function update_user(email) {
     const referencia = usuarios.usuarios[email]
     usuarios.update_user(referencia)
 
@@ -43,10 +43,10 @@ function update_user(email){
 const pesquisa_usuario = ref(null)
 
 const usuarios_filtrados = computed(() => {
-    const lista_usuarios = Object.values(usuarios.usuarios) 
-    if(pesquisa_usuario.value) {
+    const lista_usuarios = Object.values(usuarios.usuarios)
+    if (pesquisa_usuario.value) {
         const regex = new RegExp(`.*${pesquisa_usuario.value}.*`, 'i')
-        const filtrado = lista_usuarios.filter( elem => regex.test(elem.nome) || regex.test(elem.email) )
+        const filtrado = lista_usuarios.filter(elem => regex.test(elem.nome) || regex.test(elem.email))
         return filtrado
     } else {
         return lista_usuarios
@@ -58,34 +58,31 @@ onBeforeMount(async () => await usuarios.load_data())
 </script>
 <template>
     <Modal modalid="BossaModal" :salve_callback="() => update_user(user_edit.email)">
- <template #titulo>Editar usuário</template>
- <template #corpo>
-    <div class="mb-3">
-    <label for="nome" class="form-label">Nome</label>
-    <input :value="user_edit.nome" type="text" class="form-control" id="nome" disabled>
-    </div> 
+        <template #titulo>Editar usuário</template>
+        <template #corpo>
+            <div class="mb-3">
+                <label for="nome" class="form-label">Nome</label>
+                <input :value="user_edit.nome" type="text" class="form-control" id="nome" disabled>
+            </div>
 
-    <div class="mb-3">
-    <label for="email" class="form-label">e-mail</label>
-    <input :value="user_edit.email" type="text" class="form-control" id="email" disabled>
-    </div> 
+            <div class="mb-3">
+                <label for="email" class="form-label">e-mail</label>
+                <input :value="user_edit.email" type="text" class="form-control" id="email" disabled>
+            </div>
 
-    <div class="mb-3">
-    <label for="perfil" class="form-label">Perfil</label>
-    <UserRole id="perfil" :role="user_edit.role" label="Perfil"
-    @updaterole="(x) => update_role(user_edit.email, x)"
-    ></UserRole>
-    </div>  
+            <div class="mb-3">
+                <label for="perfil" class="form-label">Perfil</label>
+                <UserRole id="perfil" :role="user_edit.role" label="Perfil"
+                    @updaterole="(x) => update_role(user_edit.email, x)"></UserRole>
+            </div>
 
-    <div class="mb-3">
-    <label for="ambientes" class="form-label">Ambientes</label> 
-        <UserAmbientes 
-            @remove="(x) => remove_ambiente(user_edit.email, x)"
-            @add="(x) => add_ambiente(user_edit.email, x)"
-            :selected="user_edit.ambientes"></UserAmbientes>
+            <div class="mb-3">
+                <label for="ambientes" class="form-label">Ambientes</label>
+                <UserAmbientes @remove="(x) => remove_ambiente(user_edit.email, x)"
+                    @add="(x) => add_ambiente(user_edit.email, x)" :selected="user_edit.ambientes"></UserAmbientes>
 
-    </div>  
-</template>
+            </div>
+        </template>
     </Modal>
     <table class="table">
         <thead>
@@ -99,15 +96,17 @@ onBeforeMount(async () => await usuarios.load_data())
         </thead>
         <tbody>
             <tr>
-                <td colspan="5"><input v-model="pesquisa_usuario" placeholder="Digite para pesquisar" class="form-control" ></td>
+                <td colspan="5"><input v-model="pesquisa_usuario" placeholder="Digite para pesquisar" class="form-control">
+                </td>
             </tr>
             <tr v-for="(user, index) in usuarios_filtrados">
                 <td> {{ user.nome }} </td>
                 <td> <code>{{ user.email }}</code> </td>
                 <td> {{ user.role }} </td>
-                <td> <span class="badge text-bg-primary m-1" v-for="x in user.ambientes">{{x}}</span></td>
-                <td> <button title="Editar usuário" class="btn btn-secondary no-wrap" data-bs-target="#BossaModal" data-bs-toggle="modal"
-                    @click="() => selectmail = user.email"><i class="bi bi-pencil"></i></button> </td>
+                <td> <span class="badge text-bg-primary m-1" v-for="x in user.ambientes">{{ x }}</span></td>
+                <td> <button title="Editar usuário" class="btn btn-secondary no-wrap" data-bs-target="#BossaModal"
+                        data-bs-toggle="modal" @click="() => selectmail = user.email"><i class="bi bi-pencil"></i></button>
+                </td>
             </tr>
         </tbody>
     </table>
