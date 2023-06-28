@@ -30,10 +30,12 @@ const props  = defineProps({
 })
  
 
-function callback_and_close(){
-    props.salve_callback()
-    const closebutton = document.getElementById(`close-${props.modalid}`)
-    closebutton.click()
+async function callback_and_close(){
+    const check = await props.salve_callback()
+    if(check){
+        const closebutton = document.getElementById(`close-${props.modalid}`)
+        closebutton.click()
+    }
 }
 
 </script>
