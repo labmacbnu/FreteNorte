@@ -1,5 +1,5 @@
 <script setup>
-import { ref, computed, onBeforeMount } from 'vue';
+import { ref, computed } from 'vue';
 import { useListaAmbientes } from '../stores/agregados';
 
 const props = defineProps({ 
@@ -37,8 +37,7 @@ function checkremove(ambiente){
   lista_ambientes.liderados  = lista_ambientes.liderados.filter( x=> x != ambiente)
   emit('remove', ambiente)
 }
-
-onBeforeMount(lista_ambientes.load_data)
+ 
 </script>
 <template>  
 <div class="mt-3">

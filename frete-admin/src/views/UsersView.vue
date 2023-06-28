@@ -2,7 +2,7 @@
 import UserRole from '../components/UserRole.vue';
 import Modal from '../components/Modal.vue';
 import UserAmbientes from '../components/UserAmbientes.vue';
-import { onBeforeMount, ref, computed } from 'vue';
+import { ref, computed } from 'vue';
 import { useUsuariosStore } from '../stores/users';
 
 const usuarios = useUsuariosStore()
@@ -54,7 +54,6 @@ const usuarios_filtrados = computed(() => {
 
 })
 
-onBeforeMount(async () => await usuarios.load_data())
 </script>
 <template>
     <Modal modalid="BossaModal" :salve_callback="async () => await update_user(user_edit.email)">
