@@ -1,6 +1,6 @@
 import { reactive, ref } from 'vue'
 import { defineStore } from 'pinia'
-import { getFirestore, getDocs,  collection } from 'firebase/firestore'
+import { getFirestore, getDocs,  collection, setDoc, doc } from 'firebase/firestore'
 import { firebaseApp } from '../firebaseConfig'
 
 
@@ -21,3 +21,11 @@ export const useAmbientesStore = defineStore('ambientes', ()=>{
 
     return {dados, load_data} 
 })
+
+export async function create_ambiente(ambiente_data) { 
+    const db = getFirestore(firebaseApp)
+    const docRef = doc(db, 'ambientes', ambiente_data.ambiente_codigo)
+    const uptime = await setDoc(docRef, {...ambiente_data})
+    return uptime
+
+}
