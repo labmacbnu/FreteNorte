@@ -1,6 +1,6 @@
 <script setup>
 import { onBeforeMount, ref, computed, reactive } from 'vue';
-import { useAmbientesStore, create_ambiente } from '../stores/ambientes';
+import { useAmbientesStore, create_ambiente, add_lider_ambiente } from '../stores/ambientes';
 import Modal from '../components/Modal.vue';
 import { useUsuariosStore } from '../stores/users';
 
@@ -75,6 +75,25 @@ async function cria_ambiente() {
     }
 }
 
+const new_leader = reactive({ 
+    valido: false
+})
+
+async function adiciona_lider(){ 
+    const codigo = selected_ambiente.value.ambiente_codigo
+    const lider = selected_ambiente.value.lider 
+    new_leader.valido = lista_emails.value.includes(lider)  
+    if (new_leader.valido){
+        const uptime = await add_lider_ambiente(codigo, lider)
+        console.log(`Líder ${lider} adicionado ao ambiente ${codigo}`, uptime)
+        new_leader.email = null
+        new_leader.valido = false
+        return true
+    } else {
+        return false
+    }
+}
+
 </script>
 
 <template>
@@ -118,7 +137,7 @@ async function cria_ambiente() {
 
     </Modal>
 
-    <Modal modalid="adicionaLider">
+    <Modal modalid="adicionaLider" :salve_callback="adiciona_lider">
         <template #titulo>
             Adicionar líder
         </template>
@@ -140,7 +159,7 @@ async function cria_ambiente() {
 
             <div class="mb-3">
                 <label for="amblider" class="form-label">Líder</label>
-                <input id="amblider" type="text" v-model="selected_ambiente.lider" class="form-control"
+                <input id="amblider" type="text" v-model="selected_ambiente.lider" class="form-control" :class="{ 'border-danger': !new_leader.valido }"
                     list="lista_usuarios">
             </div>
 
