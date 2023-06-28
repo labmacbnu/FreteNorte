@@ -1,26 +1,37 @@
 import { defineStore } from 'pinia'
-import { reactive, ref } from 'vue';
+import { computed, reactive, ref } from 'vue';
 import { getFirestore, doc, addDoc, collection, getDocs, updateDoc, arrayRemove, arrayUnion } from 'firebase/firestore'
 import { firebaseApp } from '../firebaseConfig'
+import { useCollection } from 'vuefire';
 
 const db = getFirestore(firebaseApp)
 
 export const useUsuariosStore = defineStore("userscontrol", () => {
-    const usuarios  = reactive({})
+    const pre_usuarios  = useCollection(collection(db, "permissoes"))
+    const usuarios = computed(() => {
+        const users = {}
+        pre_usuarios.value.forEach( function (doc) { 
+            var email = doc.id 
+            doc.email = email
+            users[email] =  doc 
+        }
+        )
+        return users
+    })
     const loaded = ref(false)
     const edit_array = reactive([])
-    async function load_data(){
-        if(loaded.value == false) {
-            const querySnapshot = await getDocs(collection(db, "permissoes"));
-            querySnapshot.forEach( function (doc) { 
-                var docdt = doc.data() 
-                var email = doc.id
-                docdt["email"] = email
-                usuarios[email] =  docdt 
-            }) 
-            loaded.value = true
-        }
-    }
+    // async function load_data(){
+    //     if(loaded.value == false) {
+    //         const querySnapshot = await getDocs(collection(db, "permissoes"));
+    //         querySnapshot.forEach( function (doc) { 
+    //             var docdt = doc.data() 
+    //             var email = doc.id
+    //             docdt["email"] = email
+    //             usuarios[email] =  docdt 
+    //         }) 
+    //         loaded.value = true
+    //     }
+    // }
 
     async function update_role(email, role){
         const docref = doc(db, "permissoes", email)
@@ -67,5 +78,5 @@ export const useUsuariosStore = defineStore("userscontrol", () => {
     }
 
 
-    return {usuarios, load_data, update_user, edit_array}
+    return {usuarios, update_user, edit_array}
 })
