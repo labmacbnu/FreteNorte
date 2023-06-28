@@ -1,10 +1,15 @@
 <script setup>
-import { onBeforeMount, ref, computed } from 'vue';
-import { useAmbientesStore } from '../stores/ambientes';
+import { onBeforeMount, ref, computed, reactive } from 'vue';
+import { useAmbientesStore, create_ambiente } from '../stores/ambientes';
 import Modal from '../components/Modal.vue';
 import { useUsuariosStore } from '../stores/users';
 
 const usuarios = useUsuariosStore()
+
+const lista_emails = computed(() => {
+    const lista_emails = Object.keys(usuarios.usuarios)
+    return lista_emails
+})
 
 const ambientes = useAmbientesStore()
 const pesquisa = ref(null)
@@ -22,62 +27,124 @@ const ambientes_filtrados = computed(() => {
 
 const selected_ambiente_key = ref(null)
 
-const selected_ambiente = computed( () => {
-    if(selected_ambiente_key.value && ambientes.dados) {
+const selected_ambiente = computed(() => {
+    if (selected_ambiente_key.value && ambientes.dados) {
         const filtrado = ambientes.dados.filter(elem => elem.ambiente_codigo == selected_ambiente_key.value)
         return filtrado[0]
     } else {
-        return {ambiente_codigo: '', ambiente_nome: '', tipo: "Físico"}
+        return { ambiente_codigo: '', ambiente_nome: '', tipo: "Físico" }
     }
 })
 
- 
+const novo_ambiente = reactive({
+    ambiente_codigo: null,
+    ambiente_nome: null,
+    items: 0,
+    lider: null,
+    tipo: "Virtual"
+})
+
+const vald_n_ambiente = reactive({
+    ambiente_codigo: true,
+    ambiente_nome: true,
+    items: true,
+    lider: true,
+    tipo: true
+})
+
+
+async function cria_ambiente() {
+    // valida se o lider esta na lista de usuarios
+    vald_n_ambiente.lider = lista_emails.value.includes(novo_ambiente.lider)
+    // valida se codigo e nomes não são nulos
+    for (let key of ['ambiente_codigo', 'ambiente_nome']) {
+        vald_n_ambiente[key] = novo_ambiente[key] != null
+    }
+    // se tudo estiver ok, todas as vald_n_ambiente são true
+    const tudook = Object.values(vald_n_ambiente).reduce((x, y) => x && y, true)
+    if (tudook) {
+        // se tudo ok 
+        const uptime = await create_ambiente(novo_ambiente)
+        console.log(`Ambiente ${novo_ambiente.ambiente_codigo} criado`, uptime)
+        // reseta objetos
+        Object.assign(novo_ambiente, {ambiente_codigo: null, ambiente_nome: null, lider: null}) 
+        Object.assign(vald_n_ambiente , { ambiente_codigo: true, ambiente_nome: true, items: true,  lider: true, tipo: true})
+        return true
+    } else {
+        return false
+    }
+}
 
 </script>
 
 <template>
     <datalist id="lista_usuarios">
-        <option v-for="(value, key) in usuarios.usuarios">{{ key }}</option>
+        <option v-for="email in lista_emails">{{ email }}</option>
     </datalist>
     <h1>Ambientes</h1>
     <button class="btn btn-success" data-bs-target="#criaAmbiente" data-bs-toggle="modal">Criar ambiente virtual</button>
 
-    <Modal modalid="criaAmbiente">
-         <template #titulo>
+    <Modal modalid="criaAmbiente" :salve_callback="cria_ambiente">
+        <template #titulo>
             Criar ambiente
-         </template>
-         <template #corpo>
-            Nobo novme
-         </template>
+        </template>
+        <template #corpo>
+            <div class="mb-3">
+                <label for="novocodigo" class="form-label">Código</label>
+                <input v-model="novo_ambiente.ambiente_codigo" type="text" class="form-control" id="novocodigo"
+                    :class="{ 'border-danger': !vald_n_ambiente.ambiente_codigo }"
+                    placeholder="Digite um código curto para identificar o ambiente">
+            </div>
+
+            <div class="mb-3">
+                <label for="novonome" class="form-label">Ambiente</label>
+                <input v-model="novo_ambiente.ambiente_nome" type="text" class="form-control"
+                    :class="{ 'border-danger': !vald_n_ambiente.ambiente_nome }" id="novonome"
+                    placeholder="Digite o nome do ambiente">
+            </div>
+
+            <div class="mb-3">
+                <label for="novotipo" class="form-label">Tipo</label>
+                <input v-model="novo_ambiente.tipo" id="novotipo" class="form-control" disabled>
+            </div>
+
+            <div class="mb-3">
+                <label for="novolider" class="form-label">Líder</label>
+                <input v-model="novo_ambiente.lider" id="novolider" type="text"
+                    :class="{ 'border-danger': !vald_n_ambiente.lider }" class="form-control" list="lista_usuarios"
+                    placeholder="Defina um líder para esse ambiente">
+            </div>
+        </template>
 
     </Modal>
 
     <Modal modalid="adicionaLider">
-         <template #titulo>
+        <template #titulo>
             Adicionar líder
-         </template>
-         <template #corpo>
+        </template>
+        <template #corpo>
             <div class="mb-3">
-                <label for="codigo" class="form-label">Código</label>
-                <input :value="selected_ambiente.ambiente_codigo" type="text" class="form-control" id="codigo" disabled>
+                <label for="ambcodigo" class="form-label">Código</label>
+                <input :value="selected_ambiente.ambiente_codigo" type="text" class="form-control" id="ambcodigo" disabled>
             </div>
 
             <div class="mb-3">
-                <label for="ambiente" class="form-label">Ambiente</label>
-                <input :value="selected_ambiente.ambiente_nome" type="text" class="form-control" id="ambiente" disabled>
+                <label for="ambnome" class="form-label">Ambiente</label>
+                <input :value="selected_ambiente.ambiente_nome" type="text" class="form-control" id="ambnome" disabled>
             </div>
 
             <div class="mb-3">
                 <label for="ambtipo" class="form-label">Tipo</label>
-                <input id="ambtipo"  type="text" :value="selected_ambiente.tipo" class="form-control"  disabled>
+                <input id="ambtipo" type="text" :value="selected_ambiente.tipo" class="form-control" disabled>
             </div>
 
             <div class="mb-3">
                 <label for="amblider" class="form-label">Líder</label>
-                <input id="amblider"  type="text" v-model="selected_ambiente.lider" class="form-control"  list="lista_usuarios">
+                <input id="amblider" type="text" v-model="selected_ambiente.lider" class="form-control"
+                    list="lista_usuarios">
             </div>
- 
-         </template>
+
+        </template>
 
     </Modal>
 
@@ -100,10 +167,11 @@ const selected_ambiente = computed( () => {
                 <td>{{ amb.ambiente_codigo }}</td>
                 <td>{{ amb.ambiente_nome }}</td>
                 <td>{{ amb.tipo }}</td>
-                <td class="text-center"><template v-if="amb.lider"><code>{{amb.lider}}</code></template>
-                    <template v-else><button class="btn btn-primary btn-sm"
-                         data-bs-target="#adicionaLider" data-bs-toggle="modal" 
-                         title="Adicionar líder" @click="() => selected_ambiente_key = amb.ambiente_codigo"><i class="bi bi-plus"></i></button></template>
+                <td class="text-center"><template v-if="amb.lider"><code>{{ amb.lider }}</code></template>
+                    <template v-else><button class="btn btn-primary btn-sm" data-bs-target="#adicionaLider"
+                            data-bs-toggle="modal" title="Adicionar líder"
+                            @click="() => selected_ambiente_key = amb.ambiente_codigo"><i
+                                class="bi bi-plus"></i></button></template>
                 </td>
                 <td>{{ amb.items }}</td>
             </tr>
