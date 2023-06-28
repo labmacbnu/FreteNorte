@@ -19,19 +19,7 @@ export const useUsuariosStore = defineStore("userscontrol", () => {
         return users
     })
     const loaded = ref(false)
-    const edit_array = reactive([])
-    // async function load_data(){
-    //     if(loaded.value == false) {
-    //         const querySnapshot = await getDocs(collection(db, "permissoes"));
-    //         querySnapshot.forEach( function (doc) { 
-    //             var docdt = doc.data() 
-    //             var email = doc.id
-    //             docdt["email"] = email
-    //             usuarios[email] =  docdt 
-    //         }) 
-    //         loaded.value = true
-    //     }
-    // }
+    const edit_array = reactive([]) 
 
     async function update_role(email, role){
         const docref = doc(db, "permissoes", email)
@@ -78,5 +66,5 @@ export const useUsuariosStore = defineStore("userscontrol", () => {
     }
 
 
-    return {usuarios, update_user, edit_array}
+    return {usuarios, update_user, edit_array, add_ambiente, remove_ambiente, update_role}
 })
