@@ -34,10 +34,10 @@ function remove_ambiente(email, ambiente) {
     usuarios.edit_array.push(["remove", email, ambiente])
 }
 
-function update_user(email) {
+async function update_user(email) {
     const referencia = usuarios.usuarios[email]
-    usuarios.update_user(referencia)
-
+    const uptime = await usuarios.update_user(referencia)
+    return true
 }
 
 const pesquisa_usuario = ref(null)
@@ -57,7 +57,7 @@ const usuarios_filtrados = computed(() => {
 onBeforeMount(async () => await usuarios.load_data())
 </script>
 <template>
-    <Modal modalid="BossaModal" :salve_callback="() => update_user(user_edit.email)">
+    <Modal modalid="BossaModal" :salve_callback="async () => await update_user(user_edit.email)">
         <template #titulo>Editar usuário</template>
         <template #corpo>
             <div class="mb-3">
