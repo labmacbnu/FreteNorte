@@ -16,12 +16,7 @@ const ambiente_completo = computed( () => {
     items.ambiente = ambiente.valor
     items.load_data()
     return ambiente
-
 })
- 
-
-//onBeforeMount(async () => ambientes.load_data()) 
-
 
 </script>
 

@@ -2,7 +2,7 @@
 import {  RouterView, useRoute, useRouter } from 'vue-router' 
 import TheNavigation from './components/TheNavigation.vue'; 
 import { useAmbientesStore } from './stores/ambientes';
-import {  provide, ref } from 'vue';
+import {  onBeforeMount, provide, ref } from 'vue';
 import { getAuth, onAuthStateChanged } from 'firebase/auth'
 import { firebaseApp } from './firebaseConfig'
 import { useUserPermissionsStore } from './stores/user';
@@ -57,7 +57,7 @@ router.beforeEach( (to, from, next) => {
     next()
   } 
 })
-
+onBeforeMount(ambientes.load_data)
 </script>
 
 <template> 
