@@ -8,11 +8,12 @@ Criado por Bossa
 
 Webapp
 
+- [X] Função editar medidas
 - [ ] Função "Criar volume"
 - [ ] Função "Adicionar item/parte ao volume"
 - [ ] Função "Dividir item em partes"
 
 Admin
 
-- [ ] Função "Criar ambiente virtual"
-- [ ] Função "Adicionar lider ao ambiente"
+- [X] Função "Criar ambiente virtual"
+- [X] Função "Adicionar lider ao ambiente"
