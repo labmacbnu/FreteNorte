@@ -26,8 +26,9 @@ const ambiente_completo = computed( () => {
 </script>
 
 <template> 
-  
-  <RouterLink :to="{name: 'items'}">Voltar</RouterLink>
+  <div class="row justify-contents-start">
+    <div class="col-12"> 
+  <RouterLink :to="{name: 'items'}"><i class="bi bi-arrow-left-short"></i>Voltar</RouterLink>
     <h4>Lista de items de {{ ambiente_completo.ambiente_nome }}</h4>  
     <div class="accordion" id="acordeao">
         <AcordeaoChild v-for="(valor, chave, n) in items.dados_agrupados" pai="acordeao" :aid="'acord' + n">
@@ -46,4 +47,6 @@ const ambiente_completo = computed( () => {
         </template>
         </AcordeaoChild>
     </div>
+    </div>
+  </div>
 </template>
