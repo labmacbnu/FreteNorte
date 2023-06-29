@@ -89,10 +89,12 @@ export const useDescricoesStore = defineStore("short-descricoes", {
     state: () => ({short_descricoes: null}),
     actions: {
         async load_data(){
-            const docRef = doc(db, "agregados", "items");
-            const docSnap = await getDoc(docRef);
-            const $doc = docSnap.data()
-            this.$patch({... $doc})
+            if(this.short_descricoes == null){
+                const docRef = doc(db, "agregados", "items");
+                const docSnap = await getDoc(docRef);
+                const $doc = docSnap.data()
+                this.$patch({... $doc})
+            }
         }
     }
 

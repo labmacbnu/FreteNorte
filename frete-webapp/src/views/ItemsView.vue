@@ -2,9 +2,11 @@
 import { computed, onBeforeMount, ref } from 'vue';
 import { useAmbientesStore } from '../stores/ambientes';  
 import { RouterView, useRoute } from 'vue-router'; 
+import { useUserPermissionsStore } from '../stores/user';
 
 const route = useRoute()
 const ambientes = useAmbientesStore() 
+const permissoes = useUserPermissionsStore()
 
 const selected = ref("")
 
@@ -18,7 +20,7 @@ const ambientes_filtrados = computed( () => {
 })
 
 
-onBeforeMount(async () => ambientes.load_data())
+onBeforeMount(ambientes.load_data)
 </script>
 
 <template>
