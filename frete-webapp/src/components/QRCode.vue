@@ -11,6 +11,6 @@ defineProps({
         light: '#FFF'
       }" 
       :value="baseurl + path"
-      :size="500" type="image/png"
+      :size="400" type="image/png"
       ></VueQrcode>
 </template>
