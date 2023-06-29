@@ -58,7 +58,7 @@ async function atualiza_item() {
 
 <template> 
     <div class="row align-items-start">
-        <div class="col-8 col-lg-6">
+        <div class="col-12">
             <h4 class="d-print-none">{{ item.short_descricao }}</h4>
 
     <table class="table d-print-none">
@@ -114,18 +114,17 @@ async function atualiza_item() {
     
         </div>
     </div>
-    <div class="row align-items-start">
-        <div class="col-3">
-            <QRCode :path="route.fullPath"></QRCode>
-        </div>
-        <div class="col-6">
-            <h4 class="d-none d-print-block">Sistema Frete Norte</h4> 
-            <div class="float-start">
-                <h5>{{ item.short_descricao }}</h5>
-                <p><small>
-                     {{ item.ambiente }}</small></p>
-                <p><em>Patrimônio</em> {{ item.patrimonio }}</p>
+    <div class="row justify-content-start"> 
+        <div class="col"> 
+                <QRCode :path="route.fullPath"></QRCode>
+                <div > 
+                    <h4 class="d-none d-print-block">Sistema Frete Norte</h4>  
+                    <h5>{{ item.short_descricao }}</h5>
+                    <p><small>
+                        {{ item.ambiente }}</small></p>
+                    <p><em>Patrimônio</em> {{ item.patrimonio }}</p>  
+                </div>
             </div>
-        </div>
-    </div> 
+            
+    </div>  
 </template>

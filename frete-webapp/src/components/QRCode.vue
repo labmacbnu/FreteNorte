@@ -5,7 +5,8 @@ defineProps({
     path: String
 })
 </script>
-<template>
+<template> 
+<div class="qrcode d-flex-inline">
 <VueQrcode :color="{
         dark: '#000',
         light: '#FFF'
@@ -13,4 +14,15 @@ defineProps({
       :value="baseurl + path"
       :size="400" type="image/png"
       ></VueQrcode>
+</div>
 </template>
+<style>
+.qrcode {
+  width: 170px;
+  height: 170px;
+  float: left;
+}
+.qrcode img {
+  margin: auto;
+}
+</style>
