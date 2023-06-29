@@ -1,26 +1,10 @@
-import { getFirestore, getDoc, collection, doc } from 'firebase/firestore'
+import { getFirestore, getDoc, updateDoc, doc } from 'firebase/firestore'
 import { firebaseApp } from '../firebaseConfig'
-import { defineStore } from 'pinia'
-import { useRoute } from 'vue-router'
-import { reactive, ref } from 'vue'
+import { defineStore } from 'pinia' 
+import { useDocument } from  'vuefire';
+import { ref, computed } from 'vue';
 
-const db = getFirestore(firebaseApp) 
-
-export const useSingleItemStore2 = defineStore("single-item", () => { 
-    
-    const dados = reactive({})
-    async function get_item (codigo){
-        const docRef = doc(db, "items", codigo);
-        const docSnap = await getDoc(docRef);
-        const doc = docSnap.data()
-        for(let key in doc ) {
-            dados[key] = doc[key]
-        } 
-    }
-    return {dados, get_item}
-})
-
-export const useSingleItemStore = defineStore("single-item", {  
+export const useSingleItemStoreOld = defineStore("single-item-old", {  
     state: () => ({
         descricao: null,
         short_descricao: null,
@@ -29,7 +13,9 @@ export const useSingleItemStore = defineStore("single-item", {
         patrimonio: Number,
         valor: Number,
         medidas: null, 
-        peso: null
+        peso: null,
+        fragil: false,
+        transporte_especial: false
     }),
     actions: {
         async get_item (codigo){
@@ -37,6 +23,24 @@ export const useSingleItemStore = defineStore("single-item", {
             const docSnap = await getDoc(docRef);
             const mydoc = docSnap.data()
             this.$patch({...mydoc}) 
-        } 
+        }
+
     }
 })
+
+
+export const useSingleItemStore = defineStore("single-item",  () => {
+    const db = getFirestore(firebaseApp) 
+    const codigo = ref(null)
+    const docRef = computed(() => (codigo.value == null)?  null : doc(db, "items", codigo.value)) 
+    const documento = computed(() => (docRef.value == null)?  null: useDocument(docRef.value))
+    return {documento, codigo}
+})
+
+
+export async function update_item (codigo, item_data){
+    const db = getFirestore(firebaseApp) 
+    const docRef = doc(db, "items", codigo)
+    const uptime = await updateDoc(docRef, {...item_data})
+    return uptime
+}
