@@ -1,8 +1,7 @@
 <script setup>
 import { computed, onBeforeMount, ref } from 'vue';
-import { useAmbientesStore } from '../stores/ambientes'; 
-import AcordeaoChild from '../components/AcordeaoChild.vue';
-import { RouterLink, RouterView, useRoute } from 'vue-router'; 
+import { useAmbientesStore } from '../stores/ambientes';  
+import { RouterView, useRoute } from 'vue-router'; 
 
 const route = useRoute()
 const ambientes = useAmbientesStore() 
