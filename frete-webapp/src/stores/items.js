@@ -32,6 +32,17 @@ function groupBy(list, keyGetter) {
     return map;
 }
 
+export function orderedGroupBy(list, keyGetter){
+        var mapa = groupBy(list, keyGetter);
+        var chaves = Array.from(mapa.keys())
+        chaves.sort()
+        var objeto_organizado = {}
+        for(var k of chaves){
+            objeto_organizado[k] = mapa.get(k)
+        }
+        return objeto_organizado 
+}
+
  
 
 
@@ -69,7 +80,9 @@ export const useItemsAmbienteStore = defineStore('items-ambiente', ()=>{
         }
     })
 
-    return {ambiente, dados, load_data, dados_agrupados}
+
+
+    return {ambiente, dados, load_data, dados_agrupados, inner_db}
 })
 
 export const useDescricoesStore = defineStore("short-descricoes", {
@@ -84,8 +97,6 @@ export const useDescricoesStore = defineStore("short-descricoes", {
     }
 
 })
-
-
 
 export const useItemsDescricaoStore = defineStore('items-descricao', ()=>{
     const short_descricao = ref(null)
@@ -123,3 +134,7 @@ export const useItemsDescricaoStore = defineStore('items-descricao', ()=>{
    
        return {short_descricao, dados, load_data, dados_agrupados}
    })
+
+export const useItemsResponsavelStore = defineStore('items-responsavel', ()=>{
+    const responsavel = ref(null)
+})
