@@ -59,14 +59,20 @@ const router = createRouter({
     },
     {
       path: '/volumes',
-      name: 'volumes',
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () => import('../views/PacotesView.vue'),
       meta: {
         requiresAuth: true
-      }
+      },
+      children:[
+        {
+          path: '',
+          name: 'volumes',
+          component: () => import('../views/PacotesHome.vue'),
+        }
+      ]
     },
     {
       path: '/lotes',
