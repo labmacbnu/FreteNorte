@@ -12,12 +12,14 @@ import AcordeaoChild from './AcordeaoChild.vue';
             </template>
             
             <template #corpo>
-                <p class="mx-2"><a href="#">Ver volume</a></p>
+                <p class="mx-2">
+                    <RouterLink :to="{name: 'volume-codigo', params: {codigo: chave }}">Ver volume</RouterLink>
+                    
+                </p>
             <ul class="list-group">
                 <li class="list-group-item d-flex justify-content-between align-items-center" v-for="subitem in valor">
                     {{ subitem.short_descricao }}
                     <span class="badge text-bg-light">{{ subitem.key }}</span> 
-                    <!-- <RouterLink :to="{name: 'item-codigo', params: {codigo: subitem.key }}">Ver item</RouterLink>-->
                 </li>
                 
             </ul>
