@@ -6,11 +6,13 @@ import {  onBeforeMount, provide, ref } from 'vue';
 import { getAuth, onAuthStateChanged } from 'firebase/auth'
 import { firebaseApp } from './firebaseConfig'
 import { useUserPermissionsStore } from './stores/user';
+import { useDescricoesStore } from './stores/items';
  
  
 const ambientes = useAmbientesStore() 
 const route = useRoute()
 const router = useRouter()
+const descricoes = useDescricoesStore()
 
 
 const globaluser = ref(null) 
@@ -58,6 +60,7 @@ router.beforeEach( (to, from, next) => {
   } 
 })
 onBeforeMount(ambientes.load_data)
+onBeforeMount(descricoes.load_data) 
 </script>
 
 <template> 
