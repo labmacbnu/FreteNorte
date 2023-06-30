@@ -31,8 +31,26 @@ exports.registrausuario = functions.auth.user().onCreate( (user, context) => {
 })
 
 exports.contavolumes = functions.firestore.document("volumes/{volumeId}").onWrite( async (change, context) => {
+    // Atualiza agregados/volumes.quantidade
     const collectionRef = db.collection("volumes");
     const snapshot = await collectionRef.count().get();
     const total = snapshot.data().count;
     db.doc("agregados/volumes").set({quantidade: total})
+
+    const volumeId = context.params.volumeId 
+    // Get an object with the current document value.
+    // If the document does not exist, it has been deleted.
+    const document = change.after.exists ? change.after.data() : null;
+    
+    // Get an object with the previous document value (for update or delete)
+    const oldDocument = change.before.data();
+    if(document){
+        document.items.forEach( (docRef) => docRef.update({volumado: true, volume: volumeId}))
+    } else {
+        oldDocument.items.forEach( (docRef) => docRef.update({volumado: false, volume: null}))
+    }
+
+
 })
+
+
