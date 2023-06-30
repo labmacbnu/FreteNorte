@@ -29,3 +29,10 @@ exports.registrausuario = functions.auth.user().onCreate( (user, context) => {
     logger.log(`Usuário criado: ${email}`)
 
 })
+
+exports.contavolumes = functions.firestore.document("volumes/{volumeId}").onWrite( async (change, context) => {
+    const collectionRef = db.collection("volumes");
+    const snapshot = await collectionRef.count().get();
+    const total = snapshot.data().count;
+    db.doc("agregados/volumes").set({quantidade: total})
+})
