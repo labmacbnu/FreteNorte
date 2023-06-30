@@ -14,7 +14,8 @@ const router = createRouter({
       name: 'home',
       component: HomeView,
       meta: {
-        requiresAuth: false
+        requiresAuth: false,
+        title: 'Home'
       }
     },
     { 
@@ -22,7 +23,8 @@ const router = createRouter({
         path: '/login',
         component: () => import('../views/PerfilLogin.vue'),
       meta: {
-        requiresAuth: false
+        requiresAuth: false,
+        title: "Login"
       }
     },
     {
@@ -38,22 +40,26 @@ const router = createRouter({
         {
           name: 'items',
           path: '',
-          component: () => import('../views/ItemsHome.vue')
+          component: () => import('../views/ItemsHome.vue'),
+          meta: { title: "Items"}
         },
         {
           name: 'items-ambiente',
           path: 'ambiente/:ambiente',
-          component: () => import('../views/ItemsAmbiente.vue')
+          component: () => import('../views/ItemsAmbiente.vue'),
+          meta: { title: "Items por Ambiente"}
         },
         {
           name: 'item-codigo',
           path: 'cod/:codigo',
-          component: () => import('../views/ItemsCod.vue')
+          component: () => import('../views/ItemsCod.vue'),
+          meta: { title: "Item por código"}
         },
         {
           name: 'item-descricao',
           path: 'descricao',
-          component: () => import('../views/ItemsDescricao.vue')
+          component: () => import('../views/ItemsDescricao.vue'),
+          meta: { title: "Items por descrição"}
         }
       ]
     },
@@ -71,6 +77,11 @@ const router = createRouter({
           path: '',
           name: 'volumes',
           component: () => import('../views/PacotesHome.vue'),
+        },
+        {
+          path: 'cod/:codigo',
+          name: 'volumes-codigo',
+          component: () => import('../views/PacotesCodigo.vue')
         }
       ]
     },
