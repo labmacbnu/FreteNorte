@@ -2,7 +2,7 @@
 import { computed, onBeforeMount, onBeforeUpdate, onMounted, onUpdated, ref } from 'vue';
 import { useAmbientesStore } from '../stores/ambientes';
 import { useItemsAmbienteStore } from '../stores/items' 
-import Acordeao from '../components/Acordeao.vue';
+import Acordeao from '../components/AcordeaoItems.vue';
 import { RouterLink, useRoute } from 'vue-router';
 
 const ambientes = useAmbientesStore()
