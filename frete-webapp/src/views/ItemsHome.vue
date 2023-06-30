@@ -5,10 +5,8 @@ import { useItemsAmbienteStore, useDescricoesStore } from '../stores/items'
 import AcordeaoChild from '../components/AcordeaoChild.vue';
 import { RouterLink, RouterView, useRoute } from 'vue-router';
 import { useUserPermissionsStore } from '../stores/user';
-
-const route = useRoute()
-const ambientes = useAmbientesStore()
-const items = useItemsAmbienteStore()
+ 
+const ambientes = useAmbientesStore() 
 const permissions = useUserPermissionsStore()
 const descricoes = useDescricoesStore()
 
@@ -43,7 +41,6 @@ const meus_ambientes = computed( () => {
 
 })
 
-onBeforeMount(descricoes.load_data) 
 </script>
 
 

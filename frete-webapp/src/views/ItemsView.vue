@@ -20,7 +20,6 @@ const ambientes_filtrados = computed( () => {
 })
 
 
-onBeforeMount(ambientes.load_data)
 </script>
 
 <template>
