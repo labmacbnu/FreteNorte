@@ -24,6 +24,9 @@ export const useNumVolumesStore = defineStore("volumes-num",  () => {
 
 export async function registra_volume(dados){
     dados.responsavel = doc(db, "permissoes", dados.responsavel)
+    const itemsRef = []
+    dados.items.forEach( (key) => itemsRef.push( doc(db, "items", key) ))
+    dados.items = itemsRef
     const docRef = doc(db, "volumes", dados.codigo);
     const uptime = await setDoc(docRef, {...dados, deleted: false});
 }
@@ -39,5 +42,5 @@ export function lista_volumes(email){
     const userRef = doc(db, "permissoes", email)
     const volRef = collection(db, "volumes")    
     const q = query(volRef, where("responsavel", "==", userRef), where('deleted', '==', false))
-    return useCollection(q)  
+    return useCollection(q, {wait: true})  
 }
