@@ -80,7 +80,7 @@ const router = createRouter({
         },
         {
           path: 'cod/:codigo',
-          name: 'volumes-codigo',
+          name: 'volume-codigo',
           component: () => import('../views/PacotesCodigo.vue')
         }
       ]
