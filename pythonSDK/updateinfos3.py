@@ -54,11 +54,14 @@ def update_ambientes(lista):
 from collections import Counter
 
 if __name__ == "__main__":
-    col, file, key = COLLECTIONS_MAP[0]
+    col, file, key = COLLECTIONS_MAP[2]
     dados = load_json_file(file)  
-    counter = Counter([ elem["ambiente_codigo"] for elem in dados])
-    uniques = list(counter)
-    uniques.sort()
-    print(uniques)
-    update_ambientes(uniques)
+    for elem in dados:
+        key = elem["patrimonio"] if elem["patrimonio"] else elem["n_controle"]
+        key = str(int(key))
+        print(key, type(key)) 
+        uptime = db.collection("items").document(key).update({
+            "fragil": False, "especial": False, "inteiro": True
+            })
+        print(uptime)
         
