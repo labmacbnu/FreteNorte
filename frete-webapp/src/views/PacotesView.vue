@@ -1,18 +1,26 @@
-<script async setup>
-import { computed, inject, onBeforeMount, ref } from 'vue';
+<script setup>
+import { computed, inject, onBeforeMount, onMounted, onServerPrefetch, ref } from 'vue';
 import Modal  from '../components/Modal.vue';
 import { useUserPermissionsStore } from '../stores/user';
 import { useItemsAmbienteStore, orderedGroupBy } from '../stores/items';
-import { useAmbientesStore } from '../stores/ambientes';
+import { useAmbientesStore } from '../stores/ambientes'; 
+import { useNumVolumesStore, registra_volume, lista_volumes } from '../stores/volumes';
+import { volumesRef } from '../backend/index';  
+import { usePendingPromises } from 'vuefire'
 
 
-const codigo = ref("V0001")
 const {globaluser, updateUser} = inject("globaluser")
 const permissoes = useUserPermissionsStore()
 const ambientes = useAmbientesStore()
 
 const items = useItemsAmbienteStore()
  
+const n_volumes = useNumVolumesStore()
+
+const volumes = lista_volumes(globaluser.value.email) 
+          
+
+
 const lista_items = ref([])
 
 async function load_all_data(){
@@ -52,14 +60,34 @@ const all_items_filtered = computed(()=> {
   return all_items_ordered.value
 })
 
-onBeforeMount(async () => await load_all_data())
+async function salvar_volume(){ 
+  const volume = {
+    codigo: codigo.value,
+    responsavel: globaluser.value.email,
+    items: lista_items.value
+  }
+  console.log(volume) 
+  const uptime = registra_volume(volume) 
+  if(uptime){ 
+    return true
+  } else {
+    return false
+  }
+}
+
+
+
+
+onMounted(async () => await load_all_data())  
+onServerPrefetch(() => usePendingPromises())
 </script>
 
 <template>
+  <p>{{ volumes }}</p>
   <button class="btn-primary btn" data-bs-target="#criarVolume" data-bs-toggle="modal">Criar novo volume</button>
-
-  <p>{{ permissoes }}</p>   
-  <Modal modalid="criarVolume">
+ 
+ {{ n_volumes.codigo }} 
+  <Modal modalid="criarVolume" :salve_callback="async () => await salvar_volume()">
   <template #titulo>
     Criar novo volume
   </template>
@@ -67,7 +95,7 @@ onBeforeMount(async () => await load_all_data())
    <form class="row g-3">
     <div class="col-6">
       <label for="codigo" class="form-label">Código</label>
-      <input type="text" class="form-control" id="codigo" :value="codigo" disabled> 
+      <input type="text" class="form-control" id="codigo" :value="n_volumes.codigo" disabled> 
     </div>
 
     <div class="col-6">
@@ -75,7 +103,7 @@ onBeforeMount(async () => await load_all_data())
         <input type="text" class="form-control" id="responsavel" :value="globaluser.email" disabled>   
     </div> 
     <div class="col-12">
-      <h3>Lista de items inclusis no lote</h3>
+      <h3>Lista de items inclusos no lote</h3>
     </div>
     <div class="col-12">
       <input type="text" class="form-control" placeholder="Digite para filtrar a lista" v-model="filtrar_lista_items">
@@ -103,20 +131,12 @@ onBeforeMount(async () => await load_all_data())
     </div>
    </form>
   </template>
-  </Modal>
+  </Modal> 
 </template>
 <style>
 .listatodositems{
-  height: 50vh;
+  height: 30vh;
 }
 
 </style>
-
-<!-- <ul class="list-group listatodositems overflow-y-scroll">
-  <li class="list-group-item" v-for="(item,i) in all_items_ordered">
-<input class="form-check-input mx-1" type="checkbox"
- :value="item.key" v-model="lista_items"
- :id="'check' + i">
- <label :for="'check' + i" class="form-check-label text-wrap">{{ item.short_descricao }} </label><span class="badge rounded-pill text-secondary float-end">{{ item.key }}</span>
-</li>  
-</ul> -->
+ 
