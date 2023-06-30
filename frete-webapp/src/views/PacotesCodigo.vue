@@ -24,4 +24,7 @@ const responsavel = ref(null)
 <template>
     <h1>Volume {{ volume.codigo }}</h1>
 {{ volume.responsavel.nome }}
+<ul>
+<li v-for="item in volume.items">{{ item.short_descricao }} <span>{{ item.key }}</span></li>
+</ul>
 </template>

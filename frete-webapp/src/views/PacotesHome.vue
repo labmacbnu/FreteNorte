@@ -59,20 +59,13 @@ const all_items_filtered = computed(()=> {
   }
   return all_items_ordered.value
 })
-
-const all_items_dict = computed(() =>{
-    const dicionario  = {}
-    all_items_ordered.value.forEach( (doc) => {
-        dicionario[doc.key] = doc
-    })
-    return dicionario
-}) 
+ 
 
 const all_volumes_dict = computed(() => {
-    const dicionario = {}
+    const dicionario = { } // {'teste': [{short_descricao: 1, key: "a"}]}
     volumes.value.forEach((doc) => {
         const lista_items = []
-        doc.items.forEach((i) => lista_items.push(all_items_dict.value[i]))
+        doc.items.forEach((i) => lista_items.push(i))
         dicionario[doc.codigo] = lista_items
     })
     return dicionario
@@ -89,6 +82,7 @@ async function salvar_volume(){
   console.log(volume) 
   const uptime = registra_volume(volume) 
   if(uptime){ 
+    lista_items.value = []
     return true
   } else {
     return false
@@ -106,7 +100,7 @@ onServerPrefetch(() => usePendingPromises())
     <div class="row mb-3 justify-content-end">
         <div class="col text-end">
             <button class="btn-primary btn" data-bs-target="#criarVolume" data-bs-toggle="modal">Criar novo volume</button>
-        </div>
+        </div> 
     </div>
   <div class="row"> 
     <div class="col">    
@@ -157,7 +151,7 @@ onServerPrefetch(() => usePendingPromises())
     </div>
    </form>
   </template>
-  </Modal> 
+  </Modal>  
 </template>
 <style>
 .listatodositems{
