@@ -56,6 +56,12 @@ const router = createRouter({
           meta: { title: "Item por código"}
         },
         {
+          name: 'item-codigo-partes',
+          path: 'cod/:codigo/partes',
+          component: () => import('../views/ItemsCodPartes.vue'),
+          meta: { title: "Items por código - partes"}
+        },
+        {
           name: 'item-descricao',
           path: 'descricao',
           component: () => import('../views/ItemsDescricao.vue'),
