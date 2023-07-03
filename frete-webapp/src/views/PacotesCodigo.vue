@@ -4,6 +4,7 @@ import { doc } from 'firebase/firestore'
 import { useDocument } from 'vuefire'
 import { db, getdoc } from '../backend/index'
 import { onBeforeMount, ref } from 'vue'
+import QRCode from '../components/QRCode.vue'
 
 const route = useRoute()
 const codigo = route.params.codigo
@@ -19,12 +20,22 @@ const {
 } = useDocument(doc(db, "volumes", codigo))
 
 const responsavel = ref(null)
- 
+
 </script>
 <template>
-    <h1>Volume {{ volume.codigo }}</h1>
-{{ volume.responsavel.nome }}
-<ul>
-<li v-for="item in volume.items">{{ item.short_descricao }} <span>{{ item.key }}</span></li>
-</ul>
+  <div class="row">
+    <div class="col-3">
+      <QRCode :path="route.fullPath"></QRCode>
+    </div>
+    <div class="col-6">
+      <h1>Volume {{ volume.codigo }}</h1>
+      <p><b>Responsável:</b> {{ volume.responsavel.nome }}</p>
+      <ul class="list-group">
+        <li class="list-group-item justify-content-between d-flex" v-for="item in volume.items">
+          {{ item.short_descricao }} 
+          <span class="bagde text-secondary">Cód. {{ item.key }}</span>
+        </li>
+      </ul>
+    </div>
+  </div>
 </template>
