@@ -1,5 +1,5 @@
 <script setup>
-import { RouterLink, useRoute } from 'vue-router';
+import { useRoute } from 'vue-router';
 import { getFirestore, doc } from 'firebase/firestore'
 import { firebaseApp } from '../firebaseConfig'
 import { computed, reactive } from 'vue';
@@ -28,13 +28,12 @@ const item = computed(() => {
         ambiente: "",
         patrimonio: "",
         valor: "",
-        medidas: null,
-        peso: null,
+        medidas: "",
+        peso: "",
         fragil: false,
         transporte_especial: false,
         inteiro: true,
-        observacoes: "",
-        volume: null,
+        volume: "",
         partes: []
     }
     if (item_db.value) {
@@ -51,9 +50,9 @@ async function atualiza_item() {
     console.log(valores)
     const uptime = await update_item(valores.key, {
         medidas: valores.medidas,
-        peso: valores.peso,
-        fragil: valores.fragil,
-        transporte_especial: valores.transporte_especial
+        peso: valores.peso ? valores.peso : null,
+        fragil: valores.fragil ? valores.fragil : null,
+        transporte_especial: valores.transporte_especial ? valores.transporte_especial : null
     })
 
     console.log(`Item ${valores.key} atualizado ${uptime}`)
@@ -70,65 +69,13 @@ async function atualiza_item() {
                     <tr>
                         <td colspan="2" class="text-secondary">{{ item.descricao }}</td>
                     </tr>
-                    <tr>
-                        <th scope="row">Ambiente</th>
-                        <td>{{ item.ambiente }}</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Patrimônio</th>
-                        <td>{{ item.patrimonio }}</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Valor</th>
-                        <td>{{ item.valor }}</td>
-                    </tr>
-
-                    <tr>
-                        <th scope="row">Medidas</th>
-                        <td><input class="form-control" v-model="item.medidas"></td>
-                    </tr>
+                     
 
                     <tr>
                         <th scope="row">Peso</th>
                         <td><input class="form-control" v-model="item.peso"></td>
                     </tr>
-
-                    <tr>
-                        <th scope="row">Extras</th>
-                        <td>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" v-model="item.fragil" id="checkfragil">
-                                <label class="form-check-label" for="checkfragil">
-                                    Frágil
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" v-model="item.transporte_especial"
-                                    id="checkespecial">
-                                <label class="form-check-label" for="checkespecial">
-                                    Transporte especial
-                                </label>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Volume</th>
-                        <td>{{ item.volume }}</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Observações</th>
-                        <td>
-                            <textarea class="form-control" placeholder="Anote aqui casos de transporte especial, se o item precisa de calibragem, entre outros"></textarea>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Partes</th>
-                        <td>
-                            <RouterLink :to="{ name: 'item-codigo-partes', params: { codigo: item.key } }"
-                                class="">Partes</RouterLink>
-                        </td>
-
-                    </tr>
+ 
 
                     <tr class="border-primary">
                         <td colspan="2" class="text-end d-print-none">
