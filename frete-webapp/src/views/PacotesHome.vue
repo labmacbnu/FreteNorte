@@ -38,7 +38,9 @@ const all_items_ordered = computed(() => {
   for(let amb of permissoes.ambientes){
     const ambiente = ambientes.dados.filter( (elem) => elem.ambiente_codigo == amb )[0] 
     if(items.inner_db[ambiente.valor]){
-      all.push(...items.inner_db[ambiente.valor])
+      // filtrar apenas não volumados
+      const falta_volumar = items.inner_db[ambiente.valor].filter( x => !x.volumado )
+      all.push(...falta_volumar)
     }
   }
   return all.sort( (a,b) => a.short_descricao.localeCompare(b.short_descricao))
@@ -82,7 +84,12 @@ async function salvar_volume(){
   console.log(volume) 
   const uptime = registra_volume(volume) 
   if(uptime){ 
+    for(let item of lista_items.value){
+      var itemRef = all_items_ordered.value.filter(x => x.key == item)[0]
+      itemRef.volumado = true
+    }
     lista_items.value = []
+
     return true
   } else {
     return false
