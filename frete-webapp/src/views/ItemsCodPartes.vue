@@ -27,14 +27,14 @@ const item = computed(() => {
         short_descricao: "",
         ambiente: "",
         patrimonio: "",
-        valor: "",
+        valor: 0,
         medidas: "",
         peso: "",
         fragil: false,
         transporte_especial: false,
         inteiro: true,
         volume: "",
-        partes: []
+        partes: reactive([])
     }
     if (item_db.value) {
         Object.assign(itemModel,{
@@ -45,15 +45,13 @@ const item = computed(() => {
     return itemModel
 })
 
+function adiciona_parte() {
+    item.value.partes.push({nome: '', volume: ''})
+}
+
 async function atualiza_item() {
-    const valores = { ...item.value }
-    console.log(valores)
-    const uptime = await update_item(valores.key, {
-        medidas: valores.medidas,
-        peso: valores.peso ? valores.peso : null,
-        fragil: valores.fragil ? valores.fragil : null,
-        transporte_especial: valores.transporte_especial ? valores.transporte_especial : null
-    })
+    const valores = { ...item.value } 
+    console.log(valores.partes)
 
     console.log(`Item ${valores.key} atualizado ${uptime}`)
 }
@@ -62,23 +60,40 @@ async function atualiza_item() {
 <template>
     <div class="row align-items-start">
         <div class="col-12">
-            <h4 class="d-print-none">{{ item.short_descricao }}</h4>
-
+            <h4 class="d-print-none d-flex align-items-center">
+                 {{ item.short_descricao }}
+                <span class="mx-3 badge text-secondary">{{ item.key }}</span>    
+            </h4>
+            <p class="text-secondary p-2">
+                {{ item.descricao }}
+            </p>
             <table class="table d-print-none">
-                <tbody>
+                <thead>
                     <tr>
-                        <td colspan="2" class="text-secondary">{{ item.descricao }}</td>
+                        <th scope="row">Partes</th> 
+                        <th>Nome da parte</th>
+                        <th>Volume</th>
                     </tr>
-                     
-
+                </thead>
+                <tbody> 
+                    <tr v-for="(parte, index) in item.partes" :key="'parte'+index">
+                        <td>
+                            <button class="btn btn-danger" @click="() => item.partes.splice(index, 1)">Remover</button>
+                        </td>
+                        <td>
+                            <input class="form-control" v-model="parte.nome">
+                        </td>
+                        <td>
+                            <input class="form-control" v-model="parte.volume">
+                        </td>
+                    </tr>
                     <tr>
-                        <th scope="row">Peso</th>
-                        <td><input class="form-control" v-model="item.peso"></td>
+                        <td><button @click="adiciona_parte" class="btn btn-success">Adicionar parte</button></td>
+                        <td colspan="2"></td>
                     </tr>
- 
 
                     <tr class="border-primary">
-                        <td colspan="2" class="text-end d-print-none">
+                        <td colspan="3" class="text-end d-print-none">
                             <button class="btn btn-primary" @click="atualiza_item">Salvar</button>
                         </td>
                     </tr>
@@ -86,17 +101,5 @@ async function atualiza_item() {
             </table>
 
         </div>
-    </div>
-    <div class="row justify-content-start">
-        <div class="col">
-            <QRCode :path="route.fullPath"></QRCode>
-            <div>
-                <h4 class="d-none d-print-block">Sistema Frete Norte</h4>
-                <h5>{{ item.short_descricao }}</h5>
-                <p><small>
-                        {{ item.ambiente }}</small></p>
-                <p><em>Patrimônio</em> {{ item.patrimonio }}</p>
-            </div>
-        </div>
-
-    </div></template>
+    </div> 
+</template>

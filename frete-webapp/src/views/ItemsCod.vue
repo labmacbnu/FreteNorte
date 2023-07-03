@@ -27,7 +27,7 @@ const item = computed(() => {
         short_descricao: "",
         ambiente: "",
         patrimonio: "",
-        valor: "",
+        valor: 0,
         medidas: null,
         peso: null,
         fragil: false,
@@ -63,13 +63,15 @@ async function atualiza_item() {
 <template>
     <div class="row align-items-start">
         <div class="col-12">
-            <h4 class="d-print-none">{{ item.short_descricao }}</h4>
-
+            <h4 class="d-print-none d-flex align-items-center">
+                 {{ item.short_descricao }}
+                <span class="mx-3 badge text-secondary">{{ item.key }}</span>    
+            </h4>
+            <p class="text-secondary p-2">
+                {{ item.descricao }}
+            </p>
             <table class="table d-print-none">
-                <tbody>
-                    <tr>
-                        <td colspan="2" class="text-secondary">{{ item.descricao }}</td>
-                    </tr>
+                <tbody> 
                     <tr>
                         <th scope="row">Ambiente</th>
                         <td>{{ item.ambiente }}</td>
@@ -80,7 +82,7 @@ async function atualiza_item() {
                     </tr>
                     <tr>
                         <th scope="row">Valor</th>
-                        <td>{{ item.valor }}</td>
+                        <td>R$ {{ item.valor.toFixed(2) }}</td>
                     </tr>
 
                     <tr>
@@ -125,7 +127,7 @@ async function atualiza_item() {
                         <th scope="row">Partes</th>
                         <td>
                             <RouterLink :to="{ name: 'item-codigo-partes', params: { codigo: item.key } }"
-                                class="">Partes</RouterLink>
+                                class="">Editar partes</RouterLink>
                         </td>
 
                     </tr>
