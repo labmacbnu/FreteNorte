@@ -25,7 +25,10 @@ export const useNumVolumesStore = defineStore("volumes-num",  () => {
 export async function registra_volume(dados){
     dados.responsavel = doc(db, "permissoes", dados.responsavel)
     const itemsRef = []
-    dados.items.forEach( (key) => itemsRef.push( doc(db, "items", key) ))
+    dados.items.forEach( (key) => {
+        const itemRef = doc(db, "items", key) 
+        itemsRef.push( itemRef )
+    })
     dados.items = itemsRef
     const docRef = doc(db, "volumes", dados.codigo);
     const uptime = await setDoc(docRef, {...dados, deleted: false});
