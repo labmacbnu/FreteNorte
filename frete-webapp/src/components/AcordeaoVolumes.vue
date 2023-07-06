@@ -1,5 +1,5 @@
 <script setup>
-defineProps(['id', 'lista_agrupada'])
+defineProps(['id', 'lista_agrupada', 'apaga_volume'])
 import AcordeaoChild from './AcordeaoChild.vue';
 </script>
 
@@ -12,10 +12,10 @@ import AcordeaoChild from './AcordeaoChild.vue';
             </template>
             
             <template #corpo>
-                <p class="mx-2">
-                    <RouterLink :to="{name: 'volume-codigo', params: {codigo: chave }}">Ver volume</RouterLink>
-                    
-                </p>
+                <p class="mx-2 d-flex justify-content-between">
+                    <RouterLink class="btn btn-primary" :to="{name: 'volume-codigo', params: {codigo: chave }}">Ver volume</RouterLink>
+                    <button class="btn btn-danger" @click="() => apaga_volume(chave)">Apagar volume</button>
+                </p> 
             <ul class="list-group">
                 <li class="list-group-item d-flex justify-content-between align-items-center" v-for="subitem in valor">
                     {{ subitem.short_descricao }}
