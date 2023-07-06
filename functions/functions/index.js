@@ -45,8 +45,15 @@ exports.contavolumes = functions.firestore.document("volumes/{volumeId}").onWrit
     // Get an object with the previous document value (for update or delete)
     const oldDocument = change.before.data();
     if(document){
+             // soft delete
+        if(document.deleted){
+            oldDocument.items.forEach( (docRef) => docRef.update({volumado: false, volume: null}))
+        } else {
+            // created or updated
         document.items.forEach( (docRef) => docRef.update({volumado: true, volume: volumeId}))
+        }
     } else {
+        // hard deleted
         oldDocument.items.forEach( (docRef) => docRef.update({volumado: false, volume: null}))
     }
 
