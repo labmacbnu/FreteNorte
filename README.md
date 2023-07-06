@@ -9,7 +9,7 @@ Criado por Bossa
 Webapp
 
 - [X] Função editar medidas
-- [ ] Função "Criar volume"
+- [X] Função "Criar volume"
 - [ ] Função "Adicionar item/parte ao volume"
 - [ ] Função "Dividir item em partes"
 
