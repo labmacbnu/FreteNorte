@@ -83,11 +83,13 @@ const router = createRouter({
           path: '',
           name: 'volumes',
           component: () => import('../views/PacotesHome.vue'),
+          meta: { title: "Volumes"}
         },
         {
           path: 'cod/:codigo',
           name: 'volume-codigo',
-          component: () => import('../views/PacotesCodigo.vue')
+          component: () => import('../views/PacotesCodigo.vue'),
+          meta: { title: "Volume por código"}
         }
       ]
     },
