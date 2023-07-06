@@ -4,7 +4,7 @@ import Modal  from '../components/Modal.vue';
 import { useUserPermissionsStore } from '../stores/user';
 import { useItemsAmbienteStore, orderedGroupBy } from '../stores/items';
 import { useAmbientesStore } from '../stores/ambientes'; 
-import { useNumVolumesStore, registra_volume, lista_volumes } from '../stores/volumes';
+import { useNumVolumesStore, registra_volume, lista_volumes, apaga_volume } from '../stores/volumes';
 import { volumesRef } from '../backend/index';  
 import { usePendingPromises } from 'vuefire'
 import Acordeao from '../components/AcordeaoVolumes.vue';
@@ -32,6 +32,8 @@ async function load_all_data(){
   }
 }
 
+
+
 const all_items_ordered = computed(() => {
   if( !permissoes.ambientes ) return []
   let all = [] 
@@ -39,12 +41,14 @@ const all_items_ordered = computed(() => {
     const ambiente = ambientes.dados.filter( (elem) => elem.ambiente_codigo == amb )[0] 
     if(items.inner_db[ambiente.valor]){
       // filtrar apenas não volumados
-      const falta_volumar = items.inner_db[ambiente.valor].filter( x => !x.volumado )
-      all.push(...falta_volumar)
+      all.push(...items.inner_db[ambiente.valor])
     }
   }
   return all.sort( (a,b) => a.short_descricao.localeCompare(b.short_descricao))
 })
+
+const all_items_nao_volumados = computed(() =>
+  all_items_ordered.value.filter( (elem) => !elem.volumado ))
 
 function click_row(i){
   document.getElementById("check" + i).click()
@@ -55,11 +59,11 @@ const filtrar_lista_items = ref("")
 const all_items_filtered = computed(()=> {
   if(filtrar_lista_items.value.length >= 3) {
     const regex = new RegExp(`.*${filtrar_lista_items.value}.*`, 'i'); 
-    return all_items_ordered.value.filter(
+    return all_items_nao_volumados.value.filter(
         obj => regex.test(obj.short_descricao)
         );
   }
-  return all_items_ordered.value
+  return all_items_nao_volumados.value
 })
  
 
@@ -96,6 +100,20 @@ async function salvar_volume(){
   }
 }
 
+async function soft_apaga_volume(codigo){ 
+  const items_do_volume = all_volumes_dict.value[codigo]
+  console.log(`Apagando volume ${codigo} com ${items_do_volume.length} items`) 
+  // vamos desavolumar aqui localmente
+  items_do_volume.forEach(element => {     
+    console.log(element.key)
+    var itemRef = all_items_ordered.value.find(x => x.key == element.key)
+    Object.assign(itemRef, {volumado: false})
+  });
+  const uptime = apaga_volume(codigo)  
+  return uptime
+}
+
+
 
 
 
@@ -111,7 +129,7 @@ onServerPrefetch(() => usePendingPromises())
     </div>
   <div class="row"> 
     <div class="col">    
-    <Acordeao id="volumes" :lista_agrupada="all_volumes_dict"></Acordeao> 
+    <Acordeao id="volumes" :apaga_volume="soft_apaga_volume" :lista_agrupada="all_volumes_dict"></Acordeao> 
     </div>
   </div>
   <Modal modalid="criarVolume" :salve_callback="async () => await salvar_volume()">
