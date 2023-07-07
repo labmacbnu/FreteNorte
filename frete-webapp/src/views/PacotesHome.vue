@@ -106,8 +106,14 @@ async function soft_apaga_volume(codigo){
   // vamos desavolumar aqui localmente
   items_do_volume.forEach(element => {     
     console.log(element.key)
-    var itemRef = all_items_ordered.value.find(x => x.key == element.key)
-    Object.assign(itemRef, {volumado: false})
+    try {
+      // se for um item normal
+      var itemRef = all_items_ordered.value.find(x => x.key == element.key)
+      Object.assign(itemRef, {volumado: false})
+    } catch (error) {
+      // se for uma parte
+      console.log(`O elemento ${element.key} é uma parte`)
+    }
   });
   const uptime = apaga_volume(codigo)  
   return uptime
