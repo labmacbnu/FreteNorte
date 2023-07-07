@@ -11,7 +11,7 @@ const route = useRoute()
 
 const ambiente_completo = computed( () => {
     const amb = route.params.ambiente;
-    const ambiente = ambientes.dados.filter( (elem) => elem.ambiente_codigo == amb )[0]
+    const ambiente = ambientes.dados.find( (elem) => elem.ambiente_codigo == amb )
     // hack para atualizar o items store ao calcular o ambiente
     items.ambiente = ambiente.valor
     items.load_data()
