@@ -1,7 +1,8 @@
 import { reactive, ref } from 'vue'
 import { defineStore } from 'pinia'
-import { getFirestore, getDocs,  collection } from 'firebase/firestore'
+import { getFirestore, getDocs,  collection, where, getCountFromServer, query } from 'firebase/firestore'
 import { firebaseApp } from '../firebaseConfig'
+import { useDocument } from 'vuefire'
 
 
 
@@ -21,3 +22,18 @@ export const useAmbientesStore = defineStore('ambientes', ()=>{
 
     return {dados, load_data} 
 })
+
+export async function ambiente_status(ambiente_full) {
+    const db = getFirestore(firebaseApp)
+    const volumados_query = query(collection(db, "items"), where('ambiente', '==', ambiente_full),
+    where('volumado', '==', true))
+    const volumados_snap = await getCountFromServer(volumados_query)
+    const volumados_n = volumados_snap.data().count
+
+    const all_query = query(collection(db, "items"), where('ambiente', '==', ambiente_full))
+    const all_snap = await getCountFromServer(all_query)
+    const all_n = all_snap.data().count
+
+    return {volumados: volumados_n, todos: all_n}
+
+}
