@@ -36,6 +36,7 @@ exports.contavolumes = functions.firestore.document("volumes/{volumeId}").onWrit
     const snapshot = await collectionRef.count().get();
     const total = snapshot.data().count;
     db.doc("agregados/volumes").set({quantidade: total})
+    functions.logger.log(`Total de volumes: ${total}`)
 
     const volumeId = context.params.volumeId 
     // Get an object with the current document value.
@@ -47,16 +48,20 @@ exports.contavolumes = functions.firestore.document("volumes/{volumeId}").onWrit
     if(document){
              // soft delete
         if(document.deleted){
+
+            functions.logger.log(`Soft deleted volume ${volumeId}`)
             oldDocument.items.forEach( (docRef) => docRef.update({volumado: false, volume: null}))
         } else {
             // created or updated
-        document.items.forEach( (docRef) => docRef.update({volumado: true, volume: volumeId}))
+            functions.logger.log(`Created of updated volume ${volumeId}`)
+            document.items.forEach( (docRef) => docRef.update({volumado: true, volume: volumeId}))
         }
     } else {
         // hard deleted
+
+        functions.logger.log(`Hard deleted volume ${volumeId}`)
         oldDocument.items.forEach( (docRef) => docRef.update({volumado: false, volume: null}))
     }
-
 
 })
 
