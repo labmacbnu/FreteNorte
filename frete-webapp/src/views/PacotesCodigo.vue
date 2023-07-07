@@ -27,12 +27,12 @@ const responsavel = ref(null)
     <div class="col-3">
       <QRCode :path="route.fullPath"></QRCode>
     </div>
-    <div class="col-6">
+    <div class="col-9">
       <h1>Volume {{ volume.codigo }}</h1>
       <p><b>Responsável:</b> {{ volume.responsavel.nome }}</p>
       <ul class="list-group">
         <li class="list-group-item justify-content-between d-flex" v-for="item in volume.items">
-          {{ item.short_descricao }} 
+          {{ item.key.includes("-") ? item.descricao : item.short_descricao }} 
           <span class="bagde text-secondary">Cód. {{ item.key }}</span>
         </li>
       </ul>
