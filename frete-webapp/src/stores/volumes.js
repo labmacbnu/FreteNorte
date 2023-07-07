@@ -4,6 +4,7 @@ import { firebaseApp } from '../firebaseConfig';
 import {  collection, where, doc, setDoc, query, updateDoc } from 'firebase/firestore';
 import {useCollection, useDocument} from 'vuefire';
 import { db } from '../backend/index.js';
+import {update_item_part} from './singleitem.js';
  
 
 export const useNumVolumesStore = defineStore("volumes-num",  () => {
@@ -46,4 +47,11 @@ export function lista_volumes(email){
     const volRef = collection(db, "volumes")    
     const q = query(volRef, where("responsavel", "==", userRef), where('deleted', '==', false))
     return useCollection(q, {wait: true})  
+}
+
+
+export async function registra_volume_parte(dados){
+    dados.responsavel = doc(db, "permissoes", dados.responsavel)  
+    const docRef = doc(db, "volumes", dados.codigo);
+    const uptime = await setDoc(docRef, {...dados, deleted: false});
 }
