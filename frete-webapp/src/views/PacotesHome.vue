@@ -5,6 +5,7 @@ import { useUserPermissionsStore } from '../stores/user';
 import { useItemsAmbienteStore, orderedGroupBy } from '../stores/items';
 import { useAmbientesStore } from '../stores/ambientes'; 
 import { useNumVolumesStore, registra_volume, lista_volumes, apaga_volume } from '../stores/volumes';
+import { update_item_part, delete_part, get_parte_ref} from '../stores/singleitem'
 import { volumesRef } from '../backend/index';  
 import { usePendingPromises } from 'vuefire'
 import Acordeao from '../components/AcordeaoVolumes.vue';
@@ -100,19 +101,29 @@ async function salvar_volume(){
   }
 }
 
+async function deleta_volume_parte(parte_key){ 
+    const parteRef = await get_parte_ref(parte_key) 
+    const [itemKey, _] = parte_key.split("-")
+    // apaga do item
+    await update_item_part(itemKey, 'remove', parteRef) 
+    // hard apaga a parte
+    await delete_part(parte_key)
+}
+
 async function soft_apaga_volume(codigo){ 
   const items_do_volume = all_volumes_dict.value[codigo]
   console.log(`Apagando volume ${codigo} com ${items_do_volume.length} items`) 
   // vamos desavolumar aqui localmente
   items_do_volume.forEach(element => {     
-    console.log(element.key)
-    try {
+    if(element.key.includes("-")){
+      // SE TEM TRAÇO NA KEY
+      console.log(`Apagando parte ${element.key}`)
+      deleta_volume_parte(element.key)
+    } else { // SE NÃO TEM TRAÇO NO KEY
       // se for um item normal
+      console.log(`Desavolumento item ${element.key}`)
       var itemRef = all_items_ordered.value.find(x => x.key == element.key)
       Object.assign(itemRef, {volumado: false})
-    } catch (error) {
-      // se for uma parte
-      console.log(`O elemento ${element.key} é uma parte`)
     }
   });
   const uptime = apaga_volume(codigo)  
