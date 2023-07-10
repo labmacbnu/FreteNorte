@@ -24,7 +24,7 @@ const responsavel = ref(null)
 </script>
 <template>
   <div class="row">
-    <div class="col-3">
+    <div class="col">
       <QRCode :path="route.fullPath"></QRCode>
     </div>
     <div class="col-9">
