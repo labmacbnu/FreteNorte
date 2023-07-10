@@ -3,10 +3,10 @@
         <qrcode-stream :track="paintOutline" :camera="camera" @decode="onDecode">
             <div v-if="lido" class="overlay position-relative">
                 <div class="position-absolute top-50 start-50 translate-middle">
-                    <p>
-                        QR Code lido com sucesso</p><br />
-                    <a href="#" @click="turnon_camera">
-                        Ler outro código</a>
+                    <h3>QR Code lido com sucesso</h3>
+                    <p>Redirecionando para a página correspondente.</p>
+                    <!-- <a href="#" @click="turnon_camera">
+                        Ler outro código</a> -->
                 </div>
             </div>
         </qrcode-stream>
