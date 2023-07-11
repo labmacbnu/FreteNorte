@@ -1,7 +1,8 @@
 import { defineStore } from 'pinia'
-import { getFirestore, doc, addDoc, collection, getDoc, query, where, getDocs } from 'firebase/firestore'
+import { getFirestore, doc, addDoc, collection, getDoc, query, where, getDocs, updateDoc } from 'firebase/firestore'
 import { firebaseApp } from '../firebaseConfig'
 import { ref, computed, reactive } from 'vue'
+import { useCollection, useObject } from 'vuefire'
 
 const db = getFirestore(firebaseApp)
 
@@ -48,7 +49,6 @@ export function orderedGroupBy(list, keyGetter){
 
 export const useItemsAmbienteStore = defineStore('items-ambiente', ()=>{
  const ambiente = ref(null)
- 
  const inner_db = reactive({})
  const dados = computed( () => {
     if(ambiente.value){
@@ -57,13 +57,10 @@ export const useItemsAmbienteStore = defineStore('items-ambiente', ()=>{
 
  async function load_data(){
     // só carrega o que não tá na inner_bd
+    const itemsColl = collection(db, "items")
     if (! inner_db.hasOwnProperty(ambiente.value) ){
-        const q = query(collection(db, "items"), where('ambiente', '==', ambiente.value))
-        const querySnapshot = await getDocs(q);
-        inner_db[ambiente.value] = [];
-        querySnapshot.forEach( function (doc) {  
-            inner_db[ambiente.value].push(doc.data()) 
-         })
+        const q = query(itemsColl, where('ambiente', '==',  doc(collection(db,"ambientes"),  ambiente.value))) 
+        inner_db[ambiente.value] = useCollection(q); 
         }
     }
 
@@ -79,8 +76,6 @@ export const useItemsAmbienteStore = defineStore('items-ambiente', ()=>{
             return objeto_organizado
         }
     })
-
-
 
     return {ambiente, dados, load_data, dados_agrupados, inner_db}
 })
@@ -140,3 +135,13 @@ export const useItemsDescricaoStore = defineStore('items-descricao', ()=>{
 export const useItemsResponsavelStore = defineStore('items-responsavel', ()=>{
     const responsavel = ref(null)
 })
+
+
+export async function cria_item(item){
+    const itemsRef = collection(db, "items")
+    const newDocRef = await addDoc(itemsRef, item);
+    console.log("Documento escrito", newDocRef.id);
+    // set key
+    updateDoc(newDocRef, {key: newDocRef.id}) 
+    return newDocRef.id
+}
