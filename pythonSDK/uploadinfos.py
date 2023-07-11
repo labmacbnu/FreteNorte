@@ -37,7 +37,8 @@ def process_permanentes(permanentes_array: list[dict]):
                 x[key] = None
         
         x["key"] = x["patrimonio"] if x["patrimonio"] else x["n_controle"]
-
+        ambiente_key = x["ambiente"].split(" - ")[0]
+        x["ambiente"] = db.document(f"ambientes/{ambiente_key}")
         for key in ["incorporacao", "transf_local"]:  
             try:
                 x[key] = datetime.fromisoformat(x[key]) 
@@ -61,9 +62,9 @@ def batch_write(collection: str, dictarray: list[dict], key_id: str | None = Non
         batch.commit()
 
 if __name__ == "__main__":
-    for col, file, key in COLLECTIONS_MAP:
+    for col, file, key in COLLECTIONS_MAP[2:]:
         dados = load_json_file(file)
         if col == 'items':  
-            process_permanentes(dados)
-
-        batch_write(col, dados, key )
+            process_permanentes(dados) 
+        
+        batch_write(col, dados, key)
