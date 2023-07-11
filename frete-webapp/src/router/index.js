@@ -66,6 +66,12 @@ const router = createRouter({
           path: 'descricao',
           component: () => import('../views/ItemsDescricao.vue'),
           meta: { title: "Items por descrição"}
+        },
+        {
+          name: 'item-add',
+          path: 'add',
+          component: () => import('../views/ItemsAdd.vue'),
+          meta: {title: "Adicionar item"}
         }
       ]
     },
