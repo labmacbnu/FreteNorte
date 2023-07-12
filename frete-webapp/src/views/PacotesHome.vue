@@ -4,11 +4,13 @@ import Modal  from '../components/Modal.vue';
 import { useUserPermissionsStore } from '../stores/user';
 import { useItemsAmbienteStore, orderedGroupBy } from '../stores/items';
 import { useAmbientesStore } from '../stores/ambientes'; 
-import { useNumVolumesStore, registra_volume, lista_volumes, apaga_volume } from '../stores/volumes';
+import { useNumVolumesStore, registra_volume, useVolumesEmailStore, apaga_volume } from '../stores/volumes';
 import { update_item_part, delete_part, get_parte_ref} from '../stores/singleitem'
-import { volumesRef } from '../backend/index';  
-import { usePendingPromises } from 'vuefire'
 import Acordeao from '../components/AcordeaoVolumes.vue';
+
+import { db } from '../backend/index.js';
+import {  collection, where, doc, setDoc, query, updateDoc } from 'firebase/firestore';
+import { useCollection } from 'vuefire'; 
 
 const {globaluser, updateUser} = inject("globaluser")
 const permissoes = useUserPermissionsStore()
@@ -18,7 +20,15 @@ const items = useItemsAmbienteStore()
  
 const n_volumes = useNumVolumesStore()
 
-const volumes = lista_volumes(globaluser.value.email) 
+
+const userRef = computed( () => doc(db, "permissoes", globaluser.value.email) )
+const volRef = collection(db, "volumes") 
+const q = computed ( () => {
+    if(permissoes.email)
+        return query(volRef, where("responsavel", "==", userRef.value), where('deleted', '==', false))
+})
+const volumes = ref([])
+const { pending } = useCollection(q.value, { wait: true, target: volumes})   
           
 
 
@@ -26,9 +36,9 @@ const lista_items = ref([])
 
 async function load_all_data(){
   const permissoes = useUserPermissionsStore()
-  for(let amb of permissoes.ambientes){
-    const ambiente = ambientes.dados.filter( (elem) => elem.ambiente_codigo == amb )[0]
-    items.ambiente = ambiente.valor
+  for(let amb of permissoes.ambientes){ 
+    console.log(amb)
+    items.ambiente = amb
     await items.load_data()
   }
 }
@@ -38,11 +48,10 @@ async function load_all_data(){
 const all_items_ordered = computed(() => {
   if( !permissoes.ambientes ) return []
   let all = [] 
-  for(let amb of permissoes.ambientes){
-    const ambiente = ambientes.dados.filter( (elem) => elem.ambiente_codigo == amb )[0] 
-    if(items.inner_db[ambiente.valor]){
+  for(let amb of permissoes.ambientes){ 
+    if(items.inner_db[amb]){
       // filtrar apenas não volumados
-      all.push(...items.inner_db[ambiente.valor])
+      all.push(...items.inner_db[amb])
     }
   }
   return all.sort( (a,b) => a.short_descricao.localeCompare(b.short_descricao))
@@ -70,11 +79,14 @@ const all_items_filtered = computed(()=> {
 
 const all_volumes_dict = computed(() => {
     const dicionario = { } // {'teste': [{short_descricao: 1, key: "a"}]}
-    volumes.value.forEach((doc) => {
-        const lista_items = []
-        doc.items.forEach((i) => lista_items.push(i))
-        dicionario[doc.codigo] = lista_items
-    })
+    if(volumes) {
+      volumes.value.forEach((doc) => {
+        // VERIFICAR O QUE TÁ ACONTECENDO AQUI
+          const lista_items = []
+          doc.items.forEach((i) => lista_items.push(i))
+          dicionario[doc.codigo] = lista_items
+      })
+    }
     return dicionario
 })
  
@@ -90,7 +102,7 @@ async function salvar_volume(){
   const uptime = registra_volume(volume) 
   if(uptime){ 
     for(let item of lista_items.value){
-      var itemRef = all_items_ordered.value.filter(x => x.key == item)[0]
+      var itemRef = all_items_ordered.value.find(x => x.key == item)
       itemRef.volumado = true
     }
     lista_items.value = []
@@ -133,9 +145,9 @@ async function soft_apaga_volume(codigo){
 
 
 
-
-onMounted(async () => await load_all_data())  
-onServerPrefetch(() => usePendingPromises())
+onBeforeMount(() => volumes.email = permissoes.email)
+onBeforeMount(async () => await load_all_data())  
+//onServerPrefetch(() => usePendingPromises())
 </script>
 
 <template>
