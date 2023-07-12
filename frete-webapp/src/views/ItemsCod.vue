@@ -74,7 +74,7 @@ async function atualiza_item() {
                 <tbody> 
                     <tr>
                         <th scope="row">Ambiente</th>
-                        <td>{{ item.ambiente }}</td>
+                        <td>{{ item.ambiente.ambiente_codigo }} - {{ item.ambiente.ambiente_nome }}</td>
                     </tr>
                     <tr>
                         <th scope="row">Patrimônio</th>
@@ -148,8 +148,11 @@ async function atualiza_item() {
             <div>
                 <h4 class="d-none d-print-block">Sistema Frete Norte</h4>
                 <h5>{{ item.short_descricao }}</h5>
-                <p><small>
-                        {{ item.ambiente }}</small></p>
+                <p>
+                    <small>
+                        <b>{{ item.ambiente.ambiente_codigo }}</b> - {{ item.ambiente.ambiente_nome }}
+                    </small>
+                </p>
                 <p><em>Patrimônio</em> {{ item.patrimonio }}</p>
             </div>
         </div>

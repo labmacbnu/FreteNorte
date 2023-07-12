@@ -63,7 +63,12 @@ const nova_parte = reactive({
     inteiro: false,
     volume: n_volumes.codigo
 })
-
+/**
+ * Callback para o botão salvar parte
+ *  - Cria uma parte e pega a ref
+ *  - Cria um volume e adiciona essa ref
+ *  - Adiciona a ref ao item a que se refere
+ */
 async function adiciona_parte() {
     const partRef = await create_part({...nova_parte, descricao: item.value.short_descricao + ": " + nova_parte.short_descricao})
     console.log(`Cridada parte ${partRef.id} para item ${item.value.key}`)
