@@ -18,7 +18,9 @@ import AcordeaoChild from './AcordeaoChild.vue';
                 </p> 
             <ul class="list-group">
                 <li class="list-group-item d-flex justify-content-between align-items-center" v-for="subitem in valor">
+                    <template v-if="subitem.key">
                     {{ subitem.key.includes("-") ? subitem.descricao : subitem.short_descricao }}
+                    </template>
                     <span class="badge text-bg-light">{{ subitem.key }}</span> 
                 </li>
                 
