@@ -18,8 +18,8 @@ defineProps({
 </template>
 <style>
 .qrcode {
-  width: 170px;
-  height: 170px;
+  width: 150px;
+  height: 150px;
   float: left;
 }
 .qrcode img {
