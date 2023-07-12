@@ -18,7 +18,7 @@ const meus_ambientes = computed(() => {
         lista_ambientes.push(...ambientes.dados.filter(obj => permissions.ambientes.includes(obj.ambiente_codigo)))
 
         lista_ambientes.forEach(async (ambiente, index) => {
-            const dicio = await ambiente_status(ambiente.valor)
+            const dicio = await ambiente_status(ambiente.ambiente_codigo)
             dicio.percent = parseInt(100* dicio.volumados / dicio.todos)
             lista_ambientes[index]["status"] = reactive(dicio)
         })
