@@ -1,4 +1,4 @@
-import { computed, ref } from 'vue';
+import { computed, ref, watch } from 'vue';
 import { defineStore } from 'pinia';
 import { firebaseApp } from '../firebaseConfig';
 import {  collection, where, doc, setDoc, query, updateDoc } from 'firebase/firestore';
@@ -33,6 +33,7 @@ export async function registra_volume(dados){
     dados.items = itemsRef
     const docRef = doc(db, "volumes", dados.codigo);
     const uptime = await setDoc(docRef, {...dados, deleted: false});
+    return uptime
 }
 
 
@@ -42,12 +43,19 @@ export async function apaga_volume(codigo_volume){
 }
 
 
-export function lista_volumes(email){ 
-    const userRef = doc(db, "permissoes", email)
-    const volRef = collection(db, "volumes")    
-    const q = query(volRef, where("responsavel", "==", userRef), where('deleted', '==', false))
-    return useCollection(q, {wait: true})  
-}
+export const useVolumesEmailStore = defineStore("volumes-email", () => {
+    const email = ref(null) 
+    const userRef = computed( () => doc(db, "permissoes", email.value) )
+    const volRef = collection(db, "volumes") 
+    const q = computed ( () => {
+        if(email.value)
+            return query(volRef, where("responsavel", "==", userRef.value), where('deleted', '==', false))
+    })
+    const dados = useCollection(q)  
+    return {email, dados}
+})
+
+
 
 
 export async function registra_volume_parte(dados){
