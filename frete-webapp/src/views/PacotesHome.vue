@@ -1,42 +1,43 @@
 <script setup>
 import { computed, inject, onBeforeMount, onMounted, onServerPrefetch, ref } from 'vue';
-import Modal  from '../components/Modal.vue';
+import Modal from '../components/Modal.vue';
 import { useUserPermissionsStore } from '../stores/user';
 import { useItemsAmbienteStore, orderedGroupBy } from '../stores/items';
-import { useAmbientesStore } from '../stores/ambientes'; 
+import { useAmbientesStore } from '../stores/ambientes';
 import { useNumVolumesStore, registra_volume, useVolumesEmailStore, apaga_volume } from '../stores/volumes';
-import { update_item_part, delete_part, get_parte_ref} from '../stores/singleitem'
+import { update_item_part, delete_part, get_parte_ref } from '../stores/singleitem'
 import Acordeao from '../components/AcordeaoVolumes.vue';
+import QRCode from '../components/QRCode.vue';
 
 import { db } from '../backend/index.js';
-import {  collection, where, doc, setDoc, query, updateDoc } from 'firebase/firestore';
-import { useCollection } from 'vuefire'; 
+import { collection, where, doc, setDoc, query, updateDoc } from 'firebase/firestore';
+import { useCollection } from 'vuefire';
 
-const {globaluser, updateUser} = inject("globaluser")
+const { globaluser, updateUser } = inject("globaluser")
 const permissoes = useUserPermissionsStore()
 const ambientes = useAmbientesStore()
 
 const items = useItemsAmbienteStore()
- 
+
 const n_volumes = useNumVolumesStore()
 
 
-const userRef = computed( () => doc(db, "permissoes", globaluser.value.email) )
-const volRef = collection(db, "volumes") 
-const q = computed ( () => {
-    if(permissoes.email)
-        return query(volRef, where("responsavel", "==", userRef.value), where('deleted', '==', false))
+const userRef = computed(() => doc(db, "permissoes", globaluser.value.email))
+const volRef = collection(db, "volumes")
+const q = computed(() => {
+  if (permissoes.email)
+    return query(volRef, where("responsavel", "==", userRef.value), where('deleted', '==', false))
 })
 const volumes = ref([])
-const { pending } = useCollection(q.value, { wait: true, target: volumes})   
-          
+const { pending } = useCollection(q.value, { wait: true, target: volumes })
+
 
 
 const lista_items = ref([])
 
-async function load_all_data(){
+async function load_all_data() {
   const permissoes = useUserPermissionsStore()
-  for(let amb of permissoes.ambientes){ 
+  for (let amb of permissoes.ambientes) {
     console.log(amb)
     items.ambiente = amb
     await items.load_data()
@@ -46,62 +47,62 @@ async function load_all_data(){
 
 
 const all_items_ordered = computed(() => {
-  if( !permissoes.ambientes ) return []
-  let all = [] 
-  for(let amb of permissoes.ambientes){ 
-    if(items.inner_db[amb]){
+  if (!permissoes.ambientes) return []
+  let all = []
+  for (let amb of permissoes.ambientes) {
+    if (items.inner_db[amb]) {
       // filtrar apenas não volumados
       all.push(...items.inner_db[amb])
     }
   }
-  return all.sort( (a,b) => a.short_descricao.localeCompare(b.short_descricao))
+  return all.sort((a, b) => a.short_descricao.localeCompare(b.short_descricao))
 })
 
 const all_items_nao_volumados = computed(() =>
-  all_items_ordered.value.filter( (elem) => !elem.volumado ))
+  all_items_ordered.value.filter((elem) => !elem.volumado))
 
-function click_row(i){
+function click_row(i) {
   document.getElementById("check" + i).click()
 }
 
 const filtrar_lista_items = ref("")
 
-const all_items_filtered = computed(()=> {
-  if(filtrar_lista_items.value.length >= 3) {
-    const regex = new RegExp(`.*${filtrar_lista_items.value}.*`, 'i'); 
+const all_items_filtered = computed(() => {
+  if (filtrar_lista_items.value.length >= 3) {
+    const regex = new RegExp(`.*${filtrar_lista_items.value}.*`, 'i');
     return all_items_nao_volumados.value.filter(
-        obj => regex.test(obj.short_descricao)
-        );
+      obj => regex.test(obj.short_descricao)
+    );
   }
   return all_items_nao_volumados.value
 })
- 
+
 
 const all_volumes_dict = computed(() => {
-    const dicionario = { } // {'teste': [{short_descricao: 1, key: "a"}]}
-    if(volumes) {
-      volumes.value.forEach((doc) => {
-        // VERIFICAR O QUE TÁ ACONTECENDO AQUI
-          const lista_items = []
-          doc.items.forEach((i) => lista_items.push(i))
-          dicionario[doc.codigo] = lista_items
-      })
-    }
-    return dicionario
+  const dicionario = {} // {'teste': [{short_descricao: 1, key: "a"}]}
+  if (volumes) {
+    volumes.value.forEach((doc) => {
+      // VERIFICAR O QUE TÁ ACONTECENDO AQUI
+      const lista_items = []
+      doc.items.forEach((i) => lista_items.push(i))
+      dicionario[doc.codigo] = lista_items
+    })
+  }
+  return dicionario
 })
- 
 
 
-async function salvar_volume(){ 
+
+async function salvar_volume() {
   const volume = {
     codigo: codigo.value,
     responsavel: globaluser.value.email,
     items: lista_items.value
   }
-  console.log(volume) 
-  const uptime = registra_volume(volume) 
-  if(uptime){ 
-    for(let item of lista_items.value){
+  console.log(volume)
+  const uptime = registra_volume(volume)
+  if (uptime) {
+    for (let item of lista_items.value) {
       var itemRef = all_items_ordered.value.find(x => x.key == item)
       itemRef.volumado = true
     }
@@ -113,21 +114,21 @@ async function salvar_volume(){
   }
 }
 
-async function deleta_volume_parte(parte_key){ 
-    const parteRef = await get_parte_ref(parte_key) 
-    const [itemKey, _] = parte_key.split("-")
-    // apaga do item
-    await update_item_part(itemKey, 'remove', parteRef) 
-    // hard apaga a parte
-    await delete_part(parte_key)
+async function deleta_volume_parte(parte_key) {
+  const parteRef = await get_parte_ref(parte_key)
+  const [itemKey, _] = parte_key.split("-")
+  // apaga do item
+  await update_item_part(itemKey, 'remove', parteRef)
+  // hard apaga a parte
+  await delete_part(parte_key)
 }
 
-async function soft_apaga_volume(codigo){ 
+async function soft_apaga_volume(codigo) {
   const items_do_volume = all_volumes_dict.value[codigo]
-  console.log(`Apagando volume ${codigo} com ${items_do_volume.length} items`) 
+  console.log(`Apagando volume ${codigo} com ${items_do_volume.length} items`)
   // vamos desavolumar aqui localmente
-  items_do_volume.forEach(element => {     
-    if(element.key.includes("-")){
+  items_do_volume.forEach(element => {
+    if (element.key.includes("-")) {
       // SE TEM TRAÇO NA KEY
       console.log(`Apagando parte ${element.key}`)
       deleta_volume_parte(element.key)
@@ -135,10 +136,10 @@ async function soft_apaga_volume(codigo){
       // se for um item normal
       console.log(`Desavolumento item ${element.key}`)
       var itemRef = all_items_ordered.value.find(x => x.key == element.key)
-      Object.assign(itemRef, {volumado: false})
+      Object.assign(itemRef, { volumado: false })
     }
   });
-  const uptime = apaga_volume(codigo)  
+  const uptime = apaga_volume(codigo)
   return uptime
 }
 
@@ -146,71 +147,123 @@ async function soft_apaga_volume(codigo){
 
 
 onBeforeMount(() => volumes.email = permissoes.email)
-onBeforeMount(async () => await load_all_data())  
+onBeforeMount(async () => await load_all_data())
 //onServerPrefetch(() => usePendingPromises())
 </script>
 
 <template>
-    <div class="row mb-3 justify-content-end">
-        <div class="col text-end">
-            <button class="btn-primary btn" data-bs-target="#criarVolume" data-bs-toggle="modal">Criar novo volume</button>
-        </div> 
-    </div>
-  <div class="row"> 
-    <div class="col">    
-    <Acordeao id="volumes" :apaga_volume="soft_apaga_volume" :lista_agrupada="all_volumes_dict"></Acordeao> 
+  <div class="row mb-3 justify-content-end">
+    <div class="col text-end">
+      <button class="btn-primary btn" data-bs-target="#criarVolume" data-bs-toggle="modal">Criar novo volume</button>
     </div>
   </div>
-  <Modal modalid="criarVolume" :salve_callback="async () => await salvar_volume()">
-  <template #titulo>
-    Criar novo volume
-  </template>
-  <template #corpo>
-   <form class="row g-3">
-    <div class="col-6">
-      <label for="codigo" class="form-label">Código</label>
-      <input type="text" class="form-control" id="codigo" :value="n_volumes.codigo" disabled> 
+  <div class="row">
+    <div class="col">
+      <table class="table d-print-table align-middle">
+        <thead>
+          <tr>
+            <th class="d-none d-print-table-cell">Volume</th>
+            <th class="d-print-none">Código</th>
+            <th>Lista de items</th>
+            <th class="d-print-none"></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr v-for="volume in volumes" :key="'volume' + volume.codigo">
+          <td class="d-none d-print-table-cell text-center">
+            <QRCode :path="'/volumes/cod/' + volume.codigo"></QRCode>
+            <p>{{ volume.codigo }}</p>
+          </td>
+          <td class="d-print-none"> 
+            <RouterLink class="" :to="{name: 'volume-codigo', params: {codigo: volume.codigo }}">
+            {{ volume.codigo }}
+          </RouterLink>
+          </td>
+          <td> 
+            <ul class="list-group list-group-flush align-top">
+              <li v-for="item in volume.items" :key="'I' + item.key" class="list-group-item justify-content-between d-flex">
+                <span>{{ item.key.includes("-") ? item.descricao :  item.short_descricao }}</span>
+                <span class="badge text-primary rounded-pill span-lista-volumes text-elipse">{{item.key}}</span>
+              </li> 
+              </ul>
+          </td>
+          <td class="d-print-none">
+            <button class="btn btn-danger" @click="() => soft_apaga_volume(volume.codigo)"><i class="bi bi-trash" title="Apagar volume"></i></button>
+          </td>
+        </tr>
+      </tbody>
+      </table>
     </div>
+  </div>
 
-    <div class="col-6">
-      <label for="responsavel" class="form-label">Responsável</label>    
-        <input type="text" class="form-control" id="responsavel" :value="globaluser.email" disabled>   
-    </div> 
-    <div class="col-12">
-      <h3>Lista de items inclusos no lote</h3>
-    </div>
-    <div class="col-12">
-      <input type="text" class="form-control" placeholder="Digite para filtrar a lista" v-model="filtrar_lista_items">
-      </div>
-    <div class="col-12 listatodositems overflow-y-scroll">
-      
-     <table class="table ">
-      <thead>
-        <tr class="sticky-top"><th></th><th>Descrição</th><th>Código</th></tr>
-      </thead>
-      <tbody>
-      <tr @click.stop="() => click_row(i)" v-for="(item,i) in all_items_filtered">
-        <td>
-          <input @click.self="() => click_row(i)" class="form-check-input mx-1" type="checkbox"
- :value="item.key" v-model="lista_items" :id="'check' + i">
-        </td>
-        <td>
-          {{ item.short_descricao }} 
-        </td>
-        <td>
-          {{ item.key }}
-        </td>
-      </tr></tbody>
-     </table>
-    </div>
-   </form>
-  </template>
-  </Modal>  
+
+
+  <Modal modalid="criarVolume" :salve_callback="async () => await salvar_volume()">
+    <template #titulo>
+      Criar novo volume
+    </template>
+    <template #corpo>
+      <form class="row g-3">
+        <div class="col-6">
+          <label for="codigo" class="form-label">Código</label>
+          <input type="text" class="form-control" id="codigo" :value="n_volumes.codigo" disabled>
+        </div>
+
+        <div class="col-6">
+          <label for="responsavel" class="form-label">Responsável</label>
+          <input type="text" class="form-control" id="responsavel" :value="globaluser.email" disabled>
+        </div>
+        <div class="col-12">
+          <h3>Lista de items inclusos no lote</h3>
+        </div>
+        <div class="col-12">
+          <input type="text" class="form-control" placeholder="Digite para filtrar a lista" v-model="filtrar_lista_items">
+        </div>
+        <div class="col-12 listatodositems overflow-y-scroll">
+          <table class="table">
+            <thead>
+              <tr class="sticky-top">
+                <th></th>
+                <th>Descrição</th>
+                <th>Código</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr @click.stop="() => click_row(i)" v-for="(item, i) in all_items_filtered">
+                <td>
+                  <input @click.self="() => click_row(i)" class="form-check-input mx-1" type="checkbox" :value="item.key"
+                    v-model="lista_items" :id="'check' + i">
+                </td>
+                <td>
+                  {{ item.short_descricao }}
+                </td>
+                <td class="d-flex-inline">
+                  <p class="text-elipse p-lista-nao-volumados m-0">
+                  {{ item.key }}</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </form>
+    </template>
+  </Modal>
 </template>
 <style>
-.listatodositems{
+.listatodositems {
   height: 30vh;
 }
+.text-elipse {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.p-lista-nao-volumados {
+  width: 5em;
+}
 
+.span-lista-volumes {
+  width: 6em;
+}
 </style>
  
