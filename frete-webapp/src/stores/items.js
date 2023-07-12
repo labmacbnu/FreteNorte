@@ -2,7 +2,7 @@ import { defineStore } from 'pinia'
 import { getFirestore, doc, addDoc, collection, getDoc, query, where, getDocs, updateDoc } from 'firebase/firestore'
 import { firebaseApp } from '../firebaseConfig'
 import { ref, computed, reactive } from 'vue'
-import { useCollection, useObject } from 'vuefire'
+import { useCollection } from 'vuefire'
 
 const db = getFirestore(firebaseApp)
 
@@ -139,6 +139,8 @@ export const useItemsResponsavelStore = defineStore('items-responsavel', ()=>{
 
 export async function cria_item(item){
     const itemsRef = collection(db, "items")
+    const ambienteRef = doc(db, "ambientes", item.ambiente)
+    item.ambiente = ambienteRef
     const newDocRef = await addDoc(itemsRef, item);
     console.log("Documento escrito", newDocRef.id);
     // set key
