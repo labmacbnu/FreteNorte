@@ -41,7 +41,7 @@ exports.contavolumes = functions.firestore.document("volumes/{volumeId}").onWrit
     const volumeId = context.params.volumeId 
     // Get an object with the current document value.
     // If the document does not exist, it has been deleted.
-    const document = change.after.exists ? change.after.data() : null;
+    const document = change.after.exists ? change.after.data() : null; 
     
     // Get an object with the previous document value (for update or delete)
     const oldDocument = change.before.data();
@@ -54,7 +54,7 @@ exports.contavolumes = functions.firestore.document("volumes/{volumeId}").onWrit
         } else {
             // created or updated
             functions.logger.log(`Created of updated volume ${volumeId}`)
-            document.items.forEach( (docRef) => docRef.update({volumado: true, volume: volumeId}))
+            document.items.forEach( (docRef) => docRef.update({volumado: true, volume: db.doc(`volumes/${volumeId}`)}))
         }
     } else {
         // hard deleted
