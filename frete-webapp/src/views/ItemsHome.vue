@@ -45,7 +45,9 @@ const meus_ambientes = computed( () => {
 
 
 <template>
-    <h1>Items</h1>
+    <div class="row">
+        <div class="col">
+            <h1>Items</h1>
     <h2>Seus ambientes</h2> 
     <div class="my-3">
         <p v-for="x in meus_ambientes">
@@ -60,12 +62,15 @@ const meus_ambientes = computed( () => {
     </div>
 
     <ul class="list-group" id="ambientesList" v-if="main_focus == 'ambiente'">
+
+        <TransitionGroup name="list">
         <li class="list-group-item" v-for="x in ambientes_filtrados">
             <RouterLink 
                 :to="{ name: 'items-ambiente', params: { ambiente: x.ambiente_codigo } }">
                 {{ x.valor }}
             </RouterLink>
         </li>
+        </TransitionGroup> 
     </ul> 
 
     <h3>Pesquisa por descrição</h3>
@@ -76,13 +81,31 @@ const meus_ambientes = computed( () => {
     </div>
 
     <ul class="list-group" id="descricaoList" v-if="main_focus == 'descricao'">
+        <TransitionGroup name="list">
         <li class="list-group-item" v-for="x in descricao_filtrados"> 
             <RouterLink 
              :to="{ name: 'item-descricao', query: { descricao: x } }">  
                 {{ x }}
             </RouterLink>
         </li>
+        </TransitionGroup>
     </ul> 
 
+        </div>
+    </div>
+    
 
 </template>
+
+<style>
+.list-move, /* apply transition to moving elements */
+.list-enter-active,
+.list-leave-active {
+  transition: all 0.4s ease;
+}
+.list-enter-from,
+.list-leave-to {
+  opacity: 0;
+  transform: translateX(30px);
+} 
+</style>
