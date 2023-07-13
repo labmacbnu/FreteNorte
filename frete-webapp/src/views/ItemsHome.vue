@@ -3,12 +3,13 @@ import { computed, onBeforeMount, ref } from 'vue';
 import { useAmbientesStore } from '../stores/ambientes';
 import { useItemsAmbienteStore, useDescricoesStore } from '../stores/items'
 import AcordeaoChild from '../components/AcordeaoChild.vue';
-import { RouterLink, RouterView, useRoute } from 'vue-router';
+import { RouterLink, RouterView, useRoute, useRouter } from 'vue-router';
 import { useUserPermissionsStore } from '../stores/user';
  
 const ambientes = useAmbientesStore() 
 const permissions = useUserPermissionsStore()
 const descricoes = useDescricoesStore()
+const router = useRouter()
 
 
 const ambiente_search = ref("")
@@ -40,6 +41,8 @@ const meus_ambientes = computed( () => {
     return ambientes.dados.filter( obj =>  permissions.ambientes.includes(obj.ambiente_codigo))
 
 })
+
+const codigo_search = ref("")
 
 </script>
 
@@ -90,6 +93,16 @@ const meus_ambientes = computed( () => {
         </li>
         </TransitionGroup>
     </ul> 
+    <h3>Pesquisa por código</h3>
+    <p>Digite o código e pesquise pelo item.  </p>
+    <div class="input-group mb-3">
+        
+        <input  
+         class="form-control" v-model="codigo_search" type="text">
+         <button class="btn btn-outline-primary" type="button" id="button-addon1"
+            @click="router.push({ name: 'item-codigo', params: { codigo: codigo_search } })"
+        >Pesquisar item</button>
+    </div>
 
         </div>
     </div>
