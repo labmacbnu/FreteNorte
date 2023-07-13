@@ -1,6 +1,7 @@
 <script setup>
 import { computed, inject, onBeforeMount, onMounted, onServerPrefetch, ref } from 'vue';
 import Modal from '../components/Modal.vue';
+import ModalDelete from '../components/ModalDelete.vue';
 import { useUserPermissionsStore } from '../stores/user';
 import { useItemsAmbienteStore, orderedGroupBy } from '../stores/items';
 import { useAmbientesStore } from '../stores/ambientes';
@@ -140,10 +141,15 @@ async function soft_apaga_volume(codigo) {
     }
   });
   const uptime = apaga_volume(codigo)
-  return uptime
+  return true
 }
 
-
+const soft_volume_modal_ref = ref(null)
+const soft_volume_modal_items = computed(() => {
+  if(soft_volume_modal_ref.value){
+    return all_volumes_dict.value[soft_volume_modal_ref.value]
+  }
+})
 
 
 onBeforeMount(() => volumes.email = permissoes.email)
@@ -188,7 +194,8 @@ onBeforeMount(async () => await load_all_data())
               </ul>
           </td>
           <td class="d-print-none">
-            <button class="btn btn-danger" @click="() => soft_apaga_volume(volume.codigo)"><i class="bi bi-trash" title="Apagar volume"></i></button>
+            <button class="btn btn-danger" data-bs-target="#apagare" data-bs-toggle="modal" 
+            @click="() => soft_volume_modal_ref = volume.codigo"><i class="bi bi-trash" title="Apagar volume"></i></button>
           </td>
         </tr>
       </tbody>
@@ -248,10 +255,31 @@ onBeforeMount(async () => await load_all_data())
       </form>
     </template>
   </Modal>
+ 
+<ModalDelete modalid="apagare" :delete_callback="() => soft_apaga_volume(soft_volume_modal_ref)">
+<template #titulo>
+  Apagar volume
+</template>
+<template #corpo>
+  Certeza que quer apagar o volume {{soft_volume_modal_ref}}?
+  <ul class="listinhadelete list-group overflow-y-scroll">
+    <li v-for="item in soft_volume_modal_items" :key="'DD' + item.key" class="list-group-item justify-content-between d-flex">
+      <span>{{ item.key.includes("-") ? item.descricao :  item.short_descricao }}</span>
+      <span class="badge text-primary rounded-pill span-lista-volumes text-elipse">{{item.key}}</span>
+    </li> 
+  </ul>
+</template>
+
+</ModalDelete> 
+ 
 </template>
 <style>
 .listatodositems {
   height: 30vh;
+}
+
+.listinhadelete {
+  max-height: 20vh;
 }
 .text-elipse {
   white-space: nowrap;
