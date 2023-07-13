@@ -160,7 +160,7 @@ onBeforeMount(async () => await load_all_data())
 <template>
   <div class="row mb-3 justify-content-end">
     <div class="col text-end">
-      <button class="btn-primary btn" data-bs-target="#criarVolume" data-bs-toggle="modal">Criar novo volume</button>
+      <button class="btn-primary btn d-print-none" data-bs-target="#criarVolume" data-bs-toggle="modal">Criar novo volume</button>
     </div>
   </div>
   <div class="row">
@@ -188,7 +188,7 @@ onBeforeMount(async () => await load_all_data())
           <td> 
             <ul class="list-group list-group-flush align-top">
               <li v-for="item in volume.items" :key="'I' + item.key" class="list-group-item justify-content-between d-flex">
-                <span>{{ item.key.includes("-") ? item.descricao :  item.short_descricao }}</span>
+                <small class="">{{ item.key.includes("-") ? item.descricao :  item.short_descricao }}</small>
                 <span class="badge text-primary rounded-pill span-lista-volumes text-elipse">{{item.key}}</span>
               </li> 
               </ul>
