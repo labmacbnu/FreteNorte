@@ -143,9 +143,10 @@ async function atualiza_item() {
         </div>
     </div>
     <div class="row justify-content-start">
-        <div class="col">
+        <div class="col-auto">
             <QRCode :path="route.fullPath"></QRCode>
-            <div>
+        </div>
+            <div class="col">
                 <h4 class="d-none d-print-block">Sistema Frete Norte</h4>
                 <h5>{{ item.short_descricao }}</h5>
                 <p>
@@ -155,6 +156,5 @@ async function atualiza_item() {
                 </p>
                 <p><em>Patrimônio</em> {{ item.patrimonio }}</p>
             </div>
-        </div>
 
     </div></template>
