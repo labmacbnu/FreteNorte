@@ -23,7 +23,12 @@ const responsavel = ref(null)
 
 </script>
 <template>
-  <div class="row">
+  <div v-if="pending" class="d-flex justify-content-center">
+    <div class="spinner-border text-primary" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div> 
+  <div class="row" v-else>
     <div class="col">
       <QRCode :path="route.fullPath"></QRCode>
     </div>
@@ -31,9 +36,9 @@ const responsavel = ref(null)
       <h1>Volume {{ volume.codigo }}</h1>
       <p><b>Responsável:</b> {{ volume.responsavel.nome }}</p>
       <ul class="list-group">
-        <li class="list-group-item justify-content-between d-flex" v-for="item in volume.items">
+        <li class="list-group-item justify-content-between d-flex" v-for="item in volume.items"> 
           {{ item.key.includes("-") ? item.descricao : item.short_descricao }} 
-          <span class="bagde text-secondary">Cód. {{ item.key }}</span>
+          <span class="bagde text-secondary">Cód. {{ item.key }}</span> 
         </li>
       </ul>
     </div>
