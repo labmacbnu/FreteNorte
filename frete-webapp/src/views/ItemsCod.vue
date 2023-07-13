@@ -86,11 +86,11 @@ async function atualiza_item() {
                                     <th scope="row">Ambiente</th>
                                     <td>{{ item.ambiente.ambiente_codigo }} - {{ item.ambiente.ambiente_nome }}</td>
                                 </tr>
-                                <tr>
+                                <tr v-if="item.patrimonio">
                                     <th scope="row">Patrimônio</th>
                                     <td>{{ item.patrimonio }}</td>
                                 </tr>
-                                <tr>
+                                <tr v-if="item.valor > 0">
                                     <th scope="row">Valor</th>
                                     <td>R$ {{ item.valor.toFixed(2) }}</td>
                                 </tr>
@@ -126,7 +126,7 @@ async function atualiza_item() {
                                 </tr>
                                 <tr>
                                     <th scope="row">Volume</th>
-                                    <td>{{ item.volume }}</td>
+                                    <td><RouterLink v-if="item.volume" class="icon-link" :to="{name: 'volume-codigo', params: {codigo: item.volume.codigo }}"><i class="bi bi-link-45deg"></i> {{ item.volume.codigo }}</RouterLink> </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">Observações</th>
