@@ -29,18 +29,34 @@ const responsavel = ref(null)
     </div>
   </div> 
   <div class="row" v-else>
-    <div class="col">
+    <div class="col-lg-2">
       <QRCode :path="route.fullPath"></QRCode>
     </div>
-    <div class="col-9">
+    <div class="col-lg-6 col-sm-12">
       <h1>Volume {{ volume.codigo }}</h1>
       <p><b>Responsável:</b> {{ volume.responsavel.nome }}</p>
       <ul class="list-group">
         <li class="list-group-item justify-content-between d-flex" v-for="item in volume.items"> 
-          {{ item.key.includes("-") ? item.descricao : item.short_descricao }} 
-          <span class="bagde text-secondary">Cód. {{ item.key }}</span> 
+          <span v-if="item.key.includes('-')">
+            {{item.descricao}}
+          </span>
+          <span v-else>
+            {{ item.short_descricao }}
+          </span>
+          <span class="bagde text-secondary text-elipse codigo-span">{{ item.key }}</span> 
         </li>
       </ul>
     </div>
   </div>
 </template>
+<style>
+.text-elipse {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.codigo-span { 
+  min-width: 4.5em;
+  max-width: 6em;
+}
+</style>
