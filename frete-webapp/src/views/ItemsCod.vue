@@ -1,15 +1,17 @@
 <script setup>
-import { RouterLink, useRoute } from 'vue-router';
+import { RouterLink, useRoute, useRouter } from 'vue-router';
 import { getFirestore, doc } from 'firebase/firestore'
 import { firebaseApp } from '../firebaseConfig'
 import { computed, reactive, ref } from 'vue';
 import { update_item } from '../stores/singleitem'
 import QRCode from '../components/QRCode.vue';
 import { useDocument } from 'vuefire';
+import ModalDelete from '../components/ModalDelete.vue';
+import { deleta_item } from '../stores/items'; 
 
 const db = getFirestore(firebaseApp)
 const route = useRoute()
-
+const router = useRouter()
 const {
     // rename the Ref to something more meaningful
     data: item_db,
@@ -59,6 +61,18 @@ async function atualiza_item() {
     })
 
     console.log(`Item ${valores.key} atualizado ${uptime}`)
+}
+
+async function front_apaga_volume() {
+    if(item.value.categoria == 'consumível') {
+        const ambiente_route =  item.value.ambiente.ambiente_codigo
+        const resultado = await deleta_item(item.value.key)
+        console.log(resultado)
+        setTimeout( () => router.push({name: 'items-ambiente', params: { ambiente: ambiente_route}}), 400)
+        return true
+    } else {
+        return false
+    }
 }
 </script>
 
@@ -146,7 +160,9 @@ async function atualiza_item() {
                                 </tr>
 
                                 <tr class="border-primary">
-                                    <td colspan="2" class="text-end d-print-none">
+                                    <td colspan="2" class="text-end d-print-none justify-content-between">
+
+                                        <button v-if="item.categoria == 'consumível'" class="btn btn-danger mx-3" data-bs-target="#deletar" data-bs-toggle="modal" >Deletar</button>
                                         <button class="btn btn-primary" @click="atualiza_item">Salvar</button>
                                     </td>
                                 </tr>
@@ -178,4 +194,13 @@ async function atualiza_item() {
             </div>
         </template>
     </Suspense>
+
+    <ModalDelete id="deletar"  :delete_callback="async () => await front_apaga_volume()">
+        <template #titulo>
+            Apagar item
+        </template>
+        <template #corpo>
+            Certeza que quer apagar o item {{item.short_descricao}}?
+        </template>
+    </ModalDelete>
 </template>
