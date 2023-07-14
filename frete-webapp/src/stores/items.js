@@ -1,5 +1,6 @@
 import { defineStore } from 'pinia'
-import { getFirestore, doc, addDoc, collection, getDoc, query, where, getDocs, updateDoc } from 'firebase/firestore'
+import { getFirestore, doc, addDoc, collection, getDoc, query, 
+    where, getDocs, updateDoc, runTransaction, deleteDoc, arrayRemove } from 'firebase/firestore'
 import { firebaseApp } from '../firebaseConfig'
 import { ref, computed, reactive } from 'vue'
 import { useCollection } from 'vuefire'
@@ -145,5 +146,40 @@ export async function cria_item(item){
     console.log("Documento escrito", newDocRef.id);
     // set key
     updateDoc(newDocRef, {key: newDocRef.id}) 
+    // increment ambiente.items
+    const newN = await runTransaction(db, async (transaction) => {
+        const ambiente = await transaction.get(ambienteRef)
+        const itemsp1 = ambiente.data().items + 1;
+        transaction.update(ambienteRef, {items: itemsp1})
+        return itemsp1
+    })
     return newDocRef.id
+}
+
+export async function deleta_item(item_cod){ 
+    const itemRef = doc(collection(db, "items"), item_cod)  
+
+    const dele = await runTransaction(db, async (transaction) => {
+        const item = await transaction.get(itemRef)
+        const itemData = item.data()
+        const ambienteRef =  itemData.ambiente
+        const did = itemData.key
+        let volumeRef;
+        if(itemData.volume){
+            volumeRef = itemData.volume
+        }
+       
+
+        const ambiente = await transaction.get(ambienteRef)
+        const itemsm1 = ambiente.data().items - 1;
+        transaction.update(ambienteRef, {items: itemsm1})
+
+        if(itemData.volume) {
+            // se tiver volumado, não tá mais
+            transaction.update(volumeRef, {items: arrayRemove(itemRef)})
+        }
+        transaction.delete(itemRef)
+        return {items: itemsm1, id:  did}
+    })
+    return dele
 }
