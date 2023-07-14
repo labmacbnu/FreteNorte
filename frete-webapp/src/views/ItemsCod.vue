@@ -126,7 +126,7 @@ async function atualiza_item() {
                                 </tr>
                                 <tr>
                                     <th scope="row">Volume</th>
-                                    <td><RouterLink v-if="item.volume" class="icon-link" :to="{name: 'volume-codigo', params: {codigo: item.volume.codigo }}"><i class="bi bi-link-45deg"></i> {{ item.volume.codigo }}</RouterLink> </td>
+                                    <td><RouterLink v-if="item.volume.codigo" class="icon-link" :to="{name: 'volume-codigo', params: {codigo: item.volume.codigo }}"><i class="bi bi-link-45deg"></i> {{ item.volume.codigo }}</RouterLink> </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">Observações</th>
