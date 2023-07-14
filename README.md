@@ -14,11 +14,13 @@ Webapp
 - [X] Função "Dividir item em partes"
 - [X] Mostra o status do ambiente na Home
 - [ ] Criar uma interface de solicitações
-- [ ] Criar uma função para adicionar Items
-- [ ] 
+- [X] Criar uma função para adicionar Items
+- [X] Rever a página items/cod pois renderizando mal
+- [X] Criada função de apagar item
 
 Admin
 
 - [X] Função "Criar ambiente virtual"
 - [X] Função "Adicionar lider ao ambiente"
-- [ ] Mostrar o status do ambiente
+- [X] Mostrar o status do ambiente
+- [ ] Criar uma gestão de lotes
