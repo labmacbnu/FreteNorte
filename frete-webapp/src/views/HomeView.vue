@@ -15,7 +15,10 @@ const meus_ambientes = computed(() => {
 
     const lista_ambientes = reactive([])
     if (permissions.ambientes) {
-        lista_ambientes.push(...ambientes.dados.filter(obj => permissions.ambientes.includes(obj.ambiente_codigo)))
+        lista_ambientes.push(...ambientes.dados.filter(
+            obj => permissions.ambientes.includes(obj.ambiente_codigo) || 
+            permissions.usuario_de.includes(obj.ambiente_codigo)
+        ))
 
         lista_ambientes.forEach(async (ambiente, index) => {
             const dicio = await ambiente_status(ambiente.ambiente_codigo)
