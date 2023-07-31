@@ -140,7 +140,11 @@ async function front_apaga_volume() {
                                 </tr>
                                 <tr>
                                     <th scope="row">Volume</th>
-                                    <td><RouterLink v-if="item.volume.codigo" class="icon-link" :to="{name: 'volume-codigo', params: {codigo: item.volume.codigo }}"><i class="bi bi-link-45deg"></i> {{ item.volume.codigo }}</RouterLink> </td>
+                                    <td>
+                                        <template v-if="item.volume">
+                                        <RouterLink class="icon-link" :to="{name: 'volume-codigo', params: {codigo: item.volume.codigo }}"><i class="bi bi-link-45deg"></i> {{ item.volume.codigo }}</RouterLink> 
+                                        </template>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">Observações</th>
