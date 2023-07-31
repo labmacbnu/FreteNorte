@@ -24,7 +24,7 @@ export const useNumVolumesStore = defineStore("volumes-num",  () => {
 })
 
 export async function registra_volume(dados){
-    dados.responsavel = doc(db, "permissoes", dados.responsavel)
+    dados.responsavel = doc(db, "usuarios", dados.responsavel)
     const itemsRef = []
     dados.items.forEach( (key) => {
         const itemRef = doc(db, "items", key) 
@@ -45,7 +45,7 @@ export async function apaga_volume(codigo_volume){
 
 export const useVolumesEmailStore = defineStore("volumes-email", () => {
     const email = ref(null) 
-    const userRef = computed( () => doc(db, "permissoes", email.value) )
+    const userRef = computed( () => doc(db, "usuarios", email.value) )
     const volRef = collection(db, "volumes") 
     const q = computed ( () => {
         if(email.value)
@@ -59,7 +59,7 @@ export const useVolumesEmailStore = defineStore("volumes-email", () => {
 
 
 export async function registra_volume_parte(dados){
-    dados.responsavel = doc(db, "permissoes", dados.responsavel)  
+    dados.responsavel = doc(db, "usuarios", dados.responsavel)  
     const docRef = doc(db, "volumes", dados.codigo);
     const uptime = await setDoc(docRef, {...dados, deleted: false});
 }
