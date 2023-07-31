@@ -213,7 +213,7 @@ onBeforeMount(async () => await load_all_data())
       <form class="row g-3">
         <div class="col-6">
           <label for="codigo" class="form-label">Código</label>
-          <input type="text" class="form-control" id="codigo" :value="n_volumes.codigo" disabled>
+          <input type="text" class="form-control text-secondary" id="codigo" value="[[...]]" disabled>
         </div>
 
         <div class="col-6">
