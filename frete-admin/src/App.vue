@@ -1,18 +1,19 @@
 <script setup>
 import {  RouterView, useRoute, useRouter } from 'vue-router' 
 import TheNavigation from './components/TheNavigation.vue';  
-import {  onMounted, provide, ref } from 'vue';
+import {  onServerPrefetch, provide, ref } from 'vue';
 import { getAuth, onAuthStateChanged } from 'firebase/auth'
 import { firebaseApp } from './firebaseConfig'
 import { useUserPermissionsStore } from './stores/user'; 
 import { useUsuariosStore } from './stores/users';
 import { useAmbientesStore } from './stores/ambientes';
 import {useListaAmbientes} from './stores/agregados'
+import { usePendingPromises } from 'vuefire'
+
 
 const usuarios = useUsuariosStore()
 const ambiente = useAmbientesStore()
-const lista_ambientes = useListaAmbientes()
-onMounted(lista_ambientes.load_data)
+const lista_ambientes = useListaAmbientes() 
 
 const route = useRoute()
 const router = useRouter()
@@ -62,6 +63,7 @@ router.beforeEach( (to, from, next) => {
     next()
   } 
 })
+onServerPrefetch(() => usePendingPromises())
 
 </script>
 
