@@ -154,7 +154,7 @@ async function adiciona_lider(){
 
             <div class="mb-3">
                 <label for="ambtipo" class="form-label">Tipo</label>
-                <input id="ambtipo" type="text" :value="selected_ambiente.tipo" class="form-control" disabled>
+                <input id="ambtipo" type="text" value="Físico" class="form-control" disabled>
             </div>
 
             <div class="mb-3">
@@ -185,8 +185,8 @@ async function adiciona_lider(){
             <tr v-for="amb in ambientes_filtrados">
                 <td>{{ amb.ambiente_codigo }}</td>
                 <td>{{ amb.ambiente_nome }}</td>
-                <td>{{ amb.tipo }}</td>
-                <td class="text-center"><template v-if="amb.lider"><code>{{ amb.lider }}</code></template>
+                <td>{{ amb.tipo ? amb.tipo : "Físico" }}</td>
+                <td class="text-center"><template v-if="amb.lider">{{ amb.lider.nome }}</template>
                     <template v-else><button class="btn btn-primary btn-sm" data-bs-target="#adicionaLider"
                             data-bs-toggle="modal" title="Adicionar líder"
                             @click="() => selected_ambiente_key = amb.ambiente_codigo"><i
