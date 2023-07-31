@@ -4,15 +4,17 @@ import Modal from '../components/Modal.vue';
 import UserAmbientes from '../components/UserAmbientes.vue';
 import { ref, computed } from 'vue';
 import { useUsuariosStore } from '../stores/users';
+import { useListaAmbientes } from '../stores/agregados';
 
 const usuarios = useUsuariosStore()
 const selectmail = ref(false)
+const lista_ambientes = useListaAmbientes()
 
 const user_edit = computed(() => {
     if (selectmail.value && usuarios.usuarios) {
         return usuarios.usuarios[selectmail.value]
     } else {
-        return { nome: "", email: "", role: "", ambientes: [] }
+        return { nome: "", email: "", role: "", ambientes: [], usuario_de: [] }
     }
 })
 
@@ -21,18 +23,31 @@ function update_role(email, role) {
 }
 
 
-function add_ambiente(email, ambiente) {
+function add_lider_ambiente(email, ambiente) {
     usuarios.usuarios[email].ambientes.push(ambiente)
-    usuarios.edit_array.push(["add", email, ambiente])
+    usuarios.edit_array.push(["add_lider", email, ambiente])
+}
+
+function add_user_ambiente(email, ambiente) {
+    usuarios.usuarios[email].usuario_de.push(ambiente)
+    usuarios.edit_array.push(["add_user", email, ambiente])
 }
 
 
 
-function remove_ambiente(email, ambiente) {
+function remove_lider_ambiente(email, ambiente) {
     const filtrado = usuarios.usuarios[email].ambientes.filter(x => x !== ambiente)
     usuarios.usuarios[email].ambientes = filtrado
-    usuarios.edit_array.push(["remove", email, ambiente])
+    usuarios.edit_array.push(["remove_lider", email, ambiente])
 }
+
+
+function remove_user_ambiente(email, ambiente) {
+    const filtrado = usuarios.usuarios[email].usuario_de.filter(x => x !== ambiente)
+    usuarios.usuarios[email].usuario_de = filtrado
+    usuarios.edit_array.push(["remove_user", email, ambiente])
+}
+
 
 async function update_user(email) {
     const referencia = usuarios.usuarios[email]
@@ -76,10 +91,25 @@ const usuarios_filtrados = computed(() => {
             </div>
 
             <div class="mb-3">
-                <label for="ambientes" class="form-label">Ambientes</label>
-                <UserAmbientes @remove="(x) => remove_ambiente(user_edit.email, x)"
-                    @add="(x) => add_ambiente(user_edit.email, x)" :selected="user_edit.ambientes"></UserAmbientes>
+                <label for="ambientes" class="form-label">Líder dos seguintes ambientes</label>
+                <UserAmbientes 
+                    @remove="(x) => remove_lider_ambiente(user_edit.email, x)"
+                    @add="(x) => add_lider_ambiente(user_edit.email, x)" 
+                    :selected="user_edit.ambientes"
+                    :all="lista_ambientes.todos"
+                    :unselectable="lista_ambientes.liderados"
+                    ></UserAmbientes>
+            </div>
 
+            <div class="mb-3">
+                <label for="ambientes" class="form-label">Usuário dos seguintes ambientes</label>
+                <UserAmbientes 
+                    @remove="(x) => remove_user_ambiente(user_edit.email, x)"
+                    @add="(x) => add_user_ambiente(user_edit.email, x)" 
+                    :selected="user_edit.usuario_de"
+                    :all="lista_ambientes.todos"
+                    :unselectable="[]"
+                    ></UserAmbientes>
             </div>
         </template>
     </Modal>
@@ -102,7 +132,10 @@ const usuarios_filtrados = computed(() => {
                 <td> {{ user.nome }} </td>
                 <td> <code>{{ user.email }}</code> </td>
                 <td> {{ user.role }} </td>
-                <td> <span class="badge text-bg-primary m-1" v-for="x in user.ambientes">{{ x }}</span></td>
+                <td> 
+                    <span :title="'Líder do ambiente ' + x" class="badge text-bg-primary m-1" v-for="x in user.ambientes">{{ x }}</span>
+                    <span :title="'Usuário do ambiente ' + x " class="badge text-bg-secondary m-1" v-for="x in user.usuario_de">{{ x }}</span>
+                </td>
                 <td> <button title="Editar usuário" class="btn btn-secondary no-wrap" data-bs-target="#BossaModal"
                         data-bs-toggle="modal" @click="() => selectmail = user.email"><i class="bi bi-pencil"></i></button>
                 </td>
