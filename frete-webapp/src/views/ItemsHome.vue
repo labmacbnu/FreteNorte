@@ -61,7 +61,7 @@ const codigo_search = ref("")
         </div>
     </div>
     <div class="row g-3">
-        <div class="col-lg-4 col-sm-6 border rounded p-2" :class="{'border-secondary': main_focus == 'ambiente'}">
+        <!-- <div class="col-lg-4 col-sm-6 border rounded p-2" :class="{'border-secondary': main_focus == 'ambiente'}">
             <h3>Pesquisa por ambiente</h3>
             <p>Começe a digitar o nome do ambiente e clique em um link da lista que aparecer. </p>
             <div class="input-group mb-3">
@@ -76,8 +76,8 @@ const codigo_search = ref("")
                     </li>
                 </TransitionGroup>
             </ul>
-        </div>
-        <div class="col-lg-4 col-sm-6 border rounded p-2" :class="{'border-secondary': main_focus == 'descricao'}">
+        </div> -->
+        <!-- <div class="col-lg-4 col-sm-6 border rounded p-2" :class="{'border-secondary': main_focus == 'descricao'}">
             <h3>Pesquisa por descrição</h3>
             <p>Começe a digitar uma descrição do item e clique em um item da lista que aparecer. </p>
             <div class="input-group mb-3">
@@ -93,8 +93,8 @@ const codigo_search = ref("")
                     </li>
                 </TransitionGroup>
             </ul>
-        </div>
-        <div class="col-lg-4 col-sm-6">
+        </div> -->
+        <div class="col-lg-4 col-sm-6 border rounded p-2">
             <h3>Pesquisa por código</h3>
             <p>Digite o código e pesquise pelo item. </p>
             <div class="input-group mb-3">
