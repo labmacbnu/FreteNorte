@@ -15,7 +15,7 @@ export async function registra_atividade(email, atividade){
 }
 
 export async function getUserPermissions(email){ 
-    const user_registry = await getDoc(doc(db, "permissoes", email))
+    const user_registry = await getDoc(doc(db, "usuarios", email))
     if (user_registry.exists()) {
         const permissoes = user_registry.data()
         return permissoes
