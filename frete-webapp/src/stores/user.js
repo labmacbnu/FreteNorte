@@ -15,7 +15,7 @@ export async function registra_atividade(email, atividade){
 }
 
 export async function getUserPermissions(email){ 
-    const user_registry = await getDoc(doc(db, "permissoes", email))
+    const user_registry = await getDoc(doc(db, "usuarios", email))
     if (user_registry.exists()) {
         const permissoes = user_registry.data()
         return permissoes
@@ -56,8 +56,8 @@ export async function globalLogout(){
     await signOut(auth)
 }
 
-export const useUserPermissionsStore = defineStore("permissoesusuarios", {
-        state: () => ({role: null, email: null, ambientes: []}),
+export const useUserPermissionsStore = defineStore("usuario", {
+        state: () => ({role: null, email: null, ambientes: [], usuario_de: []}),
         actions: {
             async get_permissions(){
                 if(this.role == null){ 
