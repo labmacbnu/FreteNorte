@@ -38,7 +38,9 @@ const descricao_filtrados = computed(() => {
 })
 
 const meus_ambientes = computed(() => {
-    return ambientes.dados.filter(obj => permissions.ambientes.includes(obj.ambiente_codigo))
+    return ambientes.dados.filter(
+        obj => [...permissions.ambientes, ...permissions.usuario_de].includes(obj.ambiente_codigo)
+        )
 
 })
 

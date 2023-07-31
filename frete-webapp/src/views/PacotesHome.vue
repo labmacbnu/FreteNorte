@@ -19,8 +19,7 @@ const permissoes = useUserPermissionsStore()
 const ambientes = useAmbientesStore()
 
 const items = useItemsAmbienteStore()
-
-const n_volumes = useNumVolumesStore()
+ 
 
 
 const userRef = computed(() => doc(db, "permissoes", globaluser.value.email))
@@ -38,11 +37,11 @@ const lista_items = ref([])
 
 async function load_all_data() {
   const permissoes = useUserPermissionsStore()
-  for (let amb of permissoes.ambientes) {
+  for (let amb of [...permissoes.ambientes, ...permissoes.usuario_de]) {
     console.log(amb)
     items.ambiente = amb
     await items.load_data()
-  }
+  } 
 }
 
 
@@ -50,7 +49,7 @@ async function load_all_data() {
 const all_items_ordered = computed(() => {
   if (!permissoes.ambientes) return []
   let all = []
-  for (let amb of permissoes.ambientes) {
+  for (let amb of [...permissoes.ambientes, ...permissoes.usuario_de]) {
     if (items.inner_db[amb]) {
       // filtrar apenas não volumados
       all.push(...items.inner_db[amb])
