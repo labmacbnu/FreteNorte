@@ -1,9 +1,10 @@
 <script setup>
-import { ref, computed } from 'vue';
-import { useListaAmbientes } from '../stores/agregados';
+import { ref, computed } from 'vue'; 
 
 const props = defineProps({ 
-    selected: Array[String]
+    selected: Array[String],
+    unselectable: Array[String],
+    all: Array[String]
 })
 
 
@@ -11,21 +12,18 @@ const props = defineProps({
 const emit = defineEmits([
   "add", "remove"
 ])
+ 
 
-const lista_ambientes = useListaAmbientes()
-
-const lista_selecionavel = computed( () => {
-  if(lista_ambientes.todos)
-    return lista_ambientes.todos.filter( x => !lista_ambientes.liderados.includes(x) && !props.selected.includes(x) )
+const lista_selecionavel = computed( () => { 
+    return props.all.filter( x => !props.selected.includes(x)  && !props.unselectable.includes(x) )
 })
 
 const ambiente_input = ref(null)
 
 function checkadd(){ 
-  if(lista_ambientes.todos) {
+  if(props.all) {
   const regex = new RegExp(ambiente_input.value, 'i')
   const best_match = lista_selecionavel.value.filter( elem => regex.test(elem) )
-
   if (best_match.length == 1){ 
     emit("add", best_match[0])
     ambiente_input.value = null
@@ -33,11 +31,9 @@ function checkadd(){
 }
 }
 
-function checkremove(ambiente){
-  lista_ambientes.liderados  = lista_ambientes.liderados.filter( x=> x != ambiente)
+function checkremove(ambiente){  
   emit('remove', ambiente)
-}
- 
+} 
 </script>
 <template>  
 <div class="mt-3">
