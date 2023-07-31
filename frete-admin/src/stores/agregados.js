@@ -24,17 +24,14 @@ export const useAmbientesStore = defineStore('ambientes', ()=>{
 
 export const useListaAmbientes = defineStore('lista-ambientes', ()=>{ 
     const db = getFirestore(firebaseApp)
-    const todos = ref([])  
-    const liderados = ref([])
-    const nao_liderados = computed(() => todos.value.filter(ambiente => !liderados.value.includes(ambiente)))
-    async function load_data(){
-        if(todos.value.length == 0) {
-            const querySnapshot = await getDoc(doc(db, "agregados", "ambientes")); 
-            var docdt = querySnapshot.data() 
-            todos.value = docdt.codigos
-            liderados.value = docdt.liderados
-        }
-    }
-
-    return {todos, liderados, nao_liderados, load_data} 
+    const ambientesagregados = useDocument(doc(db, "agregados", "ambientes"))
+    const todos = computed(() =>  ambientesagregados.value.codigos)
+    const liderados = computed(() =>  ambientesagregados.value.liderados)
+    const nao_liderados = computed(() => {
+    if(todos.value) {
+        return todos.value.filter(ambiente => !liderados.value.includes(ambiente))
+    } else {
+        return []
+    }})
+    return {todos, liderados, nao_liderados} 
 })
