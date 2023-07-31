@@ -25,7 +25,7 @@ const db = getFirestore();
 exports.registrausuario = functions.auth.user().onCreate( (user, context) => {
     const email = user.email;
     const nome = user.displayName;
-    db.doc(`permissoes/${email}`).set({role: "Usuário", ambientes: [], nome: nome})
+    db.doc(`usuarios/${email}`).set({role: "Usuário", ambientes: [], nome: nome})
     logger.log(`Usuário criado: ${email}`)
 
 })
