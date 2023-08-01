@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue' 
+import HomeView from '@/views/home/view.vue' 
 import { getAuth } from 'firebase/auth'
-import { firebaseApp } from '../firebaseConfig'
+import { firebaseApp } from '@/firebaseConfig'
 import { inject } from 'vue'
 
 const auth = getAuth(firebaseApp)  
@@ -21,7 +21,7 @@ const router = createRouter({
     { 
         name: 'login',
         path: '/login',
-        component: () => import('../views/PerfilLogin.vue'),
+        component: () => import('@/views/PerfilLogin.vue'),
       meta: {
         requiresAuth: false,
         title: "Login"
@@ -32,7 +32,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import('../views/ItemsView.vue'),
+      component: () => import('@/views/items/view.vue'),
       meta: {
         requiresAuth: true
       },
@@ -40,37 +40,37 @@ const router = createRouter({
         {
           name: 'items',
           path: '',
-          component: () => import('../views/ItemsHome.vue'),
+          component: () => import('@/views/items/home.vue'),
           meta: { title: "Items"}
         },
         {
           name: 'items-ambiente',
           path: 'ambiente/:ambiente',
-          component: () => import('../views/ItemsAmbiente.vue'),
+          component: () => import('@/views/items/ambiente.vue'),
           meta: { title: "Items por Ambiente"}
         },
         {
           name: 'item-codigo',
           path: 'cod/:codigo',
-          component: () => import('../views/ItemsCod.vue'),
+          component: () => import('../views/items/cod.vue'),
           meta: { title: "Item por código"}
         },
         {
           name: 'item-codigo-partes',
           path: 'cod/:codigo/partes',
-          component: () => import('../views/ItemsCodPartes.vue'),
+          component: () => import('../views/items/codpartes.vue'),
           meta: { title: "Items por código - partes"}
         },
         {
           name: 'item-descricao',
           path: 'descricao',
-          component: () => import('../views/ItemsDescricao.vue'),
+          component: () => import('../views/items/descricao.vue'),
           meta: { title: "Items por descrição"}
         },
         {
           name: 'item-add',
           path: 'add',
-          component: () => import('../views/ItemsAdd.vue'),
+          component: () => import('../views/items/add.vue'),
           meta: {title: "Adicionar item"}
         }
       ]
@@ -80,7 +80,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import('../views/PacotesView.vue'),
+      component: () => import('../views/volumes/view.vue'),
       meta: {
         requiresAuth: true
       },
@@ -88,14 +88,20 @@ const router = createRouter({
         {
           path: '',
           name: 'volumes',
-          component: () => import('../views/PacotesHome.vue'),
+          component: () => import('../views/volumes/home.vue'),
           meta: { title: "Volumes"}
         },
         {
           path: 'cod/:codigo',
           name: 'volume-codigo',
-          component: () => import('../views/PacotesCodigo.vue'),
+          component: () => import('../views/volumes/codigo.vue'),
           meta: { title: "Volume por código"}
+        },
+        {
+          path: 'add',
+          name: 'volume-add',
+          component: () => import('../views/volumes/add.vue'),
+          meta: { title: "Adicionar Volume"}
         }
       ]
     },
