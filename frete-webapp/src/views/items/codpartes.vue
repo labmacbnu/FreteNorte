@@ -1,13 +1,13 @@
 <script setup>
 import { useRoute } from 'vue-router';
 import { getFirestore, doc } from 'firebase/firestore'
-import { firebaseApp } from '../firebaseConfig'
+import { firebaseApp } from '@/firebaseConfig'
 import { computed, reactive, inject } from 'vue';
-import { update_item_part, create_part, get_parte_ref } from '../stores/singleitem'
-import { useNumVolumesStore, registra_volume_parte } from '../stores/volumes'
+import { update_item_part, create_part, get_parte_ref } from '@/stores/singleitem'
+import { useNumVolumesStore, registra_volume_parte } from '@/stores/volumes'
 import { useDocument } from 'vuefire';
-import Modal from '../components/Modal.vue';
-import { apaga_volume } from '../stores/volumes';
+import Modal from '@/components/Modal.vue';
+import { apaga_volume } from '@/stores/volumes';
 const n_volumes = useNumVolumesStore()
 
 const {globaluser, updateUser} = inject("globaluser")   

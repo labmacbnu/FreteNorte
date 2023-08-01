@@ -2,9 +2,9 @@
 import { useRoute, RouterLink } from 'vue-router'
 import { doc } from 'firebase/firestore'
 import { useDocument } from 'vuefire'
-import { db, getdoc } from '../backend/index'
+import { db, getdoc } from '@/backend/index'
 import { onBeforeMount, ref } from 'vue'
-import QRCode from '../components/QRCode.vue'
+import QRCode from '@/components/QRCode.vue'
 
 const route = useRoute()
 const codigo = route.params.codigo

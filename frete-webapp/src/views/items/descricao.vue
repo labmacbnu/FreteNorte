@@ -1,9 +1,9 @@
 <script setup>
 import { useRoute } from 'vue-router'; 
 import { onBeforeMount, onMounted } from 'vue';
-import { useItemsDescricaoStore } from '../stores/items' 
-import AcordeaoChild from '../components/AcordeaoChild.vue';
-import Acordeao from '../components/AcordeaoItems.vue';
+import { useItemsDescricaoStore } from '@/stores/items' 
+import AcordeaoChild from '@/components/AcordeaoChild.vue';
+import Acordeao from '@/components/AcordeaoItems.vue';
  
 
 

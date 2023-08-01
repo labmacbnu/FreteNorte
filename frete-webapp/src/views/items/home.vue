@@ -1,10 +1,10 @@
 <script setup>
 import { computed, onBeforeMount, ref } from 'vue';
-import { useAmbientesStore } from '../stores/ambientes';
-import { useItemsAmbienteStore, useDescricoesStore } from '../stores/items'
-import AcordeaoChild from '../components/AcordeaoChild.vue';
+import { useAmbientesStore } from '@/stores/ambientes';
+import { useItemsAmbienteStore, useDescricoesStore } from '@/stores/items'
+import AcordeaoChild from '@/components/AcordeaoChild.vue';
 import { RouterLink, RouterView, useRoute, useRouter } from 'vue-router';
-import { useUserPermissionsStore } from '../stores/user';
+import { useUserPermissionsStore } from '@/stores/user';
 
 const ambientes = useAmbientesStore()
 const permissions = useUserPermissionsStore()

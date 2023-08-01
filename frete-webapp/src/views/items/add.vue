@@ -1,9 +1,9 @@
 <script setup>
 import { onBeforeMount, reactive, computed, ref } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
-import { useUserPermissionsStore } from '../stores/user';
-import { useAmbientesStore } from '../stores/ambientes';
-import { cria_item } from '../stores/items';
+import { useUserPermissionsStore } from '@/stores/user';
+import { useAmbientesStore } from '@/stores/ambientes';
+import { cria_item } from '@/stores/items';
 
 const route = useRoute();
 const router = useRouter();

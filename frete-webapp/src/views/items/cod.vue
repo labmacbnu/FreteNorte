@@ -1,13 +1,13 @@
 <script setup>
 import { RouterLink, useRoute, useRouter } from 'vue-router';
 import { getFirestore, doc } from 'firebase/firestore'
-import { firebaseApp } from '../firebaseConfig'
+import { firebaseApp } from '@/firebaseConfig'
 import { computed, reactive, ref } from 'vue';
-import { update_item } from '../stores/singleitem'
-import QRCode from '../components/QRCode.vue';
+import { update_item } from '@/stores/singleitem'
+import QRCode from '@/components/QRCode.vue';
 import { useDocument } from 'vuefire';
-import ModalDelete from '../components/ModalDelete.vue';
-import { deleta_item } from '../stores/items'; 
+import ModalDelete from '@/components/ModalDelete.vue';
+import { deleta_item } from '@/stores/items'; 
 
 const db = getFirestore(firebaseApp)
 const route = useRoute()

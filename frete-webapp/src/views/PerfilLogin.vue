@@ -1,8 +1,8 @@
 <script setup>
-import { loginWithGoogle, globalLogout, useUserPermissionsStore } from '../stores/user'
+import { loginWithGoogle, globalLogout, useUserPermissionsStore } from '@/stores/user'
 import { useRoute, useRouter } from "vue-router";
 import { computed, inject, onBeforeMount, onBeforeUpdate, onMounted } from "vue";
-import { getUserPermissions } from '../stores/user';
+import { getUserPermissions } from '@/stores/user';
 
 const router = useRouter();
 const { globaluser, updateUser } = inject('globaluser')

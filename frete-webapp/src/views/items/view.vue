@@ -1,8 +1,8 @@
 <script setup>
 import { computed, onBeforeMount, ref } from 'vue';
-import { useAmbientesStore } from '../stores/ambientes';  
+import { useAmbientesStore } from '@/stores/ambientes';  
 import { RouterView, useRoute } from 'vue-router'; 
-import { useUserPermissionsStore } from '../stores/user';
+import { useUserPermissionsStore } from '@/stores/user';
 
 const route = useRoute()
 const ambientes = useAmbientesStore() 

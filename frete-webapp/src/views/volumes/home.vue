@@ -1,16 +1,16 @@
 <script setup>
 import { computed, inject, onBeforeMount, onMounted, onServerPrefetch, ref } from 'vue';
-import Modal from '../components/Modal.vue';
-import ModalDelete from '../components/ModalDelete.vue';
-import { useUserPermissionsStore } from '../stores/user';
-import { useItemsAmbienteStore, orderedGroupBy } from '../stores/items';
-import { useAmbientesStore } from '../stores/ambientes';
-import { useNumVolumesStore, registra_volume, useVolumesEmailStore, apaga_volume } from '../stores/volumes';
-import { update_item_part, delete_part, get_parte_ref } from '../stores/singleitem'
-import Acordeao from '../components/AcordeaoVolumes.vue';
-import QRCode from '../components/QRCode.vue';
+import Modal from '@/components/Modal.vue';
+import ModalDelete from '@/components/ModalDelete.vue';
+import { useUserPermissionsStore } from '@/stores/user';
+import { useItemsAmbienteStore, orderedGroupBy } from '@/stores/items';
+import { useAmbientesStore } from '@/stores/ambientes';
+import { useNumVolumesStore, registra_volume, useVolumesEmailStore, apaga_volume } from '@/stores/volumes';
+import { update_item_part, delete_part, get_parte_ref } from '@/stores/singleitem'
+import Acordeao from '@/components/AcordeaoVolumes.vue';
+import QRCode from '@/components/QRCode.vue';
 
-import { db } from '../backend/index.js';
+import { db } from '@/backend/index.js';
 import { collection, where, doc, setDoc, query, updateDoc } from 'firebase/firestore';
 import { useCollection } from 'vuefire';
 
