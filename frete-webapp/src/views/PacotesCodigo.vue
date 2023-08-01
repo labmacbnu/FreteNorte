@@ -37,7 +37,7 @@ const responsavel = ref(null)
       <p><b>Responsável:</b> {{ volume.responsavel.nome }}</p>
       <ul class="list-group">
         <li class="list-group-item justify-content-between d-flex" v-for="item in volume.items"> 
-          <span v-if="item.key.includes('-')">
+          <span v-if="item.key && item.key.includes('-')">
             {{item.descricao}}
           </span>
           <span v-else>
