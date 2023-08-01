@@ -22,14 +22,10 @@ const items = useItemsAmbienteStore()
  
 
 
-const userRef = computed(() => doc(db, "permissoes", globaluser.value.email))
+const userRef = computed(() => doc(db, "usuarios", globaluser.value.email))
 const volRef = collection(db, "volumes")
-const q = computed(() => {
-  if (permissoes.email)
-    return query(volRef, where("responsavel", "==", userRef.value), where('deleted', '==', false))
-})
-const volumes = ref([])
-const { pending } = useCollection(q.value, { wait: true, target: volumes })
+const q = computed(() =>  query(volRef, where("responsavel", "==", userRef.value), where('deleted', '==', false)))
+const volumes = useCollection(q.value, {wait: true})
 
 
 
@@ -95,7 +91,7 @@ const all_volumes_dict = computed(() => {
 
 async function salvar_volume() {
   const volume = {
-    codigo: codigo.value,
+    categoria: "NULL",
     responsavel: globaluser.value.email,
     items: lista_items.value
   }
@@ -187,7 +183,7 @@ onBeforeMount(async () => await load_all_data())
           <td> 
             <ul class="list-group list-group-flush align-top">
               <li v-for="item in volume.items" :key="'I' + item.key" class="list-group-item justify-content-between d-flex">
-                <small class="">{{ item.key.includes("-") ? item.descricao :  item.short_descricao }}</small>
+                <small class="" v-if="item.key">{{ item.key.includes("-") ? item.descricao :  item.short_descricao }}</small>
                 <span class="badge text-primary rounded-pill span-lista-volumes text-elipse">{{item.key}}</span>
               </li> 
               </ul>
@@ -219,6 +215,15 @@ onBeforeMount(async () => await load_all_data())
           <label for="responsavel" class="form-label">Responsável</label>
           <input type="text" class="form-control" id="responsavel" :value="globaluser.email" disabled>
         </div>
+        <div class="col-12">
+          <div class="form-floating">
+              <select class="form-select" 
+              id="floatingSelect" aria-label="Floating label select example">
+                <option v-for="x in ['A', 'B', 'C']">{{ x }}</option>    
+              </select>
+              <label for="floatingSelect">Categoria</label>
+            </div>
+          </div>
         <div class="col-12">
           <h3>Lista de items inclusos no lote</h3>
         </div>
