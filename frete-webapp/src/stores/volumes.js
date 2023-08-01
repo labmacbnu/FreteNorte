@@ -1,7 +1,7 @@
 import { computed, ref, watch } from 'vue';
 import { defineStore } from 'pinia';
 import { firebaseApp } from '../firebaseConfig';
-import {  collection, where, doc, setDoc, query, updateDoc } from 'firebase/firestore';
+import {  collection, where, doc, setDoc, query, updateDoc, addDoc } from 'firebase/firestore';
 import {useCollection, useDocument} from 'vuefire';
 import { db } from '../backend/index.js';
 import {update_item_part} from './singleitem.js';
@@ -30,10 +30,11 @@ export async function registra_volume(dados){
         const itemRef = doc(db, "items", key) 
         itemsRef.push( itemRef )
     })
-    dados.items = itemsRef
-    const docRef = doc(db, "volumes", dados.codigo);
-    const uptime = await setDoc(docRef, {...dados, deleted: false});
-    return uptime
+    dados.items = itemsRef 
+    const volumesRef = collection(db, "volumes") 
+    const docRef = await addDoc(volumesRef, {...dados, deleted: false});
+    await updateDoc(docRef, {codigo: docRef.id} )
+    return docRef.id
 }
 
 
