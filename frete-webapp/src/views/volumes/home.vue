@@ -1,11 +1,11 @@
 <script setup>
-import { computed, inject, onBeforeMount, onMounted, onServerPrefetch, ref } from 'vue';
+import { computed, inject, onBeforeMount, onMounted, ref } from 'vue';
 import Modal from '@/components/Modal.vue';
 import ModalDelete from '@/components/ModalDelete.vue';
 import { useUserPermissionsStore } from '@/stores/user';
 import { useItemsAmbienteStore, orderedGroupBy } from '@/stores/items';
 import { useAmbientesStore } from '@/stores/ambientes';
-import { useNumVolumesStore, registra_volume, useVolumesEmailStore, apaga_volume } from '@/stores/volumes';
+import {  registra_volume, apaga_volume } from '@/stores/volumes';
 import { update_item_part, delete_part, get_parte_ref } from '@/stores/singleitem'
 import Acordeao from '@/components/AcordeaoVolumes.vue';
 import QRCode from '@/components/QRCode.vue';
@@ -13,6 +13,7 @@ import QRCode from '@/components/QRCode.vue';
 import { db } from '@/backend/index.js';
 import { collection, where, doc, setDoc, query, updateDoc } from 'firebase/firestore';
 import { useCollection } from 'vuefire';
+import { RouterLink } from 'vue-router';
 
 const { globaluser, updateUser } = inject("globaluser")
 const permissoes = useUserPermissionsStore()
@@ -28,65 +29,11 @@ const q = computed(() =>  query(volRef, where("responsavel", "==", userRef.value
 const volumes = useCollection(q.value, {wait: true})
 
 
-
-const lista_items = ref([])
-
-async function load_all_data() {
-  const permissoes = useUserPermissionsStore()
-  for (let amb of [...permissoes.ambientes, ...permissoes.usuario_de]) {
-    console.log(amb)
-    items.ambiente = amb
-    await items.load_data()
-  } 
-}
-
-
-
-const all_items_ordered = computed(() => {
-  if (!permissoes.ambientes) return []
-  let all = []
-  for (let amb of [...permissoes.ambientes, ...permissoes.usuario_de]) {
-    if (items.inner_db[amb]) {
-      // filtrar apenas não volumados
-      all.push(...items.inner_db[amb])
-    }
-  }
-  return all.sort((a, b) => a.short_descricao.localeCompare(b.short_descricao))
-})
-
-const all_items_nao_volumados = computed(() =>
-  all_items_ordered.value.filter((elem) => !elem.volumado))
-
 function click_row(i) {
   document.getElementById("check" + i).click()
 }
-
-const filtrar_lista_items = ref("")
-
-const all_items_filtered = computed(() => {
-  if (filtrar_lista_items.value.length >= 3) {
-    const regex = new RegExp(`.*${filtrar_lista_items.value}.*`, 'i');
-    return all_items_nao_volumados.value.filter(
-      obj => regex.test(obj.short_descricao)
-    );
-  }
-  return all_items_nao_volumados.value
-})
-
-
-const all_volumes_dict = computed(() => {
-  const dicionario = {} // {'teste': [{short_descricao: 1, key: "a"}]}
-  if (volumes) {
-    volumes.value.forEach((doc) => {
-      // VERIFICAR O QUE TÁ ACONTECENDO AQUI
-      const lista_items = []
-      doc.items.forEach((i) => lista_items.push(i))
-      dicionario[doc.codigo] = lista_items
-    })
-  }
-  return dicionario
-})
-
+ 
+ 
 
 
 async function salvar_volume() {
@@ -147,15 +94,14 @@ const soft_volume_modal_items = computed(() => {
 })
 
 
-onBeforeMount(() => volumes.email = permissoes.email)
-onBeforeMount(async () => await load_all_data())
-//onServerPrefetch(() => usePendingPromises())
+onBeforeMount(() => volumes.email = permissoes.email)  
 </script>
 
 <template>
   <div class="row mb-3 justify-content-end">
     <div class="col text-end">
-      <button class="btn-primary btn d-print-none" data-bs-target="#criarVolume" data-bs-toggle="modal">Criar novo volume</button>
+      <!-- <button class="btn-primary btn d-print-none" data-bs-target="#criarVolume" data-bs-toggle="modal">Criar novo volume</button> -->
+      <RouterLink class="btn btn-primary" :to="{name: 'volume-add'}">Criar Volume</RouterLink>
     </div>
   </div>
   <div class="row">
@@ -199,67 +145,6 @@ onBeforeMount(async () => await load_all_data())
   </div>
 
 
-
-  <Modal modalid="criarVolume" :salve_callback="async () => await salvar_volume()">
-    <template #titulo>
-      Criar novo volume
-    </template>
-    <template #corpo>
-      <form class="row g-3">
-        <div class="col-6">
-          <label for="codigo" class="form-label">Código</label>
-          <input type="text" class="form-control text-secondary" id="codigo" value="[[...]]" disabled>
-        </div>
-
-        <div class="col-6">
-          <label for="responsavel" class="form-label">Responsável</label>
-          <input type="text" class="form-control" id="responsavel" :value="globaluser.email" disabled>
-        </div>
-        <div class="col-12">
-          <div class="form-floating">
-              <select class="form-select" 
-              id="floatingSelect" aria-label="Floating label select example">
-                <option v-for="x in ['A', 'B', 'C']">{{ x }}</option>    
-              </select>
-              <label for="floatingSelect">Categoria</label>
-            </div>
-          </div>
-        <div class="col-12">
-          <h3>Lista de items inclusos no lote</h3>
-        </div>
-        <div class="col-12">
-          <input type="text" class="form-control" placeholder="Digite para filtrar a lista" v-model="filtrar_lista_items">
-        </div>
-        <div class="col-12 listatodositems overflow-y-scroll">
-          <table class="table">
-            <thead>
-              <tr class="sticky-top">
-                <th></th>
-                <th>Descrição</th>
-                <th>Código</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr @click.stop="() => click_row(i)" v-for="(item, i) in all_items_filtered">
-                <td>
-                  <input @click.self="() => click_row(i)" class="form-check-input mx-1" type="checkbox" :value="item.key"
-                    v-model="lista_items" :id="'check' + i">
-                </td>
-                <td>
-                  {{ item.short_descricao }}
-                </td>
-                <td class="d-flex-inline">
-                  <p class="text-elipse p-lista-nao-volumados m-0">
-                  {{ item.key }}</p>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </form>
-    </template>
-  </Modal>
- 
 <ModalDelete modalid="apagare" :delete_callback="() => soft_apaga_volume(soft_volume_modal_ref)">
 <template #titulo>
   Apagar volume
