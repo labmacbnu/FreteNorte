@@ -163,9 +163,6 @@ onBeforeMount(() => volumes.email = permissoes.email)
  
 </template>
 <style>
-.listatodositems {
-  height: 30vh;
-}
 
 .listinhadelete {
   max-height: 20vh;
