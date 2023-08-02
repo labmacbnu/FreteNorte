@@ -12,7 +12,8 @@ import {  useDocument, usePendingPromises,  } from 'vuefire';
 
 const { globaluser, updateUser } = inject("globaluser")
 const permissoes = useUserPermissionsStore()
- 
+
+const categorias = useDocument(doc(db, "agregados", "categorias_volumes"))
 const ambientes = reactive({})
 
 const lista_ambientes = [...permissoes.ambientes, ...permissoes.usuario_de];
@@ -117,7 +118,8 @@ onServerPrefetch( () => usePendingPromises() )
 <template>
   <div class="row">
     <div class="col d-flex justify-content-end">
-      <h1 class="flex-fill">Criar Volume</h1><button class="btn btn-danger" @click="salvar_volume">Salvar</button>
+      <h1 class="flex-fill">Criar Volume</h1>
+      <button class="btn btn-success" @click="salvar_volume">Salvar</button>
     </div> 
   </div>
   <form class="row g-3"> 
@@ -129,7 +131,7 @@ onServerPrefetch( () => usePendingPromises() )
     <div class="col-6"> 
         <label for="floatingSelect" class="form-label">Categoria</label> 
         <select v-model="new_volume.categoria" class="form-select" id="floatingSelect" aria-label="Floating label select example">
-          <option v-for="x in ['A', 'B', 'C']">{{ x }}</option>
+          <option v-for="x in categorias.valores">{{ x }}</option>
         </select>
     </div>
     <div class="col-6">
