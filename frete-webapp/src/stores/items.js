@@ -61,7 +61,7 @@ export const useItemsAmbienteStore = defineStore('items-ambiente', ()=>{
     const itemsColl = collection(db, "items")
     if (! inner_db.hasOwnProperty(ambiente.value) ){
         const q = query(itemsColl, where('ambiente', '==',  doc(collection(db,"ambientes"),  ambiente.value))) 
-        inner_db[ambiente.value] = useCollection(q); 
+        inner_db[ambiente.value] = useCollection(q, {wait: true}); 
         }
     }
 
