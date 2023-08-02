@@ -24,11 +24,11 @@ function updateUser(state) {
 
 const auth = getAuth(firebaseApp);
 
-onAuthStateChanged(auth, (user) => {
+onAuthStateChanged(auth, async (user) => {
   if (user) {
     updateUser(user)
     permission.set_email(user.email)
-    permission.get_permissions()
+    await permission.get_permissions()
   } else {
     updateUser(null)
     permission.reset()
