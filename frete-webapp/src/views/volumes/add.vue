@@ -6,12 +6,16 @@ import { useAmbientesStore } from '@/stores/ambientes';
 import {  registra_volume, apaga_volume } from '@/stores/volumes';
 import { update_item_part, delete_part, get_parte_ref } from '@/stores/singleitem' 
 
+
 import { db } from '@/backend/index.js';
 import { collection, where, doc, setDoc, query, updateDoc } from 'firebase/firestore';
 import {  useDocument, usePendingPromises,  } from 'vuefire';  
+import { useRoute } from 'vue-router';
 
 const { globaluser, updateUser } = inject("globaluser")
 const permissoes = useUserPermissionsStore()
+
+const route = useRoute()
 
 const categorias = useDocument(doc(db, "agregados", "categorias_volumes"))
 const ambientes = reactive({})
@@ -27,16 +31,17 @@ const items = useItemsAmbienteStore()
 const userRef = computed(() => doc(db, "usuarios", globaluser.value.email))
 const volRef = collection(db, "volumes") 
 
-const lista_items = ref([])
-const ambiente_selected = ref(null)
+const lista_items = ref( route.query.items  || [])
+ 
+const ambiente_selected = ref( route.query.ambiente || null )
+
 const new_volume = reactive(
   {
     categoria: null,
-    responsavel: globaluser.value.email,
-    lider: null,
-    localizacao_atual: null,
-    origem: null, 
-    items: null
+    responsavel: globaluser.value.email, 
+    localizacao_atual: route.query.ambiente || null,
+    origem: route.query.ambiente || null, 
+    items: route.query.items || []
   }
 )
 async function load_all_data() {
@@ -91,6 +96,7 @@ watch( () => new_volume.origem, (newVal) => {
 watch(lista_items, (newValue) => {
   new_volume.items = newValue
 })
+
 
 
 async function salvar_volume() { 
@@ -149,7 +155,7 @@ onServerPrefetch( () => usePendingPromises() )
       <input type="text" class="form-control" id="lider-ambiente" :value="globaluser.email" disabled>
     </div>
     <div class="col-12">
-      <h3>Lista de items inclusos no lote</h3>
+      <h3>Lista de items inclusos no volume</h3>
       <p class="form-text" v-if="new_volume.origem">
         Lista de items de {{ ambientes[new_volume.origem].ambiente_nome }}.</p>
       <p v-else>Selecione o ambiente acima.</p>
