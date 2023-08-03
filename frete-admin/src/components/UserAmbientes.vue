@@ -15,6 +15,7 @@ const emit = defineEmits([
  
 
 const lista_selecionavel = computed( () => { 
+  if(props.all)
     return props.all.filter( x => !props.selected.includes(x)  && !props.unselectable.includes(x) )
 })
 
