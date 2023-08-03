@@ -66,32 +66,24 @@ async function deleta_volume_parte(parte_key) {
   await delete_part(parte_key)
 }
 
-async function soft_apaga_volume(codigo) {
-  const items_do_volume = all_volumes_dict.value[codigo]
-  console.log(`Apagando volume ${codigo} com ${items_do_volume.length} items`)
+async function soft_apaga_volume(codigo) { 
+  console.log(`Apagando volume ${codigo}`)
+  const volume_registry = volumes.value.find(x => x.codigo == codigo)
+  const items_do_volume = volume_registry.items
   // vamos desavolumar aqui localmente
-  items_do_volume.forEach(element => {
+  items_do_volume.forEach(element => { 
     if (element.key.includes("-")) {
       // SE TEM TRAÇO NA KEY
       console.log(`Apagando parte ${element.key}`)
-      deleta_volume_parte(element.key)
-    } else { // SE NÃO TEM TRAÇO NO KEY
-      // se for um item normal
-      console.log(`Desavolumento item ${element.key}`)
-      var itemRef = all_items_ordered.value.find(x => x.key == element.key)
-      Object.assign(itemRef, { volumado: false })
+      deleta_volume_parte(element.key) 
     }
-  });
+  }); 
   const uptime = apaga_volume(codigo)
   return true
 }
 
 const soft_volume_modal_ref = ref(null)
-const soft_volume_modal_items = computed(() => {
-  if(soft_volume_modal_ref.value){
-    return all_volumes_dict.value[soft_volume_modal_ref.value]
-  }
-})
+
 
 
 onBeforeMount(() => volumes.email = permissoes.email)  
@@ -151,12 +143,6 @@ onBeforeMount(() => volumes.email = permissoes.email)
 </template>
 <template #corpo>
   Certeza que quer apagar o volume {{soft_volume_modal_ref}}?
-  <ul class="listinhadelete list-group overflow-y-scroll">
-    <li v-for="item in soft_volume_modal_items" :key="'DD' + item.key" class="list-group-item justify-content-between d-flex">
-      <span>{{ item.key.includes("-") ? item.descricao :  item.short_descricao }}</span>
-      <span class="badge text-primary rounded-pill span-lista-volumes text-elipse">{{item.key}}</span>
-    </li> 
-  </ul>
 </template>
 
 </ModalDelete> 
