@@ -28,6 +28,10 @@ function checkadd(){
   if (best_match.length == 1){ 
     emit("add", best_match[0])
     ambiente_input.value = null
+  } else if (lista_selecionavel.value.includes(ambiente_input.value)) {
+    emit("add", ambiente_input.value)
+    ambiente_input.value = null
+
   }
 }
 }
