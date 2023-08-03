@@ -1,8 +1,8 @@
 <script setup>
-import { loginWithGoogle, globalLogout, useUserPermissionsStore } from '../stores/user'
+import { loginWithGoogle, globalLogout, useUserPermissionsStore } from '@/stores/user'
 import { useRoute, useRouter } from "vue-router";
 import { computed, inject, onBeforeMount, onBeforeUpdate, onMounted } from "vue";
-import { getUserPermissions } from '../stores/user';
+import { getUserPermissions } from '@/stores/user';
 
 const router = useRouter();
 const { globaluser, updateUser } = inject('globaluser')
@@ -48,9 +48,9 @@ onBeforeUpdate(redirectproperly)
     <template v-else>
         O recurso que você está querendo acessar requer que você faça login.
         <a class="text-decoration-none" @click="loginWithGoogle">
-            <div class="botao-login border border-secondary mx-auto">
-                <img class="imagem-login"
-                    src="https://developers.google.com/static/identity/images/g-logo.png?hl=pt-br">Fazer login com Google
+            <div class="botao-login border border-primary px-2 mx-auto rounded">
+                <img class="imagem-login me-2"
+                    src="g-logo.png">Fazer login com Google
             </div>
         </a>
     </template>
@@ -61,8 +61,7 @@ onBeforeUpdate(redirectproperly)
     height: 40px;
 }
 
-.botao-login {
-    font-family: 'Roboto';
+.botao-login { 
     padding: 6px;
     width: fit-content;
     height: fit-content;
