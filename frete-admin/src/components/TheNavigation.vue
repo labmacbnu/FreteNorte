@@ -15,6 +15,10 @@ const links = reactive([{
     rto: {name: 'ambientes'},
     icon: 'bi-house-gear',
     label: "Ambientes"
+}, {
+    rto: {name: 'volumes'},
+    icon: 'bi-box-seam',
+    label: "Volumes"
 }
 ])
 
