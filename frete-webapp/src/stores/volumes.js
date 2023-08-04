@@ -39,6 +39,11 @@ export async function registra_volume(dados){
         itemsRef.push( itemRef )
     })
     dados.items = itemsRef 
+    dados.origem = doc(db, "ambientes", dados.origem)
+    dados.localizacao_atual = doc(db, "ambientes", dados.localizacao_atual)
+    dados.status = "Criado"
+    dados.data_criacao = new Date()
+
     const volumesRef = collection(db, "volumes") 
     const docRef = await addDoc(volumesRef, {...dados, deleted: false});
 
