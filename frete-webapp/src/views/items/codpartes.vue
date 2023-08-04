@@ -3,7 +3,7 @@ import { useRoute } from 'vue-router';
 import { getFirestore, doc } from 'firebase/firestore'
 import { firebaseApp } from '@/firebaseConfig'
 import { computed, reactive, inject } from 'vue';
-import { update_item_part, create_part, get_parte_ref } from '@/stores/singleitem'
+import { delete_part, update_item_part, create_part, get_parte_ref, update_item } from '@/stores/singleitem'
 import { useNumVolumesStore, registra_volume_parte } from '@/stores/volumes'
 import { useDocument } from 'vuefire';
 import Modal from '@/components/Modal.vue';
@@ -52,8 +52,7 @@ const item = computed(() => {
 
 const nova_parte = reactive({
     key: item.value.key + '-' + (item.value.partes.length + 1),
-    short_descricao: "",
-    partent: item.value.key,
+    short_descricao: "", 
     ambiente: item.value.ambiente,
     patrimonio: item.value.patrimonio,
     medidas: "",
@@ -70,17 +69,14 @@ const nova_parte = reactive({
  *  - Adiciona a ref ao item a que se refere
  */
 async function adiciona_parte() {
+    // Se não tinha nenhuma parte, agora vai ter e não vai ser mais inteiro
+    if(!item.partes) {
+        update_item(item.key, {inteiro: false})
+    }
     const partRef = await create_part({...nova_parte, descricao: item.value.short_descricao + ": " + nova_parte.short_descricao})
     console.log(`Cridada parte ${partRef.id} para item ${item.value.key}`)
     await update_item_part(item.value.key, 'add', partRef)
-    console.log(`Parte ${partRef.id} adicionada ao item ${item.value.key}`)
-    const dados_volume = {
-        codigo: n_volumes.codigo,
-        items: [ partRef ],
-        responsavel: globaluser.value.email
-    } 
-    await registra_volume_parte({...dados_volume} )
-    console.log(`Volume ${n_volumes.codigo} criado para parte ${partRef.id}`)
+    console.log(`Parte ${partRef.id} adicionada ao item ${item.value.key}`) 
     Object.assign(nova_parte, 
     {short_descricao: "", medidas: "", peso: "", fragil: false, transporte_especial: false, inteiro: false,
     key: item.value.key + '-' + (item.value.partes.length + 1)})
@@ -91,10 +87,10 @@ async function adiciona_parte() {
 async function deleta_parte(index){
     const parteDoc = item.value.partes[index]
     const perteRef = await get_parte_ref(parteDoc.key)
-    const volumeKey = parteDoc.volume
+    //const volumeKey = parteDoc.volume
     await update_item_part(item.value.key, 'remove', perteRef)
-    await apaga_volume(volumeKey)
-    await deleta_parte(parteDoc.key)
+    //await apaga_volume(volumeKey)
+    await delete_part(parteDoc.key)
      
 }
 </script>
@@ -106,11 +102,7 @@ async function deleta_parte(index){
         </template>
         <template #corpo>
 
-            <form>
-                <div class="mb-2">
-                    <label for="volume" class="form-label">Volume</label>
-                    <input disabled type="text" class="form-control" id="volume" v-model="nova_parte.volume">
-                </div>
+            <form> 
                 <div class="mb-2">
                     <label for="nome" class="form-label">Descrição da parte</label>
                     <input type="text" class="form-control" id="nome" v-model="nova_parte.short_descricao">
@@ -166,7 +158,8 @@ async function deleta_parte(index){
                     </tr>
                 </tbody>
             </table>
-
+<p><code>{{ item_db }}</code></p>
+<p><code>{{ item }}</code></p>
         </div>
     </div>
 </template>
