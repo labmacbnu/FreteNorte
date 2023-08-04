@@ -10,12 +10,13 @@ import { update_item_part, delete_part, get_parte_ref } from '@/stores/singleite
 import { db } from '@/backend/index.js';
 import { collection, where, doc, setDoc, query, updateDoc } from 'firebase/firestore';
 import {  useDocument, usePendingPromises,  } from 'vuefire';  
-import { useRoute } from 'vue-router';
+import { useRoute, useRouter } from 'vue-router';
 
 const { globaluser, updateUser } = inject("globaluser")
 const permissoes = useUserPermissionsStore()
 
 const route = useRoute()
+const router = useRouter()
 
 const categorias = useDocument(doc(db, "agregados", "categorias_volumes"))
 const ambientes = reactive({})
@@ -46,7 +47,7 @@ const new_volume = reactive(
 )
 
 const responsavel_label = computed(() => (globaluser.value.email) ? globaluser.value.displayName +  ' <'+globaluser.value.email+'>': "<?>")
-const lider_ambiente_label = computed(() => (new_volume.origem && ambientes) ? ambientes[new_volume.origem].lider.nome + ' <'+ambientes[new_volume.origem].lider.id+'>' : "<?>" )
+const lider_ambiente_label = computed(() => (new_volume.origem && ambientes[new_volume.origem]) ? ambientes[new_volume.origem].lider.nome + ' <'+ambientes[new_volume.origem].lider.id+'>' : "<?>" )
 
 async function load_all_data() {
   const permissoes = useUserPermissionsStore()
@@ -135,9 +136,10 @@ async function salvar_volume() {
       setTimeout(reset_validation, 1500)
       return 0
     }
-  }
-  return 0
-  //const uptime = registra_volume(volume) 
+  } 
+  const volumeid = await registra_volume(toValue(new_volume)) 
+  console.log(volumeid)
+  setTimeout(() =>  router.push({name: 'volumes'}), 125)
 }
  
 onMounted(async () => await load_all_data())
@@ -181,7 +183,7 @@ onServerPrefetch( () => usePendingPromises() )
     
     <div class="col-12">
       <h3 :class="{'text-danger': !validation.items}">Items inclusos no volume</h3>
-      <p class="form-text" v-if="new_volume.origem">
+      <p class="form-text" v-if="new_volume.origem && ambientes[new_volume.origem]">
         Lista de items de {{ ambientes[new_volume.origem].ambiente_nome }}.</p>
       <p v-else>Selecione o ambiente acima.</p>
       <input type="text" class="form-control"
