@@ -1,5 +1,5 @@
 <script setup>
-import { computed, inject, onBeforeMount, onMounted, onServerPrefetch, reactive, ref, watch } from 'vue';
+import { computed, inject, toValue, onMounted, onServerPrefetch, reactive, ref, watch } from 'vue';
 import { useUserPermissionsStore } from '@/stores/user';
 import { useItemsAmbienteStore, orderedGroupBy } from '@/stores/items';
 import { useAmbientesStore } from '@/stores/ambientes';
@@ -44,6 +44,10 @@ const new_volume = reactive(
     items: route.query.items || []
   }
 )
+
+const responsavel_label = computed(() => (globaluser.value.email) ? globaluser.value.displayName +  ' <'+globaluser.value.email+'>': "<?>")
+const lider_ambiente_label = computed(() => (new_volume.origem && ambientes) ? ambientes[new_volume.origem].lider.nome + ' <'+ambientes[new_volume.origem].lider.id+'>' : "<?>" )
+
 async function load_all_data() {
   const permissoes = useUserPermissionsStore()
   for (let amb of [...permissoes.ambientes, ...permissoes.usuario_de]) {
@@ -97,24 +101,43 @@ watch(lista_items, (newValue) => {
   new_volume.items = newValue
 })
 
+const validation = reactive({
+    categoria: true,
+    responsavel: true,  
+    categoria: true,
+    origem: true, 
+    items: true
+})
+ 
+function validate(){
+  validation.categoria = new_volume.categoria != null
+  validation.responsavel = new_volume.responsavel != null 
+  validation.categoria = new_volume.categoria != null
+  validation.origem = new_volume.origem != null
+  validation.items = new_volume.items.length != 0 
+}
+function reset_validation(){
+  validation.categoria = true
+  validation.responsavel = true
+  validation.categoria = true
+  validation.origem = true
+  validation.items = true
 
+}
 
 async function salvar_volume() { 
 
   console.log(JSON.stringify(new_volume))
-  return 0
-  //const uptime = registra_volume(volume)
-  if (uptime) {
-    for (let item of lista_items.value) {
-      var itemRef = all_items_ordered.value.find(x => x.key == item)
-      itemRef.volumado = true
+  validate()  
+  for(const [key, value] of Object.entries(validation)){
+    // se alguma coisa não for válida, retorna zero
+    if(value == false){
+      setTimeout(reset_validation, 1500)
+      return 0
     }
-    lista_items.value = []
-
-    return true
-  } else {
-    return false
   }
+  return 0
+  //const uptime = registra_volume(volume) 
 }
  
 onMounted(async () => await load_all_data())
@@ -129,22 +152,11 @@ onServerPrefetch( () => usePendingPromises() )
     </div> 
   </div>
   <form class="row g-3"> 
-
-    <div class="col-6">
-      <label for="responsavel" class="form-label">Responsável por criar o volume</label>
-      <input type="text" class="form-control" id="responsavel" :value="globaluser.email" disabled>
-    </div>
-    <div class="col-6"> 
-        <label for="floatingSelect" class="form-label">Categoria</label> 
-        <select v-model="new_volume.categoria" class="form-select" id="floatingSelect" aria-label="Floating label select example">
-          <option v-for="x in categorias.valores">{{ x }}</option>
-        </select>
-    </div>
     <div class="col-6">
       <label for="ambiente" class="form-label">Ambiente</label>  
-      <select v-model="new_volume.origem" class="form-select" id="ambiente">
+      <select :class="{'border-danger': !validation.origem}" v-model="new_volume.origem" class="form-select" id="ambiente">
         <option  v-for="(val, key, index ) in ambientes" :value="key">
-          <template v-if="val.ambiente_nome">
+          <template v-if="val && val.ambiente_nome">
           {{ val.ambiente_codigo }} - {{ val.ambiente_nome }}
           </template>
         </option>
@@ -152,10 +164,23 @@ onServerPrefetch( () => usePendingPromises() )
     </div>
     <div class="col-6">
       <label for="lider-ambiente" class="form-label">Líder do ambiente</label>    
-      <input type="text" class="form-control" id="lider-ambiente" :value="globaluser.email" disabled>
+      <input :class="{'border-danger': !validation.origem}" type="text" class="form-control" id="lider-ambiente"
+       :value="lider_ambiente_label" disabled>
     </div>
+    <div class="col-6">
+      <label for="responsavel" class="form-label">Responsável por criar o volume</label>
+      <input type="text" class="form-control" id="responsavel" 
+      :value="responsavel_label" disabled>
+    </div>
+    <div class="col-6"> 
+        <label for="floatingSelect" class="form-label">Categoria</label> 
+        <select :class="{'border-danger': !validation.categoria}" v-model="new_volume.categoria" class="form-select" id="floatingSelect" aria-label="Floating label select example">
+          <option v-if="categorias" v-for="x in categorias.valores">{{ x }}</option>
+        </select>
+    </div>
+    
     <div class="col-12">
-      <h3>Lista de items inclusos no volume</h3>
+      <h3 :class="{'text-danger': !validation.items}">Items inclusos no volume</h3>
       <p class="form-text" v-if="new_volume.origem">
         Lista de items de {{ ambientes[new_volume.origem].ambiente_nome }}.</p>
       <p v-else>Selecione o ambiente acima.</p>
