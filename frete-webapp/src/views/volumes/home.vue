@@ -9,6 +9,7 @@ import {  registra_volume, apaga_volume } from '@/stores/volumes';
 import { update_item_part, delete_part, get_parte_ref } from '@/stores/singleitem'
 import Acordeao from '@/components/AcordeaoVolumes.vue';
 import QRCode from '@/components/QRCode.vue';
+import moment from 'moment';
 
 import { db } from '@/backend/index.js';
 import { collection, where, doc, setDoc, query, updateDoc } from 'firebase/firestore';
@@ -90,7 +91,10 @@ onBeforeMount(() => volumes.email = permissoes.email)
 </script>
 
 <template>
-  <div class="row mb-3 justify-content-end">
+  <div class="row mb-3">
+    <div class="col">
+      <h1>Volumes que você criou</h1>
+    </div>
     <div class="col text-end">
       <!-- <button class="btn-primary btn d-print-none" data-bs-target="#criarVolume" data-bs-toggle="modal">Criar novo volume</button> -->
       <RouterLink class="btn btn-primary" :to="{name: 'volume-add'}">Criar Volume</RouterLink>
@@ -104,33 +108,63 @@ onBeforeMount(() => volumes.email = permissoes.email)
             <th class="d-none d-print-table-cell">Volume</th>
             <th class="d-print-none">Código</th>
             <th>Lista de items</th>
+            <th>Origem</th>
+            <th>Categoria</th>
+            <th>Status</th>
+            <th>Localização atual</th>
+            <th>Criado em</th>
             <th class="d-print-none"></th>
         </tr>
         </thead>
-        <tbody>
-        <tr v-for="volume in volumes" :key="'volume' + volume.codigo">
-          <td class="d-none d-print-table-cell text-center">
-            <QRCode :path="'/volumes/cod/' + volume.codigo"></QRCode>
-            <p>{{ volume.codigo }}</p>
-          </td>
-          <td class="d-print-none"> 
-            <RouterLink class="" :to="{name: 'volume-codigo', params: {codigo: volume.codigo }}">
-            {{ volume.codigo }}
-          </RouterLink>
-          </td>
-          <td> 
+        <tbody tag="tbody" name="tabela" is="transition-group">
+          <template  v-for="volume in volumes" :key="'volume' + volume.codigo">
+          <tr>
+            <td class="d-none d-print-table-cell text-center">
+              <QRCode :path="'/volumes/cod/' + volume.codigo"></QRCode>
+              <p>{{ volume.codigo }}</p>
+            </td>
+            <td class="d-print-none"> 
+              <RouterLink class="" :to="{name: 'volume-codigo', params: {codigo: volume.codigo }}">
+              {{ volume.codigo.substring(0,8) + '...' }}
+            </RouterLink>
+            </td>
+            <td> 
+              <a :href="'#items' + volume.codigo"  class="btn btn-primary" data-bs-toggle="collapse" 
+                role="button" aria-expanded="false" :aria-controls="'items' + volume.codigo">
+              Ver items</a>
+            </td>
+            <td>
+              {{ volume.origem.ambiente_codigo }}
+            </td>
+            <td>
+              {{ volume.categoria }}
+            </td>
+            <td>
+              {{ volume.status }}
+            </td>
+            <td>
+              {{ volume.localizacao_atual.ambiente_codigo }}
+            </td>
+            <td>
+              {{ moment.unix(volume.data_criacao.seconds).format("DD/MM/YY") }}
+            </td>  
+            <td class="d-print-none">
+              <button class="btn btn-danger" data-bs-target="#apagare" data-bs-toggle="modal" 
+              @click="() => soft_volume_modal_ref = volume.codigo"><i class="bi bi-trash" title="Apagar volume"></i></button>
+            </td>
+          </tr>
+          <tr class="collapse" :id="'items' + volume.codigo">
+            <td colspan="5">
             <ul class="list-group list-group-flush align-top">
-              <li v-for="item in volume.items" :key="'I' + item.key" class="list-group-item justify-content-between d-flex">
-                <small class="" v-if="item.key">{{ item.key.includes("-") ? item.descricao :  item.short_descricao }}</small>
-                <span class="badge text-primary rounded-pill span-lista-volumes text-elipse">{{item.key}}</span>
-              </li> 
+                <li v-for="item in volume.items" :key="'I' + item.key" class="list-group-item justify-content-between d-flex">
+                  <small class="" v-if="item.key">{{ item.key.includes("-") ? item.descricao :  item.short_descricao }}</small>
+                  <span class="badge text-primary rounded-pill span-lista-volumes text-elipse">{{item.key}}</span>
+                </li> 
               </ul>
-          </td>
-          <td class="d-print-none">
-            <button class="btn btn-danger" data-bs-target="#apagare" data-bs-toggle="modal" 
-            @click="() => soft_volume_modal_ref = volume.codigo"><i class="bi bi-trash" title="Apagar volume"></i></button>
-          </td>
-        </tr>
+            </td>
+            <td colspan="1"></td>
+          </tr>
+      </template>
       </tbody>
       </table>
     </div>
@@ -165,5 +199,21 @@ onBeforeMount(() => volumes.email = permissoes.email)
 .span-lista-volumes {
   width: 6em;
 }
+
+.tabela-item {
+  transition: all 1s;
+}
+.tabela-item > tr >* {
+  transition: all 1s;
+  overflow: hidden;
+}
+.tabela-enter > td {
+  line-height: 0 !important;
+}
+.tabela-enter > tr > * {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+
 </style>
  
