@@ -23,7 +23,7 @@ watch(selecionados, (novo, antigo) => {
             <ul class="list-group">
                 <li class="list-group-item d-flex justify-content-between align-items-center" v-for="(subitem, idx) in valor">
                     <div class="form-check">
-                        <input :id="'item'+subitem.key" v-model="selecionados" type="checkbox" class="form-check-input border border-primary" :value="subitem.key">
+                        <input :disabled="subitem.volumado" :id="'item'+subitem.key" v-model="selecionados" type="checkbox" class="form-check-input border border-primary" :value="subitem.key">
                         <label :for="'item'+subitem.key" class="form-check-label text-capitalize">{{ subitem.descricao.substring(0,140) }}</label>
                     </div>
                     <p></p>
