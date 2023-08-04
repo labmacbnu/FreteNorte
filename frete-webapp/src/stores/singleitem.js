@@ -65,10 +65,20 @@ export async function update_item_part(item_codigo, operation, partRef){
 
 export async function create_part(part_data){
     const db = getFirestore(firebaseApp) 
-    const partRef = doc(db, "items-partes", part_data.key)
+    const partRef = doc(db, "items", part_data.key)
+    const ambienteRef = doc(db, "ambientes", part_data.ambiente)
+    part_data.ambiente = ambienteRef 
 
-    const uptime = await setDoc(partRef, {...part_data})
-    return partRef
+    const uptime = await setDoc(partRef, part_data)
+    //return partRef 
+    // increment ambiente.items
+    const newN = await runTransaction(db, async (transaction) => {
+        const ambiente = await transaction.get(ambienteRef)
+        const itemsp1 = ambiente.data().items + 1;
+        transaction.update(ambienteRef, {items: itemsp1})
+        return itemsp1
+    })
+    return newDocRef.id
 }
 
 export async function get_parte_ref(part_key){
