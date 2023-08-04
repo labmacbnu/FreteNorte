@@ -41,6 +41,14 @@ const router = createRouter({
         requiresAuth: true
       }
     },
+    { 
+        name: 'volumes',
+        path: '/volumes',
+        component: () => import('../views/VolumesView.vue'),
+      meta: {
+        requiresAuth: true
+      }
+    },
   ]
 })
 
