@@ -24,6 +24,14 @@ export const useNumVolumesStore = defineStore("volumes-num",  () => {
 })
 
 export async function registra_volume(dados){
+    /* {
+            categoria: null,
+            responsavel: globaluser.value.email, 
+            localizacao_atual: route.query.ambiente || null,
+            origem: route.query.ambiente || null, 
+            items: route.query.items || []
+         }
+     */
     dados.responsavel = doc(db, "usuarios", dados.responsavel)
     const itemsRef = []
     dados.items.forEach( (key) => {
@@ -33,6 +41,7 @@ export async function registra_volume(dados){
     dados.items = itemsRef 
     const volumesRef = collection(db, "volumes") 
     const docRef = await addDoc(volumesRef, {...dados, deleted: false});
+
     await updateDoc(docRef, {codigo: docRef.id} )
     return docRef.id
 }
