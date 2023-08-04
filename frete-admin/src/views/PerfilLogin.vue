@@ -50,7 +50,7 @@ onBeforeUpdate(redirectproperly)
         <a class="text-decoration-none" @click="loginWithGoogle">
             <div class="botao-login border border-primary px-2 mx-auto rounded">
                 <img class="imagem-login me-2"
-                    src="g-logo.png">Fazer login com Google
+                    src="/g-logo.png">Fazer login com Google
             </div>
         </a>
     </template>
