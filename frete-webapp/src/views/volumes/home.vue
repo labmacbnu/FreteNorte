@@ -23,10 +23,10 @@ const items = useItemsAmbienteStore()
  
 
 
-const userRef = computed(() => doc(db, "usuarios", globaluser.value.email))
+const userRef = doc(db, "usuarios", globaluser.value.email)
 const volRef = collection(db, "volumes")
-const q = computed(() =>  query(volRef, where("responsavel", "==", userRef.value), where('deleted', '==', false)))
-const volumes = useCollection(q.value, {wait: true})
+const q = query(volRef, where("responsavel", "==", userRef), where('deleted', '==', false))
+const volumes = useCollection(q, {wait: true})
 
 
 function click_row(i) {
