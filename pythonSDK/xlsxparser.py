@@ -119,7 +119,15 @@ def edificio_parser(string):
 UNIQUE_AMBIENTES = pd.concat([AMBIENTES], axis=1).groupby(["edificio", "ambiente_codigo", "ambiente_nome"]).agg({"ambiente_nome": "count"})\
 .rename(columns={"ambiente_nome": "items", "ambiente_codigo": "nome"}).reset_index()
 
+UNIQUE_AMBIENTES["lider"] = None
+UNIQUE_AMBIENTES["status"] = "Em uso"
+
 UNIQUE_AMBIENTES.to_json(DESTINO / "ambientes.json", orient="records", indent=2)
+
+UNIQUE_EDIFICIOS = {'edificios': [ed for ed in UNIQUE_AMBIENTES.edificio.unique()]}
+
+with open(DESTINO / "edificios.json", "w") as f:
+    json.dump(UNIQUE_EDIFICIOS, ensure_ascii=False, indent=2, fp=f)
 
 # %%
 def regex_extract(text: str, regex: str) -> str:
@@ -282,5 +290,6 @@ JSON_RECORDS
 with open(DESTINO / "permanentes.json", "w") as f:
    json.dump(JSON_RECORDS, f, ensure_ascii=False, indent=2)
 
-
-# %%
+# %% 
+with open(DESTINO  / 'short_descricoes.json', 'w') as fp:
+    json.dump({"short_descricoes": sorted(list(BIG_DF.short_descricao.unique()))}, fp, ensure_ascii=False, indent=2) # %%
