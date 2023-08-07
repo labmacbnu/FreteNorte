@@ -17,8 +17,13 @@ app = firebase_admin.initialize_app(cred)
 db = firestore.client()
 
 COLLECTIONS_MAP = [
-    ('ambientes', 'json/ambientes.json', 'ambiente_codigo', False), 
-    ('items', 'json/permanentes.json', 'key', True)
+    ('ambientes', 'json/ambientes.json', 'ambiente_codigo'), 
+    ('items', 'json/permanentes.json', 'key')
+]
+
+SINGLE_MAP = [
+    ('agregados/edificios', 'json/edificios.json'),
+    ('agregados/items', 'json/short_descricoes.json'),
 ]
 
 
@@ -27,6 +32,10 @@ def load_json_file(filename):
         content = json.load(fp)
     return content
 
+
+def single_write(reference: str, document: dict):
+    doc_ref = db.document(reference)
+    doc_ref.set(document)
 
 def batch_write(collection: str, dictarray: list[dict], key_id: str | None = None):
     batch = db.batch()
@@ -56,14 +65,23 @@ def process_datetime(registro: dict):
                 except:
                     registro[main][key] = None
     return registro
-    
+
+def process_ambiente(registro: dict):
+    registro.update({'líder': None, 'status': 'Em uso'})
+    return registro
+
+FUNCOES = [process_ambiente, process_datetime]
 
 if __name__ == "__main__":
-    for col, file, key, process in COLLECTIONS_MAP:
+    for n, (col, file, key) in enumerate(COLLECTIONS_MAP):
         dados = load_json_file(file) 
-        if process:
-            dados = [ process_datetime(x) for x in dados ]
+        funcao = FUNCOES[n]
+        dados = [ funcao(x) for x in dados ]
         N = len(dados)
         k = randint(0, N-1)
         print(col, N, key, dados[k])
         #batch_write(col, dados, key)
+    for col, file in SINGLE_MAP:
+        dados = load_json_file(file) 
+        print(col, dados)
+        #single_write(col, dados)
