@@ -64,10 +64,10 @@ def process_datetime(registro: dict):
                     registro[main][key] = datetime.strptime(registro[main][key], fmt)
                 except:
                     registro[main][key] = None
+    registro['ambiente'] = db.document(f"ambientes/{registro['ambiente']}")
     return registro
 
-def process_ambiente(registro: dict):
-    registro.update({'líder': None, 'status': 'Em uso'})
+def process_ambiente(registro: dict): 
     return registro
 
 FUNCOES = [process_ambiente, process_datetime]
@@ -79,9 +79,10 @@ if __name__ == "__main__":
         dados = [ funcao(x) for x in dados ]
         N = len(dados)
         k = randint(0, N-1)
-        print(col, N, key, dados[k])
+        print(col, N, key)
+        print(json.dumps(dados[k], ensure_ascii=False, indent=4,default=str))
         #batch_write(col, dados, key)
     for col, file in SINGLE_MAP:
         dados = load_json_file(file) 
-        print(col, dados)
-        #single_write(col, dados)
+        print(col, str(dados)[:100]   )
+        single_write(col, dados)
