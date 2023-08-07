@@ -36,7 +36,7 @@ const meus_ambientes = computed(() => {
             <p> Sistema de controle da logística da mudança do campus Blumenau.</p>
             <h2>Seus ambientes</h2>
             <div class="my-3">
-                <div class="card" v-for="(x, i) in meus_ambientes">
+                <div class="card my-2" v-for="(x, i) in meus_ambientes">
                     <div class="card-body" v-if="x">
                         <h5 class="card-title">{{ x.ambiente_codigo }}</h5>
                         <h6 class="card-subtitle mb-2 text-body-secondary">{{ x.ambiente_nome }}</h6>
