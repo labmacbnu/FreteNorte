@@ -27,10 +27,7 @@ coverage
 *.sln
 *.sw?
 *firebaseConfig.js
-frete-norte-ufsc-blumenau-firebase-adminsdk-3qdzb-b4fc0b840c.json
-pythonSDK/json/ambientes.json
-pythonSDK/json/edificios.json
-pythonSDK/json/permanentes.json
+frete-norte-ufsc-blumenau-firebase-adminsdk-3qdzb-b4fc0b840c.json 
 pythonSDK/.env
 frete-webapp/.firebase/hosting.ZGlzdA.cache
 pythonSDK/xlsx
