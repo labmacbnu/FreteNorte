@@ -65,6 +65,8 @@ export async function update_item_part(item_codigo, operation, partRef){
 
 export async function create_part(part_data){
     const db = getFirestore(firebaseApp) 
+    console.log(part_data)
+    return true
     const partRef = doc(db, "items", part_data.key)
     const ambienteRef = doc(db, "ambientes", part_data.ambiente)
     part_data.ambiente = ambienteRef 

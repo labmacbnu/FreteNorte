@@ -2,11 +2,11 @@ import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import firestore, auth
 from datetime import datetime
-import json
-import time
-from datetime import datetime
+import json 
 from dotenv import load_dotenv
+from random import randint
 import os
+
 
 load_dotenv()
 
@@ -17,8 +17,8 @@ app = firebase_admin.initialize_app(cred)
 db = firestore.client()
 
 COLLECTIONS_MAP = [
-    ('ambientes', 'json/ambientes.json', 'ambiente_codigo'), 
-    ('items', 'json/permanentes.json', 'key')
+    ('ambientes', 'json/ambientes.json', 'ambiente_codigo', False), 
+    ('items', 'json/permanentes.json', 'key', True)
 ]
 
 
@@ -41,9 +41,29 @@ def batch_write(collection: str, dictarray: list[dict], key_id: str | None = Non
         print(f"{collection}: chunk {k} ({len(chunk)} documents)")
         k += 1
         batch.commit()
+
+DATE_MAP = {
+    'detalhes': [ ('transf_local', '%d/%m/%Y'), ('incorporacao', '%d/%m/%Y') ],
+    'meta': [ ('updated', '%d/%m/%Y %H:%M:%S')]
+}
  
+def process_datetime(registro: dict): 
+    for main in DATE_MAP:
+        for key, fmt in DATE_MAP[main]: 
+            if key in registro[main]:
+                try: 
+                    registro[main][key] = datetime.strptime(registro[main][key], fmt)
+                except:
+                    registro[main][key] = None
+    return registro
+    
+
 if __name__ == "__main__":
-    for col, file, key in COLLECTIONS_MAP:
+    for col, file, key, process in COLLECTIONS_MAP:
         dados = load_json_file(file) 
-        print(col, len(dados), key, dados[0])
+        if process:
+            dados = [ process_datetime(x) for x in dados ]
+        N = len(dados)
+        k = randint(0, N-1)
+        print(col, N, key, dados[k])
         #batch_write(col, dados, key)

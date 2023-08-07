@@ -2,13 +2,12 @@
 import { useRoute } from 'vue-router';
 import { getFirestore, doc } from 'firebase/firestore'
 import { firebaseApp } from '@/firebaseConfig'
-import { computed, reactive, inject } from 'vue';
+import { computed, reactive, inject, onBeforeMount, toValue, watch } from 'vue';
 import { delete_part, update_item_part, create_part, get_parte_ref, update_item } from '@/stores/singleitem'
 import { useNumVolumesStore, registra_volume_parte } from '@/stores/volumes'
 import { useDocument } from 'vuefire';
 import Modal from '@/components/Modal.vue';
-import { apaga_volume } from '@/stores/volumes';
-const n_volumes = useNumVolumesStore()
+import { apaga_volume } from '@/stores/volumes'; 
 
 const {globaluser, updateUser} = inject("globaluser")   
 
@@ -23,45 +22,12 @@ const {
     error,
     // A promise that resolves or rejects when the initial state is loaded
     promise
-} = useDocument(doc(db, 'items', route.params.codigo))
+} = useDocument(doc(db, 'items', route.params.codigo),  { maxRefDepth: 1 })
 
-const item = computed(() => {
-    const itemModel = {
-        key: "",
-        descricao: "",
-        short_descricao: "",
-        ambiente: "",
-        patrimonio: "",
-        valor: 0,
-        medidas: "",
-        peso: "",
-        fragil: false,
-        transporte_especial: false,
-        inteiro: true,
-        volume: "",
-        partes: reactive([])
-    }
-    if (item_db.value) {
-        Object.assign(itemModel, {
-            ...item_db.value,
-            key: item_db.value.id
-        })
-    }
-    return itemModel
-})
+const n_partes = computed(() => item_db.value.partes ? item_db.value.partes.length + 1: 1 )
 
-const nova_parte = reactive({
-    key: item.value.key + '-' + (item.value.partes.length + 1),
-    short_descricao: "", 
-    ambiente: item.value.ambiente,
-    patrimonio: item.value.patrimonio,
-    medidas: "",
-    peso: "",
-    fragil: item.value.fragil,
-    transporte_especial: item.value.transporte_especial,
-    inteiro: false,
-    volume: n_volumes.codigo
-})
+const nova_parte = reactive({})
+
 /**
  * Callback para o botão salvar parte
  *  - Cria uma parte e pega a ref
@@ -70,29 +36,52 @@ const nova_parte = reactive({
  */
 async function adiciona_parte() {
     // Se não tinha nenhuma parte, agora vai ter e não vai ser mais inteiro
-    if(!item.partes) {
-        update_item(item.key, {inteiro: false})
-    }
-    const partRef = await create_part({...nova_parte, descricao: item.value.short_descricao + ": " + nova_parte.short_descricao})
-    console.log(`Cridada parte ${partRef.id} para item ${item.value.key}`)
-    await update_item_part(item.value.key, 'add', partRef)
-    console.log(`Parte ${partRef.id} adicionada ao item ${item.value.key}`) 
-    Object.assign(nova_parte, 
-    {short_descricao: "", medidas: "", peso: "", fragil: false, transporte_especial: false, inteiro: false,
-    key: item.value.key + '-' + (item.value.partes.length + 1)})
+    update_item(item_db.value.key, {inteiro: false}) 
+    const partRef = await create_part(toValue(nova_parte))
+    console.log(`Cridada parte ${partRef.id} para item ${item_db.key}`)
+    //await update_item_part(item_db.key, 'add', partRef)
+    console.log(`Parte ${partRef.id} adicionada ao item ${item_db.key}`) 
+    new_nova_parte()
     console.log(`Zerada a nova_parte: ${nova_parte}`)
     return true
 }
 
 async function deleta_parte(index){
-    const parteDoc = item.value.partes[index]
+    const parteDoc = item_db.partes[index]
     const perteRef = await get_parte_ref(parteDoc.key)
     //const volumeKey = parteDoc.volume
-    await update_item_part(item.value.key, 'remove', perteRef)
+    await update_item_part(item_db.key, 'remove', perteRef)
     //await apaga_volume(volumeKey)
     await delete_part(parteDoc.key)
      
 }
+
+function new_nova_parte(){
+    // Reseta a nova parte para etc 
+    Object.assign(nova_parte, {
+    key: item_db.value.key + '-' + n_partes.value,
+    short_descricao: "", 
+    descricao: "",
+    ambiente: item_db.value.ambiente.id,
+    patrimonio: item_db.value.patrimonio,
+    medidas: "",
+    peso: "",
+    fragil: item_db.value.fragil, 
+    inteiro: true, 
+    })
+}
+watch( () => nova_parte.short_descricao, (short_descricao) => {
+    nova_parte.descricao = item_db.value.short_descricao + ": " + nova_parte.short_descricao
+ } )
+
+onBeforeMount(() => {
+    if(pending) {
+        setTimeout(new_nova_parte(), 300)
+    } else {
+        new_nova_parte()
+    }
+})
+
 </script>
 
 <template>
@@ -127,13 +116,13 @@ async function deleta_parte(index){
         </template>
     </Modal>
     <div class="row align-items-start">
-        <div class="col-12">
+        <div class="col-12" v-if="item_db">
             <h4 class="d-print-none d-flex align-items-center">
-                {{ item.short_descricao }}
-                <span class="mx-3 badge text-secondary">{{ item.key }}</span>
+                {{ item_db.short_descricao }}
+                <span class="mx-3 badge text-secondary">{{ item_db.key }}</span>
             </h4>
             <p class="text-secondary p-2">
-                {{ item.descricao }}
+                {{ item_db.descricao }}
             </p>
             <button class="btn btn-success" data-bs-target="#addparte" data-bs-toggle="modal">Adicionar parte</button>
             <table class="table d-print-none">
@@ -145,7 +134,7 @@ async function deleta_parte(index){
                     </tr>
                 </thead>
                 <tbody>
-                    <tr v-for="(parte, index) in item.partes" :key="'parte' + index">
+                    <tr v-for="(parte, index) in item_db.partes" :key="'parte' + index">
                         <td>
                             {{ parte.descricao }}
                         </td>
@@ -158,8 +147,7 @@ async function deleta_parte(index){
                     </tr>
                 </tbody>
             </table>
-<p><code>{{ item_db }}</code></p>
-<p><code>{{ item }}</code></p>
+<p><code>{{ nova_parte }}</code></p> 
         </div>
     </div>
 </template>

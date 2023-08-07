@@ -2,8 +2,7 @@
 import { useAmbientesStore, ambiente_status } from '@/stores/ambientes';
 import { useUserPermissionsStore } from '@/stores/user';
 import { RouterLink } from 'vue-router';
-import { computed, ref, reactive, onMounted } from 'vue';
-import { list } from 'firebase/storage';
+import { computed, ref, reactive, onMounted } from 'vue'; 
 
 
 

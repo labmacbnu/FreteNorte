@@ -31,7 +31,7 @@ export async function ambiente_status(ambiente_codigo) {
     const volumados_snap = await getCountFromServer(volumados_query)
     const volumados_n = volumados_snap.data().count
 
-    const all_query = query(collection(db, "items"), where('ambiente', '==', ambienteRef))
+    const all_query = query(collection(db, "items"), where('ambiente', '==', ambienteRef)) // where('inteiro', '==', true)
     const all_snap = await getCountFromServer(all_query)
     const all_n = all_snap.data().count
 
