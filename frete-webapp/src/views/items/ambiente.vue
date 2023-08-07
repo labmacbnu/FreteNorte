@@ -5,7 +5,6 @@ import { useItemsAmbienteStore } from '@/stores/items'
 import Acordeao from '@/components/AcordeaoItems.vue';
 import { RouterLink, useRoute } from 'vue-router';
 
-const ambientes = useAmbientesStore()
 const items = useItemsAmbienteStore()
 const route = useRoute()
 
@@ -17,8 +16,7 @@ const url_args = reactive({
 
 onMounted(() => {
   // hack para atualizar o items store ao calcular o ambiente
-  const ambiente = route.params.ambiente
-  console.log(ambiente)
+  const ambiente = route.params.ambiente 
   items.ambiente = ambiente
   items.load_data()
 })
