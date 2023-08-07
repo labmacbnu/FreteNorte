@@ -259,6 +259,7 @@ for origin, destin in COLUMNS_MAPPING.items():
         if record['key'] == None:
             record['key'] = record['n_controle']
         record['meta'] = META
+        record['tipo'] = "Permanente"
 
 from functools import reduce
 
