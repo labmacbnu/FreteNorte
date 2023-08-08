@@ -45,7 +45,7 @@ def batch_write(collection: str, dictarray: list[dict], key_id: str | None = Non
         chunk = dictarray[i:i+500]
         for document in chunk:
             if key_id:
-                doc_ref = collection_ref.document(document[key_id])
+                doc_ref = collection_ref.document(str(document[key_id]))
                 batch.set(doc_ref, document)
         print(f"{collection}: chunk {k} ({len(chunk)} documents)")
         k += 1
@@ -81,7 +81,7 @@ if __name__ == "__main__":
         k = randint(0, N-1)
         print(col, N, key)
         print(json.dumps(dados[k], ensure_ascii=False, indent=4,default=str))
-        #batch_write(col, dados, key)
+        batch_write(col, dados, key)
     for col, file in SINGLE_MAP:
         dados = load_json_file(file) 
         print(col, str(dados)[:100]   )
