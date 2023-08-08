@@ -29,7 +29,7 @@ const q = computed(() => query(
   volRef, where("responsavel", "==", 
   doc(collection(db, "usuarios"), globaluser.value.email)), 
   where('deleted', '==', false)))
-const volumes = useCollection(q, {wait: true})
+const {data: volumes, pending } = useCollection(q, {wait: true})
 
 
 function click_row(i) {
@@ -75,7 +75,7 @@ async function soft_apaga_volume(codigo) {
   const items_do_volume = volume_registry.items
   // vamos desavolumar aqui localmente
   items_do_volume.forEach(element => { 
-    if (element.key.includes("-")) {
+    if ( typeof  element.key != "number") {
       // SE TEM TRAÇO NA KEY
       console.log(`Apagando parte ${element.key}`)
       deleta_volume_parte(element.key) 
@@ -93,6 +93,10 @@ onBeforeMount(() => volumes.email = permissoes.email)
 </script>
 
 <template>
+  <template v-if="pending">
+  Carrregando
+  </template>
+  <template v-else>
   <div class="row mb-3">
     <div class="col">
       <h1>Volumes que você criou</h1>
@@ -159,7 +163,7 @@ onBeforeMount(() => volumes.email = permissoes.email)
             <td colspan="5">
             <ul class="list-group list-group-flush align-top">
                 <li v-for="item in volume.items" :key="'I' + item.key" class="list-group-item justify-content-between d-flex">
-                  <small class="" v-if="item.key">{{ item.key.includes("-") ? item.descricao :  item.short_descricao }}</small>
+                  <small class="" v-if="item.key">{{ item.short_descricao }}</small>
                   <span class="badge text-primary rounded-pill span-lista-volumes text-elipse">{{item.key}}</span>
                 </li> 
               </ul>
@@ -182,7 +186,7 @@ onBeforeMount(() => volumes.email = permissoes.email)
 </template>
 
 </ModalDelete> 
- 
+</template>
 </template>
 <style>
 
