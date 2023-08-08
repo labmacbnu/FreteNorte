@@ -40,9 +40,9 @@ export const useSingleItemStore = defineStore("single-item",  () => {
 
 export async function update_item (codigo, item_data){
     const db = getFirestore(firebaseApp) 
-    const docRef = doc(db, "items", codigo)
-    const uptime = await updateDoc(docRef, {...item_data})
-    return uptime
+    const docRef = doc(db, `items/${codigo}`)
+    const promisse = await updateDoc(docRef, {...item_data})
+    return promisse
 }
 
 export async function update_item_part(item_codigo, operation, partRef){

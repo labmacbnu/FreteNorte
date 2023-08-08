@@ -2,7 +2,7 @@
 import { RouterLink, useRoute, useRouter } from 'vue-router';
 import { getFirestore, doc } from 'firebase/firestore'
 import { firebaseApp } from '@/firebaseConfig'
-import { computed, reactive, ref } from 'vue';
+import { computed, reactive, ref, toValue } from 'vue';
 import { update_item } from '@/stores/singleitem'
 import QRCode from '@/components/QRCode.vue';
 import { useDocument } from 'vuefire';
@@ -14,7 +14,7 @@ const route = useRoute()
 const router = useRouter()
 const {
     // rename the Ref to something more meaningful
-    data: item_db,
+    data: item,
     // is the subscription still pending?
     pending,
     // did the subscription fail?
@@ -23,52 +23,23 @@ const {
     promise
 } = useDocument(doc(db, 'items', route.params.codigo))
 
-
-const item = computed(() => {
-    const itemModel = {
-        key: "",
-        descricao: "",
-        short_descricao: "",
-        ambiente: "",
-        patrimonio: "",
-        valor: 0,
-        medidas: null,
-        peso: null,
-        fragil: false,
-        transporte_especial: false,
-        inteiro: true,
-        observacoes: "",
-        volume: null,
-        partes: []
-    }
-    if (item_db && item_db.value) {
-        Object.assign(itemModel, {
-            ...item_db.value,
-            key: item_db.value.id
-        })
-    }
-    return itemModel
-})
-
 async function atualiza_item() {
-    const valores = { ...item.value }
-    console.log(valores)
+    const valores = toValue(item)
+    console.log({...valores.detalhes})
     const uptime = await update_item(valores.key, {
-        medidas: valores.medidas,
-        peso: valores.peso,
-        fragil: valores.fragil,
-        transporte_especial: valores.transporte_especial
-    })
+         "detalhes.medidas":   valores.detalhes.medidas,
+          "detalhes.peso": valores.detalhes.peso
+    })  
 
-    console.log(`Item ${valores.key} atualizado ${uptime}`)
+    console.log(`Item ${valores.key} atualizado`)
 }
 
 async function front_apaga_volume() {
-    if(item.value.categoria == 'consumível') {
+    if(item.value.categoria != 'Permanente') {
         const ambiente_route =  item.value.ambiente.ambiente_codigo
         const resultado = await deleta_item(item.value.key)
         console.log(resultado)
-        setTimeout( () => router.push({name: 'items-ambiente', params: { ambiente: ambiente_route}}), 400)
+        setTimeout( () => router.push({name: 'items-ambiente', params: { ambiente: ambiente_route}}), 250)
         return true
     } else {
         return false
@@ -84,7 +55,7 @@ async function front_apaga_volume() {
             </div>
         </template>
         <template v-else>
-            <template v-if="item_db">
+            <template v-if="item">
                 <div class="row align-items-start">
                     <div class="col-12">
                         <h4 class="d-print-none d-flex align-items-center">
@@ -100,59 +71,32 @@ async function front_apaga_volume() {
                                     <th scope="row">Ambiente</th>
                                     <td>{{ item.ambiente.ambiente_codigo }} - {{ item.ambiente.ambiente_nome }}</td>
                                 </tr>
-                                <tr v-if="item.patrimonio">
+                                <tr v-if="item.detalhes.patrimonio">
                                     <th scope="row">Patrimônio</th>
-                                    <td>{{ item.patrimonio }}</td>
+                                    <td>{{ item.detalhes.patrimonio }}</td>
                                 </tr>
-                                <tr v-if="item.valor > 0">
+                                <tr v-if="item.detalhes.valor > 0">
                                     <th scope="row">Valor</th>
-                                    <td>R$ {{ item.valor.toFixed(2) }}</td>
+                                    <td>R$ {{ item.detalhes.valor.toFixed(2) }}</td>
                                 </tr>
 
                                 <tr>
                                     <th scope="row">Medidas</th>
-                                    <td><input class="form-control" v-model="item.medidas"></td>
+                                    <td><input class="form-control" v-model="item.detalhes.medidas"></td>
                                 </tr>
 
                                 <tr>
                                     <th scope="row">Peso</th>
-                                    <td><input class="form-control" v-model="item.peso"></td>
-                                </tr>
-
-                                <tr>
-                                    <th scope="row">Extras</th>
-                                    <td>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" v-model="item.fragil"
-                                                id="checkfragil">
-                                            <label class="form-check-label" for="checkfragil">
-                                                Frágil
-                                            </label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox"
-                                                v-model="item.transporte_especial" id="checkespecial">
-                                            <label class="form-check-label" for="checkespecial">
-                                                Transporte especial
-                                            </label>
-                                        </div>
-                                    </td>
+                                    <td><input class="form-control" v-model="item.detalhes.peso"></td>
                                 </tr>
                                 <tr>
                                     <th scope="row">Volume</th>
                                     <td>
-                                        <template v-if="item.volume">
-                                        <RouterLink class="icon-link" :to="{name: 'volume-codigo', params: {codigo: item.volume.codigo }}"><i class="bi bi-link-45deg"></i> {{ item.volume.codigo }}</RouterLink> 
+                                        <template v-if="item.meta.volume">
+                                        <RouterLink class="icon-link" :to="{name: 'volume-codigo', params: {codigo: item.meta.volume.codigo }}"><i class="bi bi-link-45deg"></i> {{ item.volume.codigo }}</RouterLink> 
                                         </template>
                                     </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Observações</th>
-                                    <td>
-                                        <textarea class="form-control"
-                                            placeholder="Anote aqui casos de transporte especial, se o item precisa de calibragem, entre outros"></textarea>
-                                    </td>
-                                </tr>
+                                </tr> 
                                 <tr>
                                     <th scope="row">Partes</th>
                                     <td>
@@ -166,7 +110,7 @@ async function front_apaga_volume() {
                                 <tr class="border-primary">
                                     <td colspan="2" class="text-end d-print-none justify-content-between">
 
-                                        <button v-if="item.categoria == 'consumível'" class="btn btn-danger mx-3" data-bs-target="#deletar" data-bs-toggle="modal" >Deletar</button>
+                                        <button v-if="item.tipo != 'Permanente'" class="btn btn-danger mx-3" data-bs-target="#deletar" data-bs-toggle="modal" >Deletar</button>
                                         <button class="btn btn-primary" @click="atualiza_item">Salvar</button>
                                     </td>
                                 </tr>
@@ -187,17 +131,11 @@ async function front_apaga_volume() {
                                 <b>{{ item.ambiente.ambiente_codigo }}</b> - {{ item.ambiente.ambiente_nome }}
                             </small>
                         </p>
-                        <p><em>Patrimônio</em> {{ item.patrimonio }}</p>
+                        <p><em>Patrimônio</em> {{ item.detalhes.patrimonio }}</p>
+                        <p>Patrimoniado em nome de {{ item.responsavel }}</p>
                     </div>
 
                 </div>
-            </template>
-            <div v-else class="alert alert-danger">
-                <p>O item pesquisado não existe.</p>
-                <RouterLink class="icon-link" :to="{ name: 'items' }"><i class="bi bi-arrow-left"></i> Voltar</RouterLink>
-            </div>
-        </template>
-    </Suspense>
 
     <ModalDelete id="deletar"  :delete_callback="async () => await front_apaga_volume()">
         <template #titulo>
@@ -207,4 +145,12 @@ async function front_apaga_volume() {
             Certeza que quer apagar o item {{item.short_descricao}}?
         </template>
     </ModalDelete>
+            </template>
+            <div v-else class="alert alert-danger">
+                <p>O item pesquisado não existe.</p>
+                <RouterLink class="icon-link" :to="{ name: 'items' }"><i class="bi bi-arrow-left"></i> Voltar</RouterLink>
+            </div>
+        </template>
+    </Suspense>
+
 </template>
