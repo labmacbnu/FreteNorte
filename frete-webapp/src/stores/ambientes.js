@@ -1,26 +1,25 @@
-import { reactive, ref } from 'vue'
+import { computed, reactive, ref } from 'vue'
 import { defineStore } from 'pinia'
 import { getFirestore, getDocs, doc,  collection, where, getCountFromServer, query } from 'firebase/firestore'
 import { firebaseApp } from '../firebaseConfig'
-import { useDocument } from 'vuefire'
+import { useCollection, useDocument } from 'vuefire'
 
 
 
 export const useAmbientesStore = defineStore('ambientes', ()=>{ 
-    const db = getFirestore(firebaseApp)
-    const dados = ref([])  
-    async function load_data(){
-        if(dados.value.length == 0) {
-            const querySnapshot = await getDocs(collection(db, "ambientes"));
-            querySnapshot.forEach( function (doc) { 
-                var docdt = doc.data()
-                docdt.valor = docdt.ambiente_codigo + ' - ' + docdt.ambiente_nome 
-                dados.value.push(docdt) 
-            }) 
+    const db = getFirestore(firebaseApp) 
+    const predados = useCollection(collection(db, "ambientes"))
+    const dados = computed( () => {
+        if(predados.value){
+            var retorno = []
+            predados.value.forEach(ambiente => { 
+                retorno.push({full_name: ambiente.ambiente_codigo + ' - ' + ambiente.ambiente_nome,...ambiente })
+            })
+            return retorno
         }
-    }
+    })
 
-    return {dados, load_data} 
+    return {dados} 
 })
 
 export async function ambiente_status(ambiente_codigo) {

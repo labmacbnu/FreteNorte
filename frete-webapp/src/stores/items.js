@@ -2,7 +2,7 @@ import { defineStore } from 'pinia'
 import { getFirestore, doc, addDoc, collection, getDoc, query, 
     where, getDocs, updateDoc, runTransaction, deleteDoc, arrayRemove } from 'firebase/firestore'
 import { firebaseApp } from '../firebaseConfig'
-import { ref, computed, reactive } from 'vue'
+import { ref, computed, reactive, watch } from 'vue'
 import { useCollection } from 'vuefire'
 
 const db = getFirestore(firebaseApp)
@@ -55,15 +55,12 @@ export const useItemsAmbienteStore = defineStore('items-ambiente', ()=>{
     if(ambiente.value){
         return inner_db[ambiente.value]
     }})
-
- async function load_data(){
-    // só carrega o que não tá na inner_bd
-    const itemsColl = collection(db, "items")
-    if (! inner_db.hasOwnProperty(ambiente.value) ){
-        const q = query(itemsColl, where('ambiente', '==',  doc(collection(db,"ambientes"),  ambiente.value))) 
-        inner_db[ambiente.value] = useCollection(q, {wait: true}); 
-        }
-    }
+    watch(ambiente, (nv, ov) => { 
+        const itemsColl = collection(db, "items")
+        const ambienteRef = doc(db, "ambientes", nv)
+        const q = query(itemsColl, where('ambiente', '==',  ambienteRef)) 
+        inner_db[ambiente.value] = useCollection(q, {wait: true});
+    }) 
 
     const dados_agrupados = computed( () =>  { 
         if(dados.value) {
@@ -78,7 +75,7 @@ export const useItemsAmbienteStore = defineStore('items-ambiente', ()=>{
         }
     })
 
-    return {ambiente, dados, load_data, dados_agrupados, inner_db}
+    return {ambiente, dados, dados_agrupados, inner_db}
 })
 
 export const useDescricoesStore = defineStore("short-descricoes", {
@@ -165,19 +162,17 @@ export async function deleta_item(item_cod){
         const ambienteRef =  itemData.ambiente
         const did = itemData.key
         let volumeRef;
-        if(itemData.volume){
-            volumeRef = itemData.volume
+        if(itemData.meta.volume){
+            volumeRef = itemData.meta.volume
+            // remove do volume
+            transaction.update(volumeRef, {items: arrayRemove(itemRef)})
         }
        
 
         const ambiente = await transaction.get(ambienteRef)
         const itemsm1 = ambiente.data().items - 1;
         transaction.update(ambienteRef, {items: itemsm1})
-
-        if(itemData.volume) {
-            // se tiver volumado, não tá mais
-            transaction.update(volumeRef, {items: arrayRemove(itemRef)})
-        }
+ 
         transaction.delete(itemRef)
         return {items: itemsm1, id:  did}
     })
