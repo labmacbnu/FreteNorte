@@ -17,8 +17,8 @@ const url_args = reactive({
 onMounted(() => {
   // hack para atualizar o items store ao calcular o ambiente
   const ambiente = route.params.ambiente 
-  items.ambiente = ambiente
-  items.load_data()
+  items.ambiente = ambiente 
+  items.load_data([ambiente])
 })
 
 watch(url_args, (novo, antigo) => {
