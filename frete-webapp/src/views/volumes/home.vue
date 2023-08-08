@@ -23,10 +23,12 @@ const ambientes = useAmbientesStore()
 const items = useItemsAmbienteStore()
  
 
-
-const userRef = doc(db, "usuarios", globaluser.value.email)
+ 
 const volRef = collection(db, "volumes")
-const q = query(volRef, where("responsavel", "==", userRef), where('deleted', '==', false))
+const q = computed(() => query(
+  volRef, where("responsavel", "==", 
+  doc(collection(db, "usuarios"), globaluser.value.email)), 
+  where('deleted', '==', false)))
 const volumes = useCollection(q, {wait: true})
 
 
