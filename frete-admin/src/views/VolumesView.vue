@@ -68,7 +68,7 @@ const volumes = useCollection(q, {wait: true})
             <td colspan="5">
             <ul class="list-group list-group-flush align-top">
                 <li v-for="item in volume.items" :key="'I' + item.key" class="list-group-item justify-content-between d-flex">
-                  <small class="" v-if="item.key">{{ item.key.includes("-") ? item.descricao :  item.short_descricao }}</small>
+                  <small class="" v-if="item.key">{{ item.short_descricao }}</small>
                   <span class="badge text-primary rounded-pill span-lista-volumes text-elipse">{{item.key}}</span>
                 </li> 
               </ul>
