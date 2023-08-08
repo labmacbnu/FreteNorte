@@ -29,7 +29,7 @@ watch(url_args, (novo, antigo) => {
   <div class="row justify-contents-start">
     <div class="col-12">
       <p class="m-1">
-        <RouterLink :to="{ name: 'items' }"><i class="bi bi-arrow-left-short"></i>Voltar</RouterLink>
+        <RouterLink :to="{ name: 'home' }"><i class="bi bi-arrow-left-short"></i>Voltar</RouterLink>
       </p>
       <p class="text-end">
         <RouterLink class="btn btn-primary" :to="{ name: 'item-add', query: { ambiente: route.params.ambiente } }"><i
