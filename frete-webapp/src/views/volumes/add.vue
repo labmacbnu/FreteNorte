@@ -47,10 +47,10 @@ const new_volume = reactive(
 
 const responsavel_label = computed(() => (globaluser.value.email) ? globaluser.value.displayName +  ' <'+globaluser.value.email+'>': "<?>")
 const lider_ambiente_label = computed(() => {
-  if(new_volume.origem && ambientes[new_volume.origem]){
-    const ambiente_obj = ambientes[new_volume.origem]
-    if(ambiente_obj.lider) 
-      return ambiente_obj.lider + ' <' + ambiente_obj.lider.id + '>'
+  if(new_volume.origem ){
+    const ambiente_obj = ambientes.value.find( x => x.ambiente_codigo == new_volume.origem)
+    if(ambiente_obj) 
+      return ambiente_obj.lider.nome + ' <' + ambiente_obj.lider.id + '>'
     else
       return "<?>"
   } else {
