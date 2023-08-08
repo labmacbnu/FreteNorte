@@ -1,33 +1,25 @@
 <script setup>
-import { onBeforeMount, reactive, computed, ref } from 'vue';
+import { onBeforeMount, reactive, computed, ref, toValue, inject, watch, onMounted } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import { useUserPermissionsStore } from '@/stores/user';
 import { useAmbientesStore } from '@/stores/ambientes';
 import { cria_item } from '@/stores/items';
+import { itemModel } from "@/stores/singleitem" 
 
 const route = useRoute();
 const router = useRouter();
 const ambientes = useAmbientesStore();
 const permissions = useUserPermissionsStore();
+const {globaluser, updateuser} = inject("globaluser")
 
 const meus_ambientes = computed( () => {
-    return ambientes.dados.filter( obj =>  permissions.ambientes.includes(obj.ambiente_codigo))
+    return ambientes.dados.filter( obj =>  permissions.ambientes.includes(obj.ambiente_codigo) || permissions.usuario_de.includes(obj.ambiente_codigo))
 
 })
-const itemModel = reactive({
-    key: "",
-    descricao: "",
-    short_descricao: "",
-    categoria: "consumível",
-    ambiente: "",
-    medidas: null,
-    peso: null,
-    fragil: false,
-    transporte_especial: false,
-    inteiro: true,
-    observacoes: "",
-    volume: null,
-})
+
+const item = reactive(itemModel)
+
+
 
 const valido = reactive({
     descricao: true,
@@ -43,13 +35,12 @@ const goBack = function(){
 }
 
 async function saveItem() {
-    valido.descricao = itemModel.descricao.length > 0
-    valido.ambiente = itemModel.ambiente != ""
+    valido.descricao = item.detalhes.descricao.length > 0
+    valido.ambiente = item.ambiente != ""
     if(valido.descricao && valido.ambiente) {
-        const item = {...itemModel} 
-        item.short_descricao = item.descricao
-        console.log(item)
-        const id = await cria_item(item)
+        const raw_item = toValue(item)
+        console.log(raw_item)
+        const id = await cria_item(raw_item)
         if (id) {
             router.push({name: 'item-codigo', params: {codigo: id}})
         }
@@ -64,9 +55,23 @@ async function saveItem() {
 
 onBeforeMount(() => {
     if (route.query.ambiente) {
-        itemModel.ambiente = route.query.ambiente;
+        item.ambiente = route.query.ambiente;
     }
-})
+}) 
+
+watch( () => item.short_descricao, (newVal,oldVal) =>{
+    item.detalhes.descricao = newVal
+} )
+
+
+watch( () => item.ambiente, (newVal,oldVal) =>{
+    item.edificio = meus_ambientes.value.find( x => x.ambiente_codigo == newVal).edificio
+} )
+
+
+onMounted( () => 
+    item.responsavel = globaluser.displayName
+)
 </script>
 <template>
     <div class="row">
@@ -76,9 +81,9 @@ onBeforeMount(() => {
                 manter o controle durante o processo de mudança.</p> 
             
                 <div class="row g-3 mb-2 justify-items-start">
-                    <label for="ambiente" class="col-lg-1 col-sm-2 col-form-label me-3">Ambiente</label>
-                    <div class="col-auto">
-                        <select v-model="itemModel.ambiente" class="form-select" :class="{'border-danger': !valido.ambiente}" aria-label="Ambiente">
+                    <label for="ambiente" class="col-auto col-form-label me-3">Ambiente</label>
+                    <div class="col">
+                        <select v-model="item.ambiente" class="form-select" :class="{'border-danger': !valido.ambiente}" aria-label="Ambiente">
                             <option v-for="ambiente in meus_ambientes" :value="ambiente.ambiente_codigo">
                                 {{ ambiente.valor }}
                             </option>
@@ -88,48 +93,47 @@ onBeforeMount(() => {
                 </div>
 
                 <div class="row g-3 mb-2 justify-items-start">
-                    <label for="descricao" class="col-lg-1 col-sm-2 col-form-label me-3">Descrição</label>
-                    <div class="col-auto col-lg-8">
-                        <input :class="{'border-danger': !valido.descricao}" placeholder="e.g., Reagentes, Vidraria, Placas de Circuito, Tecidos" type="text" class="form-control" id="descricao" v-model="itemModel.descricao">
+                    <div class="col">
+                    <label class="form-label" for="descricao">Descrição</label>
+                        <input :class="{'border-danger': !valido.descricao}" placeholder="Reagentes, Vidraria, Placas de Circuito, Tecidos, etc" type="text" class="form-control" id="descricao" v-model="item.short_descricao">
+                        <p class="form-text">Descreva brevemente o item que está sendo catalogado.</p>
                     </div>
                 </div>
 
+
                 <div class="row g-3 mb-2 justify-items-start">
-                    <label for="medidas" class="col-lg-1 col-sm-2 col-form-label me-3 ">Medidas</label>
-                    <div class="col-auto col-lg-8">
-                        <input placeholder="L x A x P cm" type="text" class="form-control" id="medidas" v-model="itemModel.medidas">
+                    <div class="col-6">
+                        <label for="medidas" class="form-label ">Medidas</label>
+                        <input placeholder="L x A x P cm" type="text" class="form-control" id="medidas" v-model="item.detalhes.medidas">
+                    </div>
+                    <div class="col-6">
+                        <label for="peso" class="form-label">Peso</label>
+                        <input placeholder="xyz (g|kg)" type="text" class="form-control" id="peso" v-model="item.detalhes.peso">
                     </div>
                 </div>
 
-                <div class="row g-3 mb-2 justify-items-start">
-                    <label for="peso" class="col-lg-1 col-sm-2 col-form-label me-3 ">Peso</label>
-                    <div class="col-auto col-lg-8">
-                        <input placeholder="xyz (g|kg)" type="text" class="form-control" id="peso" v-model="itemModel.peso">
+                <div class="row g-3 my-2 justify-items-start">
+                    <div class="col">
+                        <label for="patrimonio" class="form-label">Patrimônio</label>
+                        <input placeholder="Se não existir, deixe em branco" type="number" class="form-control" id="patrimonio" v-model.number="item.detalhes.patrimonio">
                     </div>
-                </div>
-                <div class="row g-3 mb-2 justify-items-start">
-                    <div class="col-auto col-lg-8">
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="fragil" v-model="itemModel.fragil">
-                            <label class="form-check-label" for="fragil">Frágil</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="especial"
-                                v-model="itemModel.transporte_especial">
-                            <label class="form-check-label" for="especial">Transporte especial</label>
-                        </div>
+                    <div class="col">
+                        <label for="controle" class="form-label">Nº de Controle</label>
+                        <input placeholder="Se não existir, deixe em branco" type="text" class="form-control" id="controle" v-model="item.detalhes.n_controle">
                     </div>
-                </div>
-
-                <div class="row g-3 mb-2 justify-items-start">
-                    <label for="observacoes" class="col-lg-1 col-sm-2 col-form-label me-3 ">Observações</label>
-                    <div class="col-auto col-lg-8">
-                        <input placeholder="Precisa de calibração ao instalar? Precisa de algum cuidado a mais no transporte?" type="text" class="form-control" id="observacoes" v-model="itemModel.observacoes">
+                    <div class="col">
+                        <label for="serie" class="form-label">Nº de Série</label>
+                        <input placeholder="Se não existir, deixe em branco" type="text" class="form-control" id="serie" v-model="item.detalhes.n_serie">
+                    </div>
+                    <div class="col">
+                        <label for="barras" class="form-label">Código de Barras</label>
+                        <input placeholder="Se não existir, deixe em branco" type="number" class="form-control" id="barras" v-model.number="item.detalhes.cod_barras">
                     </div>
                 </div>
 
-                <div class="row g-3 m-2 justify-items-end">
-                    <div class="col col-lg-8"></div>
+ 
+                <div class="row g-3 my-3 justify-items-end">
+                    <div class="col"></div>
                     <div class="col-auto">
                         <button class="btn btn-secondary" 
                         @click="goBack">
@@ -144,4 +148,5 @@ onBeforeMount(() => {
                     </div>
         </div>
     </div>
+    {{ item }}
 </template>

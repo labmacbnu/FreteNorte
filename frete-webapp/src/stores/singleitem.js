@@ -91,3 +91,31 @@ export async function get_parte_ref(part_key){
 export async function delete_part(part_key){
     await deleteDoc(get_parte_ref(part_key)) 
 }
+
+export const itemModel = {
+    "responsavel": "",
+    "ambiente": "",
+    "edificio": "",
+    "detalhes": {
+      "patrimonio": "",
+      "n_controle": "",
+      "cod_barras": "",
+      "n_serie": "",
+      "descricao": "",
+      "conservacao": "EM USO", 
+      "valor": 0,
+      "situacao": "Ativo",
+      "peso": "",
+      "medidas": ""
+    },
+    "key": 1,
+    "meta": {
+      "inteiro": true,
+      "updated": "",
+      "partes": [],
+      "volumado": false,
+      "volume": null
+    },
+    "tipo": "Consumível",
+    "short_descricao": ""
+  }
