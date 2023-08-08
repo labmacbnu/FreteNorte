@@ -27,7 +27,7 @@ export async function ambiente_status(ambiente_codigo) {
     const db = getFirestore(firebaseApp)
     const ambienteRef = doc(db, "ambientes", ambiente_codigo)
     const volumados_query = query(collection(db, "items"), where('ambiente', '==', ambienteRef),
-    where('volumado', '==', true))
+    where('meta.volumado', '==', true))
     const volumados_snap = await getCountFromServer(volumados_query)
     const volumados_n = volumados_snap.data().count
 
