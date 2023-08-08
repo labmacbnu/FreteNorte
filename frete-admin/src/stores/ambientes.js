@@ -1,6 +1,6 @@
 import { computed, reactive, ref } from 'vue'
 import { defineStore } from 'pinia'
-import { getFirestore, getDocs,  collection, setDoc, doc, updateDoc } from 'firebase/firestore'
+import { getFirestore, query, where, collection, setDoc, doc, updateDoc } from 'firebase/firestore'
 import { firebaseApp } from '../firebaseConfig'
 import { useCollection } from 'vuefire'
 import { useUsuariosStore } from './users'
@@ -9,7 +9,9 @@ import { useUsuariosStore } from './users'
 
 export const useAmbientesStore = defineStore('ambientes', ()=>{ 
     const db = getFirestore(firebaseApp)
-    const pre_dados = useCollection(collection(db, "ambientes"))
+    const edificio = ref('')
+    const pesquisa = computed(() => query(collection(db, "ambientes"), where("edificio", "==", edificio.value)))
+    const pre_dados = useCollection(pesquisa)
     const dados = computed(() => {
         const ambientes = []
         pre_dados.value.forEach( function (doc) { 
@@ -19,7 +21,7 @@ export const useAmbientesStore = defineStore('ambientes', ()=>{
         }) 
         return ambientes
     })
-    return {dados} 
+    return {dados, edificio} 
 })
 
 export async function create_ambiente(ambiente_data) { 

@@ -1,5 +1,5 @@
 <script setup>
-import { onBeforeMount, ref, computed, reactive } from 'vue';
+import { onBeforeMount, ref, computed, reactive, watch } from 'vue';
 import { useAmbientesStore, create_ambiente, add_lider_ambiente } from '../stores/ambientes';
 import Modal from '../components/Modal.vue';
 import { useUsuariosStore } from '../stores/users';
@@ -20,9 +20,12 @@ const lista_emails = computed(() => {
 const edificio = ref(route.query.edificio || null)
 const lista_edificios = useDocument(doc(db, 'agregados/edificios' ))
 
-
 const ambientes = useAmbientesStore()
 const pesquisa = ref(null)
+
+watch(edificio, (newval) => { 
+    ambientes.edificio = newval
+})
 
 const ambientes_filtrados = computed(() => {
     const lista_ambientes = ambientes.dados.filter(elem => elem.edificio == edificio.value)
@@ -109,13 +112,16 @@ async function adiciona_lider(){
 <template>
     <datalist id="lista_usuarios">
         <option v-for="email in lista_emails">{{ email }}</option>
-    </datalist>
-    {{ lista_edificios }}
+    </datalist> 
 
-    <h2>Edifício</h2>
-    <select class="form-select" v-model="edificio">
-        <option v-for="edif in lista_edificios.edificios">{{ edif }}</option>
-    </select>
+    <div class="row mb-3">
+        <div class="col">
+            <label class="form-label" for="edificio">Edifício</label>
+            <select class="form-select" v-model="edificio" id="edificio">
+                <option v-if="lista_edificios" v-for="edif in lista_edificios.edificios">{{ edif }}</option>
+            </select>
+        </div>
+    </div>
     <h1>Ambientes</h1>
     <button class="btn btn-success" data-bs-target="#criaAmbiente" data-bs-toggle="modal">Criar ambiente virtual</button>
 
