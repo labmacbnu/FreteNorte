@@ -69,7 +69,7 @@ const all_items_ordered = computed(() => {
 })
 
 const all_items_nao_volumados = computed(() =>
-  all_items_ordered.value.filter((elem) => !elem.volumado))
+  all_items_ordered.value.filter((elem) => !elem.meta.volumado))
 
 function click_row(i) {
   document.getElementById("check" + i).click()

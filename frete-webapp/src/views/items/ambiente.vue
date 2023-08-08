@@ -1,6 +1,5 @@
 <script setup>
-import { computed, onBeforeMount, onBeforeUpdate, onMounted, onUpdated, reactive, ref, watch } from 'vue';
-import { useAmbientesStore } from '@/stores/ambientes';
+import {onBeforeMount,  reactive, watch } from 'vue';
 import { useItemsAmbienteStore } from '@/stores/items'
 import Acordeao from '@/components/AcordeaoItems.vue';
 import { RouterLink, useRoute } from 'vue-router';
@@ -14,11 +13,10 @@ const url_args = reactive({
 })
 
 
-onMounted(() => {
+onBeforeMount(() => {
   // hack para atualizar o items store ao calcular o ambiente
-  const ambiente = route.params.ambiente 
+  const ambiente = route.params.ambiente  
   items.ambiente = ambiente 
-  items.load_data([ambiente])
 })
 
 watch(url_args, (novo, antigo) => {
