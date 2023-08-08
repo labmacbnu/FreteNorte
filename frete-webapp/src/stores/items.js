@@ -3,7 +3,7 @@ import { getFirestore, doc, addDoc, collection, getDoc, query,
     where, getDocs, updateDoc, runTransaction, deleteDoc, arrayRemove } from 'firebase/firestore'
 import { firebaseApp } from '../firebaseConfig'
 import { ref, computed, reactive, watch } from 'vue'
-import { useCollection } from 'vuefire'
+import { useCollection } from 'vuefire' 
 
 const db = getFirestore(firebaseApp)
 
@@ -50,23 +50,22 @@ export function orderedGroupBy(list, keyGetter){
 
 export const useItemsAmbienteStore = defineStore('items-ambiente', ()=>{
  const ambiente = ref(null)
- const inner_db = ref(null)
+ const inner_db = reactive({}) 
  const dados = computed( () => {
     if(ambiente.value){
-        return inner_db.value.filter( x => x.ambiente.id == ambiente.value)
+        return inner_db[ambiente.value]
     }
 })
-    function load_data(ambientes){  
-        if(inner_db.value == null){
-            const itemsColl = collection(db, "items")
-            const ambientesRef = []
-            ambientes.forEach(ambiente => { 
-                ambientesRef.push(doc(db, "ambientes", ambiente))
-            }) 
-            const q = query(itemsColl, where('ambiente', 'in',  ambientesRef)) 
-            const { pending } = useCollection(q, {wait: true, target: inner_db});
-        }
-    } 
+    function load_data(ambientes){    
+        ambientes.forEach(ambiente => { 
+            if(!inner_db.hasOwnProperty(ambiente)){
+                const itemsColl = collection(db, "items")
+                const ambienteRef = doc(db, "ambientes", ambiente)
+                const q = query(itemsColl, where('ambiente', '==',  ambienteRef)) 
+                inner_db [ambiente] = useCollection(q, {wait: true}); 
+            }
+        }) 
+    }
 
     const dados_agrupados = computed( () =>  { 
         if(dados.value) {
