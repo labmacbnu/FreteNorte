@@ -21,10 +21,6 @@ const item = reactive(itemModel)
 
 
 
-const valido = reactive({
-    descricao: true,
-    ambiente: true,
-})
 
 const goBack = function(){
     if (route.query.ambiente) {
@@ -34,12 +30,22 @@ const goBack = function(){
     }
 }
 
-async function saveItem() {
+const valido = reactive({
+    descricao: true,
+    ambiente: true,
+})
+
+function validate(){
     valido.descricao = item.detalhes.descricao.length > 0
-    valido.ambiente = item.ambiente != ""
-    if(valido.descricao && valido.ambiente) {
+    valido.ambiente = item.ambiente != "" 
+    return valido.descricao && valido.ambiente
+}
+
+async function saveItem() {
+    const valid  = validate()
+    if(valid) {
         const raw_item = toValue(item)
-        console.log(raw_item)
+        console.log({...raw_item})
         const id = await cria_item(raw_item)
         if (id) {
             router.push({name: 'item-codigo', params: {codigo: id}})
@@ -65,12 +71,14 @@ watch( () => item.short_descricao, (newVal,oldVal) =>{
 
 
 watch( () => item.ambiente, (newVal,oldVal) =>{
-    item.edificio = meus_ambientes.value.find( x => x.ambiente_codigo == newVal).edificio
+    var ambiente_obj = meus_ambientes.value.find( x => x.ambiente_codigo == newVal)
+    if(ambiente_obj)
+        item.edificio = ambiente_obj.edificio
 } )
 
 
 onMounted( () => 
-    item.responsavel = globaluser.displayName
+    Object.assign(item, {responsavel: globaluser.value.displayName})
 )
 </script>
 <template>

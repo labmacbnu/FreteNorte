@@ -1,5 +1,5 @@
 <script setup>
-import { computed, inject, toValue, onMounted, onServerPrefetch, reactive, ref, watch } from 'vue';
+import { computed, inject, toValue, onMounted, onServerPrefetch, reactive, ref, watch, onBeforeMount } from 'vue';
 import { useUserPermissionsStore } from '@/stores/user';
 import { useItemsAmbienteStore, orderedGroupBy } from '@/stores/items';
 import { useAmbientesStore } from '@/stores/ambientes';
@@ -9,7 +9,7 @@ import { update_item_part, delete_part, get_parte_ref } from '@/stores/singleite
 
 import { db } from '@/backend/index.js';
 import { collection, where, doc, setDoc, query, updateDoc } from 'firebase/firestore';
-import {  useDocument, usePendingPromises,  } from 'vuefire';  
+import {  useCollection, useDocument, usePendingPromises,  } from 'vuefire';  
 import { useRoute, useRouter } from 'vue-router';
 
 const { globaluser, updateUser } = inject("globaluser")
@@ -19,13 +19,12 @@ const route = useRoute()
 const router = useRouter()
 
 const categorias = useDocument(doc(db, "agregados", "categorias_volumes"))
-const ambientes = reactive({})
 
-const lista_ambientes = [...permissoes.ambientes, ...permissoes.usuario_de];
 
-lista_ambientes.forEach( (amb) => {
-  ambientes[amb] = useDocument(doc(db, "ambientes", amb))
-})
+const lista_ambientes_usuario = [...permissoes.ambientes, ...permissoes.usuario_de]
+
+const ambientes = useCollection(query(collection(db, "ambientes"), where("ambiente_codigo", "in", lista_ambientes_usuario)))
+
 
 const items = useItemsAmbienteStore()
 
@@ -47,16 +46,17 @@ const new_volume = reactive(
 )
 
 const responsavel_label = computed(() => (globaluser.value.email) ? globaluser.value.displayName +  ' <'+globaluser.value.email+'>': "<?>")
-const lider_ambiente_label = computed(() => (new_volume.origem && ambientes[new_volume.origem]) ? ambientes[new_volume.origem].lider.nome + ' <'+ambientes[new_volume.origem].lider.id+'>' : "<?>" )
+const lider_ambiente_label = computed(() => {
+  if(new_volume.origem && ambientes[new_volume.origem]){
+    const ambiente_obj = ambientes[new_volume.origem]
+    if(ambiente_obj.lider) 
+      return ambiente_obj.lider + ' <' + ambiente_obj.lider.id + '>'
+    else
+      return "<?>"
+  } else {
+    return "<?>"
+  }})
 
-async function load_all_data() {
-  const permissoes = useUserPermissionsStore()
-  for (let amb of [...permissoes.ambientes, ...permissoes.usuario_de]) {
-    console.log(amb)
-    items.ambiente = amb
-    await items.load_data()
-  } 
-}
 
 
 
@@ -64,7 +64,7 @@ const all_items_ordered = computed(() => {
   let all = [] 
   // filtrar apenas não volumados
   if(new_volume.origem)
-    all.push(...items.inner_db[new_volume.origem]) 
+    all.push(...items.dados) 
   return all.sort((a, b) => a.short_descricao.localeCompare(b.short_descricao))
 })
 
@@ -95,6 +95,7 @@ const all_items_filtered = computed(() => {
 watch( () => new_volume.origem, (newVal) => {
   lista_items.value = [ ],
   new_volume.localizacao_atual = newVal
+  items.ambiente = newVal
   // new_volume.lider = ambientes[newVal].lider.id
 } )
 
@@ -141,8 +142,15 @@ async function salvar_volume() {
   console.log(volumeid)
   setTimeout(() =>  router.push({name: 'volumes'}), 125)
 }
- 
-onMounted(async () => await load_all_data())
+
+
+async function load_all_data() {
+  const permissoes = useUserPermissionsStore()
+  const lista_ambientes_usuario = [...permissoes.ambientes, ...permissoes.usuario_de] 
+  items.load_data(lista_ambientes_usuario) 
+}
+
+onMounted(async () => await load_all_data()) 
 onServerPrefetch( () => usePendingPromises() )  
 </script>
 
@@ -157,7 +165,7 @@ onServerPrefetch( () => usePendingPromises() )
     <div class="col-6">
       <label for="ambiente" class="form-label">Ambiente</label>  
       <select :class="{'border-danger': !validation.origem}" v-model="new_volume.origem" class="form-select" id="ambiente">
-        <option  v-for="(val, key, index ) in ambientes" :value="key">
+        <option  v-for="(val, index ) in ambientes" :value="val.ambiente_codigo">
           <template v-if="val && val.ambiente_nome">
           {{ val.ambiente_codigo }} - {{ val.ambiente_nome }}
           </template>

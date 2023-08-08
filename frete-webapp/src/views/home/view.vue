@@ -4,11 +4,8 @@ import { useUserPermissionsStore } from '@/stores/user';
 import { RouterLink } from 'vue-router';
 import { computed, ref, reactive, onMounted } from 'vue'; 
 
-
-
 const ambientes = useAmbientesStore()
 const permissions = useUserPermissionsStore()
-
 
 const meus_ambientes = computed(() => {
 

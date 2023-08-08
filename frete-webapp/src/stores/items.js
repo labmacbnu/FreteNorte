@@ -50,17 +50,23 @@ export function orderedGroupBy(list, keyGetter){
 
 export const useItemsAmbienteStore = defineStore('items-ambiente', ()=>{
  const ambiente = ref(null)
- const inner_db = reactive({})
+ const inner_db = ref(null)
  const dados = computed( () => {
     if(ambiente.value){
-        return inner_db[ambiente.value]
-    }})
-    watch(ambiente, (nv, ov) => { 
-        const itemsColl = collection(db, "items")
-        const ambienteRef = doc(db, "ambientes", nv)
-        const q = query(itemsColl, where('ambiente', '==',  ambienteRef)) 
-        inner_db[ambiente.value] = useCollection(q, {wait: true});
-    }) 
+        return inner_db.value.filter( x => x.ambiente.id == ambiente.value)
+    }
+})
+    function load_data(ambientes){  
+        if(inner_db.value == null){
+            const itemsColl = collection(db, "items")
+            const ambientesRef = []
+            ambientes.forEach(ambiente => { 
+                ambientesRef.push(doc(db, "ambientes", ambiente))
+            }) 
+            const q = query(itemsColl, where('ambiente', 'in',  ambientesRef)) 
+            const { pending } = useCollection(q, {wait: true, target: inner_db});
+        }
+    } 
 
     const dados_agrupados = computed( () =>  { 
         if(dados.value) {
@@ -75,7 +81,7 @@ export const useItemsAmbienteStore = defineStore('items-ambiente', ()=>{
         }
     })
 
-    return {ambiente, dados, dados_agrupados, inner_db}
+    return {ambiente, dados, load_data, dados_agrupados, inner_db}
 })
 
 export const useDescricoesStore = defineStore("short-descricoes", {
