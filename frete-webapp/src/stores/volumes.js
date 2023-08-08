@@ -35,7 +35,7 @@ export async function registra_volume(dados){
     dados.responsavel = doc(db, "usuarios", dados.responsavel)
     const itemsRef = []
     dados.items.forEach( (key) => {
-        const itemRef = doc(db, "items", key) 
+        const itemRef = doc(db, `items/${key}`)  // resolve problema com int
         itemsRef.push( itemRef )
     })
     dados.items = itemsRef 
