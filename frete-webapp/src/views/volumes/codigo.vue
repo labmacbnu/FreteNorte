@@ -32,12 +32,12 @@ const responsavel = ref(null)
     <div class="col-lg-2">
       <QRCode :path="route.fullPath"></QRCode>
     </div>
-    <div class="col-lg-6 col-sm-12">
+    <div class="col-lg-6 col-sm-12 m-3">
       <h1>Volume {{ volume.codigo }}</h1>
       <p><b>Responsável:</b> {{ volume.responsavel.nome }}</p>
       <ul class="list-group">
         <li class="list-group-item justify-content-between d-flex" v-for="item in volume.items"> 
-          <span v-if="item.key && item.key.includes('-')">
+          <span v-if="item.key &&  typeof item.key != 'number' ">
             {{item.descricao}}
           </span>
           <span v-else>
