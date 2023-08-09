@@ -21,15 +21,33 @@ watch(selecionados, (novo, antigo) => {
             
             <template #corpo>
             <ul class="list-group">
-                <li class="list-group-item d-flex justify-content-between align-items-center" v-for="(subitem, idx) in valor">
-                    <div class="form-check">
-                        <input :disabled="subitem.meta.volumado" :id="'item'+subitem.key" v-model="selecionados" type="checkbox" class="form-check-input border border-primary" :value="subitem.key">
-                        <label :for="'item'+subitem.key" class="form-check-label text-capitalize">{{ subitem.detalhes.descricao.substring(0,140) }}</label>
-                    </div>
-                    <p></p>
-                    <span class="badge badge-primary badge-pill">
-                    <RouterLink :to="{name: 'item-codigo', params: {codigo: subitem.key }}">Ver item</RouterLink></span>
-                </li>
+                <template v-for="(subitem, idx) in valor">
+                    <template v-if="subitem.meta.inteiro">
+                    <li class="list-group-item d-flex justify-content-between align-items-center" >
+                        <div class="form-check">
+                            <input :disabled="subitem.meta.volumado" :id="'item'+subitem.key" v-model="selecionados" type="checkbox" class="form-check-input border border-primary" :value="subitem.key">
+                            <label :for="'item'+subitem.key" class="form-check-label text-capitalize">{{ subitem.detalhes.descricao.substring(0,140) }}</label>
+                        </div> 
+                        <span class="badge badge-primary badge-pill">
+                        <RouterLink :to="{name: 'item-codigo', params: {codigo: subitem.key }}">Ver item</RouterLink></span>
+                    </li>
+                </template>
+                <template v-else>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        {{ subitem.detalhes.descricao.substring(0,180) }}
+                    </li>
+                    <template v-for="(parte, idx) in subitem.meta.partes">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <div class="form-check">
+                            <input :disabled="parte.meta.volumado" :id="'item'+parte.key" v-model="selecionados" type="checkbox" class="form-check-input border border-primary" :value="parte.key">
+                            <label :for="'item'+parte.key" class="form-check-label text-capitalize">{{ parte.detalhes.descricao.substring(0,140) }}</label>
+                        </div> 
+                        <span class="badge badge-primary badge-pill">
+                        <RouterLink :to="{name: 'item-codigo', params: {codigo: parte.key }}">Ver item</RouterLink></span>
+                        </li>
+                    </template>
+                </template>
+                </template>
             </ul>
         </template>
         </AcordeaoChild>
