@@ -43,7 +43,7 @@ const nova_parte = reactive(itemModel)
  */
 async function adiciona_parte() {
     // Se não tinha nenhuma parte, agora vai ter e não vai ser mais inteiro
-    //update_item(item_db.value.key, {inteiro: false}) 
+    update_item(item_db.value.key, {'meta.inteiro': false}) 
     const partRef = await create_part({...toValue(nova_parte)})
     console.log(`Cridada parte ${nova_parte.key} para item ${item_db.value.key}`) 
     await update_item_part(item_db.value.key, 'add', partRef)
@@ -54,7 +54,7 @@ async function adiciona_parte() {
 }
 
 async function deleta_parte(index){
-    console.log(index)
+    const n = item_db.value.meta.partes.length
     const parteDoc = item_db.value.meta.partes[index]
     console.log(parteDoc.key)
     const parteRef = get_item_ref(parteDoc.key)
@@ -62,6 +62,9 @@ async function deleta_parte(index){
     console.log(item_db.value.key,)
     await update_item_part(item_db.value.key, 'remove', parteRef)
     //await apaga_volume(volumeKey)
+    if(n == 1) {
+        update_item(item_db.value.key, {'meta.inteiro': true})
+    }
     await delete_item(parteDoc.key)
      
 }
