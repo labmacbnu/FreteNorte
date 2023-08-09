@@ -23,7 +23,9 @@ const categorias = useDocument(doc(db, "agregados", "categorias_volumes"))
 
 const lista_ambientes_usuario = [...permissoes.ambientes, ...permissoes.usuario_de]
 
-const ambientes = useCollection(query(collection(db, "ambientes"), where("ambiente_codigo", "in", lista_ambientes_usuario)))
+const q_amb = computed(() =>  query(collection(db, "ambientes"), where("ambiente_codigo", "in", lista_ambientes_usuario)))
+
+const ambientes = useCollection(q_amb)
 
 
 const items = useItemsAmbienteStore()
@@ -63,13 +65,18 @@ const lider_ambiente_label = computed(() => {
 const all_items_ordered = computed(() => { 
   let all = [] 
   // filtrar apenas não volumados
-  if(new_volume.origem)
+  if(new_volume.origem && items.dados)
     all.push(...items.dados) 
   return all.sort((a, b) => a.short_descricao.localeCompare(b.short_descricao))
 })
 
-const all_items_nao_volumados = computed(() =>
-  all_items_ordered.value.filter((elem) => !elem.meta.volumado))
+const all_items_nao_volumados = computed(() => {
+if(all_items_ordered.value.length > 0) {
+  return all_items_ordered.value.filter((elem) => !elem.meta.volumado)
+} else {
+  return []
+}
+})
 
 function click_row(i) {
   document.getElementById("check" + i).click()
@@ -148,6 +155,7 @@ async function load_all_data() {
   const permissoes = useUserPermissionsStore()
   const lista_ambientes_usuario = [...permissoes.ambientes, ...permissoes.usuario_de] 
   items.load_data(lista_ambientes_usuario) 
+  items.ambiente = route.query.ambiente 
 }
 
 onBeforeMount(async () => await load_all_data()) 
