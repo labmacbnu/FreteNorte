@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import { getAuth } from 'firebase/auth'
 import { firebaseApp } from '../firebaseConfig'
 import { inject } from 'vue'
+import path from 'path'
 
 const auth = getAuth(firebaseApp)  
 
@@ -42,13 +43,27 @@ const router = createRouter({
       }
     },
     { 
-        name: 'volumes',
         path: '/volumes',
-        component: () => import('../views/VolumesView.vue'),
-      meta: {
-        requiresAuth: true
-      }
-    },
+        component: () => import('@/views/volumes/view.vue'),
+        children: [
+          { 
+            name: 'volumes',
+            path: '',
+            component: () => import('@/views/volumes/home.vue'),
+            meta: {
+              requiresAuth: true
+            }
+          },
+          { 
+            name: 'volumes-edita-categorias',
+            path: 'categoriasedit',
+            component: () => import('@/views/volumes/categorias.vue'),
+            meta: {
+              requiresAuth: true
+            }
+          }
+        ]
+    }
   ]
 })
 
