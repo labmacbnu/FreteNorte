@@ -6,7 +6,7 @@ import { useUserPermissionsStore } from '@/stores/user';
 import { useItemsAmbienteStore, orderedGroupBy } from '@/stores/items';
 import { useAmbientesStore } from '@/stores/ambientes';
 import {  registra_volume, apaga_volume } from '@/stores/volumes';
-import { update_item_part, delete_part, get_parte_ref } from '@/stores/singleitem'
+import { update_item_part, delete_item, get_item_ref } from '@/stores/singleitem'
 import Acordeao from '@/components/AcordeaoVolumes.vue';
 import QRCode from '@/components/QRCode.vue';
 import moment from 'moment';
@@ -59,28 +59,12 @@ async function salvar_volume() {
     return false
   }
 }
-
-async function deleta_volume_parte(parte_key) {
-  const parteRef = await get_parte_ref(parte_key)
-  const [itemKey, _] = parte_key.split("-")
-  // apaga do item
-  await update_item_part(itemKey, 'remove', parteRef)
-  // hard apaga a parte
-  await delete_part(parte_key)
-}
+ 
 
 async function soft_apaga_volume(codigo) { 
   console.log(`Apagando volume ${codigo}`)
   const volume_registry = volumes.value.find(x => x.codigo == codigo)
-  const items_do_volume = volume_registry.items
-  // vamos desavolumar aqui localmente
-  items_do_volume.forEach(element => { 
-    if ( typeof  element.key != "number") {
-      // SE TEM TRAÇO NA KEY
-      console.log(`Apagando parte ${element.key}`)
-      deleta_volume_parte(element.key) 
-    }
-  }); 
+  const items_do_volume = volume_registry.items 
   const uptime = apaga_volume(codigo)
   return true
 }
