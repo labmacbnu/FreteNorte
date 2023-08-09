@@ -1,11 +1,22 @@
 <script setup>
-import {onBeforeMount,  reactive, watch } from 'vue';
-import { useItemsAmbienteStore } from '@/stores/items'
+import {onBeforeMount,  reactive, watch, computed } from 'vue';
+import { useItemsAmbienteStore, orderedGroupBy } from '@/stores/items'
 import Acordeao from '@/components/AcordeaoItems.vue';
 import { RouterLink, useRoute } from 'vue-router';
+import { useCollection } from 'vuefire';
+import { collection, doc, where, query } from 'firebase/firestore';
+import { db } from "@/backend/index.js"
 
-const items = useItemsAmbienteStore()
+ 
 const route = useRoute()
+
+const q = computed(() => query(collection(db, "items"), where('ambiente', '==',  doc(db, "ambientes", route.params.ambiente))) )
+const colecao = useCollection( q, {wait: true}); 
+
+const items = computed(() => {
+  var dados_sem_partes = colecao.value.filter( x => x.tipo != 'Parte')
+  return orderedGroupBy(dados_sem_partes,  x => x.short_descricao)
+})
 
 const url_args = reactive({
   ambiente: route.params.ambiente,
@@ -54,7 +65,7 @@ watch(url_args, (novo, antigo) => {
   </div>
   <div class="row">
     <div class="col-12">
-      <Acordeao id="acordeao" :lista_agrupada="items.dados_agrupados" @items_selecionados="(e) => url_args.items = e" />
+      <Acordeao id="acordeao" :lista_agrupada="items" @items_selecionados="(e) => url_args.items = e" />
     </div>
   </div>
 </template>
