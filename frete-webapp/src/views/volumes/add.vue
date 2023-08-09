@@ -150,7 +150,7 @@ async function load_all_data() {
   items.load_data(lista_ambientes_usuario) 
 }
 
-onMounted(async () => await load_all_data()) 
+onBeforeMount(async () => await load_all_data()) 
 onServerPrefetch( () => usePendingPromises() )  
 </script>
 
