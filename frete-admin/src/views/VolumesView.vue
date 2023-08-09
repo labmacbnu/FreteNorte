@@ -1,22 +1,19 @@
 <script setup>
 
-import { collection, where, doc, setDoc, query, updateDoc } from 'firebase/firestore';
+import { collection, where, doc, setDoc, query, orderBy } from 'firebase/firestore';
 import { useCollection } from 'vuefire';
 import { db } from '@/backend/index'
 import moment from 'moment';
 
 const volRef = collection(db, "volumes")
-const q = query(volRef, where('deleted', '==', false))
+const q = query(volRef, where('deleted', '==', false), orderBy('data_criacao', 'desc'))
 const volumes = useCollection(q, {wait: true})
 
 </script>
-<template>
-  <div class="row mb-3">
-    <div class="col">
-      </div> 
-  </div>
-  <div class="row">
-    <div class="col">
+<template> 
+
+  <div class="row justify-content-start">
+    <div class="col p-0">
       <table class="table d-print-table align-middle">
         <thead>
           <tr> 
