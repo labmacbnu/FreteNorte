@@ -4,7 +4,7 @@ import { useUserPermissionsStore } from '@/stores/user';
 import { useItemsAmbienteStore, orderedGroupBy } from '@/stores/items';
 import { useAmbientesStore } from '@/stores/ambientes';
 import {  registra_volume, apaga_volume } from '@/stores/volumes';
-import { update_item_part, delete_part, get_parte_ref } from '@/stores/singleitem' 
+import { update_item_part, delete_item, get_item_ref } from '@/stores/singleitem' 
 
 
 import { db } from '@/backend/index.js';
