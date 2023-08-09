@@ -1,8 +1,9 @@
-import { getFirestore, getDoc, setDoc, updateDoc, doc, arrayUnion, arrayRemove, deleteDoc } from 'firebase/firestore'
+import { getFirestore, getDoc, setDoc, updateDoc, doc, arrayUnion, arrayRemove, deleteDoc, runTransaction } from 'firebase/firestore'
 import { firebaseApp } from '../firebaseConfig'
 import { defineStore } from 'pinia' 
 import { useDocument } from  'vuefire';
 import { ref, computed } from 'vue'; 
+import moment from 'moment';
 
 export const useSingleItemStoreOld = defineStore("single-item-old", {  
     state: () => ({
@@ -47,15 +48,16 @@ export async function update_item (codigo, item_data){
 
 export async function update_item_part(item_codigo, operation, partRef){
     const db = getFirestore(firebaseApp) 
-    const docRef = doc(db, "items", item_codigo)
+    const docRef = doc(db, `items/${item_codigo}`)
+
     if(operation == "add"){
         const uptime = await updateDoc(docRef, 
-            {partes: arrayUnion(partRef)}
+            {'meta.partes': arrayUnion(partRef)}
         ) 
         return true
     } else if (operation == "remove"){
         const uptime = await updateDoc(docRef, 
-            {partes: arrayRemove(partRef)}
+            {'meta.partes': arrayRemove(partRef)}
         ) 
         return true
     } else {
@@ -63,15 +65,27 @@ export async function update_item_part(item_codigo, operation, partRef){
     }
 }
 
+function seconds2Date(seconds){
+    return moment.unix(seconds).toDate()
+}
+
 export async function create_part(part_data){
     const db = getFirestore(firebaseApp) 
-    console.log(part_data)
-    return true
-    const partRef = doc(db, "items", part_data.key)
-    const ambienteRef = doc(db, "ambientes", part_data.ambiente)
+    if( part_data.detalhes.incorporacao != undefined ) {
+        part_data.detalhes.incorporacao = seconds2Date(part_data.detalhes.incorporacao.seconds)
+    }
+    if( part_data.detalhes.transf_local != undefined) {
+        part_data.detalhes.transf_local = seconds2Date(part_data.detalhes.transf_local.seconds)
+    }
+    console.log({...part_data})
+    console.log({...part_data.detalhes})
+    console.log({...part_data.meta}) 
+    const partRef = doc(db, `items/${part_data.key}`)
+    // ambientes/codigo pois usamos { maxRefDepth: 0 } no useDocument
+    const ambienteRef = doc(db, 'ambientes', part_data.ambiente )
     part_data.ambiente = ambienteRef 
-
-    const uptime = await setDoc(partRef, part_data)
+    //return {...part_data, id: 'fake0'}
+    const promessa = await setDoc(partRef, part_data)
     //return partRef 
     // increment ambiente.items
     const newN = await runTransaction(db, async (transaction) => {
@@ -80,16 +94,16 @@ export async function create_part(part_data){
         transaction.update(ambienteRef, {items: itemsp1})
         return itemsp1
     })
-    return newDocRef.id
+    return partRef
 }
 
-export async function get_parte_ref(part_key){
+export function get_item_ref(key){
     const db = getFirestore(firebaseApp) 
-    return doc(db, "items-partes", part_key)
+    return doc(db, `items/${key}` )
 }
 
-export async function delete_part(part_key){
-    await deleteDoc(get_parte_ref(part_key)) 
+export async function delete_item(key){
+    await deleteDoc(get_item_ref(key)) 
 }
 
 export const itemModel = {
