@@ -50,7 +50,8 @@ export function orderedGroupBy(list, keyGetter){
 
 export const useItemsAmbienteStore = defineStore('items-ambiente', ()=>{
  const ambiente = ref(null)
- const inner_db = reactive({}) 
+ const inner_db = reactive({})  
+ const excluir_partes = ref(false)
  const dados = computed( () => {
     if(ambiente.value){
         return inner_db[ambiente.value]
@@ -69,7 +70,12 @@ export const useItemsAmbienteStore = defineStore('items-ambiente', ()=>{
 
     const dados_agrupados = computed( () =>  { 
         if(dados.value) {
-            var mapa = groupBy(dados.value, x => x.short_descricao);
+            if(excluir_partes.value){
+                var dados_sem_partes = dados.value.filter( x => x.tipo != 'Parte')
+            } else {
+                var dados_sem_partes = dados.value
+            }
+            var mapa = groupBy(dados_sem_partes, x => x.short_descricao);
             var chaves = Array.from(mapa.keys())
             chaves.sort()
             var objeto_organizado = {}
@@ -80,7 +86,7 @@ export const useItemsAmbienteStore = defineStore('items-ambiente', ()=>{
         }
     })
 
-    return {ambiente, dados, load_data, dados_agrupados, inner_db}
+    return {ambiente, dados, load_data, dados_agrupados, inner_db, excluir_partes}
 })
 
 export const useDescricoesStore = defineStore("short-descricoes", {
