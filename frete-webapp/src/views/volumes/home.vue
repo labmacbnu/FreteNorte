@@ -12,7 +12,7 @@ import QRCode from '@/components/QRCode.vue';
 import moment from 'moment';
 
 import { db } from '@/backend/index.js';
-import { collection, where, doc, setDoc, query, updateDoc } from 'firebase/firestore';
+import { collection, where, doc, orderBy, query } from 'firebase/firestore';
 import { useCollection } from 'vuefire';
 import { RouterLink } from 'vue-router';
 
@@ -28,7 +28,8 @@ const volRef = collection(db, "volumes")
 const q = computed(() => query(
   volRef, where("responsavel", "==", 
   doc(collection(db, "usuarios"), globaluser.value.email)), 
-  where('deleted', '==', false)))
+  where('deleted', '==', false), orderBy("data_criacao", 'desc'))
+  )
 const {data: volumes, pending } = useCollection(q, {wait: true})
 
 
@@ -92,7 +93,7 @@ onBeforeMount(() => volumes.email = permissoes.email)
   </div>
   <div class="row">
     <div class="col">
-      <table class="table d-print-table align-middle">
+      <table class="table table-sm d-print-table align-middle">
         <thead>
           <tr>
             <th class="d-none d-print-table-cell">Volume</th>
