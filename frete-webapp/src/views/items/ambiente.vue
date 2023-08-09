@@ -17,6 +17,7 @@ onBeforeMount(() => {
   // hack para atualizar o items store ao calcular o ambiente
   const ambiente = route.params.ambiente  
   items.ambiente = ambiente 
+  items.excluir_partes = true
 })
 
 watch(url_args, (novo, antigo) => {
@@ -28,7 +29,7 @@ watch(url_args, (novo, antigo) => {
 <template>
   <div class="row justify-contents-start">
     <div class="col-12">
-      <p class="m-1">
+      <p class="m-1"> 
         <RouterLink :to="{ name: 'home' }"><i class="bi bi-arrow-left-short"></i>Voltar</RouterLink>
       </p>
       <p class="text-end">
