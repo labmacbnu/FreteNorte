@@ -161,6 +161,5 @@ onMounted( () =>
                     </div>
                     </div>
         </div>
-    </div>
-    {{ item }}
+    </div> 
 </template>
