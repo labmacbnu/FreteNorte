@@ -1,6 +1,6 @@
 import { ref, reactive, inject } from 'vue'
 import { defineStore } from 'pinia'
-import { getAuth, signOut, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import { getAuth, signOut, GoogleAuthProvider, signInWithPopup, signInWithRedirect } from "firebase/auth";
 import { getFirestore, doc, addDoc, collection, getDoc } from 'firebase/firestore'
 import { firebaseApp } from '../firebaseConfig'
 
@@ -28,7 +28,7 @@ export async function loginWithGoogle() {
     const provider = new GoogleAuthProvider();
     const auth = getAuth(firebaseApp); 
 
-    var result = await signInWithPopup(auth, provider)
+    var result = await signInWithRedirect(auth, provider)
     if (!result.errorCode) {
         // This gives you a Google Access Token. You can use it to access the Google API.
         const credential = GoogleAuthProvider.credentialFromResult(result);
