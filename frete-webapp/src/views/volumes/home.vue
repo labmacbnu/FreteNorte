@@ -98,7 +98,7 @@ onBeforeMount(() => volumes.email = permissoes.email)
           <tr>
             <th class="d-none d-print-table-cell">Volume</th>
             <th class="d-print-none">Código</th>
-            <th>Lista de items</th>
+            <th>Itens</th>
             <th>Origem</th>
             <th>Categoria</th>
             <th>Status</th>
@@ -120,9 +120,9 @@ onBeforeMount(() => volumes.email = permissoes.email)
             </RouterLink>
             </td>
             <td> 
-              <a :href="'#items' + volume.codigo"  class="btn btn-primary" data-bs-toggle="collapse" 
+              <a :href="'#items' + volume.codigo"  class="btn btn-sm btn-primary" data-bs-toggle="collapse" 
                 role="button" aria-expanded="false" :aria-controls="'items' + volume.codigo">
-              Ver items</a>
+              Ver itens</a>
             </td>
             <td>
               {{ volume.origem.ambiente_codigo }}
@@ -149,7 +149,8 @@ onBeforeMount(() => volumes.email = permissoes.email)
             <ul class="list-group list-group-flush align-top">
                 <li v-for="item in volume.items" :key="'I' + item.key" class="list-group-item justify-content-between d-flex">
                   <small class="" v-if="item.key">{{ item.short_descricao }}</small>
-                  <span class="badge text-primary rounded-pill span-lista-volumes text-elipse">{{item.key}}</span>
+                  <RouterLink :to="{name: 'item-codigo', params: {codigo: item.key}}" 
+                  class="badge text-primary rounded-pill span-lista-volumes text-elipse">{{item.key}}</RouterLink>
                 </li> 
               </ul>
             </td>
@@ -187,8 +188,7 @@ onBeforeMount(() => volumes.email = permissoes.email)
   width: 5em;
 }
 
-.span-lista-volumes {
-  width: 6em;
+.span-lista-volumes { 
 }
 
 .tabela-item {
