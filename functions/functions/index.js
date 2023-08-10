@@ -25,8 +25,13 @@ const db = getFirestore();
 exports.registrausuario = functions.auth.user().onCreate( (user, context) => {
     const email = user.email;
     const nome = user.displayName;
-    db.doc(`usuarios/${email}`).set({role: "Usuário", ambientes: [], nome: nome})
-    logger.log(`Usuário criado: ${email}`)
+    const docRef = db.doc(`usuarios/${email}`)
+    if(docRef.exists()){
+        logger.log(`Usuário já existe: ${email}`)
+    } else {
+        logger.log(`Usuário criado: ${email}`)
+        docRef.set({role: "Usuário", ambientes: [], usuario_de: [], nome: nome})
+    }
 
 })
 
