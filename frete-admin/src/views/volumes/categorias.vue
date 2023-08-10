@@ -3,6 +3,7 @@ import { db } from '@/backend/index'
 import { useDocument } from 'vuefire';
 import { doc, updateDoc, arrayUnion, arrayRemove } from 'firebase/firestore';
 import { ref } from 'vue';
+import { RouterLink } from 'vue-router';
 
 const catRef = doc(db, 'agregados/categorias_volumes')
 const {data: categorias, pending } = useDocument(catRef)
@@ -30,7 +31,8 @@ function deleta(i){
 </script>
 
 <template>
-    <h1>Categorias dos volumes</h1> 
+    <RouterLink class="text-decoration-none" :to="{name: 'volumes'}"> <i class="bi bi-caret-left-fill  me-2"></i>Voltar</RouterLink>
+    <h3>Categorias dos volumes</h3> 
     <template v-if="!pending">
     <ul class="list-group">
         <li class="list-group-item d-flex justify-content-between align-items-center"
