@@ -63,6 +63,22 @@ const router = createRouter({
             }
           }
         ]
+    },
+    {
+      path: '/lotes',
+      component: () =>  import('@/views/volumes/view.vue'),
+      children: [
+        {
+          path: '',
+          name: 'lotes',
+          component: () => import('@/views/lotes/home.vue')
+        },  
+        {
+          path: 'add',
+          name: 'lotes-add',
+          component: () => import('@/views/lotes/add.vue')
+        }
+      ]
     }
   ]
 })
