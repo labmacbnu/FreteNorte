@@ -68,10 +68,10 @@ onServerPrefetch(() => usePendingPromises())
 </script>
 
 <template> 
+  <TheNavigation></TheNavigation>   
   <div id="maincontainer" class="container">
- <TheNavigation></TheNavigation>   
   <RouterView :key="route.path"/>
-</div>
+  </div>
 </template>
 
 <style scoped> 
