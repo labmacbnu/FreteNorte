@@ -1,21 +1,27 @@
 <script setup>
 import { onBeforeMount, reactive, computed, ref, toValue, inject, watch, onMounted } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
-import { useUserPermissionsStore } from '@/stores/user';
-import { useAmbientesStore } from '@/stores/ambientes';
+import { useUserPermissionsStore } from '@/stores/user'; 
 import { cria_item } from '@/stores/items';
 import { itemModel } from "@/stores/singleitem" 
+import { query, where, collection } from 'firebase/firestore';
+import { useCollection } from 'vuefire';
+import { db } from '@/backend/index';
 
 const route = useRoute();
-const router = useRouter();
-const ambientes = useAmbientesStore();
+const router = useRouter(); 
 const permissions = useUserPermissionsStore();
 const {globaluser, updateuser} = inject("globaluser")
 
-const meus_ambientes = computed( () => {
-    return ambientes.dados.filter( obj =>  permissions.ambientes.includes(obj.ambiente_codigo) || permissions.usuario_de.includes(obj.ambiente_codigo))
 
+const ambientes_query = computed( () => {
+    const user_ambientes = [...permissions.ambientes, ...permissions.usuario_de]
+    const ambientesRef = collection(db, 'ambientes')
+    return query(ambientesRef, where('ambiente_codigo', 'in', user_ambientes))
 })
+
+const {data: meus_ambientes, pending: ambientes_pending} = useCollection(ambientes_query)
+
 
 const item = reactive(itemModel)
 
@@ -93,7 +99,7 @@ onMounted( () =>
                     <div class="col">
                         <select v-model="item.ambiente" class="form-select" :class="{'border-danger': !valido.ambiente}" aria-label="Ambiente">
                             <option v-for="ambiente in meus_ambientes" :value="ambiente.ambiente_codigo">
-                                {{ ambiente.valor }}
+                                {{ ambiente.ambiente_codigo }} - {{ ambiente.ambiente_nome }}
                             </option>
                             </select>
 
