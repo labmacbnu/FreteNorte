@@ -96,14 +96,25 @@ async function front_apaga_volume() {
                                         <RouterLink class="icon-link" :to="{name: 'volume-codigo', params: {codigo: item.meta.volume.codigo }}">
                                             <i class="bi bi-link-45deg"></i> {{ item.meta.volume.codigo }}</RouterLink> 
                                         </template>
+                                        <template v-else>
+                                            Item não volumado. <RouterLink v-if="item.meta.inteiro" class="btn btn-success" :to="{name: 'volume-add', query: {
+                                                ambiente: item.ambiente.ambiente_codigo,
+                                                items: [item.key]
+                                            }}">Criar volume <i class=" icon-link bi bi-box"></i></RouterLink>
+                                        </template>
                                     </td>
                                 </tr> 
-                                <tr>
+                                <tr v-if="item.tipo != 'Parte'">
                                     <th scope="row">Partes</th>
                                     <td>
+                                        <ul class="list-group w-50">
+                                        <li class="list-group-item" v-for="parte in item.meta.partes">
+                                            <RouterLink :to="{name: 'item-codigo', params: {codigo: parte.key}}"><i class="bi bi-link-45deg"></i></RouterLink>
+                                            {{ parte.detalhes.descricao }}</li>
+                                        </ul>
+
                                         <RouterLink :to="{ name: 'item-codigo-partes', params: { codigo: item.key } }"
-                                            class="">
-                                            Editar partes</RouterLink>
+                                            class="">Editar partes</RouterLink>
                                     </td>
 
                                 </tr>
