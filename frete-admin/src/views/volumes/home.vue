@@ -39,8 +39,15 @@ const q = computed(()=> {
 const volumes = useCollection(q, {wait: true})
 
 const soft_volume_modal_ref = ref(null)
+
+const volumes_selecionados = ref([])
 </script>
 <template> 
+<div class="fixed-bottom text-end p-3"> 
+  <RouterLink :to="{name: 'lotes-add', query: {volumes: volumes_selecionados}}" class="btn btn-success">
+    <i class="bi bi-boxes me-2"></i>Criar Lote</RouterLink>
+</div>
+
 <div class="row mb-3">
   <div class="col">
     <label class="form-label" for="categoria">
@@ -68,6 +75,7 @@ const soft_volume_modal_ref = ref(null)
       <table class="table table-sm d-print-table">
         <thead>
           <tr> 
+            <th></th>
             <th class="d-print-none">Código</th>
             <th>Lista de items</th>
             <th>Origem</th>
@@ -82,6 +90,9 @@ const soft_volume_modal_ref = ref(null)
         <tbody tag="tbody" name="tabela" is="transition-group">
           <template  v-for="volume in volumes" :key="'volume' + volume.codigo">
           <tr>
+            <td>
+              <input type="checkbox" :value="volume.codigo" v-model="volumes_selecionados">
+            </td>
             <td>{{ volume.codigo.substring(0,8)+'...' }}</td>
             <td> 
               <a :href="'#items' + volume.codigo"  class="btn btn-primary" data-bs-toggle="collapse" 
@@ -104,8 +115,7 @@ const soft_volume_modal_ref = ref(null)
               {{ moment.unix(volume.data_criacao.seconds).format("DD/MM/YY") }}
             </td>  
             <td>
-
-              {{ volume.responsavel.nome }} &lt;{{ volume.responsavel.id }}&gt;
+              {{ volume.responsavel.nome }} <small>&lt;{{ volume.responsavel.id }}&gt;</small>
             </td>
             <td class="d-print-none">
               <button class="btn btn-danger" data-bs-target="#apagare" data-bs-toggle="modal" 
