@@ -1,4 +1,4 @@
-import { computed, reactive, readonly, ref } from 'vue'
+import { computed, reactive, ref } from 'vue'
 import { defineStore } from 'pinia'
 import { getFirestore, doc,  collection, getDoc } from 'firebase/firestore'
 import { firebaseApp } from '../firebaseConfig'
@@ -24,9 +24,13 @@ export const useAmbientesStore = defineStore('ambientes', ()=>{
 
 export const useListaAmbientes = defineStore('lista-ambientes', ()=>{ 
     const db = getFirestore(firebaseApp)
-    const ambientesagregados = useDocument(doc(db, "agregados", "ambientes"))
-    const todos = computed(() =>  ambientesagregados.value.codigos)
-    const liderados = computed(() =>  ambientesagregados.value.liderados)
+    const {data: ambientesagregados, promise } = useDocument(doc(db, "agregados", "ambientes"))
+    const todos = ref([])
+    const liderados = ref([])
+    promise.value.then( () => {
+        todos.value = ambientesagregados.value.codigos
+        liderados.value = ambientesagregados.value.liderados
+    })  
     const nao_liderados = computed(() => {
     if(todos.value) {
         return todos.value.filter(ambiente => !liderados.value.includes(ambiente))
