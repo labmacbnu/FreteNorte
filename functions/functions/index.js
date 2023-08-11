@@ -62,6 +62,7 @@ exports.contavolumes = functions.firestore.document("volumes/{volumeId}").onWrit
             const n = document.items.length
             if( n == 0) {
                 collectionRef.doc(volumeId).update({'deleted': true})
+                functions.logger.log(`Auto soft deleted ${volumeId}`)
             } else {
                 document.items.forEach( (docRef) => docRef.update({'meta.volumado': true, 'meta.volume': db.doc(`volumes/${volumeId}`)}))
             }
