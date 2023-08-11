@@ -113,7 +113,7 @@ async function front_apaga_volume() {
                                 </tr> 
                                 <tr v-if="item.tipo != 'Parte'">
                                     <th scope="row">Partes</th>
-                                    <td>
+                                    <td><template v-if="item.tipo == 'Permanente' && !item.meta.volumado">
                                         <ul class="list-group w-50">
                                         <li class="list-group-item" v-for="parte in item.meta.partes">
                                             <RouterLink :to="{name: 'item-codigo', params: {codigo: parte.key}}"><i class="bi bi-link-45deg"></i></RouterLink>
@@ -122,6 +122,15 @@ async function front_apaga_volume() {
 
                                         <RouterLink :to="{ name: 'item-codigo-partes', params: { codigo: item.key } }"
                                             class="">Editar partes</RouterLink>
+                                        </template>
+                                        <template v-else>
+                                            <template v-if="item.meta.volumado">
+                                                <span class="text-secondary">Um item já volumado não pode ser dividido em partes.</span>
+                                            </template>
+                                            <template v-else>
+                                                <span class="text-secondary">Esse item não pode ser divido.</span>
+                                            </template>
+                                        </template>
                                     </td>
 
                                 </tr>
