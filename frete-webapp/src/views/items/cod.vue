@@ -34,6 +34,9 @@ async function atualiza_item() {
     console.log(`Item ${valores.key} atualizado`)
 }
 
+const isParte = computed(() => item.value?.tipo == "Parte")
+const parentKey = computed( () => isParte.value? item.value.key.split('-')[0] : null )
+
 async function front_apaga_volume() {
     if(item.value.categoria != 'Permanente') {
         const ambiente_route =  item.value.ambiente.ambiente_codigo
@@ -60,13 +63,17 @@ async function front_apaga_volume() {
                     <div class="col-12">
                         <h4 class="d-print-none d-flex align-items-center">
                             {{ item.short_descricao }}
-                            <span class="mx-3 badge text-secondary">{{ item.key }}</span>
+                            <span class="mx-3 badge text-secondary">{{ item.key }}</span> 
                         </h4>
                         <p class="text-secondary p-2">
                             {{ item.descricao }}
                         </p>
                         <table class="table d-print-none">
                             <tbody>
+                                <tr v-if="isParte">
+                                    <th scope="row">Item pai</th>
+                                    <td><RouterLink :to="{name: 'item-codigo', params: {codigo: parentKey}}">Ver item</RouterLink></td>
+                                </tr>
                                 <tr>
                                     <th scope="row">Ambiente</th>
                                     <td>{{ item.ambiente.ambiente_codigo }} - {{ item.ambiente.ambiente_nome }}</td>
@@ -110,7 +117,7 @@ async function front_apaga_volume() {
                                         <ul class="list-group w-50">
                                         <li class="list-group-item" v-for="parte in item.meta.partes">
                                             <RouterLink :to="{name: 'item-codigo', params: {codigo: parte.key}}"><i class="bi bi-link-45deg"></i></RouterLink>
-                                            {{ parte.detalhes.descricao }}</li>
+                                            {{ parte.detalhes?.descricao }}</li>
                                         </ul>
 
                                         <RouterLink :to="{ name: 'item-codigo-partes', params: { codigo: item.key } }"
