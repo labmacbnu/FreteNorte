@@ -1,9 +1,9 @@
-import { computed, reactive, ref } from 'vue'
+import { computed, reactive, ref, watch } from 'vue'
 import { defineStore } from 'pinia'
 import { getFirestore, getDocs, doc,  collection, where, getCountFromServer, query } from 'firebase/firestore'
 import { firebaseApp } from '../firebaseConfig'
 import { useCollection, useDocument } from 'vuefire'
-
+import { useUserPermissionsStore } from './user'
 
 
 export const useAmbientesStore = defineStore('ambientes', ()=>{ 
@@ -37,3 +37,19 @@ export async function ambiente_status(ambiente_codigo) {
     return {volumados: volumados_n, todos: all_n}
 
 }
+
+export const useAmbientesUserStore = defineStore('ambientes-user', ()=>{ 
+    const permissoes = useUserPermissionsStore()
+    const db = getFirestore(firebaseApp)  
+    const ambientes = computed( () => [...permissoes.ambientes, ...permissoes.usuario_de])
+
+    const amb_query = computed(() =>  query(collection(db, "ambientes"), where('ambiente_codigo', 'in', ambientes.value))) 
+
+    const dados = ref([])
+    watch(ambientes, async () => {
+     useCollection(amb_query, {wait: true, target: dados})
+    })
+
+
+    return {ambientes, dados} 
+})
