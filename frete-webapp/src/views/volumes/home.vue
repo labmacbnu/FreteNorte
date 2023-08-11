@@ -4,7 +4,7 @@ import Modal from '@/components/Modal.vue';
 import ModalDelete from '@/components/ModalDelete.vue';
 import { useUserPermissionsStore } from '@/stores/user';
 import { useItemsAmbienteStore, orderedGroupBy } from '@/stores/items'; 
-import {  registra_volume, apaga_volume } from '@/stores/volumes';
+import {  registra_volume, apaga_volume, useVolumesEmailStore } from '@/stores/volumes';
 import { update_item_part, delete_item, get_item_ref } from '@/stores/singleitem'
 import Acordeao from '@/components/AcordeaoVolumes.vue';
 import QRCode from '@/components/QRCode.vue';
@@ -20,21 +20,12 @@ const permissoes = useUserPermissionsStore()
 
 const items = useItemsAmbienteStore()
  
-
- 
-const volRef = collection(db, "volumes")
-const q = computed(() => query(
-  volRef, where("responsavel", "==", 
-  doc(collection(db, "usuarios"), globaluser.value.email)), 
-  where('deleted', '==', false), orderBy("data_criacao", 'desc'))
-  )
-const {data: volumes, pending } = useCollection(q, {wait: true})
-
+const volumes = useVolumesEmailStore()
 
 function click_row(i) {
   document.getElementById("check" + i).click()
 }
- 
+
  
 
 
@@ -62,7 +53,7 @@ async function salvar_volume() {
 
 async function soft_apaga_volume(codigo) { 
   console.log(`Apagando volume ${codigo}`)
-  const volume_registry = volumes.value.find(x => x.codigo == codigo)
+  const volume_registry = volumes.dados.value.find(x => x.codigo == codigo)
   const items_do_volume = volume_registry.items 
   const uptime = apaga_volume(codigo)
   return true
@@ -70,16 +61,9 @@ async function soft_apaga_volume(codigo) {
 
 const soft_volume_modal_ref = ref(null)
 
-
-
-onBeforeMount(() => volumes.email = permissoes.email)  
 </script>
 
-<template>
-  <template v-if="pending">
-  Carrregando
-  </template>
-  <template v-else>
+<template> 
   <div class="row mb-3">
     <div class="col">
       <h1>Volumes que você criou</h1>
@@ -105,8 +89,8 @@ onBeforeMount(() => volumes.email = permissoes.email)
             <th class="d-print-none"></th>
         </tr>
         </thead>
-        <tbody tag="tbody" name="tabela" is="transition-group">
-          <template  v-for="volume in volumes" :key="'volume' + volume.codigo">
+        <tbody>
+          <template  v-for="volume in volumes.dados" :key="'volume' + volume.codigo">
           <tr>
             <td class="d-none d-print-table-cell text-center">
               <QRCode :path="'/volumes/cod/' + volume.codigo"></QRCode>
@@ -143,16 +127,18 @@ onBeforeMount(() => volumes.email = permissoes.email)
             </td>
           </tr>
           <tr class="collapse" :id="'items' + volume.codigo">
-            <td colspan="5">
+            <td colspan="5"> 
             <ul class="list-group list-group-flush align-top">
-                <li v-for="item in volume.items" :key="'I' + item.key" class="list-group-item justify-content-between d-flex">
-                  <small class="" v-if="item.key">{{ item.short_descricao }}</small>
-                  <RouterLink :to="{name: 'item-codigo', params: {codigo: item.key}}" 
-                  class="badge text-primary rounded-pill span-lista-volumes text-elipse">{{item.key}}</RouterLink>
-                </li> 
+              <template  v-for="item in volume.items"> 
+                <li v-if="item" class="list-group-item justify-content-between d-flex">
+                    <small class="">{{ item.short_descricao }}</small>
+                    <RouterLink :to="{name: 'item-codigo', params: {codigo: item.key}}" 
+                    class="badge text-primary rounded-pill span-lista-volumes text-elipse">{{item.key}}</RouterLink>
+                  </li> 
+              </template>
               </ul>
             </td>
-            <td colspan="1"></td>
+            <td colspan="3"></td>
           </tr>
       </template>
       </tbody>
@@ -169,8 +155,7 @@ onBeforeMount(() => volumes.email = permissoes.email)
   Certeza que quer apagar o volume {{soft_volume_modal_ref}}?
 </template>
 
-</ModalDelete> 
-</template>
+</ModalDelete>  
 </template>
 <style>
 
