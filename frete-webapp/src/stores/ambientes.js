@@ -32,7 +32,8 @@ export const useAmbientesUserStore = defineStore('ambientes-user', ()=>{
         const volumados_snap = await getCountFromServer(volumados_query)
         const volumados_n = volumados_snap.data().count
 
-        const all_query = query(collection(db, "items"), where('ambiente', '==', ambienteRef)) // where('inteiro', '==', true)
+        const all_query = query(collection(db, "items"), where('ambiente', '==', ambienteRef),
+        where('meta.inteiro', '==', true)) // where('inteiro', '==', true)
         const all_snap = await getCountFromServer(all_query)
         const all_n = all_snap.data().count
 
