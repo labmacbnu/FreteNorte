@@ -59,7 +59,13 @@ exports.contavolumes = functions.firestore.document("volumes/{volumeId}").onWrit
         } else {
             // created or updated
             functions.logger.log(`Created of updated volume ${volumeId}`)
-            document.items.forEach( (docRef) => docRef.update({'meta.volumado': true, 'meta.volume': db.doc(`volumes/${volumeId}`)}))
+            const n = document.items.length
+            if( n == 0) {
+                collectionRef.doc(volumeId).update({'deleted': true})
+            } else {
+                document.items.forEach( (docRef) => docRef.update({'meta.volumado': true, 'meta.volume': db.doc(`volumes/${volumeId}`)}))
+            }
+            
         }
     } else {
         // hard deleted
