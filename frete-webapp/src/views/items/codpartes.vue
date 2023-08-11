@@ -28,12 +28,27 @@ const {
 } = useDocument(doc(db, 'items', route.params.codigo),  { maxRefDepth: 1 })
 
 
-promise.value.then(new_nova_parte)
 
 
-const n_partes = computed(() => item_db.value.meta.partes ? item_db.value.meta.partes.length + 1: 1 )
+const n_partes = ref(1)
+function max_terminacoes(){
+    const terminacoes = item_db.value.meta.partes.map(
+            parte => {
+                if(typeof parte.key == 'string')
+                    return parseInt(parte.key.split('-')[1])
+            }
+        )
+    console.log(terminacoes)
+    n_partes.value = Math.max(...terminacoes) + 1
+}
 
 const nova_parte = reactive(itemModel)
+
+promise.value.then(() => {
+    max_terminacoes();
+    new_nova_parte(); 
+})
+
 
 /**
  * Callback para o botão salvar parte
@@ -48,6 +63,7 @@ async function adiciona_parte() {
     console.log(`Cridada parte ${nova_parte.key} para item ${item_db.value.key}`) 
     await update_item_part(item_db.value.key, 'add', partRef)
     console.log(`Parte ${nova_parte.key} adicionada ao item ${item_db.value.key}`) 
+    n_partes.value = n_partes.value + 1
     new_nova_parte()
     console.log(`Zerada a nova_parte: ${nova_parte.key}`)
     return true
@@ -84,6 +100,7 @@ function new_nova_parte(){
         tipo: "Parte"
     }  )
 }
+
 watch( () => nova_parte.short_descricao, (short_descricao) => {
     nova_parte.detalhes.descricao = item_db.value.short_descricao + ": " + nova_parte.short_descricao
  } )
@@ -124,7 +141,7 @@ watch( () => nova_parte.short_descricao, (short_descricao) => {
                 {{ item_db.detalhes.descricao }}
             </p>
             <button class="btn btn-success" data-bs-target="#addparte" data-bs-toggle="modal">Adicionar parte</button>
-            <table class="table d-print-none">
+            <table v-if="!pending" class="table d-print-none">
                 <thead>
                     <tr>
                         <th>Nome da parte</th>
@@ -145,8 +162,7 @@ watch( () => nova_parte.short_descricao, (short_descricao) => {
                         </td>
                     </tr>
                 </tbody>
-            </table>
-<p><code>{{ nova_parte }}</code></p> 
+            </table> 
         </div>
     </div>
 </template>
