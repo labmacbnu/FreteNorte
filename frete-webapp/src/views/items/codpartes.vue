@@ -74,14 +74,14 @@ async function deleta_parte(index){
     const parteDoc = item_db.value.meta.partes[index]
     console.log(parteDoc.key)
     const parteRef = get_item_ref(parteDoc.key)
-    //const volumeKey = parteDoc.volume
-    console.log(item_db.value.key,)
+    //const volumeKey = parteDoc.volume 
     await update_item_part(item_db.value.key, 'remove', parteRef)
     //await apaga_volume(volumeKey)
     if(n == 1) {
         update_item(item_db.value.key, {'meta.inteiro': true})
     }
     await delete_item(parteDoc.key)
+    console.log(`Apagada parte ${parteDoc.key}. (n=${n})`)
      
 }
 
@@ -95,7 +95,7 @@ function new_nova_parte(){
         detalhes: {...item_valores.detalhes, 
             descricao: null
         },
-        meta: {...item_valores.meta, updated: new Date(), partes: []},
+        meta: {...item_valores.meta, inteiro: true, updated: new Date(), partes: []},
         key: item_valores.key + '-' + n_partes.value,
         tipo: "Parte"
     }  )
@@ -152,10 +152,10 @@ watch( () => nova_parte.short_descricao, (short_descricao) => {
                 <tbody>
                     <tr v-for="(parte, index) in item_db.meta.partes" :key="'parte' + index">
                         <td>
-                            {{ parte.detalhes.descricao }}
+                            {{ parte.detalhes?.descricao }}
                         </td>
                         <td>
-                            {{ parte.meta.volume }}
+                            {{ parte.meta?.volume }}
                         </td>
                         <td>
                             <button class="btn btn-danger" @click="() => deleta_parte(index)">Remover</button>
