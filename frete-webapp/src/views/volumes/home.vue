@@ -3,8 +3,7 @@ import { computed, inject, onBeforeMount, onMounted, ref } from 'vue';
 import Modal from '@/components/Modal.vue';
 import ModalDelete from '@/components/ModalDelete.vue';
 import { useUserPermissionsStore } from '@/stores/user';
-import { useItemsAmbienteStore, orderedGroupBy } from '@/stores/items';
-import { useAmbientesStore } from '@/stores/ambientes';
+import { useItemsAmbienteStore, orderedGroupBy } from '@/stores/items'; 
 import {  registra_volume, apaga_volume } from '@/stores/volumes';
 import { update_item_part, delete_item, get_item_ref } from '@/stores/singleitem'
 import Acordeao from '@/components/AcordeaoVolumes.vue';
@@ -17,8 +16,7 @@ import { useCollection } from 'vuefire';
 import { RouterLink } from 'vue-router';
 
 const { globaluser, updateUser } = inject("globaluser")
-const permissoes = useUserPermissionsStore()
-const ambientes = useAmbientesStore()
+const permissoes = useUserPermissionsStore() 
 
 const items = useItemsAmbienteStore()
  
