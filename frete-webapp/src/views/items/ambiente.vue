@@ -1,6 +1,6 @@
 <script setup>
 import {onBeforeMount,  reactive, watch, computed } from 'vue';
-import { useItemsAmbienteStore, orderedGroupBy } from '@/stores/items'
+import { orderedGroupBy } from '@/stores/items'
 import Acordeao from '@/components/AcordeaoItems.vue';
 import { RouterLink, useRoute } from 'vue-router';
 import { useCollection } from 'vuefire';
@@ -11,7 +11,7 @@ import { db } from "@/backend/index.js"
 const route = useRoute()
 
 const q = computed(() => query(collection(db, "items"), where('ambiente', '==',  doc(db, "ambientes", route.params.ambiente))) )
-const colecao = useCollection( q, {wait: true}); 
+const {data: colecao, pending, promise}  = useCollection( q, {wait: true}); 
 
 const items = computed(() => {
   var dados_sem_partes = colecao.value.filter( x => x.tipo != 'Parte')
