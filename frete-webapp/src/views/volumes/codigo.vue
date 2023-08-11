@@ -33,7 +33,7 @@ const responsavel = ref(null)
     </div>
   </div>
   <div class="row" v-else>
-    <template v-if="!volume">
+    <template v-if="!volume || volume.deleted ">
       <div class="col alert alert-danger">
         <p class="text-center fs-3">O volume pesquisado não existe!</p>
         <p class="text-center"><RouterLink :to="{name: 'volumes'}"><i class="bi bi-arrow-left"></i> Voltar</RouterLink></p>
