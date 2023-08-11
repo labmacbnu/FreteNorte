@@ -61,7 +61,7 @@ export const useAmbientesUserStore = defineStore('ambientes-user', ()=>{
     watch(ambientes, async () => {
      useCollection(amb_query, {wait: true, target: dados})
         update_stats()
-    })
+    },  { immediate: true })
 
 
     return {ambientes, dados, status, update_stats} 

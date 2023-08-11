@@ -57,10 +57,10 @@ export const useItemsAmbienteStore = defineStore('items-ambiente', ()=>{
     const ambiente = ref(null)
     const filter_function = ref(null) 
     const dados = computed( () => {
-        if(ambiente.value){
+        if(ambiente.value && inner_db.value){
             return inner_db.value.filter( x => x.ambiente.ambiente_codigo == ambiente.value) 
         } else {
-            return inner_db.value
+            return []
         }
     }) 
 
@@ -88,7 +88,7 @@ export const useItemsAmbienteStore = defineStore('items-ambiente', ()=>{
         console.log(ambientes.value)
         const q = query(itemsColl, where('ambiente', 'in', ambientesRefs)) 
         useCollection(q, {wait: true, target: inner_db});  
-    })
+    },  { immediate: true })
 
     return {ambientes, ambiente, dados, dados_agrupados, inner_db, filter_function}
 })
