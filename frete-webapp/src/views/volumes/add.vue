@@ -3,8 +3,7 @@ import { computed, inject, toValue, onMounted, onServerPrefetch, reactive, ref, 
 import { useUserPermissionsStore } from '@/stores/user';
 import { useItemsAmbienteStore, orderedGroupBy } from '@/stores/items';
 import { useAmbientesUserStore } from '@/stores/ambientes';
-import {  registra_volume, apaga_volume } from '@/stores/volumes';
-import { update_item_part, delete_item, get_item_ref } from '@/stores/singleitem' 
+import {  registra_volume } from '@/stores/volumes';
 
 
 import { db } from '@/backend/index.js';
