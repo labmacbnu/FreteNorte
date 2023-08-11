@@ -22,34 +22,47 @@ export const useAmbientesStore = defineStore('ambientes', ()=>{
     return {dados} 
 })
 
-export async function ambiente_status(ambiente_codigo) {
-    const db = getFirestore(firebaseApp)
-    const ambienteRef = doc(db, "ambientes", ambiente_codigo)
-    const volumados_query = query(collection(db, "items"), where('ambiente', '==', ambienteRef),
-    where('meta.volumado', '==', true))
-    const volumados_snap = await getCountFromServer(volumados_query)
-    const volumados_n = volumados_snap.data().count
-
-    const all_query = query(collection(db, "items"), where('ambiente', '==', ambienteRef)) // where('inteiro', '==', true)
-    const all_snap = await getCountFromServer(all_query)
-    const all_n = all_snap.data().count
-
-    return {volumados: volumados_n, todos: all_n}
-
-}
 
 export const useAmbientesUserStore = defineStore('ambientes-user', ()=>{ 
+    async function ambiente_status(ambiente_codigo) {
+        const db = getFirestore(firebaseApp)
+        const ambienteRef = doc(db, "ambientes", ambiente_codigo)
+        const volumados_query = query(collection(db, "items"), where('ambiente', '==', ambienteRef),
+        where('meta.volumado', '==', true))
+        const volumados_snap = await getCountFromServer(volumados_query)
+        const volumados_n = volumados_snap.data().count
+
+        const all_query = query(collection(db, "items"), where('ambiente', '==', ambienteRef)) // where('inteiro', '==', true)
+        const all_snap = await getCountFromServer(all_query)
+        const all_n = all_snap.data().count
+
+        const percent = parseInt(100* volumados_n / all_n)
+
+        return {volumados: volumados_n, todos: all_n, percent: percent}
+
+    }
+
     const permissoes = useUserPermissionsStore()
     const db = getFirestore(firebaseApp)  
     const ambientes = computed( () => [...permissoes.ambientes, ...permissoes.usuario_de])
 
     const amb_query = computed(() =>  query(collection(db, "ambientes"), where('ambiente_codigo', 'in', ambientes.value))) 
 
+    const status =  reactive({})
+
     const dados = ref([])
+
+    async function update_stats(){
+        for(const ambiente of ambientes.value){
+            status[ambiente] = await ambiente_status(ambiente)
+            console.log(status[ambiente]) 
+        }
+    }
     watch(ambientes, async () => {
      useCollection(amb_query, {wait: true, target: dados})
+        update_stats()
     })
 
 
-    return {ambientes, dados} 
+    return {ambientes, dados, status, update_stats} 
 })
