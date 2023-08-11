@@ -169,22 +169,29 @@ export async function cria_item(item){
 }
 
 export async function deleta_item(item_cod){ 
-    const itemRef = doc(collection(db, "items"), item_cod)  
+    const itemRef = doc(collection(db, "items"), item_cod)
+    const isPart = typeof item_cod == 'string' && item_cod.indexOf('-') > 0
 
     const dele = await runTransaction(db, async (transaction) => {
         const item = await transaction.get(itemRef)
         const itemData = item.data()
         const ambienteRef =  itemData.ambiente
-        const did = itemData.key
+        const did = itemData.key        
+        const ambiente = await transaction.get(ambienteRef)
+        
         let volumeRef;
         if(itemData.meta.volume){
             volumeRef = itemData.meta.volume
             // remove do volume
             transaction.update(volumeRef, {items: arrayRemove(itemRef)})
         }
+        if(isPart){
+            const [parentKey, _] = item_cod.split('-')
+            const parentRef = doc(db, `items/${parentKey}`)
+            transaction.update(parentRef, {'meta.partes': arrayRemove(itemRef)})
+        }
        
 
-        const ambiente = await transaction.get(ambienteRef)
         const itemsm1 = ambiente.data().items - 1;
         transaction.update(ambienteRef, {items: itemsm1})
  
