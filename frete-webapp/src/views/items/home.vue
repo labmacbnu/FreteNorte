@@ -1,12 +1,11 @@
 <script setup>
 import { computed, onBeforeMount, ref } from 'vue';
-import { useAmbientesStore } from '@/stores/ambientes';
+import { useAmbientesUserStore } from '@/stores/ambientes';
 import { useItemsAmbienteStore, useDescricoesStore } from '@/stores/items'
 import AcordeaoChild from '@/components/AcordeaoChild.vue';
 import { RouterLink, RouterView, useRoute, useRouter } from 'vue-router';
 import { useUserPermissionsStore } from '@/stores/user';
-
-const ambientes = useAmbientesStore()
+ 
 const permissions = useUserPermissionsStore()
 const descricoes = useDescricoesStore()
 const router = useRouter()
@@ -37,12 +36,7 @@ const descricao_filtrados = computed(() => {
     }
 })
 
-const meus_ambientes = computed(() => {
-    return ambientes.dados.filter(
-        obj => [...permissions.ambientes, ...permissions.usuario_de].includes(obj.ambiente_codigo)
-        )
-
-})
+const meus_ambientes = useAmbientesUserStore()
 
 const codigo_search = ref("")
 
@@ -55,7 +49,7 @@ const codigo_search = ref("")
             <h1>Items</h1>
             <h2>Seus ambientes</h2>
             <div class="my-3">
-                <p v-for="x in meus_ambientes">
+                <p v-for="x in meus_ambientes.dados">
                     <RouterLink :to="{ name: 'items-ambiente', params: { ambiente: x.ambiente_codigo } }">{{ x.valor }}
                     </RouterLink>
                 </p>
