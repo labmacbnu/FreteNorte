@@ -1,11 +1,9 @@
 <script setup>
 import { computed, onBeforeMount, ref } from 'vue'; 
 import { RouterView, useRoute } from 'vue-router'; 
-import { useUserPermissionsStore } from '@/stores/user';
-import { useItemsAmbienteStore } from '@/stores/items'
+import { useUserPermissionsStore } from '@/stores/user'; 
 
-const route = useRoute() 
-const permissoes = useUserPermissionsStore()
+const route = useRoute()  
 
 </script>
 
