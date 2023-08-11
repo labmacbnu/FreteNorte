@@ -9,14 +9,13 @@ import { useUserPermissionsStore } from './stores/user';
 import { useDescricoesStore } from './stores/items';
  
  
-const ambientes = useAmbientesUserStore() 
 const route = useRoute()
 const router = useRouter()
 const descricoes = useDescricoesStore()
 
 
 const globaluser = ref(null) 
-const permission = useUserPermissionsStore();
+const permission = useUserPermissionsStore(); 
 
 function updateUser(state) {
     globaluser.value = state
