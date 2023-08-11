@@ -3,6 +3,7 @@ import { firebaseApp } from '../firebaseConfig'
 import { defineStore } from 'pinia' 
 import { useDocument } from  'vuefire';
 import { ref, computed } from 'vue'; 
+import { db } from '@/backend/index'
 import moment from 'moment';
 
 export const useSingleItemStoreOld = defineStore("single-item-old", {  
@@ -102,8 +103,23 @@ export function get_item_ref(key){
     return doc(db, `items/${key}` )
 }
 
-export async function delete_item(key){
-    await deleteDoc(get_item_ref(key)) 
+export async function notused_delete_item(key){
+    const db = getFirestore(firebaseApp) 
+    const itemRef = get_item_ref(key)
+    const lista_filhos = await runTransaction(db, async (transaction) => {
+        const item = await transaction.get(itemRef)
+        const volumeRef = item.data().meta.volume 
+        console.log(`item apagado está no volume ${volumeRef}`) 
+        if(volumeRef){
+        // verifica se o item está volumado, e retira do volume 
+        transaction.update(volumeRef, {items: arrayRemove(itemRef)})
+        } 
+        transaction.delete(itemRef)
+    })
+    console.log(`Apagado ${key}`)
+ 
+ 
+
 }
 
 export const itemModel = {
