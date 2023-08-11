@@ -6,8 +6,8 @@ import { computed, reactive, ref, toValue } from 'vue';
 import { update_item } from '@/stores/singleitem'
 import QRCode from '@/components/QRCode.vue';
 import { useDocument } from 'vuefire';
-import ModalDelete from '@/components/ModalDelete.vue';
-import { deleta_item } from '@/stores/items'; 
+import ModalDelete from '@/components/ModalDelete.vue'; 
+import { deleta_item } from '@/stores/items'
 
 const db = getFirestore(firebaseApp)
 const route = useRoute()

@@ -3,12 +3,11 @@ import { ref } from 'vue';
 import { useRoute } from 'vue-router';
 import { getFirestore, doc, Bytes } from 'firebase/firestore'
 import { firebaseApp } from '@/firebaseConfig'
-import { computed, reactive, inject, onBeforeMount, toValue, watch, onMounted } from 'vue';
-import { delete_item, update_item_part, create_part, get_item_ref, update_item } from '@/stores/singleitem'
-import { registra_volume_parte } from '@/stores/volumes'
+import { computed, reactive, inject,  toValue, watch, } from 'vue';
+import {  update_item_part, create_part, get_item_ref, update_item } from '@/stores/singleitem'
+import { deleta_item } from '@/stores/items'
 import { useDocument } from 'vuefire';
-import Modal from '@/components/Modal.vue';
-import { apaga_volume } from '@/stores/volumes'; 
+import Modal from '@/components/Modal.vue';  
 import { itemModel } from '@/stores/singleitem'; 
 import moment from 'moment'
 
@@ -79,9 +78,10 @@ async function deleta_parte(index){
     //await apaga_volume(volumeKey)
     if(n == 1) {
         update_item(item_db.value.key, {'meta.inteiro': true})
-    }
-    await delete_item(parteDoc.key)
+    } 
+    await deleta_item(parteDoc.key)
     console.log(`Apagada parte ${parteDoc.key}. (n=${n})`)
+    console.log(resultado)
      
 }
 
