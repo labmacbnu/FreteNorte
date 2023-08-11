@@ -171,23 +171,7 @@ const soft_volume_modal_ref = ref(null)
   width: 5em;
 }
 
-.span-lista-volumes { 
-}
 
-.tabela-item {
-  transition: all 1s;
-}
-.tabela-item > tr >* {
-  transition: all 1s;
-  overflow: hidden;
-}
-.tabela-enter > td {
-  line-height: 0 !important;
-}
-.tabela-enter > tr > * {
-  padding-top: 0px !important;
-  padding-bottom: 0px !important;
-}
 
 </style>
  
