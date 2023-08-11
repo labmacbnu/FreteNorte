@@ -24,13 +24,11 @@ const categorias = useDocument(doc(db, "agregados", "categorias_volumes"))
 const ambientes = useAmbientesUserStore()
 
 const items = useItemsAmbienteStore()
-
-const userRef = computed(() => doc(db, "usuarios", globaluser.value.email))
-const volRef = collection(db, "volumes") 
+ 
 
 const lista_items = ref( route.query.items  || [])
  
-const ambiente_selected = ref( route.query.ambiente || null )
+const ambiente_selected = computed(() => ambientes.dados.find(x=> x.ambiente_codigo == new_volume.origem))
 
 const new_volume = reactive(
   {
@@ -41,6 +39,16 @@ const new_volume = reactive(
     items: route.query.items || []
   }
 )
+
+function reset_new_volume() {
+  new_volume.categoria = null
+  new_volume.responsavel = globaluser.value.email
+  new_volume.localizacao_atual = route.query.ambiente || new_volume.localizacao_atual 
+  new_volume.origem = route.query.ambiente || new_volume.origem
+  //new_volume.items = []
+}
+
+
 
 const responsavel_label = computed(() => (globaluser.value.email) ? globaluser.value.displayName +  ' <'+globaluser.value.email+'>': "<?>")
 const lider_ambiente_label = computed(() => {
@@ -141,12 +149,11 @@ async function salvar_volume() {
   } 
   const volumeid = await registra_volume(toValue(new_volume)) 
   console.log(volumeid)
-  setTimeout(() =>  router.push({name: 'volumes'}), 125)
+  reset_new_volume()
 }
 
 onMounted(() => {
-  items.ambiente = new_volume.origem
-  items.filter_function = x => x.meta.inteiro
+  items.ambiente = new_volume.origem 
 })
 </script>
 
@@ -187,8 +194,8 @@ onMounted(() => {
     
     <div class="col-12">
       <h3 :class="{'text-danger': !validation.items}">Items inclusos no volume</h3>
-      <p class="form-text" v-if="new_volume.origem && ambientes[new_volume.origem]">
-        Lista de items de {{ ambientes[new_volume.origem].ambiente_nome }}.</p>
+      <p class="form-text" v-if="ambiente_selected">
+        Lista de items de {{ ambiente_selected.ambiente_nome }}.</p>
       <p v-else>Selecione o ambiente acima.</p>
       <input type="text" class="form-control"
        placeholder="Digite para filtrar a lista abaixo" v-model="filtrar_lista_items">
@@ -204,7 +211,8 @@ onMounted(() => {
           </tr>
         </thead>
         <tbody>
-          <tr class="border-bottom border-secondary " @click.stop="() => click_row(i)" v-for="(item, i) in all_items_filtered">
+          <tr class="border-bottom border-secondary " 
+          @click.stop="() => click_row(i)" v-for="(item, i) in all_items_filtered" :key="item.key">
             <td>
               <input  @click.self="() => click_row(i)" class="form-check-input mx-1 border border-primary" type="checkbox" :value="''+item.key"
                 v-model="lista_items" :id="'check' + i">
