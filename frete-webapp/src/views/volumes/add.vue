@@ -2,14 +2,14 @@
 import { computed, inject, toValue, onMounted, onServerPrefetch, reactive, ref, watch, onBeforeMount } from 'vue';
 import { useUserPermissionsStore } from '@/stores/user';
 import { useItemsAmbienteStore, orderedGroupBy } from '@/stores/items';
-import { useAmbientesStore } from '@/stores/ambientes';
+import { useAmbientesUserStore } from '@/stores/ambientes';
 import {  registra_volume, apaga_volume } from '@/stores/volumes';
 import { update_item_part, delete_item, get_item_ref } from '@/stores/singleitem' 
 
 
 import { db } from '@/backend/index.js';
 import { collection, where, doc, setDoc, query, updateDoc } from 'firebase/firestore';
-import {  useCollection, useDocument, usePendingPromises,  } from 'vuefire';  
+import {  useCollection, useDocument, usePendingPromises } from 'vuefire';  
 import { useRoute, useRouter } from 'vue-router';
 
 const { globaluser, updateUser } = inject("globaluser")
@@ -20,13 +20,8 @@ const router = useRouter()
 
 const categorias = useDocument(doc(db, "agregados", "categorias_volumes"))
 
-
-const lista_ambientes_usuario = [...permissoes.ambientes, ...permissoes.usuario_de]
-
-const q_amb = computed(() =>  query(collection(db, "ambientes"), where("ambiente_codigo", "in", lista_ambientes_usuario)))
-
-const ambientes = useCollection(q_amb)
-
+ 
+const ambientes = useAmbientesUserStore()
 
 const items = useItemsAmbienteStore()
 
@@ -50,7 +45,7 @@ const new_volume = reactive(
 const responsavel_label = computed(() => (globaluser.value.email) ? globaluser.value.displayName +  ' <'+globaluser.value.email+'>': "<?>")
 const lider_ambiente_label = computed(() => {
   if(new_volume.origem ){
-    const ambiente_obj = ambientes.value.find( x => x.ambiente_codigo == new_volume.origem)
+    const ambiente_obj = ambientes.dados.find( x => x.ambiente_codigo == new_volume.origem)
     if(ambiente_obj) 
       return ambiente_obj.lider.nome + ' <' + ambiente_obj.lider.id + '>'
     else
@@ -63,8 +58,7 @@ const lider_ambiente_label = computed(() => {
 
 
 const all_items_ordered = computed(() => { 
-  let all = [] 
-  // filtrar apenas não volumados
+  const all = []  
   if(new_volume.origem && items.dados)
     all.push(...items.dados) 
   return all.sort((a, b) => a.short_descricao.localeCompare(b.short_descricao))
@@ -72,7 +66,7 @@ const all_items_ordered = computed(() => {
 
 const all_items_nao_volumados = computed(() => {
 if(all_items_ordered.value.length > 0) {
-  return all_items_ordered.value.filter((elem) => !elem.meta.volumado)
+  return all_items_ordered.value.filter((elem) => !elem.meta.volumado && elem.meta.inteiro)
 } else {
   return []
 }
@@ -150,19 +144,13 @@ async function salvar_volume() {
   setTimeout(() =>  router.push({name: 'volumes'}), 125)
 }
 
-
-async function load_all_data() {
-  const permissoes = useUserPermissionsStore()
-  const lista_ambientes_usuario = [...permissoes.ambientes, ...permissoes.usuario_de] 
-  items.load_data(lista_ambientes_usuario) 
-  items.ambiente = route.query.ambiente 
-}
-
-onBeforeMount(async () => await load_all_data()) 
-onServerPrefetch( () => usePendingPromises() )  
+onMounted(() => {
+  items.ambiente = new_volume.origem
+  items.filter_function = x => x.meta.inteiro
+})
 </script>
 
-<template>
+<template> 
   <div class="row">
     <div class="col d-flex justify-content-end">
       <h1 class="flex-fill">Criar Volume</h1>
@@ -173,7 +161,7 @@ onServerPrefetch( () => usePendingPromises() )
     <div class="col-6">
       <label for="ambiente" class="form-label">Ambiente</label>  
       <select :class="{'border-danger': !validation.origem}" v-model="new_volume.origem" class="form-select" id="ambiente">
-        <option  v-for="(val, index ) in ambientes" :value="val.ambiente_codigo">
+        <option  v-for="(val, index ) in ambientes.dados" :value="val.ambiente_codigo">
           <template v-if="val && val.ambiente_nome">
           {{ val.ambiente_codigo }} - {{ val.ambiente_nome }}
           </template>
@@ -218,7 +206,7 @@ onServerPrefetch( () => usePendingPromises() )
         <tbody>
           <tr class="border-bottom border-secondary " @click.stop="() => click_row(i)" v-for="(item, i) in all_items_filtered">
             <td>
-              <input  @click.self="() => click_row(i)" class="form-check-input mx-1 border border-primary" type="checkbox" :value="item.key"
+              <input  @click.self="() => click_row(i)" class="form-check-input mx-1 border border-primary" type="checkbox" :value="''+item.key"
                 v-model="lista_items" :id="'check' + i">
             </td>
             <td>
