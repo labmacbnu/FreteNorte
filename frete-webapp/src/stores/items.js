@@ -2,8 +2,9 @@ import { defineStore } from 'pinia'
 import { getFirestore, doc, addDoc, collection, getDoc, query, 
     where, getDocs, updateDoc, runTransaction, deleteDoc, arrayRemove } from 'firebase/firestore'
 import { firebaseApp } from '../firebaseConfig'
-import { ref, computed, reactive, watch } from 'vue'
+import { ref, computed, reactive, watch, toValue } from 'vue'
 import { useCollection } from 'vuefire' 
+import { useUserPermissionsStore } from './user'
 
 const db = getFirestore(firebaseApp)
 
@@ -49,33 +50,27 @@ export function orderedGroupBy(list, keyGetter){
 
 
 export const useItemsAmbienteStore = defineStore('items-ambiente', ()=>{
- const ambiente = ref(null)
- const inner_db = reactive({})  
- const excluir_partes = ref(false)
- const dados = computed( () => {
-    if(ambiente.value){
-        return inner_db[ambiente.value]
-    }
-})
-    function load_data(ambientes){    
-        ambientes.forEach(ambiente => { 
-            if(!inner_db.hasOwnProperty(ambiente)){
-                const itemsColl = collection(db, "items")
-                const ambienteRef = doc(db, "ambientes", ambiente)
-                const q = query(itemsColl, where('ambiente', '==',  ambienteRef)) 
-                inner_db [ambiente] = useCollection(q, {wait: true}); 
-            }
-        }) 
-    }
+    const permissoes = useUserPermissionsStore()
+
+    const ambientes = computed( () => [...permissoes.ambientes, ...permissoes.usuario_de]) 
+    const inner_db = ref(null)
+    const ambiente = ref(null)
+    const filter_function = ref(null) 
+    const dados = computed( () => {
+        if(ambiente.value){
+            return inner_db.value.filter( x => x.ambiente.ambiente_codigo == ambiente.value) 
+        } else {
+            return inner_db.value
+        }
+    }) 
 
     const dados_agrupados = computed( () =>  { 
         if(dados.value) {
-            if(excluir_partes.value){
-                var dados_sem_partes = dados.value.filter( x => x.tipo != 'Parte')
-            } else {
-                var dados_sem_partes = dados.value
-            }
-            var mapa = groupBy(dados_sem_partes, x => x.short_descricao);
+            var dados_filtrados = toValue(dados)
+            if(filter_function.value != null){
+                dados_filtrados = dados_filtrados.filter(filter_function.value)
+            } 
+            var mapa = groupBy(dados_filtrados, x => x.short_descricao);
             var chaves = Array.from(mapa.keys())
             chaves.sort()
             var objeto_organizado = {}
@@ -85,8 +80,17 @@ export const useItemsAmbienteStore = defineStore('items-ambiente', ()=>{
             return objeto_organizado
         }
     })
+    watch(ambientes, () => {
+        const itemsColl = collection(db, "items")
+        const ambientesRefs = ambientes.value.map(
+            ambiente => doc(db, "ambientes", ambiente)
+        ) 
+        console.log(ambientes.value)
+        const q = query(itemsColl, where('ambiente', 'in', ambientesRefs)) 
+        useCollection(q, {wait: true, target: inner_db});  
+    })
 
-    return {ambiente, dados, load_data, dados_agrupados, inner_db, excluir_partes}
+    return {ambientes, ambiente, dados, dados_agrupados, inner_db, filter_function}
 })
 
 export const useDescricoesStore = defineStore("short-descricoes", {
