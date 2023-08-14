@@ -6,6 +6,11 @@ import { db } from '@/backend/index'
 import moment from 'moment';
 import { reactive, computed, ref } from 'vue';
 import { RouterLink } from "vue-router";
+import { useUsuariosStore } from '@/stores/users';
+
+
+const usuarios = useUsuariosStore() 
+
 
 const catRef = doc(db, 'agregados/categorias_volumes')
 const {data: categorias, pending: cat_pending, promise: cat_promisse } = useDocument(catRef)
@@ -15,11 +20,12 @@ const {data: lista_ambientes, pending: amb_pending} = useDocument(doc(db, 'agreg
 const filtros = reactive({
   categoria: null,
   origem: null, 
+  responsavel: null,
+  status: null,
   quantidade: 10
 })
 
-
-cat_promisse.value.then(() => filtros.categoria = categorias.value.valores[0])
+ 
 
 
 
@@ -33,27 +39,34 @@ const q = computed(()=> {
   if(filtros.origem)
     composite_query.push( where('origem', '==', doc(db, 'ambientes', filtros.origem)))
 
+  if(filtros.responsavel)
+    composite_query.push( where('responsavel', '==', doc(db, 'usuarios', filtros.responsavel)) )
+    
+  if(filtros.status)
+    composite_query.push( where('status', '==', filtros.status))
+
   return query(volRef,...composite_query,  where('deleted', '==', false), orderBy('data_criacao', 'desc'), limit(filtros.quantidade))
 })
 
-const volumes = useCollection(q, {wait: true})
+const volumes = useCollection(q, {wait: true, maxRefDepth: 1})
 
 const soft_volume_modal_ref = ref(null)
 
 const volumes_selecionados = ref([])
 </script>
 <template> 
-<div class="fixed-bottom text-end p-3"> 
-  <RouterLink :to="{name: 'lotes-add', query: {volumes: volumes_selecionados}}" class="btn btn-success">
-    <i class="bi bi-boxes me-2"></i>Criar Lote</RouterLink>
+<div class="row">
+  <div class="col">
+    <h4>Filtrando os lotes</h4>
+  </div>
 </div>
-
 <div class="row mb-3">
   <div class="col">
     <label class="form-label" for="categoria">
       Filtrar por categoria
     </label>
     <select v-model="filtros.categoria" id="categoria" class="form-select" v-if="!cat_pending">
+      <option :value="null">Todas</option>
       <option v-for="categoria in categorias.valores">
         {{categoria}}
       </option>
@@ -65,17 +78,42 @@ const volumes_selecionados = ref([])
   <div class="col">
     <label for="ambiente" class="form-label">Filtrar por ambiente de origem</label>
     <select v-if="!amb_pending" v-model="filtros.origem" id="ambiente" class="form-select">
+      <option :value="null">Qualquer ambiente</option>
       <option v-for="amb in lista_ambientes.liderados">
       {{ amb }}</option>
     </select>
+  </div>
+  <div class="col">
+    <label for="pessoa" class="form-label">Filtrar por responsável</label>
+    <select v-if="!amb_pending" v-model="filtros.responsavel" id="pessoa" class="form-select">
+      <option :value="null">Qualquer responsável</option>
+      <option :value="usr.email" v-for="usr in usuarios.usuarios">
+      {{ usr.nome }} &lt;{{ usr.email }}&gt;</option>
+    </select>
+  </div>
+  <div class="col">
+    <label for="pessoa" class="form-label">Status</label>
+    <select v-if="!amb_pending" v-model="filtros.status" id="pessoa" class="form-select">
+      <option :value="null">Qualquer status</option>
+      <option>Criado</option>
+      <option>Loteado</option>
+    </select>
+  </div>
+</div> 
+<div class="row">
+  <div class="col d-flex justify-content-between">
+ <h4>Exibindo lotes</h4>
+  <RouterLink :to="{name: 'lotes-add', query: {volumes: volumes_selecionados}}" class="btn btn-lg btn-success">
+    <i class="bi bi-boxes me-2"></i>Criar Lote</RouterLink> 
   </div>
 </div>
   <div class="row justify-content-start">
     <div class="col">
       <table class="table table-sm d-print-table">
+        <caption>Selecione os lotes e clique em Criar Lotes</caption>
+
         <thead>
-          <tr> 
-            <th></th>
+          <tr>  
             <th class="d-print-none">Código</th>
             <th>Lista de items</th>
             <th>Origem</th>
@@ -87,17 +125,19 @@ const volumes_selecionados = ref([])
             <th class="d-print-none"></th>
         </tr>
         </thead>
-        <tbody tag="tbody" name="tabela" is="transition-group">
+        <tbody>
           <template  v-for="volume in volumes" :key="'volume' + volume.codigo">
-          <tr>
+          <tr> 
             <td>
-              <input type="checkbox" :value="volume.codigo" v-model="volumes_selecionados">
+              <div class="form-check text-center text-wrap text-break text-secondary volume-codigo ">
+              <input :id="'volcheck' + volume.codigo" class="form-check-input" type="checkbox" :value="volume.codigo" v-model="volumes_selecionados">
+              <label :for="'volcheck' + volume.codigo" class="form-check-label">{{ volume.codigo }}</label>
+              </div>
             </td>
-            <td>{{ volume.codigo.substring(0,8)+'...' }}</td>
             <td> 
-              <a :href="'#items' + volume.codigo"  class="btn btn-primary" data-bs-toggle="collapse" 
+              <a :href="'#items' + volume.codigo"  class="btn btn-sm btn-primary" data-bs-toggle="collapse" 
                 role="button" aria-expanded="false" :aria-controls="'items' + volume.codigo">
-              Ver items</a>
+              Ver itens</a>
             </td>
             <td>
               {{ volume.origem.ambiente_codigo }}
@@ -118,16 +158,16 @@ const volumes_selecionados = ref([])
               {{ volume.responsavel.nome }} <small>&lt;{{ volume.responsavel.id }}&gt;</small>
             </td>
             <td class="d-print-none">
-              <button class="btn btn-danger" data-bs-target="#apagare" data-bs-toggle="modal" 
-              @click="() => soft_volume_modal_ref = volume.codigo"><i class="bi bi-trash" title="Apagar volume"></i></button>
+              <!-- <button class="btn btn-danger" data-bs-target="#apagare" data-bs-toggle="modal" 
+              @click="() => soft_volume_modal_ref = volume.codigo"><i class="bi bi-trash" title="Apagar volume"></i></button> -->
             </td>
           </tr>
           <tr class="collapse" :id="'items' + volume.codigo">
             <td colspan="5">
             <ul class="list-group list-group-flush align-top">
-                <li v-for="item in volume.items" :key="'I' + item.key" class="list-group-item justify-content-between d-flex">
-                  <small class="" v-if="item.key">{{ item.short_descricao }}</small>
-                  <span class="badge text-primary rounded-pill span-lista-volumes text-elipse">{{item.key}}</span>
+                <li v-for="(item, i) in volume.items" :key="'I' + i" class="list-group-item justify-content-between d-flex">
+                  <small>{{ item.short_descricao }}</small>
+                  <span class="badge text-primary rounded-pill span-lista-volumes">{{item?.key}}</span>
                 </li> 
               </ul>
             </td>
@@ -169,19 +209,9 @@ const volumes_selecionados = ref([])
   width: 6em;
 }
 
-.tabela-item {
-  transition: all 1s;
-}
-.tabela-item > tr >* {
-  transition: all 1s;
-  overflow: hidden;
-}
-.tabela-enter > td {
-  line-height: 0 !important;
-}
-.tabela-enter > tr > * {
-  padding-top: 0px !important;
-  padding-bottom: 0px !important;
+.volume-codigo {
+  width: 6.5em;
+  font-size: x-small;
 }
 
 </style>
