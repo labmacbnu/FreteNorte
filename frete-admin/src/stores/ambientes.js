@@ -2,7 +2,7 @@ import { computed, reactive, ref } from 'vue'
 import { defineStore } from 'pinia'
 import { getFirestore, query, where, collection, setDoc, doc, updateDoc } from 'firebase/firestore'
 import { firebaseApp } from '../firebaseConfig'
-import { useCollection } from 'vuefire'
+import { useCollection, useDocument } from 'vuefire'
 import { useUsuariosStore } from './users'
 
 
@@ -40,3 +40,11 @@ export async function add_lider_ambiente(ambiente_codigo, lider_email) {
     usuarios.add_ambiente(lider_email, ambiente_codigo)
     return uptime
 }
+
+export const useListaAmbientesStore = defineStore('listaAmbientes', ()=>{ 
+    const db = getFirestore(firebaseApp)
+    const pesquisa = doc(db, "agregados/ambientes")  
+    const {data: pre_dados, pending, promise} =  useDocument(pesquisa) 
+    const dados = computed(() =>  pending.value? [] : pre_dados.value.codigos)
+    return {dados}
+})
