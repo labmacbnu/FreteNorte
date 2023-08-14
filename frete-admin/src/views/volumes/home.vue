@@ -57,7 +57,7 @@ const volumes_selecionados = ref([])
 <template> 
 <div class="row">
   <div class="col">
-    <h4>Filtrando os lotes</h4>
+    <h4>Filtrando os volumes</h4>
   </div>
 </div>
 <div class="row mb-3">
@@ -102,7 +102,7 @@ const volumes_selecionados = ref([])
 </div> 
 <div class="row">
   <div class="col d-flex justify-content-between">
- <h4>Exibindo lotes</h4>
+ <h4>Exibindo os volumes</h4>
   <RouterLink :to="{name: 'lotes-add', query: {volumes: volumes_selecionados}}" class="btn btn-lg btn-success">
     <i class="bi bi-boxes me-2"></i>Criar Lote</RouterLink> 
   </div>
@@ -110,7 +110,7 @@ const volumes_selecionados = ref([])
   <div class="row justify-content-start">
     <div class="col">
       <table class="table table-sm d-print-table">
-        <caption>Selecione os lotes e clique em Criar Lotes</caption>
+        <caption>Selecione os volumes e clique em Criar Lote</caption>
 
         <thead>
           <tr>  
