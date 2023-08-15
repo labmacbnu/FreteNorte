@@ -1,5 +1,5 @@
 <script setup>
-import { useRoute } from 'vue-router';
+import { useRoute, useRouter} from 'vue-router';
 import { useCollection } from 'vuefire';
 import { db } from '@/backend/index';
 import { query, where, collection } from 'firebase/firestore';
@@ -16,6 +16,7 @@ const {globaluser, updateUser} = inject('globaluser')
 const user_label = computed(() => `${globaluser.value.displayName} <${globaluser.value.email}>` )
 
 const route = useRoute()
+const router = useRouter()
 
 const volumes_list = route.query.volumes
  
@@ -53,6 +54,7 @@ async function front_save_lote(){
     //console.log(toValue(new_lote)) 
     const valor = await save_lote({...new_lote})
     console.log(valor)
+    router.push({name: 'lotes'})
 }
 
 
