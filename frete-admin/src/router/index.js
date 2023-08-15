@@ -54,6 +54,12 @@ const router = createRouter({
               requiresAuth: true
             }
           },
+          {
+            path: 'cod/:codigo',
+            name: 'volume-codigo',
+            component: () => import('@/views/volumes/codigo.vue'),
+            meta: { title: "Volume por código"}
+          },
           { 
             name: 'volumes-edita-categorias',
             path: 'categoriasedit',
