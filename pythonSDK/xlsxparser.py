@@ -5,7 +5,7 @@ from pathlib import Path
 import re
 import json
 # %%
-FONTE = Path("./xlsx/")
+FONTE = Path("./xlsx/sul/")
 DESTINO = Path("./json/")
 
 # %%
