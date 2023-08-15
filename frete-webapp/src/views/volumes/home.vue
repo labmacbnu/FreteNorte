@@ -79,13 +79,14 @@ const soft_volume_modal_ref = ref(null)
           <tr>
             <th class="d-none d-print-table-cell">Volume</th>
             <th class="d-print-none">Código</th>
+            <th class="d-print-none">Editar</th>
             <th>Itens</th>
             <th>Origem</th>
             <th>Categoria</th>
             <th>Status</th>
             <th>Localização atual</th>
             <th>Criado em</th>
-            <th class="d-print-none"></th>
+            <th class="d-print-none">Apagar</th>
         </tr>
         </thead>
         <tbody>
@@ -98,6 +99,11 @@ const soft_volume_modal_ref = ref(null)
             <td class="d-print-none"> 
               <RouterLink class="" :to="{name: 'volume-codigo', params: {codigo: volume.codigo }}">
               {{ volume.codigo.substring(0,8) + '...' }}
+            </RouterLink>
+            </td>
+            <td> 
+              <RouterLink class="" :to="{name: 'volume-edit', params: {codigo: volume.codigo }}">
+              Editar
             </RouterLink>
             </td>
             <td> 
