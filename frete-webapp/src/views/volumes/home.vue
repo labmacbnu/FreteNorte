@@ -69,7 +69,7 @@ const soft_volume_modal_ref = ref(null)
     </div>
     <div class="col text-end">
       <!-- <button class="btn-primary btn d-print-none" data-bs-target="#criarVolume" data-bs-toggle="modal">Criar novo volume</button> -->
-      <RouterLink class="btn btn-primary" :to="{name: 'volume-add'}">Criar Volume</RouterLink>
+      <RouterLink class="btn btn-success btn-lg" :to="{name: 'volume-add'}">Criar Volume</RouterLink>
     </div>
   </div>
   <div class="row">
