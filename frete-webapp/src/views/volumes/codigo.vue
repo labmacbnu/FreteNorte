@@ -1,15 +1,20 @@
 <script setup>
-import { useRoute, useRouter } from 'vue-router'
 import { doc } from 'firebase/firestore'
 import { useDocument } from 'vuefire'
-import { db, getdoc } from '@/backend/index'
-import { onBeforeMount, onMounted, ref } from 'vue'
+import { db } from '@/backend/index'
+import { computed, ref, watch } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
 import QRCode from '@/components/QRCode.vue'
 import moment from 'moment'
 
 const route = useRoute()
 const router = useRouter()
-const codigo = route.params.codigo
+const codigo = ref( (route.params)? route.params.codigo: null)
+
+watch( () => route.params.codigo, () =>{
+  codigo.value = route.params.codigo
+}, {immediate: true})
+
 const {
   // rename the Ref to something more meaningful
   data: volume,
@@ -19,7 +24,7 @@ const {
   error,
   // A promise that resolves or rejects when the initial state is loaded
   promise
-} = useDocument(doc(db, "volumes", codigo))
+} = useDocument(doc(db, "volumes", codigo.value))
 
 const responsavel = ref(null)
 
