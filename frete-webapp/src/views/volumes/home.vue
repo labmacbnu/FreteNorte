@@ -52,7 +52,7 @@ async function salvar_volume() {
 
 async function soft_apaga_volume(codigo) { 
   console.log(`Apagando volume ${codigo}`)
-  const volume_registry = volumes.dados.value.find(x => x.codigo == codigo)
+  const volume_registry = volumes.dados.find(x => x.codigo == codigo)
   const items_do_volume = volume_registry.items 
   const uptime = apaga_volume(codigo)
   return true
