@@ -1,0 +1,1 @@
+/home/bossa/COGEP/FreteNorte/frete-webapp/src/components/QRCode.vue

@@ -158,6 +158,7 @@ const volumes_selecionados = ref([])
               {{ volume.responsavel.nome }} <small>&lt;{{ volume.responsavel.id }}&gt;</small>
             </td>
             <td class="d-print-none">
+              <RouterLink :to="{name: 'volume-codigo', params: {codigo: volume.id}}" class="text-decoration-none text-success-emphasis">Ver volume <i class="bi bi-box-seam"></i></RouterLink>
               <!-- <button class="btn btn-danger" data-bs-target="#apagare" data-bs-toggle="modal" 
               @click="() => soft_volume_modal_ref = volume.codigo"><i class="bi bi-trash" title="Apagar volume"></i></button> -->
             </td>
