@@ -6,7 +6,7 @@ defineProps({
 })
 </script>
 <template> 
-<div class="qrcode d-flex-inline">
+<div class="qrcode">
 <VueQrcode :color="{
         dark: '#000',
         light: '#FFF'
@@ -18,11 +18,10 @@ defineProps({
 </template>
 <style>
 .qrcode {
-  width: 150px;
-  height: 150px;
-  float: left;
+  width: fit-content;
+  height: fit-content;
 }
-.qrcode img {
+/* .qrcode img {
   margin: auto;
-}
+} */
 </style>
