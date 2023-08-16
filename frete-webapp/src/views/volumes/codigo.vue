@@ -60,10 +60,11 @@ function print(){
         <div class="col-8">
           <h3>Volume {{ volume.codigo }}</h3>
           <p class="mb-1"><b>Responsável:</b> {{ volume.responsavel.nome }}</p>
-          <p class="mb-1"><b>Origem:</b> {{ volume.origem.ambiente_codigo }} &dash; {{ volume.origem.ambiente_nome }}</p>
           <p class="mb-1"><b>Criado em:</b> {{ moment.unix(volume.data_criacao.seconds).format("DD/MM/YY HH:MM") }}</p>
-          <p class="mb-1"><b>Local atual:</b> {{ volume.localizacao_atual.ambiente_codigo }}</p>
-          <p class="mb-1"><b>Destino:</b> </p>
+          <h5 class="mt-3">Localização</h5>
+          <p class="px-3 mb-1"><b>Origem:</b> {{ volume.origem.ambiente_codigo }} &dash; {{ volume.origem.ambiente_nome }}</p>
+          <p class="px-3 mb-1"><b>Local atual:</b> {{ volume.localizacao_atual.ambiente_codigo }}</p>
+          <p class="px-3 mb-1"><b>Destino:</b>  {{ volume.destino ? volume.destino.codigo : "" }} </p>
         </div>
 
         <div class="col d-flex justify-content-end">
@@ -71,9 +72,9 @@ function print(){
         </div>
 
       </div>
-      <div class="row">
+      <div class="row mt-2">
         <div class="col">
-          <p class="fw-bold">Lista de itens</p>
+          <h5 class="fw-bold">Lista de itens</h5>
           <ul class="list-group">
             <li class="list-group-item justify-content-between d-flex" v-for="item in volume.items">
               <span>
