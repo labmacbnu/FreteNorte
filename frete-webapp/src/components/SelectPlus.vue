@@ -19,7 +19,7 @@
           @mousedown="selectOption(option)"
           v-for="(option, index) in filteredOptions"
           :key="index">
-            {{ option.name || option.id || '-' }}
+            {{ option }}
         </div>
       </div>
     </div>
@@ -30,6 +30,12 @@
       name: 'Dropdown',
       template: 'Dropdown',
       props: {
+        valor: {
+          type: String,
+          required: false,
+          default: '',
+          note: 'Input name'
+        },
         name: {
           type: String,
           required: false,
@@ -76,7 +82,7 @@
           const filtered = [];
           const regOption = new RegExp(this.searchFilter, 'ig');
           for (const option of this.options) {
-            if (this.searchFilter.length < 1 || option.name.match(regOption)){
+            if (this.searchFilter.length < 1 || option.match(regOption)){
               if (filtered.length < this.maxItem) filtered.push(option);
             }
           }
@@ -87,7 +93,7 @@
         selectOption(option) {
           this.selected = option;
           this.optionsShown = false;
-          this.searchFilter = this.selected.name;
+          this.searchFilter = this.selected;
           this.$emit('selected', this.selected);
         },
         showOptions(){
@@ -97,11 +103,11 @@
           }
         },
         exit() {
-          if (!this.selected.id) {
-            this.selected = {};
+          if (!this.selected) {
+            this.selected = '';
             this.searchFilter = '';
           } else {
-            this.searchFilter = this.selected.name;
+            this.searchFilter = this.selected;
           }
           this.$emit('selected', this.selected);
           this.optionsShown = false;
@@ -120,6 +126,9 @@
             this.selected = this.filteredOptions[0];
           }
           this.$emit('filter', this.searchFilter);
+        },
+        valor(){
+          this.searchFilter = this.valor
         }
       }
     };
