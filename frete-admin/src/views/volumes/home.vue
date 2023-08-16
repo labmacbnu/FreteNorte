@@ -45,7 +45,10 @@ const q = computed(()=> {
   if(filtros.status)
     composite_query.push( where('status', '==', filtros.status))
 
-  return query(volRef,...composite_query,  where('deleted', '==', false), orderBy('data_criacao', 'desc'), limit(filtros.quantidade))
+  if(filtros.quantidade)
+    composite_query.push( limit(filtros.quantidade))
+
+  return query(volRef,...composite_query,  where('deleted', '==', false), orderBy('data_criacao', 'desc'))
 })
 
 const volumes = useCollection(q, {wait: true, maxRefDepth: 1})
@@ -176,6 +179,20 @@ const volumes_selecionados = ref([])
           </tr>
       </template>
       </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="2">
+            <div class="form-floating">
+            <select id="quantidade" v-model="filtros.quantidade" class="form-select">
+              <option v-for="x in 5" :value="x*5">{{ x*5 }}</option>
+              <option :value="null">Todos</option>
+            </select>
+            <label for="quantidade">Exibir quantos registros</label>
+            </div>
+          </td>
+          <td colspan="7"></td> 
+        </tr>
+      </tfoot>
       </table>
     </div>
   </div>
