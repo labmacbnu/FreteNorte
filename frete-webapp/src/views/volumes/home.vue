@@ -82,6 +82,7 @@ const soft_volume_modal_ref = ref(null)
             <th class="d-print-none">Editar</th>
             <th>Itens</th>
             <th>Origem</th>
+            <th>Destino</th>
             <th>Categoria</th>
             <th>Status</th>
             <th>Localização atual</th>
@@ -115,6 +116,9 @@ const soft_volume_modal_ref = ref(null)
               {{ volume.origem.ambiente_codigo }}
             </td>
             <td>
+              {{ volume.destino ? volume.destino.codigo : "" }}
+            </td>
+            <td>
               {{ volume.categoria }}
             </td>
             <td>
@@ -132,6 +136,7 @@ const soft_volume_modal_ref = ref(null)
             </td>
           </tr>
           <tr class="collapse" :id="'items' + volume.codigo">
+            <td colspan="2"></td>
             <td colspan="5"> 
             <ul class="list-group list-group-flush align-top">
               <template  v-for="item in volume.items"> 
