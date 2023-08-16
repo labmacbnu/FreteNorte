@@ -32,6 +32,15 @@ export const useListaAmbientesStore = defineStore('listaAmbientes', ()=>{
 })
 
 
+export const useListaAmbientesNorteStore = defineStore('listaAmbientesNorte', ()=>{ 
+    const db = getFirestore(firebaseApp)
+    const pesquisa = doc(db, "agregados/ambientes_norte")  
+    const {data: pre_dados, pending, promise} =  useDocument(pesquisa) 
+    const dados = computed(() =>  pending.value? [] : pre_dados.value.codigos)
+    return {dados}
+})
+
+
 export const useAmbientesUserStore = defineStore('ambientes-user', ()=>{ 
     async function ambiente_status(ambiente_codigo) {
         const db = getFirestore(firebaseApp)
