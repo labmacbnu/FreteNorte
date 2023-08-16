@@ -78,8 +78,10 @@ export const useAmbientesUserStore = defineStore('ambientes-user', ()=>{
         }
     }
     watch(ambientes, async () => {
-     useCollection(amb_query, {wait: true, target: dados})
-        update_stats()
+        if(ambientes.value.length != 0){
+            useCollection(amb_query, {wait: true, target: dados})
+            update_stats()
+        }
     },  { immediate: true })
 
 
