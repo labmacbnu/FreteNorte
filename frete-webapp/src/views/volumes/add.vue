@@ -198,13 +198,14 @@ onMounted(() => {
     </div>
 
     <div class="col-6">
-      <label for="destino" class="form-label">Ambiente destino</label>    
+      <label for="destino" class="form-label">Ambiente destino</label>
       <SelectPlus :valor="new_volume.destino" placeholder="Selecione um destino" @selected="(x) => new_volume.destino = x"
        :options="lista_ambientes_norte.dados"></SelectPlus>
     </div>
     <div class="col-6">
-      <p class="mb-1">Destinos sugeridos: 
-        <span @click="() => new_volume.destino = x.codigo" :title="x.nome" role="button" class="badge text-bg-light" v-for="x in destino_filtrado">{{ x.codigo }}</span>
+      <p class="mb-2">Destinos sugeridos</p>
+      <p>
+        <a @click="() => new_volume.destino = x.codigo" :title="x.nome" class="btn btn-light" v-for="x in destino_filtrado">{{ x.codigo }}</a>
       </p>
     </div>
 
