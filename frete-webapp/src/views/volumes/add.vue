@@ -61,6 +61,7 @@ function reset_new_volume() {
   new_volume.responsavel = globaluser.value.email
   new_volume.localizacao_atual = route.query.ambiente || new_volume.localizacao_atual 
   new_volume.origem = route.query.ambiente || new_volume.origem
+  new_volume.destino =  ''
   //new_volume.items = []
 }
 
@@ -133,7 +134,8 @@ const validation = reactive({
     responsavel: true,  
     categoria: true,
     origem: true, 
-    items: true
+    items: true,
+    destino: true,
 })
  
 function validate(){
@@ -142,6 +144,7 @@ function validate(){
   validation.categoria = new_volume.categoria != null
   validation.origem = new_volume.origem != null
   validation.items = new_volume.items.length != 0 
+  validation.destino = new_volume.destino != ''
 }
 function reset_validation(){
   validation.categoria = true
@@ -149,13 +152,14 @@ function reset_validation(){
   validation.categoria = true
   validation.origem = true
   validation.items = true
+  validation.destino = true
 
 }
 
 async function salvar_volume() { 
 
   console.log(JSON.stringify(new_volume))
-  validate()  
+  validate()
   for(const [key, value] of Object.entries(validation)){
     // se alguma coisa não for válida, retorna zero
     if(value == false){
@@ -199,7 +203,7 @@ onMounted(() => {
 
     <div class="col-6">
       <label for="destino" class="form-label">Ambiente destino</label>
-      <SelectPlus :valor="new_volume.destino" placeholder="Selecione um destino" @selected="(x) => new_volume.destino = x"
+      <SelectPlus :classe="(!validation.categoria)? 'border-danger': ''" :valor="new_volume.destino" placeholder="Selecione um destino" @selected="(x) => new_volume.destino = x"
        :options="lista_ambientes_norte.dados"></SelectPlus>
     </div>
     <div class="col-6">
@@ -258,8 +262,7 @@ onMounted(() => {
         </tbody>
       </table>
     </div>
-  </form>
-  {{ new_volume }}
+  </form> 
 </template>
 <style>
 
