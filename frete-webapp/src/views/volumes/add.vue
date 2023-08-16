@@ -2,8 +2,9 @@
 import { computed, inject, toValue, onMounted, onServerPrefetch, reactive, ref, watch, onBeforeMount } from 'vue';
 import { useUserPermissionsStore } from '@/stores/user';
 import { useItemsAmbienteStore, orderedGroupBy } from '@/stores/items';
-import { useAmbientesUserStore } from '@/stores/ambientes';
+import { useAmbientesUserStore , useListaAmbientesNorteStore } from '@/stores/ambientes';
 import {  registra_volume } from '@/stores/volumes';
+import SelectPlus from '@/components/SelectPlus.vue';
 
 
 import { db } from '@/backend/index.js';
@@ -22,6 +23,9 @@ const categorias = useDocument(doc(db, "agregados", "categorias_volumes"))
  
 const ambientes = useAmbientesUserStore()
 
+const lista_ambientes_norte = useListaAmbientesNorteStore() 
+
+
 const items = useItemsAmbienteStore()
  
 
@@ -35,9 +39,22 @@ const new_volume = reactive(
     responsavel: globaluser.value.email, 
     localizacao_atual: route.query.ambiente || null,
     origem: route.query.ambiente || null, 
-    items: route.query.items || []
+    items: route.query.items || [],
+    destino: ''
   }
 )
+
+
+const { data: ambientes_norte } = useCollection(query(collection(db, "ambientes-norte"), where("origem", "array-contains-any", ambientes.ambientes)))
+
+
+const destino_filtrado = computed(() => { 
+  if(new_volume.origem && ambientes_norte.value) {
+    return ambientes_norte.value.filter(x => x.origem.includes(new_volume.origem) ) 
+  } else {
+    return []
+  }
+})
 
 function reset_new_volume() {
   new_volume.categoria = null
@@ -165,7 +182,7 @@ onMounted(() => {
   </div>
   <form class="row g-3"> 
     <div class="col-6">
-      <label for="ambiente" class="form-label">Ambiente</label>  
+      <label for="ambiente" class="form-label">Ambiente de origem</label>  
       <select :class="{'border-danger': !validation.origem}" v-model="new_volume.origem" class="form-select" id="ambiente">
         <option  v-for="(val, index ) in ambientes.dados" :value="val.ambiente_codigo">
           <template v-if="val && val.ambiente_nome">
@@ -179,16 +196,29 @@ onMounted(() => {
       <input :class="{'border-danger': !validation.origem}" type="text" class="form-control" id="lider-ambiente"
        :value="lider_ambiente_label" disabled>
     </div>
+
     <div class="col-6">
-      <label for="responsavel" class="form-label">Responsável por criar o volume</label>
-      <input type="text" class="form-control" id="responsavel" 
-      :value="responsavel_label" disabled>
+      <label for="destino" class="form-label">Ambiente destino</label>    
+      <SelectPlus :valor="new_volume.destino" placeholder="Selecione um destino" @selected="(x) => new_volume.destino = x"
+       :options="lista_ambientes_norte.dados"></SelectPlus>
     </div>
+    <div class="col-6">
+      <p class="mb-1">Destinos sugeridos: 
+        <span @click="() => new_volume.destino = x.codigo" :title="x.nome" role="button" class="badge text-bg-light" v-for="x in destino_filtrado">{{ x.codigo }}</span>
+      </p>
+    </div>
+
     <div class="col-6"> 
         <label for="floatingSelect" class="form-label">Categoria</label> 
         <select :class="{'border-danger': !validation.categoria}" v-model="new_volume.categoria" class="form-select" id="floatingSelect" aria-label="Floating label select example">
           <option v-if="categorias" v-for="x in categorias.valores">{{ x }}</option>
         </select>
+    </div>
+
+    <div class="col-6">
+      <label for="responsavel" class="form-label">Responsável por criar o volume</label>
+      <input type="text" class="form-control" id="responsavel" 
+      :value="responsavel_label" disabled>
     </div>
     
     <div class="col-12">
@@ -228,6 +258,7 @@ onMounted(() => {
       </table>
     </div>
   </form>
+  {{ new_volume }}
 </template>
 <style>
 
