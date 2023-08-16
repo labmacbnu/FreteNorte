@@ -46,51 +46,18 @@ const codigo_search = ref("")
 <template>
     <div class="row">
         <div class="col">
-            <h1>Items</h1>
-            <h2>Seus ambientes</h2>
-            <div class="my-3">
-                <p v-for="x in meus_ambientes.dados">
-                    <RouterLink :to="{ name: 'items-ambiente', params: { ambiente: x.ambiente_codigo } }">{{ x.valor }}
-                    </RouterLink>
-                </p>
-            </div>
+            <h1>Items</h1> 
         </div>
     </div>
-    <div class="row g-3">
-        <!-- <div class="col-lg-4 col-sm-6 border rounded p-2" :class="{'border-secondary': main_focus == 'ambiente'}">
-            <h3>Pesquisa por ambiente</h3>
-            <p>Começe a digitar o nome do ambiente e clique em um link da lista que aparecer. </p>
-            <div class="input-group mb-3">
-                <input @focusin="() => main_focus = 'ambiente'" class="form-control" v-model="ambiente_search" type="text">
-            </div>
-            <ul class="list-group" id="ambientesList" v-if="main_focus == 'ambiente'">
-                <TransitionGroup name="list">
-                    <li class="list-group-item" v-for="x in ambientes_filtrados">
-                        <RouterLink :to="{ name: 'items-ambiente', params: { ambiente: x.ambiente_codigo } }">
-                            {{ x.valor }}
-                        </RouterLink>
-                    </li>
-                </TransitionGroup>
-            </ul>
-        </div> -->
-        <!-- <div class="col-lg-4 col-sm-6 border rounded p-2" :class="{'border-secondary': main_focus == 'descricao'}">
-            <h3>Pesquisa por descrição</h3>
-            <p>Começe a digitar uma descrição do item e clique em um item da lista que aparecer. </p>
-            <div class="input-group mb-3">
-                <input @focusin="() => main_focus = 'descricao'" class="form-control" v-model="descricao_search"
-                    type="text">
-            </div>
-            <ul class="list-group" id="descricaoList" v-if="main_focus == 'descricao'">
-                <TransitionGroup name="list">
-                    <li class="list-group-item" v-for="x in descricao_filtrados">
-                        <RouterLink :to="{ name: 'item-descricao', query: { descricao: x } }">
-                            {{ x }}
-                        </RouterLink>
-                    </li>
-                </TransitionGroup>
-            </ul>
-        </div> -->
-        <div class="col-lg-4 col-sm-6 border rounded p-2">
+    <div class="row mb-4">
+        <div class="col-6 text-center ">
+               
+            <RouterLink class="btn btn-primary" :to="{ name: 'item-add' }"><i
+            class="bi bi-plus-circle me-2"></i>Adicionar novo item</RouterLink> 
+        </div>
+    </div>
+    <div class="row g-2"> 
+        <div class="col-6 border rounded p-2">
             <h3>Pesquisa por código</h3>
             <p>Digite o código e pesquise pelo item. </p>
             <div class="input-group mb-3">
@@ -100,6 +67,7 @@ const codigo_search = ref("")
                     @click="router.push({ name: 'item-codigo', params: { codigo: codigo_search } })">Pesquisar item</button>
             </div>
         </div>
+        
     </div>
 </template>
 
