@@ -120,6 +120,7 @@ const volumes_selecionados = ref([])
             <th class="d-print-none">Código</th>
             <th>Lista de items</th>
             <th>Origem</th>
+            <th>Destino</th>
             <th>Categoria</th>
             <th>Status</th>
             <th>Localização atual</th>
@@ -144,6 +145,9 @@ const volumes_selecionados = ref([])
             </td>
             <td>
               {{ volume.origem.ambiente_codigo }}
+            </td>
+            <td>
+              {{ volume.destino ? volume.destino.codigo: '' }}
             </td>
             <td>
               {{ volume.categoria }}
