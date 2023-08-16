@@ -2,7 +2,7 @@
     <div class="dropdown" v-if="options">
   
       <!-- Dropdown Input -->
-      <input class="dropdown-input form-select"
+      <input :class="classe" class="dropdown-input form-select"
         :name="name"
         @focus="showOptions()"
         @blur="exit()"
@@ -30,11 +30,17 @@
       name: 'Dropdown',
       template: 'Dropdown',
       props: {
+        classe: {
+          type: String,
+          required: false,
+          default: '',
+          note: 'Border style'
+        },
         valor: {
           type: String,
           required: false,
           default: '',
-          note: 'Input name'
+          note: 'Two way binding'
         },
         name: {
           type: String,
@@ -73,9 +79,6 @@
           optionsShown: false,
           searchFilter: ''
         }
-      },
-      created() {
-        this.$emit('selected', this.selected);
       },
       computed: {
         filteredOptions() {
