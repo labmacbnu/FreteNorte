@@ -38,6 +38,7 @@ watch(selecionados, (novo, antigo) => {
             <template #corpo>
             <ul class="list-group">
                 <template v-for="(subitem, idx) in valor">
+                    <!-- Se o item estiver inteiro -->
                     <template v-if="subitem.meta.inteiro">
                     <li class="list-group-item d-flex justify-content-between align-items-center" >
                         <div class="form-check">
@@ -49,6 +50,7 @@ watch(selecionados, (novo, antigo) => {
                     </li>
                 </template>
                 <template v-else>
+                    <!-- Se o item estiver em partes -->
                     <li class="list-group-item d-flex justify-content-between align-items-center">
                         {{ subitem.detalhes.descricao.substring(0,180) }}
                     </li>
@@ -59,7 +61,7 @@ watch(selecionados, (novo, antigo) => {
                             <label :for="'item'+parte.key" class="form-check-label text-capitalize">{{ parte.detalhes.descricao.substring(0,140) }}</label>
                         </div> 
                         <span class="badge badge-primary badge-pill">
-                        <RouterLink :to="{name: 'item-codigo', params: {codigo: parte.key }}">Ver item</RouterLink></span>
+                        <RouterLink :to="{name: 'item-codigo', params: {codigo: parte.key }}">Ver parte</RouterLink></span>
                         </li>
                     </template>
                 </template>
