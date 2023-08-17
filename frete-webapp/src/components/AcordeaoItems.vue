@@ -1,22 +1,38 @@
 <script setup>
-import { ref, watch } from 'vue';
-defineProps(['id', 'lista_agrupada'])
+import { ref, watch, computed } from 'vue';
 import AcordeaoChild from './AcordeaoChild.vue';
+
+const props = defineProps(['id', 'lista_agrupada'])
 
 const emits = defineEmits(['items_selecionados'])
 
 const selecionados = ref([])
+ 
+const volumado_ok = computed(() => Object.values(props.lista_agrupada).map(
+        // para cada lista de items, se o item for inteiro, verifica se ele foi volumado
+        // se não for inteiro, verifica se as partes são volumadas e retorna um flat array
+        x => x.map( y =>  y.meta.inteiro ?  y.meta.volumado : y.meta.partes.map( z => z.meta.volumado) ).flat()
+        )
+)
+// aplica um operador && para cada item da lista, se todos forem true, retorna true
+const header_classes = computed(() => volumado_ok.value.map( x=> x.reduce( (a,b) => a && b, true)) 
+)
+
+// conta quantos itens tem em cada lista
+const n_considerando_partes = computed(() => volumado_ok.value.map( x=> x.length ))
+ 
 
 watch(selecionados, (novo, antigo) => { 
     emits('items_selecionados', novo)
 })
 </script>
 
-<template> 
-<div class="accordion" :id="id">
-        <AcordeaoChild v-for="(valor, chave, n) in lista_agrupada" :pai="id" :aid="'acord' + n">
+<template>  
+<div class="accordion" :id="props.id">
+        <AcordeaoChild v-for="(valor, chave, n) in props.lista_agrupada" :pai="id" :aid="'acord' + n" :done="header_classes[n]">
             <template #titulo>
-                <span class="badge rounded-pill text-bg-secondary mx-1">{{valor.length}}</span> {{chave}} 
+                <span class="badge rounded-pill mx-1" :class="[header_classes[n] ? 'text-bg-secondary': 'text-bg-primary']">{{n_considerando_partes[n]}}</span> 
+                {{chave}} 
             </template>
             
             <template #corpo>
