@@ -6,6 +6,7 @@ import { computed, ref, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import QRCode from '@/components/QRCode.vue'
 import moment from 'moment'
+import { simbolos_nbr } from '@/stores/volumes'
 
 const route = useRoute()
 const router = useRouter()
@@ -32,6 +33,9 @@ function print(){
   window.print()
 }
 
+
+
+
 </script>
 <template>
   <!-- Carregando -->
@@ -55,19 +59,32 @@ function print(){
     </template>
     <template v-else>
       <!-- Existe -->
-
-      <div class="row justify-content-start g-3">
-        <div class="col-8">
-          <h3>Volume {{ volume.codigo }}</h3>
+      <div class="row">
+        <div class="col">
+          <h4>Volume {{ volume.codigo }}</h4>
+        </div>
+      </div>
+      <div class="row justify-content-start g-1">
+        <div class="col-4">
           <p class="mb-1"><b>Responsável:</b> {{ volume.responsavel.nome }}</p>
           <p class="mb-1"><b>Criado em:</b> {{ moment.unix(volume.data_criacao.seconds).format("DD/MM/YY HH:MM") }}</p>
           <h5 class="mt-3">Localização</h5>
-          <p class="px-3 mb-1"><b>Origem:</b> {{ volume.origem.ambiente_codigo }} &dash; {{ volume.origem.ambiente_nome }}</p>
+          <p class="px-3 mb-1"><b>Origem:</b> {{ volume.origem.ambiente_codigo }}</p>
           <p class="px-3 mb-1"><b>Local atual:</b> {{ volume.localizacao_atual.ambiente_codigo }}</p>
           <p class="px-3 mb-1"><b>Destino:</b>  {{ volume.destino ? volume.destino.codigo : "" }} </p>
         </div>
-
-        <div class="col d-flex justify-content-end">
+        <div class="col text-end">
+          <template v-for="(valor, key) in simbolos_nbr">
+           <template v-if="volume.propriedades?.includes(key)">
+            <figure class="figure">
+              <img  :src="valor" :title="key" :alt="key" class="figure-img img-fluid" 
+              style="max-width: 96px; max-height: 96px; object-fit: contain; object-position: center;"/> 
+              <figcaption class="figure-caption text-center">{{ key }}</figcaption>
+            </figure> 
+           </template>
+          </template>
+        </div>
+        <div class="col-3 d-flex justify-content-end"> 
           <QRCode :path="route.fullPath"></QRCode>
         </div>
 

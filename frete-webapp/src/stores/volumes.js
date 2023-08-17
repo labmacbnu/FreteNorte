@@ -82,3 +82,11 @@ export async function registra_volume_parte(dados){
     const docRef = doc(db, "volumes", dados.codigo);
     const uptime = await setDoc(docRef, {...dados, deleted: false});
 }
+
+export const simbolos_nbr = {
+    'Frágil': '/fragil.webp',
+    'Proibido Empilhar': '/proibido-empilhar.webp',
+    'Proteger do Calor': '/proteger-contra-o-calor.webp',
+    'Proteger da Luz': '/proteger-da-luz.webp',
+    'Proteger da Umidade': '/protegerdaumidade.webp',
+  }
