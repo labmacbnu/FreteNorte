@@ -159,8 +159,8 @@ async function front_apaga_volume() {
                                 <b>{{ item.ambiente.ambiente_codigo }}</b> - {{ item.ambiente.ambiente_nome }}
                             </small>
                         </p>
-                        <p v-if="item.tipo == 'Permantente'"><em>Patrimônio</em> {{ item.detalhes.patrimonio }}</p>
-                        <p  v-if="item.tipo == 'Permantente'">Patrimoniado em nome de {{ item.responsavel }}</p>
+                        <p v-if="item.tipo == 'Permanente'"><em>Patrimônio</em> {{ item.detalhes.patrimonio }}</p>
+                        <p  v-if="item.tipo == 'Permanente'">Patrimoniado em nome de {{ item.responsavel }}</p>
                         <p v-if="item.tipo == 'Parte'">Parte registrada por {{ item.responsavel }}</p>
                         <p v-if="item.tipo == 'Consumível'">Item registrado por {{ item.responsavel }}</p>
                     </div>
