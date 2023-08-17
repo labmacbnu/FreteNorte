@@ -24,12 +24,6 @@ const url_args = reactive({
 })
 
 
-onBeforeMount(() => {
-  // hack para atualizar o items store ao calcular o ambiente
-  const ambiente = route.params.ambiente  
-  items.ambiente = ambiente 
-  items.excluir_partes = true
-})
 
 watch(url_args, (novo, antigo) => {
   console.log(novo)
