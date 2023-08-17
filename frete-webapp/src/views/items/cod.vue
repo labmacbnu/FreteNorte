@@ -66,7 +66,7 @@ async function front_apaga_volume() {
                             <span class="mx-3 badge text-secondary">{{ item.key }}</span> 
                         </h4>
                         <p class="text-secondary p-2">
-                            {{ item.descricao }}
+                            {{ item.detalhes.descricao }}
                         </p>
                         <table class="table d-print-none">
                             <tbody>
@@ -159,8 +159,10 @@ async function front_apaga_volume() {
                                 <b>{{ item.ambiente.ambiente_codigo }}</b> - {{ item.ambiente.ambiente_nome }}
                             </small>
                         </p>
-                        <p><em>Patrimônio</em> {{ item.detalhes.patrimonio }}</p>
-                        <p>Patrimoniado em nome de {{ item.responsavel }}</p>
+                        <p v-if="item.tipo == 'Permantente'"><em>Patrimônio</em> {{ item.detalhes.patrimonio }}</p>
+                        <p  v-if="item.tipo == 'Permantente'">Patrimoniado em nome de {{ item.responsavel }}</p>
+                        <p v-if="item.tipo == 'Parte'">Parte registrada por {{ item.responsavel }}</p>
+                        <p v-if="item.tipo == 'Consumível'">Item registrado por {{ item.responsavel }}</p>
                     </div>
 
                 </div>
