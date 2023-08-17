@@ -1,7 +1,7 @@
 <template>
     <div class="accordion-item">
         <h2 class="accordion-header">
-            <button class="accordion-button collapsed"   type="button" data-bs-toggle="collapse" :data-bs-target="'#'+aid" :aria-controls="aid">
+            <button :class="{'text-secondary': done}" class="accordion-button collapsed"    type="button" data-bs-toggle="collapse" :data-bs-target="'#'+aid" :aria-controls="aid">
                 <slot name="titulo"></slot>
             </button>
         </h2>
@@ -16,5 +16,8 @@
 defineProps({ 
     pai: String,
     aid: String, 
+    done: Boolean,
 })
+
+
 </script>
