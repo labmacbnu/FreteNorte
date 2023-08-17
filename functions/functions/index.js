@@ -22,15 +22,16 @@ const { getFirestore } = require("firebase-admin/firestore")
 initializeApp();
 const db = getFirestore();
 
-exports.registrausuario = functions.auth.user().onCreate( (user, context) => {
+exports.registrausuario = functions.auth.user().onCreate( async (user, context) => {
     const email = user.email;
     const nome = user.displayName;
     const docRef = db.doc(`usuarios/${email}`)
-    if(docRef.exists()){
-        logger.log(`Usuário já existe: ${email}`)
-    } else {
+    const docData = await docRef.get()
+    if(!docData.exists){
         logger.log(`Usuário criado: ${email}`)
         docRef.set({role: "Usuário", ambientes: [], usuario_de: [], nome: nome})
+    } else {
+        logger.log(`Usuário já existe: ${email}`)
     }
 
 })
