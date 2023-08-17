@@ -264,8 +264,11 @@ for origin, destin in COLUMNS_MAPPING.items():
         else:
           record.pop(origin)
         record['key'] = record['detalhes.patrimonio']
-        if record['key'] == None:
-            record['key'] = record['n_controle']
+        if pd.isna(record['key']):
+            try:
+                record['key'] = record['detalhes.n_controle']
+            except:
+                pass
         record['meta'] = META
         record['tipo'] = "Permanente"
 
