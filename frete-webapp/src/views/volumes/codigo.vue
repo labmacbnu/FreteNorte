@@ -70,8 +70,9 @@ function print(){
           <p class="mb-1"><b>Criado em:</b> {{ moment.unix(volume.data_criacao.seconds).format("DD/MM/YY HH:MM") }}</p>
           <h5 class="mt-3">Localização</h5>
           <p class="px-3 mb-1"><b>Origem:</b> {{ volume.origem.ambiente_codigo }}</p>
-          <p class="px-3 mb-1"><b>Local atual:</b> {{ volume.localizacao_atual.ambiente_codigo }}</p>
+          <p class="px-3 mb-1 d-print-none"><b>Local atual:</b> {{ volume.localizacao_atual.ambiente_codigo }}</p>
           <p class="px-3 mb-1"><b>Destino:</b>  {{ volume.destino ? volume.destino.codigo : "" }} </p>
+
         </div>
         <div class="col text-end">
           <template v-for="(valor, key) in simbolos_nbr">
@@ -87,8 +88,11 @@ function print(){
         <div class="col-3 d-flex justify-content-end"> 
           <QRCode :path="route.fullPath"></QRCode>
         </div>
+        <div class="col-12" v-if="volume.observacao">
+          <p class="mt-3"><b class="fs-5">Observação:</b> {{ volume.observacao  }}</p>
+        </div>
 
-      </div>
+      </div> 
       <div class="row mt-2">
         <div class="col">
           <h5 class="fw-bold">Lista de itens</h5>
