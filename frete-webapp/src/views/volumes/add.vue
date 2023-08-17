@@ -240,7 +240,7 @@ onMounted(() => {
     </div>
 
     <div class="col-6">
-      <p class="mb-1">Propriedades {{ new_volume.propriedades }}</p>
+      <p class="mb-1">Propriedades</p>
       <template v-for="(valor, key, n) in simbolos_nbr">
         <div class="form-check-inline mx-2 my-1">
           <input  class="form-check-input mx-1" type="checkbox" :value="key" :id="'props' + n" v-model="new_volume.propriedades">

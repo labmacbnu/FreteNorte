@@ -85,7 +85,7 @@ const soft_volume_modal_ref = ref(null)
             <th>Destino</th>
             <th>Categoria</th>
             <th>Status</th>
-            <th>Localização atual</th>
+            <th>Local atual</th>
             <th>Criado em</th>
             <th class="d-print-none">Apagar</th>
         </tr>
@@ -99,7 +99,7 @@ const soft_volume_modal_ref = ref(null)
             </td>
             <td class="d-print-none"> 
               <RouterLink class="" :to="{name: 'volume-codigo', params: {codigo: volume.codigo }}">
-              {{ volume.codigo.substring(0,8) + '...' }}
+              {{ volume.codigo.substring(0,10) + '...' }}
             </RouterLink>
             </td>
             <td> 
@@ -136,9 +136,9 @@ const soft_volume_modal_ref = ref(null)
             </td>
           </tr>
           <tr class="collapse" :id="'items' + volume.codigo">
-            <td colspan="2"></td>
+            <td colspan="1"></td>
             <td colspan="5"> 
-            <ul class="list-group list-group-flush align-top">
+            <ul class="list-group list-group-flush align-top border-top">
               <template  v-for="item in volume.items"> 
                 <li v-if="item" class="list-group-item justify-content-between d-flex">
                     <small class="">{{ item.short_descricao }}</small>
@@ -148,7 +148,14 @@ const soft_volume_modal_ref = ref(null)
               </template>
               </ul>
             </td>
-            <td colspan="3"></td>
+            <td colspan="4">
+             <p class="mb-1" v-if="volume.observacao"><b>Observação:</b> {{ volume.observacao }}</p> 
+             <p><b>Propriedades:</b>
+             <ul>
+              <li v-for="prop in volume.propriedades">{{ prop }}</li>
+             </ul>
+            </p>
+            </td>
           </tr>
       </template>
       </tbody>
