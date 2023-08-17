@@ -36,8 +36,9 @@ function max_terminacoes(){
                 if(typeof parte.key == 'string')
                     return parseInt(parte.key.split('-')[1])
             }
-        )
-    console.log(terminacoes)
+        ) 
+    if(terminacoes.length == 0)
+        terminacoes.push(0)
     n_partes.value = Math.max(...terminacoes) + 1
 }
 
@@ -80,8 +81,7 @@ async function deleta_parte(index){
         update_item(item_db.value.key, {'meta.inteiro': true})
     } 
     await deleta_item(parteDoc.key)
-    console.log(`Apagada parte ${parteDoc.key}. (n=${n})`)
-    console.log(resultado)
+    console.log(`Apagada parte ${parteDoc.key}. (n=${n})`) 
      
 }
 
