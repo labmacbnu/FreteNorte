@@ -2,25 +2,28 @@
 
 Repositório com o código para o sistema de gerenciamento logístico da mudança de campus da UFSC Blumenau.
 
-Criado por Bossa
+## Ferramentas utilizadas
 
-## Todo
+- Git
+- [Vue 3](https://vuejs.org/) - Para criar o webapp
+- [Pinia](https://pinia.vuejs.org/) - Controle de estado da aplicação
+- [Vue router](https://router.vuejs.org/) - Roteamento do webapp
+- [Vuefire](https://vuefire.vuejs.org/) - Integração com o `backend`
+- [Bootstrap](https://getbootstrap.com/) - Framework CSS
+- [Vite](https://vitejs.dev/) - Ambiente de desenvolvimento que compila tudo.
 
-Webapp
+## Plataforma
 
-- [X] Função editar medidas
-- [X] Função "Criar volume"
-- [X] Função "Adicionar item/parte ao volume"
-- [X] Função "Dividir item em partes"
-- [X] Mostra o status do ambiente na Home
-- [ ] Criar uma interface de solicitações
-- [X] Criar uma função para adicionar Items
-- [X] Rever a página items/cod pois renderizando mal
-- [X] Criada função de apagar item
+A aplicação está rodando toda na plataforma [Firebase](https://firebase.google.com/?hl=pt) do Google:
 
-Admin
+- Hospedagem
+- Backend (Firestore, um banco de dados NoSQL)
+- Autenticação (utilizando Login com Google)
 
-- [X] Função "Criar ambiente virtual"
-- [X] Função "Adicionar lider ao ambiente"
-- [X] Mostrar o status do ambiente
-- [ ] Criar uma gestão de lotes
+## Link para o repositório
+
+[github.com/labmacbnu/FreteNorte](https://github.com/labmacbnu/FreteNorte)
+
+## Modelo de dados
+
+Uma descrição do modelo de dados se encontra em [ModeloDados.md](./ModeloDados.md)
