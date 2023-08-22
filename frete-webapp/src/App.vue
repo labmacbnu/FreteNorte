@@ -2,7 +2,7 @@
 import {  RouterView, useRoute, useRouter } from 'vue-router' 
 import TheNavigation from './components/TheNavigation.vue'; 
 import { useAmbientesUserStore } from './stores/ambientes';
-import {  onBeforeMount, provide, ref } from 'vue';
+import {  onBeforeMount, onMounted, provide, ref } from 'vue';
 import { getAuth, onAuthStateChanged } from 'firebase/auth'
 import { firebaseApp } from './firebaseConfig'
 import { useUserPermissionsStore } from './stores/user';
@@ -64,11 +64,58 @@ router.afterEach( (to, from) => {
 }) 
 
 onBeforeMount(descricoes.load_data) 
+
+const mensagem_popup = ref(null)
+const mensagem_level = ref(null)
+function level_classes(level) {
+  switch (level) {
+    case "info":
+      return "bg-light text-dark"
+    case "warning":
+      return "bg-warning-subtle text-dark"
+    case "danger":
+      return "bg-danger-subtle text-dark"
+    case "success":
+      return "bg-success-subtle text-dark"
+    default:
+      return "bg-body-secondary text-dark"
+  }
+} 
+
+let bsAlert;
+/**
+ * Mostra uma mensagem de alerta no meio da tela
+ * @param {string} mensagem A mensagem a ser exibida no popup
+ * @param {"info" | "warning" | "danger" | "success"} level A cor que o popup deve ter
+ */
+function set_mensagem_popup(mensagem, level = "info"){
+  mensagem_level.value = level_classes(level)
+  mensagem_popup.value = mensagem
+  bsAlert.show()
+} 
+ 
+provide('mensagem', {set_mensagem_popup}) 
+// Em qualquer parte do app, é só usar o inject para ter acesso à função
+// const { set_mensagem_popup } = inject("mensagem")
+
+onMounted(() => {
+  const myAlert = document.getElementById('liveToast')
+  bsAlert = new bootstrap.Toast(myAlert, {delay: 3000})
+})
 </script>
 
 <template> 
-<div class="container">
-
+<div class="container"> 
+    <div id="liveToast" :class="mensagem_level" class="toast align-items-center"
+    role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="d-flex">
+      <div class="toast-body">
+        {{ mensagem_popup }}
+      </div>
+      <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+  </div> 
+    
   <TheNavigation></TheNavigation>  
   <RouterView :key="route.path"/>
 </div>
@@ -77,5 +124,14 @@ onBeforeMount(descricoes.load_data)
 <style scoped> 
 .container{
   padding-top: 100px;
+}
+
+#liveToast { 
+  z-index: 100;  
+  position: absolute;
+  top: 120px;
+  left: 50%;
+  width: 40vw;
+  margin-left: -20vw; 
 }
 </style>
