@@ -106,6 +106,14 @@ function click_row(i) {
   document.getElementById("check" + i).click()
 }
 
+const simbolos_nbr_ordenados = computed(() => {
+  const all = []
+  for (const [key, value] of Object.entries(simbolos_nbr)) {
+    all.push({ key, value })
+  }
+  return all.sort((a, b) => a.value.localeCompare(b.value))
+})
+
 const filtrar_lista_items = ref("")
 
 const all_items_filtered = computed(() => {
@@ -240,15 +248,18 @@ onMounted(() => {
     </div>
 
     <div class="col-6">
-      <p class="mb-1">Propriedades</p>
-      <template v-for="(valor, key, n) in simbolos_nbr">
-        <div class="form-check-inline mx-2 my-1">
-          <input  class="form-check-input mx-1" type="checkbox" :value="key" :id="'props' + n" v-model="new_volume.propriedades">
+      <p class="mb-1 fw-bold d-flex justify-content-between">Propriedades do volume  
+        <i data-bs-toggle="tooltip" data-bs-title="As propriedades abaixo representam símbolos que serão impressos nas etiquetas dos volumes" class="bi bi-question-circle"></i> </p> 
+      <div class="row">
+      <div class="col-6 text-start" v-for="(item, n) in simbolos_nbr_ordenados">
+        <div class="form-check mb-1">
+          <input  class="form-check-input" type="checkbox" :value="item.key" :id="'props' + n" v-model="new_volume.propriedades">
           <label class="form-check-label" :for="'props' + n">
-            {{key}}
+            {{item.key}}
           </label>
         </div>
-      </template>
+      </div>
+    </div>
     </div>
 
     <div class="col-12">
