@@ -187,7 +187,10 @@ async function salvar_volume() {
 
 onMounted(() => {
   items.ambiente = new_volume.origem
+  const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+  const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 })
+
 </script>
 
 <template>
