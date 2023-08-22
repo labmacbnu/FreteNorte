@@ -75,10 +75,10 @@ const responsavel_label = computed(() => (globaluser.value.email) ? globaluser.v
 const lider_ambiente_label = computed(() => {
   if (new_volume.origem) {
     const ambiente_obj = ambientes.dados.find(x => x.ambiente_codigo == new_volume.origem)
-    if (ambiente_obj)
+    if (ambiente_obj && ambiente_obj.lider)
       return ambiente_obj.lider.nome + ' <' + ambiente_obj.lider.id + '>'
     else
-      return "<?>"
+      return "Ambiente não possui líder"
   } else {
     return "<?>"
   }
