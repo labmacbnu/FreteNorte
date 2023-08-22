@@ -202,7 +202,7 @@ onMounted(() => {
   </div>
   <form class="row g-3">
     <div class="col-6">
-      <label for="ambiente" class="form-label">Ambiente de origem</label>
+      <label for="ambiente" class="form-label fw-bold">Ambiente de origem</label>
       <select :class="{ 'border-danger': !validation.origem }" v-model="new_volume.origem" class="form-select"
         id="ambiente">
         <option v-for="(val, index ) in ambientes.dados" :value="val.ambiente_codigo">
@@ -213,19 +213,21 @@ onMounted(() => {
       </select>
     </div>
     <div class="col-6">
-      <label for="lider-ambiente" class="form-label">Líder do ambiente</label>
+      <label for="lider-ambiente" class="form-label fw-bold">Líder do ambiente</label>
       <input :class="{ 'border-danger': !validation.origem }" type="text" class="form-control" id="lider-ambiente"
         :value="lider_ambiente_label" disabled>
     </div>
 
     <div class="col-6">
-      <label for="destino" class="form-label">Ambiente destino</label>
+      <label for="destino" class="form-label fw-bold">Ambiente destino</label>
       <SelectPlus :classe="(!validation.categoria) ? 'border-danger' : ''" :valor="new_volume.destino"
         placeholder="Selecione um destino" @selected="(x) => new_volume.destino = x"
         :options="lista_ambientes_norte.dados"></SelectPlus>
     </div>
     <div class="col-6">
-      <p class="mb-2">Destinos sugeridos</p>
+      <p class="mb-2 fw-bold d-flex justify-content-between">Destinos sugeridos
+        <i data-bs-toggle="tooltip" data-bs-title="Com base na alocação final dos ambientes" class="bi bi-question-circle"></i> 
+      </p>
       <p>
         <a @click="() => new_volume.destino = x.codigo" :title="x.nome" class="btn btn-light"
           v-for="x in destino_filtrado">{{ x.codigo }}</a>
@@ -233,7 +235,7 @@ onMounted(() => {
     </div>
 
     <div class="col-6">
-      <label for="floatingSelect" class="form-label">Categoria</label>
+      <label for="floatingSelect" class="form-label fw-bold">Categoria</label>
       <select :class="{ 'border-danger': !validation.categoria }" v-model="new_volume.categoria" class="form-select"
         id="floatingSelect" aria-label="Floating label select example">
         <option v-if="categorias" v-for="x in categorias.valores">{{ x }}</option>
@@ -241,11 +243,11 @@ onMounted(() => {
     </div>
 
     <div class="col-6">
-      <label for="responsavel" class="form-label">Responsável por criar o volume</label>
+      <label for="responsavel" class="form-label fw-bold">Responsável por criar o volume</label>
       <input type="text" class="form-control" id="responsavel" :value="responsavel_label" disabled>
     </div>
     <div class="col-6">
-      <label for="observacao" class="form-label">Observação</label>
+      <label for="observacao" class="form-label fw-bold">Observação</label>
       <textarea class="form-control" id="observacao" rows="2" placeholder="Alguma obervação especial para esse volume?"
         v-model="new_volume.observacao"></textarea>
     </div>
