@@ -8,6 +8,7 @@ import QRCode from '@/components/QRCode.vue';
 import { useDocument } from 'vuefire';
 import ModalDelete from '@/components/ModalDelete.vue'; 
 import { deleta_item } from '@/stores/items'
+import Vue3Barcode from 'vue3-barcode'
 
 const db = getFirestore(firebaseApp)
 const route = useRoute()
@@ -22,8 +23,36 @@ const {
     // A promise that resolves or rejects when the initial state is loaded
     promise
 } = useDocument(doc(db, 'items', route.params.codigo))
+ 
+const validacao = reactive({
+    medidas: true,
+    peso: true
+})
+
+function reseta_validacao(){ 
+    validacao.medidas = true
+    validacao.peso = true
+}
+
+function validar(){
+    const medidas_regex = /\d+\s*[xX]\s*\d+\s*[xX]\s*\d+/g
+    const test_medidas1 =  medidas_regex.test(item.value.detalhes.medidas) 
+    const test_medidas2 =  item.value.detalhes.medidas == ''
+    validacao.medidas =  test_medidas1 || test_medidas2
+
+    const peso_regex = /\d+/g
+    const test_peso1 =  peso_regex.test(item.value.detalhes.peso)
+    const test_peso2 =  item.value.detalhes.peso == ''
+    validacao.peso = test_peso1 || test_peso2
+    return validacao.medidas && validacao.peso
+}
 
 async function atualiza_item() {
+    if(!validar()) {
+        console.log("Erro de validação")
+        setTimeout(reseta_validacao, 2500)
+        return false
+    } else {
     const valores = toValue(item)
     console.log({...valores.detalhes})
     const uptime = await update_item(valores.key, {
@@ -32,6 +61,7 @@ async function atualiza_item() {
     })  
 
     console.log(`Item ${valores.key} atualizado`)
+    }
 }
 
 const isParte = computed(() => item.value?.tipo == "Parte")
@@ -51,6 +81,7 @@ async function front_apaga_volume() {
 </script>
 
 <template>
+    
     <Suspense>
         <template v-if="pending">
             <div class="spinner-border text-primary" role="status">
@@ -59,9 +90,10 @@ async function front_apaga_volume() {
         </template>
         <template v-else>
             <template v-if="item">
+                <h4 class="d-none d-print-block">Sistema Frete Norte</h4>
                 <div class="row align-items-start">
                     <div class="col-12">
-                        <h4 class="d-print-none d-flex align-items-center">
+                        <h4 class="d-flex align-items-center">
                             {{ item.short_descricao }}
                             <span class="mx-3 badge text-secondary">{{ item.key }}</span> 
                         </h4>
@@ -82,6 +114,11 @@ async function front_apaga_volume() {
                                     <th scope="row">Patrimônio</th>
                                     <td>{{ item.detalhes.patrimonio }}</td>
                                 </tr>
+
+                                <tr v-if="item.detalhes.cod_barras">
+                                    <th scope="row">Código de barras</th>
+                                    <td>{{ item.detalhes.cod_barras }}</td>
+                                </tr>
                                 <tr v-if="item.detalhes.valor > 0">
                                     <th scope="row">Valor</th>
                                     <td>R$ {{ item.detalhes.valor.toFixed(2) }}</td>
@@ -89,12 +126,23 @@ async function front_apaga_volume() {
 
                                 <tr>
                                     <th scope="row">Medidas</th>
-                                    <td><input class="form-control" v-model="item.detalhes.medidas"></td>
+                                    <td>
+                                        <div class="input-group  w-50" >
+                                        <input :class="{'border-danger': !validacao.medidas}" placeholder="L x A x P em centímetros"
+                                         class="form-control" v-model.trim="item.detalhes.medidas">
+                                        <span class="input-group-text">cm</span>
+                                        </div>
+                                    </td>
                                 </tr>
 
                                 <tr>
                                     <th scope="row">Peso</th>
-                                    <td><input class="form-control" v-model="item.detalhes.peso"></td>
+                                    <td>
+                                        <div class="input-group  w-50">
+                                        <input  :class="{'border-danger': !validacao.peso}" class="form-control" v-model.trim="item.detalhes.peso">
+                                        <span class="input-group-text">kg</span>
+                                        </div>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">Volume</th>
@@ -147,23 +195,24 @@ async function front_apaga_volume() {
 
                     </div>
                 </div>
-                <div class="row justify-content-start">
+                <div class="row">
                     <div class="col-auto">
                         <QRCode :path="route.fullPath"></QRCode>
                     </div>
                     <div class="col">
-                        <h4 class="d-none d-print-block">Sistema Frete Norte</h4>
-                        <h5>{{ item.short_descricao }}</h5>
-                        <p>
+                        <h5>{{ item.short_descricao }}</h5> 
+                        <p v-if="item.detalhes.cod_barras" class="float-end text-end"> 
+                            <Vue3Barcode format="CODE39" :value="item.detalhes.cod_barras" height="40" width="2" ></Vue3Barcode>
+                        </p> 
+                        <p class="mb-1">
                             <small>
-                                <b>{{ item.ambiente.ambiente_codigo }}</b> - {{ item.ambiente.ambiente_nome }}
+                                <b>{{ item.ambiente.ambiente_codigo }}</b> - <span class="">{{ item.ambiente.ambiente_nome }}</span>
                             </small>
-                        </p>
-                        <p v-if="item.tipo == 'Permanente'"><em>Patrimônio</em> {{ item.detalhes.patrimonio }}</p>
+                        </p> 
                         <p  v-if="item.tipo == 'Permanente'">Patrimoniado em nome de {{ item.responsavel }}</p>
                         <p v-if="item.tipo == 'Parte'">Parte registrada por {{ item.responsavel }}</p>
                         <p v-if="item.tipo == 'Consumível'">Item registrado por {{ item.responsavel }}</p>
-                    </div>
+                    </div> 
 
                 </div>
 
