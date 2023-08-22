@@ -17,6 +17,7 @@
     "vue-qrcode": "^2.2.0",
     "vue-qrcode-reader-vue3": "^0.0.0-development",
     "vue-router": "^4.2.2",
+    "vue3-barcode": "^1.0.1",
     "vuefire": "^3.1.0"
   },
   "devDependencies": {
