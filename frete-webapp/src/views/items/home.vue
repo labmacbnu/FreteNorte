@@ -36,7 +36,6 @@ const descricao_filtrados = computed(() => {
     }
 })
 
-const meus_ambientes = useAmbientesUserStore()
 
 const codigo_search = ref("")
 
@@ -50,16 +49,15 @@ const codigo_search = ref("")
         </div>
     </div>
     <div class="row mb-4">
-        <div class="col-6 text-center ">
-               
-            <RouterLink class="btn btn-primary" :to="{ name: 'item-add' }"><i
+        <div class="col text-center ">
+            <RouterLink class="btn btn-lg btn-primary" :to="{ name: 'item-add' }"><i
             class="bi bi-plus-circle me-2"></i>Adicionar novo item</RouterLink> 
         </div>
     </div>
     <div class="row g-2"> 
-        <div class="col-6 border rounded p-2">
-            <h3>Pesquisa por código</h3>
-            <p>Digite o código e pesquise pelo item. </p>
+        <div class="col border rounded p-2">
+            <h3>Pesquisa por código ou número de patrimônio</h3>
+            <p>Digite o código ou número de patrimônio e pesquise pelo item. </p>
             <div class="input-group mb-3">
 
                 <input class="form-control" v-model="codigo_search" type="text">
@@ -67,7 +65,7 @@ const codigo_search = ref("")
                     @click="router.push({ name: 'item-codigo', params: { codigo: codigo_search } })">Pesquisar item</button>
             </div>
         </div>
-        
+         
     </div>
 </template>
 
