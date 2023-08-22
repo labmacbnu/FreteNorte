@@ -14,6 +14,7 @@ import { useRoute, useRouter } from 'vue-router';
 
 const { globaluser, updateUser } = inject("globaluser")
 const permissoes = useUserPermissionsStore()
+const {set_mensagem_popup} = inject("mensagem")
 
 const route = useRoute()
 const router = useRouter()
@@ -170,7 +171,6 @@ function reset_validation() {
 }
 
 async function salvar_volume() {
-
   console.log(JSON.stringify(new_volume))
   validate()
   for (const [key, value] of Object.entries(validation)) {
@@ -182,6 +182,7 @@ async function salvar_volume() {
   }
   const volumeid = await registra_volume(toValue(new_volume))
   console.log(volumeid)
+  set_mensagem_popup("Volume registrado com sucesso!", "success")
   reset_new_volume()
 }
 
@@ -249,7 +250,7 @@ onMounted(() => {
     <div class="col-6">
       <label for="observacao" class="form-label fw-bold">Observação</label>
       <textarea class="form-control" id="observacao" rows="2" placeholder="Alguma obervação especial para esse volume?"
-        v-model="new_volume.observacao"></textarea>
+        v-model="new_volume.observacao"></textarea> 
     </div>
 
     <div class="col-6">
