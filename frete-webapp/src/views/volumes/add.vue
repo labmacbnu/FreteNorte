@@ -221,7 +221,7 @@ onMounted(() => {
 
     <div class="col-6">
       <label for="destino" class="form-label fw-bold">Ambiente destino</label>
-      <SelectPlus :classe="(!validation.categoria) ? 'border-danger' : ''" :valor="new_volume.destino"
+      <SelectPlus :classe="(!validation.destino) ? 'border-danger' : ''" :valor="new_volume.destino"
         placeholder="Selecione um destino" @selected="(x) => new_volume.destino = x"
         :options="lista_ambientes_norte.dados"></SelectPlus>
     </div>
@@ -239,7 +239,7 @@ onMounted(() => {
       <label for="floatingSelect" class="form-label fw-bold">Categoria</label>
       <select :class="{ 'border-danger': !validation.categoria }" v-model="new_volume.categoria" class="form-select"
         id="floatingSelect" aria-label="Floating label select example">
-        <option v-if="categorias" v-for="x in categorias.valores">{{ x }}</option>
+        <option v-if="categorias" v-for="x in categorias.valores.sort()">{{ x }}</option>
       </select>
     </div>
 
