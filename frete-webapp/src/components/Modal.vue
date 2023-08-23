@@ -13,7 +13,7 @@
                 </div>
                 <div class="modal-footer">
                     <button :id="'close-' + props.modalid" type="button" class="btn btn-secondary" data-bs-dismiss="modal" :data-bs-target="modalid">Fechar</button>
-                    <button type="button" @click="callback_and_close" class="btn btn-primary">Salvar</button>
+                    <button type="button" @click="callback_and_close" class="btn btn-primary">{{props.salve_label}}</button>
                 </div>
             </div>
         </div>
@@ -26,7 +26,11 @@ const props  = defineProps({
         type: String,
         default: "myModal"
     },
-    salve_callback: Function
+    salve_callback: Function,
+    salve_label: {
+        type: String,
+        default: "Salvar"
+    }
 })
  
 
