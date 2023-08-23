@@ -3,14 +3,19 @@
         <summary class="accordion-button">
             <div class="accordion-header user-select-none" :class="{'text-danger': !props.respondida}"> 
                     {{ props.pergunta }} 
-            </div>
+            </div> 
         </summary>
         <div class="accordion-body border-bottom text-end">
             <textarea class="form-control" v-model="resposta" rows="3"
                 placeholder="Digite sua resposta aqui"></textarea>
+
+            <button class="btn btn-danger mt-2 float-start" @click="emits('apagar', {id: props.docid})">
+                    Apagar pergunta
+            </button>
                 <button :class="[resposta == props.resposta ? 'btn-secondary' : 'btn-primary']" class="btn btn-primary mt-2" @click="responde_duvida">
                     {{label_botao}}
                 </button>
+                
         </div>
     </details>
 </template>
@@ -27,7 +32,7 @@ const props = defineProps({
 
 
 
-const emits = defineEmits(['responder'])
+const emits = defineEmits(['responder', 'apagar'])
 
 const resposta = ref(props.resposta)
 
