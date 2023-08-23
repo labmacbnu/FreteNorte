@@ -40,8 +40,10 @@ const links = reactive([{
                         <NavLink v-bind="dados" ></NavLink>
                     </li>
                 </ul>
-                <form class="d-flex" role="search">
+                <form class="d-flex" role="search">                    
                     <NavLink :rto="{ name: 'login' }" icon="bi-person" label="Perfil"></NavLink>
+
+                    <NavLink class="ms-3" :rto="{ name: 'ajuda' }" icon="bi-question-circle" label="Ajuda"></NavLink>
                 </form>
             </div>
         </div>
