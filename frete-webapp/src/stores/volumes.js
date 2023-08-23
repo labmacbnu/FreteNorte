@@ -3,8 +3,7 @@ import { defineStore } from 'pinia';
 import { firebaseApp } from '../firebaseConfig';
 import { collection, where, doc, setDoc, query, updateDoc, addDoc, orderBy } from 'firebase/firestore';
 import {useCollection, useDocument} from 'vuefire';
-import { db } from '../backend/index.js';
-import {update_item_part} from './singleitem.js';
+import { db } from '../backend/index.js'; 
 import { useUserPermissionsStore } from './user';
  
 
