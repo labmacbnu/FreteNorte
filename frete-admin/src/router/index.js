@@ -85,6 +85,18 @@ const router = createRouter({
           component: () => import('@/views/lotes/add.vue')
         }
       ]
+    },
+    {
+      path: '/ajuda',
+      name: 'ajuda',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('@/views/AjudaView.vue'),
+      meta: {
+        requiresAuth: true,
+        title: "Ajuda"
+      }
     }
   ]
 })
