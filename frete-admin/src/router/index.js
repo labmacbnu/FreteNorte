@@ -1,10 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue' 
 import { getAuth } from 'firebase/auth'
-import { firebaseApp } from '../firebaseConfig'
-import { inject } from 'vue'
-import path from 'path'
-
+import { firebaseApp } from '../firebaseConfig' 
 const auth = getAuth(firebaseApp)  
 
 const router = createRouter({
