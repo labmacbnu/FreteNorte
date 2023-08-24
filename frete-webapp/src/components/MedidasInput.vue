@@ -4,6 +4,16 @@ import { reactive, watch } from 'vue';
 const emits = defineEmits(['update', 'validate'])
 const props = defineProps({ 
     inner_validate: false,
+    medidas: {
+        type: Object,
+        default: () => {
+            return {
+                c: null,
+                l: null,
+                a: null
+            }
+        }
+    }
 })
 
 const validation = reactive({
@@ -44,6 +54,15 @@ watch(medidas,() => {
     emits('validate', tudo_valido)
 },
 { deep: true })
+
+watch( () => props.medidas, (newVal) => {
+    medidas.c = newVal.c
+    medidas.l = newVal.l
+    medidas.a = newVal.a
+    validate_medidas()
+},
+{ deep: true }
+)
 </script>
 <template>
      <div class="input-group">
