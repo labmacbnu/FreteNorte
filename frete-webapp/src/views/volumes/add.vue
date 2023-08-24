@@ -28,6 +28,9 @@ const ambientes = useAmbientesUserStore()
 
 const lista_ambientes_norte = useListaAmbientesNorteStore()
 
+const pacotes = useCollection(query(collection(db, "pacotes")))
+
+const caixas = computed(() => pacotes.value.filter(x => x.tipo == 'caixa'))
 
 const items = useItemsAmbienteStore()
 
@@ -56,7 +59,12 @@ const new_volume = reactive(
     observacao: '',
     propriedades: [],
     peso: null,
-    medidas: null
+    medidas: null,
+    embalagem: {
+      caixa: null,
+      platico_bolha: null,
+      enchimento: null
+    }
   }
 )
 
@@ -81,8 +89,8 @@ function reset_new_volume() {
   new_volume.observacao = null
   new_volume.propriedades = []
   new_volume.peso = null
-  new_volume.medidas = null
-  //new_volume.items = []
+  new_volume.medidas = {l: null, c: null, a: null}
+  new_volume.embalagem = {caixa: null, platico_bolha: null, enchimento: null }
 }
 
 
@@ -156,9 +164,34 @@ watch(() => new_volume.origem, (newVal) => {
   // new_volume.lider = ambientes[newVal].lider.id
 })
 
+watch(() => new_volume.embalagem.caixa, (newValue) => {
+  if (newValue) {
+    const caixa = caixas.value.find(x => x.id == newValue)
+    if (caixa.medidas) {
+      new_volume.medidas = caixa.medidas
+    }
+  }
+})
+
+
+
 watch(lista_items, (newValue) => {
   new_volume.items = newValue
 })
+
+
+function valida_inteiros(key_event) {
+  const digito_regex = /\d/g 
+  // Se precionar backspace, delete, tab, enter, arrow left ou arrow right, permite
+  const allowed = ['Backspace', 'ArrowLeft', 'ArrowRight', 'Delete', 'Tab', 'Enter']
+  if (allowed.includes(key_event.key)) {
+    return
+  }
+  // Se precionar qualquer outra coisa que não seja um dígito, não permite
+  if ( !digito_regex.test(key_event.key) ) {
+    key_event.preventDefault()
+  }
+}
 
 const validation = reactive({
   categoria: true,
@@ -328,7 +361,38 @@ onMounted(() => {
     </div>
 
 
+    <div class="col-xs-12  col-md-6">
+      <p class="mb-1 fw-bold d-flex justify-content-between fs-5">Embalagem
+      </p> 
+      <form>
+        <div class="row mb-2">
+          <label class="col-sm-3 col-form-label fw-medium" for="caixaSelect" >Caixa</label>
+          <div class="col-sm-9">
+            <select id="caixaSelect" v-model="new_volume.embalagem.caixa" class="form-select">
+              <option v-for="caixa in caixas" :value="caixa.id">{{ caixa.label }}</option>
+            </select>
+          </div>
+        </div>
+        <div class="row  mb-2">
+          <label class="col-sm-3  form-check-label fw-medium" for="plastico_bolha">Plástico Bolha</label>
+          <div class="col-sm-9">
+            <div class="input-group">
+            <input placeholder="Quantos metros de plástico bolha são suficientes?" @keydown="valida_inteiros" class="form-control" id="platico_bolha" v-model.number="new_volume.embalagem.platico_bolha">
+              <span class="input-group-text">m</span>
+            </div>
+          </div>
+        </div>
 
+        <div class="row  mb-2">
+          <label class="col-sm-3  form-check-label fw-medium" for="enchimento">Enchimento</label>
+          <div class="col-sm-9">
+            <input class="form-check-input" type="checkbox" v-model="new_volume.embalagem.enchimento" id="enchimento"><label class="ms-3 form-check-label form-text"
+              for="enchimento">(Papel ou Isopor para preencher a caixa)</label>
+          </div>
+        </div>
+
+      </form>
+    </div>
     <div class="col-xs-12  col-md-6">
       <p class="mb-1 fw-bold d-flex justify-content-between">Medidas {{ new_volume.medidas }}
       </p>
