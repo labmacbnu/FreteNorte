@@ -320,6 +320,20 @@ onMounted(() => {
               
             </p> 
       </div>
+
+    <div class="col-xs-12  col-md-6">
+      <p class="mb-1 fw-bold d-flex justify-content-between">Medidas {{ new_volume.medidas }}
+      </p>
+      <div class="border rounded" :class="{ 'border-danger': !validation.medidas }" >
+      <MedidasInput :inner_validate="true" @update="x => new_volume.medidas = x" @validate="x => validation.pre_medidas = x"></MedidasInput>
+    </div>
+      <p class="mb-1 fw-bold d-flex justify-content-between">Peso {{ new_volume.peso }}
+      </p>
+      <div class="border rounded" :class="{ 'border-danger': !validation.peso }">
+        <PesoInput  @update="x => new_volume.peso = x"></PesoInput> 
+      </div>
+    </div>
+
   </form>
 </template>
 <style>
