@@ -204,7 +204,7 @@ const validation = reactive({
   pre_medidas: false,
   peso: true
 })
- 
+
 
 function validate() {
   validation.categoria = new_volume.categoria != null
@@ -212,7 +212,7 @@ function validate() {
   validation.categoria = new_volume.categoria != null
   validation.origem = new_volume.origem != null
   validation.items = new_volume.items.length != 0
-  validation.destino = new_volume.destino != '' 
+  validation.destino = new_volume.destino != ''
   validation.peso = typeof new_volume.peso == 'number' && new_volume.peso > 0
   validation.medidas = validation.pre_medidas
 }
@@ -225,7 +225,7 @@ function reset_validation() {
   validation.items = true
   validation.destino = true
   validation.peso = true
-  validation.medidas = true 
+  validation.medidas = true
 }
 
 async function salvar_volume() {
@@ -262,11 +262,11 @@ onMounted(() => {
   <form class="row g-3">
     <div class="col-12">
 
-      <label for="responsavel" class="form-label fw-bold">Responsável por criar o volume</label>
+      <label for="responsavel" class="form-label fw-bold fs-5">Responsável por criar o volume</label>
       <input type="text" class="form-control" id="responsavel" :value="responsavel_label" disabled>
     </div>
     <div class="col-6">
-      <label for="ambiente" class="form-label fw-bold">Ambiente de origem</label>
+      <label for="ambiente" class="form-label fw-bold fs-5">Ambiente de origem</label>
       <select :class="{ 'border-danger': !validation.origem }" v-model="new_volume.origem" class="form-select"
         id="ambiente">
         <option v-for="(val, index ) in ambientes.dados" :value="val.ambiente_codigo">
@@ -279,11 +279,11 @@ onMounted(() => {
     </div>
 
     <div class="col-6">
-      <label for="destino" class="form-label fw-bold">Ambiente destino</label>
+      <label for="destino" class="form-label fw-bold fs-5">Ambiente destino</label>
       <SelectPlus :classe="(!validation.destino) ? 'border-danger' : ''" :valor="new_volume.destino"
         placeholder="Selecione um destino" @selected="(x) => new_volume.destino = x"
         :options="lista_ambientes_norte.dados"></SelectPlus>
-      <p class="mt-2 mb-1 fw-bold d-flex justify-content-between">Destinos sugeridos
+      <p class="mt-2 mb-1 fw-bold d-flex justify-content-between fs-5">Destinos sugeridos
         <i data-bs-toggle="tooltip" data-bs-title="Com base na alocação final dos ambientes"
           class="bi bi-question-circle"></i>
       </p>
@@ -297,10 +297,12 @@ onMounted(() => {
       <div class="accordion" id="accordionItemsWrap">
         <div class="accordion-item">
           <h2 class="accordion-header">
-            <button :class="{'text-danger': !validation.items}" class="accordion-button fw-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseItems"
-              aria-expanded="false" aria-controls="collapseItems">
-            <span :class="[ lista_items.length == 0 ? 'bg-secondary':'bg-primary', {'bg-danger': !validation.items }]" class="badge me-2">{{ lista_items.length }}</span>
-              Items inclusos no volume 
+            <button :class="{ 'text-danger': !validation.items }" class="accordion-button fw-bold collapsed fs-5" type="button"
+              data-bs-toggle="collapse" data-bs-target="#collapseItems" aria-expanded="false"
+              aria-controls="collapseItems">
+              <span :class="[lista_items.length == 0 ? 'bg-secondary' : 'bg-primary', { 'bg-danger': !validation.items }]"
+                class="badge me-2">{{ lista_items.length }}</span>
+              Items inclusos no volume
             </button>
           </h2>
           <div id="collapseItems" class="accordion-collapse collapse" data-bs-parent="#accordionItemsWrap">
@@ -342,20 +344,20 @@ onMounted(() => {
         </div>
       </div>
 
-      <div class="mt-2 ms-3" > 
-            <p class="mb-1" v-for="(value, key) in lista_items_show">
-              <span class="me-2 fw-bold">{{ value }} </span>
-              <span class="text-lowercase">{{ key }}</span>
-              
-            </p> 
+      <div class="mt-2 ms-3">
+        <p class="mb-1" v-for="(value, key) in lista_items_show">
+          <span class="me-2 fw-bold">{{ value }} </span>
+          <span class="text-lowercase">{{ key }}</span>
+
+        </p>
       </div>
     </div>
 
 
     <div class="col-xs-12 col-md-6">
-      <label for="floatingSelect" class="form-label fw-bold">Categoria</label>
-      <select :class="{ 'border-danger': !validation.categoria }" v-model="new_volume.categoria" class="form-select"
-        id="floatingSelect" aria-label="Floating label select example">
+      <label for="categoriaSelect" class="form-label fw-bold fs-5">Categoria</label>
+      <select :class="{ 'border-danger': !validation.categoria }" v-model="new_volume.categoria"
+        class="form-select form-select-lg " id="categoriaSelect" aria-label="Floating label select example">
         <option v-if="categorias" v-for="x in categorias.valores.sort()">{{ x }}</option>
       </select>
     </div>
@@ -394,26 +396,27 @@ onMounted(() => {
       </form>
     </div>
     <div class="col-xs-12  col-md-6">
-      <p class="mb-1 fw-bold d-flex justify-content-between">Medidas {{ new_volume.medidas }}
+      <p class="mb-1 fw-bold d-flex justify-content-between fs-5">Medidas
       </p>
-      <div class="border rounded" :class="{ 'border-danger': !validation.medidas }" >
-      <MedidasInput :inner_validate="true" @update="x => new_volume.medidas = x" @validate="x => validation.pre_medidas = x"></MedidasInput>
-    </div>
-      <p class="mb-1 fw-bold d-flex justify-content-between">Peso {{ new_volume.peso }}
+      <div class="border rounded" :class="{ 'border-danger': !validation.medidas }">
+        <MedidasInput :medidas="new_volume.medidas" :inner_validate="true" @update="x => new_volume.medidas = x"
+          @validate="x => validation.pre_medidas = x"></MedidasInput>
+      </div>
+      <p class="mb-1 fw-bold d-flex justify-content-between fs-5">Peso
       </p>
       <div class="border rounded" :class="{ 'border-danger': !validation.peso }">
-        <PesoInput  @update="x => new_volume.peso = x"></PesoInput> 
+        <PesoInput @update="x => new_volume.peso = x"></PesoInput>
       </div>
     </div>
 
     <div class="col-xs-12 col-md-6">
-      <label for="observacao" class="form-label fw-bold">Observação</label>
-      <textarea class="form-control" id="observacao" rows="2" placeholder="Alguma obervação especial para esse volume?"
+      <label for="observacao" class="form-label fw-bold fs-5">Observação</label>
+      <textarea class="form-control" id="observacao" rows="3" placeholder="Alguma obervação especial para esse volume?"
         v-model="new_volume.observacao"></textarea>
     </div>
 
-    <div class="col-xs-12 col-md-6">
-      <p class="mb-1 fw-bold d-flex justify-content-between">Propriedades do volume
+    <div class="col-xs-12 col-md-6 mb-4">
+      <p class="mb-1 fw-bold d-flex justify-content-between fs-5">Propriedades do volume
         <i data-bs-toggle="tooltip"
           data-bs-title="As propriedades abaixo representam símbolos que serão impressos nas etiquetas dos volumes"
           class="bi bi-question-circle"></i>
@@ -436,4 +439,5 @@ onMounted(() => {
 <style>
 .listatodositems {
   height: 30vh;
-}</style>
+}
+</style>
