@@ -225,6 +225,11 @@ onMounted(() => {
     </div>
   </div>
   <form class="row g-3">
+    <div class="col-12">
+
+      <label for="responsavel" class="form-label fw-bold">Responsável por criar o volume</label>
+      <input type="text" class="form-control" id="responsavel" :value="responsavel_label" disabled>
+    </div>
     <div class="col-6">
       <label for="ambiente" class="form-label fw-bold">Ambiente de origem</label>
       <select :class="{ 'border-danger': !validation.origem }" v-model="new_volume.origem" class="form-select"
@@ -235,11 +240,7 @@ onMounted(() => {
           </template>
         </option>
       </select>
-    </div>
-    <div class="col-6">
-      <label for="lider-ambiente" class="form-label fw-bold">Líder do ambiente</label>
-      <input :class="{ 'border-danger': !validation.origem }" type="text" class="form-control" id="lider-ambiente"
-        :value="lider_ambiente_label" disabled>
+      <p class="form-text"><b>Líder do ambiente:</b> {{ lider_ambiente_label }}</p>
     </div>
 
     <div class="col-6">
@@ -247,10 +248,9 @@ onMounted(() => {
       <SelectPlus :classe="(!validation.destino) ? 'border-danger' : ''" :valor="new_volume.destino"
         placeholder="Selecione um destino" @selected="(x) => new_volume.destino = x"
         :options="lista_ambientes_norte.dados"></SelectPlus>
-    </div>
-    <div class="col-6">
-      <p class="mb-2 fw-bold d-flex justify-content-between">Destinos sugeridos
-        <i data-bs-toggle="tooltip" data-bs-title="Com base na alocação final dos ambientes" class="bi bi-question-circle"></i> 
+      <p class="mt-2 mb-1 fw-bold d-flex justify-content-between">Destinos sugeridos
+        <i data-bs-toggle="tooltip" data-bs-title="Com base na alocação final dos ambientes"
+          class="bi bi-question-circle"></i>
       </p>
       <p>
         <a @click="() => new_volume.destino = x.codigo" :title="x.nome" class="btn btn-light"
@@ -258,50 +258,25 @@ onMounted(() => {
       </p>
     </div>
 
-    <div class="col-6">
-      <label for="floatingSelect" class="form-label fw-bold">Categoria</label>
-      <select :class="{ 'border-danger': !validation.categoria }" v-model="new_volume.categoria" class="form-select"
-        id="floatingSelect" aria-label="Floating label select example">
-        <option v-if="categorias" v-for="x in categorias.valores.sort()">{{ x }}</option>
-      </select>
-    </div>
-
-    <div class="col-6">
-      <label for="responsavel" class="form-label fw-bold">Responsável por criar o volume</label>
-      <input type="text" class="form-control" id="responsavel" :value="responsavel_label" disabled>
-    </div>
-    <div class="col-6">
-      <label for="observacao" class="form-label fw-bold">Observação</label>
-      <textarea class="form-control" id="observacao" rows="2" placeholder="Alguma obervação especial para esse volume?"
-        v-model="new_volume.observacao"></textarea> 
-    </div>
-
-    <div class="col-6">
-      <p class="mb-1 fw-bold d-flex justify-content-between">Propriedades do volume  
-        <i data-bs-toggle="tooltip" data-bs-title="As propriedades abaixo representam símbolos que serão impressos nas etiquetas dos volumes" class="bi bi-question-circle"></i> </p> 
-      <div class="row">
-      <div class="col-6 text-start" v-for="(item, n) in simbolos_nbr_ordenados">
-        <div class="form-check mb-1">
-          <input  class="form-check-input" type="checkbox" :value="item.key" :id="'props' + n" v-model="new_volume.propriedades">
-          <label class="form-check-label" :for="'props' + n">
-            {{item.key}}
-          </label>
-        </div>
-      </div>
-    </div>
-    </div>
-
     <div class="col-12">
-      <h3 :class="{ 'text-danger': !validation.items }">Items inclusos no volume</h3>
+      <div class="accordion" id="accordionItemsWrap">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button :class="{'text-danger': !validation.items}" class="accordion-button fw-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseItems"
+              aria-expanded="false" aria-controls="collapseItems">
+            <span :class="[ lista_items.length == 0 ? 'bg-secondary':'bg-primary', {'bg-danger': !validation.items }]" class="badge me-2">{{ lista_items.length }}</span>
+              Items inclusos no volume 
+            </button>
+          </h2>
+          <div id="collapseItems" class="accordion-collapse collapse" data-bs-parent="#accordionItemsWrap">
+            <div class="accordion-body">
       <p class="form-text" v-if="ambiente_selected">
         Lista de items de {{ ambiente_selected.ambiente_nome }}.</p>
       <p v-else>Selecione o ambiente acima.</p>
       <input type="text" class="form-control" placeholder="Digite para filtrar a lista abaixo"
         v-model="filtrar_lista_items">
-
-    </div>
     <div class="col-12 listatodositems overflow-y-scroll">
-      <table v-if="new_volume.origem" class="table table-hover">
+                <table v-if="new_volume.origem" class="table table-hover table-sm">
         <thead>
           <tr class="sticky-top">
             <th></th>
@@ -313,10 +288,10 @@ onMounted(() => {
           <tr class="border-bottom border-secondary " @click.stop="() => click_row(i)"
             v-for="(item, i) in all_items_filtered" :key="item.key">
             <td>
-              <input @click.self="() => click_row(i)" class="form-check-input mx-1 border border-primary" type="checkbox"
-                :value="'' + item.key" v-model="lista_items" :id="'check' + i">
+                        <input @click.self="() => click_row(i)" class="form-check-input mx-1 border border-primary"
+                          type="checkbox" :value="'' + item.key" v-model="lista_items" :id="'check' + i">
             </td>
-            <td>
+                      <td class="text-lowercase">
               {{ item.short_descricao }}
             </td>
             <td class="d-flex-inline">
@@ -327,6 +302,11 @@ onMounted(() => {
         </tbody>
       </table>
     </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="mt-2 ms-3" > 
             <p class="mb-1" v-for="(value, key) in lista_items_show">
               <span class="me-2 fw-bold">{{ value }} </span>
@@ -334,6 +314,18 @@ onMounted(() => {
               
             </p> 
       </div>
+    </div>
+
+
+    <div class="col-xs-12 col-md-6">
+      <label for="floatingSelect" class="form-label fw-bold">Categoria</label>
+      <select :class="{ 'border-danger': !validation.categoria }" v-model="new_volume.categoria" class="form-select"
+        id="floatingSelect" aria-label="Floating label select example">
+        <option v-if="categorias" v-for="x in categorias.valores.sort()">{{ x }}</option>
+      </select>
+    </div>
+
+
 
     <div class="col-xs-12  col-md-6">
       <p class="mb-1 fw-bold d-flex justify-content-between">Medidas {{ new_volume.medidas }}
@@ -345,6 +337,31 @@ onMounted(() => {
       </p>
       <div class="border rounded" :class="{ 'border-danger': !validation.peso }">
         <PesoInput  @update="x => new_volume.peso = x"></PesoInput> 
+      </div>
+    </div>
+
+    <div class="col-xs-12 col-md-6">
+      <label for="observacao" class="form-label fw-bold">Observação</label>
+      <textarea class="form-control" id="observacao" rows="2" placeholder="Alguma obervação especial para esse volume?"
+        v-model="new_volume.observacao"></textarea>
+    </div>
+
+    <div class="col-xs-12 col-md-6">
+      <p class="mb-1 fw-bold d-flex justify-content-between">Propriedades do volume
+        <i data-bs-toggle="tooltip"
+          data-bs-title="As propriedades abaixo representam símbolos que serão impressos nas etiquetas dos volumes"
+          class="bi bi-question-circle"></i>
+      </p>
+      <div class="row">
+        <div class="col-4 col-sm-6 text-start" v-for="(item, n) in simbolos_nbr_ordenados">
+          <div class="form-check mb-1">
+            <input class="form-check-input" type="checkbox" :value="item.key" :id="'props' + n"
+              v-model="new_volume.propriedades">
+            <label class="form-check-label" :for="'props' + n">
+              {{ item.key }}
+            </label>
+          </div>
+        </div>
       </div>
     </div>
 
