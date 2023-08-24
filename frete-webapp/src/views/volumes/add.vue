@@ -5,16 +5,18 @@ import { useItemsAmbienteStore, orderedGroupBy } from '@/stores/items';
 import { useAmbientesUserStore, useListaAmbientesNorteStore } from '@/stores/ambientes';
 import { registra_volume, simbolos_nbr } from '@/stores/volumes';
 import SelectPlus from '@/components/SelectPlus.vue';
+import MedidasInput from '@/components/MedidasInput.vue';
 
 
 import { db } from '@/backend/index.js';
 import { collection, where, doc, setDoc, query, updateDoc } from 'firebase/firestore';
 import { useCollection, useDocument, usePendingPromises } from 'vuefire';
 import { useRoute, useRouter } from 'vue-router';
+import PesoInput from '@/components/PesoInput.vue';
 
 const { globaluser, updateUser } = inject("globaluser")
 const permissoes = useUserPermissionsStore()
-const {set_mensagem_popup} = inject("mensagem")
+const { set_mensagem_popup } = inject("mensagem")
 
 const route = useRoute()
 const router = useRouter()
@@ -169,7 +171,7 @@ const validation = reactive({
   pre_medidas: false,
   peso: true
 })
-
+ 
 
 function validate() {
   validation.categoria = new_volume.categoria != null
@@ -177,7 +179,7 @@ function validate() {
   validation.categoria = new_volume.categoria != null
   validation.origem = new_volume.origem != null
   validation.items = new_volume.items.length != 0
-  validation.destino = new_volume.destino != ''
+  validation.destino = new_volume.destino != '' 
   validation.peso = typeof new_volume.peso == 'number' && new_volume.peso > 0
   validation.medidas = validation.pre_medidas
 }
@@ -270,38 +272,38 @@ onMounted(() => {
           </h2>
           <div id="collapseItems" class="accordion-collapse collapse" data-bs-parent="#accordionItemsWrap">
             <div class="accordion-body">
-      <p class="form-text" v-if="ambiente_selected">
-        Lista de items de {{ ambiente_selected.ambiente_nome }}.</p>
-      <p v-else>Selecione o ambiente acima.</p>
-      <input type="text" class="form-control" placeholder="Digite para filtrar a lista abaixo"
-        v-model="filtrar_lista_items">
-    <div class="col-12 listatodositems overflow-y-scroll">
+              <p class="form-text" v-if="ambiente_selected">
+                Lista de items de {{ ambiente_selected.ambiente_nome }}.</p>
+              <p v-else>Selecione o ambiente acima.</p>
+              <input type="text" class="form-control" placeholder="Digite para filtrar a lista abaixo"
+                v-model="filtrar_lista_items">
+              <div class="col-12 listatodositems overflow-y-scroll">
                 <table v-if="new_volume.origem" class="table table-hover table-sm">
-        <thead>
-          <tr class="sticky-top">
-            <th></th>
-            <th>Descrição</th>
-            <th>Código</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="border-bottom border-secondary " @click.stop="() => click_row(i)"
-            v-for="(item, i) in all_items_filtered" :key="item.key">
-            <td>
+                  <thead>
+                    <tr class="sticky-top">
+                      <th></th>
+                      <th>Descrição</th>
+                      <th>Código</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="border-bottom border-secondary " @click.stop="() => click_row(i)"
+                      v-for="(item, i) in all_items_filtered" :key="item.key">
+                      <td>
                         <input @click.self="() => click_row(i)" class="form-check-input mx-1 border border-primary"
                           type="checkbox" :value="'' + item.key" v-model="lista_items" :id="'check' + i">
-            </td>
+                      </td>
                       <td class="text-lowercase">
-              {{ item.short_descricao }}
-            </td>
-            <td class="d-flex-inline">
-              <p class="text-elipse p-lista-nao-volumados m-0">
-                {{ item.key }}</p>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+                        {{ item.short_descricao }}
+                      </td>
+                      <td class="d-flex-inline">
+                        <p class="text-elipse p-lista-nao-volumados m-0">
+                          {{ item.key }}</p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
         </div>
