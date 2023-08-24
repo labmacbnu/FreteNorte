@@ -32,6 +32,15 @@ const items = useItemsAmbienteStore()
 
 const lista_items = ref(route.query.items || [])
 
+const lista_items_show = computed(() => {
+  const selecionados = lista_items.value.map(x => items.dados.find(y => y.key == x))
+  const agrupados = orderedGroupBy(selecionados, x => x.short_descricao)
+  Object.entries(agrupados).forEach(([key, value]) => {
+    agrupados[key] = value.length
+  })
+  return agrupados
+})
+
 const ambiente_selected = computed(() => ambientes.dados.find(x => x.ambiente_codigo == new_volume.origem))
 
 const new_volume = reactive(
@@ -304,6 +313,13 @@ onMounted(() => {
         </tbody>
       </table>
     </div>
+      <div class="mt-2 ms-3" > 
+            <p class="mb-1" v-for="(value, key) in lista_items_show">
+              <span class="me-2 fw-bold">{{ value }} </span>
+              <span class="text-lowercase">{{ key }}</span>
+              
+            </p> 
+      </div>
   </form>
 </template>
 <style>
