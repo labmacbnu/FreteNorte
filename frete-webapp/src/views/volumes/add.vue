@@ -52,7 +52,9 @@ const new_volume = reactive(
     items: route.query.items || [],
     destino: '',
     observacao: '',
-    propriedades: []
+    propriedades: [],
+    peso: null,
+    medidas: null
   }
 )
 
