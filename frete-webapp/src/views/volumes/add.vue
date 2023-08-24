@@ -78,6 +78,8 @@ function reset_new_volume() {
   new_volume.destino = ''
   new_volume.observacao = null
   new_volume.propriedades = []
+  new_volume.peso = null
+  new_volume.medidas = null
   //new_volume.items = []
 }
 
@@ -103,7 +105,9 @@ const all_items_ordered = computed(() => {
   const all = []
   if (new_volume.origem && items.dados)
     all.push(...items.dados)
-  return all.sort((a, b) => a.short_descricao.localeCompare(b.short_descricao))
+  // orderna primeiro pela descrição
+  all.sort((a, b) => a.short_descricao.localeCompare(b.short_descricao))
+  return all
 })
 
 const all_items_nao_volumados = computed(() => {
@@ -161,7 +165,11 @@ const validation = reactive({
   origem: true,
   items: true,
   destino: true,
+  medidas: true,
+  pre_medidas: false,
+  peso: true
 })
+
 
 function validate() {
   validation.categoria = new_volume.categoria != null
@@ -170,7 +178,10 @@ function validate() {
   validation.origem = new_volume.origem != null
   validation.items = new_volume.items.length != 0
   validation.destino = new_volume.destino != ''
+  validation.peso = typeof new_volume.peso == 'number' && new_volume.peso > 0
+  validation.medidas = validation.pre_medidas
 }
+
 function reset_validation() {
   validation.categoria = true
   validation.responsavel = true
@@ -178,7 +189,8 @@ function reset_validation() {
   validation.origem = true
   validation.items = true
   validation.destino = true
-
+  validation.peso = true
+  validation.medidas = true 
 }
 
 async function salvar_volume() {
