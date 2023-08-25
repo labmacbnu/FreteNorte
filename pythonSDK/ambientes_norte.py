@@ -30,10 +30,7 @@ ambientes_origem = [x for x in df.columns if 'ambiente_origem' in x]
 df["origem"] =  df[ambientes_origem].apply(lambda x: [ amb.split(' - ')[0] for amb in x.values if type(amb) == str ], axis=1)
 
 df.drop(columns=ambientes_origem, inplace=True)
-
-# %%
-df
-
+ 
 # %%
 dicionarios = df.to_dict('records')
 
@@ -48,6 +45,7 @@ for item in dicionarios:
         'nome': nome,
         'origem': origem,
         'codigo': key,
+        'campus': "Norte",
         'detalhes':  item})
 
 # %%
@@ -57,8 +55,6 @@ OUTPUT_PATH = Path("json") / "ambientes-norte.json"
 
 with open(OUTPUT_PATH, "w") as fP:
     json.dump(registros, fP, indent=2, ensure_ascii=False)
-
-# %%
 
 
 

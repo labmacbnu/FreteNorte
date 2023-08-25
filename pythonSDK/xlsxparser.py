@@ -127,6 +127,7 @@ UNIQUE_AMBIENTES = pd.concat([AMBIENTES], axis=1).groupby(["edificio", "ambiente
 
 UNIQUE_AMBIENTES["lider"] = None
 UNIQUE_AMBIENTES["status"] = "Em uso"
+UNIQUE_AMBIENTES["campus"] = "Sul"
 
 UNIQUE_AMBIENTES.to_json(DESTINO / "ambientes.json", orient="records", indent=2)
 
