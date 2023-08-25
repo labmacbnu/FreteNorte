@@ -235,6 +235,7 @@ async function salvar_volume() {
     // se alguma coisa não for válida, retorna zero
     if (value == false) {
       setTimeout(reset_validation, 1500)
+    set_mensagem_popup("Preencha todos os campos em vermelho", "danger")
       return 0
     }
   }
