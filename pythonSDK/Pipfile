@@ -9,6 +9,7 @@ python-dotenv = "*"
 pandas = "*"
 openpyxl = "*"
 xlrd = "*"
+tqdm = "*"
 
 [dev-packages]
 jupyterlab = "*"
