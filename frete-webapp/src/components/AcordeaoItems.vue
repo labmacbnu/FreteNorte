@@ -41,11 +41,12 @@ watch(selecionados, (novo, antigo) => {
                     <!-- Se o item estiver inteiro -->
                     <template v-if="subitem.meta.inteiro">
                     <li class="list-group-item d-flex justify-content-between align-items-center" >
-                        <div class="form-check">
+                        <div class="form-check w-75">
                             <input :disabled="subitem.meta.volumado" :id="'item'+subitem.key" v-model="selecionados" type="checkbox" class="form-check-input border border-primary" :value="subitem.key">
-                            <label :for="'item'+subitem.key" class="form-check-label text-capitalize">{{ subitem.detalhes.descricao.substring(0,140) }}</label>
+                            <label :for="'item'+subitem.key" class="form-check-label text-lowercase">{{ subitem.detalhes.descricao.substring(0,180) }}</label>
                         </div> 
-                        <span class="badge badge-primary badge-pill">
+                        <div class="text-nowarp" ><i class="bi bi-upc me-2 fs-5">{{ subitem.detalhes.cod_barras }}</i></div>
+                        <span class="badge ">
                         <RouterLink :to="{name: 'item-codigo', params: {codigo: subitem.key }}">Ver item</RouterLink></span>
                     </li>
                 </template>
@@ -56,11 +57,12 @@ watch(selecionados, (novo, antigo) => {
                     </li>
                     <template v-for="(parte, idx) in subitem.meta.partes">
                         <li class="list-group-item d-flex justify-content-between align-items-center">
-                        <div class="form-check">
+                        <div class="form-check w-75">
                             <input :disabled="parte.meta.volumado" :id="'item'+parte.key" v-model="selecionados" type="checkbox" class="form-check-input border border-primary" :value="parte.key">
-                            <label :for="'item'+parte.key" class="form-check-label text-capitalize">{{ parte.detalhes.descricao.substring(0,140) }}</label>
+                            <label :for="'item'+parte.key" class="form-check-label text-capitalize">{{ parte.detalhes.descricao.substring(0,180) }}</label>
                         </div> 
-                        <span class="badge badge-primary badge-pill">
+                        <div class="text-nowarp" ><i class="bi bi-upc me-2 fs-5">{{ subitem.detalhes.cod_barras }}</i></div>
+                        <span class="badge">
                         <RouterLink :to="{name: 'item-codigo', params: {codigo: parte.key }}">Ver parte</RouterLink></span>
                         </li>
                     </template>
