@@ -98,9 +98,9 @@ const router = createRouter({
           meta: { title: "Volume por código"}
         },
         {
-          path: 'cod/:codigo/edit',
+          path: 'edit/:codigo',
           name: 'volume-edit',
-          component: () => import('../views/volumes/codigo-edit.vue'),
+          component: () => import('../views/volumes/edit.vue'),
           meta: { title: "Editar volume"}
         },
         {
