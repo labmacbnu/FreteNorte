@@ -127,7 +127,7 @@ onMounted(() => {
 }
 
 #liveToast { 
-  z-index: 100;  
+  z-index: 1050;  
   position: absolute;
   top: 120px;
   left: 50%;
