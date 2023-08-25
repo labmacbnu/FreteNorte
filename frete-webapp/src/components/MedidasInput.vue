@@ -56,12 +56,13 @@ watch(medidas,() => {
 { deep: true })
 
 watch( () => props.medidas, (newVal) => {
+    if(newVal == null) return
     medidas.c = newVal.c
     medidas.l = newVal.l
     medidas.a = newVal.a
     validate_medidas()
 },
-{ deep: true }
+{ deep: true, immediate: true }
 )
 </script>
 <template>
