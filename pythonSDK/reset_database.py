@@ -79,10 +79,10 @@ if __name__ == "__main__":
         dados = [ funcao(x) for x in dados ]
         N = len(dados)
         k = randint(0, N-1)
-        print(col, N, key)
-        print(json.dumps(dados[k], ensure_ascii=False, indent=4,default=str))
+        #print(col, N, key)
+        #print(json.dumps(dados[k], ensure_ascii=False, indent=4,default=str))
         batch_write(col, dados, key)
     for col, file in SINGLE_MAP:
         dados = load_json_file(file) 
-        print(col, str(dados)[:100]   )
+        #print(col, str(dados)[:100]   )
         single_write(col, dados)
