@@ -319,7 +319,7 @@ onMounted(() => {
                     <tr class="sticky-top">
                       <th></th>
                       <th>Descrição</th>
-                      <th>Código</th>
+                      <th>Cód. Barras</th>
                     </tr>
                   </thead>
                   <tbody>
