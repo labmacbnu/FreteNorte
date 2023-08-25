@@ -82,10 +82,10 @@ const soft_volume_modal_ref = ref(null)
             <th class="d-print-none">Editar</th>
             <th>Itens</th>
             <th>Origem</th>
+            <th>Local<br>atual</th>
             <th>Destino</th>
             <th>Categoria</th>
             <th>Status</th>
-            <th>Local atual</th>
             <th>Criado em</th>
             <th class="d-print-none">Apagar</th>
         </tr>
@@ -103,33 +103,21 @@ const soft_volume_modal_ref = ref(null)
             </RouterLink>
             </td>
             <td> 
-              <RouterLink class="" :to="{name: 'volume-edit', params: {codigo: volume.codigo }}">
-              Editar
+              <RouterLink class="text-secondary text-decoration-none" :to="{name: 'volume-edit', params: {codigo: volume.codigo }}">
+                Editar <i class="bi bi-pencil-square"></i>
             </RouterLink>
             </td>
             <td> 
               <a :href="'#items' + volume.codigo"  class="btn btn-sm btn-primary" data-bs-toggle="collapse" 
                 role="button" aria-expanded="false" :aria-controls="'items' + volume.codigo">
-              Ver itens</a>
+                Detalhes</a>
             </td>
-            <td>
-              {{ volume.origem.ambiente_codigo }}
-            </td>
-            <td>
-              {{ volume.destino ? volume.destino.codigo : "" }}
-            </td>
-            <td>
-              {{ volume.categoria }}
-            </td>
-            <td>
-              {{ volume.status }}
-            </td>
-            <td>
-              {{ volume.localizacao_atual.ambiente_codigo }}
-            </td>
-            <td>
-              {{ moment.unix(volume.data_criacao.seconds).format("DD/MM/YY") }}
-            </td>  
+            <td class="text-center">{{ volume.origem.ambiente_codigo }}</td>
+            <td>{{ volume.localizacao_atual.ambiente_codigo }}</td>
+            <td>{{ volume.destino ? volume.destino.codigo : "" }}</td>
+            <td>{{ volume.categoria }}</td>
+            <td>{{ volume.status }}</td>
+            <td :title="moment.unix(volume.data_criacao.seconds).format('DD/MM/YY HH:MM')">{{ moment.unix(volume.data_criacao.seconds).format("DD/MM/YY") }}</td>  
             <td class="d-print-none">
               <button class="btn btn-danger" data-bs-target="#apagare" data-bs-toggle="modal" 
               @click="() => soft_volume_modal_ref = volume.codigo"><i class="bi bi-trash" title="Apagar volume"></i></button>
