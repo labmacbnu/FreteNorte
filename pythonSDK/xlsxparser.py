@@ -31,8 +31,7 @@ for name, DF in DATAFRAMES.items():
 
 
 # %%
-FULL_DF = pd.concat(DATAFRAMES, ignore_index=True)
-print(FULL_DF)
+FULL_DF = pd.concat(DATAFRAMES, ignore_index=True) 
 # %%
 
 # %%
@@ -63,21 +62,28 @@ AMBIENTES_RANGES
 # %%
 
 AMBIENTES_DF = []
+from tqdm import tqdm
 
-for amb, rng in AMBIENTES_RANGES.items():
-    a,b = rng
-    print(a, b, amb, sep="\t|\t")
-    if a < b:
-        valores = FULL_DF.iloc[a+1:b-1,:].values
-    else:
-        valores = FULL_DF.iloc[a+1:,:].values
-    
-    new_df = pd.DataFrame(valores[1:], columns=valores[0]) 
-    new_df = new_df[[x for x in new_df.columns if type(x) == str]]
-    novas_colunas = new_df.columns.values  
-    new_df.columns = novas_colunas
-    new_df["Ambiente"] = amb
-    AMBIENTES_DF.append(new_df)
+pbar = tqdm(total=len(AMBIENTES_RANGES.values()))
+
+with pbar:
+    for amb, rng in tqdm(AMBIENTES_RANGES.items()):
+        pbar.set_description(f"Processando {amb}")
+        a,b = rng
+        #print(a, b, amb, sep="\t|\t")
+        if a < b:
+            valores = FULL_DF.iloc[a+1:b-1,:].values
+        else:
+            valores = FULL_DF.iloc[a+1:,:].values
+        
+        new_df = pd.DataFrame(valores[1:], columns=valores[0]) 
+        new_df = new_df[[x for x in new_df.columns if type(x) == str]]
+        novas_colunas = new_df.columns.values  
+        new_df.columns = novas_colunas
+        new_df["Ambiente"] = amb
+        AMBIENTES_DF.append(new_df)
+        pbar.update(1)
+
 
 AMBIENTES_DF
 # %%
@@ -257,20 +263,23 @@ META = {
 
 JSON_RECORDS = BIG_DF.to_dict(orient="records")
 
-for origin, destin in COLUMNS_MAPPING.items():
-    for record in JSON_RECORDS:
+for record in JSON_RECORDS:
+    for origin, destin in COLUMNS_MAPPING.items():
         if destin:
           record[destin] = record.pop(origin)
         else:
           record.pop(origin)
-        record['key'] = record['detalhes.patrimonio']
+    
+    try:
+        record['key'] = record['detalhes.cod_barras']
         if pd.isna(record['key']):
-            try:
-                record['key'] = record['detalhes.n_controle']
-            except:
-                pass
-        record['meta'] = META
-        record['tipo'] = "Permanente"
+            record['key'] = record['detalhes.patrimonio']
+        if pd.isna(record['key']):
+            record['key'] = record['detalhes.n_controle'] 
+    except:
+        print(record["ambiente_codigo"], record["detalhes.patrimonio"], sep="\t|\t") 
+    record['meta'] = META
+    record['tipo'] = "Permanente"
 
 from functools import reduce
 
@@ -287,7 +296,15 @@ def dot_to_json(a):
 
 JSON_RECORDS = [dot_to_json(x) for x in JSON_RECORDS]
 
-JSON_RECORDS
+from collections import Counter
+
+keys_counter = Counter([type(x["key"]) for x in JSON_RECORDS])
+
+print(keys_counter)
+for x in JSON_RECORDS:
+    if type(x["key"]) == float:
+        print(x["key"],x, sep="\t|\t") 
+
 
 
 with open(DESTINO / "permanentes.json", "w") as f:
