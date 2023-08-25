@@ -8,9 +8,15 @@
 <script setup>
 import { ref, watch } from 'vue';
 const emits = defineEmits(['update', 'validate'])
+const props = defineProps({
+    peso: {
+        type: Number,
+        default: null
+    }
+})
 
 const validate = ref(true)
-const peso = ref(null)
+const peso = ref(props.peso | null)
 
 watch(peso, (newValue, oldValue) => { 
     try {
@@ -26,4 +32,10 @@ watch(peso, (newValue, oldValue) => {
         validate.value = false
     }
 }) 
+
+watch( () => props.peso, (newVal) => {
+    peso.value = newVal
+    validate.value = true
+}, { immediate: true}
+)
 </script>
