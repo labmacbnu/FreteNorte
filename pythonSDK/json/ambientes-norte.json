@@ -5,6 +5,7 @@
       "BC00"
     ],
     "codigo": "ACD1",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -24,6 +25,7 @@
       "BC00"
     ],
     "codigo": "ACF1",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -43,6 +45,7 @@
       "BC00"
     ],
     "codigo": "ACD2",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -62,6 +65,7 @@
       "BC00"
     ],
     "codigo": "ACC3",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -81,6 +85,7 @@
       "BC00"
     ],
     "codigo": "ACE1",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -100,6 +105,7 @@
       "BC00"
     ],
     "codigo": "ACF2",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -119,6 +125,7 @@
       "BC00"
     ],
     "codigo": "ACC1",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -138,6 +145,7 @@
       "BC00"
     ],
     "codigo": "ACC2",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -155,6 +163,7 @@
     "nome": "Serviços de Vigilância",
     "origem": [],
     "codigo": "A001",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -174,6 +183,7 @@
       "A001.3"
     ],
     "codigo": "A002",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -193,6 +203,7 @@
       "A003"
     ],
     "codigo": "A003",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -213,6 +224,7 @@
       "A110"
     ],
     "codigo": "A004",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -233,6 +245,7 @@
       "A110"
     ],
     "codigo": "A005",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -253,6 +266,7 @@
       "A110"
     ],
     "codigo": "A006",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -273,6 +287,7 @@
       "A110"
     ],
     "codigo": "A007",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -292,6 +307,7 @@
       "A106"
     ],
     "codigo": "A008",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -311,6 +327,7 @@
       "A106"
     ],
     "codigo": "A008.1",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -328,6 +345,7 @@
     "nome": "Sala 01 para Professores em Estudo",
     "origem": [],
     "codigo": "A009",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -345,6 +363,7 @@
     "nome": "Sala 01 para Professores em Estudo",
     "origem": [],
     "codigo": "A010",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -362,6 +381,7 @@
     "nome": "Sala 02 para Professores em Estudo",
     "origem": [],
     "codigo": "A011",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -379,6 +399,7 @@
     "nome": "Sala 03 para Professores em Estudo",
     "origem": [],
     "codigo": "A012",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -396,6 +417,7 @@
     "nome": "Sala 04 para Professores em Estudo",
     "origem": [],
     "codigo": "A013",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -413,6 +435,7 @@
     "nome": "Sala 05 para Professores em Estudo",
     "origem": [],
     "codigo": "A014",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -430,6 +453,7 @@
     "nome": "Sala 06 para Professores em Estudo",
     "origem": [],
     "codigo": "A015",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -447,6 +471,7 @@
     "nome": "Sala 07 para Professores em Estudo",
     "origem": [],
     "codigo": "A016",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -464,6 +489,7 @@
     "nome": "Sala 08 para Professores em Estudo",
     "origem": [],
     "codigo": "A017",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -481,6 +507,7 @@
     "nome": "Sala 09 para Professores em Estudo",
     "origem": [],
     "codigo": "A018",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -498,6 +525,7 @@
     "nome": "Sala 10 para Professores em Estudo",
     "origem": [],
     "codigo": "A019",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -515,6 +543,7 @@
     "nome": "Sala 11 para Professores em Estudo",
     "origem": [],
     "codigo": "A020",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -532,6 +561,7 @@
     "nome": "Copa com Acessibilidade",
     "origem": [],
     "codigo": "A021",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -549,6 +579,7 @@
     "nome": "Banheiros 01 (Masculino e Feminino)",
     "origem": [],
     "codigo": "A022",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -568,6 +599,7 @@
       "A203"
     ],
     "codigo": "A023",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -587,6 +619,7 @@
       "A206"
     ],
     "codigo": "A024",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -606,6 +639,7 @@
       "A206.1"
     ],
     "codigo": "A024.1",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -623,6 +657,7 @@
     "nome": "Sala para Atendimentos 01",
     "origem": [],
     "codigo": "A025",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -640,6 +675,7 @@
     "nome": "Sala para Atendimentos 02",
     "origem": [],
     "codigo": "A026",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -657,6 +693,7 @@
     "nome": "Banheiros 02 (Feminino)",
     "origem": [],
     "codigo": "A027",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -674,6 +711,7 @@
     "nome": "Banheiros 03 (Masculino)",
     "origem": [],
     "codigo": "A028",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -691,6 +729,7 @@
     "nome": "Praça de Alimentação 01",
     "origem": [],
     "codigo": "A029",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -708,6 +747,7 @@
     "nome": "Banheiros 04 (Feminino)",
     "origem": [],
     "codigo": "A029.1",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -725,6 +765,7 @@
     "nome": "Banheiros 05 (Masculino)",
     "origem": [],
     "codigo": "A029.2",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -742,6 +783,7 @@
     "nome": "Estoque do Restaurante Universitário",
     "origem": [],
     "codigo": "A029.3",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -759,6 +801,7 @@
     "nome": "Cozinha do Restaurante Universitário",
     "origem": [],
     "codigo": "A029.4",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -776,6 +819,7 @@
     "nome": "Linha de Servir do Restaurante Universitário",
     "origem": [],
     "codigo": "A029.5",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -795,6 +839,7 @@
       "BC01"
     ],
     "codigo": "A029.6",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -812,6 +857,7 @@
     "nome": "Banheiros 06 (RU)",
     "origem": [],
     "codigo": "A029.7",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -829,6 +875,7 @@
     "nome": "Banheiros 07 (RU)",
     "origem": [],
     "codigo": "A029.8",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -846,6 +893,7 @@
     "nome": "Quiosque de Conveniências",
     "origem": [],
     "codigo": "A029.9",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -863,6 +911,7 @@
     "nome": "Centro Acadêmico",
     "origem": [],
     "codigo": "A029.10",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -880,6 +929,7 @@
     "nome": "Empresa Júnior das Licenciaturas",
     "origem": [],
     "codigo": "A029.11",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -897,6 +947,7 @@
     "nome": "Copa para Servidores",
     "origem": [],
     "codigo": "A029.12",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Superior",
@@ -914,6 +965,7 @@
     "nome": "Quadra de Esportes",
     "origem": [],
     "codigo": "A030",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -931,6 +983,7 @@
     "nome": "Sala da Atlética",
     "origem": [],
     "codigo": "A030.1",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -948,6 +1001,7 @@
     "nome": "Vestiário 01 (Masculino)",
     "origem": [],
     "codigo": "A030.2",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -965,6 +1019,7 @@
     "nome": "Vestiário 02 (Feminino)",
     "origem": [],
     "codigo": "A030.3",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -984,6 +1039,7 @@
       "B018"
     ],
     "codigo": "A032",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -1003,6 +1059,7 @@
       "B020"
     ],
     "codigo": "A033",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -1020,6 +1077,7 @@
     "nome": "Laboratório Integrado de Engenharia de Produção (LIEP)",
     "origem": [],
     "codigo": "A034",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -1039,6 +1097,7 @@
       "B115"
     ],
     "codigo": "A035",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -1058,6 +1117,7 @@
       "A001.3.1"
     ],
     "codigo": "A036",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -1077,6 +1137,7 @@
       "A005"
     ],
     "codigo": "A037",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -1096,6 +1157,7 @@
       "B117"
     ],
     "codigo": "A038",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -1115,6 +1177,7 @@
       "B114"
     ],
     "codigo": "A039",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -1132,6 +1195,7 @@
     "nome": "Integre Júnior",
     "origem": [],
     "codigo": "A031",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -1151,6 +1215,7 @@
       "A305"
     ],
     "codigo": "A040",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -1170,6 +1235,7 @@
       "B002"
     ],
     "codigo": "A041",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -1189,6 +1255,7 @@
       "B116"
     ],
     "codigo": "A042",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -1208,6 +1275,7 @@
       "B004"
     ],
     "codigo": "A043",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -1227,6 +1295,7 @@
       "B021"
     ],
     "codigo": "A044",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -1244,6 +1313,7 @@
     "nome": "Laboratório de Polímeros e (Nano)compósitos Poliméricos (NANOPOL)",
     "origem": [],
     "codigo": "A045",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -1263,6 +1333,7 @@
       "B008"
     ],
     "codigo": "A046",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -1282,6 +1353,7 @@
       "B005"
     ],
     "codigo": "A047",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -1301,6 +1373,7 @@
       "B001"
     ],
     "codigo": "A048",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -1318,6 +1391,7 @@
     "nome": "Laboratório de Estamparia (LAET)",
     "origem": [],
     "codigo": "A049",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -1337,6 +1411,7 @@
       "B112"
     ],
     "codigo": "A050",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -1354,6 +1429,7 @@
     "nome": "Laboratório de Transformações e Materiais Avançados (LTMA)",
     "origem": [],
     "codigo": "A051",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -1373,6 +1449,7 @@
       "B003.1"
     ],
     "codigo": "A052",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -1392,6 +1469,7 @@
       "B018.1"
     ],
     "codigo": "A053",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -1411,6 +1489,7 @@
       "B120.1"
     ],
     "codigo": "A054",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -1428,6 +1507,7 @@
     "nome": "Recepção do Campus",
     "origem": [],
     "codigo": "A054.1",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -1445,6 +1525,7 @@
     "nome": "Laboratório de Matemática Pura (LAMP)",
     "origem": [],
     "codigo": "A101",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Superior",
@@ -1464,6 +1545,7 @@
       "B123"
     ],
     "codigo": "A102",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Superior",
@@ -1483,6 +1565,7 @@
       "B122"
     ],
     "codigo": "A103",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Superior",
@@ -1502,6 +1585,7 @@
       "A101"
     ],
     "codigo": "A104",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Superior",
@@ -1521,6 +1605,7 @@
       "A102"
     ],
     "codigo": "A105",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Superior",
@@ -1540,6 +1625,7 @@
       "A103"
     ],
     "codigo": "A106",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Superior",
@@ -1559,6 +1645,7 @@
       "A104"
     ],
     "codigo": "A107",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Superior",
@@ -1578,6 +1665,7 @@
       "A105"
     ],
     "codigo": "A108",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Superior",
@@ -1595,6 +1683,7 @@
     "nome": "Banheiro 08 (Feminino)",
     "origem": [],
     "codigo": "A109",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Superior",
@@ -1612,6 +1701,7 @@
     "nome": "Banheiro 09 (Masculino)",
     "origem": [],
     "codigo": "A110",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Superior",
@@ -1631,6 +1721,7 @@
       "B125"
     ],
     "codigo": "A111",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Superior",
@@ -1650,6 +1741,7 @@
       "B120.1"
     ],
     "codigo": "A111.1",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Superior",
@@ -1667,6 +1759,7 @@
     "nome": "Pré-UFSC",
     "origem": [],
     "codigo": "A112",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Superior",
@@ -1684,6 +1777,7 @@
     "nome": "Ambiente Cooperativo de Pesquisa em Ciências de Materiais (ACOPES)",
     "origem": [],
     "codigo": "A113",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Superior",
@@ -1703,6 +1797,7 @@
       "B011"
     ],
     "codigo": "A114",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Superior",
@@ -1722,6 +1817,7 @@
       "B011"
     ],
     "codigo": "A114.1",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Superior",
@@ -1741,6 +1837,7 @@
       "B012"
     ],
     "codigo": "A115",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Superior",
@@ -1760,6 +1857,7 @@
       "B010"
     ],
     "codigo": "A116",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Superior",
@@ -1777,6 +1875,7 @@
     "nome": "Laboratório Grupo de Estudo e Síntese de Materiais (GESMAT)",
     "origem": [],
     "codigo": "A117",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Superior",
@@ -1796,6 +1895,7 @@
       "B113"
     ],
     "codigo": "A118",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Superior",
@@ -1813,6 +1913,7 @@
     "nome": "Laboratório de Físico-Química (LABFQ)",
     "origem": [],
     "codigo": "A119",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Superior",
@@ -1830,6 +1931,7 @@
     "nome": "Laboratório para Pesquisa de Química (LABPQ)",
     "origem": [],
     "codigo": "A120",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Superior",
@@ -1849,6 +1951,7 @@
       "B106"
     ],
     "codigo": "A121",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Superior",
@@ -1868,6 +1971,7 @@
       "B111"
     ],
     "codigo": "A122",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Superior",
@@ -1887,6 +1991,7 @@
       "B019"
     ],
     "codigo": "A123",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Superior",
@@ -1906,6 +2011,7 @@
       "B017"
     ],
     "codigo": "A124",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Superior",
@@ -1923,6 +2029,7 @@
     "nome": "Laboratório de Pesquisa em Controle e Automação (LPCA)",
     "origem": [],
     "codigo": "A125",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Superior",
@@ -1942,6 +2049,7 @@
       "B110"
     ],
     "codigo": "A126",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Superior",
@@ -1961,6 +2069,7 @@
       "B124"
     ],
     "codigo": "A127",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Superior",
@@ -1980,6 +2089,7 @@
       "B120"
     ],
     "codigo": "A128",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Superior",
@@ -1997,6 +2107,7 @@
     "nome": "Laboratório de Inovação para o Ensino de Física (LIEF)",
     "origem": [],
     "codigo": "A129",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Superior",
@@ -2016,6 +2127,7 @@
       "B104"
     ],
     "codigo": "A130",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Superior",
@@ -2035,6 +2147,7 @@
       "B103"
     ],
     "codigo": "A131",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Superior",
@@ -2054,6 +2167,7 @@
       "B103"
     ],
     "codigo": "A132",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Superior",
@@ -2073,6 +2187,7 @@
       "BC01"
     ],
     "codigo": "ACE2",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Superior",
@@ -2092,6 +2207,7 @@
       "BC01"
     ],
     "codigo": "ACC4",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Superior",
@@ -2111,6 +2227,7 @@
       "BC01"
     ],
     "codigo": "ACD3",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Superior",
@@ -2131,6 +2248,7 @@
       "C001"
     ],
     "codigo": "ACF1",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Térreo",
@@ -2151,6 +2269,7 @@
       "C001"
     ],
     "codigo": "ACC1",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Térreo",
@@ -2171,6 +2290,7 @@
       "C001"
     ],
     "codigo": "ACE1",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Térreo",
@@ -2190,6 +2310,7 @@
       "AC01"
     ],
     "codigo": "ACF2",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 1",
@@ -2209,6 +2330,7 @@
       "AC01"
     ],
     "codigo": "ACC2",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 1",
@@ -2228,6 +2350,7 @@
       "AC01"
     ],
     "codigo": "ACE2",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 1",
@@ -2249,6 +2372,7 @@
       "CC01"
     ],
     "codigo": "ACF3",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 2",
@@ -2270,6 +2394,7 @@
       "CC02"
     ],
     "codigo": "ACC3",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 2",
@@ -2291,6 +2416,7 @@
       "VVC00"
     ],
     "codigo": "ACE3",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 2",
@@ -2311,6 +2437,7 @@
       "CC03"
     ],
     "codigo": "ACF4",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 3",
@@ -2331,6 +2458,7 @@
       "CC03"
     ],
     "codigo": "ACC4",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 3",
@@ -2351,6 +2479,7 @@
       "CC03"
     ],
     "codigo": "ACE4",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 3",
@@ -2370,6 +2499,7 @@
       "A002"
     ],
     "codigo": "B001",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Térreo",
@@ -2389,6 +2519,7 @@
       "A002"
     ],
     "codigo": "B001.1",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Térreo",
@@ -2408,6 +2539,7 @@
       "A107"
     ],
     "codigo": "B002",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Térreo",
@@ -2427,6 +2559,7 @@
       "A202"
     ],
     "codigo": "B003",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Térreo",
@@ -2444,6 +2577,7 @@
     "nome": "Coordenação de Cursos",
     "origem": [],
     "codigo": "B004",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Térreo",
@@ -2461,6 +2595,7 @@
     "nome": "Sala para Atendimentos 03",
     "origem": [],
     "codigo": "B004.1",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Térreo",
@@ -2478,6 +2613,7 @@
     "nome": "Sala para Atendimentos 04",
     "origem": [],
     "codigo": "B004.02",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Térreo",
@@ -2495,6 +2631,7 @@
     "nome": "Coordenação de Curso 01",
     "origem": [],
     "codigo": "B004.03",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Térreo",
@@ -2512,6 +2649,7 @@
     "nome": "Coordenação de Curso 02",
     "origem": [],
     "codigo": "B004.04",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Térreo",
@@ -2531,6 +2669,7 @@
       "A213"
     ],
     "codigo": "B004.05",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Térreo",
@@ -2550,6 +2689,7 @@
       "A306"
     ],
     "codigo": "B004.06",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Térreo",
@@ -2569,6 +2709,7 @@
       "A310"
     ],
     "codigo": "B004.07",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Térreo",
@@ -2586,6 +2727,7 @@
     "nome": "Sala para Atendimentos 05",
     "origem": [],
     "codigo": "B004.08",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Térreo",
@@ -2603,6 +2745,7 @@
     "nome": "Sala para Atendimentos 06",
     "origem": [],
     "codigo": "B004.09",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Térreo",
@@ -2620,6 +2763,7 @@
     "nome": "Sala para Atendimentos 07",
     "origem": [],
     "codigo": "B004.10",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Térreo",
@@ -2637,6 +2781,7 @@
     "nome": "Sala para Atendimentos 08",
     "origem": [],
     "codigo": "B004.11",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Térreo",
@@ -2654,6 +2799,7 @@
     "nome": "Amamentação",
     "origem": [],
     "codigo": "B005",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Térreo",
@@ -2671,6 +2817,7 @@
     "nome": "Sala 01 para Amamentação",
     "origem": [],
     "codigo": "B005.1",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Térreo",
@@ -2688,6 +2835,7 @@
     "nome": "Sala 02 para Amamentação",
     "origem": [],
     "codigo": "B005.2",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Térreo",
@@ -2705,6 +2853,7 @@
     "nome": "Fraldário",
     "origem": [],
     "codigo": "B005.3",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Térreo",
@@ -2722,6 +2871,7 @@
     "nome": "Banheiro 10 (Feminino)",
     "origem": [],
     "codigo": "B006",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Térreo",
@@ -2739,6 +2889,7 @@
     "nome": "Banheiro 11 (Masculino)",
     "origem": [],
     "codigo": "B007",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Térreo",
@@ -2756,6 +2907,7 @@
     "nome": "Banheiro 12 (Acessibilidade)",
     "origem": [],
     "codigo": "B008",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Térreo",
@@ -2773,6 +2925,7 @@
     "nome": "Laboratório de Sistemas Digitais e Microprocessadores (LABSIM)",
     "origem": [],
     "codigo": "B009",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Térreo",
@@ -2792,6 +2945,7 @@
       "B016"
     ],
     "codigo": "B010",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Térreo",
@@ -2811,6 +2965,7 @@
       "B119"
     ],
     "codigo": "B011",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Térreo",
@@ -2828,6 +2983,7 @@
     "nome": "Laboratório de Projetos II (LAPRO2)",
     "origem": [],
     "codigo": "B012",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Térreo",
@@ -2847,6 +3003,7 @@
       "B023"
     ],
     "codigo": "B013",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Térreo",
@@ -2864,6 +3021,7 @@
     "nome": "Laboratório de Manufatura Aditiva e Processos Especiais (LABMAPE)",
     "origem": [],
     "codigo": "B014",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Térreo",
@@ -2883,6 +3041,7 @@
       "B024"
     ],
     "codigo": "B015",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Térreo",
@@ -2902,6 +3061,7 @@
       "B015"
     ],
     "codigo": "B016",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Térreo",
@@ -2921,6 +3081,7 @@
       "B015"
     ],
     "codigo": "B016.1",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Térreo",
@@ -2940,6 +3101,7 @@
       "B015"
     ],
     "codigo": "B016.2",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Térreo",
@@ -2959,6 +3121,7 @@
       "B015"
     ],
     "codigo": "B016.3",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Térreo",
@@ -2978,6 +3141,7 @@
       "B015"
     ],
     "codigo": "B016.4",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Térreo",
@@ -2997,6 +3161,7 @@
       "C308"
     ],
     "codigo": "B017",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Térreo",
@@ -3016,6 +3181,7 @@
       "B118"
     ],
     "codigo": "B101",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 1",
@@ -3035,6 +3201,7 @@
       "VV001"
     ],
     "codigo": "B102",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 1",
@@ -3054,6 +3221,7 @@
       "A204"
     ],
     "codigo": "B103",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 1",
@@ -3073,6 +3241,7 @@
       "A205"
     ],
     "codigo": "B104",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 1",
@@ -3092,6 +3261,7 @@
       "A207"
     ],
     "codigo": "B105",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 1",
@@ -3111,6 +3281,7 @@
       "A208"
     ],
     "codigo": "B106",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 1",
@@ -3128,6 +3299,7 @@
     "nome": "Banheiro 13 (Feminino)",
     "origem": [],
     "codigo": "B107",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 1",
@@ -3145,6 +3317,7 @@
     "nome": "Banheiro 14 (Masculino)",
     "origem": [],
     "codigo": "B108",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 1",
@@ -3162,6 +3335,7 @@
     "nome": "Banheiro 15 (Acessibilidade)",
     "origem": [],
     "codigo": "B109",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 1",
@@ -3181,6 +3355,7 @@
       "A301"
     ],
     "codigo": "B110",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 1",
@@ -3200,6 +3375,7 @@
       "A302"
     ],
     "codigo": "B111",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 1",
@@ -3219,6 +3395,7 @@
       "A303"
     ],
     "codigo": "B112",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 1",
@@ -3238,6 +3415,7 @@
       "A304"
     ],
     "codigo": "B113",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 1",
@@ -3257,6 +3435,7 @@
       "A307.1"
     ],
     "codigo": "B114",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 1",
@@ -3276,6 +3455,7 @@
       "A307.2"
     ],
     "codigo": "B115",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 1",
@@ -3293,6 +3473,7 @@
     "nome": "Sala de Aula 13 (Bloco B)",
     "origem": [],
     "codigo": "B116",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 1",
@@ -3310,6 +3491,7 @@
     "nome": "Sala de Aula 14 (Bloco B)",
     "origem": [],
     "codigo": "B117",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 1",
@@ -3329,6 +3511,7 @@
       "C206"
     ],
     "codigo": "B118",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 1",
@@ -3348,6 +3531,7 @@
       "VV002"
     ],
     "codigo": "B201",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 2",
@@ -3365,6 +3549,7 @@
     "nome": "Laboratórios de Informática I (LABINFO III)",
     "origem": [],
     "codigo": "B202",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 2",
@@ -3384,6 +3569,7 @@
       "C101"
     ],
     "codigo": "B203",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 2",
@@ -3403,6 +3589,7 @@
       "C102"
     ],
     "codigo": "B204",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 2",
@@ -3422,6 +3609,7 @@
       "C201"
     ],
     "codigo": "B205",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 2",
@@ -3441,6 +3629,7 @@
       "C203"
     ],
     "codigo": "B206",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 2",
@@ -3460,6 +3649,7 @@
       "C205"
     ],
     "codigo": "B207",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 2",
@@ -3479,6 +3669,7 @@
       "C301"
     ],
     "codigo": "B208",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 2",
@@ -3498,6 +3689,7 @@
       "C302"
     ],
     "codigo": "B209",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 2",
@@ -3517,6 +3709,7 @@
       "C303"
     ],
     "codigo": "B210",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 2",
@@ -3534,6 +3727,7 @@
     "nome": "Banheiro 16 (Masculino)",
     "origem": [],
     "codigo": "B211",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 2",
@@ -3551,6 +3745,7 @@
     "nome": "Banheiro 17 (Feminino)",
     "origem": [],
     "codigo": "B212",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 2",
@@ -3570,6 +3765,7 @@
       "C204"
     ],
     "codigo": "B213",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 2",
@@ -3589,6 +3785,7 @@
       "C304"
     ],
     "codigo": "B214",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 2",
@@ -3608,6 +3805,7 @@
       "A001"
     ],
     "codigo": "B215",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 2",
@@ -3627,6 +3825,7 @@
       "A001.1"
     ],
     "codigo": "B215.1",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 2",
@@ -3644,6 +3843,7 @@
     "nome": "Subdivisão da Biblioteca 02",
     "origem": [],
     "codigo": "B215.2",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 2",
@@ -3661,6 +3861,7 @@
     "nome": "Subdivisão da Biblioteca 03",
     "origem": [],
     "codigo": "B215.3",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 2",
@@ -3678,6 +3879,7 @@
     "nome": "Subdivisão da Biblioteca 04",
     "origem": [],
     "codigo": "B215.4",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 2",
@@ -3695,6 +3897,7 @@
     "nome": "Subdivisão da Biblioteca 05",
     "origem": [],
     "codigo": "B215.5",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 2",
@@ -3712,6 +3915,7 @@
     "nome": "Subdivisão da Biblioteca 06",
     "origem": [],
     "codigo": "B215.6",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 2",
@@ -3731,6 +3935,7 @@
       "C103"
     ],
     "codigo": "B301",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 3",
@@ -3748,6 +3953,7 @@
     "nome": "Sala de Aula 15 (Bloco B)",
     "origem": [],
     "codigo": "B302",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 3",
@@ -3767,6 +3973,7 @@
       "C305"
     ],
     "codigo": "B303",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 3",
@@ -3784,6 +3991,7 @@
     "nome": "Sala de Professores 11",
     "origem": [],
     "codigo": "B304",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 3",
@@ -3801,6 +4009,7 @@
     "nome": "Sala de Professores 12",
     "origem": [],
     "codigo": "B305",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 3",
@@ -3818,6 +4027,7 @@
     "nome": "Sala de Professores 13",
     "origem": [],
     "codigo": "B306",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 3",
@@ -3835,6 +4045,7 @@
     "nome": "Sala de Professores 14",
     "origem": [],
     "codigo": "B307",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 3",
@@ -3852,6 +4063,7 @@
     "nome": "Sala de Professores 15",
     "origem": [],
     "codigo": "B308",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 3",
@@ -3869,6 +4081,7 @@
     "nome": "Sala de Professores 16",
     "origem": [],
     "codigo": "B309",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 3",
@@ -3886,6 +4099,7 @@
     "nome": "Sala de Professores 17",
     "origem": [],
     "codigo": "B310",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 3",
@@ -3903,6 +4117,7 @@
     "nome": "Banheiro 16 (Masculino)",
     "origem": [],
     "codigo": "B311",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 3",
@@ -3920,6 +4135,7 @@
     "nome": "Banheiro 17 (Feminino)",
     "origem": [],
     "codigo": "B312",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 3",
@@ -3939,6 +4155,7 @@
       "C104"
     ],
     "codigo": "B313",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 3",
@@ -3959,6 +4176,7 @@
       "C105.2"
     ],
     "codigo": "B314",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 3",
@@ -3978,6 +4196,7 @@
       "C202"
     ],
     "codigo": "B315",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 3",
@@ -3997,6 +4216,7 @@
       "C202"
     ],
     "codigo": "B316",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 3",
@@ -4016,6 +4236,7 @@
       "C106"
     ],
     "codigo": "B317",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 3",
@@ -4033,6 +4254,7 @@
     "nome": "Sala de Professores 18",
     "origem": [],
     "codigo": "B318",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 3",
@@ -4050,6 +4272,7 @@
     "nome": "Sala de Professores 19",
     "origem": [],
     "codigo": "B319",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 3",
@@ -4067,6 +4290,7 @@
     "nome": "Sala de Professores 20",
     "origem": [],
     "codigo": "B320",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 3",
@@ -4084,6 +4308,7 @@
     "nome": "Sala de Professores 21",
     "origem": [],
     "codigo": "B321",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 3",
@@ -4101,6 +4326,7 @@
     "nome": "Sala de Professores 22",
     "origem": [],
     "codigo": "B322",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 3",
@@ -4120,6 +4346,7 @@
       "C105.2"
     ],
     "codigo": "B323",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 3",
@@ -4137,6 +4364,7 @@
     "nome": "Casa de Máquinas e Telhado (Bloco B)",
     "origem": [],
     "codigo": "B401",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Terraço",
@@ -4156,6 +4384,7 @@
       "B022"
     ],
     "codigo": "BS01",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Subsolo",
@@ -4173,6 +4402,7 @@
     "nome": "Laboratório de Materiais Cerâmicos e Vítreos (LABCEV)",
     "origem": [],
     "codigo": "BS02",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Subsolo",
@@ -4192,6 +4422,7 @@
       "C209"
     ],
     "codigo": "BS03",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Subsolo",
@@ -4209,6 +4440,7 @@
     "nome": "Banheiro 18",
     "origem": [],
     "codigo": "BS03.3",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Subsolo",
@@ -4226,6 +4458,7 @@
     "nome": "Vestiário 03",
     "origem": [],
     "codigo": "BS03.2",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Subsolo",
@@ -4243,6 +4476,7 @@
     "nome": "Vestiário 04",
     "origem": [],
     "codigo": "BS03.1",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Subsolo",
@@ -4262,6 +4496,7 @@
       "EXB01"
     ],
     "codigo": "BS04",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Subsolo",
@@ -4279,6 +4514,7 @@
     "nome": "Depósito para Administração de Edifícios",
     "origem": [],
     "codigo": "BS05",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Subsolo",
@@ -4296,6 +4532,7 @@
     "nome": "Central de Reagentes Químicos",
     "origem": [],
     "codigo": "BS06",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Subsolo",
@@ -4313,6 +4550,7 @@
     "nome": "Central de Despacho de Resíduos",
     "origem": [],
     "codigo": "BS07",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Subsolo",
@@ -4330,6 +4568,7 @@
     "nome": "Hall de Entrada Frontal no Bloco T 01",
     "origem": [],
     "codigo": "TCF1",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco T",
       "pavimento": "Térreo",
@@ -4347,6 +4586,7 @@
     "nome": "Cantina do Teatro",
     "origem": [],
     "codigo": "T001",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco T",
       "pavimento": "Térreo",
@@ -4364,6 +4604,7 @@
     "nome": "Depósito do Teatro 01",
     "origem": [],
     "codigo": "T002",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco T",
       "pavimento": "Térreo",
@@ -4381,6 +4622,7 @@
     "nome": "Depósito do Teatro 02",
     "origem": [],
     "codigo": "T003",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco T",
       "pavimento": "Térreo",
@@ -4398,6 +4640,7 @@
     "nome": "Banheiro 19 (Masculino)",
     "origem": [],
     "codigo": "T004",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco T",
       "pavimento": "Térreo",
@@ -4415,6 +4658,7 @@
     "nome": "Banheiro 20 (Feminino)",
     "origem": [],
     "codigo": "T005",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco T",
       "pavimento": "Térreo",
@@ -4432,6 +4676,7 @@
     "nome": "Corredor Central no Bloco T 01",
     "origem": [],
     "codigo": "TCC1",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco T",
       "pavimento": "Térreo",
@@ -4449,6 +4694,7 @@
     "nome": "Corredor Central no Bloco T 02",
     "origem": [],
     "codigo": "TCC2",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco T",
       "pavimento": "Térreo",
@@ -4466,6 +4712,7 @@
     "nome": "Corredor Esquerda no Bloco T 01",
     "origem": [],
     "codigo": "TCE1",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco T",
       "pavimento": "Térreo",
@@ -4483,6 +4730,7 @@
     "nome": "Corredor Central no Bloco T 03",
     "origem": [],
     "codigo": "TCC3",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco T",
       "pavimento": "Térreo",
@@ -4500,6 +4748,7 @@
     "nome": "Corredor Direita no Bloco T 01",
     "origem": [],
     "codigo": "TCD1",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco T",
       "pavimento": "Térreo",
@@ -4517,6 +4766,7 @@
     "nome": "Camarim 01",
     "origem": [],
     "codigo": "T006",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco T",
       "pavimento": "Térreo",
@@ -4534,6 +4784,7 @@
     "nome": "Palco do Teatro",
     "origem": [],
     "codigo": "T007",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco T",
       "pavimento": "Térreo",
@@ -4551,6 +4802,7 @@
     "nome": "Camarim 02",
     "origem": [],
     "codigo": "T008",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco T",
       "pavimento": "Térreo",
@@ -4568,6 +4820,7 @@
     "nome": "Platéia Direita Inferior",
     "origem": [],
     "codigo": "T009",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco T",
       "pavimento": "Térreo",
@@ -4585,6 +4838,7 @@
     "nome": "Platéia Esquerda Inferior",
     "origem": [],
     "codigo": "T010",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco T",
       "pavimento": "Térreo",
@@ -4602,6 +4856,7 @@
     "nome": "Subsolo do Teatro",
     "origem": [],
     "codigo": "TS01",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco T",
       "pavimento": "Subsolo",
@@ -4619,6 +4874,7 @@
     "nome": "Corredor Central no Bloco T 04",
     "origem": [],
     "codigo": "TCC4",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco T",
       "pavimento": "Andar 1",
@@ -4636,6 +4892,7 @@
     "nome": "Platéia Direita Superior",
     "origem": [],
     "codigo": "T101",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco T",
       "pavimento": "Andar 1",
@@ -4653,6 +4910,7 @@
     "nome": "Platéia Esquerda Superior",
     "origem": [],
     "codigo": "T103",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco T",
       "pavimento": "Andar 1",
@@ -4670,6 +4928,7 @@
     "nome": "Mezanino do Teatro",
     "origem": [],
     "codigo": "T102",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco T",
       "pavimento": "Andar 1",
@@ -4687,6 +4946,7 @@
     "nome": "Cabine de Audiovisual do Teatro",
     "origem": [],
     "codigo": "T102.1",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Bloco T",
       "pavimento": "Andar 1",
@@ -4706,6 +4966,7 @@
       "EXA01"
     ],
     "codigo": "EX01",
+    "campus": "Norte",
     "detalhes": {
       "construcao": "Externo",
       "pavimento": "Térreo",

@@ -5,7 +5,8 @@
     "ambiente_nome":"BIBLIOTECA SETORIAL DO CAMPUS BLUMENAU (T\u00e9rreo)",
     "items":257,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU02 - Bloco Acad\u00eamico A",
@@ -13,7 +14,8 @@
     "ambiente_nome":"ADMINISTRA\u00c7\u00c3O BILBIOTECA (T\u00e9rreo)",
     "items":27,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU02 - Bloco Acad\u00eamico A",
@@ -21,7 +23,8 @@
     "ambiente_nome":"AGENTE PATRIMONIAL (T\u00e9rreo)",
     "items":8,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU02 - Bloco Acad\u00eamico A",
@@ -29,7 +32,8 @@
     "ambiente_nome":"SALA DO SERVIDOR (T\u00e9rreo)",
     "items":4,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU02 - Bloco Acad\u00eamico A",
@@ -37,7 +41,8 @@
     "ambiente_nome":"SECRETARIA ACAD\u00caMICA (T\u00e9rreo)",
     "items":59,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU02 - Bloco Acad\u00eamico A",
@@ -45,7 +50,8 @@
     "ambiente_nome":"\u00c1REA T\u00c9CNICA ADMINISTRATIVA (T\u00e9rreo)",
     "items":12,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU02 - Bloco Acad\u00eamico A",
@@ -53,7 +59,8 @@
     "ambiente_nome":"SECRETARIA DE COORDENA\u00c7\u00d5ES DE CURSO (T\u00e9rreo)",
     "items":21,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU02 - Bloco Acad\u00eamico A",
@@ -61,7 +68,8 @@
     "ambiente_nome":"DEP\u00d3SITO LIMPEZA (T\u00e9rreo)",
     "items":1,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU02 - Bloco Acad\u00eamico A",
@@ -69,7 +77,8 @@
     "ambiente_nome":"SALA DE AULA (1\u00ba Andar)",
     "items":79,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU02 - Bloco Acad\u00eamico A",
@@ -77,7 +86,8 @@
     "ambiente_nome":"SALA DE AULA (1\u00ba Andar)",
     "items":47,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU02 - Bloco Acad\u00eamico A",
@@ -85,7 +95,8 @@
     "ambiente_nome":"SALA DE AULA (1\u00ba Andar)",
     "items":63,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU02 - Bloco Acad\u00eamico A",
@@ -93,7 +104,8 @@
     "ambiente_nome":"SALA DE AULA (1\u00ba Andar)",
     "items":44,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU02 - Bloco Acad\u00eamico A",
@@ -101,7 +113,8 @@
     "ambiente_nome":"SALA DE AULA (1\u00ba Andar)",
     "items":67,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU02 - Bloco Acad\u00eamico A",
@@ -109,7 +122,8 @@
     "ambiente_nome":"SECRETARIA P\u00d3S-GRADUA\u00c7\u00c3O (1\u00ba Andar)",
     "items":30,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU02 - Bloco Acad\u00eamico A",
@@ -117,7 +131,8 @@
     "ambiente_nome":"SALA DE AULA (1\u00ba Andar)",
     "items":59,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU02 - Bloco Acad\u00eamico A",
@@ -125,7 +140,8 @@
     "ambiente_nome":"SALA DE ESTUDO DA P\u00d3S-GRADUA\u00c7\u00c3O_1 (1\u00ba Andar)",
     "items":11,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU02 - Bloco Acad\u00eamico A",
@@ -133,7 +149,8 @@
     "ambiente_nome":"SALA DE ESTUDO P\u00d3S-GRADUA\u00c7\u00c3O_2 (1\u00ba Andar)",
     "items":11,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU02 - Bloco Acad\u00eamico A",
@@ -141,7 +158,8 @@
     "ambiente_nome":"SALA DE CONVIV\u00caNCIA (2\u00ba Andar)",
     "items":10,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU02 - Bloco Acad\u00eamico A",
@@ -149,7 +167,8 @@
     "ambiente_nome":"VESTI\u00c1RIO (2\u00ba Andar)",
     "items":6,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU02 - Bloco Acad\u00eamico A",
@@ -157,7 +176,8 @@
     "ambiente_nome":"SALA DE AULA (2\u00ba Andar)",
     "items":55,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU02 - Bloco Acad\u00eamico A",
@@ -165,7 +185,8 @@
     "ambiente_nome":"NUPE - N\u00daCLEO PEDAG\u00d3GICO (2\u00ba Andar)",
     "items":47,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU02 - Bloco Acad\u00eamico A",
@@ -173,7 +194,8 @@
     "ambiente_nome":"SALA DE AULA (2\u00ba Andar)",
     "items":46,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU02 - Bloco Acad\u00eamico A",
@@ -181,7 +203,8 @@
     "ambiente_nome":"SALA DE AULA (2\u00ba Andar)",
     "items":72,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU02 - Bloco Acad\u00eamico A",
@@ -189,7 +212,8 @@
     "ambiente_nome":"NAE - N\u00daCLEO ASSIST\u00caNCIA ESTUDANTIL (2\u00ba Andar)",
     "items":8,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU02 - Bloco Acad\u00eamico A",
@@ -197,7 +221,8 @@
     "ambiente_nome":"NAE - N\u00daCLEO ASSIST\u00caNCIA ESTUDANTIL (2\u00ba Andar)",
     "items":18,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU02 - Bloco Acad\u00eamico A",
@@ -205,7 +230,8 @@
     "ambiente_nome":"SALA DE AULA (2\u00ba Andar)",
     "items":65,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU02 - Bloco Acad\u00eamico A",
@@ -213,7 +239,8 @@
     "ambiente_nome":"SALA DE AULA (2\u00ba Andar)",
     "items":49,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU02 - Bloco Acad\u00eamico A",
@@ -221,7 +248,8 @@
     "ambiente_nome":"NUPE - ATENDIMENTO (2\u00ba Andar)",
     "items":6,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU02 - Bloco Acad\u00eamico A",
@@ -229,7 +257,8 @@
     "ambiente_nome":"COORDENA\u00c7\u00c3O DE ENGENHARIA T\u00caXTIL (2\u00ba Andar)",
     "items":13,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU02 - Bloco Acad\u00eamico A",
@@ -237,7 +266,8 @@
     "ambiente_nome":"SALA DE AULA (3\u00ba Andar)",
     "items":65,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU02 - Bloco Acad\u00eamico A",
@@ -245,7 +275,8 @@
     "ambiente_nome":"SALA DE AULA (3\u00ba Andar)",
     "items":55,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU02 - Bloco Acad\u00eamico A",
@@ -253,7 +284,8 @@
     "ambiente_nome":"SALA DE AULA (3\u00ba Andar)",
     "items":72,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU02 - Bloco Acad\u00eamico A",
@@ -261,7 +293,8 @@
     "ambiente_nome":"SALA DE AULA (3\u00ba Andar)",
     "items":54,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU02 - Bloco Acad\u00eamico A",
@@ -269,7 +302,8 @@
     "ambiente_nome":"LABCOP - LABORAT\u00d3RIO DE CONTROLE DE PROCESSOS (3\u00ba Andar)",
     "items":83,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU02 - Bloco Acad\u00eamico A",
@@ -277,7 +311,8 @@
     "ambiente_nome":"COORDENA\u00c7\u00d5ES DE CURSOS LICENCIATURAS (3\u00ba Andar)",
     "items":16,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU02 - Bloco Acad\u00eamico A",
@@ -285,7 +320,8 @@
     "ambiente_nome":"SALA DE AULA (3\u00ba Andar)",
     "items":27,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU02 - Bloco Acad\u00eamico A",
@@ -293,7 +329,8 @@
     "ambiente_nome":"SALA DE AULA (3\u00ba Andar)",
     "items":26,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU02 - Bloco Acad\u00eamico A",
@@ -301,7 +338,8 @@
     "ambiente_nome":"COORDENA\u00c7\u00d5ES DE CURSOS ENGENHARIAS (3\u00ba Andar)",
     "items":14,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU02 - Bloco Acad\u00eamico A",
@@ -309,7 +347,8 @@
     "ambiente_nome":"\u00c1REA T\u00c9CNICA TELHADO (3\u00ba Andar)",
     "items":17,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU02 - Bloco Acad\u00eamico A",
@@ -317,7 +356,8 @@
     "ambiente_nome":"CIRCULA\u00c7\u00c3O BLOCO A T\u00c9RREO (T\u00e9rreo)",
     "items":20,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU02 - Bloco Acad\u00eamico A",
@@ -325,7 +365,8 @@
     "ambiente_nome":"CIRCULA\u00c7\u00c3O BLOCO A 1\u00ba ANDAR (1\u00ba Andar)",
     "items":15,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU02 - Bloco Acad\u00eamico A",
@@ -333,7 +374,8 @@
     "ambiente_nome":"CIRCULA\u00c7\u00c3O BLOCO A 2\u00ba ANDAR (2\u00ba Andar)",
     "items":17,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU02 - Bloco Acad\u00eamico A",
@@ -341,7 +383,8 @@
     "ambiente_nome":"CIRCULA\u00c7\u00c3O BLOCO A 3\u00ba ANDAR (3\u00ba Andar)",
     "items":9,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU03 - Bloco Acad\u00eamico B",
@@ -349,7 +392,8 @@
     "ambiente_nome":"LABTEC - LABORAT\u00d3RIO DE TECIDOS E MALHAS (T\u00e9rreo)",
     "items":58,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU03 - Bloco Acad\u00eamico B",
@@ -357,7 +401,8 @@
     "ambiente_nome":"LAFET - LABORAT\u00d3RIO DE FEN\u00d4MENOS DE TRANSPORTE | LABMAM - LABORAT\u00d3RIO DE MEIO AMBIENTE (T\u00e9rre",
     "items":39,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU03 - Bloco Acad\u00eamico B",
@@ -365,7 +410,8 @@
     "ambiente_nome":"LABCT - LABORAT\u00d3RIO DE CUIDADOS T\u00caXTEIS (T\u00e9rreo)",
     "items":11,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU03 - Bloco Acad\u00eamico B",
@@ -373,7 +419,8 @@
     "ambiente_nome":"APOIO T\u00c9CNICO TEXTIL (T\u00e9rreo)",
     "items":15,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU03 - Bloco Acad\u00eamico B",
@@ -381,7 +428,8 @@
     "ambiente_nome":"LABENE - LABORAT\u00d3RIO DE BENEFICIAMENTO (T\u00e9rreo)",
     "items":51,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU03 - Bloco Acad\u00eamico B",
@@ -389,7 +437,8 @@
     "ambiente_nome":"LAMAT - LABORAT\u00d3RIO MATERIALOGRAFIA (T\u00e9rreo)",
     "items":37,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU03 - Bloco Acad\u00eamico B",
@@ -397,7 +446,8 @@
     "ambiente_nome":"LAB3M - LABORAT\u00d3RIO DE MAGNETISMO E MATERIAIS MAGN\u00c9TICOS (T\u00e9rreo)",
     "items":21,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU03 - Bloco Acad\u00eamico B",
@@ -405,7 +455,8 @@
     "ambiente_nome":"LABQI - LABORAT\u00d3RIO DE QU\u00cdMICA INORG\u00c2NICA (T\u00e9rreo)",
     "items":155,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU03 - Bloco Acad\u00eamico B",
@@ -413,7 +464,8 @@
     "ambiente_nome":"LABQO - LABORAT\u00d3RIO DE QU\u00cdMICA ORG\u00c2NICA (T\u00e9rreo)",
     "items":96,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU03 - Bloco Acad\u00eamico B",
@@ -421,7 +473,8 @@
     "ambiente_nome":"APOIO T\u00c9CNICO QU\u00cdMICA (T\u00e9rreo)",
     "items":39,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU03 - Bloco Acad\u00eamico B",
@@ -429,7 +482,8 @@
     "ambiente_nome":"ALMOXARIFADO PRODUTOS QU\u00cdMICOS (T\u00e9rreo)",
     "items":11,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU03 - Bloco Acad\u00eamico B",
@@ -437,7 +491,8 @@
     "ambiente_nome":"ALMOXARIFADO MATERIAIS DE LABORAT\u00d3RIO DE QU\u00cdMICA (T\u00e9rreo)",
     "items":29,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU03 - Bloco Acad\u00eamico B",
@@ -445,7 +500,8 @@
     "ambiente_nome":"LASER - LABORAT\u00d3RIO DE SISTEMAS EMBARCADOS E ROB\u00d3TICO (T\u00e9rreo)",
     "items":52,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU03 - Bloco Acad\u00eamico B",
@@ -453,7 +509,8 @@
     "ambiente_nome":"LABIND - LABORAT\u00d3RIO DE INFORM\u00c1TICA INDUSTRIAL (T\u00e9rreo)",
     "items":100,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU03 - Bloco Acad\u00eamico B",
@@ -461,7 +518,8 @@
     "ambiente_nome":"LMP - LABORAT\u00d3RIO DE MULTIUSO PARA PROTOTIPAGEM (T\u00e9rreo)",
     "items":47,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU03 - Bloco Acad\u00eamico B",
@@ -469,7 +527,8 @@
     "ambiente_nome":"LEM - LABORAT\u00d3RIO DE ENSAIOS MEC\u00c2NICOS (T\u00e9rreo)",
     "items":42,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU03 - Bloco Acad\u00eamico B",
@@ -477,7 +536,8 @@
     "ambiente_nome":"APOIO T\u00c9CNICO DE MATERIAIS (T\u00e9rreo)",
     "items":49,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU03 - Bloco Acad\u00eamico B",
@@ -485,7 +545,8 @@
     "ambiente_nome":"LABORAT\u00d3RIO DE NANOESTRUTURAS OPTOELETR\u00d4NICAS (T\u00e9rreo)",
     "items":24,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU03 - Bloco Acad\u00eamico B",
@@ -493,7 +554,8 @@
     "ambiente_nome":"LAMAE - LABORAT\u00d3RIO DE MICROSCOPIA E AN\u00c1LISE ESTRUTURAL (T\u00e9rreo)",
     "items":29,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU03 - Bloco Acad\u00eamico B",
@@ -501,7 +563,8 @@
     "ambiente_nome":"LTE - LABORAT\u00d3RIO DE AN\u00c1LISE T\u00c9RMICA E ESPECTROSCOPIA (T\u00e9rreo)",
     "items":33,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU03 - Bloco Acad\u00eamico B",
@@ -509,7 +572,8 @@
     "ambiente_nome":"LPM - LABORAT\u00d3RIO DE PROCESSAMENTO DE MATERIAIS (T\u00e9rreo)",
     "items":83,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU03 - Bloco Acad\u00eamico B",
@@ -517,7 +581,8 @@
     "ambiente_nome":"LABCID - LABORAT\u00d3RIO DE  CIRCUITOS E SISTEMAS DIGITAIS (T\u00e9rreo)",
     "items":126,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU03 - Bloco Acad\u00eamico B",
@@ -525,7 +590,8 @@
     "ambiente_nome":"LAPRO - LABORAT\u00d3RIO DE PROJETOS (T\u00e9rreo)",
     "items":91,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU03 - Bloco Acad\u00eamico B",
@@ -533,7 +599,8 @@
     "ambiente_nome":"CENTROS ACAD\u00caMICOS (T\u00e9rreo)",
     "items":4,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU03 - Bloco Acad\u00eamico B",
@@ -541,7 +608,8 @@
     "ambiente_nome":"DEP\u00d3SITO GERAL (T\u00e9rreo)",
     "items":53,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU03 - Bloco Acad\u00eamico B",
@@ -549,7 +617,8 @@
     "ambiente_nome":"LABFIS I - LABORAT\u00d3RIO DE F\u00cdSICA I (1\u00ba Andar)",
     "items":49,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU03 - Bloco Acad\u00eamico B",
@@ -557,7 +626,8 @@
     "ambiente_nome":"LABFIS III - LABORAT\u00d3RIO DE F\u00cdSICA III (1\u00ba Andar)",
     "items":74,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU03 - Bloco Acad\u00eamico B",
@@ -565,7 +635,8 @@
     "ambiente_nome":"LABFIS II - LABORAT\u00d3RIO DE F\u00cdSICA II (1\u00ba Andar)",
     "items":59,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU03 - Bloco Acad\u00eamico B",
@@ -573,7 +644,8 @@
     "ambiente_nome":"APOIO T\u00c9CNICA F\u00cdSICA (1\u00ba Andar)",
     "items":34,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU03 - Bloco Acad\u00eamico B",
@@ -581,7 +653,8 @@
     "ambiente_nome":"MANUTEN\u00c7\u00c3O (1\u00ba Andar)",
     "items":9,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU03 - Bloco Acad\u00eamico B",
@@ -589,7 +662,8 @@
     "ambiente_nome":"LABCTI - LABORAT\u00d3RIO DE CI\u00caNCIA, TECNOLOGIA E INOVA\u00c7\u00c3O (1\u00ba Andar)",
     "items":15,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU03 - Bloco Acad\u00eamico B",
@@ -597,7 +671,8 @@
     "ambiente_nome":"LISEQ - LABORAT\u00d3RIO DE INVESTIGA\u00c7\u00c3O SOBRE ENSINO DE QU\u00cdMICA (1\u00ba Andar)",
     "items":45,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU03 - Bloco Acad\u00eamico B",
@@ -605,7 +680,8 @@
     "ambiente_nome":"LTMA - LABORAT\u00d3RIO DE TRANSFORMA\u00c7\u00d5ES E MATERIAIS AVAN\u00c7ADOS (1\u00ba Andar)",
     "items":24,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU03 - Bloco Acad\u00eamico B",
@@ -613,7 +689,8 @@
     "ambiente_nome":"LABQA - LABORAT\u00d3RIO DE QU\u00cdMICA ANAL\u00cdTICA | LABQF - LABORAT\u00d3RIO DE F\u00cdSICO-QU\u00cdMICA (1\u00ba Andar)",
     "items":98,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU03 - Bloco Acad\u00eamico B",
@@ -621,7 +698,8 @@
     "ambiente_nome":"LABEP - LABORAT\u00d3RIO DE ELETROT\u00c9CNICA E PNEUM\u00c1TICA (1\u00ba Andar)",
     "items":37,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU03 - Bloco Acad\u00eamico B",
@@ -629,7 +707,8 @@
     "ambiente_nome":"LDPT - L\u00c1BORAT\u00d3RIO DE DESENVOLVIMENTO DE PRODUTOS T\u00caXTEIS (1\u00ba Andar)",
     "items":69,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU03 - Bloco Acad\u00eamico B",
@@ -637,7 +716,8 @@
     "ambiente_nome":"LINTEX - Laborat\u00f3rio Integrado T\u00eaxtil (1\u00ba Andar)",
     "items":28,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU03 - Bloco Acad\u00eamico B",
@@ -645,7 +725,8 @@
     "ambiente_nome":"LAFIF - LABORAT\u00d3RIO DE FIBRAS E FIA\u00c7\u00c3O (1\u00ba Andar)",
     "items":38,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU03 - Bloco Acad\u00eamico B",
@@ -653,7 +734,8 @@
     "ambiente_nome":"LABEX - LABORAT\u00d3RIO DE EXPRESS\u00c3O GR\u00c1FICA (1\u00ba Andar)",
     "items":119,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU03 - Bloco Acad\u00eamico B",
@@ -661,7 +743,8 @@
     "ambiente_nome":"APOIO T\u00c9CNICO ECA (1\u00ba Andar)",
     "items":104,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU03 - Bloco Acad\u00eamico B",
@@ -669,7 +752,8 @@
     "ambiente_nome":"LISEQ.B - LABORAT\u00d3RIO DE INVESTIGA\u00c7\u00c3O SOBRE ENSINO DE QU\u00cdMICA (1\u00ba Andar)",
     "items":23,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU03 - Bloco Acad\u00eamico B",
@@ -677,7 +761,8 @@
     "ambiente_nome":"AUDIOVISUAL | COMUNICA\u00c7\u00c3O (1\u00ba Andar)",
     "items":43,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU03 - Bloco Acad\u00eamico B",
@@ -685,7 +770,8 @@
     "ambiente_nome":"T\u00c9CNICO DE TI (1\u00ba Andar)",
     "items":17,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU03 - Bloco Acad\u00eamico B",
@@ -693,7 +779,8 @@
     "ambiente_nome":"SOMA- SALA DE OLIMPIADA DE MATEM\u00c1TICA (1\u00ba Andar)",
     "items":48,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU03 - Bloco Acad\u00eamico B",
@@ -701,7 +788,8 @@
     "ambiente_nome":"LABMAC - LABORAT\u00d3RIO DE MATEM\u00c1TICA APLICADA E COMPUTACIONAL (1\u00ba Andar)",
     "items":27,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU03 - Bloco Acad\u00eamico B",
@@ -709,7 +797,8 @@
     "ambiente_nome":"LEMA - LABORAT\u00d3RIO DE ENSINO DE MATEM\u00c1TICA (1\u00ba Andar)",
     "items":78,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU03 - Bloco Acad\u00eamico B",
@@ -717,7 +806,8 @@
     "ambiente_nome":"AUDIT\u00d3RIO (1\u00ba Andar)",
     "items":164,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU03 - Bloco Acad\u00eamico B",
@@ -725,7 +815,8 @@
     "ambiente_nome":"CIRCULA\u00c7\u00c3O BLOCO B T\u00c9RREO (T\u00e9rreo)",
     "items":43,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU03 - Bloco Acad\u00eamico B",
@@ -733,7 +824,8 @@
     "ambiente_nome":"CIRCULA\u00c7\u00c3O BLOCO B 1\u00ba (1\u00ba Andar)",
     "items":50,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU04 - \u00c1reas Externas da Sede Acad\u00eamica",
@@ -741,7 +833,8 @@
     "ambiente_nome":"GUARITA (T\u00e9rreo)",
     "items":3,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU04 - \u00c1reas Externas da Sede Acad\u00eamica",
@@ -749,7 +842,8 @@
     "ambiente_nome":"DEP\u00d3SITO GERAL (T\u00e9rreo)",
     "items":23,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU04 - \u00c1reas Externas da Sede Acad\u00eamica",
@@ -757,7 +851,8 @@
     "ambiente_nome":"ESTACIONAMENTO (T\u00e9rreo)",
     "items":21,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU05 - VASTO VERDE",
@@ -765,7 +860,8 @@
     "ambiente_nome":"LABINFO 01 - Laborat\u00f3rio de Inform\u00e1tica (T\u00e9rreo)",
     "items":107,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU05 - VASTO VERDE",
@@ -773,7 +869,8 @@
     "ambiente_nome":"LABINFO 02 - Laborat\u00f3rio de Inform\u00e1tica (T\u00e9rreo)",
     "items":134,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU05 - VASTO VERDE",
@@ -781,7 +878,8 @@
     "ambiente_nome":"Corredor (T\u00e9rreo)",
     "items":2,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU07 - Bloco Administrativo C",
@@ -789,7 +887,8 @@
     "ambiente_nome":"RECEP\u00c7\u00c3O (T\u00e9rreo)",
     "items":18,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU07 - Bloco Administrativo C",
@@ -797,7 +896,8 @@
     "ambiente_nome":"SALA DE PROFESSORES (1\u00ba Andar)",
     "items":54,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU07 - Bloco Administrativo C",
@@ -805,7 +905,8 @@
     "ambiente_nome":"SALA DE PROFESSORES (1\u00ba Andar)",
     "items":62,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU07 - Bloco Administrativo C",
@@ -813,7 +914,8 @@
     "ambiente_nome":"SALA DE REUNI\u00c3O (1\u00ba Andar)",
     "items":60,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU07 - Bloco Administrativo C",
@@ -821,7 +923,8 @@
     "ambiente_nome":"SANIT\u00c1RIO UNISSEX (1\u00ba Andar)",
     "items":1,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU07 - Bloco Administrativo C",
@@ -829,7 +932,8 @@
     "ambiente_nome":"DIST - DIVIS\u00c3O DE INFRAESTRUTURA E SEGURAN\u00c7A DO TRABALHO (1\u00ba Andar)",
     "items":40,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU07 - Bloco Administrativo C",
@@ -837,7 +941,8 @@
     "ambiente_nome":"DEP\u00d3SITO LIMPEZA (1\u00ba Andar)",
     "items":13,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU07 - Bloco Administrativo C",
@@ -845,7 +950,8 @@
     "ambiente_nome":"DEP\u00d3SITO GERAL (1\u00ba Andar)",
     "items":265,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU07 - Bloco Administrativo C",
@@ -853,7 +959,8 @@
     "ambiente_nome":"DIRE\u00c7\u00c3O ADMINISTRATIVA (1\u00ba Andar)",
     "items":31,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU07 - Bloco Administrativo C",
@@ -861,7 +968,8 @@
     "ambiente_nome":"ADMINISTRATIVO (1\u00ba Andar)",
     "items":80,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU07 - Bloco Administrativo C",
@@ -869,7 +977,8 @@
     "ambiente_nome":"DEP\u00d3SITO MANUTEN\u00c7\u00c3O (1\u00ba Andar)",
     "items":1,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU07 - Bloco Administrativo C",
@@ -877,7 +986,8 @@
     "ambiente_nome":"VESTU\u00c1RIO TERCEIRIZADOS (1\u00ba Andar)",
     "items":6,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU07 - Bloco Administrativo C",
@@ -885,7 +995,8 @@
     "ambiente_nome":"HALL 1\u00aa ANDAR (1\u00ba Andar)",
     "items":4,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU07 - Bloco Administrativo C",
@@ -893,7 +1004,8 @@
     "ambiente_nome":"SALA DE PROFESSORES (2\u00ba Andar)",
     "items":43,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU07 - Bloco Administrativo C",
@@ -901,7 +1013,8 @@
     "ambiente_nome":"DIRE\u00c7\u00c3O GERAL (2\u00ba Andar)",
     "items":34,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU07 - Bloco Administrativo C",
@@ -909,7 +1022,8 @@
     "ambiente_nome":"SALA DE PROFESSORES (2\u00ba Andar)",
     "items":46,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU07 - Bloco Administrativo C",
@@ -917,7 +1031,8 @@
     "ambiente_nome":"SECRETARIA E CHEFIAS DE DEPARTAMENTOS (2\u00ba Andar)",
     "items":63,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU07 - Bloco Administrativo C",
@@ -925,7 +1040,8 @@
     "ambiente_nome":"CHEFIA DE DEPARTAMENTO (2\u00ba Andar)",
     "items":5,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU07 - Bloco Administrativo C",
@@ -933,7 +1049,8 @@
     "ambiente_nome":"SALA DE PROFESSORES (2\u00ba Andar)",
     "items":55,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU07 - Bloco Administrativo C",
@@ -941,7 +1058,8 @@
     "ambiente_nome":"SERVIDOR DE COMPUTADORES (2\u00ba Andar)",
     "items":6,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU07 - Bloco Administrativo C",
@@ -949,7 +1067,8 @@
     "ambiente_nome":"COZINHA (2\u00ba Andar)",
     "items":4,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU07 - Bloco Administrativo C",
@@ -957,7 +1076,8 @@
     "ambiente_nome":"COPA (2\u00ba Andar)",
     "items":12,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU07 - Bloco Administrativo C",
@@ -965,7 +1085,8 @@
     "ambiente_nome":"SALA DE PROFESSORES (3\u00ba Andar)",
     "items":51,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU07 - Bloco Administrativo C",
@@ -973,7 +1094,8 @@
     "ambiente_nome":"SANIT\u00c1RIO UNISSEX (3\u00ba Andar)",
     "items":1,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU07 - Bloco Administrativo C",
@@ -981,7 +1103,8 @@
     "ambiente_nome":"SALA DE PROFESSORES (3\u00ba Andar)",
     "items":34,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU07 - Bloco Administrativo C",
@@ -989,7 +1112,8 @@
     "ambiente_nome":"SALA DE PROFESSORES (3\u00ba Andar)",
     "items":36,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU07 - Bloco Administrativo C",
@@ -997,7 +1121,8 @@
     "ambiente_nome":"SALA DE PROFESSORES (3\u00ba Andar)",
     "items":46,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU07 - Bloco Administrativo C",
@@ -1005,7 +1130,8 @@
     "ambiente_nome":"SALA DE PROFESSORES (3\u00ba Andar)",
     "items":38,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU07 - Bloco Administrativo C",
@@ -1013,7 +1139,8 @@
     "ambiente_nome":"SALA DE PROFESSORES (3\u00ba Andar)",
     "items":40,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU07 - Bloco Administrativo C",
@@ -1021,7 +1148,8 @@
     "ambiente_nome":"DEP\u00d3SITO CORREDOR 3\u00ba ANDAR (3\u00ba Andar)",
     "items":9,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU07 - Bloco Administrativo C",
@@ -1029,7 +1157,8 @@
     "ambiente_nome":"DEP\u00d3SITO MATERIAL DE EXPEDIENTE (3\u00ba Andar)",
     "items":5,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU07 - Bloco Administrativo C",
@@ -1037,7 +1166,8 @@
     "ambiente_nome":"SALA DE REUNI\u00c3O (4\u00ba Andar)",
     "items":16,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU07 - Bloco Administrativo C",
@@ -1045,7 +1175,8 @@
     "ambiente_nome":"MEZANINO (4\u00ba Andar)",
     "items":11,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU07 - Bloco Administrativo C",
@@ -1053,7 +1184,8 @@
     "ambiente_nome":"CORREDOR 1\u00ba ANDAR (1\u00ba Andar)",
     "items":6,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU07 - Bloco Administrativo C",
@@ -1061,7 +1193,8 @@
     "ambiente_nome":"CORREDOR 2\u00ba ANDAR (2\u00ba Andar)",
     "items":5,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU07 - Bloco Administrativo C",
@@ -1069,7 +1202,8 @@
     "ambiente_nome":"CORREDOR 3\u00ba ANDAR (3\u00ba Andar)",
     "items":5,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   },
   {
     "edificio":"BNU08 - Restaurante Universit\u00e1rio",
@@ -1077,6 +1211,7 @@
     "ambiente_nome":"Restaurante Universit\u00e1rio (T\u00e9rreo)",
     "items":5,
     "lider":null,
-    "status":"Em uso"
+    "status":"Em uso",
+    "campus":"Sul"
   }
 ]
