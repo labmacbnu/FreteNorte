@@ -10,8 +10,9 @@ const permissions = useUserPermissionsStore()
 
 const meus_ambientes = useAmbientesUserStore()
  
-meus_ambientes.update_stats()
- 
+onMounted( () => {
+    meus_ambientes.update_stats()
+})  
 </script>
 
 <template>
