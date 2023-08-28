@@ -110,9 +110,9 @@ PERMANENTES["short_descricao"] = PERMANENTES.descricao.apply(lambda x: x.split("
 
 
 AMBIENTES = PERMANENTES.apply(lambda x: ambiente_parser(x.ambiente), axis=1, result_type="expand")
-AMBIENTES.columns = ["ambiente_codigo", "ambiente_nome"]
+AMBIENTES.columns = ["codigo", "nome"]
 
-AMBIENTES["edificio"] = AMBIENTES.ambiente_codigo.apply(lambda x: AMBIENTES_EDIFICIOS[x])
+AMBIENTES["edificio"] = AMBIENTES.codigo.apply(lambda x: AMBIENTES_EDIFICIOS[x])
 
 # %%
 def edificio_parser(string):
@@ -122,15 +122,16 @@ def edificio_parser(string):
 
 # %%
 
-UNIQUE_AMBIENTES = pd.concat([AMBIENTES], axis=1).groupby(["edificio", "ambiente_codigo", "ambiente_nome"]).agg({"ambiente_nome": "count"})\
-.rename(columns={"ambiente_nome": "items", "ambiente_codigo": "nome"}).reset_index()
+UNIQUE_AMBIENTES = pd.concat([AMBIENTES], axis=1).groupby(["edificio", "codigo", "nome"]).agg({"nome": "count"}).rename(columns={"nome": "items"})
+
+UNIQUE_AMBIENTES.reset_index(inplace=True)
 
 UNIQUE_AMBIENTES["lider"] = None
 UNIQUE_AMBIENTES["status"] = "Em uso"
 UNIQUE_AMBIENTES["campus"] = "Sul"
-
+print(UNIQUE_AMBIENTES)
 UNIQUE_AMBIENTES.to_json(DESTINO / "ambientes.json", orient="records", indent=2)
-
+# %%
 UNIQUE_EDIFICIOS = {'edificios': [ed for ed in UNIQUE_AMBIENTES.edificio.unique()]}
 
 with open(DESTINO / "edificios.json", "w") as f:
@@ -272,6 +273,7 @@ for record in JSON_RECORDS:
           record.pop(origin)
     
     try:
+        record['origem'] = record['ambiente']
         record['key'] = record['detalhes.cod_barras']
         if pd.isna(record['key']):
             record['key'] = record['detalhes.patrimonio']
