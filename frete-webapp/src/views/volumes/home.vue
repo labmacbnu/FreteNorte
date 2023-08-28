@@ -112,8 +112,8 @@ const soft_volume_modal_ref = ref(null)
                 role="button" aria-expanded="false" :aria-controls="'items' + volume.codigo">
                 Detalhes</a>
             </td>
-            <td class="text-center">{{ volume.origem.ambiente_codigo }}</td>
-            <td>{{ volume.localizacao_atual.ambiente_codigo }}</td>
+            <td class="text-center">{{ volume.origem.codigo }}</td>
+            <td>{{ volume.localizacao_atual.codigo }}</td>
             <td>{{ volume.destino ? volume.destino.codigo : "" }}</td>
             <td>{{ volume.categoria }}</td>
             <td>{{ volume.status }}</td>

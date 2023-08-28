@@ -70,9 +70,9 @@ function print(){
           <p class="mb-1"><b>Criado em:</b> {{ moment.unix(volume.data_criacao.seconds).format("DD/MM/YY HH:MM") }}</p>
           <h5 class="mt-3">Localização</h5>
           <div class="hstack gap-2">
-            <p class="px-3 text-center mb-1"><b>Origem:</b> {{ volume.origem.ambiente_codigo }}</p>
+            <p class="px-3 text-center mb-1"><b>Origem:</b> {{ volume.origem.codigo }}</p>
               <i class="bi bi-arrow-right"></i>
-            <p class="px-3 align-self-top text-center mb-1 d-print-none"><b>Atual:</b> {{ volume.localizacao_atual.ambiente_codigo }}</p>
+            <p class="px-3 align-self-top text-center mb-1 d-print-none"><b>Atual:</b> {{ volume.localizacao_atual.codigo }}</p>
               <i class="bi bi-arrow-right d-print-none"></i>
             <p class="px-3 text-center mb-1"><b>Destino:</b>  {{ volume.destino ? volume.destino.codigo : "" }} </p>
           </div>

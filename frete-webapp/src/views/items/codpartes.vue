@@ -90,7 +90,7 @@ function new_nova_parte(){
     const item_valores = {...toValue(item_db)}
     Object.assign(nova_parte, {
         responsavel: globaluser.value.displayName,
-        ambiente: item_valores.ambiente.ambiente_codigo, 
+        ambiente: item_valores.ambiente.codigo, 
         edificio: item_valores.edificio,
         detalhes: {...item_valores.detalhes, 
             descricao: null

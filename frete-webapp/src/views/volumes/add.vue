@@ -46,7 +46,7 @@ const lista_items_show = computed(() => {
   return agrupados
 })
 
-const ambiente_selected = computed(() => ambientes.dados.find(x => x.ambiente_codigo == new_volume.origem))
+const ambiente_selected = computed(() => ambientes.dados.find(x => x.codigo == new_volume.origem))
 
 const new_volume = reactive(
   {
@@ -98,7 +98,7 @@ function reset_new_volume() {
 const responsavel_label = computed(() => (globaluser.value.email) ? globaluser.value.displayName + ' <' + globaluser.value.email + '>' : "<?>")
 const lider_ambiente_label = computed(() => {
   if (new_volume.origem) {
-    const ambiente_obj = ambientes.dados.find(x => x.ambiente_codigo == new_volume.origem)
+    const ambiente_obj = ambientes.dados.find(x => x.codigo == new_volume.origem)
     if (ambiente_obj && ambiente_obj.lider)
       return ambiente_obj.lider.nome + ' <' + ambiente_obj.lider.id + '>'
     else
@@ -270,9 +270,9 @@ onMounted(() => {
       <label for="ambiente" class="form-label fw-bold fs-5">Ambiente de origem</label>
       <select :class="{ 'border-danger': !validation.origem }" v-model="new_volume.origem" class="form-select"
         id="ambiente">
-        <option v-for="(val, index ) in ambientes.dados" :value="val.ambiente_codigo">
-          <template v-if="val && val.ambiente_nome">
-            {{ val.ambiente_codigo }} - {{ val.ambiente_nome }}
+        <option v-for="(val, index) in ambientes.dados" :value="val.codigo">
+          <template v-if="val && val.nome">
+            {{ val.codigo }} - {{ val.nome }}
           </template>
         </option>
       </select>
@@ -309,7 +309,7 @@ onMounted(() => {
           <div id="collapseItems" class="accordion-collapse collapse" data-bs-parent="#accordionItemsWrap">
             <div class="accordion-body">
               <p class="form-text" v-if="ambiente_selected">
-                Lista de items de {{ ambiente_selected.ambiente_nome }}.</p>
+                Lista de items de {{ ambiente_selected.nome }}.</p>
               <p v-else>Selecione o ambiente acima.</p>
               <input type="text" class="form-control" placeholder="Digite para filtrar a lista abaixo"
                 v-model="filtrar_lista_items">
@@ -406,7 +406,7 @@ onMounted(() => {
       <p class="mb-1 fw-bold d-flex justify-content-between fs-5">Peso
       </p>
       <div class="border rounded" :class="{ 'border-danger': !validation.peso }">
-        <PesoInput @update="x => new_volume.peso = x"></PesoInput>
+        <PesoInput :peso="new_volume.peso" @update="x => new_volume.peso = x"></PesoInput>
       </div>
     </div>
 

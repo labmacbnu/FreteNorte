@@ -58,7 +58,7 @@ export const useItemsAmbienteStore = defineStore('items-ambiente', ()=>{
     const filter_function = ref(null) 
     const dados = computed( () => {
         if(ambiente.value && inner_db.value){
-            return inner_db.value.filter( x => x.ambiente.ambiente_codigo == ambiente.value) 
+            return inner_db.value.filter( x => x.ambiente.codigo == ambiente.value) 
         } else {
             return []
         }

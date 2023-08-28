@@ -17,7 +17,7 @@ const {globaluser, updateuser} = inject("globaluser")
 const ambientes_query = computed( () => {
     const user_ambientes = [...permissions.ambientes, ...permissions.usuario_de]
     const ambientesRef = collection(db, 'ambientes')
-    return query(ambientesRef, where('ambiente_codigo', 'in', user_ambientes))
+    return query(ambientesRef, where('codigo', 'in', user_ambientes))
 })
 
 const {data: meus_ambientes, pending: ambientes_pending} = useCollection(ambientes_query)
@@ -77,7 +77,7 @@ watch( () => item.short_descricao, (newVal,oldVal) =>{
 
 
 watch( () => item.ambiente, (newVal,oldVal) =>{
-    var ambiente_obj = meus_ambientes.value.find( x => x.ambiente_codigo == newVal)
+    var ambiente_obj = meus_ambientes.value.find( x => x.codigo == newVal)
     if(ambiente_obj)
         item.edificio = ambiente_obj.edificio
 } )
@@ -98,8 +98,8 @@ onMounted( () =>
                     <label for="ambiente" class="col-auto col-form-label me-3">Ambiente</label>
                     <div class="col">
                         <select v-model="item.ambiente" class="form-select" :class="{'border-danger': !valido.ambiente}" aria-label="Ambiente">
-                            <option v-for="ambiente in meus_ambientes" :value="ambiente.ambiente_codigo">
-                                {{ ambiente.ambiente_codigo }} - {{ ambiente.ambiente_nome }}
+                            <option v-for="ambiente in meus_ambientes" :value="ambiente.codigo">
+                                {{ ambiente.codigo }} - {{ ambiente.nome }}
                             </option>
                             </select>
 

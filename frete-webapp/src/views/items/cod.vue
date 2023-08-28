@@ -69,7 +69,7 @@ const parentKey = computed( () => isParte.value? item.value.key.split('-')[0] : 
 
 async function front_apaga_volume() {
     if(item.value.categoria != 'Permanente') {
-        const ambiente_route =  item.value.ambiente.ambiente_codigo
+        const ambiente_route =  item.value.ambiente.codigo
         const resultado = await deleta_item(item.value.key)
         console.log(resultado)
         setTimeout( () => router.push({name: 'items-ambiente', params: { ambiente: ambiente_route}}), 250)
@@ -108,7 +108,7 @@ async function front_apaga_volume() {
                                 </tr>
                                 <tr>
                                     <th scope="row">Ambiente</th>
-                                    <td>{{ item.ambiente.ambiente_codigo }} - {{ item.ambiente.ambiente_nome }}</td>
+                                    <td>{{ item.ambiente.codigo }} - {{ item.ambiente.nome }}</td>
                                 </tr>
                                 <tr v-if="item.detalhes.patrimonio">
                                     <th scope="row">Patrimônio</th>
@@ -153,7 +153,7 @@ async function front_apaga_volume() {
                                         </template>
                                         <template v-else>
                                             Item não volumado. <RouterLink v-if="item.meta.inteiro" class="btn btn-success" :to="{name: 'volume-add', query: {
-                                                ambiente: item.ambiente.ambiente_codigo,
+                                                ambiente: item.ambiente.codigo,
                                                 items: [item.key]
                                             }}">Criar volume <i class=" icon-link bi bi-box"></i></RouterLink>
                                         </template>
@@ -206,7 +206,7 @@ async function front_apaga_volume() {
                         </p> 
                         <p class="mb-1">
                             <small>
-                                <b>{{ item.ambiente.ambiente_codigo }}</b> - <span class="">{{ item.ambiente.ambiente_nome }}</span>
+                                <b>{{ item.ambiente.codigo }}</b> - <span class="">{{ item.ambiente.nome }}</span>
                             </small>
                         </p> 
                         <p  v-if="item.tipo == 'Permanente'">Patrimoniado em nome de {{ item.responsavel }}</p>

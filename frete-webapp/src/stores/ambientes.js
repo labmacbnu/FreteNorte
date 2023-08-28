@@ -13,7 +13,7 @@ export const useAmbientesStore = defineStore('ambientes', ()=>{
         if(predados.value){
             var retorno = []
             predados.value.forEach(ambiente => { 
-                retorno.push({full_name: ambiente.ambiente_codigo + ' - ' + ambiente.ambiente_nome,...ambiente })
+                retorno.push({full_name: ambiente.codigo + ' - ' + ambiente.nome,...ambiente })
             })
             return retorno
         }
@@ -65,7 +65,7 @@ export const useAmbientesUserStore = defineStore('ambientes-user', ()=>{
     const db = getFirestore(firebaseApp)  
     const ambientes = computed( () => [...permissoes.ambientes, ...permissoes.usuario_de])
 
-    const amb_query = computed(() =>  query(collection(db, "ambientes"), where('ambiente_codigo', 'in', ambientes.value))) 
+    const amb_query = computed(() =>  query(collection(db, "ambientes"), where('codigo', 'in', ambientes.value))) 
 
     const status =  reactive({})
 
