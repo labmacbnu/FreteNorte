@@ -6,6 +6,7 @@
     ],
     "codigo": "ACD1",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -26,6 +27,7 @@
     ],
     "codigo": "ACF1",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -46,6 +48,7 @@
     ],
     "codigo": "ACD2",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -66,6 +69,7 @@
     ],
     "codigo": "ACC3",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -86,6 +90,7 @@
     ],
     "codigo": "ACE1",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -106,6 +111,7 @@
     ],
     "codigo": "ACF2",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -126,6 +132,7 @@
     ],
     "codigo": "ACC1",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -146,6 +153,7 @@
     ],
     "codigo": "ACC2",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -164,6 +172,7 @@
     "origem": [],
     "codigo": "A001",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -184,6 +193,7 @@
     ],
     "codigo": "A002",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -204,6 +214,7 @@
     ],
     "codigo": "A003",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -225,6 +236,7 @@
     ],
     "codigo": "A004",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -246,6 +258,7 @@
     ],
     "codigo": "A005",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -267,6 +280,7 @@
     ],
     "codigo": "A006",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -288,6 +302,7 @@
     ],
     "codigo": "A007",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -308,6 +323,7 @@
     ],
     "codigo": "A008",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -328,6 +344,7 @@
     ],
     "codigo": "A008.1",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -346,6 +363,7 @@
     "origem": [],
     "codigo": "A009",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -364,6 +382,7 @@
     "origem": [],
     "codigo": "A010",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -382,6 +401,7 @@
     "origem": [],
     "codigo": "A011",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -400,6 +420,7 @@
     "origem": [],
     "codigo": "A012",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -418,6 +439,7 @@
     "origem": [],
     "codigo": "A013",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -436,6 +458,7 @@
     "origem": [],
     "codigo": "A014",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -454,6 +477,7 @@
     "origem": [],
     "codigo": "A015",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -472,6 +496,7 @@
     "origem": [],
     "codigo": "A016",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -490,6 +515,7 @@
     "origem": [],
     "codigo": "A017",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -508,6 +534,7 @@
     "origem": [],
     "codigo": "A018",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -526,6 +553,7 @@
     "origem": [],
     "codigo": "A019",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -544,6 +572,7 @@
     "origem": [],
     "codigo": "A020",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -562,6 +591,7 @@
     "origem": [],
     "codigo": "A021",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -580,6 +610,7 @@
     "origem": [],
     "codigo": "A022",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -600,6 +631,7 @@
     ],
     "codigo": "A023",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -620,6 +652,7 @@
     ],
     "codigo": "A024",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -640,6 +673,7 @@
     ],
     "codigo": "A024.1",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -658,6 +692,7 @@
     "origem": [],
     "codigo": "A025",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -676,6 +711,7 @@
     "origem": [],
     "codigo": "A026",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -694,6 +730,7 @@
     "origem": [],
     "codigo": "A027",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -712,6 +749,7 @@
     "origem": [],
     "codigo": "A028",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -730,6 +768,7 @@
     "origem": [],
     "codigo": "A029",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -748,6 +787,7 @@
     "origem": [],
     "codigo": "A029.1",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -766,6 +806,7 @@
     "origem": [],
     "codigo": "A029.2",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -784,6 +825,7 @@
     "origem": [],
     "codigo": "A029.3",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -802,6 +844,7 @@
     "origem": [],
     "codigo": "A029.4",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -820,6 +863,7 @@
     "origem": [],
     "codigo": "A029.5",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -840,6 +884,7 @@
     ],
     "codigo": "A029.6",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -858,6 +903,7 @@
     "origem": [],
     "codigo": "A029.7",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -876,6 +922,7 @@
     "origem": [],
     "codigo": "A029.8",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -894,6 +941,7 @@
     "origem": [],
     "codigo": "A029.9",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -912,6 +960,7 @@
     "origem": [],
     "codigo": "A029.10",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -930,6 +979,7 @@
     "origem": [],
     "codigo": "A029.11",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -948,6 +998,7 @@
     "origem": [],
     "codigo": "A029.12",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Superior",
@@ -966,6 +1017,7 @@
     "origem": [],
     "codigo": "A030",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -984,6 +1036,7 @@
     "origem": [],
     "codigo": "A030.1",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -1002,6 +1055,7 @@
     "origem": [],
     "codigo": "A030.2",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -1020,6 +1074,7 @@
     "origem": [],
     "codigo": "A030.3",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -1040,6 +1095,7 @@
     ],
     "codigo": "A032",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -1060,6 +1116,7 @@
     ],
     "codigo": "A033",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -1078,6 +1135,7 @@
     "origem": [],
     "codigo": "A034",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -1098,6 +1156,7 @@
     ],
     "codigo": "A035",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -1118,6 +1177,7 @@
     ],
     "codigo": "A036",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -1138,6 +1198,7 @@
     ],
     "codigo": "A037",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -1158,6 +1219,7 @@
     ],
     "codigo": "A038",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -1178,6 +1240,7 @@
     ],
     "codigo": "A039",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -1196,6 +1259,7 @@
     "origem": [],
     "codigo": "A031",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -1216,6 +1280,7 @@
     ],
     "codigo": "A040",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -1236,6 +1301,7 @@
     ],
     "codigo": "A041",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -1256,6 +1322,7 @@
     ],
     "codigo": "A042",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -1276,6 +1343,7 @@
     ],
     "codigo": "A043",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -1296,6 +1364,7 @@
     ],
     "codigo": "A044",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -1314,6 +1383,7 @@
     "origem": [],
     "codigo": "A045",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -1334,6 +1404,7 @@
     ],
     "codigo": "A046",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -1354,6 +1425,7 @@
     ],
     "codigo": "A047",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -1374,6 +1446,7 @@
     ],
     "codigo": "A048",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -1392,6 +1465,7 @@
     "origem": [],
     "codigo": "A049",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -1412,6 +1486,7 @@
     ],
     "codigo": "A050",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -1430,6 +1505,7 @@
     "origem": [],
     "codigo": "A051",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -1450,6 +1526,7 @@
     ],
     "codigo": "A052",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -1470,6 +1547,7 @@
     ],
     "codigo": "A053",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -1490,6 +1568,7 @@
     ],
     "codigo": "A054",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -1508,6 +1587,7 @@
     "origem": [],
     "codigo": "A054.1",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Térreo",
@@ -1526,6 +1606,7 @@
     "origem": [],
     "codigo": "A101",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Superior",
@@ -1546,6 +1627,7 @@
     ],
     "codigo": "A102",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Superior",
@@ -1566,6 +1648,7 @@
     ],
     "codigo": "A103",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Superior",
@@ -1586,6 +1669,7 @@
     ],
     "codigo": "A104",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Superior",
@@ -1606,6 +1690,7 @@
     ],
     "codigo": "A105",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Superior",
@@ -1626,6 +1711,7 @@
     ],
     "codigo": "A106",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Superior",
@@ -1646,6 +1732,7 @@
     ],
     "codigo": "A107",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Superior",
@@ -1666,6 +1753,7 @@
     ],
     "codigo": "A108",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Superior",
@@ -1684,6 +1772,7 @@
     "origem": [],
     "codigo": "A109",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Superior",
@@ -1702,6 +1791,7 @@
     "origem": [],
     "codigo": "A110",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Superior",
@@ -1722,6 +1812,7 @@
     ],
     "codigo": "A111",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Superior",
@@ -1742,6 +1833,7 @@
     ],
     "codigo": "A111.1",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Superior",
@@ -1760,6 +1852,7 @@
     "origem": [],
     "codigo": "A112",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Superior",
@@ -1778,6 +1871,7 @@
     "origem": [],
     "codigo": "A113",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Superior",
@@ -1798,6 +1892,7 @@
     ],
     "codigo": "A114",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Superior",
@@ -1818,6 +1913,7 @@
     ],
     "codigo": "A114.1",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Superior",
@@ -1838,6 +1934,7 @@
     ],
     "codigo": "A115",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Superior",
@@ -1858,6 +1955,7 @@
     ],
     "codigo": "A116",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Superior",
@@ -1876,6 +1974,7 @@
     "origem": [],
     "codigo": "A117",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Superior",
@@ -1896,6 +1995,7 @@
     ],
     "codigo": "A118",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Superior",
@@ -1914,6 +2014,7 @@
     "origem": [],
     "codigo": "A119",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Superior",
@@ -1932,6 +2033,7 @@
     "origem": [],
     "codigo": "A120",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Superior",
@@ -1952,6 +2054,7 @@
     ],
     "codigo": "A121",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Superior",
@@ -1972,6 +2075,7 @@
     ],
     "codigo": "A122",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Superior",
@@ -1992,6 +2096,7 @@
     ],
     "codigo": "A123",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Superior",
@@ -2012,6 +2117,7 @@
     ],
     "codigo": "A124",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Superior",
@@ -2030,6 +2136,7 @@
     "origem": [],
     "codigo": "A125",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Superior",
@@ -2050,6 +2157,7 @@
     ],
     "codigo": "A126",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Superior",
@@ -2070,6 +2178,7 @@
     ],
     "codigo": "A127",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Superior",
@@ -2090,6 +2199,7 @@
     ],
     "codigo": "A128",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Superior",
@@ -2108,6 +2218,7 @@
     "origem": [],
     "codigo": "A129",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Superior",
@@ -2128,6 +2239,7 @@
     ],
     "codigo": "A130",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Superior",
@@ -2148,6 +2260,7 @@
     ],
     "codigo": "A131",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Superior",
@@ -2168,6 +2281,7 @@
     ],
     "codigo": "A132",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Superior",
@@ -2188,6 +2302,7 @@
     ],
     "codigo": "ACE2",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Superior",
@@ -2208,6 +2323,7 @@
     ],
     "codigo": "ACC4",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Superior",
@@ -2228,6 +2344,7 @@
     ],
     "codigo": "ACD3",
     "campus": "Norte",
+    "edificio": "Bloco A",
     "detalhes": {
       "construcao": "Bloco A",
       "pavimento": "Superior",
@@ -2249,6 +2366,7 @@
     ],
     "codigo": "ACF1",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Térreo",
@@ -2270,6 +2388,7 @@
     ],
     "codigo": "ACC1",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Térreo",
@@ -2291,6 +2410,7 @@
     ],
     "codigo": "ACE1",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Térreo",
@@ -2311,6 +2431,7 @@
     ],
     "codigo": "ACF2",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 1",
@@ -2331,6 +2452,7 @@
     ],
     "codigo": "ACC2",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 1",
@@ -2351,6 +2473,7 @@
     ],
     "codigo": "ACE2",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 1",
@@ -2373,6 +2496,7 @@
     ],
     "codigo": "ACF3",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 2",
@@ -2395,6 +2519,7 @@
     ],
     "codigo": "ACC3",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 2",
@@ -2417,6 +2542,7 @@
     ],
     "codigo": "ACE3",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 2",
@@ -2438,6 +2564,7 @@
     ],
     "codigo": "ACF4",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 3",
@@ -2459,6 +2586,7 @@
     ],
     "codigo": "ACC4",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 3",
@@ -2480,6 +2608,7 @@
     ],
     "codigo": "ACE4",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 3",
@@ -2500,6 +2629,7 @@
     ],
     "codigo": "B001",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Térreo",
@@ -2520,6 +2650,7 @@
     ],
     "codigo": "B001.1",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Térreo",
@@ -2540,6 +2671,7 @@
     ],
     "codigo": "B002",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Térreo",
@@ -2560,6 +2692,7 @@
     ],
     "codigo": "B003",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Térreo",
@@ -2578,6 +2711,7 @@
     "origem": [],
     "codigo": "B004",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Térreo",
@@ -2596,6 +2730,7 @@
     "origem": [],
     "codigo": "B004.1",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Térreo",
@@ -2614,6 +2749,7 @@
     "origem": [],
     "codigo": "B004.02",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Térreo",
@@ -2632,6 +2768,7 @@
     "origem": [],
     "codigo": "B004.03",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Térreo",
@@ -2650,6 +2787,7 @@
     "origem": [],
     "codigo": "B004.04",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Térreo",
@@ -2670,6 +2808,7 @@
     ],
     "codigo": "B004.05",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Térreo",
@@ -2690,6 +2829,7 @@
     ],
     "codigo": "B004.06",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Térreo",
@@ -2710,6 +2850,7 @@
     ],
     "codigo": "B004.07",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Térreo",
@@ -2728,6 +2869,7 @@
     "origem": [],
     "codigo": "B004.08",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Térreo",
@@ -2746,6 +2888,7 @@
     "origem": [],
     "codigo": "B004.09",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Térreo",
@@ -2764,6 +2907,7 @@
     "origem": [],
     "codigo": "B004.10",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Térreo",
@@ -2782,6 +2926,7 @@
     "origem": [],
     "codigo": "B004.11",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Térreo",
@@ -2800,6 +2945,7 @@
     "origem": [],
     "codigo": "B005",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Térreo",
@@ -2818,6 +2964,7 @@
     "origem": [],
     "codigo": "B005.1",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Térreo",
@@ -2836,6 +2983,7 @@
     "origem": [],
     "codigo": "B005.2",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Térreo",
@@ -2854,6 +3002,7 @@
     "origem": [],
     "codigo": "B005.3",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Térreo",
@@ -2872,6 +3021,7 @@
     "origem": [],
     "codigo": "B006",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Térreo",
@@ -2890,6 +3040,7 @@
     "origem": [],
     "codigo": "B007",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Térreo",
@@ -2908,6 +3059,7 @@
     "origem": [],
     "codigo": "B008",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Térreo",
@@ -2926,6 +3078,7 @@
     "origem": [],
     "codigo": "B009",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Térreo",
@@ -2946,6 +3099,7 @@
     ],
     "codigo": "B010",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Térreo",
@@ -2966,6 +3120,7 @@
     ],
     "codigo": "B011",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Térreo",
@@ -2984,6 +3139,7 @@
     "origem": [],
     "codigo": "B012",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Térreo",
@@ -3004,6 +3160,7 @@
     ],
     "codigo": "B013",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Térreo",
@@ -3022,6 +3179,7 @@
     "origem": [],
     "codigo": "B014",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Térreo",
@@ -3042,6 +3200,7 @@
     ],
     "codigo": "B015",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Térreo",
@@ -3062,6 +3221,7 @@
     ],
     "codigo": "B016",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Térreo",
@@ -3082,6 +3242,7 @@
     ],
     "codigo": "B016.1",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Térreo",
@@ -3102,6 +3263,7 @@
     ],
     "codigo": "B016.2",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Térreo",
@@ -3122,6 +3284,7 @@
     ],
     "codigo": "B016.3",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Térreo",
@@ -3142,6 +3305,7 @@
     ],
     "codigo": "B016.4",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Térreo",
@@ -3162,6 +3326,7 @@
     ],
     "codigo": "B017",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Térreo",
@@ -3182,6 +3347,7 @@
     ],
     "codigo": "B101",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 1",
@@ -3202,6 +3368,7 @@
     ],
     "codigo": "B102",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 1",
@@ -3222,6 +3389,7 @@
     ],
     "codigo": "B103",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 1",
@@ -3242,6 +3410,7 @@
     ],
     "codigo": "B104",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 1",
@@ -3262,6 +3431,7 @@
     ],
     "codigo": "B105",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 1",
@@ -3282,6 +3452,7 @@
     ],
     "codigo": "B106",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 1",
@@ -3300,6 +3471,7 @@
     "origem": [],
     "codigo": "B107",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 1",
@@ -3318,6 +3490,7 @@
     "origem": [],
     "codigo": "B108",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 1",
@@ -3336,6 +3509,7 @@
     "origem": [],
     "codigo": "B109",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 1",
@@ -3356,6 +3530,7 @@
     ],
     "codigo": "B110",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 1",
@@ -3376,6 +3551,7 @@
     ],
     "codigo": "B111",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 1",
@@ -3396,6 +3572,7 @@
     ],
     "codigo": "B112",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 1",
@@ -3416,6 +3593,7 @@
     ],
     "codigo": "B113",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 1",
@@ -3436,6 +3614,7 @@
     ],
     "codigo": "B114",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 1",
@@ -3456,6 +3635,7 @@
     ],
     "codigo": "B115",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 1",
@@ -3474,6 +3654,7 @@
     "origem": [],
     "codigo": "B116",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 1",
@@ -3492,6 +3673,7 @@
     "origem": [],
     "codigo": "B117",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 1",
@@ -3512,6 +3694,7 @@
     ],
     "codigo": "B118",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 1",
@@ -3532,6 +3715,7 @@
     ],
     "codigo": "B201",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 2",
@@ -3550,6 +3734,7 @@
     "origem": [],
     "codigo": "B202",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 2",
@@ -3570,6 +3755,7 @@
     ],
     "codigo": "B203",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 2",
@@ -3590,6 +3776,7 @@
     ],
     "codigo": "B204",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 2",
@@ -3610,6 +3797,7 @@
     ],
     "codigo": "B205",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 2",
@@ -3630,6 +3818,7 @@
     ],
     "codigo": "B206",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 2",
@@ -3650,6 +3839,7 @@
     ],
     "codigo": "B207",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 2",
@@ -3670,6 +3860,7 @@
     ],
     "codigo": "B208",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 2",
@@ -3690,6 +3881,7 @@
     ],
     "codigo": "B209",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 2",
@@ -3710,6 +3902,7 @@
     ],
     "codigo": "B210",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 2",
@@ -3728,6 +3921,7 @@
     "origem": [],
     "codigo": "B211",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 2",
@@ -3746,6 +3940,7 @@
     "origem": [],
     "codigo": "B212",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 2",
@@ -3766,6 +3961,7 @@
     ],
     "codigo": "B213",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 2",
@@ -3786,6 +3982,7 @@
     ],
     "codigo": "B214",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 2",
@@ -3806,6 +4003,7 @@
     ],
     "codigo": "B215",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 2",
@@ -3826,6 +4024,7 @@
     ],
     "codigo": "B215.1",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 2",
@@ -3844,6 +4043,7 @@
     "origem": [],
     "codigo": "B215.2",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 2",
@@ -3862,6 +4062,7 @@
     "origem": [],
     "codigo": "B215.3",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 2",
@@ -3880,6 +4081,7 @@
     "origem": [],
     "codigo": "B215.4",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 2",
@@ -3898,6 +4100,7 @@
     "origem": [],
     "codigo": "B215.5",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 2",
@@ -3916,6 +4119,7 @@
     "origem": [],
     "codigo": "B215.6",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 2",
@@ -3936,6 +4140,7 @@
     ],
     "codigo": "B301",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 3",
@@ -3954,6 +4159,7 @@
     "origem": [],
     "codigo": "B302",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 3",
@@ -3974,6 +4180,7 @@
     ],
     "codigo": "B303",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 3",
@@ -3992,6 +4199,7 @@
     "origem": [],
     "codigo": "B304",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 3",
@@ -4010,6 +4218,7 @@
     "origem": [],
     "codigo": "B305",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 3",
@@ -4028,6 +4237,7 @@
     "origem": [],
     "codigo": "B306",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 3",
@@ -4046,6 +4256,7 @@
     "origem": [],
     "codigo": "B307",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 3",
@@ -4064,6 +4275,7 @@
     "origem": [],
     "codigo": "B308",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 3",
@@ -4082,6 +4294,7 @@
     "origem": [],
     "codigo": "B309",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 3",
@@ -4100,6 +4313,7 @@
     "origem": [],
     "codigo": "B310",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 3",
@@ -4118,6 +4332,7 @@
     "origem": [],
     "codigo": "B311",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 3",
@@ -4136,6 +4351,7 @@
     "origem": [],
     "codigo": "B312",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 3",
@@ -4156,6 +4372,7 @@
     ],
     "codigo": "B313",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 3",
@@ -4177,6 +4394,7 @@
     ],
     "codigo": "B314",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 3",
@@ -4197,6 +4415,7 @@
     ],
     "codigo": "B315",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 3",
@@ -4217,6 +4436,7 @@
     ],
     "codigo": "B316",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 3",
@@ -4237,6 +4457,7 @@
     ],
     "codigo": "B317",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 3",
@@ -4255,6 +4476,7 @@
     "origem": [],
     "codigo": "B318",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 3",
@@ -4273,6 +4495,7 @@
     "origem": [],
     "codigo": "B319",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 3",
@@ -4291,6 +4514,7 @@
     "origem": [],
     "codigo": "B320",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 3",
@@ -4309,6 +4533,7 @@
     "origem": [],
     "codigo": "B321",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 3",
@@ -4327,6 +4552,7 @@
     "origem": [],
     "codigo": "B322",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 3",
@@ -4347,6 +4573,7 @@
     ],
     "codigo": "B323",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Andar 3",
@@ -4365,6 +4592,7 @@
     "origem": [],
     "codigo": "B401",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Terraço",
@@ -4385,6 +4613,7 @@
     ],
     "codigo": "BS01",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Subsolo",
@@ -4403,6 +4632,7 @@
     "origem": [],
     "codigo": "BS02",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Subsolo",
@@ -4423,6 +4653,7 @@
     ],
     "codigo": "BS03",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Subsolo",
@@ -4441,6 +4672,7 @@
     "origem": [],
     "codigo": "BS03.3",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Subsolo",
@@ -4459,6 +4691,7 @@
     "origem": [],
     "codigo": "BS03.2",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Subsolo",
@@ -4477,6 +4710,7 @@
     "origem": [],
     "codigo": "BS03.1",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Subsolo",
@@ -4497,6 +4731,7 @@
     ],
     "codigo": "BS04",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Subsolo",
@@ -4515,6 +4750,7 @@
     "origem": [],
     "codigo": "BS05",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Subsolo",
@@ -4533,6 +4769,7 @@
     "origem": [],
     "codigo": "BS06",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Subsolo",
@@ -4551,6 +4788,7 @@
     "origem": [],
     "codigo": "BS07",
     "campus": "Norte",
+    "edificio": "Bloco B",
     "detalhes": {
       "construcao": "Bloco B",
       "pavimento": "Subsolo",
@@ -4569,6 +4807,7 @@
     "origem": [],
     "codigo": "TCF1",
     "campus": "Norte",
+    "edificio": "Bloco T",
     "detalhes": {
       "construcao": "Bloco T",
       "pavimento": "Térreo",
@@ -4587,6 +4826,7 @@
     "origem": [],
     "codigo": "T001",
     "campus": "Norte",
+    "edificio": "Bloco T",
     "detalhes": {
       "construcao": "Bloco T",
       "pavimento": "Térreo",
@@ -4605,6 +4845,7 @@
     "origem": [],
     "codigo": "T002",
     "campus": "Norte",
+    "edificio": "Bloco T",
     "detalhes": {
       "construcao": "Bloco T",
       "pavimento": "Térreo",
@@ -4623,6 +4864,7 @@
     "origem": [],
     "codigo": "T003",
     "campus": "Norte",
+    "edificio": "Bloco T",
     "detalhes": {
       "construcao": "Bloco T",
       "pavimento": "Térreo",
@@ -4641,6 +4883,7 @@
     "origem": [],
     "codigo": "T004",
     "campus": "Norte",
+    "edificio": "Bloco T",
     "detalhes": {
       "construcao": "Bloco T",
       "pavimento": "Térreo",
@@ -4659,6 +4902,7 @@
     "origem": [],
     "codigo": "T005",
     "campus": "Norte",
+    "edificio": "Bloco T",
     "detalhes": {
       "construcao": "Bloco T",
       "pavimento": "Térreo",
@@ -4677,6 +4921,7 @@
     "origem": [],
     "codigo": "TCC1",
     "campus": "Norte",
+    "edificio": "Bloco T",
     "detalhes": {
       "construcao": "Bloco T",
       "pavimento": "Térreo",
@@ -4695,6 +4940,7 @@
     "origem": [],
     "codigo": "TCC2",
     "campus": "Norte",
+    "edificio": "Bloco T",
     "detalhes": {
       "construcao": "Bloco T",
       "pavimento": "Térreo",
@@ -4713,6 +4959,7 @@
     "origem": [],
     "codigo": "TCE1",
     "campus": "Norte",
+    "edificio": "Bloco T",
     "detalhes": {
       "construcao": "Bloco T",
       "pavimento": "Térreo",
@@ -4731,6 +4978,7 @@
     "origem": [],
     "codigo": "TCC3",
     "campus": "Norte",
+    "edificio": "Bloco T",
     "detalhes": {
       "construcao": "Bloco T",
       "pavimento": "Térreo",
@@ -4749,6 +4997,7 @@
     "origem": [],
     "codigo": "TCD1",
     "campus": "Norte",
+    "edificio": "Bloco T",
     "detalhes": {
       "construcao": "Bloco T",
       "pavimento": "Térreo",
@@ -4767,6 +5016,7 @@
     "origem": [],
     "codigo": "T006",
     "campus": "Norte",
+    "edificio": "Bloco T",
     "detalhes": {
       "construcao": "Bloco T",
       "pavimento": "Térreo",
@@ -4785,6 +5035,7 @@
     "origem": [],
     "codigo": "T007",
     "campus": "Norte",
+    "edificio": "Bloco T",
     "detalhes": {
       "construcao": "Bloco T",
       "pavimento": "Térreo",
@@ -4803,6 +5054,7 @@
     "origem": [],
     "codigo": "T008",
     "campus": "Norte",
+    "edificio": "Bloco T",
     "detalhes": {
       "construcao": "Bloco T",
       "pavimento": "Térreo",
@@ -4821,6 +5073,7 @@
     "origem": [],
     "codigo": "T009",
     "campus": "Norte",
+    "edificio": "Bloco T",
     "detalhes": {
       "construcao": "Bloco T",
       "pavimento": "Térreo",
@@ -4839,6 +5092,7 @@
     "origem": [],
     "codigo": "T010",
     "campus": "Norte",
+    "edificio": "Bloco T",
     "detalhes": {
       "construcao": "Bloco T",
       "pavimento": "Térreo",
@@ -4857,6 +5111,7 @@
     "origem": [],
     "codigo": "TS01",
     "campus": "Norte",
+    "edificio": "Bloco T",
     "detalhes": {
       "construcao": "Bloco T",
       "pavimento": "Subsolo",
@@ -4875,6 +5130,7 @@
     "origem": [],
     "codigo": "TCC4",
     "campus": "Norte",
+    "edificio": "Bloco T",
     "detalhes": {
       "construcao": "Bloco T",
       "pavimento": "Andar 1",
@@ -4893,6 +5149,7 @@
     "origem": [],
     "codigo": "T101",
     "campus": "Norte",
+    "edificio": "Bloco T",
     "detalhes": {
       "construcao": "Bloco T",
       "pavimento": "Andar 1",
@@ -4911,6 +5168,7 @@
     "origem": [],
     "codigo": "T103",
     "campus": "Norte",
+    "edificio": "Bloco T",
     "detalhes": {
       "construcao": "Bloco T",
       "pavimento": "Andar 1",
@@ -4929,6 +5187,7 @@
     "origem": [],
     "codigo": "T102",
     "campus": "Norte",
+    "edificio": "Bloco T",
     "detalhes": {
       "construcao": "Bloco T",
       "pavimento": "Andar 1",
@@ -4947,6 +5206,7 @@
     "origem": [],
     "codigo": "T102.1",
     "campus": "Norte",
+    "edificio": "Bloco T",
     "detalhes": {
       "construcao": "Bloco T",
       "pavimento": "Andar 1",
@@ -4967,6 +5227,7 @@
     ],
     "codigo": "EX01",
     "campus": "Norte",
+    "edificio": "Externo",
     "detalhes": {
       "construcao": "Externo",
       "pavimento": "Térreo",
