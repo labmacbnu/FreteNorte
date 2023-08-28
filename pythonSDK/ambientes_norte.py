@@ -33,7 +33,7 @@ df.drop(columns=ambientes_origem, inplace=True)
  
 # %%
 dicionarios = df.to_dict('records')
-
+dicionarios
 # %%
 registros = []
 
@@ -41,11 +41,13 @@ for item in dicionarios:
     key = item.pop('codigo')
     nome = item.pop('nome')
     origem = item.pop('origem')
+    edificio = item["construcao"]
     registros.append({
         'nome': nome,
         'origem': origem,
         'codigo': key,
         'campus': "Norte",
+        'edificio': edificio,
         'detalhes':  item})
 
 # %%
