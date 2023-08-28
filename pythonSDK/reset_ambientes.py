@@ -17,7 +17,7 @@ app = firebase_admin.initialize_app(cred)
 db = firestore.client()
  
 COLLECTIONS_MAP = [
-    ('ambientes', 'json/ambientes.json', 'ambiente_codigo'), 
+    ('ambientes', 'json/ambientes.json', 'codigo'), 
     ('items', 'json/permanentes.json', 'key')
 ]
 
@@ -30,7 +30,7 @@ def load_json_file(filename):
 
 def unique_ambientes():
     ambientes = load_json_file('json/ambientes.json')
-    ambientes = [a['ambiente_codigo'] for a in ambientes]
+    ambientes = [a['codigo'] for a in ambientes]
     return sorted(list(set(ambientes)))
 
 if __name__ == "__main__":

@@ -17,7 +17,7 @@ app = firebase_admin.initialize_app(cred)
 db = firestore.client()
 
 COLLECTIONS_MAP = [
-    ('ambientes', 'json/ambientes.json', 'ambiente_codigo'), 
+    ('ambientes', 'json/ambientes.json', 'codigo'), 
     ('items', 'json/permanentes.json', 'key')
 ]
 
