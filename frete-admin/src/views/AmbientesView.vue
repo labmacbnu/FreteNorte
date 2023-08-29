@@ -61,8 +61,8 @@ const novo_ambiente = reactive({
 })
 
 const vald_n_ambiente = reactive({
-    ambiente_codigo: true,
-    ambiente_nome: true,
+    codigo: true,
+    nome: true,
     items: true,
     lider: true,
     tipo: true
@@ -73,7 +73,7 @@ async function cria_ambiente() {
     // valida se o lider esta na lista de usuarios
     vald_n_ambiente.lider = lista_emails.value.includes(novo_ambiente.lider)
     // valida se codigo e nomes não são nulos
-    for (let key of ['ambiente_codigo', 'ambiente_nome']) {
+    for (let key of ['codigo', 'nome']) {
         vald_n_ambiente[key] = novo_ambiente[key] != null
     }
     // se tudo estiver ok, todas as vald_n_ambiente são true
@@ -81,10 +81,10 @@ async function cria_ambiente() {
     if (tudook) {
         // se tudo ok 
         const uptime = await create_ambiente(novo_ambiente)
-        console.log(`Ambiente ${novo_ambiente.ambiente_codigo} criado`, uptime)
+        console.log(`Ambiente ${novo_ambiente.codigo} criado`, uptime)
         // reseta objetos
-        Object.assign(novo_ambiente, {ambiente_codigo: null, ambiente_nome: null, lider: null}) 
-        Object.assign(vald_n_ambiente , { ambiente_codigo: true, ambiente_nome: true, items: true,  lider: true, tipo: true})
+        Object.assign(novo_ambiente, { codigo: null, nome: null, lider: null })
+        Object.assign(vald_n_ambiente, { codigo: true, nome: true, items: true, lider: true, tipo: true })
         return true
     } else {
         return false
@@ -95,11 +95,11 @@ const new_leader = reactive({
     valido: false
 })
 
-async function adiciona_lider(){ 
-    const codigo = selected_ambiente.value.ambiente_codigo
+async function adiciona_lider() {
+    const codigo = selected_ambiente.value.codigo
     const lider = selected_ambiente.value.lider 
     new_leader.valido = lista_emails.value.includes(lider)  
-    if (new_leader.valido){
+    if (new_leader.valido) {
         const uptime = await add_lider_ambiente(codigo, lider)
         console.log(`Líder ${lider} adicionado ao ambiente ${codigo}`, uptime)
         new_leader.email = null
@@ -135,15 +135,15 @@ async function adiciona_lider(){
         <template #corpo>
             <div class="mb-3">
                 <label for="novocodigo" class="form-label">Código</label>
-                <input v-model="novo_ambiente.ambiente_codigo" type="text" class="form-control" id="novocodigo"
-                    :class="{ 'border-danger': !vald_n_ambiente.ambiente_codigo }"
+                <input v-model="novo_ambiente.codigo" type="text" class="form-control" id="novocodigo"
+                    :class="{ 'border-danger': !vald_n_ambiente.codigo }"
                     placeholder="Digite um código curto para identificar o ambiente">
             </div>
 
             <div class="mb-3">
                 <label for="novonome" class="form-label">Ambiente</label>
-                <input v-model="novo_ambiente.ambiente_nome" type="text" class="form-control"
-                    :class="{ 'border-danger': !vald_n_ambiente.ambiente_nome }" id="novonome"
+                <input v-model="novo_ambiente.nome" type="text" class="form-control"
+                    :class="{ 'border-danger': !vald_n_ambiente.nome }" id="novonome"
                     placeholder="Digite o nome do ambiente">
             </div>
 
@@ -169,12 +169,12 @@ async function adiciona_lider(){
         <template #corpo>
             <div class="mb-3">
                 <label for="ambcodigo" class="form-label">Código</label>
-                <input :value="selected_ambiente.ambiente_codigo" type="text" class="form-control" id="ambcodigo" disabled>
+                <input :value="selected_ambiente.codigo" type="text" class="form-control" id="ambcodigo" disabled>
             </div>
 
             <div class="mb-3">
                 <label for="ambnome" class="form-label">Ambiente</label>
-                <input :value="selected_ambiente.ambiente_nome" type="text" class="form-control" id="ambnome" disabled>
+                <input :value="selected_ambiente.nome" type="text" class="form-control" id="ambnome" disabled>
             </div>
 
             <div class="mb-3">
@@ -207,9 +207,9 @@ async function adiciona_lider(){
                 <td colspan="5"><input v-model="pesquisa" placeholder="Digite para pesquisar" class="form-control">
                 </td>
             </tr>
-            <tr v-for="amb in ambientes_filtrados">
-                <td>{{ amb.ambiente_codigo }}</td>
-                <td>{{ amb.ambiente_nome }}</td>
+            <tr v-for="amb in  ambientes_filtrados ">
+                <td>{{ amb.codigo }}</td>
+                <td>{{ amb.nome }}</td>
                 <td>{{ amb.tipo ? amb.tipo : "Físico" }}</td>
                 <td class="text-center"><template v-if="amb.lider">{{ amb.lider.nome }}</template>
                     <template v-else><button class="btn btn-primary btn-sm" data-bs-target="#adicionaLider"
