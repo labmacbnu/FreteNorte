@@ -42,16 +42,16 @@ const selected_ambiente_key = ref(null)
 
 const selected_ambiente = computed(() => {
     if (selected_ambiente_key.value && ambientes.dados) {
-        const filtrado = ambientes.dados.filter(elem => elem.ambiente_codigo == selected_ambiente_key.value)
+        const filtrado = ambientes.dados.filter(elem => elem.codigo == selected_ambiente_key.value)
         return filtrado[0]
     } else {
-        return { ambiente_codigo: '', ambiente_nome: '', tipo: "Físico" }
+        return { codigo: '', nome: '', tipo: "Físico" }
     }
 })
 
 const novo_ambiente = reactive({
-    ambiente_codigo: null,
-    ambiente_nome: null,
+    codigo: null,
+    nome: null,
     items: 0,
     lider: null,
     tipo: "Virtual"
