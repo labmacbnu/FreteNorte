@@ -5,6 +5,7 @@ import ModalDelete from '@/components/ModalDelete.vue';
 import { useUserPermissionsStore } from '@/stores/user';
 import { useItemsAmbienteStore, orderedGroupBy } from '@/stores/items'; 
 import {  registra_volume, apaga_volume, useVolumesEmailStore } from '@/stores/volumes';
+import AmbienteFlag from '@/components/AmbienteFlag.vue';
 import Acordeao from '@/components/AcordeaoVolumes.vue';
 import QRCode from '@/components/QRCode.vue';
 import moment from 'moment';
@@ -112,9 +113,9 @@ const soft_volume_modal_ref = ref(null)
                 role="button" aria-expanded="false" :aria-controls="'items' + volume.codigo">
                 Detalhes</a>
             </td>
-            <td class="text-center">{{ volume.origem.codigo }}</td>
-            <td>{{ volume.localizacao_atual.codigo }}</td>
-            <td>{{ volume.destino ? volume.destino.codigo : "" }}</td>
+            <td class="text-center"><AmbienteFlag v-bind="volume.origem"></AmbienteFlag></td>
+            <td><AmbienteFlag v-bind="volume.localizacao_atual"></AmbienteFlag></td>
+            <td><AmbienteFlag v-bind="volume.destino"></AmbienteFlag></td>
             <td>{{ volume.categoria }}</td>
             <td>{{ volume.status }}</td>
             <td :title="moment.unix(volume.data_criacao.seconds).format('DD/MM/YY HH:MM')">{{ moment.unix(volume.data_criacao.seconds).format("DD/MM/YY") }}</td>  

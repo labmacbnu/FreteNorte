@@ -4,6 +4,7 @@ import { useUserPermissionsStore } from '@/stores/user';
 import { useItemsAmbienteStore, orderedGroupBy } from '@/stores/items';
 import { useAmbientesUserStore, useListaAmbientesStore, useListaAmbientesNorteStore } from '@/stores/ambientes';
 import { registra_volume, simbolos_nbr } from '@/stores/volumes';
+import AmbienteFlag from '@/components/AmbienteFlag.vue';
 import SelectPlus from '@/components/SelectPlus.vue';
 import MedidasInput from '@/components/MedidasInput.vue';
 
@@ -218,10 +219,9 @@ onMounted(() => {
       <div class="col-6">
         <p class="mb-2"><b>Responsável:</b> {{ responsavel_label }}</p>
         <div class="hstack gap-2 mb-2">
-          <p class="px-3 text-center mb-1"><b>Origem:</b> {{ volume_editado.origem.codigo }}</p>
+          <p class="px-3 text-center mb-1"><b>Origem:</b> <AmbienteFlag v-bind="volume_editado.origem" ></AmbienteFlag></p>
           <i class="bi bi-arrow-right"></i>
-          <p class="px-3 text-center mb-1"><b>Destino:</b> {{ volume_editado.destino ? volume_editado.destino.codigo : ""
-          }} </p>
+          <p class="px-3 text-center mb-1"><b>Destino:</b> <AmbienteFlag v-bind="volume_editado.destino" ></AmbienteFlag> </p>
         </div>
         <p class="mb-2"><b>Categoria:</b> {{ volume_editado.categoria }}</p>
 
