@@ -56,8 +56,8 @@ const codigo_search = ref("")
     </div>
     <div class="row g-2"> 
         <div class="col border rounded p-2">
-            <h3>Pesquisa por código ou número de patrimônio</h3>
-            <p>Digite o código ou número de patrimônio e pesquise pelo item. </p>
+            <h3>Pesquisa por código de barras</h3>
+            <p>Digite o código de barras e pesquise pelo item. </p>
             <div class="input-group mb-3">
 
                 <input class="form-control" v-model="codigo_search" type="text">
