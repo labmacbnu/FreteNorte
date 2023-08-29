@@ -250,9 +250,7 @@ onMounted(() => {
         </div> 
         <SelectPlus @selected="x => localizacao_atual.codigo = x" 
          :valor="localizacao_atual.codigo" placeholder="Selecione o ambiente" 
-         :options="lista_opcoes_ambientes"></SelectPlus>
-
-        {{ localizacao_atual }}
+         :options="lista_opcoes_ambientes"></SelectPlus> 
       </div>
 
       <div class="col-xs-12  col-md-6">
@@ -326,10 +324,7 @@ onMounted(() => {
             </div>
           </div>
         </div>
-      </div>
-
-
-      <pre class="h-25">{{ JSON.stringify(volume_editado, null, 3) }}</pre>
+      </div> 
 
     </form>
   </template>
