@@ -3,6 +3,7 @@ import ModalDelete from "@/components/ModalDelete.vue"
 import { collection, where, doc, setDoc, query, orderBy, limit } from 'firebase/firestore';
 import { useCollection, useDocument } from 'vuefire';
 import { db } from '@/backend/index'
+import AmbienteFlag from "@/components/AmbienteFlag.vue";
 import moment from 'moment';
 import { reactive, computed, ref } from 'vue';
 import { RouterLink } from "vue-router";
@@ -120,10 +121,10 @@ const volumes_selecionados = ref([])
             <th class="d-print-none">Código</th>
             <th>Lista de items</th>
             <th>Origem</th>
+            <th>Atual</th>
             <th>Destino</th>
             <th>Categoria</th>
-            <th>Status</th>
-            <th>Localização atual</th>
+            <th>Status</th> 
             <th>Criado em</th>
             <th>Criado por</th>
             <th class="d-print-none"></th>
@@ -144,20 +145,20 @@ const volumes_selecionados = ref([])
               Ver itens</a>
             </td>
             <td>
-              {{ volume.origem.ambiente_codigo }}
+              <AmbienteFlag v-bind="volume.origem"></AmbienteFlag>
             </td>
             <td>
-              {{ volume.destino ? volume.destino.codigo: '' }}
+              <AmbienteFlag v-bind="volume.localizacao_atual"></AmbienteFlag>
+            </td>
+            <td>
+              <AmbienteFlag v-bind="volume.destino"></AmbienteFlag>
             </td>
             <td>
               {{ volume.categoria }}
             </td>
             <td>
               {{ volume.status }}
-            </td>
-            <td>
-              {{ volume.localizacao_atual.ambiente_codigo }}
-            </td>
+            </td> 
             <td>
               {{ moment.unix(volume.data_criacao.seconds).format("DD/MM/YY") }}
             </td>  
