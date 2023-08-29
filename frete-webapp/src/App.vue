@@ -81,8 +81,7 @@ function level_classes(level) {
       return "bg-body-secondary text-dark"
   }
 } 
-
-let bsAlert;
+ 
 /**
  * Mostra uma mensagem de alerta no meio da tela
  * @param {string} mensagem A mensagem a ser exibida no popup
@@ -91,7 +90,9 @@ let bsAlert;
 function set_mensagem_popup(mensagem, level = "info"){
   mensagem_level.value = level_classes(level)
   mensagem_popup.value = mensagem
-  bsAlert.show()
+  const myToastEl = document.getElementById('liveToast') 
+  const myToast = bootstrap.Toast.getOrCreateInstance(myToastEl)
+  myToast.show()
 } 
  
 provide('mensagem', {set_mensagem_popup}) 
@@ -100,7 +101,7 @@ provide('mensagem', {set_mensagem_popup})
 
 onMounted(() => {
   const myAlert = document.getElementById('liveToast')
-  bsAlert = new bootstrap.Toast(myAlert, {delay: 3000})
+  new bootstrap.Toast(myAlert, {delay: 3000})
 })
 </script>
 
