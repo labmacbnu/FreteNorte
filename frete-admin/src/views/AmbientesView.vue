@@ -2,6 +2,7 @@
 import { onBeforeMount, ref, computed, reactive, watch } from 'vue';
 import { useAmbientesStore, create_ambiente, add_lider_ambiente } from '../stores/ambientes';
 import Modal from '../components/Modal.vue';
+import ProgressBar from '../components/ProgressBar.vue';
 import { useUsuariosStore } from '../stores/users';
 import { useRoute } from 'vue-router'
 import { useDocument } from 'vuefire';
@@ -18,12 +19,12 @@ const lista_emails = computed(() => {
 })
 
 const edificio = ref(route.query.edificio || null)
-const lista_edificios = useDocument(doc(db, 'agregados/edificios' ))
+const lista_edificios = useDocument(doc(db, 'agregados/edificios'))
 
 const ambientes = useAmbientesStore()
 const pesquisa = ref(null)
 
-watch(edificio, (newval) => { 
+watch(edificio, (newval) => {
     ambientes.edificio = newval
 })
 
@@ -91,14 +92,14 @@ async function cria_ambiente() {
     }
 }
 
-const new_leader = reactive({ 
+const new_leader = reactive({
     valido: false
 })
 
 async function adiciona_lider() {
     const codigo = selected_ambiente.value.codigo
-    const lider = selected_ambiente.value.lider 
-    new_leader.valido = lista_emails.value.includes(lider)  
+    const lider = selected_ambiente.value.lider
+    new_leader.valido = lista_emails.value.includes(lider)
     if (new_leader.valido) {
         const uptime = await add_lider_ambiente(codigo, lider)
         console.log(`Líder ${lider} adicionado ao ambiente ${codigo}`, uptime)
@@ -115,7 +116,7 @@ async function adiciona_lider() {
 <template>
     <datalist id="lista_usuarios">
         <option v-for="email in lista_emails">{{ email }}</option>
-    </datalist> 
+    </datalist>
 
     <div class="row mb-3">
         <div class="col">
@@ -127,7 +128,6 @@ async function adiciona_lider() {
     </div>
     <h1>Ambientes</h1>
     <button class="btn btn-success" data-bs-target="#criaAmbiente" data-bs-toggle="modal">Criar ambiente virtual</button>
-
     <Modal modalid="criaAmbiente" :salve_callback="cria_ambiente">
         <template #titulo>
             Criar ambiente
@@ -184,8 +184,8 @@ async function adiciona_lider() {
 
             <div class="mb-3">
                 <label for="amblider" class="form-label">Líder</label>
-                <input id="amblider" type="text" v-model="selected_ambiente.lider" class="form-control" :class="{ 'border-danger': !new_leader.valido }"
-                    list="lista_usuarios">
+                <input id="amblider" type="text" v-model="selected_ambiente.lider" class="form-control"
+                    :class="{ 'border-danger': !new_leader.valido }" list="lista_usuarios">
             </div>
 
         </template>
@@ -198,6 +198,7 @@ async function adiciona_lider() {
                 <th>Código</th>
                 <th>Nome</th>
                 <th>Tipo</th>
+                <th>Concluído</th>
                 <th class="text-center">Líder</th>
                 <th># items</th>
             </tr>
@@ -211,11 +212,22 @@ async function adiciona_lider() {
                 <td>{{ amb.codigo }}</td>
                 <td>{{ amb.nome }}</td>
                 <td>{{ amb.tipo ? amb.tipo : "Físico" }}</td>
-                <td class="text-center"><template v-if="amb.lider">{{ amb.lider.nome }}</template>
-                    <template v-else><button class="btn btn-primary btn-sm" data-bs-target="#adicionaLider"
-                            data-bs-toggle="modal" title="Adicionar líder"
-                            @click="() => selected_ambiente_key = amb.ambiente_codigo"><i
-                                class="bi bi-plus"></i></button></template>
+                <td>
+                    <template v-if="ambientes.status[amb.codigo]">
+                        <ProgressBar :atual=" ambientes.status[amb.codigo].volumados "
+                            :maximo=" ambientes.status[amb.codigo].todos " :percentual=" ambientes.status[amb.codigo].percent"
+                            :key="amb.codigo"
+                            >
+                        </ProgressBar>
+                    </template>
+                </td>
+                <td class="text-center">
+                    <template v-if=" amb.lider ">{{ amb.lider.nome }}</template>
+                    <template v-else>
+                        <button class="btn btn-primary btn-sm" data-bs-target="#adicionaLider" data-bs-toggle="modal"
+                            title="Adicionar líder" @click=" () => selected_ambiente_key = amb.codigo "><i
+                                class="bi bi-plus"></i></button>
+                    </template>
                 </td>
                 <td>{{ amb.items }}</td>
             </tr>
