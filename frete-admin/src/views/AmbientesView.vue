@@ -54,7 +54,10 @@ const novo_ambiente = reactive({
     nome: null,
     items: 0,
     lider: null,
-    tipo: "Virtual"
+    tipo: "Virtual",
+    campus: "Virtual",
+    edificio: "Virtual"
+
 })
 
 const vald_n_ambiente = reactive({
