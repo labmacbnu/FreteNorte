@@ -15,6 +15,16 @@ const router = createRouter({
         requiresAuth: false
       }
     },
+    {
+      path: '/negado', 
+      name: 'negado', 
+      component: () => import('@/views/Forbiden.vue'),
+      meta: {
+        requiresAuth: false,
+        title: "Acesso negado"
+      }
+
+    },
     { 
         name: 'login',
         path: '/login',

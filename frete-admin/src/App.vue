@@ -57,7 +57,13 @@ router.beforeEach( (to, from, next) => {
         }
       })
     } else {
-      next()
+      if(permission.role === 'Usuário' || permission.role === 'Líder de Ambiente'  ) {
+        next({
+          name: 'negado'
+        })
+      } else {
+        next()
+      } 
     } 
   } else {
     next()
