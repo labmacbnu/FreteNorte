@@ -2,7 +2,8 @@
 import { onBeforeMount, ref, computed, reactive, watch } from 'vue';
 import { useAmbientesStore, create_ambiente, add_lider_ambiente } from '../stores/ambientes';
 import Modal from '../components/Modal.vue';
-import ProgressBar from '../components/ProgressBar.vue';
+import ProgressBar from '@/components/ProgressBar.vue';
+import FreteLink from '@/components/FreteLink.vue';
 import { useUsuariosStore } from '../stores/users';
 import { useRoute } from 'vue-router'
 import { useDocument } from 'vuefire';
@@ -209,8 +210,12 @@ async function adiciona_lider() {
                 </td>
             </tr>
             <tr v-for="amb in  ambientes_filtrados ">
-                <td><a target="_blank" class="text-decoration-none" :href="'https://frete-norte-ufsc-blumenau.web.app/items/ambiente/' + amb.codigo ">
-                     {{ amb.codigo }} <i class="bi bi-box-arrow-in-up-right"></i></a></td>
+                <td>
+                    <FreteLink :path="'items/ambiente/' + amb.codigo" :decoration="false">
+                        {{ amb.codigo }} 
+                        <!-- <small><i class="bi bi-box-arrow-in-up-right"></i></small> -->
+                        </FreteLink>
+                   </td>
                 <td>{{ amb.nome }}</td>
                 <td>{{ amb.tipo ? amb.tipo : "Físico" }}</td>
                 <td>
