@@ -3,7 +3,7 @@ import { computed, inject, toValue, onMounted, onServerPrefetch, reactive, ref, 
 import { useUserPermissionsStore } from '@/stores/user';
 import { useItemsAmbienteStore, orderedGroupBy } from '@/stores/items';
 import { useAmbientesUserStore, useListaAmbientesNorteStore } from '@/stores/ambientes';
-import { registra_volume, simbolos_nbr } from '@/stores/volumes';
+import { registra_volume, simbolos_nbr, servicos } from '@/stores/volumes';
 import SelectPlus from '@/components/SelectPlus.vue';
 import MedidasInput from '@/components/MedidasInput.vue';
 
@@ -64,7 +64,8 @@ const new_volume = reactive(
       caixa: null,
       platico_bolha: null,
       enchimento: null
-    }
+    },
+    servicos: []
   }
 )
 
@@ -410,11 +411,22 @@ onMounted(() => {
       </div>
     </div>
 
-    <div class="col-xs-12 col-md-6">
-      <label for="observacao" class="form-label fw-bold fs-5">Observação</label>
-      <textarea class="form-control" id="observacao" rows="3" placeholder="Alguma obervação especial para esse volume?"
-        v-model="new_volume.observacao"></textarea>
+    <div class="col-xs-12 col-md-6 mb-4">
+      <p class="mb-1 fw-bold d-flex justify-content-between fs-5">Serviços
+          </p>
+      <div class="row">
+        <div class="col-4 col-sm-6 text-start" v-for="(item, n) in servicos">
+          <div class="form-check mb-1">
+            <input class="form-check-input" type="checkbox" :value="item" :id="'servis' + n"
+              v-model="new_volume.servicos">
+            <label class="form-check-label" :for="'servis' + n">
+              {{ item }}
+            </label>
+          </div>
+        </div>
+      </div>
     </div>
+    
 
     <div class="col-xs-12 col-md-6 mb-4">
       <p class="mb-1 fw-bold d-flex justify-content-between fs-5">Propriedades do volume
@@ -434,7 +446,11 @@ onMounted(() => {
         </div>
       </div>
     </div>
-
+    <div class="col-xs-12 col-md-6">
+      <label for="observacao" class="form-label fw-bold fs-5">Observação</label>
+      <textarea class="form-control" id="observacao" rows="3" placeholder="Alguma obervação especial para esse volume?"
+        v-model="new_volume.observacao"></textarea>
+    </div>
   </form>
 </template>
 <style>
