@@ -209,7 +209,8 @@ async function adiciona_lider() {
                 </td>
             </tr>
             <tr v-for="amb in  ambientes_filtrados ">
-                <td>{{ amb.codigo }}</td>
+                <td><a target="_blank" class="text-decoration-none" :href="'https://frete-norte-ufsc-blumenau.web.app/items/ambiente/' + amb.codigo ">
+                     {{ amb.codigo }} <i class="bi bi-box-arrow-in-up-right"></i></a></td>
                 <td>{{ amb.nome }}</td>
                 <td>{{ amb.tipo ? amb.tipo : "Físico" }}</td>
                 <td>
