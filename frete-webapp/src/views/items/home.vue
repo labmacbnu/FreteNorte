@@ -60,7 +60,7 @@ const codigo_search = ref("")
             <p>Digite o código de barras e pesquise pelo item. </p>
             <div class="input-group mb-3">
 
-                <input class="form-control" v-model="codigo_search" type="text">
+                <input inputmode="numeric" class="form-control" v-model="codigo_search" type="text">
                 <button class="btn btn-outline-primary" type="button" id="button-addon1"
                     @click="router.push({ name: 'item-codigo', params: { codigo: codigo_search } })">Pesquisar item</button>
             </div>
