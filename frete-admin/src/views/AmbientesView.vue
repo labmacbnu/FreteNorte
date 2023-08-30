@@ -32,7 +32,7 @@ const ambientes_filtrados = computed(() => {
     const lista_ambientes = ambientes.dados.filter(elem => elem.edificio == edificio.value)
     if (pesquisa.value) {
         const regex = new RegExp(`.*${pesquisa.value}.*`, 'i')
-        const filtrado = lista_ambientes.filter(elem => regex.test(elem.valor) || regex.test(elem.lider))
+        const filtrado = lista_ambientes.filter(elem => regex.test(elem.codigo) || regex.test(elem.lider?.nome) || regex.test(elem.nome))
         return filtrado
     } else {
         return lista_ambientes
