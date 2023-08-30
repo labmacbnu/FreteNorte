@@ -78,6 +78,14 @@ async function front_apaga_volume() {
         return false
     }
 }
+
+function marcar_como_perdido(){
+    const valores = toValue(item)
+    const uptime = update_item(valores.key, {
+        "ambiente": doc(db, "ambientes", "PERDIDO")
+    })
+    console.log(`Item ${valores.key} marcado como perdido`)
+}
 </script>
 
 <template>
@@ -93,10 +101,14 @@ async function front_apaga_volume() {
                 <h4 class="d-none d-print-block">Sistema Frete Norte</h4>
                 <div class="row align-items-start">
                     <div class="col-12">
-                        <h4 class="d-flex align-items-center">
+                        <div class="d-flex justify-content-between align-items-center">
+
+                        <h4 class="mb-1 ">
                             {{ item.short_descricao }}
-                            <span class="mx-3 badge text-secondary">{{ item.key }}</span> 
+                        <span class="mt-1 badge text-secondary">{{ item.key }}</span> 
                         </h4>
+                            
+                        </div>
                         <p class="text-secondary p-2">
                             {{ item.detalhes.descricao }}
                         </p>
@@ -107,8 +119,8 @@ async function front_apaga_volume() {
                                     <td><RouterLink :to="{name: 'item-codigo', params: {codigo: parentKey}}">Ver item</RouterLink></td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">Ambiente</th>
-                                    <td>{{ item.ambiente.codigo }} - {{ item.ambiente.nome }}</td>
+                                    <th scope="row">Origem</th>
+                                    <td>{{ item.origem }}</td>
                                 </tr>
                                 <tr v-if="item.detalhes.patrimonio">
                                     <th scope="row">Patrimônio</th>
@@ -184,11 +196,25 @@ async function front_apaga_volume() {
                                 </tr>
 
                                 <tr class="border-primary">
-                                    <td colspan="2" class="text-end d-print-none justify-content-between">
+                                    <td>
+                                    </td>
+                                    <td class="text-end d-print-none justify-content-between"> 
 
                                         <button v-if="item.tipo != 'Permanente'" class="btn btn-danger mx-3" data-bs-target="#deletar" data-bs-toggle="modal" >Deletar</button>
                                         <button class="btn btn-primary" @click="atualiza_item">Salvar</button>
                                     </td>
+                                </tr>
+                                <tr>
+                                    <template v-if="item.ambiente.codigo != 'PERDIDO'">
+                                    <td colspan="2">
+                                        Não encontrou esse item? Clique aqui para <a href="#" @click="marcar_como_perdido">marcar item como perdido</a>.
+                                    </td>
+                                    </template>
+                                    <template v-else>
+                                    <td colspan="2" class="text-light fs-4 text-center bg-danger">
+                                        Esse item está marcado como perdido.
+                                    </td>
+                                    </template>
                                 </tr>
                             </tbody>
                         </table>
