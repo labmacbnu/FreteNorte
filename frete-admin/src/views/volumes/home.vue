@@ -14,9 +14,9 @@ const usuarios = useUsuariosStore()
 
 
 const catRef = doc(db, 'agregados/categorias_volumes')
-const {data: categorias, pending: cat_pending, promise: cat_promisse } = useDocument(catRef)
+const { data: categorias, pending: cat_pending, promise: cat_promisse } = useDocument(catRef)
 
-const {data: lista_ambientes, pending: amb_pending} = useDocument(doc(db, 'agregados/ambientes'))
+const { data: lista_ambientes, pending: amb_pending } = useDocument(doc(db, 'agregados/ambientes'))
 
 const filtros = reactive({
   categoria: null,
@@ -31,28 +31,28 @@ const filtros = reactive({
 
 
 const volRef = collection(db, "volumes")
-const q = computed(()=> {
+const q = computed(() => {
   var composite_query = [];
 
-  if(filtros.categoria)
-    composite_query.push( where('categoria', '==', filtros.categoria))
+  if (filtros.categoria)
+    composite_query.push(where('categoria', '==', filtros.categoria))
   
-  if(filtros.origem)
-    composite_query.push( where('origem', '==', doc(db, 'ambientes', filtros.origem)))
+  if (filtros.origem)
+    composite_query.push(where('origem', '==', doc(db, 'ambientes', filtros.origem)))
 
-  if(filtros.responsavel)
-    composite_query.push( where('responsavel', '==', doc(db, 'usuarios', filtros.responsavel)) )
+  if (filtros.responsavel)
+    composite_query.push(where('responsavel', '==', doc(db, 'usuarios', filtros.responsavel)))
     
-  if(filtros.status)
-    composite_query.push( where('status', '==', filtros.status))
+  if (filtros.status)
+    composite_query.push(where('status', '==', filtros.status))
 
-  if(filtros.quantidade)
-    composite_query.push( limit(filtros.quantidade))
+  if (filtros.quantidade)
+    composite_query.push(limit(filtros.quantidade))
 
-  return query(volRef,...composite_query,  where('deleted', '==', false), orderBy('data_criacao', 'desc'))
+  return query(volRef, ...composite_query, where('deleted', '==', false), orderBy('data_criacao', 'desc'))
 })
 
-const volumes = useCollection(q, {wait: true, maxRefDepth: 1})
+const volumes = useCollection(q, { wait: true, maxRefDepth: 1 })
 
 const soft_volume_modal_ref = ref(null)
 
@@ -72,12 +72,13 @@ const volumes_selecionados = ref([])
     <select v-model="filtros.categoria" id="categoria" class="form-select" v-if="!cat_pending">
       <option :value="null">Todas</option>
       <option v-for="categoria in categorias.valores">
-        {{categoria}}
+          {{ categoria }}
       </option>
     </select>
-    <p class="text-end mt-1"><RouterLink class="text-info text-decoration-none" 
-      :to="{name: 'volumes-edita-categorias'}">
-      Editar categorias <i class="bi bi-pencil"></i></RouterLink></p>
+      <p class="text-end mt-1">
+        <RouterLink class="text-info text-decoration-none" :to="{ name: 'volumes-edita-categorias' }">
+          Editar categorias <i class="bi bi-pencil"></i></RouterLink>
+      </p>
   </div>
   <div class="col">
     <label for="ambiente" class="form-label">Filtrar por ambiente de origem</label>
@@ -107,8 +108,9 @@ const volumes_selecionados = ref([])
 <div class="row">
   <div class="col d-flex justify-content-between">
  <h4>Exibindo os volumes</h4>
-  <RouterLink :to="{name: 'lotes-add', query: {volumes: volumes_selecionados}}" class="btn btn-lg btn-success">
-    <i class="bi bi-boxes me-2"></i>Criar Lote</RouterLink> 
+      <RouterLink :to="{ name: 'lotes-add', query: { volumes: volumes_selecionados } }" class="btn btn-lg btn-success">
+        <i class="bi bi-boxes me-2"></i>Criar Lote
+      </RouterLink>
   </div>
 </div>
   <div class="row justify-content-start">
@@ -131,17 +133,18 @@ const volumes_selecionados = ref([])
         </tr>
         </thead>
         <tbody>
-          <template  v-for="volume in volumes" :key="'volume' + volume.codigo">
+          <template v-for="volume in volumes" :key="'volume' + volume.codigo">
           <tr> 
             <td>
               <div class="form-check text-center text-wrap text-break text-secondary volume-codigo ">
-              <input :id="'volcheck' + volume.codigo" class="form-check-input" type="checkbox" :value="volume.codigo" v-model="volumes_selecionados">
+                  <input :id="'volcheck' + volume.codigo" class="form-check-input" type="checkbox" :value="volume.codigo"
+                    v-model="volumes_selecionados">
               <label :for="'volcheck' + volume.codigo" class="form-check-label">{{ volume.codigo }}</label>
               </div>
             </td>
             <td> 
-              <a :href="'#items' + volume.codigo"  class="btn btn-sm btn-primary" data-bs-toggle="collapse" 
-                role="button" aria-expanded="false" :aria-controls="'items' + volume.codigo">
+                <a :href="'#items' + volume.codigo" class="btn btn-sm btn-primary" data-bs-toggle="collapse" role="button"
+                  aria-expanded="false" :aria-controls="'items' + volume.codigo">
               Ver itens</a>
             </td>
             <td>
@@ -166,7 +169,9 @@ const volumes_selecionados = ref([])
               {{ volume.responsavel.nome }} <small>&lt;{{ volume.responsavel.id }}&gt;</small>
             </td>
             <td class="d-print-none">
-              <RouterLink :to="{name: 'volume-codigo', params: {codigo: volume.codigo}}" class="text-decoration-none text-success-emphasis">Ver volume <i class="bi bi-box-seam"></i></RouterLink>
+                <RouterLink :to="{ name: 'volume-codigo', params: { codigo: volume.codigo } }"
+                  class="text-decoration-none text-success-emphasis">Ver volume <i class="bi bi-box-seam"></i>
+                </RouterLink>
               <!-- <button class="btn btn-danger" data-bs-target="#apagare" data-bs-toggle="modal" 
               @click="() => soft_volume_modal_ref = volume.codigo"><i class="bi bi-trash" title="Apagar volume"></i></button> -->
             </td>
@@ -174,9 +179,10 @@ const volumes_selecionados = ref([])
           <tr class="collapse" :id="'items' + volume.codigo">
             <td colspan="5">
             <ul class="list-group list-group-flush align-top">
-                <li v-for="(item, i) in volume.items" :key="'I' + i" class="list-group-item justify-content-between d-flex">
+                  <li v-for="(item, i) in volume.items" :key="'I' + i"
+                    class="list-group-item justify-content-between d-flex">
                   <small>{{ item.short_descricao }}</small>
-                  <span class="badge text-primary rounded-pill span-lista-volumes">{{item?.key}}</span>
+                    <span class="badge text-primary rounded-pill span-lista-volumes">{{ item?.key }}</span>
                 </li> 
               </ul>
             </td>
@@ -189,7 +195,7 @@ const volumes_selecionados = ref([])
           <td colspan="2">
             <div class="form-floating">
             <select id="quantidade" v-model="filtros.quantidade" class="form-select">
-              <option v-for="x in 5" :value="x*5">{{ x*5 }}</option>
+                  <option v-for="x in 5" :value="x * 5">{{ x * 5 }}</option>
               <option :value="null">Todos</option>
             </select>
             <label for="quantidade">Exibir quantos registros</label>
@@ -208,22 +214,22 @@ const volumes_selecionados = ref([])
   Apagar volume
 </template>
 <template #corpo>
-  Certeza que quer apagar o volume {{soft_volume_modal_ref}}?
+      Certeza que quer apagar o volume {{ soft_volume_modal_ref }}?
 </template>
 
 </ModalDelete> 
- 
 </template>
 <style>
-
 .listinhadelete {
   max-height: 20vh;
 }
+
 .text-elipse {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
 .p-lista-nao-volumados {
   width: 5em;
 }
@@ -236,6 +242,5 @@ const volumes_selecionados = ref([])
   width: 6.5em;
   font-size: x-small;
 }
-
 </style>
  
