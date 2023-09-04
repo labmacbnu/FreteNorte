@@ -97,7 +97,8 @@ function new_nova_parte(){
         },
         meta: {...item_valores.meta, inteiro: true, updated: new Date(), partes: []},
         key: item_valores.key + '-' + n_partes.value,
-        tipo: "Parte"
+        tipo: "Parte",
+        origem: item_valores.origem,
     }  )
 }
 
