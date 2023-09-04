@@ -1,6 +1,6 @@
 import { db } from '@/backend'
 import { ref, computed } from 'vue'
-import { addDoc, runTransaction, collection, doc } from 'firebase/firestore'
+import { addDoc, runTransaction, collection, doc, arrayUnion } from 'firebase/firestore'
 import moment from 'moment'
 
 export const loteModel = {
@@ -24,7 +24,7 @@ export async function save_lote(lote_data) {
     const loteAdicionado = await addDoc(lotesRef, lote)
     const update = await runTransaction(db, async (transaction) => {
         volumesDocs.forEach( (volume) => {
-            transaction.update(volume, {lote: loteAdicionado, status: 'Loteado'})
+            transaction.update(volume, {lote: loteAdicionado, status: arrayUnion('Loteado') })
         })
         return true
     })
