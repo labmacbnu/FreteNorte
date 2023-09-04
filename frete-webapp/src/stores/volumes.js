@@ -42,7 +42,7 @@ export async function registra_volume(dados){
     dados.origem = doc(db, "ambientes", dados.origem)
     dados.localizacao_atual = doc(db, "ambientes", dados.localizacao_atual)
     dados.destino = doc(db, "ambientes-norte", dados.destino)
-    dados.status = "Criado" // mudar para ["Criado"]
+    dados.status = ["Criado"] // mudar para ["Criado"]
     dados.data_criacao = new Date()
 
     const volumesRef = collection(db, "volumes") 
