@@ -188,7 +188,8 @@ const volumes_selecionados = ref([])
               </td>
             </tr>
             <tr class="collapse" :id="'items' + volume.codigo">
-              <td colspan="5">
+              <td></td>
+              <td colspan="2">
                 <ul class="list-group list-group-flush align-top">
                   <li v-for="(item, i) in volume.items" :key="'I' + i"
                     class="list-group-item justify-content-between d-flex">
@@ -197,7 +198,7 @@ const volumes_selecionados = ref([])
                   </li>
                 </ul>
               </td>
-              <td colspan="4"></td>
+              <td colspan="7"></td>
             </tr>
           </template>
         </tbody>
