@@ -78,4 +78,94 @@ exports.contavolumes = functions.firestore.document("volumes/{volumeId}").onWrit
 
 })
 
+/**
+ * Get a value based on a dot-notation key.
+ *
+ * @param {{}} obj - Object to be read from
+ * @param {string | [string]} keys - Initially, the dot-notation key.
+ * @returns {*} - Value sought OR undefined if key does not exist in obj
+ */
+function getValue(obj, keys)
+{
+    keys = (typeof keys === "string") ? keys.split(".") : keys;
+    const key = keys.shift();
+    if (obj.hasOwnProperty(key) && keys.length === 0)
+        return obj[key];
+    else if (!obj.hasOwnProperty(key))
+        return undefined;
+    else
+        return getValue(obj[key], keys);
+}
+
+/**
+ * Set a value based on a dot-notation key.
+ *
+ * @param obj
+ * @param keys
+ * @param value
+ */
+function setValue(obj, keys, value)
+{
+    keys = (typeof keys === "string") ? keys.split(".") : keys;
+    const key = keys.shift();
+
+    if (keys.length === 0)
+    {
+        obj[key] = value;
+        return;
+    }
+    else if (!obj.hasOwnProperty(key))
+    {
+        obj[key] = {};
+    }
+
+    setValue(obj[key], keys, value)
+}
+
+
+function parse_dbref(db_object) {
+    return db_object._path.segments.join("/")
+}
+const export_item_getters = [
+    ['key', 'controle', x =>  x  ],
+    ['ambiente', 'ambiente', x =>  parse_dbref(x)],
+    ['origem', 'origem', x =>  x],
+    ['short_descricao', 'short_descricao', x =>  x],
+    ['meta.volume', 'volume', x =>  parse_dbref(x)],
+    ['key', 'controle', x =>  x  ]
+]
+ 
+function parse_doc_data(docdata) { 
+    const resposta = {}
+    export_item_getters.forEach( ([key, nkey, getter]) => { 
+        setValue(resposta, nkey,  getter(getValue(docdata, key))) 
+    })
+
+    return resposta
+}
+
+exports.exportaVolumes = functions.https.onRequest(async (request, response) => {
+    // Query the 50 latest stories
+    const allVolumes = {}
+    const pesquisa = db.collection('items')
+      .where('meta.volumado', '==', true) 
+      .get()
+    await pesquisa.then( (querySnapshot) => {
+        querySnapshot.forEach((doc) => { 
+            allVolumes[doc.id] = parse_doc_data(doc.data())
+        })
+    })
+    
+    
+    //response.set('Cache-Control', 'public, max-age=300, s-maxage=600');
+    response.set('Content-Type', 'text/plain; charset=utf-8');
+        response.write(export_item_getters.map( ([key, nkey, getter]) => nkey ).join(";") + "\n")
+        Object.values(allVolumes).forEach( (volume) => {
+            response.write( Object.values(volume).join(";") + "\n")
+        })
+    response.end("\n")
+    //response.end(bundleBuffer);
+  });
+        
+// emulator http://127.0.0.1:5001/frete-norte-ufsc-blumenau/us-central1/exportaVolumes
 
