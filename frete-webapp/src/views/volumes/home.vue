@@ -6,7 +6,7 @@ import { useUserPermissionsStore } from '@/stores/user';
 import { useItemsAmbienteStore, orderedGroupBy } from '@/stores/items'; 
 import {  registra_volume, apaga_volume, useVolumesEmailStore } from '@/stores/volumes';
 import AmbienteFlag from '@/components/AmbienteFlag.vue';
-import Acordeao from '@/components/AcordeaoVolumes.vue';
+import StatusList from '@/components/StatusList.vue';
 import QRCode from '@/components/QRCode.vue';
 import moment from 'moment';
 
@@ -117,7 +117,7 @@ const soft_volume_modal_ref = ref(null)
             <td><AmbienteFlag v-bind="volume.localizacao_atual"></AmbienteFlag></td>
             <td><AmbienteFlag v-bind="volume.destino"></AmbienteFlag></td>
             <td>{{ volume.categoria }}</td>
-            <td>{{ volume.status }}</td>
+            <td><StatusList :status="volume.status"></StatusList></td>
             <td :title="moment.unix(volume.data_criacao.seconds).format('DD/MM/YY HH:MM')">{{ moment.unix(volume.data_criacao.seconds).format("DD/MM/YY") }}</td>  
             <td class="d-print-none">
               <button class="btn btn-danger" data-bs-target="#apagare" data-bs-toggle="modal" 
