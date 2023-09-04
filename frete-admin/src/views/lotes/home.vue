@@ -1,5 +1,5 @@
 <script setup>
-import ModalDelete from "@/components/ModalDelete.vue"
+import AmbienteFlag from '@/components/AmbienteFlag.vue';
 import { collection, where, doc, setDoc, query, orderBy, limit } from 'firebase/firestore';
 import { useCollection, useDocument } from 'vuefire';
 import { db } from '@/backend/index'
@@ -117,7 +117,9 @@ const volumes_selecionados = ref([])
                 <template v-for="volume in lote.volumes">  
                   <li class="list-group-item d-flex justify-content-between">
                     <span>{{ volume.categoria }}</span>
-                    {{ volume.origem.ambiente_codigo }} &rarr; {{ volume.destino ? volume.destino.codigo : '' }}
+                    <div class="hstack">
+                    <AmbienteFlag v-bind="volume.origem"></AmbienteFlag><i class="mx-2 bi bi-arrow-right"></i>     <AmbienteFlag v-bind="volume.destino"></AmbienteFlag> 
+                    </div>
                     <span class="badge bg-success">{{ volume.items.length == 1 ? volume.items.length + ' item' :  volume.items.length + ' itens'  }}</span>
                       <RouterLink :to="{name: 'volume-codigo', params: {codigo: volume.codigo}}" class="text-decoration-none text-success-emphasis">Ver volume <i class="bi bi-box-seam"></i></RouterLink> 
                       </li>
