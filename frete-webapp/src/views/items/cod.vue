@@ -86,6 +86,14 @@ function marcar_como_perdido(){
     })
     console.log(`Item ${valores.key} marcado como perdido`)
 }
+
+function marcar_como_infra(){
+    const valores = toValue(item)
+    const uptime = update_item(valores.key, {
+        "ambiente": doc(db, "ambientes", "INFRA")
+    })
+    console.log(`Item ${valores.key} marcado como infraestrutura`)
+}
 </script>
 
 <template>
@@ -204,18 +212,38 @@ function marcar_como_perdido(){
                                         <button class="btn btn-primary" @click="atualiza_item">Salvar</button>
                                     </td>
                                 </tr>
+                                <template v-if="item.tipo == 'Permanente'">
                                 <tr>
-                                    <template v-if="item.ambiente.codigo != 'PERDIDO'">
-                                    <td colspan="2">
+                                    <template v-if="item.ambiente.codigo != 'PERDIDO' &&  item.ambiente.codigo != 'INFRA'">
+                                    <td class="text-end">
+                                        <i class="bi bi-question-octagon text-warning-emphasis"></i>
+                                    </td>
+                                    <td colspan="1">
                                         Não encontrou esse item? Clique aqui para <a href="#" @click="marcar_como_perdido">marcar item como perdido</a>.
                                     </td>
                                     </template>
-                                    <template v-else>
+                                    <template v-if="item.ambiente.codigo == 'PERDIDO' ">
                                     <td colspan="2" class="text-light fs-4 text-center bg-danger">
                                         Esse item está marcado como perdido.
                                     </td>
                                     </template>
                                 </tr>
+                                <tr>
+                                    <template v-if="item.ambiente.codigo != 'INFRA'">
+                                    <td class="text-end">
+                                        <i class="bi bi-building-gear"></i>
+                                    </td>
+                                    <td colspan="1">
+                                        Clique aqui para <a href="#" @click="marcar_como_infra">marcar item como infraestrutura</a>. Nesse caso, outra pessoa ficará responsável por esse item.
+                                    </td>
+                                    </template>
+                                    <template v-if="item.ambiente.codigo == 'INFRA' ">
+                                    <td colspan="2" class="text-light fs-4 text-center bg-info">
+                                        Esse item é um item de infraestrutura.
+                                    </td>
+                                    </template>
+                                </tr>
+                                </template>
                             </tbody>
                         </table>
 
