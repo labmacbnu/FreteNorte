@@ -25,6 +25,10 @@
     ],
     "rewrites": [
       {
+        "source": "/api/exporta-volumes",
+        "function": "exportaVolumes"
+      },
+      {
         "source": "**",
         "destination": "/index.html"
       }
