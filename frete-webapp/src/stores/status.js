@@ -1,0 +1,1 @@
+/home/bossa/COGEP/FreteNorte/frete-admin/src/stores/status.js
