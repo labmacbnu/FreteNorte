@@ -65,7 +65,8 @@ const new_volume = reactive(
       platico_bolha: null,
       enchimento: null
     },
-    servicos: []
+    servicos: [],
+    status: ["Criado"]
   }
 )
 
@@ -92,6 +93,8 @@ function reset_new_volume() {
   new_volume.peso = null
   new_volume.medidas = {l: null, c: null, a: null}
   new_volume.embalagem = {caixa: null, platico_bolha: null, enchimento: null }
+  new_volume.servicos = []
+  new_volume.status = ["Criado"]
 }
 
 
