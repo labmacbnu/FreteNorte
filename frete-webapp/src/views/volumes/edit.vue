@@ -223,10 +223,10 @@ onMounted(() => {
           <i class="bi bi-arrow-right"></i>
           <p class="px-3 text-center mb-1"><b>Destino:</b> <AmbienteFlag v-bind="volume_editado.destino" ></AmbienteFlag> </p>
         </div>
-        <p class="mb-2"><b>Categoria:</b> {{ volume_editado.categoria }}</p>
 
       </div>
       <div class="col-6"> 
+        <p class="mb-2 fs-5"><b>Categoria:</b> {{ volume_editado.categoria }}</p>
         <p class="fw-bold mb-1">Lista de itens</p>
           <ul class="list-group">
             <li class="list-group-item justify-content-between d-flex text-lowercase px-2 py-1" v-for="item in volume_editado.items">
