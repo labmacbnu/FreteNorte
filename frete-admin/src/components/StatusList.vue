@@ -17,14 +17,15 @@ const props = defineProps({
  */
 const prioridade_list = {
     "Criado": 0,
-    "Loteado": 1,
-    "Desmontado": 1
+    "Para Desmontagem": 1,
+    "Desmontado": 2,
+    "Embalado": 3,
+    "Loteado": 4, 
 }
 
 const prioridades = props.status.map( x => prioridade_list[x])
 
-const corte_prioridade = Math.max(...prioridades)
+const corte_prioridade = 1// Math.max(...prioridades)
 
 const exibit = computed( () => props.status.filter( status => prioridade_list[status] >= corte_prioridade  ))
-
 </script>
