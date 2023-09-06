@@ -228,6 +228,7 @@ function marcar_como_infra(){
                                     </td>
                                     </template>
                                 </tr>
+                                </template>
                                 <tr>
                                     <template v-if="item.ambiente.codigo != 'INFRA'">
                                     <td class="text-end">
@@ -243,7 +244,6 @@ function marcar_como_infra(){
                                     </td>
                                     </template>
                                 </tr>
-                                </template>
                             </tbody>
                         </table>
 
