@@ -153,6 +153,7 @@ export const useItemsResponsavelStore = defineStore('items-responsavel', ()=>{
 export async function cria_item(item){
     const itemsRef = collection(db, "items")
     const ambienteRef = doc(db, "ambientes", item.ambiente)
+    item.origem = item.ambiente
     item.ambiente = ambienteRef
     const newDocRef = await addDoc(itemsRef, item);
     console.log("Documento escrito", newDocRef.id);
