@@ -1,5 +1,5 @@
 <script setup>
-import { computed, inject, toValue, onMounted,  reactive, ref, watch } from 'vue';
+import { computed, inject, toValue, onMounted, reactive, ref, watch } from 'vue';
 import { useUserPermissionsStore } from '@/stores/user';
 import { useItemsAmbienteStore, orderedGroupBy } from '@/stores/items';
 import { useAmbientesUserStore, useListaAmbientesStore, useListaAmbientesNorteStore } from '@/stores/ambientes';
@@ -7,6 +7,7 @@ import { registra_volume, simbolos_nbr } from '@/stores/volumes';
 import AmbienteFlag from '@/components/AmbienteFlag.vue';
 import SelectPlus from '@/components/SelectPlus.vue';
 import MedidasInput from '@/components/MedidasInput.vue';
+import { volume_status } from '@/stores/status'
 
 
 import { db } from '@/backend/index.js';
@@ -22,7 +23,7 @@ const { set_mensagem_popup } = inject("mensagem")
 const route = useRoute()
 const router = useRouter()
 
-const documento = computed(()=> doc(db, "volumes", route.params.codigo))
+const documento = computed(() => doc(db, "volumes", route.params.codigo))
 
 const { data: volume_editado, pending, promise: editado_promisse } = useDocument(documento, { maxRefDepth: 1 })
 
@@ -38,22 +39,22 @@ const localizacao_atual = reactive({
   codigo: null
 })
 
-watch(()=> localizacao_atual.campus, (newVal) => {
+watch(() => localizacao_atual.campus, (newVal) => {
   localizacao_atual.codigo = ''
   if (volume_editado.value.localizacao_atual.campus == newVal) {
     localizacao_atual.codigo = volume_editado.value.localizacao_atual.codigo
   }
 })
 
-editado_promisse.value.then( () => {
+editado_promisse.value.then(() => {
   localizacao_atual.campus = volume_editado.value.localizacao_atual.campus
   localizacao_atual.codigo = volume_editado.value.localizacao_atual.codigo
 })
 
-const lista_opcoes_ambientes = computed( () => {
+const lista_opcoes_ambientes = computed(() => {
   return localizacao_atual.campus == "Sul" ? lista_ambientes_sul.dados : lista_ambientes_norte.dados
 })
- 
+
 
 
 const pacotes = useCollection(query(collection(db, "pacotes")))
@@ -136,7 +137,7 @@ const lider_ambiente_label = computed(() => {
 
 
 
- 
+
 
 const simbolos_nbr_ordenados = computed(() => {
   const all = []
@@ -145,14 +146,14 @@ const simbolos_nbr_ordenados = computed(() => {
   }
   return all.sort((a, b) => a.value.localeCompare(b.value))
 })
- 
+
 
 /**
  * WATCHERS
  */
-  
 
- 
+
+
 
 
 function valida_inteiros(key_event) {
@@ -166,16 +167,16 @@ function valida_inteiros(key_event) {
   if (!digito_regex.test(key_event.key)) {
     key_event.preventDefault()
   }
-} 
- 
+}
+
 
 async function editar_volume() {
-  const {peso, medidas, propriedades, observacao, embalagem} = toValue(volume_editado)
-  const {campus, codigo} = toValue(localizacao_atual)
-  const collectionRef = (campus == "Sul")? 'ambientes': 'ambientes-norte'
+  const { peso, medidas, propriedades, observacao, embalagem, status } = toValue(volume_editado)
+  const { campus, codigo } = toValue(localizacao_atual)
+  const collectionRef = (campus == "Sul") ? 'ambientes' : 'ambientes-norte'
 
   const loc_atual = doc(db, `${collectionRef}/${codigo}`)
-  const novos_dados = {peso, medidas, propriedades, localizacao_atual: loc_atual, observacao, embalagem}
+  const novos_dados = { peso, medidas, propriedades, localizacao_atual: loc_atual, observacao, embalagem, status }
   //console.log(JSON.stringify(novos_dados, null, 1)) 
   validate()
   for (const [key, value] of Object.entries(validation)) {
@@ -191,7 +192,7 @@ async function editar_volume() {
   await updateDoc(docRef, novos_dados)
 
   set_mensagem_popup("Volume editado com sucesso", "success")
-  router.push({name: 'volumes'}) 
+  router.push({ name: 'volumes' })
 }
 
 onMounted(() => {
@@ -219,40 +220,90 @@ onMounted(() => {
       <div class="col-6">
         <p class="mb-2"><b>Responsável:</b> {{ responsavel_label }}</p>
         <div class="hstack gap-2 mb-2">
-          <p class="px-3 text-center mb-1"><b>Origem:</b> <AmbienteFlag v-bind="volume_editado.origem" ></AmbienteFlag></p>
+          <p class="px-3 text-center mb-1"><b>Origem:</b>
+            <AmbienteFlag v-bind="volume_editado.origem"></AmbienteFlag>
+          </p>
           <i class="bi bi-arrow-right"></i>
-          <p class="px-3 text-center mb-1"><b>Destino:</b> <AmbienteFlag v-bind="volume_editado.destino" ></AmbienteFlag> </p>
+          <p class="px-3 text-center mb-1"><b>Destino:</b>
+            <AmbienteFlag v-bind="volume_editado.destino"></AmbienteFlag>
+          </p>
         </div>
 
       </div>
-      <div class="col-6"> 
+      <div class="col-6">
         <p class="mb-2 fs-5"><b>Categoria:</b> {{ volume_editado.categoria }}</p>
         <p class="fw-bold mb-1">Lista de itens</p>
-          <ul class="list-group">
-            <li class="list-group-item justify-content-between d-flex text-lowercase px-2 py-1" v-for="item in volume_editado.items">
-              <span>
-                {{ item.descricao ? item.descricao : item.short_descricao }}
-              </span>
-              <span class="bagde text-dark">{{ item.key }}</span>
-            </li>
-          </ul>
+        <ul class="list-group">
+          <li class="list-group-item justify-content-between d-flex text-lowercase px-2 py-1"
+            v-for="item in volume_editado.items">
+            <span>
+              {{ item.descricao ? item.descricao : item.short_descricao }}
+            </span>
+            <span class="bagde text-dark">{{ item.key }}</span>
+          </li>
+        </ul>
       </div>
 
       <div class="col-6">
         <p class="fw-bold fs-5">Ambiente atual</p>
         <div class="form-check form-check-inline">
-          <input v-model="localizacao_atual.campus" class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="Sul">
+          <input v-model="localizacao_atual.campus" class="form-check-input" type="radio" name="inlineRadioOptions"
+            id="inlineRadio1" value="Sul">
           <label class="form-check-label" for="inlineRadio1">Sul</label>
         </div>
         <div class="form-check form-check-inline">
-          <input v-model="localizacao_atual.campus" class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="Norte">
+          <input v-model="localizacao_atual.campus" class="form-check-input" type="radio" name="inlineRadioOptions"
+            id="inlineRadio2" value="Norte">
           <label class="form-check-label" for="inlineRadio2">Norte</label>
-        </div> 
-        <SelectPlus @selected="x => localizacao_atual.codigo = x" 
-         :valor="localizacao_atual.codigo" placeholder="Selecione o ambiente" 
-         :options="lista_opcoes_ambientes"></SelectPlus> 
+        </div>
+        <SelectPlus @selected="x => localizacao_atual.codigo = x" :valor="localizacao_atual.codigo"
+          placeholder="Selecione o ambiente" :options="lista_opcoes_ambientes"></SelectPlus>
       </div>
+      <div class="col-xs-12  col-md-6">
+        <p class="mb-1 fw-bold d-flex justify-content-between fs-5">Status
+        </p>
+        <div class="row">
+          <div class="col">
+            <div class="form-check mb-1">
+              <input id="status_criado" disabled class="form-check-input" type="checkbox" value="Criado" v-model="volume_editado.status">
+              <label for="status_criado" class="form-check-label">
+                Criado
+              </label>
+            </div>
+            <template v-for="(statusval, idx) in ['Embalado']" :key="'stas'+idx">
+              <div class="form-check mb-1">
+                <input :id="'status_' + statusval" class="form-check-input" type="checkbox" :value="statusval" v-model="volume_editado.status">
+                <label :for="'status_' + statusval" class="form-check-label">
+                  {{ statusval }}
+                </label>
+              </div>
+            </template>
+            <div class="form-check mb-1">
+              <input disabled class="form-check-input" type="checkbox" value="Loteado" v-model="volume_editado.status">
+              <label class="form-check-label">
+                Loteado
+              </label>
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-check mb-1" v-if="volume_editado.status.includes('Para Desmontagem')">
+              <input id="status_todismont" disabled class="form-check-input" type="checkbox" value="Para Desmontagem"
+                v-model="volume_editado.status">
+              <label for="status_todismont" class="form-check-label">
+                Para Desmontagem
+              </label>
+            </div>
+            <div class="form-check mb-1" v-if="volume_editado.status.includes('Para Desmontagem')">
+              <input id="status_dismontado" class="form-check-input" type="checkbox" value="Desmontado" v-model="volume_editado.status">
+              <label for="status_dismontado" class="form-check-label">
+                Desmontado
+              </label>
+            </div>
 
+          </div>
+        </div>
+
+      </div>
       <div class="col-xs-12  col-md-6">
         <p class="mb-1 fw-bold d-flex justify-content-between fs-5">Embalagem
         </p>
@@ -324,7 +375,7 @@ onMounted(() => {
             </div>
           </div>
         </div>
-      </div> 
+      </div>
 
     </form>
   </template>
