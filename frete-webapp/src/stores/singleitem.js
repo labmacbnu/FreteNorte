@@ -125,6 +125,7 @@ export async function notused_delete_item(key){
 export const itemModel = {
     "responsavel": "",
     "ambiente": "",
+    "origem": "",
     "edificio": "",
     "detalhes": {
       "patrimonio": "",
