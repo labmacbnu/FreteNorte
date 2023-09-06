@@ -45,7 +45,7 @@ const codigo_search = ref("")
 <template>
     <div class="row">
         <div class="col">
-            <h1>Items</h1> 
+            <h1>Itens</h1> 
         </div>
     </div>
     <div class="row mb-4">
