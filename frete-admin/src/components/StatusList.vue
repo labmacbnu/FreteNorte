@@ -3,6 +3,7 @@
 </template>
 <script setup>
 import { computed } from 'vue';
+import { volume_status } from '@/stores/status'
 
 const props = defineProps({
     status: {
@@ -15,17 +16,10 @@ const props = defineProps({
  * Então vamos estabelecer um ponto de corte `corte_prioridade`
  * e exibir todos os status que sejam maiores do que esse corte. 
  */
-const prioridade_list = {
-    "Criado": 0,
-    "Para Desmontagem": 1,
-    "Desmontado": 2,
-    "Embalado": 3,
-    "Loteado": 4, 
-}
 
-const prioridades = props.status.map( x => prioridade_list[x])
+const prioridades = props.status.map( x => volume_status[x])
 
 const corte_prioridade = 1// Math.max(...prioridades)
 
-const exibit = computed( () => props.status.filter( status => prioridade_list[status] >= corte_prioridade  ))
+const exibit = computed( () => props.status.filter( status => volume_status[status] >= corte_prioridade  ))
 </script>
