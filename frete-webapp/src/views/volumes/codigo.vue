@@ -2,8 +2,8 @@
 import { doc } from 'firebase/firestore'
 import { useDocument } from 'vuefire'
 import { db } from '@/backend/index'
-import { computed, ref, watch } from 'vue'
-import { useRoute, useRouter } from 'vue-router'
+import { inject, ref, watch } from 'vue'
+import { useRoute, useRouter, RouterLink } from 'vue-router'
 import QRCode from '@/components/QRCode.vue'
 import AmbienteFlag from '@/components/AmbienteFlag.vue';
 import moment from 'moment'
@@ -12,6 +12,8 @@ import { simbolos_nbr } from '@/stores/volumes'
 const route = useRoute()
 const router = useRouter()
 const codigo = ref( (route.params)? route.params.codigo: null)
+
+const { globaluser, updateUser } = inject("globaluser")
 
 watch( () => route.params.codigo, () =>{
   codigo.value = route.params.codigo
@@ -61,8 +63,11 @@ function print(){
     <template v-else>
       <!-- Existe -->
       <div class="row">
-        <div class="col">
+        <div class="col"> 
           <h4>Volume {{ volume.codigo }}</h4>
+        </div>
+        <div v-if="globaluser.email == volume.responsavel.id" class="col text-end">
+          <RouterLink :to="{name: 'volume-edit', params: {codigo: volume.codigo}}" class="btn btn-secondary">Editar este volume <i class="bi bi-pencil"></i></RouterLink>
         </div>
       </div>
       <div class="row justify-content-start g-1">
