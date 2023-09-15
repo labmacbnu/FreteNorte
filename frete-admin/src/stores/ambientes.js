@@ -35,7 +35,8 @@ export async function create_ambiente(ambiente_data) {
 export async function add_lider_ambiente(ambiente_codigo, lider_email) {
     const db = getFirestore(firebaseApp)
     const docRef = doc(db, 'ambientes', ambiente_codigo)
-    const uptime = await updateDoc(docRef, {lider: lider_email})
+    const liderRef = doc(db, 'usuario', lider_email)
+    const uptime = await updateDoc(docRef, {lider: liderRef})
     const usuarios = useUsuariosStore()
     usuarios.add_ambiente(lider_email, ambiente_codigo)
     return uptime
