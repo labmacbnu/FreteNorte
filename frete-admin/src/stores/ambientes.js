@@ -19,7 +19,7 @@ export const useAmbientesStore = defineStore('ambientes', ()=>{
                 ambiente_status(ambiente.codigo).then( (value) => { status[ambiente.codigo] = value } )
             })
         }
-    }) 
+    }, {immediate: true}) 
     return {dados, edificio, status} 
 })
 
