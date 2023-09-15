@@ -119,7 +119,7 @@ const usuarios_filtrados = computed(() => {
                 <th>Nome</th>
                 <th>e-mail</th>
                 <th>Perfil</th>
-                <th>Ambientes</th>
+                <th class="w-25">Ambientes</th>
                 <th></th>
             </tr>
         </thead>
