@@ -65,6 +65,7 @@ def update_liderados(lista_ambientes: list):
     
 
 if __name__ == "__main__":
+    print(f"Total de líderes {len(LIDERES)}")
     for email, valores in LIDERES.items():
         if re.match(r"\S*@ufsc.br", email):
             insere_lider(email, valores)

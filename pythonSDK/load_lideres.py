@@ -59,12 +59,9 @@ def confirmar(nome_lider, user_nome):
 if __name__ == "__main__":
     N = len(LIDERES)
     M = 0
-    for nome_lider in LIDERES.keys():
-        resposta = find_usuario(unidecode(nome_lider)) 
-        if resposta != {}:
-            for email, user_data in resposta.items():
-                M += 1
-                confirmar(nome_lider, user_data['nome'])
+    for email_lider in LIDERES.keys():
+        if email_lider in USERBASE:  
+            M += 1 
 
     print(f"Total de líderes de ambientes: {N}")
     print(f"Total de líderes logados: {M}")
