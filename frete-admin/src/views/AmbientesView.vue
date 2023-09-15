@@ -206,7 +206,7 @@ async function adiciona_lider() {
         </thead>
         <tbody>
             <tr>
-                <td colspan="5"><input v-model="pesquisa" placeholder="Digite para pesquisar" class="form-control">
+                <td colspan="6"><input v-model="pesquisa" placeholder="Digite para pesquisar" class="form-control">
                 </td>
             </tr>
             <tr v-for="amb in  ambientes_filtrados ">
