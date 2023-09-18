@@ -8,10 +8,18 @@
 </template>
 <script setup>
 import { computed } from 'vue';
-const props = defineProps(['atual', 'maximo', 'percentual'])
+const props = defineProps({
+    'atual': Number, 
+    'maximo': Number, 
+    'percentual': Number, 
+    'label': {
+        type: String, 
+        default: "volumados"
+    }
+})
 
 const percentual = computed( () => (props.atual == props.maximo)? 100: props.percentual )
-const texto = computed( () => props.maximo == 0 ? `Ambiente vazio`: `${props.atual} de ${props.maximo} volumados`)
+const texto = computed( () => props.maximo == 0 ? `Ambiente vazio`: `${props.atual} de ${props.maximo} ${props.label}`)
 
 const cor = computed( () => {
     if(props.maximo == 0) {
