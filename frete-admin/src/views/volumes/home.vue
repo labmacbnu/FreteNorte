@@ -9,7 +9,7 @@ import moment from 'moment';
 import { reactive, computed, ref } from 'vue';
 import { RouterLink } from "vue-router";
 import { useUsuariosStore } from '@/stores/users'; 
-
+import { volume_status } from '@/stores/status';
 
 const usuarios = useUsuariosStore()
 
@@ -106,7 +106,7 @@ const volumes_selecionados = ref([])
           Status {{ filtros.status.length ? '(' + filtros.status.length + ')' : ''  }}
         </button>
         <form class="dropdown-menu p-2">
-          <div class="form-check" v-for="(status, n) in ['Criado', 'Loteado']" :key="'statusdiv' +  n">
+          <div class="form-check" v-for="(weight, status, n) in volume_status" :key="'statusdiv' +  n">
             <input v-model="filtros.status" class="form-check-input" type="checkbox" :value="status" :id="'stat' + n">
             <label class="form-check-label" :for="'stat' + n">
               {{status}} 
