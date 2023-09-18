@@ -2,7 +2,7 @@
     <div class="progress" role="progressbar" aria-label="Default striped example"
         :aria-valuenow="atual" aria-valuemin="0"
         :aria-valuemax="maximo">
-        <div :class="cor" class="progress-bar progress-bar-striped" :style="{ width: percentual + '%' }">
+        <div :class="cor" class="progress-bar progress-bar-striped overflow-visible text-dark" :style="{ width: percentual + '%' }">
             {{ texto }}</div>
     </div>
 </template>
