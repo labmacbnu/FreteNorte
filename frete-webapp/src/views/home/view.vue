@@ -29,7 +29,7 @@ onMounted( () => {
                         <p class="card-text">
                         <div v-if="meus_ambientes.status[x.codigo]" class="progress" role="progressbar" aria-label="Default striped example"
                             :aria-valuenow="meus_ambientes.status[x.codigo].volumados" aria-valuemin="0" :aria-valuemax="meus_ambientes.status[x.codigo].todos">
-                            <div class="progress-bar progress-bar-striped" :style="{ width: meus_ambientes.status[x.codigo].percent + '%' }">
+                            <div class="progress-bar progress-bar-striped overflow-visible text-dark" :style="{ width: meus_ambientes.status[x.codigo].percent + '%' }">
                                 {{  meus_ambientes.status[x.codigo].volumados }} de {{ meus_ambientes.status[x.codigo].todos }} volumados</div> 
                         </div>
                         </p>
