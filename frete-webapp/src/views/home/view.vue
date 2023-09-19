@@ -20,7 +20,7 @@ onMounted( () => {
         <div class="col">
             <h1>SisLog Norte</h1>
             <p> Sistema de controle da logística da mudança do campus Blumenau.</p>
-            <h2>Seus ambientes</h2>
+            <h2>Seus ambientes <span v-if="meus_ambientes.dados" class="text-secondary">({{ meus_ambientes.dados.length }})</span></h2>
             <div class="my-3">
                 <div class="card my-2" v-for="(x, i) in meus_ambientes.dados">
                     <div class="card-body" v-if="x">
