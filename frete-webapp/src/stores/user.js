@@ -35,7 +35,7 @@ export async function loginWithGoogle() {
         const token = credential.accessToken;
         // The signed-in user info. 
 
-        registra_atividade( result.user.email, "login")
+        //registra_atividade( result.user.email, "login")
         return result.user
 
     } else {
