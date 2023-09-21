@@ -16,6 +16,10 @@ const links = reactive([{
     icon: 'bi-house-gear',
     label: "Ambientes"
 }, {
+    rto: {name: 'descricoes-search'},
+    icon: 'bi-search',
+    label: "Items"
+},  {
     rto: {name: 'volumes'},
     icon: 'bi-box-seam',
     label: "Volumes"
