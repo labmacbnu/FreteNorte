@@ -3,7 +3,7 @@ import {  RouterView, useRoute, useRouter } from 'vue-router'
 import TheNavigation from './components/TheNavigation.vue'; 
 import { useAmbientesUserStore } from './stores/ambientes';
 import {  onBeforeMount, onMounted, provide, ref } from 'vue';
-import { getAuth, onAuthStateChanged } from 'firebase/auth'
+import { getAuth, onAuthStateChanged,  } from 'firebase/auth'
 import { firebaseApp } from './firebaseConfig'
 import { useUserPermissionsStore } from './stores/user';
 import { useDescricoesStore } from './stores/items';
@@ -102,6 +102,15 @@ provide('mensagem', {set_mensagem_popup})
 onMounted(() => {
   const myAlert = document.getElementById('liveToast')
   new bootstrap.Toast(myAlert, {delay: 3000})
+})
+onMounted(async () => {
+  const auth = getAuth()
+  const user = auth.currentUser
+  if(user) {
+    updateUser(user)
+    permission.set_email(user.email)
+    await permission.get_permissions()
+  }
 })
 </script>
 
