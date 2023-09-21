@@ -104,7 +104,32 @@ const router = createRouter({
         requiresAuth: true,
         title: "Ajuda"
       }
-    }
+    }, 
+    {
+      path: '/items',
+      component: () => import('@/views/items/index.vue'),
+      children: [ {
+        path: '',
+         name: 'descricoes-search',
+         component: () => import('@/views/items/pesquisa.vue'),
+         meta: {
+           requiresAuth: true,
+           title: "Pesquisa por itens"
+         }
+      }, 
+      {
+        path: 'descricao',
+        name: 'descricoes-result',
+        component: () => import('@/views/items/descricao.vue'),
+        meta: {
+          requiresAuth: true,
+          title: "Itens por descrição"
+        }
+      }
+    ]
+    },
+
+    
   ]
 })
 
