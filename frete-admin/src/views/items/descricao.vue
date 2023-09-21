@@ -60,6 +60,10 @@ function countByDescricaoOrigem(descricao, origem) {
     return items.value.filter(item => item.detalhes.descricao === descricao && item.origem === origem).length
 }
 
+function countByDescricao(descricao){
+    return items.value.filter(item => item.detalhes.descricao === descricao).length
+}
+
 const active_tab = ref('Resumo')
 
 
@@ -86,11 +90,14 @@ const active_tab = ref('Resumo')
         <template v-if="active_tab == 'Resumo'">
             <h4>Resumo </h4>
             <ul>
-                <li v-for="(value, key) in agrupados_por_descricao_origens" :key="key">
-                    {{ key }}:
-                    <table class="table table-sm w-25">
+                <template v-for="(value, key) in agrupados_por_descricao_origens" :key="key">
+                <li>
+                    <strong>Descrição completa:</strong> {{ key }}
+                <li><strong>Quantidade total:</strong> {{ countByDescricao(key)}}</li>
+                <li><strong>Localizações:</strong></li>
+                    <table class="ms-4 mt-2 table table-sm w-25">
                         <thead>
-                            <th>Origem</th>
+                            <th>Ambiente</th>
                             <th>Quantidade</th>
                         </thead>
                         <tbody class="table-group-divider">
@@ -101,13 +108,16 @@ const active_tab = ref('Resumo')
                         </tbody>
                     </table>
                 </li>
+            </template>
             </ul>
         </template>
         <template v-else>
             <h4>Detalhes</h4>
             <template v-for="(value, key) in agrupados_por_descricao">
-                <p>{{ key }}</p>
-                <DescricaoTable :items="value"></DescricaoTable>
+                <p> <strong>Descrição completa:</strong> {{ key }}</p>
+                <p><strong>Quantidade total:</strong> {{ countByDescricao(key)}}</p>
+                <p><strong>Códigos e localizações</strong></p>
+                <DescricaoTable class="w-25 ms-4" :items="value"></DescricaoTable>
             </template>
         </template>
     </template>

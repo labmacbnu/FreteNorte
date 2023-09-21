@@ -40,6 +40,7 @@ const items = computed(() => {
 </script>
 <template>
     <h1>Items por descrição</h1>
+    <p>Abaixo temos as descrições curtas dos itens patrimoniados. Navegue pelas abas para encontrar o que procura.</p>
     <template v-if="pending">
         <p>Carregando...</p>
     </template>

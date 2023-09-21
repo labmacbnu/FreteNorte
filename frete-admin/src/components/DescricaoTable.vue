@@ -2,7 +2,7 @@
 <table class="table table-sm">
     <thead>
         <th>Código</th> 
-        <th>Origem</th> 
+        <th>Ambiente</th> 
     </thead>
     <tbody>
         <tr v-for="(item, index) in items" :key="'item-' + index">
