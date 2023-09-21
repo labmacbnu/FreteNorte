@@ -38,6 +38,7 @@ const items = useItemsAmbienteStore()
 const lista_items = ref(route.query.items || [])
 
 const lista_items_show = computed(() => {
+  if(items.dados.length == 0) return []
   const selecionados = lista_items.value.map(x => items.dados.find(y => y.key == x))
   const agrupados = orderedGroupBy(selecionados, x => x.short_descricao)
   Object.entries(agrupados).forEach(([key, value]) => {
