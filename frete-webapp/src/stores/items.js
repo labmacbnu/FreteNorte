@@ -5,8 +5,8 @@ import { firebaseApp } from '../firebaseConfig'
 import { ref, computed, reactive, watch, toValue } from 'vue'
 import { useCollection } from 'vuefire' 
 import { useUserPermissionsStore } from './user'
-
-const db = getFirestore(firebaseApp)
+import { db, get_query } from '@/backend'
+ 
 
 /**
  * @description
@@ -53,7 +53,8 @@ export const useItemsAmbienteStore = defineStore('items-ambiente', ()=>{
     const permissoes = useUserPermissionsStore()
 
     const ambientes = computed( () => [...permissoes.ambientes, ...permissoes.usuario_de]) 
-    const inner_db = ref(null)
+    const tree_db = ref([])
+    const inner_db = computed( () => tree_db.value.flat())
     const ambiente = ref(null)
     const filter_function = ref(null) 
     const dados = computed( () => {
@@ -81,13 +82,15 @@ export const useItemsAmbienteStore = defineStore('items-ambiente', ()=>{
         }
     })
     watch(ambientes, () => {
-        const itemsColl = collection(db, "items")
-        const ambientesRefs = ambientes.value.map(
-            ambiente => doc(db, "ambientes", ambiente)
-        ) 
-        console.log(ambientes.value)
-        const q = query(itemsColl, where('ambiente', 'in', ambientesRefs)) 
-        useCollection(q, {wait: true, target: inner_db});  
+        if(ambientes.value.length > 0){
+            const itemsColl = collection(db, "items")
+            const ambientesRefs = ambientes.value.map(ambiente => doc(db, "ambientes", ambiente))  
+            ambientesRefs.forEach( async ambiente => {  
+                const q = query(itemsColl, where('ambiente', '==', ambiente)) 
+                const documentos = await get_query(q);
+                tree_db.value.push(documentos)
+            }) 
+        }
     },  { immediate: true })
 
     return {ambientes, ambiente, dados, dados_agrupados, inner_db, filter_function}
@@ -201,3 +204,4 @@ export async function deleta_item(item_cod){
     })
     return dele
 }
+ 

@@ -1,9 +1,10 @@
 import { computed, reactive, ref, watch } from 'vue'
 import { defineStore } from 'pinia'
 import { getFirestore, getDoc, doc, collection, where, getCountFromServer, query } from 'firebase/firestore'
-import { firebaseApp } from '../firebaseConfig'
+import { firebaseApp } from '@/firebaseConfig'
 import { useCollection, useDocument } from 'vuefire'
 import { useUserPermissionsStore } from './user'
+import { get_document } from '@/backend'
 
 
 export const useAmbientesStore = defineStore('ambientes', () => {
@@ -80,7 +81,7 @@ export const useAmbientesUserStore = defineStore('ambientes-user', () => {
     watch(ambientes, async () => {
         if (ambientes.value.length != 0) {
             ambientes.value.forEach(async ambiente => {
-                const {id: amb_id, data: amb_data } = await get_document(doc(db, "ambientes", ambiente))
+                const amb_data = await get_document(doc(db, "ambientes", ambiente))
                 dados.value.push(amb_data)
             })
             update_stats()
@@ -90,12 +91,3 @@ export const useAmbientesUserStore = defineStore('ambientes-user', () => {
 
     return { ambientes, dados, status, update_stats }
 })
-
-async function get_document(docRef) { 
-    const docSnap = await getDoc(docRef);
-    if (docSnap.exists()) {
-        return {id: docSnap.id, data: docSnap.data()}
-    } else {
-        return null
-    }
-}
