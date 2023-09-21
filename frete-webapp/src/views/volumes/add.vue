@@ -8,7 +8,7 @@ import SelectPlus from '@/components/SelectPlus.vue';
 import MedidasInput from '@/components/MedidasInput.vue';
 
 
-import { db } from '@/backend/index.js';
+import { db, get_query } from '@/backend/index.js';
 import { collection, where, doc, setDoc, query, updateDoc } from 'firebase/firestore';
 import { useCollection, useDocument, usePendingPromises } from 'vuefire';
 import { useRoute, useRouter } from 'vue-router';
@@ -70,8 +70,32 @@ const new_volume = reactive(
   }
 )
 
+function sliceIntoChunks(arr, chunkSize) {
+    const res = [];
+    for (let i = 0; i < arr.length; i += chunkSize) {
+        const chunk = arr.slice(i, i + chunkSize);
+        res.push(chunk);
+    }
+    return res;
+}
 
-const { data: ambientes_norte } = useCollection(query(collection(db, "ambientes-norte"), where("origem", "array-contains-any", ambientes.ambientes)))
+
+ const ambientes_norte = ref([])
+
+ watch(() => ambientes.ambientes, async () => {
+  if (ambientes.ambientes) {
+    const chunks = sliceIntoChunks(ambientes.ambientes, 30)
+    const queries = chunks.map(chunck => query(collection(db, "ambientes-norte"), where("origem", "array-contains-any", chunck)))
+    const resultado = [] 
+    queries.forEach(async q => {
+      const res = await get_query(q)
+      resultado.push(...res)
+    }); 
+       
+    ambientes_norte.value = resultado
+  }
+}, { immediate: true })
+
 
 
 const destino_filtrado = computed(() => {
@@ -353,7 +377,6 @@ onMounted(() => {
         <p class="mb-1" v-for="(value, key) in lista_items_show">
           <span class="me-2 fw-bold">{{ value }} </span>
           <span class="text-lowercase">{{ key }}</span>
-
         </p>
       </div>
     </div>
