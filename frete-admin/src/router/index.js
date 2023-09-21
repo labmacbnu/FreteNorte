@@ -12,7 +12,8 @@ const router = createRouter({
       name: 'home',
       component: HomeView,
       meta: {
-        requiresAuth: false
+        requiresAuth: false,
+        title: "Home"
       }
     },
     {
@@ -30,7 +31,8 @@ const router = createRouter({
         path: '/login',
         component: () => import('../views/PerfilLogin.vue'),
       meta: {
-        requiresAuth: false
+        requiresAuth: false,
+        title: "Login"
       }
     },
     {
@@ -38,7 +40,8 @@ const router = createRouter({
       name: 'users',
       component: () => import('../views/UsersView.vue'),
       meta: {
-        requiresAuth: true
+        requiresAuth: true,
+        title: "Usuários"
       }
     },
     {
@@ -46,7 +49,8 @@ const router = createRouter({
       name: 'ambientes',
       component: () => import('../views/AmbientesView.vue'),
       meta: {
-        requiresAuth: true
+        requiresAuth: true,
+        title: "Ambientes"
       }
     },
     { 
@@ -58,7 +62,8 @@ const router = createRouter({
             path: '',
             component: () => import('@/views/volumes/home.vue'),
             meta: {
-              requiresAuth: true
+              requiresAuth: true,
+              title: "Volumes"
             }
           },
           {
@@ -72,7 +77,8 @@ const router = createRouter({
             path: 'categoriasedit',
             component: () => import('@/views/volumes/categorias.vue'),
             meta: {
-              requiresAuth: true
+              requiresAuth: true,
+              title: "Editar categorias"
             }
           }
         ]
@@ -84,12 +90,20 @@ const router = createRouter({
         {
           path: '',
           name: 'lotes',
-          component: () => import('@/views/lotes/home.vue')
+          component: () => import('@/views/lotes/home.vue'),
+          meta:{
+            requiresAuth: true,
+            title: "Lotes"
+          }
         },  
         {
           path: 'add',
           name: 'lotes-add',
-          component: () => import('@/views/lotes/add.vue')
+          component: () => import('@/views/lotes/add.vue'),
+          meta: {
+            requiresAuth: true,
+            title: "Adicionar lote"
+          }
         }
       ]
     },
