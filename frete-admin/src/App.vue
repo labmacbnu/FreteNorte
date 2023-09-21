@@ -69,6 +69,12 @@ router.beforeEach( (to, from, next) => {
     next()
   } 
 })
+
+
+router.afterEach( (to, from) => {
+  document.title = `Frete Norte - ${to.meta.title}`
+}) 
+
 onServerPrefetch(() => usePendingPromises())
 
 </script>
