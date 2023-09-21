@@ -42,7 +42,7 @@ const lista_items_show = computed(() => {
   const selecionados = lista_items.value.map(x => items.dados.find(y => y.key == x))
   const agrupados = orderedGroupBy(selecionados, x => x.short_descricao)
   Object.entries(agrupados).forEach(([key, value]) => {
-    agrupados[key] = value.length
+    agrupados[key] = {quantidade: value.length, tamanho: value[0].detalhes.medidas, peso: value[0].detalhes.peso}
   })
   return agrupados
 })
@@ -373,13 +373,18 @@ onMounted(() => {
           </div>
         </div>
       </div>
+      <table class="table mt-2">
+        <caption>Utilize os dados dessa tabela para calcular as medidas do volume.</caption>
+        <thead>
+          <th>Quant.</th><th>Descrição</th><th>Medidas</th><th>Peso</th>
+        </thead>
+        <tbody class="table-group-divider">
+          <tr v-for="(value, key) in lista_items_show">
+            <td>{{ value.quantidade }}</td><td>{{ key }}</td><td>{{ value.tamanho }}</td><td>{{ value.peso }}</td>
 
-      <div class="mt-2 ms-3">
-        <p class="mb-1" v-for="(value, key) in lista_items_show">
-          <span class="me-2 fw-bold">{{ value }} </span>
-          <span class="text-lowercase">{{ key }}</span>
-        </p>
-      </div>
+          </tr>
+        </tbody>
+      </table> 
     </div>
 
 
