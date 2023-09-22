@@ -23,6 +23,7 @@ const url_args = reactive({
   items: null
 })
 
+const ambiente = computed(() => pending.value ? null: colecao.value[0].ambiente )
 
 
 watch(url_args, (novo, antigo) => {
@@ -42,6 +43,8 @@ watch(url_args, (novo, antigo) => {
             class="bi bi-plus-circle me-2"></i>Adicionar novo item</RouterLink>
       </p>
       <h4>Lista de items de {{ route.params.ambiente }}</h4>
+      <p class="mb-1">{{ ambiente.nome }}</p>
+      <p class="mb-3"><strong>Líder:</strong> {{ ambiente.lider.nome }}</p>
     </div>
   </div>
   <div class="row">
