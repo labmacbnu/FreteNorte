@@ -132,9 +132,12 @@ onMounted(async () => {
 </template>
 
 <style scoped> 
+@media screen {
 .container{
   padding-top: 100px;
 }
+}
+
 
 #liveToast { 
   z-index: 1050;  
