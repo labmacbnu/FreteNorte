@@ -50,6 +50,12 @@ const router = createRouter({
           meta: { title: "Items por Ambiente"}
         },
         {
+          name: 'items-ambiente-print',
+          path: 'ambiente/:ambiente/print',
+          component: () => import('@/views/items/ambiente-print.vue'),
+          meta: { title: "Items por Ambiente - Impressão"}
+        },
+        {
           name: 'item-codigo',
           path: 'cod/:codigo',
           component: () => import('../views/items/cod.vue'),

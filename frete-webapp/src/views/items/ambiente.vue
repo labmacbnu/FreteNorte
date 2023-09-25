@@ -34,17 +34,25 @@ watch(url_args, (novo, antigo) => {
 
 <template>
   <div class="row justify-contents-start">
-    <div class="col-12">
+    <div class="col-10">
       <p class="m-1"> 
         <RouterLink :to="{ name: 'home' }"><i class="bi bi-arrow-left-short"></i>Voltar</RouterLink>
-      </p>
-      <p class="text-end">
-        <RouterLink class="btn btn-primary" :to="{ name: 'item-add', query: { ambiente: route.params.ambiente } }"><i
-            class="bi bi-plus-circle me-2"></i>Adicionar novo item</RouterLink>
       </p>
       <h4>Lista de items de {{ route.params.ambiente }}</h4>
       <p class="mb-1">{{ ambiente.nome }}</p>
       <p class="mb-3"><strong>Líder:</strong> {{ ambiente.lider.nome }}</p>
+    </div>
+    <div class="col-2">
+      <p class="text-end">
+        <RouterLink class="btn btn-primary" :to="{ name: 'item-add', query: { ambiente: route.params.ambiente } }"><i
+            class="bi bi-plus-circle me-2"></i>Adicionar novo item</RouterLink>
+      </p>
+      <p class="text-end">
+        <RouterLink class="text-secondary icon-link" :to="{name: 'items-ambiente-print', params: {ambiente: route.params.ambiente}}">
+      Versão para impressão <i class="bi bi-printer"></i>
+      </RouterLink>
+      </p>
+      
     </div>
   </div>
   <div class="row">
