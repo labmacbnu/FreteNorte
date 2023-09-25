@@ -30,11 +30,15 @@ watch(url_args, (novo, antigo) => {
   console.log(novo)
 })
 
+function print(){
+  window.print()
+}
+
 </script>
 
 <template>
-  <div class="row justify-contents-start d-flex">
-    <div class="col-12">
+  <div class="row justify-contents-start">
+    <div class="col-10">
       <p class="m-1">
         <RouterLink class="d-print-none" :to="{name: 'items-ambiente', params: {ambiente: route.params.ambiente}}"><i class="bi bi-arrow-left-short"></i>Voltar</RouterLink>
       </p>
@@ -42,13 +46,17 @@ watch(url_args, (novo, antigo) => {
       <p class="mb-1">{{ ambiente.nome }}</p>
       <p class="mb-3"><strong>Líder:</strong> {{ ambiente.lider.nome }}</p>
     </div>
+    <div class="col-2 text-end d-print-none">
+     <p @click="print" role="button" class="text-primary fs-4">Imprimir <i class="bi bi-printer"></i></p>
+     <p class="text-secondary">Ajuste as margens para configuração mínima.</p>
+    </div>
   </div> 
   <div class="row">
     <div class="col-12">
       <table class="table d-print-table">
         <thead>
           <tr>
-            <th>Código de Barras</th>
+            <th class="text-nowrap">Cód. Barras</th>
             <th class="w-75">Descrição</th>
             <th>Medidas</th>
             <th>Peso</th>
