@@ -311,7 +311,7 @@ onMounted(() => {
     <div class="col-6">
       <label for="destino" class="form-label fw-bold fs-5">Ambiente destino</label>
       <SelectPlus :classe="(!validation.destino) ? 'border-danger' : ''" :valor="new_volume.destino"
-        placeholder="Selecione um destino" @selected="(x) => new_volume.destino = x"
+        placeholder="Selecione um destino (digite para filtrar)" @selected="(x) => new_volume.destino = x"
         :options="lista_ambientes_norte.dados"></SelectPlus>
       <p class="mt-2 mb-1 fw-bold d-flex justify-content-between fs-5">Destinos sugeridos
         <i data-bs-toggle="tooltip" data-bs-title="Com base na alocação final dos ambientes"
