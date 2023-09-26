@@ -10,6 +10,7 @@ import { reactive, computed, ref } from 'vue';
 import { RouterLink } from "vue-router";
 import { useUsuariosStore } from '@/stores/users'; 
 import { volume_status } from '@/stores/status';
+import VMedidasDisplay from "@/components/VMedidasDisplay.vue";
 
 const usuarios = useUsuariosStore()
 
@@ -137,6 +138,8 @@ const volumes_selecionados = ref([])
             <th>Atual</th>
             <th>Destino</th>
             <th>Categoria</th>
+            <th>Medidas <small>(A&times;L&times;C)</small></th>
+            <th>Peso</th> 
             <th>Status</th>
             <th>Criado em</th>
             <th>Criado por</th>
@@ -170,10 +173,12 @@ const volumes_selecionados = ref([])
               <td>
                 {{ volume.categoria }}
               </td>
+              <td><VMedidasDisplay v-bind="volume.medidas"></VMedidasDisplay></td>
+              <td>{{ volume.peso }} kg</td> 
               <td>
                 <StatusList :status="volume.status"></StatusList>
               </td>
-              <td>
+              <td :title="moment.unix(volume.data_criacao.seconds).format('DD/MM/YY HH:MM')">
                 {{ moment.unix(volume.data_criacao.seconds).format("DD/MM/YY") }}
               </td>
               <td>
