@@ -42,10 +42,30 @@ const lista_items_show = computed(() => {
   const selecionados = lista_items.value.map(x => items.dados.find(y => y.key == x))
   const agrupados = orderedGroupBy(selecionados, x => x.short_descricao)
   Object.entries(agrupados).forEach(([key, value]) => {
-    agrupados[key] = {quantidade: value.length, tamanho: value[0].detalhes.medidas, peso: value[0].detalhes.peso}
+    agrupados[key] = {quantidade: value.length, tamanho: get_best_medida(value), peso: get_best_peso(value)}
   })
   return agrupados
 })
+
+function get_best_medida(lista){
+  const patt = /(\d+\s*[cmCM]*\s*x\s*){2}\d+/gm
+  const medidas = lista.map(x => x.detalhes.medidas )
+  const resultado = medidas.filter( x => x.match(patt))
+  if(resultado.length > 0){
+    return resultado[0]
+  } else {
+    const str_size = medidas.map(x => x.length)
+    const maximo = Math.max(...str_size)
+    return medidas.find( x => x.length == maximo )
+  } 
+}
+
+function get_best_peso(lista){
+  const pesos = lista.map(x => x.detalhes.peso )
+  const str_size = pesos.map(x => x.length)
+  const maximo = Math.max(...str_size)
+  return pesos.find( x => x.length == maximo )
+}
 
 const ambiente_selected = computed(() => ambientes.dados.find(x => x.codigo == new_volume.origem))
 
