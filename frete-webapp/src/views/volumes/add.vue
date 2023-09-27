@@ -101,29 +101,34 @@ function sliceIntoChunks(arr, chunkSize) {
 }
 
 
- const ambientes_norte = ref([])
+const ambientes_norte = ref([])
 
- watch(() => ambientes.ambientes, async () => {
+async function carrega_ambientes_norte(){
+  if(ambientes_norte.value.length > 0) return
   if (ambientes.ambientes) {
     const chunks = sliceIntoChunks(ambientes.ambientes, 30)
     const queries = chunks.map(chunck => query(collection(db, "ambientes-norte"), where("origem", "array-contains-any", chunck)))
-    const resultado = [] 
-    queries.forEach(async q => {
+    var resultado = [] 
+    const promessas = queries.map(async q => {
       const res = await get_query(q)
       resultado.push(...res)
     }); 
-       
+    await Promise.all(promessas)
     ambientes_norte.value = resultado
   }
-}, { immediate: true })
+}
 
+carrega_ambientes_norte()
+
+watch( () => ambientes.ambientes, async () => await carrega_ambientes_norte())
+watch( () => new_volume.origem, async () => await carrega_ambientes_norte())
 
 
 const destino_filtrado = computed(() => {
-  if (new_volume.origem && ambientes_norte.value) {
-    return ambientes_norte.value.filter(x => x.origem.includes(new_volume.origem))
-  } else {
+  if (new_volume.origem === null) {
     return []
+  } else {
+    return ambientes_norte.value.filter(x => x.origem.includes(new_volume.origem))
   }
 })
 
@@ -300,6 +305,7 @@ onMounted(() => {
   const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 })
 
+
 </script>
 
 <template>
@@ -339,7 +345,7 @@ onMounted(() => {
       </p>
       <p>
         <a @click="() => new_volume.destino = x.codigo" :title="x.nome" class="btn btn-light"
-          v-for="x in destino_filtrado">{{ x.codigo }}</a>
+          v-for="x in destino_filtrado">{{ x.codigo }}</a> 
       </p>
     </div>
 
