@@ -59,9 +59,10 @@ def update_ambiente(amb: str, lider):
 
 
 def update_liderados(lista_ambientes: list):
-    agregados_ref = db.collection("agregados").document("ambientes")
-    agregados_ref.update({"liderados": firestore.ArrayUnion(lista_ambientes)})
-    print(f"Ambientes liderados {lista_ambientes}")
+    if len(lista_ambientes) > 0:
+        agregados_ref = db.collection("agregados").document("ambientes")
+        agregados_ref.update({"liderados": firestore.ArrayUnion(lista_ambientes)})
+        print(f"Ambientes liderados {lista_ambientes}")
     
 
 if __name__ == "__main__":
