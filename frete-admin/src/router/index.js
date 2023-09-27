@@ -142,7 +142,15 @@ const router = createRouter({
       }
     ]
     },
-
+    {
+      path: '/embalagens',
+      name: 'embalagens',
+      component: () => import('@/views/EmbalagensView.vue'),
+      meta: {
+        requiresAuth: true,
+        title: "Embalagens"
+      }
+    }
     
   ]
 })
