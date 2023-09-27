@@ -127,7 +127,7 @@ const volumes_selecionados = ref([])
   </div>
   <div class="row justify-content-start">
     <div class="col">
-      <table class="table table-sm d-print-table">
+      <table class="table table-sm d-print-table table-hover">
         <caption>Selecione os volumes e clique em Criar Lote</caption>
 
         <thead>
