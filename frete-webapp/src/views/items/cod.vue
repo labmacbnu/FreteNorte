@@ -87,12 +87,29 @@ function marcar_como_perdido(){
     console.log(`Item ${valores.key} marcado como perdido`)
 }
 
+function desmarcar_como_perdido(){
+    const valores = toValue(item)
+    const uptime = update_item(valores.key, {
+        "ambiente": doc(db, "ambientes", valores.origem)
+    })
+    console.log(`Item ${valores.key} encontrado`)
+
+}
+
 function marcar_como_infra(){
     const valores = toValue(item)
     const uptime = update_item(valores.key, {
         "ambiente": doc(db, "ambientes", "INFRA")
     })
     console.log(`Item ${valores.key} marcado como infraestrutura`)
+}
+
+function desmarcar_como_infra(){
+    const valores = toValue(item)
+    const uptime = update_item(valores.key, {
+        "ambiente": doc(db, "ambientes", valores.origem)
+    })
+    console.log(`Item ${valores.key} desmarcado como infraestrutura`)
 }
 </script>
 
@@ -224,13 +241,14 @@ function marcar_como_infra(){
                                     </template>
                                     <template v-if="item.ambiente.codigo == 'PERDIDO' ">
                                     <td colspan="2" class="text-light fs-4 text-center bg-danger">
-                                        Esse item está marcado como perdido.
+                                        Esse item está marcado como perdido
+                                        <p @click="desmarcar_como_perdido" class="fs-6 mb-0 text-primary-emphasis" role="button">Clique aqui para desmarcar esse item como perdido</p>
                                     </td>
                                     </template>
                                 </tr>
                                 </template>
                                 <tr>
-                                    <template v-if="item.ambiente.codigo != 'INFRA'">
+                                    <template v-if="item.ambiente.codigo != 'INFRA' && item.ambiente.codigo != 'PERDIDO'">
                                     <td class="text-end">
                                         <i class="bi bi-building-gear"></i>
                                     </td>
@@ -240,7 +258,8 @@ function marcar_como_infra(){
                                     </template>
                                     <template v-if="item.ambiente.codigo == 'INFRA' ">
                                     <td colspan="2" class="text-light fs-4 text-center bg-info">
-                                        Esse item é um item de infraestrutura.
+                                        Esse item é um item de infraestrutura
+                                         <p @click="desmarcar_como_infra" class="fs-6 mb-0 text-primary" role="button">Clique aqui para desmarcar esse item como infraestrutura</p>
                                     </td>
                                     </template>
                                 </tr>
