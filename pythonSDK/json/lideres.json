@@ -174,13 +174,19 @@
       "B001"
     ]
   },
-  "José Alexandre Borges Valle (LAFET) Cristiane da Costa (LABMAM)": {
-    "nome": "José Alexandre Borges Valle (LAFET) Cristiane da Costa (LABMAM)",
+  "cristiane.costa@ufsc.br": {
+    "nome": "Cristiane da Costa",
     "role": "Líder de Ambiente",
     "usuario_de": [],
     "ambientes": [
       "B002"
     ]
+  },
+  "alexandre.valle@ufsc.br": {
+    "nome": "José Alexandre Borges Valle",
+    "role": "Líder de Ambiente",
+    "usuario_de": ["B002"],
+    "ambientes": [ ]
   },
   "rita.valle@ufsc.br": {
     "nome": "Rita de Cássia Siqueira Curto Valle",
