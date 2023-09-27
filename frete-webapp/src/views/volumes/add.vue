@@ -262,7 +262,7 @@ function validate() {
   validation.origem = new_volume.origem != null
   validation.items = new_volume.items.length != 0
   validation.destino = new_volume.destino != ''
-  validation.peso = typeof new_volume.peso == 'number' && new_volume.peso > 0
+  //validation.peso = typeof new_volume.peso == 'number' && new_volume.peso > 0
   validation.medidas = validation.pre_medidas
 }
 

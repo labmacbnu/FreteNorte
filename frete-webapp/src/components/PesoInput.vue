@@ -1,7 +1,7 @@
 <template>
     <div class="input-group">
         <input :class="{ 'border-danger': !validate }" v-model.number="peso" type="number" min="0" step="0.1"
-            class="form-control border-0">
+            class="form-control border-0" placeholder="Caso não tenha uma boa estimativa, deixe em branco.">
         <span class="input-group-text border-0">kg</span>
     </div>
 </template>
