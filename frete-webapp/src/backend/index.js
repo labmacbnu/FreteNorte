@@ -24,7 +24,7 @@ export async function get_document(docRef) {
 }
  
 export async function get_query(query) {
-    const {data: docs, promise} = useCollection(query, {once: true})
+    const {data: docs, promise} = useCollection(query, {once: true, wait: true})
     await promise.value
     return docs.value
 }
