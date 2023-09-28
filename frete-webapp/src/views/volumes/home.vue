@@ -64,12 +64,14 @@ const soft_volume_modal_ref = ref(null)
 </script>
 
 <template> 
-  <div class="row mb-3">
-    <div class="col">
+  <div class="row mb-3 align-items-end">
+    <div class="col-6">
       <h1>Volumes que você criou</h1>
     </div>
+    <div class="col">
+      <RouterLink :to="{name: 'volumes-print'}" class="text-secondary icon-link"><i class="bi-printer" bi></i> Versão para impressão</RouterLink>
+    </div>
     <div class="col text-end">
-      <!-- <button class="btn-primary btn d-print-none" data-bs-target="#criarVolume" data-bs-toggle="modal">Criar novo volume</button> -->
       <RouterLink class="btn btn-success btn-lg" :to="{name: 'volume-add'}">Criar Volume</RouterLink>
     </div>
   </div>
