@@ -23,7 +23,7 @@ export const useNumVolumesStore = defineStore("volumes-num",  () => {
     return {codigo, volumes}
 })
 
-export async function registra_volume(dados){
+export async function registra_volume(origin_dados){
     /* {
             categoria: null,
             responsavel: globaluser.value.email, 
@@ -32,12 +32,10 @@ export async function registra_volume(dados){
             items: route.query.items || []
          }
      */
+    const dados = JSON.parse(JSON.stringify(origin_dados))
     dados.responsavel = doc(db, "usuarios", dados.responsavel)
-    const itemsRef = []
-    dados.items.forEach( (key) => {
-        const itemRef = doc(db, `items/${key}`)  // resolve problema com int
-        itemsRef.push( itemRef )
-    })
+    const itemsRef = dados.items.map( (key) =>  doc(db, `items/${key}`)  )
+    // resolve problema com int 
     dados.items = itemsRef 
     dados.origem = doc(db, "ambientes", dados.origem)
     dados.localizacao_atual = doc(db, "ambientes", dados.localizacao_atual)
