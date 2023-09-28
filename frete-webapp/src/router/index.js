@@ -98,6 +98,12 @@ const router = createRouter({
           meta: { title: "Volumes"}
         },
         {
+          path: 'print',
+          name: 'volumes-print',
+          component: () => import('../views/volumes/print.vue'),
+          meta: { title: "Volumes Impressão"}
+        },
+        {
           path: 'cod/:codigo',
           name: 'volume-codigo',
           component: () => import('../views/volumes/codigo.vue'),
