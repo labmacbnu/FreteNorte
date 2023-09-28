@@ -145,6 +145,7 @@ function reset_new_volume() {
   new_volume.embalagem = {caixa: null, platico_bolha: null, enchimento: null }
   new_volume.servicos = []
   new_volume.status = ["Criado"]
+  lista_items.value = []
 }
 
 
@@ -167,8 +168,10 @@ const lider_ambiente_label = computed(() => {
 
 const all_items_ordered = computed(() => {
   const all = []
-  if (new_volume.origem && items.dados)
-    all.push(...items.dados)
+  if (new_volume.origem && items.dados){
+    const nao_volumados = items.dados.filter( x => x.meta.volumado == false )
+    all.push(...nao_volumados)
+  }
   // orderna primeiro pela descrição
   all.sort((a, b) => a.short_descricao.localeCompare(b.short_descricao))
   return all
@@ -284,6 +287,7 @@ function reset_validation() {
 
 async function salvar_volume() {
   console.log(JSON.stringify(new_volume))
+  const ambiente_sigla = new_volume.origem
   validate()
   for (const [key, value] of Object.entries(validation)) {
     // se alguma coisa não for válida, retorna zero
@@ -294,14 +298,16 @@ async function salvar_volume() {
     }
   }
   const volumeid = await registra_volume(toValue(new_volume))
-  console.log(volumeid)
+  console.log(`Volume criado ${volumeid}`)
   set_mensagem_popup("Volume registrado com sucesso!", "success")
   reset_new_volume()
+  await items.update_ambiente(ambiente_sigla)
 }
 
 onMounted(() => {
   items.ambiente = new_volume.origem
   const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+  items.populate_main_db()
   const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 })
 
