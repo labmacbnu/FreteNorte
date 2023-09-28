@@ -115,7 +115,7 @@ onMounted(async () => {
 </script>
 
 <template> 
-<div class="container"> 
+<div class="container-xl" id="maincontainer"> 
     <div id="liveToast" :class="mensagem_level" class="toast align-items-center"
     role="alert" aria-live="assertive" aria-atomic="true">
     <div class="d-flex">
@@ -133,7 +133,7 @@ onMounted(async () => {
 
 <style scoped> 
 @media screen {
-.container{
+#maincontainer{
   padding-top: 100px;
 }
 }
