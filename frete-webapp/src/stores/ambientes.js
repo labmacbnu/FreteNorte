@@ -75,7 +75,7 @@ export const useAmbientesUserStore = defineStore('ambientes-user', () => {
     async function update_stats() {
         for (const ambiente of ambientes.value) {
             status[ambiente] = await ambiente_status(ambiente)
-            console.log(status[ambiente])
+            //console.log(status[ambiente])
         }
     }
     watch(ambientes, async () => {
