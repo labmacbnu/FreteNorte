@@ -53,8 +53,8 @@ export const useItemsAmbienteStore = defineStore('items-ambiente', ()=>{
     const permissoes = useUserPermissionsStore()
 
     const ambientes = computed( () => [...permissoes.ambientes, ...permissoes.usuario_de]) 
-    const tree_db = ref([])
-    const inner_db = computed( () => tree_db.value.flat())
+    const main_db = reactive({}) 
+    const inner_db = computed(() => Object.values(toValue(main_db)).flat() )
     const ambiente = ref(null)
     const filter_function = ref(null) 
     const dados = computed( () => {
@@ -81,19 +81,25 @@ export const useItemsAmbienteStore = defineStore('items-ambiente', ()=>{
             return objeto_organizado
         }
     })
-    watch(ambientes, () => {
+    function populate_main_db(){
         if(ambientes.value.length > 0){
             const itemsColl = collection(db, "items")
-            const ambientesRefs = ambientes.value.map(ambiente => doc(db, "ambientes", ambiente))  
-            ambientesRefs.forEach( async ambiente => {  
-                const q = query(itemsColl, where('ambiente', '==', ambiente)) 
-                const documentos = await get_query(q);
-                tree_db.value.push(documentos)
+            ambientes.value.forEach( async ambiente => { 
+                const ambienteRef = doc(db, 'ambientes', ambiente) 
+                const q = query(itemsColl, where('ambiente', '==', ambienteRef)) 
+                main_db[ambiente] = await get_query(q)
             }) 
         }
-    },  { immediate: true })
+    }
+    async function update_ambiente(ambiente){
+        const itemsColl = collection(db, "items")
+        const ambienteRef = doc(db, 'ambientes', ambiente) 
+        const q = query(itemsColl, where('ambiente', '==', ambienteRef)) 
+        main_db[ambiente] = await get_query(q)
+    }  
+    watch(ambientes, populate_main_db,   { immediate: true })
 
-    return {ambientes, ambiente, dados, dados_agrupados, inner_db, filter_function}
+    return {ambientes, ambiente, dados, dados_agrupados, inner_db, filter_function, update_ambiente, main_db, populate_main_db}
 })
 
 export const useDescricoesStore = defineStore("short-descricoes", {
