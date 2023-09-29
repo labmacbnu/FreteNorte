@@ -1,0 +1,1226 @@
+[
+  {
+    "edificio":"BNU02 - Bloco Acad\u00eamico A",
+    "codigo":"A001",
+    "nome":"BIBLIOTECA SETORIAL DO CAMPUS BLUMENAU (T\u00e9rreo)",
+    "items":256,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU02 - Bloco Acad\u00eamico A",
+    "codigo":"A001.1",
+    "nome":"ADMINISTRA\u00c7\u00c3O BILBIOTECA (T\u00e9rreo)",
+    "items":27,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU02 - Bloco Acad\u00eamico A",
+    "codigo":"A001.3",
+    "nome":"AGENTE PATRIMONIAL (T\u00e9rreo)",
+    "items":8,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU02 - Bloco Acad\u00eamico A",
+    "codigo":"A001.3.1",
+    "nome":"SALA DO SERVIDOR (T\u00e9rreo)",
+    "items":4,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU02 - Bloco Acad\u00eamico A",
+    "codigo":"A002",
+    "nome":"SECRETARIA ACAD\u00caMICA (T\u00e9rreo)",
+    "items":58,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU02 - Bloco Acad\u00eamico A",
+    "codigo":"A003",
+    "nome":"\u00c1REA T\u00c9CNICA ADMINISTRATIVA (T\u00e9rreo)",
+    "items":12,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU02 - Bloco Acad\u00eamico A",
+    "codigo":"A004",
+    "nome":"SECRETARIA DE COORDENA\u00c7\u00d5ES DE CURSO (T\u00e9rreo)",
+    "items":21,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU02 - Bloco Acad\u00eamico A",
+    "codigo":"A005",
+    "nome":"DEP\u00d3SITO LIMPEZA (T\u00e9rreo)",
+    "items":4,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU02 - Bloco Acad\u00eamico A",
+    "codigo":"A101",
+    "nome":"SALA DE AULA (1\u00ba Andar)",
+    "items":79,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU02 - Bloco Acad\u00eamico A",
+    "codigo":"A102",
+    "nome":"SALA DE AULA (1\u00ba Andar)",
+    "items":46,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU02 - Bloco Acad\u00eamico A",
+    "codigo":"A103",
+    "nome":"SALA DE AULA (1\u00ba Andar)",
+    "items":63,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU02 - Bloco Acad\u00eamico A",
+    "codigo":"A104",
+    "nome":"SALA DE AULA (1\u00ba Andar)",
+    "items":44,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU02 - Bloco Acad\u00eamico A",
+    "codigo":"A105",
+    "nome":"SALA DE AULA (1\u00ba Andar)",
+    "items":66,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU02 - Bloco Acad\u00eamico A",
+    "codigo":"A106",
+    "nome":"SECRETARIA P\u00d3S-GRADUA\u00c7\u00c3O (1\u00ba Andar)",
+    "items":31,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU02 - Bloco Acad\u00eamico A",
+    "codigo":"A107",
+    "nome":"SALA DE AULA (1\u00ba Andar)",
+    "items":59,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU02 - Bloco Acad\u00eamico A",
+    "codigo":"A108",
+    "nome":"SALA DE ESTUDO DA P\u00d3S-GRADUA\u00c7\u00c3O_1 (1\u00ba Andar)",
+    "items":11,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU02 - Bloco Acad\u00eamico A",
+    "codigo":"A110",
+    "nome":"SALA DE ESTUDO P\u00d3S-GRADUA\u00c7\u00c3O_2 (1\u00ba Andar)",
+    "items":11,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU02 - Bloco Acad\u00eamico A",
+    "codigo":"A201",
+    "nome":"SALA DE CONVIV\u00caNCIA (2\u00ba Andar)",
+    "items":10,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU02 - Bloco Acad\u00eamico A",
+    "codigo":"A201.1",
+    "nome":"VESTI\u00c1RIO (2\u00ba Andar)",
+    "items":6,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU02 - Bloco Acad\u00eamico A",
+    "codigo":"A202",
+    "nome":"SALA DE AULA (2\u00ba Andar)",
+    "items":54,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU02 - Bloco Acad\u00eamico A",
+    "codigo":"A203",
+    "nome":"NUPE - N\u00daCLEO PEDAG\u00d3GICO (2\u00ba Andar)",
+    "items":46,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU02 - Bloco Acad\u00eamico A",
+    "codigo":"A204",
+    "nome":"SALA DE AULA (2\u00ba Andar)",
+    "items":47,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU02 - Bloco Acad\u00eamico A",
+    "codigo":"A205",
+    "nome":"SALA DE AULA (2\u00ba Andar)",
+    "items":72,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU02 - Bloco Acad\u00eamico A",
+    "codigo":"A206",
+    "nome":"NAE - N\u00daCLEO ASSIST\u00caNCIA ESTUDANTIL (2\u00ba Andar)",
+    "items":8,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU02 - Bloco Acad\u00eamico A",
+    "codigo":"A206.1",
+    "nome":"NAE - N\u00daCLEO ASSIST\u00caNCIA ESTUDANTIL (2\u00ba Andar)",
+    "items":18,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU02 - Bloco Acad\u00eamico A",
+    "codigo":"A207",
+    "nome":"SALA DE AULA (2\u00ba Andar)",
+    "items":69,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU02 - Bloco Acad\u00eamico A",
+    "codigo":"A208",
+    "nome":"SALA DE AULA (2\u00ba Andar)",
+    "items":51,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU02 - Bloco Acad\u00eamico A",
+    "codigo":"A211",
+    "nome":"NUPE - ATENDIMENTO (2\u00ba Andar)",
+    "items":6,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU02 - Bloco Acad\u00eamico A",
+    "codigo":"A213",
+    "nome":"COORDENA\u00c7\u00c3O DE ENGENHARIA T\u00caXTIL (2\u00ba Andar)",
+    "items":13,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU02 - Bloco Acad\u00eamico A",
+    "codigo":"A301",
+    "nome":"SALA DE AULA (3\u00ba Andar)",
+    "items":65,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU02 - Bloco Acad\u00eamico A",
+    "codigo":"A302",
+    "nome":"SALA DE AULA (3\u00ba Andar)",
+    "items":56,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU02 - Bloco Acad\u00eamico A",
+    "codigo":"A303",
+    "nome":"SALA DE AULA (3\u00ba Andar)",
+    "items":72,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU02 - Bloco Acad\u00eamico A",
+    "codigo":"A304",
+    "nome":"SALA DE AULA (3\u00ba Andar)",
+    "items":57,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU02 - Bloco Acad\u00eamico A",
+    "codigo":"A305",
+    "nome":"LABCOP - LABORAT\u00d3RIO DE CONTROLE DE PROCESSOS (3\u00ba Andar)",
+    "items":82,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU02 - Bloco Acad\u00eamico A",
+    "codigo":"A306",
+    "nome":"COORDENA\u00c7\u00d5ES DE CURSOS LICENCIATURAS (3\u00ba Andar)",
+    "items":23,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU02 - Bloco Acad\u00eamico A",
+    "codigo":"A307.1",
+    "nome":"SALA DE AULA (3\u00ba Andar)",
+    "items":26,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU02 - Bloco Acad\u00eamico A",
+    "codigo":"A307.2",
+    "nome":"SALA DE AULA (3\u00ba Andar)",
+    "items":25,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU02 - Bloco Acad\u00eamico A",
+    "codigo":"A310",
+    "nome":"COORDENA\u00c7\u00d5ES DE CURSOS ENGENHARIAS (3\u00ba Andar)",
+    "items":13,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU02 - Bloco Acad\u00eamico A",
+    "codigo":"A401",
+    "nome":"\u00c1REA T\u00c9CNICA TELHADO (3\u00ba Andar)",
+    "items":25,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU02 - Bloco Acad\u00eamico A",
+    "codigo":"AC00",
+    "nome":"CIRCULA\u00c7\u00c3O BLOCO A T\u00c9RREO (T\u00e9rreo)",
+    "items":20,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU02 - Bloco Acad\u00eamico A",
+    "codigo":"AC01",
+    "nome":"CIRCULA\u00c7\u00c3O BLOCO A 1\u00ba ANDAR (1\u00ba Andar)",
+    "items":14,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU02 - Bloco Acad\u00eamico A",
+    "codigo":"AC02",
+    "nome":"CIRCULA\u00c7\u00c3O BLOCO A 2\u00ba ANDAR (2\u00ba Andar)",
+    "items":15,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU02 - Bloco Acad\u00eamico A",
+    "codigo":"AC03",
+    "nome":"CIRCULA\u00c7\u00c3O BLOCO A 3\u00ba ANDAR (3\u00ba Andar)",
+    "items":9,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU03 - Bloco Acad\u00eamico B",
+    "codigo":"B001",
+    "nome":"LABTEC - LABORAT\u00d3RIO DE TECIDOS E MALHAS (T\u00e9rreo)",
+    "items":58,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU03 - Bloco Acad\u00eamico B",
+    "codigo":"B002",
+    "nome":"LAFET - LABORAT\u00d3RIO DE FEN\u00d4MENOS DE TRANSPORTE | LABMAM - LABORAT\u00d3RIO DE MEIO AMBIENTE (T\u00e9rre",
+    "items":38,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU03 - Bloco Acad\u00eamico B",
+    "codigo":"B003",
+    "nome":"LABCT - LABORAT\u00d3RIO DE CUIDADOS T\u00caXTEIS (T\u00e9rreo)",
+    "items":11,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU03 - Bloco Acad\u00eamico B",
+    "codigo":"B003.1",
+    "nome":"APOIO T\u00c9CNICO TEXTIL (T\u00e9rreo)",
+    "items":15,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU03 - Bloco Acad\u00eamico B",
+    "codigo":"B004",
+    "nome":"LABENE - LABORAT\u00d3RIO DE BENEFICIAMENTO (T\u00e9rreo)",
+    "items":48,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU03 - Bloco Acad\u00eamico B",
+    "codigo":"B005",
+    "nome":"LAMAT - LABORAT\u00d3RIO MATERIALOGRAFIA (T\u00e9rreo)",
+    "items":37,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU03 - Bloco Acad\u00eamico B",
+    "codigo":"B008",
+    "nome":"LAB3M - LABORAT\u00d3RIO DE MAGNETISMO E MATERIAIS MAGN\u00c9TICOS (T\u00e9rreo)",
+    "items":19,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU03 - Bloco Acad\u00eamico B",
+    "codigo":"B010",
+    "nome":"LABQI - LABORAT\u00d3RIO DE QU\u00cdMICA INORG\u00c2NICA (T\u00e9rreo)",
+    "items":153,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU03 - Bloco Acad\u00eamico B",
+    "codigo":"B011",
+    "nome":"LABQO - LABORAT\u00d3RIO DE QU\u00cdMICA ORG\u00c2NICA (T\u00e9rreo)",
+    "items":95,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU03 - Bloco Acad\u00eamico B",
+    "codigo":"B012",
+    "nome":"APOIO T\u00c9CNICO QU\u00cdMICA (T\u00e9rreo)",
+    "items":39,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU03 - Bloco Acad\u00eamico B",
+    "codigo":"B013",
+    "nome":"ALMOXARIFADO PRODUTOS QU\u00cdMICOS (T\u00e9rreo)",
+    "items":11,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU03 - Bloco Acad\u00eamico B",
+    "codigo":"B014",
+    "nome":"ALMOXARIFADO MATERIAIS DE LABORAT\u00d3RIO DE QU\u00cdMICA (T\u00e9rreo)",
+    "items":29,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU03 - Bloco Acad\u00eamico B",
+    "codigo":"B015",
+    "nome":"LASER - LABORAT\u00d3RIO DE SISTEMAS EMBARCADOS E ROB\u00d3TICO (T\u00e9rreo)",
+    "items":52,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU03 - Bloco Acad\u00eamico B",
+    "codigo":"B016",
+    "nome":"LABIND - LABORAT\u00d3RIO DE INFORM\u00c1TICA INDUSTRIAL (T\u00e9rreo)",
+    "items":99,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU03 - Bloco Acad\u00eamico B",
+    "codigo":"B017",
+    "nome":"LMP - LABORAT\u00d3RIO DE MULTIUSO PARA PROTOTIPAGEM (T\u00e9rreo)",
+    "items":47,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU03 - Bloco Acad\u00eamico B",
+    "codigo":"B018",
+    "nome":"LEM - LABORAT\u00d3RIO DE ENSAIOS MEC\u00c2NICOS (T\u00e9rreo)",
+    "items":41,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU03 - Bloco Acad\u00eamico B",
+    "codigo":"B018.1",
+    "nome":"APOIO T\u00c9CNICO DE MATERIAIS (T\u00e9rreo)",
+    "items":49,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU03 - Bloco Acad\u00eamico B",
+    "codigo":"B019",
+    "nome":"LABORAT\u00d3RIO DE NANOESTRUTURAS OPTOELETR\u00d4NICAS (T\u00e9rreo)",
+    "items":24,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU03 - Bloco Acad\u00eamico B",
+    "codigo":"B020",
+    "nome":"LAMAE - LABORAT\u00d3RIO DE MICROSCOPIA E AN\u00c1LISE ESTRUTURAL (T\u00e9rreo)",
+    "items":32,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU03 - Bloco Acad\u00eamico B",
+    "codigo":"B021",
+    "nome":"LTE - LABORAT\u00d3RIO DE AN\u00c1LISE T\u00c9RMICA E ESPECTROSCOPIA (T\u00e9rreo)",
+    "items":32,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU03 - Bloco Acad\u00eamico B",
+    "codigo":"B022",
+    "nome":"LPM - LABORAT\u00d3RIO DE PROCESSAMENTO DE MATERIAIS (T\u00e9rreo)",
+    "items":85,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU03 - Bloco Acad\u00eamico B",
+    "codigo":"B023",
+    "nome":"LABCID - LABORAT\u00d3RIO DE  CIRCUITOS E SISTEMAS DIGITAIS (T\u00e9rreo)",
+    "items":126,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU03 - Bloco Acad\u00eamico B",
+    "codigo":"B024",
+    "nome":"LAPRO - LABORAT\u00d3RIO DE PROJETOS (T\u00e9rreo)",
+    "items":91,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU03 - Bloco Acad\u00eamico B",
+    "codigo":"B025",
+    "nome":"CENTROS ACAD\u00caMICOS (T\u00e9rreo)",
+    "items":4,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU03 - Bloco Acad\u00eamico B",
+    "codigo":"B026",
+    "nome":"DEP\u00d3SITO GERAL (T\u00e9rreo)",
+    "items":50,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU03 - Bloco Acad\u00eamico B",
+    "codigo":"B103",
+    "nome":"LABFIS I - LABORAT\u00d3RIO DE F\u00cdSICA I (1\u00ba Andar)",
+    "items":49,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU03 - Bloco Acad\u00eamico B",
+    "codigo":"B104",
+    "nome":"LABFIS III - LABORAT\u00d3RIO DE F\u00cdSICA III (1\u00ba Andar)",
+    "items":74,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU03 - Bloco Acad\u00eamico B",
+    "codigo":"B105",
+    "nome":"LABFIS II - LABORAT\u00d3RIO DE F\u00cdSICA II (1\u00ba Andar)",
+    "items":59,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU03 - Bloco Acad\u00eamico B",
+    "codigo":"B106",
+    "nome":"APOIO T\u00c9CNICA F\u00cdSICA (1\u00ba Andar)",
+    "items":33,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU03 - Bloco Acad\u00eamico B",
+    "codigo":"B107",
+    "nome":"MANUTEN\u00c7\u00c3O (1\u00ba Andar)",
+    "items":5,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU03 - Bloco Acad\u00eamico B",
+    "codigo":"B110",
+    "nome":"LABCTI - LABORAT\u00d3RIO DE CI\u00caNCIA, TECNOLOGIA E INOVA\u00c7\u00c3O (1\u00ba Andar)",
+    "items":15,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU03 - Bloco Acad\u00eamico B",
+    "codigo":"B111",
+    "nome":"LISEQ - LABORAT\u00d3RIO DE INVESTIGA\u00c7\u00c3O SOBRE ENSINO DE QU\u00cdMICA (1\u00ba Andar)",
+    "items":45,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU03 - Bloco Acad\u00eamico B",
+    "codigo":"B112",
+    "nome":"LTMA - LABORAT\u00d3RIO DE TRANSFORMA\u00c7\u00d5ES E MATERIAIS AVAN\u00c7ADOS (1\u00ba Andar)",
+    "items":24,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU03 - Bloco Acad\u00eamico B",
+    "codigo":"B113",
+    "nome":"LABQA - LABORAT\u00d3RIO DE QU\u00cdMICA ANAL\u00cdTICA | LABQF - LABORAT\u00d3RIO DE F\u00cdSICO-QU\u00cdMICA (1\u00ba Andar)",
+    "items":98,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU03 - Bloco Acad\u00eamico B",
+    "codigo":"B114",
+    "nome":"LABEP - LABORAT\u00d3RIO DE ELETROT\u00c9CNICA E PNEUM\u00c1TICA (1\u00ba Andar)",
+    "items":37,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU03 - Bloco Acad\u00eamico B",
+    "codigo":"B115",
+    "nome":"LDPT - L\u00c1BORAT\u00d3RIO DE DESENVOLVIMENTO DE PRODUTOS T\u00caXTEIS (1\u00ba Andar)",
+    "items":69,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU03 - Bloco Acad\u00eamico B",
+    "codigo":"B116",
+    "nome":"LINTEX - Laborat\u00f3rio Integrado T\u00eaxtil (1\u00ba Andar)",
+    "items":25,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU03 - Bloco Acad\u00eamico B",
+    "codigo":"B117",
+    "nome":"LAFIF - LABORAT\u00d3RIO DE FIBRAS E FIA\u00c7\u00c3O (1\u00ba Andar)",
+    "items":41,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU03 - Bloco Acad\u00eamico B",
+    "codigo":"B118",
+    "nome":"LABEX - LABORAT\u00d3RIO DE EXPRESS\u00c3O GR\u00c1FICA (1\u00ba Andar)",
+    "items":117,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU03 - Bloco Acad\u00eamico B",
+    "codigo":"B119",
+    "nome":"APOIO T\u00c9CNICO ECA (1\u00ba Andar)",
+    "items":105,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU03 - Bloco Acad\u00eamico B",
+    "codigo":"B120",
+    "nome":"LISEQ.B - LABORAT\u00d3RIO DE INVESTIGA\u00c7\u00c3O SOBRE ENSINO DE QU\u00cdMICA (1\u00ba Andar)",
+    "items":24,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU03 - Bloco Acad\u00eamico B",
+    "codigo":"B120.1",
+    "nome":"AUDIOVISUAL | COMUNICA\u00c7\u00c3O (1\u00ba Andar)",
+    "items":45,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU03 - Bloco Acad\u00eamico B",
+    "codigo":"B121",
+    "nome":"T\u00c9CNICO DE TI (1\u00ba Andar)",
+    "items":24,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU03 - Bloco Acad\u00eamico B",
+    "codigo":"B122",
+    "nome":"SOMA- SALA DE OLIMPIADA DE MATEM\u00c1TICA (1\u00ba Andar)",
+    "items":41,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU03 - Bloco Acad\u00eamico B",
+    "codigo":"B123",
+    "nome":"LABMAC - LABORAT\u00d3RIO DE MATEM\u00c1TICA APLICADA E COMPUTACIONAL (1\u00ba Andar)",
+    "items":27,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU03 - Bloco Acad\u00eamico B",
+    "codigo":"B124",
+    "nome":"LEMA - LABORAT\u00d3RIO DE ENSINO DE MATEM\u00c1TICA (1\u00ba Andar)",
+    "items":78,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU03 - Bloco Acad\u00eamico B",
+    "codigo":"B125",
+    "nome":"AUDIT\u00d3RIO (1\u00ba Andar)",
+    "items":159,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU03 - Bloco Acad\u00eamico B",
+    "codigo":"BC00",
+    "nome":"CIRCULA\u00c7\u00c3O BLOCO B T\u00c9RREO (T\u00e9rreo)",
+    "items":43,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU03 - Bloco Acad\u00eamico B",
+    "codigo":"BC01",
+    "nome":"CIRCULA\u00c7\u00c3O BLOCO B 1\u00ba (1\u00ba Andar)",
+    "items":48,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU04 - \u00c1reas Externas da Sede Acad\u00eamica",
+    "codigo":"EXA01",
+    "nome":"GUARITA (T\u00e9rreo)",
+    "items":3,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU04 - \u00c1reas Externas da Sede Acad\u00eamica",
+    "codigo":"EXB01",
+    "nome":"DEP\u00d3SITO GERAL (T\u00e9rreo)",
+    "items":23,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU04 - \u00c1reas Externas da Sede Acad\u00eamica",
+    "codigo":"EXB02",
+    "nome":"ESTACIONAMENTO (T\u00e9rreo)",
+    "items":21,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU05 - VASTO VERDE",
+    "codigo":"VV001",
+    "nome":"LABINFO 01 - Laborat\u00f3rio de Inform\u00e1tica (T\u00e9rreo)",
+    "items":107,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU05 - VASTO VERDE",
+    "codigo":"VV002",
+    "nome":"LABINFO 02 - Laborat\u00f3rio de Inform\u00e1tica (T\u00e9rreo)",
+    "items":135,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU05 - VASTO VERDE",
+    "codigo":"VVC00",
+    "nome":"Corredor (T\u00e9rreo)",
+    "items":1,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU07 - Bloco Administrativo C",
+    "codigo":"C001",
+    "nome":"RECEP\u00c7\u00c3O (T\u00e9rreo)",
+    "items":18,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU07 - Bloco Administrativo C",
+    "codigo":"C101",
+    "nome":"SALA DE PROFESSORES (1\u00ba Andar)",
+    "items":54,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU07 - Bloco Administrativo C",
+    "codigo":"C102",
+    "nome":"SALA DE PROFESSORES (1\u00ba Andar)",
+    "items":62,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU07 - Bloco Administrativo C",
+    "codigo":"C103",
+    "nome":"SALA DE REUNI\u00c3O (1\u00ba Andar)",
+    "items":59,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU07 - Bloco Administrativo C",
+    "codigo":"C103.1",
+    "nome":"SANIT\u00c1RIO UNISSEX (1\u00ba Andar)",
+    "items":1,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU07 - Bloco Administrativo C",
+    "codigo":"C104",
+    "nome":"DIST - DIVIS\u00c3O DE INFRAESTRUTURA E SEGURAN\u00c7A DO TRABALHO (1\u00ba Andar)",
+    "items":43,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU07 - Bloco Administrativo C",
+    "codigo":"C105.1",
+    "nome":"DEP\u00d3SITO LIMPEZA (1\u00ba Andar)",
+    "items":13,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU07 - Bloco Administrativo C",
+    "codigo":"C105.2",
+    "nome":"DEP\u00d3SITO GERAL (1\u00ba Andar)",
+    "items":264,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU07 - Bloco Administrativo C",
+    "codigo":"C105.3",
+    "nome":"DIRE\u00c7\u00c3O ADMINISTRATIVA (1\u00ba Andar)",
+    "items":31,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU07 - Bloco Administrativo C",
+    "codigo":"C106",
+    "nome":"ADMINISTRATIVO (1\u00ba Andar)",
+    "items":80,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU07 - Bloco Administrativo C",
+    "codigo":"C107",
+    "nome":"DEP\u00d3SITO MANUTEN\u00c7\u00c3O (1\u00ba Andar)",
+    "items":1,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU07 - Bloco Administrativo C",
+    "codigo":"C108",
+    "nome":"VESTU\u00c1RIO TERCEIRIZADOS (1\u00ba Andar)",
+    "items":6,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU07 - Bloco Administrativo C",
+    "codigo":"C110",
+    "nome":"HALL 1\u00aa ANDAR (1\u00ba Andar)",
+    "items":1,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU07 - Bloco Administrativo C",
+    "codigo":"C201",
+    "nome":"SALA DE PROFESSORES (2\u00ba Andar)",
+    "items":43,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU07 - Bloco Administrativo C",
+    "codigo":"C202",
+    "nome":"DIRE\u00c7\u00c3O GERAL (2\u00ba Andar)",
+    "items":34,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU07 - Bloco Administrativo C",
+    "codigo":"C203",
+    "nome":"SALA DE PROFESSORES (2\u00ba Andar)",
+    "items":45,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU07 - Bloco Administrativo C",
+    "codigo":"C204",
+    "nome":"SECRETARIA E CHEFIAS DE DEPARTAMENTOS (2\u00ba Andar)",
+    "items":62,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU07 - Bloco Administrativo C",
+    "codigo":"C204.1",
+    "nome":"CHEFIA DE DEPARTAMENTO (2\u00ba Andar)",
+    "items":53,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU07 - Bloco Administrativo C",
+    "codigo":"C204.6",
+    "nome":"CHEFIA DE DEPARTAMENTO (2\u00ba Andar)",
+    "items":5,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU07 - Bloco Administrativo C",
+    "codigo":"C205",
+    "nome":"SALA DE PROFESSORES (2\u00ba Andar)",
+    "items":55,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU07 - Bloco Administrativo C",
+    "codigo":"C206",
+    "nome":"SERVIDOR DE COMPUTADORES (2\u00ba Andar)",
+    "items":6,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU07 - Bloco Administrativo C",
+    "codigo":"C207",
+    "nome":"COZINHA (2\u00ba Andar)",
+    "items":4,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU07 - Bloco Administrativo C",
+    "codigo":"C209",
+    "nome":"COPA (2\u00ba Andar)",
+    "items":12,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU07 - Bloco Administrativo C",
+    "codigo":"C301",
+    "nome":"SALA DE PROFESSORES (3\u00ba Andar)",
+    "items":51,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU07 - Bloco Administrativo C",
+    "codigo":"C301.1",
+    "nome":"SANIT\u00c1RIO UNISSEX (3\u00ba Andar)",
+    "items":1,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU07 - Bloco Administrativo C",
+    "codigo":"C302",
+    "nome":"SALA DE PROFESSORES (3\u00ba Andar)",
+    "items":34,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU07 - Bloco Administrativo C",
+    "codigo":"C303",
+    "nome":"SALA DE PROFESSORES (3\u00ba Andar)",
+    "items":36,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU07 - Bloco Administrativo C",
+    "codigo":"C304",
+    "nome":"SALA DE PROFESSORES (3\u00ba Andar)",
+    "items":46,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU07 - Bloco Administrativo C",
+    "codigo":"C305",
+    "nome":"SALA DE PROFESSORES (3\u00ba Andar)",
+    "items":38,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU07 - Bloco Administrativo C",
+    "codigo":"C306",
+    "nome":"SALA DE PROFESSORES (3\u00ba Andar)",
+    "items":42,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU07 - Bloco Administrativo C",
+    "codigo":"C307",
+    "nome":"DEP\u00d3SITO CORREDOR 3\u00ba ANDAR (3\u00ba Andar)",
+    "items":9,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU07 - Bloco Administrativo C",
+    "codigo":"C308",
+    "nome":"DEP\u00d3SITO MATERIAL DE EXPEDIENTE (3\u00ba Andar)",
+    "items":5,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU07 - Bloco Administrativo C",
+    "codigo":"C401",
+    "nome":"SALA DE REUNI\u00c3O (4\u00ba Andar)",
+    "items":16,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU07 - Bloco Administrativo C",
+    "codigo":"C402",
+    "nome":"MEZANINO (4\u00ba Andar)",
+    "items":11,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU07 - Bloco Administrativo C",
+    "codigo":"CC01",
+    "nome":"CORREDOR 1\u00ba ANDAR (1\u00ba Andar)",
+    "items":6,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU07 - Bloco Administrativo C",
+    "codigo":"CC02",
+    "nome":"CORREDOR 2\u00ba ANDAR (2\u00ba Andar)",
+    "items":5,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU07 - Bloco Administrativo C",
+    "codigo":"CC03",
+    "nome":"CORREDOR 3\u00ba ANDAR (3\u00ba Andar)",
+    "items":5,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  },
+  {
+    "edificio":"BNU08 - Restaurante Universit\u00e1rio",
+    "codigo":"RU001",
+    "nome":"Restaurante Universit\u00e1rio (T\u00e9rreo)",
+    "items":5,
+    "lider":null,
+    "status":"Em uso",
+    "campus":"Sul"
+  }
+]

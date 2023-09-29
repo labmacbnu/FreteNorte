@@ -1,0 +1,502 @@
+{
+  "priscila.bona@ufsc.br": {
+    "nome": "Priscila Margarete Bona",
+    "role": "Líder de Ambiente",
+    "usuario_de": [],
+    "ambientes": [
+      "A001",
+      "A001.1"
+    ]
+  },
+  "fabio.metzner@ufsc.br": {
+    "nome": "Fabio Metzner",
+    "role": "Líder de Ambiente",
+    "usuario_de": [],
+    "ambientes": [
+      "A001.3",
+      "A001.3.1",
+      "A005",
+      "A006",
+      "A007",
+      "A008",
+      "A109",
+      "A111",
+      "A201",
+      "A201.1",
+      "A209",
+      "A210",
+      "A212",
+      "A214",
+      "A307",
+      "A308",
+      "A309",
+      "A311",
+      "A312",
+      "A401",
+      "AC00",
+      "AC01",
+      "AC02",
+      "AC03",
+      "B006",
+      "B007",
+      "B009",
+      "B025",
+      "B101",
+      "B102",
+      "B108",
+      "B109",
+      "BC00",
+      "BC01",
+      "C307",
+      "Pantográfica"
+    ]
+  },
+  "claudio.morais@ufsc.br": {
+    "nome": "Cláudio de Morais",
+    "role": "Líder de Ambiente",
+    "usuario_de": [],
+    "ambientes": [
+      "A002"
+    ]
+  },
+  "marcel.agostini@ufsc.br": {
+    "nome": "Marcel Luis Agostini",
+    "role": "Líder de Ambiente",
+    "usuario_de": [],
+    "ambientes": [
+      "A003",
+      "A101",
+      "A102",
+      "A103",
+      "A104",
+      "A105",
+      "A107",
+      "A202",
+      "A204",
+      "A205",
+      "A207",
+      "A208",
+      "A301",
+      "A302",
+      "A303",
+      "A304",
+      "A307.1",
+      "A307.2",
+      "B026",
+      "B125",
+      "EXA01",
+      "EXB02"
+    ]
+  },
+  "raissa.silva@ufsc.br": {
+    "nome": "Raissa Mikaely de Carvalho Silva",
+    "role": "Líder de Ambiente",
+    "usuario_de": [],
+    "ambientes": [
+      "A004"
+    ]
+  },
+  "g.karina@ufsc.br": {
+    "nome": "Karina Gonçalves",
+    "role": "Líder de Ambiente",
+    "usuario_de": [],
+    "ambientes": [
+      "A106",
+      "A108",
+      "A110"
+    ]
+  },
+  "ana.racca@ufsc.br": {
+    "nome": "Ana Cláudia Racca da Silva",
+    "role": "Líder de Ambiente",
+    "usuario_de": [],
+    "ambientes": [
+      "A203",
+      "A211"
+    ]
+  },
+  "karine.lopes@ufsc.br": {
+    "nome": "Karine Lopes",
+    "role": "Líder de Ambiente",
+    "usuario_de": [],
+    "ambientes": [
+      "A206",
+      "A206.1"
+    ]
+  },
+  "grazyella.oliveira@ufsc.br": {
+    "nome": "Grazyella Cristina Oliveira de Aguiar",
+    "role": "Líder de Ambiente",
+    "usuario_de": [],
+    "ambientes": [
+      "A213"
+    ]
+  },
+  "carlos.raymundo@ufsc.br": {
+    "nome": "Carlos Felipe de Oliveira Raymundo",
+    "role": "Líder de Ambiente",
+    "usuario_de": [],
+    "ambientes": [
+      "A305",
+      "B023",
+      "B024",
+      "B114",
+      "B118",
+      "B119",
+      "VV001",
+      "VV002",
+      "VVC00",
+      "B015",
+      "B016"
+    ]
+  },
+  "francis.cordova@ufsc.br": {
+    "nome": "Francis Felix Cordova Puma",
+    "role": "Líder de Ambiente",
+    "usuario_de": [],
+    "ambientes": [
+      "A306"
+    ]
+  },
+  "claudio.poffo@ufsc.br": {
+    "nome": "Claudio Michel Poffo",
+    "role": "Líder de Ambiente",
+    "usuario_de": [],
+    "ambientes": [
+      "A310"
+    ]
+  },
+  "fernanda.steffens@ufsc.br": {
+    "nome": "Fernanda Steffens",
+    "role": "Líder de Ambiente",
+    "usuario_de": [],
+    "ambientes": [
+      "B001"
+    ]
+  },
+  "cristiane.costa@ufsc.br": {
+    "nome": "Cristiane da Costa",
+    "role": "Líder de Ambiente",
+    "usuario_de": [],
+    "ambientes": [
+      "B002"
+    ]
+  },
+  "alexandre.valle@ufsc.br": {
+    "nome": "José Alexandre Borges Valle",
+    "role": "Líder de Ambiente",
+    "usuario_de": ["B002"],
+    "ambientes": [ ]
+  },
+  "rita.valle@ufsc.br": {
+    "nome": "Rita de Cássia Siqueira Curto Valle",
+    "role": "Líder de Ambiente",
+    "usuario_de": [],
+    "ambientes": [
+      "B003",
+      "B003.1"
+    ]
+  },
+  "catia.lange@ufsc.br": {
+    "nome": "Catia Rosana Lange de Aguiar",
+    "role": "Líder de Ambiente",
+    "usuario_de": [],
+    "ambientes": [
+      "B004"
+    ]
+  },
+  "laura.lovisa@ufsc.br": {
+    "nome": "Laura Ximena Lovisa Oliveira",
+    "role": "Líder de Ambiente",
+    "usuario_de": [],
+    "ambientes": [
+      "B005"
+    ]
+  },
+  "c.teixeira@ufsc.br": {
+    "nome": "Cristiano da Silva Teixeira",
+    "role": "Líder de Ambiente",
+    "usuario_de": [],
+    "ambientes": [
+      "B008",
+      "B021"
+    ]
+  },
+  "eduardo.zapp@ufsc.br": {
+    "nome": "Eduardo Zapp",
+    "role": "Líder de Ambiente",
+    "usuario_de": [],
+    "ambientes": [
+      "B010",
+      "B011",
+      "B012",
+      "B013",
+      "B014",
+      "B113"
+    ]
+  },
+  "ana.forno@ufsc.br": {
+    "nome": "Ana Julia Dal Forno",
+    "role": "Líder de Ambiente",
+    "usuario_de": [],
+    "ambientes": [
+      "B017",
+      "B110"
+    ]
+  },
+  "w.santana@ufsc.br": {
+    "nome": "Wanderson Santana da Silva",
+    "role": "Líder de Ambiente",
+    "usuario_de": [],
+    "ambientes": [
+      "B018"
+    ]
+  },
+  "daniel.cunha@ufsc.br": {
+    "nome": "Daniel Fonseca da Cunha",
+    "role": "Líder de Ambiente",
+    "usuario_de": [],
+    "ambientes": [
+      "B018.1"
+    ]
+  },
+  "lara.fernandes@ufsc.br": {
+    "nome": "Lara Fernandes dos Santos Lavelli",
+    "role": "Líder de Ambiente",
+    "usuario_de": [],
+    "ambientes": [
+      "B019"
+    ]
+  },
+  "larissa.carli@ufsc.br": {
+    "nome": "Larissa Nardini Carli",
+    "role": "Líder de Ambiente",
+    "usuario_de": [],
+    "ambientes": [
+      "B020"
+    ]
+  },
+  "marcio.rocha@ufsc.br": {
+    "nome": "Marcio Roberto da Rocha",
+    "role": "Líder de Ambiente",
+    "usuario_de": [],
+    "ambientes": [
+      "B022"
+    ]
+  },
+  "fernando.dallagnol@ufsc.br": {
+    "nome": "Fernando Fuzinatto Dall’Agnol",
+    "role": "Líder de Ambiente",
+    "usuario_de": [],
+    "ambientes": [
+      "B103",
+      "B104",
+      "B105"
+    ]
+  },
+  "flavio.jerez@ufsc.br": {
+    "nome": "Flavio dos Santos Jerez",
+    "role": "Líder de Ambiente",
+    "usuario_de": [],
+    "ambientes": [
+      "B106"
+    ]
+  },
+  "josue.andrade@ufsc.br": {
+    "nome": "Josué Andrade",
+    "role": "Líder de Ambiente",
+    "usuario_de": [],
+    "ambientes": [
+      "B107",
+      "EXB01"
+    ]
+  },
+  "graziela.richetti@ufsc.br": {
+    "nome": "Graziela Piccoli Richetti",
+    "role": "Líder de Ambiente",
+    "usuario_de": [],
+    "ambientes": [
+      "B111",
+      "B120"
+    ]
+  },
+  "claudia.merlini@ufsc.br": {
+    "nome": "Claudia Merlini",
+    "role": "Líder de Ambiente",
+    "usuario_de": [],
+    "ambientes": [
+      "B112"
+    ]
+  },
+  "elisa.p.missner@ufsc.br": {
+    "nome": "Maria Elisa Philippsen Missner",
+    "role": "Líder de Ambiente",
+    "usuario_de": [],
+    "ambientes": [
+      "B115"
+    ]
+  },
+  "andrea.krause@ufsc.br": {
+    "nome": "Andrea Cristiane Krause Bierhalz",
+    "role": "Líder de Ambiente",
+    "usuario_de": [],
+    "ambientes": [
+      "B116"
+    ]
+  },
+  "alexandre.ferreira@ufsc.br": {
+    "nome": "Alexandre José Sousa Ferreira",
+    "role": "Líder de Ambiente",
+    "usuario_de": [],
+    "ambientes": [
+      "B117"
+    ]
+  },
+  "felipe.iop@ufsc.br": {
+    "nome": "Felipe Iop Capeleto",
+    "role": "Líder de Ambiente",
+    "usuario_de": [],
+    "ambientes": [
+      "B120.1"
+    ]
+  },
+  "edgar.kunz@ufsc.br": {
+    "nome": "Edgar Noschang Kunz",
+    "role": "Líder de Ambiente",
+    "usuario_de": [],
+    "ambientes": [
+      "B121",
+      "C105.1",
+      "C105.2",
+      "C206",
+      "RU001"
+    ]
+  },
+  "f.vieira@ufsc.br": {
+    "nome": "Felipe Vieira",
+    "role": "Líder de Ambiente",
+    "usuario_de": [],
+    "ambientes": [
+      "B122"
+    ]
+  },
+  "l.f.bossa@ufsc.br": {
+    "nome": "Luiz Fernando Bossa",
+    "role": "Líder de Ambiente",
+    "usuario_de": [],
+    "ambientes": [
+      "B123"
+    ]
+  },
+  "j.cassio@ufsc.br": {
+    "nome": "Jorge Cássio Costa Nóbriga",
+    "role": "Líder de Ambiente",
+    "usuario_de": [],
+    "ambientes": [
+      "B124"
+    ]
+  },
+  "patricia.barthel@ufsc.br": {
+    "nome": "Patrícia A. A. de F. Barthel",
+    "role": "Líder de Ambiente",
+    "usuario_de": [],
+    "ambientes": [
+      "C001",
+      "C002",
+      "C101",
+      "C101.1",
+      "C102",
+      "C102.1",
+      "C103",
+      "C103.1",
+      "C105.3",
+      "C105.3.1",
+      "C107",
+      "C108",
+      "C109",
+      "C110",
+      "C401",
+      "C401.1",
+      "C402",
+      "CC00",
+      "CC01"
+    ]
+  },
+  "fabricio.vilanova@ufsc.br": {
+    "nome": "Fabrício da Silva Vilanova",
+    "role": "Líder de Ambiente",
+    "usuario_de": [],
+    "ambientes": [
+      "C104",
+      "C104.1"
+    ]
+  },
+  "c.stahnke@ufsc.br": {
+    "nome": "Cibelle Stahnke Lehmkuhl",
+    "role": "Líder de Ambiente",
+    "usuario_de": [],
+    "ambientes": [
+      "C106",
+      "C106.1",
+      "C308"
+    ]
+  },
+  "marilena.fialho@ufsc.br": {
+    "nome": "Marilena Corrêa Fialho",
+    "role": "Líder de Ambiente",
+    "usuario_de": [],
+    "ambientes": [
+      "C201",
+      "C201.1",
+      "C203",
+      "C203.1",
+      "SALA INTEGRE JUNIOR",
+      "SANITÁRIO INTEGRE JUNIOR",
+      "C205",
+      "C205.1",
+      "C207",
+      "C208",
+      "C209",
+      "CC02"
+    ]
+  },
+  "rafael.abreu@ufsc.br": {
+    "nome": "Rafael dos Reis Abreu",
+    "role": "Líder de Ambiente",
+    "usuario_de": [],
+    "ambientes": [
+      "C202",
+      "C202.1"
+    ]
+  },
+  "ivan.matos@ufsc.br": {
+    "nome": "Ivan de Matos",
+    "role": "Líder de Ambiente",
+    "usuario_de": [],
+    "ambientes": [
+      "C204",
+      "C204.1",
+      "C204.2",
+      "C204.3",
+      "C204.4",
+      "C204.5",
+      "C204.6",
+      "C204.7",
+      "C301",
+      "C301.1",
+      "C302",
+      "C302.1",
+      "C303",
+      "C303.1",
+      "C304",
+      "C304.1",
+      "C305",
+      "C305.1",
+      "C306",
+      "C306.1",
+      "C309",
+      "C310",
+      "CC03"
+    ]
+  }
+}

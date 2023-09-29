@@ -5,8 +5,8 @@ from pathlib import Path
 import re
 import json
 # %%
-FONTE = Path("./xlsx/sul/")
-DESTINO = Path("./json/")
+FONTE = Path("./xlsx/sul0914/")
+DESTINO = Path("./json0914/")
 
 # %%
 DATAFRAMES = {x.stem: pd.read_excel(x) for x in FONTE.glob("*.xls") }

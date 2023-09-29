@@ -1,0 +1,5244 @@
+[
+  {
+    "nome": "Corredor Direito no Bloco A 01",
+    "origem": [
+      "BC00"
+    ],
+    "codigo": "ACD1",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Térreo",
+      "ala": "Direita",
+      "tipo_de_ambiente": "Corredor",
+      "setor_responsavel": "Direção Geral",
+      "nomenclatura": "Corredor D1 Bloco A",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 148.47
+    }
+  },
+  {
+    "nome": "Hall de Entrada Frontal no Bloco A 01",
+    "origem": [
+      "BC00"
+    ],
+    "codigo": "ACF1",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Térreo",
+      "ala": "Frontal",
+      "tipo_de_ambiente": "Corredor",
+      "setor_responsavel": "Direção Geral",
+      "nomenclatura": "Hall F1 Bloco A",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 31.17
+    }
+  },
+  {
+    "nome": "Hall de Entrada Direito no Bloco A 02",
+    "origem": [
+      "BC00"
+    ],
+    "codigo": "ACD2",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Térreo",
+      "ala": "Direita",
+      "tipo_de_ambiente": "Corredor",
+      "setor_responsavel": "Direção Geral",
+      "nomenclatura": "Hall D2 Bloco A",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 37.92
+    }
+  },
+  {
+    "nome": "Corredor Central no Bloco A 03",
+    "origem": [
+      "BC00"
+    ],
+    "codigo": "ACC3",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Térreo",
+      "ala": "Central",
+      "tipo_de_ambiente": "Corredor",
+      "setor_responsavel": "Direção Geral",
+      "nomenclatura": "Corredor C3 Bloco A",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 34.74
+    }
+  },
+  {
+    "nome": "Corredor Esquerdo no Bloco A 01",
+    "origem": [
+      "BC00"
+    ],
+    "codigo": "ACE1",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Térreo",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Corredor",
+      "setor_responsavel": "Direção Geral",
+      "nomenclatura": "Corredor E1 Bloco A",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 125.1
+    }
+  },
+  {
+    "nome": "Corredor Frontal no Bloco A 02",
+    "origem": [
+      "BC00"
+    ],
+    "codigo": "ACF2",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Térreo",
+      "ala": "Frontal",
+      "tipo_de_ambiente": "Corredor",
+      "setor_responsavel": "Direção Geral",
+      "nomenclatura": "Corredor F2 Bloco A",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 14.3
+    }
+  },
+  {
+    "nome": "Corredor Central no Bloco A 01",
+    "origem": [
+      "BC00"
+    ],
+    "codigo": "ACC1",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Térreo",
+      "ala": "Central",
+      "tipo_de_ambiente": "Corredor",
+      "setor_responsavel": "Direção Geral",
+      "nomenclatura": "Corredor C1 Bloco A",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 11.73
+    }
+  },
+  {
+    "nome": "Corredor Central no Bloco A 02",
+    "origem": [
+      "BC00"
+    ],
+    "codigo": "ACC2",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Térreo",
+      "ala": "Central",
+      "tipo_de_ambiente": "Corredor",
+      "setor_responsavel": "Direção Geral",
+      "nomenclatura": "Corredor C2 Bloco A",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 12.0
+    }
+  },
+  {
+    "nome": "Serviços de Vigilância",
+    "origem": [],
+    "codigo": "A001",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Térreo",
+      "ala": "Central",
+      "tipo_de_ambiente": "Sala Administrativa",
+      "setor_responsavel": "Administração de Edifícios",
+      "nomenclatura": "Vigilância",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 10.56
+    }
+  },
+  {
+    "nome": "Serviços de Almoxarifado e Patrimônio",
+    "origem": [
+      "A001.3"
+    ],
+    "codigo": "A002",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Térreo",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Sala Administrativa",
+      "setor_responsavel": "Patrimônio e Almoxarifado",
+      "nomenclatura": "Patrimônio e Almox",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": NaN
+    }
+  },
+  {
+    "nome": "Área Técnica Administrativa",
+    "origem": [
+      "A003"
+    ],
+    "codigo": "A003",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Térreo",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Sala Administrativa",
+      "setor_responsavel": "Administração de Edifícios",
+      "nomenclatura": "AED",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 9.45
+    }
+  },
+  {
+    "nome": "Sala 01 para Estudos da Pós Graduação",
+    "origem": [
+      "A108",
+      "A110"
+    ],
+    "codigo": "A004",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Térreo",
+      "ala": "Central",
+      "tipo_de_ambiente": "Sala de Estudo",
+      "setor_responsavel": "Secretaria da Pós Graduação",
+      "nomenclatura": "Estudos Pós 1",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 10.56
+    }
+  },
+  {
+    "nome": "Sala 02 para Estudos da Pós Graduação",
+    "origem": [
+      "A108",
+      "A110"
+    ],
+    "codigo": "A005",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Térreo",
+      "ala": "Central",
+      "tipo_de_ambiente": "Sala de Estudo",
+      "setor_responsavel": "Secretaria da Pós Graduação",
+      "nomenclatura": "Estudos Pós 2",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 10.56
+    }
+  },
+  {
+    "nome": "Sala 03 para Estudos da Pós Graduação",
+    "origem": [
+      "A108",
+      "A110"
+    ],
+    "codigo": "A006",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Térreo",
+      "ala": "Central",
+      "tipo_de_ambiente": "Sala de Estudo",
+      "setor_responsavel": "Secretaria da Pós Graduação",
+      "nomenclatura": "Estudos Pós 3",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 21.13
+    }
+  },
+  {
+    "nome": "Sala 04 para Estudos da Pós Graduação",
+    "origem": [
+      "A108",
+      "A110"
+    ],
+    "codigo": "A007",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Térreo",
+      "ala": "Central",
+      "tipo_de_ambiente": "Sala de Estudo",
+      "setor_responsavel": "Secretaria da Pós Graduação",
+      "nomenclatura": "Estudos Pós 4",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 10.56
+    }
+  },
+  {
+    "nome": "Secretaria da Pós-Graduação",
+    "origem": [
+      "A106"
+    ],
+    "codigo": "A008",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Térreo",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Sala Administrativa",
+      "setor_responsavel": "Secretaria da Pós Graduação",
+      "nomenclatura": "Pós Graduação",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 18.5
+    }
+  },
+  {
+    "nome": "Coordenação da Pós-Graduação",
+    "origem": [
+      "A106"
+    ],
+    "codigo": "A008.1",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Térreo",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Sala Administrativa",
+      "setor_responsavel": "Secretaria da Pós Graduação",
+      "nomenclatura": "Pós Graduação",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 40.38
+    }
+  },
+  {
+    "nome": "Sala 01 para Professores em Estudo",
+    "origem": [],
+    "codigo": "A009",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Térreo",
+      "ala": "Central",
+      "tipo_de_ambiente": "Sala de Estudo",
+      "setor_responsavel": "Secretaria dos Departamentos",
+      "nomenclatura": "Professores Online 1",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 4.9
+    }
+  },
+  {
+    "nome": "Sala 01 para Professores em Estudo",
+    "origem": [],
+    "codigo": "A010",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Térreo",
+      "ala": "Central",
+      "tipo_de_ambiente": "Sala de Estudo",
+      "setor_responsavel": "Secretaria dos Departamentos",
+      "nomenclatura": "Professores Online 2",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 4.9
+    }
+  },
+  {
+    "nome": "Sala 02 para Professores em Estudo",
+    "origem": [],
+    "codigo": "A011",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Térreo",
+      "ala": "Central",
+      "tipo_de_ambiente": "Sala de Estudo",
+      "setor_responsavel": "Secretaria dos Departamentos",
+      "nomenclatura": "Professores Online 3",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 4.9
+    }
+  },
+  {
+    "nome": "Sala 03 para Professores em Estudo",
+    "origem": [],
+    "codigo": "A012",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Térreo",
+      "ala": "Central",
+      "tipo_de_ambiente": "Sala de Estudo",
+      "setor_responsavel": "Secretaria dos Departamentos",
+      "nomenclatura": "Professores Online 4",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 4.9
+    }
+  },
+  {
+    "nome": "Sala 04 para Professores em Estudo",
+    "origem": [],
+    "codigo": "A013",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Térreo",
+      "ala": "Central",
+      "tipo_de_ambiente": "Sala de Estudo",
+      "setor_responsavel": "Secretaria dos Departamentos",
+      "nomenclatura": "Professores Online 5",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 4.9
+    }
+  },
+  {
+    "nome": "Sala 05 para Professores em Estudo",
+    "origem": [],
+    "codigo": "A014",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Térreo",
+      "ala": "Central",
+      "tipo_de_ambiente": "Sala de Estudo",
+      "setor_responsavel": "Secretaria dos Departamentos",
+      "nomenclatura": "Professores Online 6",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 4.9
+    }
+  },
+  {
+    "nome": "Sala 06 para Professores em Estudo",
+    "origem": [],
+    "codigo": "A015",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Térreo",
+      "ala": "Central",
+      "tipo_de_ambiente": "Sala de Estudo",
+      "setor_responsavel": "Secretaria dos Departamentos",
+      "nomenclatura": "Professores Online 7",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 4.9
+    }
+  },
+  {
+    "nome": "Sala 07 para Professores em Estudo",
+    "origem": [],
+    "codigo": "A016",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Térreo",
+      "ala": "Central",
+      "tipo_de_ambiente": "Sala de Estudo",
+      "setor_responsavel": "Secretaria dos Departamentos",
+      "nomenclatura": "Professores Online 8",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 4.9
+    }
+  },
+  {
+    "nome": "Sala 08 para Professores em Estudo",
+    "origem": [],
+    "codigo": "A017",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Térreo",
+      "ala": "Central",
+      "tipo_de_ambiente": "Sala de Estudo",
+      "setor_responsavel": "Secretaria dos Departamentos",
+      "nomenclatura": "Professores Online 9",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 4.9
+    }
+  },
+  {
+    "nome": "Sala 09 para Professores em Estudo",
+    "origem": [],
+    "codigo": "A018",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Térreo",
+      "ala": "Central",
+      "tipo_de_ambiente": "Sala de Estudo",
+      "setor_responsavel": "Secretaria dos Departamentos",
+      "nomenclatura": "Professores Online 10",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 4.9
+    }
+  },
+  {
+    "nome": "Sala 10 para Professores em Estudo",
+    "origem": [],
+    "codigo": "A019",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Térreo",
+      "ala": "Central",
+      "tipo_de_ambiente": "Sala de Estudo",
+      "setor_responsavel": "Secretaria dos Departamentos",
+      "nomenclatura": "Professores Online 11",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 4.9
+    }
+  },
+  {
+    "nome": "Sala 11 para Professores em Estudo",
+    "origem": [],
+    "codigo": "A020",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Térreo",
+      "ala": "Central",
+      "tipo_de_ambiente": "Sala de Estudo",
+      "setor_responsavel": "Secretaria dos Departamentos",
+      "nomenclatura": "Professores Online 12",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 4.9
+    }
+  },
+  {
+    "nome": "Copa com Acessibilidade",
+    "origem": [],
+    "codigo": "A021",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Térreo",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Copa",
+      "setor_responsavel": "Administração de Edifícios",
+      "nomenclatura": "Copa Bloco A",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 15.69
+    }
+  },
+  {
+    "nome": "Banheiros 01 (Masculino e Feminino)",
+    "origem": [],
+    "codigo": "A022",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Térreo",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Banheiro",
+      "setor_responsavel": "Administração de Edifícios",
+      "nomenclatura": "Banheiro 01",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 23.47
+    }
+  },
+  {
+    "nome": "Núcleo Pedagógico (NUPE)",
+    "origem": [
+      "A203"
+    ],
+    "codigo": "A023",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Térreo",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Sala Administrativa",
+      "setor_responsavel": "Núcleo Pedagógico",
+      "nomenclatura": "NUPE",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 36.0
+    }
+  },
+  {
+    "nome": "Núcleo de Assistência Estudantil (NAE)",
+    "origem": [
+      "A206"
+    ],
+    "codigo": "A024",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Térreo",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Sala Administrativa",
+      "setor_responsavel": "Núcleo de Assistência Estudantil",
+      "nomenclatura": "NAE",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 16.39
+    }
+  },
+  {
+    "nome": "Sala 02 do Núcleo de Assistência Estudantil (NAE)",
+    "origem": [
+      "A206.1"
+    ],
+    "codigo": "A024.1",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Térreo",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Sala Administrativa",
+      "setor_responsavel": "Núcleo de Assistência Estudantil",
+      "nomenclatura": "NAE 2",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 19.61
+    }
+  },
+  {
+    "nome": "Sala para Atendimentos 01",
+    "origem": [],
+    "codigo": "A025",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Térreo",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Sala de Atendimento",
+      "setor_responsavel": "Administração de Edifícios",
+      "nomenclatura": "Atendiemento 01",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 11.6
+    }
+  },
+  {
+    "nome": "Sala para Atendimentos 02",
+    "origem": [],
+    "codigo": "A026",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Térreo",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Sala de Atendimento",
+      "setor_responsavel": "Administração de Edifícios",
+      "nomenclatura": "Atendiemento 02",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 11.6
+    }
+  },
+  {
+    "nome": "Banheiros 02 (Feminino)",
+    "origem": [],
+    "codigo": "A027",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Térreo",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Banheiro",
+      "setor_responsavel": "Administração de Edifícios",
+      "nomenclatura": "Banheiro 02",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 23.53
+    }
+  },
+  {
+    "nome": "Banheiros 03 (Masculino)",
+    "origem": [],
+    "codigo": "A028",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Térreo",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Banheiro",
+      "setor_responsavel": "Administração de Edifícios",
+      "nomenclatura": "Banheiro 03",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 23.53
+    }
+  },
+  {
+    "nome": "Praça de Alimentação 01",
+    "origem": [],
+    "codigo": "A029",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Térreo",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Área de Convivência",
+      "setor_responsavel": "Administração de Edifícios",
+      "nomenclatura": "Alimentação 01",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 442.47
+    }
+  },
+  {
+    "nome": "Banheiros 04 (Feminino)",
+    "origem": [],
+    "codigo": "A029.1",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Térreo",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Banheiro",
+      "setor_responsavel": "Administração de Edifícios",
+      "nomenclatura": "Banheiro 04",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 9.45
+    }
+  },
+  {
+    "nome": "Banheiros 05 (Masculino)",
+    "origem": [],
+    "codigo": "A029.2",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Térreo",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Banheiro",
+      "setor_responsavel": "Administração de Edifícios",
+      "nomenclatura": "Banheiro 05",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 6.49
+    }
+  },
+  {
+    "nome": "Estoque do Restaurante Universitário",
+    "origem": [],
+    "codigo": "A029.3",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Térreo",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Depósito",
+      "setor_responsavel": "Administração de Edifícios",
+      "nomenclatura": "Estoque RU",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 18.67
+    }
+  },
+  {
+    "nome": "Cozinha do Restaurante Universitário",
+    "origem": [],
+    "codigo": "A029.4",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Térreo",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Cozinha",
+      "setor_responsavel": "Administração de Edifícios",
+      "nomenclatura": "Cozinha RU",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 28.82
+    }
+  },
+  {
+    "nome": "Linha de Servir do Restaurante Universitário",
+    "origem": [],
+    "codigo": "A029.5",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Térreo",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Restaurante",
+      "setor_responsavel": "Administração de Edifícios",
+      "nomenclatura": "Serviço RU",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 69.46
+    }
+  },
+  {
+    "nome": "Corredor Interno do Restaurante Universitário",
+    "origem": [
+      "BC01"
+    ],
+    "codigo": "A029.6",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Térreo",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Corredor",
+      "setor_responsavel": "Administração de Edifícios",
+      "nomenclatura": "Corredor RU",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 13.38
+    }
+  },
+  {
+    "nome": "Banheiros 06 (RU)",
+    "origem": [],
+    "codigo": "A029.7",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Térreo",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Banheiro",
+      "setor_responsavel": "Administração de Edifícios",
+      "nomenclatura": "Banheiro 06",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 8.69
+    }
+  },
+  {
+    "nome": "Banheiros 07 (RU)",
+    "origem": [],
+    "codigo": "A029.8",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Térreo",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Banheiro",
+      "setor_responsavel": "Administração de Edifícios",
+      "nomenclatura": "Banheiro 07",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 7.85
+    }
+  },
+  {
+    "nome": "Quiosque de Conveniências",
+    "origem": [],
+    "codigo": "A029.9",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Térreo",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Conveniência",
+      "setor_responsavel": "Administração de Edifícios",
+      "nomenclatura": "Conveniência 01",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 15.37
+    }
+  },
+  {
+    "nome": "Centro Acadêmico",
+    "origem": [],
+    "codigo": "A029.10",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Térreo",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Sala Administrativa",
+      "setor_responsavel": "Administração de Edifícios",
+      "nomenclatura": "Centro Acadêmico",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 19.73
+    }
+  },
+  {
+    "nome": "Empresa Júnior das Licenciaturas",
+    "origem": [],
+    "codigo": "A029.11",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Térreo",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Sala Administrativa",
+      "setor_responsavel": "Administração de Edifícios",
+      "nomenclatura": "Empresa Júnior",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 25.87
+    }
+  },
+  {
+    "nome": "Copa para Servidores",
+    "origem": [],
+    "codigo": "A029.12",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Superior",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Copa",
+      "setor_responsavel": "Administração de Edifícios",
+      "nomenclatura": "Copa Servidores",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 47.43
+    }
+  },
+  {
+    "nome": "Quadra de Esportes",
+    "origem": [],
+    "codigo": "A030",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Térreo",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Área de Convivência",
+      "setor_responsavel": "Administração de Edifícios",
+      "nomenclatura": "Ginásio",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 844.17
+    }
+  },
+  {
+    "nome": "Sala da Atlética",
+    "origem": [],
+    "codigo": "A030.1",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Térreo",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Área de Convivência",
+      "setor_responsavel": "Administração de Edifícios",
+      "nomenclatura": "Atlética",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 19.73
+    }
+  },
+  {
+    "nome": "Vestiário 01 (Masculino)",
+    "origem": [],
+    "codigo": "A030.2",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Térreo",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Banheiro",
+      "setor_responsavel": "Administração de Edifícios",
+      "nomenclatura": "Vestiário 01",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 12.58
+    }
+  },
+  {
+    "nome": "Vestiário 02 (Feminino)",
+    "origem": [],
+    "codigo": "A030.3",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Térreo",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Banheiro",
+      "setor_responsavel": "Administração de Edifícios",
+      "nomenclatura": "Vestiário 02",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 12.58
+    }
+  },
+  {
+    "nome": "Laboratório de Ensaios Mecânicos (LEM)",
+    "origem": [
+      "B018"
+    ],
+    "codigo": "A032",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Térreo",
+      "ala": "Direita",
+      "tipo_de_ambiente": "Laboratório",
+      "setor_responsavel": "CEEM",
+      "nomenclatura": "LEM",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 36.94
+    }
+  },
+  {
+    "nome": "Laboratório de Microscopia e Análise Estrutural (LAMAE)",
+    "origem": [
+      "B020"
+    ],
+    "codigo": "A033",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Térreo",
+      "ala": "Direita",
+      "tipo_de_ambiente": "Laboratório",
+      "setor_responsavel": "CEEM",
+      "nomenclatura": "LAMAE",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 36.85
+    }
+  },
+  {
+    "nome": "Laboratório Integrado de Engenharia de Produção (LIEP)",
+    "origem": [],
+    "codigo": "A034",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Térreo",
+      "ala": "Direita",
+      "tipo_de_ambiente": "Laboratório",
+      "setor_responsavel": "DET",
+      "nomenclatura": "LIEP",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 56.02
+    }
+  },
+  {
+    "nome": "Laboratório de Desenvolvimento de Produtos Têxteis (LDPT)",
+    "origem": [
+      "B115"
+    ],
+    "codigo": "A035",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Térreo",
+      "ala": "Direita",
+      "tipo_de_ambiente": "Laboratório",
+      "setor_responsavel": "DET",
+      "nomenclatura": "LDPT",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 95.38
+    }
+  },
+  {
+    "nome": "Servidor de Rede de Computadores 01",
+    "origem": [
+      "A001.3.1"
+    ],
+    "codigo": "A036",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Térreo",
+      "ala": "Direita",
+      "tipo_de_ambiente": "Apoio",
+      "setor_responsavel": "Direção Administrativa",
+      "nomenclatura": "Servidor TI 01",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 23.44
+    }
+  },
+  {
+    "nome": "Depósito para Serviços 01 (higiene)",
+    "origem": [
+      "A005"
+    ],
+    "codigo": "A037",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Térreo",
+      "ala": "Direita",
+      "tipo_de_ambiente": "Depósito",
+      "setor_responsavel": "Direção Administrativa",
+      "nomenclatura": "Depósito Serviços 01",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 2.53
+    }
+  },
+  {
+    "nome": "Laboratório de Fibras e Fiação (LAFIF)",
+    "origem": [
+      "B117"
+    ],
+    "codigo": "A038",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Térreo",
+      "ala": "Direita",
+      "tipo_de_ambiente": "Laboratório",
+      "setor_responsavel": "DET",
+      "nomenclatura": "LAFIF",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 41.2
+    }
+  },
+  {
+    "nome": "LLaboratório de Eletrotécnica e Pneumática (LABEP)",
+    "origem": [
+      "B114"
+    ],
+    "codigo": "A039",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Térreo",
+      "ala": "Direita",
+      "tipo_de_ambiente": "Laboratório",
+      "setor_responsavel": "DCAC",
+      "nomenclatura": "LABEP",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 27.73
+    }
+  },
+  {
+    "nome": "Integre Júnior",
+    "origem": [],
+    "codigo": "A031",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Térreo",
+      "ala": "Direita",
+      "tipo_de_ambiente": "Sala Administrativa",
+      "setor_responsavel": "Direção Geral",
+      "nomenclatura": "Integre Júnior",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 27.73
+    }
+  },
+  {
+    "nome": "Laboratório de Controle de Processos (LABCOP)",
+    "origem": [
+      "A305"
+    ],
+    "codigo": "A040",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Térreo",
+      "ala": "Direita",
+      "tipo_de_ambiente": "Laboratório",
+      "setor_responsavel": "DCAC",
+      "nomenclatura": "LABCOP",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 56.11
+    }
+  },
+  {
+    "nome": "Laboratório de Fenômenos de Transporte e Laboratório de Meio Ambiente (LAFET / LABMAM)",
+    "origem": [
+      "B002"
+    ],
+    "codigo": "A041",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Térreo",
+      "ala": "Direita",
+      "tipo_de_ambiente": "Laboratório",
+      "setor_responsavel": "DET",
+      "nomenclatura": "LAFET / LABMAM",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 64.09
+    }
+  },
+  {
+    "nome": "Laboratório Integrado Têxtil (LINTEX)",
+    "origem": [
+      "B116"
+    ],
+    "codigo": "A042",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Térreo",
+      "ala": "Direita",
+      "tipo_de_ambiente": "Laboratório",
+      "setor_responsavel": "PGTEX",
+      "nomenclatura": "LINTEX",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 56.75
+    }
+  },
+  {
+    "nome": "Laboratório de Beneficiamento (LABENE)",
+    "origem": [
+      "B004"
+    ],
+    "codigo": "A043",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Térreo",
+      "ala": "Direita",
+      "tipo_de_ambiente": "Laboratório",
+      "setor_responsavel": "DET",
+      "nomenclatura": "LABENE",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 56.75
+    }
+  },
+  {
+    "nome": "Laboratório de Análises Térmicas e Espectroscopia (LTE)",
+    "origem": [
+      "B021"
+    ],
+    "codigo": "A044",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Térreo",
+      "ala": "Direita",
+      "tipo_de_ambiente": "Laboratório",
+      "setor_responsavel": "CEEM",
+      "nomenclatura": "LTE",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 32.49
+    }
+  },
+  {
+    "nome": "Laboratório de Polímeros e (Nano)compósitos Poliméricos (NANOPOL)",
+    "origem": [],
+    "codigo": "A045",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Térreo",
+      "ala": "Direita",
+      "tipo_de_ambiente": "Laboratório",
+      "setor_responsavel": "CEEM",
+      "nomenclatura": "NANOPOL",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 32.76
+    }
+  },
+  {
+    "nome": "Laboratório de Magnetismo e Materiais Magnéticos (LAB3M)",
+    "origem": [
+      "B008"
+    ],
+    "codigo": "A046",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Térreo",
+      "ala": "Direita",
+      "tipo_de_ambiente": "Laboratório",
+      "setor_responsavel": "CEEM",
+      "nomenclatura": "LAB3M",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 56.75
+    }
+  },
+  {
+    "nome": "Laboratório de Materialografia (LAMAT)",
+    "origem": [
+      "B005"
+    ],
+    "codigo": "A047",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Térreo",
+      "ala": "Direita",
+      "tipo_de_ambiente": "Laboratório",
+      "setor_responsavel": "CEEM",
+      "nomenclatura": "LAMAT",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 56.75
+    }
+  },
+  {
+    "nome": "Laboratório de Tecidos e Malhas (LABTEC)",
+    "origem": [
+      "B001"
+    ],
+    "codigo": "A048",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Térreo",
+      "ala": "Direita",
+      "tipo_de_ambiente": "Laboratório",
+      "setor_responsavel": "DET",
+      "nomenclatura": "LABTEC",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 56.75
+    }
+  },
+  {
+    "nome": "Laboratório de Estamparia (LAET)",
+    "origem": [],
+    "codigo": "A049",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Térreo",
+      "ala": "Direita",
+      "tipo_de_ambiente": "Laboratório",
+      "setor_responsavel": "DET",
+      "nomenclatura": "LAET",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 28.0
+    }
+  },
+  {
+    "nome": "Laboratório de Cuidados Têxteis (LABCT)",
+    "origem": [
+      "B112"
+    ],
+    "codigo": "A050",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Térreo",
+      "ala": "Direita",
+      "tipo_de_ambiente": "Laboratório",
+      "setor_responsavel": "DET",
+      "nomenclatura": "LABCT",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 28.0
+    }
+  },
+  {
+    "nome": "Laboratório de Transformações e Materiais Avançados (LTMA)",
+    "origem": [],
+    "codigo": "A051",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Térreo",
+      "ala": "Direita",
+      "tipo_de_ambiente": "Laboratório",
+      "setor_responsavel": "PPGNPMAT",
+      "nomenclatura": "LTMA",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 56.75
+    }
+  },
+  {
+    "nome": "Apoio Técnico Têxtil",
+    "origem": [
+      "B003.1"
+    ],
+    "codigo": "A052",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Térreo",
+      "ala": "Direita",
+      "tipo_de_ambiente": "Sala Administrativa",
+      "setor_responsavel": "DET",
+      "nomenclatura": "Apoio DET 01",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 28.0
+    }
+  },
+  {
+    "nome": "Apoio Técnico Eng. Materiais 01",
+    "origem": [
+      "B018.1"
+    ],
+    "codigo": "A053",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Térreo",
+      "ala": "Direita",
+      "tipo_de_ambiente": "Sala Administrativa",
+      "setor_responsavel": "CEEM",
+      "nomenclatura": "Apoio CEEM 01",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 28.0
+    }
+  },
+  {
+    "nome": "Comunicação e Eventos Institucionais",
+    "origem": [
+      "B120.1"
+    ],
+    "codigo": "A054",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Térreo",
+      "ala": "Direita",
+      "tipo_de_ambiente": "Sala Administrativa",
+      "setor_responsavel": "Direção Geral",
+      "nomenclatura": "Comunicação",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 32.81
+    }
+  },
+  {
+    "nome": "Recepção do Campus",
+    "origem": [],
+    "codigo": "A054.1",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Térreo",
+      "ala": "Direita",
+      "tipo_de_ambiente": "Sala Administrativa",
+      "setor_responsavel": "Direção Geral",
+      "nomenclatura": "Recepção",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 13.18
+    }
+  },
+  {
+    "nome": "Laboratório de Matemática Pura (LAMP)",
+    "origem": [],
+    "codigo": "A101",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Superior",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Laboratório",
+      "setor_responsavel": "MAT",
+      "nomenclatura": "LAMP",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 37.1
+    }
+  },
+  {
+    "nome": "Laboratório de Matemática Aplicada e Computacional (LABMAC)",
+    "origem": [
+      "B123"
+    ],
+    "codigo": "A102",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Superior",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Laboratório",
+      "setor_responsavel": "MAT",
+      "nomenclatura": "LABMAC",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 37.1
+    }
+  },
+  {
+    "nome": "Sala das Olimpíadas de Matemática (SOMA)",
+    "origem": [
+      "B122"
+    ],
+    "codigo": "A103",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Superior",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Laboratório",
+      "setor_responsavel": "MAT",
+      "nomenclatura": "SOMA",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 56.16
+    }
+  },
+  {
+    "nome": "Sala de Aula 01 (Bloco A)",
+    "origem": [
+      "A101"
+    ],
+    "codigo": "A104",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Superior",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Sala Aula",
+      "setor_responsavel": "Direção Geral",
+      "nomenclatura": "Aula Bloco A 01",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 58.07
+    }
+  },
+  {
+    "nome": "Sala de Aula 02 (Bloco A)",
+    "origem": [
+      "A102"
+    ],
+    "codigo": "A105",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Superior",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Sala Aula",
+      "setor_responsavel": "Direção Geral",
+      "nomenclatura": "Aula Bloco A 02",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 58.0
+    }
+  },
+  {
+    "nome": "Sala de Aula 03 (Bloco A)",
+    "origem": [
+      "A103"
+    ],
+    "codigo": "A106",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Superior",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Sala Aula",
+      "setor_responsavel": "Direção Geral",
+      "nomenclatura": "Aula Bloco A 03",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 58.06
+    }
+  },
+  {
+    "nome": "Sala de Aula 04 (Bloco A)",
+    "origem": [
+      "A104"
+    ],
+    "codigo": "A107",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Superior",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Sala Aula",
+      "setor_responsavel": "Direção Geral",
+      "nomenclatura": "Aula Bloco A 04",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 28.54
+    }
+  },
+  {
+    "nome": "Sala de Aula 05 (Bloco A)",
+    "origem": [
+      "A105"
+    ],
+    "codigo": "A108",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Superior",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Sala Aula",
+      "setor_responsavel": "Direção Geral",
+      "nomenclatura": "Aula Bloco A 05",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 28.52
+    }
+  },
+  {
+    "nome": "Banheiro 08 (Feminino)",
+    "origem": [],
+    "codigo": "A109",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Superior",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Banheiro",
+      "setor_responsavel": "Administração de Edifícios",
+      "nomenclatura": "Banheiro 08",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 28.56
+    }
+  },
+  {
+    "nome": "Banheiro 09 (Masculino)",
+    "origem": [],
+    "codigo": "A110",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Superior",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Banheiro",
+      "setor_responsavel": "Administração de Edifícios",
+      "nomenclatura": "Banheiro 09",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 28.66
+    }
+  },
+  {
+    "nome": "Auditório",
+    "origem": [
+      "B125"
+    ],
+    "codigo": "A111",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Superior",
+      "ala": "Central",
+      "tipo_de_ambiente": "Auditório",
+      "setor_responsavel": "Direção Geral",
+      "nomenclatura": "Auditório",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 166.97
+    }
+  },
+  {
+    "nome": "Apoio Audiovisual",
+    "origem": [
+      "B120.1"
+    ],
+    "codigo": "A111.1",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Superior",
+      "ala": "Central",
+      "tipo_de_ambiente": "Sala Administrativa",
+      "setor_responsavel": "Direção Geral",
+      "nomenclatura": "Audiovisual",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 5.19
+    }
+  },
+  {
+    "nome": "Pré-UFSC",
+    "origem": [],
+    "codigo": "A112",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Superior",
+      "ala": "Direita",
+      "tipo_de_ambiente": "Sala Administrativa",
+      "setor_responsavel": "Direção Geral",
+      "nomenclatura": "Pré-UFSC",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 11.0
+    }
+  },
+  {
+    "nome": "Ambiente Cooperativo de Pesquisa em Ciências de Materiais (ACOPES)",
+    "origem": [],
+    "codigo": "A113",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Superior",
+      "ala": "Direita",
+      "tipo_de_ambiente": "Laboratório",
+      "setor_responsavel": "Direção Geral",
+      "nomenclatura": "ACOPES",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 56.75
+    }
+  },
+  {
+    "nome": "Laboratório de Química Orgânica (LABQO)",
+    "origem": [
+      "B011"
+    ],
+    "codigo": "A114",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Superior",
+      "ala": "Direita",
+      "tipo_de_ambiente": "Laboratório",
+      "setor_responsavel": "DCEE",
+      "nomenclatura": "LABQO",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 56.75
+    }
+  },
+  {
+    "nome": "Apoio ao Laboratório de Química Orgânica (LABQO)",
+    "origem": [
+      "B011"
+    ],
+    "codigo": "A114.1",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Superior",
+      "ala": "Direita",
+      "tipo_de_ambiente": "Laboratório",
+      "setor_responsavel": "DCEE",
+      "nomenclatura": "Apoio LABQO",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 28.4
+    }
+  },
+  {
+    "nome": "Apoio Técnico Química",
+    "origem": [
+      "B012"
+    ],
+    "codigo": "A115",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Superior",
+      "ala": "Direita",
+      "tipo_de_ambiente": "Sala Administrativa",
+      "setor_responsavel": "DCEE",
+      "nomenclatura": "Apoio DCEE 01",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 28.4
+    }
+  },
+  {
+    "nome": "Laboratório de Química Inorgânica (LABQI)",
+    "origem": [
+      "B010"
+    ],
+    "codigo": "A116",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Superior",
+      "ala": "Direita",
+      "tipo_de_ambiente": "Laboratório",
+      "setor_responsavel": "DCEE",
+      "nomenclatura": "LABQI",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 66.45
+    }
+  },
+  {
+    "nome": "Laboratório Grupo de Estudo e Síntese de Materiais (GESMAT)",
+    "origem": [],
+    "codigo": "A117",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Superior",
+      "ala": "Direita",
+      "tipo_de_ambiente": "Laboratório",
+      "setor_responsavel": "CEEM",
+      "nomenclatura": "GESMAT",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 38.8
+    }
+  },
+  {
+    "nome": "Laboratório de Química Analítica (LABQA)",
+    "origem": [
+      "B113"
+    ],
+    "codigo": "A118",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Superior",
+      "ala": "Direita",
+      "tipo_de_ambiente": "Laboratório",
+      "setor_responsavel": "DCEE",
+      "nomenclatura": "LABQA",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 56.75
+    }
+  },
+  {
+    "nome": "Laboratório de Físico-Química (LABFQ)",
+    "origem": [],
+    "codigo": "A119",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Superior",
+      "ala": "Direita",
+      "tipo_de_ambiente": "Laboratório",
+      "setor_responsavel": "DCEE",
+      "nomenclatura": "LABFQ",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 56.75
+    }
+  },
+  {
+    "nome": "Laboratório para Pesquisa de Química (LABPQ)",
+    "origem": [],
+    "codigo": "A120",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Superior",
+      "ala": "Direita",
+      "tipo_de_ambiente": "Laboratório",
+      "setor_responsavel": "DCEE",
+      "nomenclatura": "LABPQ",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 56.75
+    }
+  },
+  {
+    "nome": "Apoio Técnico Física",
+    "origem": [
+      "B106"
+    ],
+    "codigo": "A121",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Superior",
+      "ala": "Direita",
+      "tipo_de_ambiente": "Laboratório",
+      "setor_responsavel": "DCEE",
+      "nomenclatura": "Apoio DCEE 02",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 28.4
+    }
+  },
+  {
+    "nome": "Laboratório de Investigação sobre Ensino de Química (LISEQ)",
+    "origem": [
+      "B111"
+    ],
+    "codigo": "A122",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Superior",
+      "ala": "Direita",
+      "tipo_de_ambiente": "Laboratório",
+      "setor_responsavel": "DCEE",
+      "nomenclatura": "LISEQ",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 47.35
+    }
+  },
+  {
+    "nome": "Laboratório de Nanoestruturas Optoeletrônicas (LABNANO)",
+    "origem": [
+      "B019"
+    ],
+    "codigo": "A123",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Superior",
+      "ala": "Direita",
+      "tipo_de_ambiente": "Laboratório",
+      "setor_responsavel": "DCEE",
+      "nomenclatura": "LABNANO",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 37.47
+    }
+  },
+  {
+    "nome": "Laboratório de Multiuso para Prototipagens (LMP)",
+    "origem": [
+      "B017"
+    ],
+    "codigo": "A124",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Superior",
+      "ala": "Direita",
+      "tipo_de_ambiente": "Laboratório",
+      "setor_responsavel": "Direção Geral",
+      "nomenclatura": "LMP",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 56.75
+    }
+  },
+  {
+    "nome": "Laboratório de Pesquisa em Controle e Automação (LPCA)",
+    "origem": [],
+    "codigo": "A125",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Superior",
+      "ala": "Direita",
+      "tipo_de_ambiente": "Laboratório",
+      "setor_responsavel": "DCEE",
+      "nomenclatura": "LPCA",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 27.81
+    }
+  },
+  {
+    "nome": "Laboratório de Tecnologia, Empreendedorismo e Inovação (LABTEI)",
+    "origem": [
+      "B110"
+    ],
+    "codigo": "A126",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Superior",
+      "ala": "Direita",
+      "tipo_de_ambiente": "Laboratório",
+      "setor_responsavel": "DCEE",
+      "nomenclatura": "LABTEI",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 30.15
+    }
+  },
+  {
+    "nome": "Laboratório de Ensino de Matemática (LEMA)",
+    "origem": [
+      "B124"
+    ],
+    "codigo": "A127",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Superior",
+      "ala": "Central",
+      "tipo_de_ambiente": "Laboratório",
+      "setor_responsavel": "DCEE",
+      "nomenclatura": "LEMA",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 75.36
+    }
+  },
+  {
+    "nome": "Laboratório de Investigação sobre Ensino de Química B (LISEQ.B)",
+    "origem": [
+      "B120"
+    ],
+    "codigo": "A128",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Superior",
+      "ala": "Central",
+      "tipo_de_ambiente": "Laboratório",
+      "setor_responsavel": "DCEE",
+      "nomenclatura": "LISEQ.B",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 37.1
+    }
+  },
+  {
+    "nome": "Laboratório de Inovação para o Ensino de Física (LIEF)",
+    "origem": [],
+    "codigo": "A129",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Superior",
+      "ala": "Central",
+      "tipo_de_ambiente": "Laboratório",
+      "setor_responsavel": "DCEE",
+      "nomenclatura": "LIEF",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 37.1
+    }
+  },
+  {
+    "nome": "Laboratório de Física I (LABFIS III)",
+    "origem": [
+      "B104"
+    ],
+    "codigo": "A130",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Superior",
+      "ala": "Central",
+      "tipo_de_ambiente": "Laboratório",
+      "setor_responsavel": "DCEE",
+      "nomenclatura": "LABFIS III",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 56.17
+    }
+  },
+  {
+    "nome": "Laboratório de Física I (LABFIS II)",
+    "origem": [
+      "B103"
+    ],
+    "codigo": "A131",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Superior",
+      "ala": "Central",
+      "tipo_de_ambiente": "Laboratório",
+      "setor_responsavel": "DCEE",
+      "nomenclatura": "LABFIS II",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 56.17
+    }
+  },
+  {
+    "nome": "Laboratório de Física I (LABFIS I)",
+    "origem": [
+      "B103"
+    ],
+    "codigo": "A132",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Superior",
+      "ala": "Central",
+      "tipo_de_ambiente": "Laboratório",
+      "setor_responsavel": "DCEE",
+      "nomenclatura": "LABFIS I",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 65.76
+    }
+  },
+  {
+    "nome": "Corredor Esquerdo no Bloco A 02",
+    "origem": [
+      "BC01"
+    ],
+    "codigo": "ACE2",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Superior",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Corredor",
+      "setor_responsavel": "Administração de Edifícios",
+      "nomenclatura": "Corredor E2 Bloco A",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 106.74
+    }
+  },
+  {
+    "nome": "Corredor Central no Bloco A 04",
+    "origem": [
+      "BC01"
+    ],
+    "codigo": "ACC4",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Superior",
+      "ala": "Central",
+      "tipo_de_ambiente": "Corredor",
+      "setor_responsavel": "Administração de Edifícios",
+      "nomenclatura": "Corredor C4 Bloco A",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 40.07
+    }
+  },
+  {
+    "nome": "Corredor Direito no Bloco A 03",
+    "origem": [
+      "BC01"
+    ],
+    "codigo": "ACD3",
+    "campus": "Norte",
+    "edificio": "Bloco A",
+    "detalhes": {
+      "construcao": "Bloco A",
+      "pavimento": "Superior",
+      "ala": "Direita",
+      "tipo_de_ambiente": "Corredor",
+      "setor_responsavel": "Administração de Edifícios",
+      "nomenclatura": "Corredor D3 Bloco A",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 165.52
+    }
+  },
+  {
+    "nome": "Hall de Entrada Frontal no Bloco B 01",
+    "origem": [
+      "AC00",
+      "C001"
+    ],
+    "codigo": "ACF1",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Térreo",
+      "ala": "Frontal",
+      "tipo_de_ambiente": "Corredor",
+      "setor_responsavel": "Administração de Edifícios",
+      "nomenclatura": "Hall F1 Bloco B",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 51.11
+    }
+  },
+  {
+    "nome": "Corredor Central no Bloco B 01",
+    "origem": [
+      "AC00",
+      "C001"
+    ],
+    "codigo": "ACC1",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Térreo",
+      "ala": "Central",
+      "tipo_de_ambiente": "Corredor",
+      "setor_responsavel": "Administração de Edifícios",
+      "nomenclatura": "Corredor C1 Bloco B",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 136.37
+    }
+  },
+  {
+    "nome": "Corredor Esquerdo no Bloco B 01",
+    "origem": [
+      "AC00",
+      "C001"
+    ],
+    "codigo": "ACE1",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Térreo",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Corredor",
+      "setor_responsavel": "Administração de Edifícios",
+      "nomenclatura": "Corredor E1 Bloco B",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 63.58
+    }
+  },
+  {
+    "nome": "Hall Frontal no Bloco B 02",
+    "origem": [
+      "AC01"
+    ],
+    "codigo": "ACF2",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Andar 1",
+      "ala": "Frontal",
+      "tipo_de_ambiente": "Corredor",
+      "setor_responsavel": "Administração de Edifícios",
+      "nomenclatura": "Corredor F2 Bloco B",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 52.42
+    }
+  },
+  {
+    "nome": "Corredor Central no Bloco B 02",
+    "origem": [
+      "AC01"
+    ],
+    "codigo": "ACC2",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Andar 1",
+      "ala": "Central",
+      "tipo_de_ambiente": "Corredor",
+      "setor_responsavel": "Administração de Edifícios",
+      "nomenclatura": "Corredor C2 Bloco B",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 136.37
+    }
+  },
+  {
+    "nome": "Corredor Esquerdo no Bloco B 02",
+    "origem": [
+      "AC01"
+    ],
+    "codigo": "ACE2",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Andar 1",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Corredor",
+      "setor_responsavel": "Administração de Edifícios",
+      "nomenclatura": "Corredor E2 Bloco B",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 63.02
+    }
+  },
+  {
+    "nome": "Hall Frontal no Bloco B 03",
+    "origem": [
+      "AC00",
+      "AC02",
+      "CC01"
+    ],
+    "codigo": "ACF3",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Andar 2",
+      "ala": "Frontal",
+      "tipo_de_ambiente": "Corredor",
+      "setor_responsavel": "Administração de Edifícios",
+      "nomenclatura": "Corredor F3 Bloco B",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 52.44
+    }
+  },
+  {
+    "nome": "Corredor Central no Bloco B 03",
+    "origem": [
+      "AC00",
+      "AC02",
+      "CC02"
+    ],
+    "codigo": "ACC3",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Andar 2",
+      "ala": "Central",
+      "tipo_de_ambiente": "Corredor",
+      "setor_responsavel": "Administração de Edifícios",
+      "nomenclatura": "Corredor C3 Bloco B",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 57.46
+    }
+  },
+  {
+    "nome": "Corredor Esquerdo no Bloco B 03",
+    "origem": [
+      "AC00",
+      "AC02",
+      "VVC00"
+    ],
+    "codigo": "ACE3",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Andar 2",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Corredor",
+      "setor_responsavel": "Administração de Edifícios",
+      "nomenclatura": "Corredor E3 Bloco B",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 63.52
+    }
+  },
+  {
+    "nome": "Hall Frontal no Bloco B 04",
+    "origem": [
+      "AC03",
+      "CC03"
+    ],
+    "codigo": "ACF4",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Andar 3",
+      "ala": "Frontal",
+      "tipo_de_ambiente": "Corredor",
+      "setor_responsavel": "Administração de Edifícios",
+      "nomenclatura": "Corredor F4 Bloco B",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 52.78
+    }
+  },
+  {
+    "nome": "Corredor Central no Bloco B 04",
+    "origem": [
+      "AC03",
+      "CC03"
+    ],
+    "codigo": "ACC4",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Andar 3",
+      "ala": "Central",
+      "tipo_de_ambiente": "Corredor",
+      "setor_responsavel": "Administração de Edifícios",
+      "nomenclatura": "Corredor C4 Bloco B",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 134.73
+    }
+  },
+  {
+    "nome": "Corredor Esquerdo no Bloco B 04",
+    "origem": [
+      "AC03",
+      "CC03"
+    ],
+    "codigo": "ACE4",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Andar 3",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Corredor",
+      "setor_responsavel": "Administração de Edifícios",
+      "nomenclatura": "Corredor E4 Bloco B",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 60.47
+    }
+  },
+  {
+    "nome": "Secretaria Acadêmica",
+    "origem": [
+      "A002"
+    ],
+    "codigo": "B001",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Térreo",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Sala Administrativa",
+      "setor_responsavel": "Secretaria Acadêmica",
+      "nomenclatura": "Secretaria Acadêmica",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 46.95
+    }
+  },
+  {
+    "nome": "Secretaria dos Cursos",
+    "origem": [
+      "A002"
+    ],
+    "codigo": "B001.1",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Térreo",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Sala Administrativa",
+      "setor_responsavel": "Secretaria Acadêmica",
+      "nomenclatura": "Secretaria dos Cursos",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 28.8
+    }
+  },
+  {
+    "nome": "Sala de Aula 01 (Bloco B)",
+    "origem": [
+      "A107"
+    ],
+    "codigo": "B002",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Térreo",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Sala Aula",
+      "setor_responsavel": "Direção Geral",
+      "nomenclatura": "Aula Bloco B 01",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 70.45
+    }
+  },
+  {
+    "nome": "Sala de Aula 02 (Bloco B)",
+    "origem": [
+      "A202"
+    ],
+    "codigo": "B003",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Térreo",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Sala Aula",
+      "setor_responsavel": "Direção Geral",
+      "nomenclatura": "Aula Bloco B 02",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 55.0
+    }
+  },
+  {
+    "nome": "Coordenação de Cursos",
+    "origem": [],
+    "codigo": "B004",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Térreo",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Corredor",
+      "setor_responsavel": "Administração de Edifícios",
+      "nomenclatura": "Corredor Coordenação",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 19.42
+    }
+  },
+  {
+    "nome": "Sala para Atendimentos 03",
+    "origem": [],
+    "codigo": "B004.1",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Térreo",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Sala de Atendimento",
+      "setor_responsavel": "Direção Geral",
+      "nomenclatura": "Atendimento 03",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 5.06
+    }
+  },
+  {
+    "nome": "Sala para Atendimentos 04",
+    "origem": [],
+    "codigo": "B004.02",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Térreo",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Sala de Atendimento",
+      "setor_responsavel": "Direção Geral",
+      "nomenclatura": "Atendimento 04",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 5.06
+    }
+  },
+  {
+    "nome": "Coordenação de Curso 01",
+    "origem": [],
+    "codigo": "B004.03",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Térreo",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Sala Administrativa",
+      "setor_responsavel": "Direção Geral",
+      "nomenclatura": "Coordenação Curso 01",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 10.24
+    }
+  },
+  {
+    "nome": "Coordenação de Curso 02",
+    "origem": [],
+    "codigo": "B004.04",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Térreo",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Sala Administrativa",
+      "setor_responsavel": "Direção Geral",
+      "nomenclatura": "Coordenação Curso 02",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 13.79
+    }
+  },
+  {
+    "nome": "Coordenação de Curso 03",
+    "origem": [
+      "A213"
+    ],
+    "codigo": "B004.05",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Térreo",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Sala Administrativa",
+      "setor_responsavel": "Direção Geral",
+      "nomenclatura": "Coordenação Curso 03",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 13.57
+    }
+  },
+  {
+    "nome": "Coordenação de Curso 04",
+    "origem": [
+      "A306"
+    ],
+    "codigo": "B004.06",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Térreo",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Sala Administrativa",
+      "setor_responsavel": "Direção Geral",
+      "nomenclatura": "Coordenação Curso 04",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 13.68
+    }
+  },
+  {
+    "nome": "Coordenação de Curso 05",
+    "origem": [
+      "A310"
+    ],
+    "codigo": "B004.07",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Térreo",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Sala Administrativa",
+      "setor_responsavel": "Direção Geral",
+      "nomenclatura": "Coordenação Curso 05",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 13.75
+    }
+  },
+  {
+    "nome": "Sala para Atendimentos 05",
+    "origem": [],
+    "codigo": "B004.08",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Térreo",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Sala de Atendimento",
+      "setor_responsavel": "Direção Geral",
+      "nomenclatura": "Atendimento 05",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 5.06
+    }
+  },
+  {
+    "nome": "Sala para Atendimentos 06",
+    "origem": [],
+    "codigo": "B004.09",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Térreo",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Sala de Atendimento",
+      "setor_responsavel": "Direção Geral",
+      "nomenclatura": "Atendimento 06",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 5.06
+    }
+  },
+  {
+    "nome": "Sala para Atendimentos 07",
+    "origem": [],
+    "codigo": "B004.10",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Térreo",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Sala de Atendimento",
+      "setor_responsavel": "Direção Geral",
+      "nomenclatura": "Atendimento 07",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 5.06
+    }
+  },
+  {
+    "nome": "Sala para Atendimentos 08",
+    "origem": [],
+    "codigo": "B004.11",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Térreo",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Sala de Atendimento",
+      "setor_responsavel": "Direção Geral",
+      "nomenclatura": "Atendimento 08",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 5.06
+    }
+  },
+  {
+    "nome": "Amamentação",
+    "origem": [],
+    "codigo": "B005",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Térreo",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Corredor",
+      "setor_responsavel": "Direção Geral",
+      "nomenclatura": "Amamentação",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 8.42
+    }
+  },
+  {
+    "nome": "Sala 01 para Amamentação",
+    "origem": [],
+    "codigo": "B005.1",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Térreo",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Apoio",
+      "setor_responsavel": "Direção Geral",
+      "nomenclatura": "Amamentação 01",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 6.44
+    }
+  },
+  {
+    "nome": "Sala 02 para Amamentação",
+    "origem": [],
+    "codigo": "B005.2",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Térreo",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Apoio",
+      "setor_responsavel": "Direção Geral",
+      "nomenclatura": "Amamentação 02",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 6.39
+    }
+  },
+  {
+    "nome": "Fraldário",
+    "origem": [],
+    "codigo": "B005.3",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Térreo",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Apoio",
+      "setor_responsavel": "Direção Geral",
+      "nomenclatura": "Fraldário",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 6.01
+    }
+  },
+  {
+    "nome": "Banheiro 10 (Feminino)",
+    "origem": [],
+    "codigo": "B006",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Térreo",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Banheiro",
+      "setor_responsavel": "Administração de Edifícios",
+      "nomenclatura": "Banheiro 10",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 29.95
+    }
+  },
+  {
+    "nome": "Banheiro 11 (Masculino)",
+    "origem": [],
+    "codigo": "B007",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Térreo",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Banheiro",
+      "setor_responsavel": "Administração de Edifícios",
+      "nomenclatura": "Banheiro 11",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 36.57
+    }
+  },
+  {
+    "nome": "Banheiro 12 (Acessibilidade)",
+    "origem": [],
+    "codigo": "B008",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Térreo",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Banheiro",
+      "setor_responsavel": "Administração de Edifícios",
+      "nomenclatura": "Banheiro 12",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 5.46
+    }
+  },
+  {
+    "nome": "Laboratório de Sistemas Digitais e Microprocessadores (LABSIM)",
+    "origem": [],
+    "codigo": "B009",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Térreo",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Laboratório",
+      "setor_responsavel": "DCAC",
+      "nomenclatura": "LABSIM",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 51.83
+    }
+  },
+  {
+    "nome": "Laboratório de Informática Industrial (LABIND)",
+    "origem": [
+      "B016"
+    ],
+    "codigo": "B010",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Térreo",
+      "ala": "Central",
+      "tipo_de_ambiente": "Laboratório",
+      "setor_responsavel": "DCAC",
+      "nomenclatura": "LABIND",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 71.46
+    }
+  },
+  {
+    "nome": "Apoio Técnico Eng. Automação 01",
+    "origem": [
+      "B119"
+    ],
+    "codigo": "B011",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Térreo",
+      "ala": "Central",
+      "tipo_de_ambiente": "Sala Administrativa",
+      "setor_responsavel": "DCAC",
+      "nomenclatura": "Apoio DCAC 01",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 28.29
+    }
+  },
+  {
+    "nome": "Laboratório de Projetos II (LAPRO2)",
+    "origem": [],
+    "codigo": "B012",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Térreo",
+      "ala": "Central",
+      "tipo_de_ambiente": "Laboratório",
+      "setor_responsavel": "DCAC",
+      "nomenclatura": "LAPRO 2",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 28.29
+    }
+  },
+  {
+    "nome": "Laboratório de Circuitos e Sistemas Digitais (LABCID)",
+    "origem": [
+      "B023"
+    ],
+    "codigo": "B013",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Térreo",
+      "ala": "Direita",
+      "tipo_de_ambiente": "Laboratório",
+      "setor_responsavel": "DCAC",
+      "nomenclatura": "LABCID",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 56.94
+    }
+  },
+  {
+    "nome": "Laboratório de Manufatura Aditiva e Processos Especiais (LABMAPE)",
+    "origem": [],
+    "codigo": "B014",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Térreo",
+      "ala": "Direita",
+      "tipo_de_ambiente": "Laboratório",
+      "setor_responsavel": "DCAC",
+      "nomenclatura": "LABMAPE",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 56.94
+    }
+  },
+  {
+    "nome": "Laboratório de Projetos (LAPRO)",
+    "origem": [
+      "B024"
+    ],
+    "codigo": "B015",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Térreo",
+      "ala": "Direita",
+      "tipo_de_ambiente": "Laboratório",
+      "setor_responsavel": "DCAC",
+      "nomenclatura": "LAPRO",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 60.84
+    }
+  },
+  {
+    "nome": "Laboratório de Sistemas Embarcados e Robótica (LASER)",
+    "origem": [
+      "B015"
+    ],
+    "codigo": "B016",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Térreo",
+      "ala": "Direita",
+      "tipo_de_ambiente": "Laboratório",
+      "setor_responsavel": "DCAC",
+      "nomenclatura": "LASER",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 30.23
+    }
+  },
+  {
+    "nome": "Subdivisão LASER 01",
+    "origem": [
+      "B015"
+    ],
+    "codigo": "B016.1",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Térreo",
+      "ala": "Direita",
+      "tipo_de_ambiente": "Laboratório",
+      "setor_responsavel": "DCAC",
+      "nomenclatura": "LASER 01",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 7.22
+    }
+  },
+  {
+    "nome": "Subdivisão LASER 02",
+    "origem": [
+      "B015"
+    ],
+    "codigo": "B016.2",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Térreo",
+      "ala": "Direita",
+      "tipo_de_ambiente": "Laboratório",
+      "setor_responsavel": "DCAC",
+      "nomenclatura": "LASER 02",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 7.12
+    }
+  },
+  {
+    "nome": "Subdivisão LASER 03",
+    "origem": [
+      "B015"
+    ],
+    "codigo": "B016.3",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Térreo",
+      "ala": "Direita",
+      "tipo_de_ambiente": "Laboratório",
+      "setor_responsavel": "DCAC",
+      "nomenclatura": "LASER 03",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 7.12
+    }
+  },
+  {
+    "nome": "Subdivisão LASER 04",
+    "origem": [
+      "B015"
+    ],
+    "codigo": "B016.4",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Térreo",
+      "ala": "Direita",
+      "tipo_de_ambiente": "Laboratório",
+      "setor_responsavel": "DCAC",
+      "nomenclatura": "LASER 04",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 8.18
+    }
+  },
+  {
+    "nome": "Depósito da Administração 01",
+    "origem": [
+      "C308"
+    ],
+    "codigo": "B017",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Térreo",
+      "ala": "Direita",
+      "tipo_de_ambiente": "Depósito",
+      "setor_responsavel": "Direção Administrativa",
+      "nomenclatura": "DA 01",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 8.2
+    }
+  },
+  {
+    "nome": "Laboratório de Expressão Gráfica (LABEX)",
+    "origem": [
+      "B118"
+    ],
+    "codigo": "B101",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Andar 1",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Laboratório",
+      "setor_responsavel": "DCAC",
+      "nomenclatura": "LABEX",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 76.51
+    }
+  },
+  {
+    "nome": "Laboratórios de Informática I (LABINFO I)",
+    "origem": [
+      "VV001"
+    ],
+    "codigo": "B102",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Andar 1",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Laboratório",
+      "setor_responsavel": "DCAC",
+      "nomenclatura": "LABINFO I",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 70.46
+    }
+  },
+  {
+    "nome": "Sala de Aula 03 (Bloco B)",
+    "origem": [
+      "A204"
+    ],
+    "codigo": "B103",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Andar 1",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Sala Aula",
+      "setor_responsavel": "Direção Geral",
+      "nomenclatura": "Aula Bloco B 03",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 55.0
+    }
+  },
+  {
+    "nome": "Sala de Aula 04 (Bloco B)",
+    "origem": [
+      "A205"
+    ],
+    "codigo": "B104",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Andar 1",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Sala Aula",
+      "setor_responsavel": "Direção Geral",
+      "nomenclatura": "Aula Bloco B 04",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 60.8
+    }
+  },
+  {
+    "nome": "Sala de Aula 05 (Bloco B)",
+    "origem": [
+      "A207"
+    ],
+    "codigo": "B105",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Andar 1",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Sala Aula",
+      "setor_responsavel": "Direção Geral",
+      "nomenclatura": "Aula Bloco B 05",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 61.19
+    }
+  },
+  {
+    "nome": "Sala de Aula 06 (Bloco B)",
+    "origem": [
+      "A208"
+    ],
+    "codigo": "B106",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Andar 1",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Sala Aula",
+      "setor_responsavel": "Direção Geral",
+      "nomenclatura": "Aula Bloco B 06",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 29.66
+    }
+  },
+  {
+    "nome": "Banheiro 13 (Feminino)",
+    "origem": [],
+    "codigo": "B107",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Andar 1",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Banheiro",
+      "setor_responsavel": "Administração de Edifícios",
+      "nomenclatura": "Banheiro 13",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 29.95
+    }
+  },
+  {
+    "nome": "Banheiro 14 (Masculino)",
+    "origem": [],
+    "codigo": "B108",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Andar 1",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Banheiro",
+      "setor_responsavel": "Administração de Edifícios",
+      "nomenclatura": "Banheiro 14",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 36.57
+    }
+  },
+  {
+    "nome": "Banheiro 15 (Acessibilidade)",
+    "origem": [],
+    "codigo": "B109",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Andar 1",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Banheiro",
+      "setor_responsavel": "Administração de Edifícios",
+      "nomenclatura": "Banheiro 15",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 5.46
+    }
+  },
+  {
+    "nome": "Sala de Aula 07 (Bloco B)",
+    "origem": [
+      "A301"
+    ],
+    "codigo": "B110",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Andar 1",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Sala Aula",
+      "setor_responsavel": "Direção Geral",
+      "nomenclatura": "Aula Bloco B 07",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 52.5
+    }
+  },
+  {
+    "nome": "Sala de Aula 08 (Bloco B)",
+    "origem": [
+      "A302"
+    ],
+    "codigo": "B111",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Andar 1",
+      "ala": "Central",
+      "tipo_de_ambiente": "Sala Aula",
+      "setor_responsavel": "Direção Geral",
+      "nomenclatura": "Aula Bloco B 08",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 35.33
+    }
+  },
+  {
+    "nome": "Sala de Aula 09 (Bloco B)",
+    "origem": [
+      "A303"
+    ],
+    "codigo": "B112",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Andar 1",
+      "ala": "Central",
+      "tipo_de_ambiente": "Sala Aula",
+      "setor_responsavel": "Direção Geral",
+      "nomenclatura": "Aula Bloco B 09",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 35.33
+    }
+  },
+  {
+    "nome": "Sala de Aula 10 (Bloco B)",
+    "origem": [
+      "A304"
+    ],
+    "codigo": "B113",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Andar 1",
+      "ala": "Central",
+      "tipo_de_ambiente": "Sala Aula",
+      "setor_responsavel": "Direção Geral",
+      "nomenclatura": "Aula Bloco B 10",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 57.0
+    }
+  },
+  {
+    "nome": "Sala de Aula 11 (Bloco B)",
+    "origem": [
+      "A307.1"
+    ],
+    "codigo": "B114",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Andar 1",
+      "ala": "Direita",
+      "tipo_de_ambiente": "Sala Aula",
+      "setor_responsavel": "Direção Geral",
+      "nomenclatura": "Aula Bloco B 11",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 57.0
+    }
+  },
+  {
+    "nome": "Sala de Aula 12 (Bloco B)",
+    "origem": [
+      "A307.2"
+    ],
+    "codigo": "B115",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Andar 1",
+      "ala": "Direita",
+      "tipo_de_ambiente": "Sala Aula",
+      "setor_responsavel": "Direção Geral",
+      "nomenclatura": "Aula Bloco B 12",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 57.0
+    }
+  },
+  {
+    "nome": "Sala de Aula 13 (Bloco B)",
+    "origem": [],
+    "codigo": "B116",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Andar 1",
+      "ala": "Direita",
+      "tipo_de_ambiente": "Sala Aula",
+      "setor_responsavel": "Direção Geral",
+      "nomenclatura": "Aula Bloco B 13",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 60.84
+    }
+  },
+  {
+    "nome": "Sala de Aula 14 (Bloco B)",
+    "origem": [],
+    "codigo": "B117",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Andar 1",
+      "ala": "Direita",
+      "tipo_de_ambiente": "Sala Aula",
+      "setor_responsavel": "Direção Geral",
+      "nomenclatura": "Aula Bloco B 14",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 60.84
+    }
+  },
+  {
+    "nome": "Servidor de Rede de Computadores 01",
+    "origem": [
+      "C206"
+    ],
+    "codigo": "B118",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Andar 1",
+      "ala": "Direita",
+      "tipo_de_ambiente": "Apoio",
+      "setor_responsavel": "Direção Administrativa",
+      "nomenclatura": "Servidor TI 01",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 8.21
+    }
+  },
+  {
+    "nome": "Laboratórios de Informática I (LABINFO II)",
+    "origem": [
+      "VV002"
+    ],
+    "codigo": "B201",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Andar 2",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Laboratório",
+      "setor_responsavel": "DCAC",
+      "nomenclatura": "LABINFO II",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 76.51
+    }
+  },
+  {
+    "nome": "Laboratórios de Informática I (LABINFO III)",
+    "origem": [],
+    "codigo": "B202",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Andar 2",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Laboratório",
+      "setor_responsavel": "Direção Geral",
+      "nomenclatura": "LABINFO III",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 70.45
+    }
+  },
+  {
+    "nome": "Sala de Professores 01",
+    "origem": [
+      "C101"
+    ],
+    "codigo": "B203",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Andar 2",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Sala Administrativa",
+      "setor_responsavel": "Direção Geral",
+      "nomenclatura": "Professores 01",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 27.0
+    }
+  },
+  {
+    "nome": "Sala de Professores 02",
+    "origem": [
+      "C102"
+    ],
+    "codigo": "B204",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Andar 2",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Sala Administrativa",
+      "setor_responsavel": "Direção Geral",
+      "nomenclatura": "Professores 02",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 27.0
+    }
+  },
+  {
+    "nome": "Sala de Professores 03",
+    "origem": [
+      "C201"
+    ],
+    "codigo": "B205",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Andar 2",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Sala Administrativa",
+      "setor_responsavel": "Direção Geral",
+      "nomenclatura": "Professores 03",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 30.0
+    }
+  },
+  {
+    "nome": "Sala de Professores 04",
+    "origem": [
+      "C203"
+    ],
+    "codigo": "B206",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Andar 2",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Sala Administrativa",
+      "setor_responsavel": "Direção Geral",
+      "nomenclatura": "Professores 04",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 30.0
+    }
+  },
+  {
+    "nome": "Sala de Professores 05",
+    "origem": [
+      "C205"
+    ],
+    "codigo": "B207",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Andar 2",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Sala Administrativa",
+      "setor_responsavel": "Direção Geral",
+      "nomenclatura": "Professores 05",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 30.0
+    }
+  },
+  {
+    "nome": "Sala de Professores 06",
+    "origem": [
+      "C301"
+    ],
+    "codigo": "B208",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Andar 2",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Sala Administrativa",
+      "setor_responsavel": "Direção Geral",
+      "nomenclatura": "Professores 06",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 30.0
+    }
+  },
+  {
+    "nome": "Sala de Professores 07",
+    "origem": [
+      "C302"
+    ],
+    "codigo": "B209",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Andar 2",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Sala Administrativa",
+      "setor_responsavel": "Direção Geral",
+      "nomenclatura": "Professores 07",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 30.0
+    }
+  },
+  {
+    "nome": "Sala de Professores 08",
+    "origem": [
+      "C303"
+    ],
+    "codigo": "B210",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Andar 2",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Sala Administrativa",
+      "setor_responsavel": "Direção Geral",
+      "nomenclatura": "Professores 08",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 30.0
+    }
+  },
+  {
+    "nome": "Banheiro 16 (Masculino)",
+    "origem": [],
+    "codigo": "B211",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Andar 2",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Banheiro",
+      "setor_responsavel": "Administração de Edifícios",
+      "nomenclatura": "Banheiro 16",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 27.57
+    }
+  },
+  {
+    "nome": "Banheiro 17 (Feminino)",
+    "origem": [],
+    "codigo": "B212",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Andar 2",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Banheiro",
+      "setor_responsavel": "Administração de Edifícios",
+      "nomenclatura": "Banheiro 17",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 14.19
+    }
+  },
+  {
+    "nome": "Secretaria e Chefias dos Departamentos",
+    "origem": [
+      "C204"
+    ],
+    "codigo": "B213",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Andar 2",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Sala Administrativa",
+      "setor_responsavel": "Direção Geral",
+      "nomenclatura": "Departamentos",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 52.5
+    }
+  },
+  {
+    "nome": "Sala de Professores 09",
+    "origem": [
+      "C304"
+    ],
+    "codigo": "B214",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Andar 2",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Sala Administrativa",
+      "setor_responsavel": "Direção Geral",
+      "nomenclatura": "Professores 09",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 27.17
+    }
+  },
+  {
+    "nome": "Biblioteca",
+    "origem": [
+      "A001"
+    ],
+    "codigo": "B215",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Andar 2",
+      "ala": "Central",
+      "tipo_de_ambiente": "Biblioteca",
+      "setor_responsavel": "Biblioteca",
+      "nomenclatura": "Biblioteca",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 386.67
+    }
+  },
+  {
+    "nome": "Subdivisão da Biblioteca 01",
+    "origem": [
+      "A001.1"
+    ],
+    "codigo": "B215.1",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Andar 2",
+      "ala": "Direita",
+      "tipo_de_ambiente": "Biblioteca",
+      "setor_responsavel": "Biblioteca",
+      "nomenclatura": "Biblioteca 01",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 13.25
+    }
+  },
+  {
+    "nome": "Subdivisão da Biblioteca 02",
+    "origem": [],
+    "codigo": "B215.2",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Andar 2",
+      "ala": "Direita",
+      "tipo_de_ambiente": "Biblioteca",
+      "setor_responsavel": "Biblioteca",
+      "nomenclatura": "Biblioteca 02",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 28.32
+    }
+  },
+  {
+    "nome": "Subdivisão da Biblioteca 03",
+    "origem": [],
+    "codigo": "B215.3",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Andar 2",
+      "ala": "Direita",
+      "tipo_de_ambiente": "Biblioteca",
+      "setor_responsavel": "Biblioteca",
+      "nomenclatura": "Biblioteca 03",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 7.34
+    }
+  },
+  {
+    "nome": "Subdivisão da Biblioteca 04",
+    "origem": [],
+    "codigo": "B215.4",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Andar 2",
+      "ala": "Direita",
+      "tipo_de_ambiente": "Biblioteca",
+      "setor_responsavel": "Biblioteca",
+      "nomenclatura": "Biblioteca 04",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 7.12
+    }
+  },
+  {
+    "nome": "Subdivisão da Biblioteca 05",
+    "origem": [],
+    "codigo": "B215.5",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Andar 2",
+      "ala": "Direita",
+      "tipo_de_ambiente": "Biblioteca",
+      "setor_responsavel": "Biblioteca",
+      "nomenclatura": "Biblioteca 05",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 7.12
+    }
+  },
+  {
+    "nome": "Subdivisão da Biblioteca 06",
+    "origem": [],
+    "codigo": "B215.6",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Andar 2",
+      "ala": "Direita",
+      "tipo_de_ambiente": "Biblioteca",
+      "setor_responsavel": "Biblioteca",
+      "nomenclatura": "Biblioteca 06",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 8.18
+    }
+  },
+  {
+    "nome": "Miniauditório",
+    "origem": [
+      "C103"
+    ],
+    "codigo": "B301",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Andar 3",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Auditório",
+      "setor_responsavel": "Direção Geral",
+      "nomenclatura": "Miniauditório",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 76.51
+    }
+  },
+  {
+    "nome": "Sala de Aula 15 (Bloco B)",
+    "origem": [],
+    "codigo": "B302",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Andar 3",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Sala Aula",
+      "setor_responsavel": "Direção Geral",
+      "nomenclatura": "Aula Bloco B 15",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 70.45
+    }
+  },
+  {
+    "nome": "Sala de Professores 10",
+    "origem": [
+      "C305"
+    ],
+    "codigo": "B303",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Andar 3",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Sala Administrativa",
+      "setor_responsavel": "Direção Geral",
+      "nomenclatura": "Professores 10",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 27.0
+    }
+  },
+  {
+    "nome": "Sala de Professores 11",
+    "origem": [],
+    "codigo": "B304",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Andar 3",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Sala Administrativa",
+      "setor_responsavel": "Direção Geral",
+      "nomenclatura": "Professores 11",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 27.0
+    }
+  },
+  {
+    "nome": "Sala de Professores 12",
+    "origem": [],
+    "codigo": "B305",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Andar 3",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Sala Administrativa",
+      "setor_responsavel": "Direção Geral",
+      "nomenclatura": "Professores 12",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 30.0
+    }
+  },
+  {
+    "nome": "Sala de Professores 13",
+    "origem": [],
+    "codigo": "B306",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Andar 3",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Sala Administrativa",
+      "setor_responsavel": "Direção Geral",
+      "nomenclatura": "Professores 13",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 30.0
+    }
+  },
+  {
+    "nome": "Sala de Professores 14",
+    "origem": [],
+    "codigo": "B307",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Andar 3",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Sala Administrativa",
+      "setor_responsavel": "Direção Geral",
+      "nomenclatura": "Professores 14",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 30.0
+    }
+  },
+  {
+    "nome": "Sala de Professores 15",
+    "origem": [],
+    "codigo": "B308",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Andar 3",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Sala Administrativa",
+      "setor_responsavel": "Direção Geral",
+      "nomenclatura": "Professores 15",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 30.0
+    }
+  },
+  {
+    "nome": "Sala de Professores 16",
+    "origem": [],
+    "codigo": "B309",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Andar 3",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Sala Administrativa",
+      "setor_responsavel": "Direção Geral",
+      "nomenclatura": "Professores 16",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 30.0
+    }
+  },
+  {
+    "nome": "Sala de Professores 17",
+    "origem": [],
+    "codigo": "B310",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Andar 3",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Sala Administrativa",
+      "setor_responsavel": "Direção Geral",
+      "nomenclatura": "Professores 17",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 30.0
+    }
+  },
+  {
+    "nome": "Banheiro 16 (Masculino)",
+    "origem": [],
+    "codigo": "B311",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Andar 3",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Banheiro",
+      "setor_responsavel": "Administração de Edifícios",
+      "nomenclatura": "Banheiro 16",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 27.57
+    }
+  },
+  {
+    "nome": "Banheiro 17 (Feminino)",
+    "origem": [],
+    "codigo": "B312",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Andar 3",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Banheiro",
+      "setor_responsavel": "Administração de Edifícios",
+      "nomenclatura": "Banheiro 17",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 14.19
+    }
+  },
+  {
+    "nome": "Divisão de Infraestrutura e Segurança do Trabalho (DIST)",
+    "origem": [
+      "C104"
+    ],
+    "codigo": "B313",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Andar 3",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Sala Administrativa",
+      "setor_responsavel": "Direção Administrativa",
+      "nomenclatura": "DIST",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 51.83
+    }
+  },
+  {
+    "nome": "Direção Administrativa",
+    "origem": [
+      "C105.3",
+      "C105.2"
+    ],
+    "codigo": "B314",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Andar 3",
+      "ala": "Central",
+      "tipo_de_ambiente": "Sala Administrativa",
+      "setor_responsavel": "Direção Administrativa",
+      "nomenclatura": "Direção Administrativa",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 44.24
+    }
+  },
+  {
+    "nome": "Sala de Reunião",
+    "origem": [
+      "C202"
+    ],
+    "codigo": "B315",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Andar 3",
+      "ala": "Central",
+      "tipo_de_ambiente": "Sala Administrativa",
+      "setor_responsavel": "Direção Geral",
+      "nomenclatura": "Reuniões",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 29.0
+    }
+  },
+  {
+    "nome": "Direção Geral",
+    "origem": [
+      "C202"
+    ],
+    "codigo": "B316",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Andar 3",
+      "ala": "Central",
+      "tipo_de_ambiente": "Sala Administrativa",
+      "setor_responsavel": "Direção Geral",
+      "nomenclatura": "Direção Geral",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 56.93
+    }
+  },
+  {
+    "nome": "Administrativo",
+    "origem": [
+      "C106"
+    ],
+    "codigo": "B317",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Andar 3",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Sala Administrativa",
+      "setor_responsavel": "Direção Administrativa",
+      "nomenclatura": "Administrativo",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 56.96
+    }
+  },
+  {
+    "nome": "Sala de Professores 18",
+    "origem": [],
+    "codigo": "B318",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Andar 3",
+      "ala": "Direita",
+      "tipo_de_ambiente": "Sala Administrativa",
+      "setor_responsavel": "Direção Geral",
+      "nomenclatura": "Professores 18",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 27.74
+    }
+  },
+  {
+    "nome": "Sala de Professores 19",
+    "origem": [],
+    "codigo": "B319",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Andar 3",
+      "ala": "Direita",
+      "tipo_de_ambiente": "Sala Administrativa",
+      "setor_responsavel": "Direção Geral",
+      "nomenclatura": "Professores 19",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 30.22
+    }
+  },
+  {
+    "nome": "Sala de Professores 20",
+    "origem": [],
+    "codigo": "B320",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Andar 3",
+      "ala": "Direita",
+      "tipo_de_ambiente": "Sala Administrativa",
+      "setor_responsavel": "Direção Geral",
+      "nomenclatura": "Professores 20",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 30.22
+    }
+  },
+  {
+    "nome": "Sala de Professores 21",
+    "origem": [],
+    "codigo": "B321",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Andar 3",
+      "ala": "Direita",
+      "tipo_de_ambiente": "Sala Administrativa",
+      "setor_responsavel": "Direção Geral",
+      "nomenclatura": "Professores 21",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 30.22
+    }
+  },
+  {
+    "nome": "Sala de Professores 22",
+    "origem": [],
+    "codigo": "B322",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Andar 3",
+      "ala": "Direita",
+      "tipo_de_ambiente": "Sala Administrativa",
+      "setor_responsavel": "Direção Geral",
+      "nomenclatura": "Professores 22",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 30.22
+    }
+  },
+  {
+    "nome": "Depósito da Administração 02",
+    "origem": [
+      "C105.2"
+    ],
+    "codigo": "B323",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Andar 3",
+      "ala": "Direita",
+      "tipo_de_ambiente": "Depósito",
+      "setor_responsavel": "Direção Administrativa",
+      "nomenclatura": "DA 02",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 8.19
+    }
+  },
+  {
+    "nome": "Casa de Máquinas e Telhado (Bloco B)",
+    "origem": [],
+    "codigo": "B401",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Terraço",
+      "ala": "Direita",
+      "tipo_de_ambiente": "Apoio",
+      "setor_responsavel": "Direção Administrativa",
+      "nomenclatura": "Telhado Bloco B",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 1188.92
+    }
+  },
+  {
+    "nome": "Laboratório de Fabricação e Processamento de Materiais (LPM)",
+    "origem": [
+      "B022"
+    ],
+    "codigo": "BS01",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Subsolo",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Laboratório",
+      "setor_responsavel": "CEEM",
+      "nomenclatura": "LPM",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 173.06
+    }
+  },
+  {
+    "nome": "Laboratório de Materiais Cerâmicos e Vítreos (LABCEV)",
+    "origem": [],
+    "codigo": "BS02",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Subsolo",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Laboratório",
+      "setor_responsavel": "CEEM",
+      "nomenclatura": "LABCEV",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 47.43
+    }
+  },
+  {
+    "nome": "Copa para Equipe Terceirizada",
+    "origem": [
+      "C209"
+    ],
+    "codigo": "BS03",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Subsolo",
+      "ala": "Central",
+      "tipo_de_ambiente": "Copa",
+      "setor_responsavel": "Administração de Edifícios",
+      "nomenclatura": "Copa Terceirizados",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 21.27
+    }
+  },
+  {
+    "nome": "Banheiro 18",
+    "origem": [],
+    "codigo": "BS03.3",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Subsolo",
+      "ala": "Central",
+      "tipo_de_ambiente": "Banheiro",
+      "setor_responsavel": "Administração de Edifícios",
+      "nomenclatura": "Banheiro 18",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 2.43
+    }
+  },
+  {
+    "nome": "Vestiário 03",
+    "origem": [],
+    "codigo": "BS03.2",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Subsolo",
+      "ala": "Central",
+      "tipo_de_ambiente": "Banheiro",
+      "setor_responsavel": "Administração de Edifícios",
+      "nomenclatura": "Vestiário 03",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 1.46
+    }
+  },
+  {
+    "nome": "Vestiário 04",
+    "origem": [],
+    "codigo": "BS03.1",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Subsolo",
+      "ala": "Central",
+      "tipo_de_ambiente": "Banheiro",
+      "setor_responsavel": "Administração de Edifícios",
+      "nomenclatura": "Vestiário 04",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 1.46
+    }
+  },
+  {
+    "nome": "Almoxarifado para Infraestrutura e Manutenção",
+    "origem": [
+      "EXB01"
+    ],
+    "codigo": "BS04",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Subsolo",
+      "ala": "Central",
+      "tipo_de_ambiente": "Apoio",
+      "setor_responsavel": "DIST",
+      "nomenclatura": "Almoxarifado DIST",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 43.37
+    }
+  },
+  {
+    "nome": "Depósito para Administração de Edifícios",
+    "origem": [],
+    "codigo": "BS05",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Subsolo",
+      "ala": "Central",
+      "tipo_de_ambiente": "Apoio",
+      "setor_responsavel": "Administração de Edifícios",
+      "nomenclatura": "Depósito AED",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 48.47
+    }
+  },
+  {
+    "nome": "Central de Reagentes Químicos",
+    "origem": [],
+    "codigo": "BS06",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Subsolo",
+      "ala": "Direita",
+      "tipo_de_ambiente": "Apoio",
+      "setor_responsavel": "DIST",
+      "nomenclatura": "Reagentes",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 25.0
+    }
+  },
+  {
+    "nome": "Central de Despacho de Resíduos",
+    "origem": [],
+    "codigo": "BS07",
+    "campus": "Norte",
+    "edificio": "Bloco B",
+    "detalhes": {
+      "construcao": "Bloco B",
+      "pavimento": "Subsolo",
+      "ala": "Direita",
+      "tipo_de_ambiente": "Apoio",
+      "setor_responsavel": "Direção Administrativa",
+      "nomenclatura": "Resíduos",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": 15.57
+    }
+  },
+  {
+    "nome": "Hall de Entrada Frontal no Bloco T 01",
+    "origem": [],
+    "codigo": "TCF1",
+    "campus": "Norte",
+    "edificio": "Bloco T",
+    "detalhes": {
+      "construcao": "Bloco T",
+      "pavimento": "Térreo",
+      "ala": "Frontal",
+      "tipo_de_ambiente": "Corredor",
+      "setor_responsavel": "Direção Administrativa",
+      "nomenclatura": "Hall F1 Bloco T",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": NaN
+    }
+  },
+  {
+    "nome": "Cantina do Teatro",
+    "origem": [],
+    "codigo": "T001",
+    "campus": "Norte",
+    "edificio": "Bloco T",
+    "detalhes": {
+      "construcao": "Bloco T",
+      "pavimento": "Térreo",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Conveniência",
+      "setor_responsavel": "Direção Administrativa",
+      "nomenclatura": "Cantina Teatro",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": NaN
+    }
+  },
+  {
+    "nome": "Depósito do Teatro 01",
+    "origem": [],
+    "codigo": "T002",
+    "campus": "Norte",
+    "edificio": "Bloco T",
+    "detalhes": {
+      "construcao": "Bloco T",
+      "pavimento": "Térreo",
+      "ala": "Central",
+      "tipo_de_ambiente": "Depósito",
+      "setor_responsavel": "Direção Administrativa",
+      "nomenclatura": "Depósito Teatro 01",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": NaN
+    }
+  },
+  {
+    "nome": "Depósito do Teatro 02",
+    "origem": [],
+    "codigo": "T003",
+    "campus": "Norte",
+    "edificio": "Bloco T",
+    "detalhes": {
+      "construcao": "Bloco T",
+      "pavimento": "Térreo",
+      "ala": "Central",
+      "tipo_de_ambiente": "Depósito",
+      "setor_responsavel": "Direção Administrativa",
+      "nomenclatura": "Depósito Teatro 02",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": NaN
+    }
+  },
+  {
+    "nome": "Banheiro 19 (Masculino)",
+    "origem": [],
+    "codigo": "T004",
+    "campus": "Norte",
+    "edificio": "Bloco T",
+    "detalhes": {
+      "construcao": "Bloco T",
+      "pavimento": "Térreo",
+      "ala": "Central",
+      "tipo_de_ambiente": "Banheiro",
+      "setor_responsavel": "Direção Administrativa",
+      "nomenclatura": "Banheiro 19",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": NaN
+    }
+  },
+  {
+    "nome": "Banheiro 20 (Feminino)",
+    "origem": [],
+    "codigo": "T005",
+    "campus": "Norte",
+    "edificio": "Bloco T",
+    "detalhes": {
+      "construcao": "Bloco T",
+      "pavimento": "Térreo",
+      "ala": "Central",
+      "tipo_de_ambiente": "Banheiro",
+      "setor_responsavel": "Direção Administrativa",
+      "nomenclatura": "Banheiro 20",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": NaN
+    }
+  },
+  {
+    "nome": "Corredor Central no Bloco T 01",
+    "origem": [],
+    "codigo": "TCC1",
+    "campus": "Norte",
+    "edificio": "Bloco T",
+    "detalhes": {
+      "construcao": "Bloco T",
+      "pavimento": "Térreo",
+      "ala": "Central",
+      "tipo_de_ambiente": "Corredor",
+      "setor_responsavel": "Direção Administrativa",
+      "nomenclatura": "Corredor C1 Bloco T",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": NaN
+    }
+  },
+  {
+    "nome": "Corredor Central no Bloco T 02",
+    "origem": [],
+    "codigo": "TCC2",
+    "campus": "Norte",
+    "edificio": "Bloco T",
+    "detalhes": {
+      "construcao": "Bloco T",
+      "pavimento": "Térreo",
+      "ala": "Central",
+      "tipo_de_ambiente": "Corredor",
+      "setor_responsavel": "Direção Administrativa",
+      "nomenclatura": "Corredor C2 Bloco T",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": NaN
+    }
+  },
+  {
+    "nome": "Corredor Esquerda no Bloco T 01",
+    "origem": [],
+    "codigo": "TCE1",
+    "campus": "Norte",
+    "edificio": "Bloco T",
+    "detalhes": {
+      "construcao": "Bloco T",
+      "pavimento": "Térreo",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Corredor",
+      "setor_responsavel": "Direção Administrativa",
+      "nomenclatura": "Corredor E1 Bloco T",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": NaN
+    }
+  },
+  {
+    "nome": "Corredor Central no Bloco T 03",
+    "origem": [],
+    "codigo": "TCC3",
+    "campus": "Norte",
+    "edificio": "Bloco T",
+    "detalhes": {
+      "construcao": "Bloco T",
+      "pavimento": "Térreo",
+      "ala": "Central",
+      "tipo_de_ambiente": "Corredor",
+      "setor_responsavel": "Direção Administrativa",
+      "nomenclatura": "Corredor C3 Bloco T",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": NaN
+    }
+  },
+  {
+    "nome": "Corredor Direita no Bloco T 01",
+    "origem": [],
+    "codigo": "TCD1",
+    "campus": "Norte",
+    "edificio": "Bloco T",
+    "detalhes": {
+      "construcao": "Bloco T",
+      "pavimento": "Térreo",
+      "ala": "Direita",
+      "tipo_de_ambiente": "Corredor",
+      "setor_responsavel": "Direção Administrativa",
+      "nomenclatura": "Corredor D1 Bloco T",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": NaN
+    }
+  },
+  {
+    "nome": "Camarim 01",
+    "origem": [],
+    "codigo": "T006",
+    "campus": "Norte",
+    "edificio": "Bloco T",
+    "detalhes": {
+      "construcao": "Bloco T",
+      "pavimento": "Térreo",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Apoio",
+      "setor_responsavel": "Direção Administrativa",
+      "nomenclatura": "Camarim 01",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": NaN
+    }
+  },
+  {
+    "nome": "Palco do Teatro",
+    "origem": [],
+    "codigo": "T007",
+    "campus": "Norte",
+    "edificio": "Bloco T",
+    "detalhes": {
+      "construcao": "Bloco T",
+      "pavimento": "Térreo",
+      "ala": "Central",
+      "tipo_de_ambiente": "Palco",
+      "setor_responsavel": "Direção Administrativa",
+      "nomenclatura": "Palco",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": NaN
+    }
+  },
+  {
+    "nome": "Camarim 02",
+    "origem": [],
+    "codigo": "T008",
+    "campus": "Norte",
+    "edificio": "Bloco T",
+    "detalhes": {
+      "construcao": "Bloco T",
+      "pavimento": "Térreo",
+      "ala": "Direita",
+      "tipo_de_ambiente": "Apoio",
+      "setor_responsavel": "Direção Administrativa",
+      "nomenclatura": "Camarim 02",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": NaN
+    }
+  },
+  {
+    "nome": "Platéia Direita Inferior",
+    "origem": [],
+    "codigo": "T009",
+    "campus": "Norte",
+    "edificio": "Bloco T",
+    "detalhes": {
+      "construcao": "Bloco T",
+      "pavimento": "Térreo",
+      "ala": "Direita",
+      "tipo_de_ambiente": "Auditório",
+      "setor_responsavel": "Direção Administrativa",
+      "nomenclatura": "Platéia DI",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": NaN
+    }
+  },
+  {
+    "nome": "Platéia Esquerda Inferior",
+    "origem": [],
+    "codigo": "T010",
+    "campus": "Norte",
+    "edificio": "Bloco T",
+    "detalhes": {
+      "construcao": "Bloco T",
+      "pavimento": "Térreo",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Auditório",
+      "setor_responsavel": "Direção Administrativa",
+      "nomenclatura": "Platéia EI",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": NaN
+    }
+  },
+  {
+    "nome": "Subsolo do Teatro",
+    "origem": [],
+    "codigo": "TS01",
+    "campus": "Norte",
+    "edificio": "Bloco T",
+    "detalhes": {
+      "construcao": "Bloco T",
+      "pavimento": "Subsolo",
+      "ala": "Central",
+      "tipo_de_ambiente": "Apoio",
+      "setor_responsavel": "Direção Administrativa",
+      "nomenclatura": "Subsolo Teatro",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": NaN
+    }
+  },
+  {
+    "nome": "Corredor Central no Bloco T 04",
+    "origem": [],
+    "codigo": "TCC4",
+    "campus": "Norte",
+    "edificio": "Bloco T",
+    "detalhes": {
+      "construcao": "Bloco T",
+      "pavimento": "Andar 1",
+      "ala": "Central",
+      "tipo_de_ambiente": "Corredor",
+      "setor_responsavel": "Direção Administrativa",
+      "nomenclatura": "Corredor C4 Bloco T",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": NaN
+    }
+  },
+  {
+    "nome": "Platéia Direita Superior",
+    "origem": [],
+    "codigo": "T101",
+    "campus": "Norte",
+    "edificio": "Bloco T",
+    "detalhes": {
+      "construcao": "Bloco T",
+      "pavimento": "Andar 1",
+      "ala": "Direita",
+      "tipo_de_ambiente": "Auditório",
+      "setor_responsavel": "Direção Administrativa",
+      "nomenclatura": "Platéia DS",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": NaN
+    }
+  },
+  {
+    "nome": "Platéia Esquerda Superior",
+    "origem": [],
+    "codigo": "T103",
+    "campus": "Norte",
+    "edificio": "Bloco T",
+    "detalhes": {
+      "construcao": "Bloco T",
+      "pavimento": "Andar 1",
+      "ala": "Esquerda",
+      "tipo_de_ambiente": "Auditório",
+      "setor_responsavel": "Direção Administrativa",
+      "nomenclatura": "Platéia ES",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": NaN
+    }
+  },
+  {
+    "nome": "Mezanino do Teatro",
+    "origem": [],
+    "codigo": "T102",
+    "campus": "Norte",
+    "edificio": "Bloco T",
+    "detalhes": {
+      "construcao": "Bloco T",
+      "pavimento": "Andar 1",
+      "ala": "Central",
+      "tipo_de_ambiente": "Apoio",
+      "setor_responsavel": "Direção Administrativa",
+      "nomenclatura": "Mezanino Teatro",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": NaN
+    }
+  },
+  {
+    "nome": "Cabine de Audiovisual do Teatro",
+    "origem": [],
+    "codigo": "T102.1",
+    "campus": "Norte",
+    "edificio": "Bloco T",
+    "detalhes": {
+      "construcao": "Bloco T",
+      "pavimento": "Andar 1",
+      "ala": "Central",
+      "tipo_de_ambiente": "Apoio",
+      "setor_responsavel": "Direção Administrativa",
+      "nomenclatura": "Cabine Teatro",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": NaN
+    }
+  },
+  {
+    "nome": "Guarita 01",
+    "origem": [
+      "EXA01"
+    ],
+    "codigo": "EX01",
+    "campus": "Norte",
+    "edificio": "Externo",
+    "detalhes": {
+      "construcao": "Externo",
+      "pavimento": "Térreo",
+      "ala": "Frontal",
+      "tipo_de_ambiente": "Apoio",
+      "setor_responsavel": "Direção Administrativa",
+      "nomenclatura": "Guarita 01",
+      "descricao": NaN,
+      "observacoes": NaN,
+      "sigla": NaN,
+      "dimensao_m": NaN
+    }
+  }
+]
