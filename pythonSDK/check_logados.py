@@ -41,7 +41,7 @@ def load_json_file(filename):
 
 
 def get_lideres():
-    return load_json_file("json/lideres.json")
+    return load_json_file("json0914/lideres.json")
     
 
 if __name__ == "__main__":
@@ -53,6 +53,6 @@ if __name__ == "__main__":
         if user.email in lideres:
             print(user.email)
             LOGADOS += 1
-    print(f"{LOGADOS} de {len(lideres)}")
+    print(f"{LOGADOS} de {len(lideres)} ({LOGADOS/len(lideres)*100:.2f}%)")
 
 
