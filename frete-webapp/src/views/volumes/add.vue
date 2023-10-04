@@ -301,7 +301,7 @@ async function salvar_volume() {
   console.log(`Volume criado ${volumeid}`)
   set_mensagem_popup("Volume registrado com sucesso!", "success")
   reset_new_volume()
-  await items.update_ambiente(ambiente_sigla)
+  setTimeout(async () => await items.update_ambiente(ambiente_sigla), 500)
 }
 
 onMounted(() => {
