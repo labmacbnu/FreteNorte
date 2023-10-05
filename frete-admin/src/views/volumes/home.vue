@@ -174,7 +174,7 @@ const volumes_selecionados = ref([])
                 {{ volume.categoria }}
               </td>
               <td><VMedidasDisplay v-bind="volume.medidas"></VMedidasDisplay></td>
-              <td>{{ volume.peso }} kg</td> 
+              <td>{{ volume.peso ? volume.peso + 'kg' : null}} </td> 
               <td>
                 <StatusList :status="volume.status"></StatusList>
               </td>
