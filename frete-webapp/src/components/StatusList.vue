@@ -1,1 +1,1 @@
-/home/bossa/COGEP/FreteNorte/frete-admin/src/components/StatusList.vue
+../../../frete-admin/src/components/StatusList.vue

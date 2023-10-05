@@ -1,1 +1,1 @@
-/home/bossa/COGEP/FreteNorte/frete-admin/src/components/ProgressBar.vue
+../../../frete-admin/src/components/ProgressBar.vue
