@@ -92,7 +92,7 @@ async function salvar() {
     </table>
     <div class="row mt-4 align-items-center">
         <div class="col-4">
-            Encontrei esse item na seguinte sala:
+            Encontrei esse item no seguinte ambiente:
         </div>
         <div class="col-8">
             <template v-if="!pendingAmbientes">
