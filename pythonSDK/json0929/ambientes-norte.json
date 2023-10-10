@@ -3362,9 +3362,13 @@
     }
   },
   {
-    "nome": "Sala de Professores 01",
+    "nome": "Sala de Professores 01 (MAT)",
     "origem": [
-      "C101"
+      "C101",
+      "C202",
+      "C204",
+      "C301",
+      "C306"
     ],
     "codigo": "B203",
     "detalhes": {
@@ -3381,9 +3385,13 @@
     }
   },
   {
-    "nome": "Sala de Professores 02",
+    "nome": "Sala de Professores 02 (MAT)",
     "origem": [
-      "C102"
+      "C102",
+      "C202",
+      "C204",
+      "C301",
+      "C306"
     ],
     "codigo": "B204",
     "detalhes": {
@@ -3400,9 +3408,13 @@
     }
   },
   {
-    "nome": "Sala de Professores 03",
+    "nome": "Sala de Professores 03 (MAT)",
     "origem": [
-      "C201"
+      "C201",
+      "C202",
+      "C204",
+      "C301",
+      "C306"
     ],
     "codigo": "B205",
     "detalhes": {
@@ -3419,9 +3431,13 @@
     }
   },
   {
-    "nome": "Sala de Professores 04",
+    "nome": "Sala de Professores 04 (MAT)",
     "origem": [
-      "C203"
+      "C203",
+      "C202",
+      "C204",
+      "C301",
+      "C306"
     ],
     "codigo": "B206",
     "detalhes": {
@@ -3438,9 +3454,14 @@
     }
   },
   {
-    "nome": "Sala de Professores 05",
+    "nome": "Sala de Professores 05 (CAC)",
     "origem": [
-      "C205"
+      "C205",
+      "C102",
+      "C202",
+      "C303",
+      "C304",
+      "C306"
     ],
     "codigo": "B207",
     "detalhes": {
@@ -3457,9 +3478,14 @@
     }
   },
   {
-    "nome": "Sala de Professores 06",
+    "nome": "Sala de Professores 06 (CAC)",
     "origem": [
-      "C301"
+      "C301",
+      "C102",
+      "C202",
+      "C303",
+      "C304",
+      "C306"
     ],
     "codigo": "B208",
     "detalhes": {
@@ -3476,9 +3502,14 @@
     }
   },
   {
-    "nome": "Sala de Professores 07",
+    "nome": "Sala de Professores 07 (CAC)",
     "origem": [
-      "C302"
+      "C302",
+      "C102",
+      "C202",
+      "C303",
+      "C304",
+      "C306"
     ],
     "codigo": "B209",
     "detalhes": {
@@ -3495,9 +3526,14 @@
     }
   },
   {
-    "nome": "Sala de Professores 08",
+    "nome": "Sala de Professores 08 (CAC)",
     "origem": [
-      "C303"
+      "C303",
+      "C102",
+      "C202",
+      "C303",
+      "C304",
+      "C306"
     ],
     "codigo": "B210",
     "detalhes": {
@@ -3567,9 +3603,10 @@
     }
   },
   {
-    "nome": "Sala de Professores 09",
+    "nome": "Sala de Professores 09 (EMT)",
     "origem": [
-      "C304"
+      "C304",
+      "C101"
     ],
     "codigo": "B214",
     "detalhes": {
@@ -3745,8 +3782,11 @@
     }
   },
   {
-    "nome": "Sala de Professores 10",
+    "nome": "Sala de Professores 10 (DET)",
     "origem": [
+      "C305",
+      "C204",
+      "C302",
       "C305"
     ],
     "codigo": "B303",
@@ -3764,8 +3804,12 @@
     }
   },
   {
-    "nome": "Sala de Professores 11",
-    "origem": [],
+    "nome": "Sala de Professores 11 (DET)",
+    "origem": [
+      "C204",
+      "C302",
+      "C305"
+    ],
     "codigo": "B304",
     "detalhes": {
       "construcao": "Bloco B",
@@ -3781,8 +3825,12 @@
     }
   },
   {
-    "nome": "Sala de Professores 12",
-    "origem": [],
+    "nome": "Sala de Professores 12 (DET)",
+    "origem": [
+      "C204",
+      "C302",
+      "C305"
+    ],
     "codigo": "B305",
     "detalhes": {
       "construcao": "Bloco B",
@@ -3798,8 +3846,12 @@
     }
   },
   {
-    "nome": "Sala de Professores 13",
-    "origem": [],
+    "nome": "Sala de Professores 13 (DET)",
+    "origem": [
+      "C204",
+      "C302",
+      "C305"
+    ],
     "codigo": "B306",
     "detalhes": {
       "construcao": "Bloco B",
@@ -3815,8 +3867,14 @@
     }
   },
   {
-    "nome": "Sala de Professores 14",
-    "origem": [],
+    "nome": "Sala de Professores 14 (CAC)",
+    "origem": [
+      "C102",
+      "C202",
+      "C303",
+      "C304",
+      "C306"
+    ],
     "codigo": "B307",
     "detalhes": {
       "construcao": "Bloco B",
@@ -3832,8 +3890,14 @@
     }
   },
   {
-    "nome": "Sala de Professores 15",
-    "origem": [],
+    "nome": "Sala de Professores 15 (CEE)",
+    "origem": [
+      "C102",
+      "C201",
+      "C203",
+      "C204",
+      "C205"
+    ],
     "codigo": "B308",
     "detalhes": {
       "construcao": "Bloco B",
@@ -3849,8 +3913,14 @@
     }
   },
   {
-    "nome": "Sala de Professores 16",
-    "origem": [],
+    "nome": "Sala de Professores 16 (CEE)",
+    "origem": [
+      "C102",
+      "C201",
+      "C203",
+      "C204",
+      "C205"
+    ],
     "codigo": "B309",
     "detalhes": {
       "construcao": "Bloco B",
@@ -3866,8 +3936,14 @@
     }
   },
   {
-    "nome": "Sala de Professores 17",
-    "origem": [],
+    "nome": "Sala de Professores 17 (CEE)",
+    "origem": [
+      "C102",
+      "C201",
+      "C203",
+      "C204",
+      "C205"
+    ],
     "codigo": "B310",
     "detalhes": {
       "construcao": "Bloco B",
@@ -4032,8 +4108,10 @@
     }
   },
   {
-    "nome": "Sala de Professores 18",
-    "origem": [],
+    "nome": "Sala de Professores 18 (EMT)",
+    "origem": [
+      "C101"
+    ],
     "codigo": "B319",
     "detalhes": {
       "construcao": "Bloco B",
@@ -4049,8 +4127,10 @@
     }
   },
   {
-    "nome": "Sala de Professores 19",
-    "origem": [],
+    "nome": "Sala de Professores 19 (EMT)",
+    "origem": [
+      "C101"
+    ],
     "codigo": "B320",
     "detalhes": {
       "construcao": "Bloco B",
@@ -4066,8 +4146,14 @@
     }
   },
   {
-    "nome": "Sala de Professores 20",
-    "origem": [],
+    "nome": "Sala de Professores 20 (CEE)",
+    "origem": [
+      "C102",
+      "C201",
+      "C203",
+      "C204",
+      "C205"
+    ],
     "codigo": "B321",
     "detalhes": {
       "construcao": "Bloco B",
@@ -4083,8 +4169,14 @@
     }
   },
   {
-    "nome": "Sala de Professores 21",
-    "origem": [],
+    "nome": "Sala de Professores 21 (CEE)",
+    "origem": [
+      "C102",
+      "C201",
+      "C203",
+      "C204",
+      "C205"
+    ],
     "codigo": "B322",
     "detalhes": {
       "construcao": "Bloco B",
@@ -4100,8 +4192,14 @@
     }
   },
   {
-    "nome": "Sala de Professores 22",
-    "origem": [],
+    "nome": "Sala de Professores 22 (CEE)",
+    "origem": [
+      "C102",
+      "C201",
+      "C203",
+      "C204",
+      "C205"
+    ],
     "codigo": "B323",
     "detalhes": {
       "construcao": "Bloco B",
