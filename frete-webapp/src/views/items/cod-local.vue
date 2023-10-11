@@ -106,7 +106,7 @@ async function salvar() {
         </div>
         <div class="col-6 text-end"> 
             <button :class="novo_ambiente == '' ? 'btn-secondary' : 'btn-primary'" class="btn mt-4"
-                @click="salvar">Salvar</button>
+                @click="salvar">Atualizar ambiente</button>
         </div>
     </div>
 </template>
