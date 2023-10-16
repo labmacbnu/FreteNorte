@@ -150,6 +150,71 @@
       "B016"
     ]
   },
+  "daniel.lima@ufsc.br": {
+    "nome": "Daniel Martins Lima",
+    "role": "Usuário",
+    "usuario_de": [
+      "A305"
+    ],
+    "ambientes": []
+  },
+  "carlos.moratelli@ufsc.br": {
+    "nome": "Carlos Roberto Moratelli",
+    "role": "Usuário",
+    "usuario_de": [
+      "B015"
+    ],
+    "ambientes": []
+  },
+  "janaina.guimaraes@ufsc.br": {
+    "nome": "Janaina Gonçalves Guimarães",
+    "role": "Usuário",
+    "usuario_de": [
+      "B023"
+    ],
+    "ambientes": []
+  },
+  "leonardo.mejia.rincon@ufsc.br": {
+    "nome": "Leonardo Mejia Rincon",
+    "role": "Usuário",
+    "usuario_de": [
+      "B016"
+    ],
+    "ambientes": []
+  },
+  "adao.boava@ufsc.br": {
+    "nome": "Adão Boava",
+    "role": "Usuário",
+    "usuario_de": [
+      "B024"
+    ],
+    "ambientes": []
+  },
+  "tiago.busarello@ufsc.br": {
+    "nome": "Tiago Davi Curi Busarello",
+    "role": "Usuário",
+    "usuario_de": [
+      "B114"
+    ],
+    "ambientes": []
+  },
+  "alex.bueno@ufsc.br": {
+    "nome": "Alex Fabiano Bueno",
+    "role": "Usuário",
+    "usuario_de": [
+      "B118"
+    ],
+    "ambientes": []
+  },
+  "maiquel.b@ufsc.br": {
+    "nome": "Maiquel de Brito",
+    "role": "Usuário",
+    "usuario_de": [
+      "VV001",
+      "VV002"
+    ],
+    "ambientes": []
+  },
   "francis.cordova@ufsc.br": {
     "nome": "Francis Felix Cordova Puma",
     "role": "Líder de Ambiente",
