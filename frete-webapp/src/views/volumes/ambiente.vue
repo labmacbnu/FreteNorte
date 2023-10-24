@@ -69,9 +69,9 @@ const soft_volume_modal_ref = ref(null)
     <div class="col-6">
       <h1>Volumes do ambiente {{ route.params.ambiente }}</h1>
     </div>
-    <div class="col">
+    <!-- <div class="col">
       <RouterLink :to="{name: 'volumes-print'}" class="text-secondary icon-link"><i class="bi-printer" bi></i> Versão para impressão</RouterLink>
-    </div>
+    </div> -->
     <div class="col text-end">
       <RouterLink class="btn btn-success btn-lg" :to="{name: 'volume-add'}">Criar Volume</RouterLink>
     </div>
