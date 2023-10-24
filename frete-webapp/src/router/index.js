@@ -127,6 +127,12 @@ const router = createRouter({
           name: 'volume-add',
           component: () => import('../views/volumes/add.vue'),
           meta: { title: "Adicionar Volume"}
+        },
+        {
+          path: 'ambiente/:ambiente',
+          name: 'volumes-ambiente',
+          component: () => import('../views/volumes/ambiente.vue'),
+          meta: { title: "Volumes por ambiente"}
         }
       ]
     },
