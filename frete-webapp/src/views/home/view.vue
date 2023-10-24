@@ -29,8 +29,12 @@ onMounted( () => {
                         <p class="card-text">
                             <ProgressBar v-if="meus_ambientes.status[x.codigo]" :atual="meus_ambientes.status[x.codigo].volumados" :maximo="meus_ambientes.status[x.codigo].todos" :percentual="meus_ambientes.status[x.codigo].percent"></ProgressBar>
                         </p>
-                        <RouterLink :to="{ name: 'items-ambiente', params: { ambiente: x.codigo } }">Ver ambiente
+                        <div class="d-flex flex-row justify-content-between">
+                        <RouterLink :to="{ name: 'items-ambiente', params: { ambiente: x.codigo } }"><i class="bi bi-clipboard-check"></i> Ver itens desse ambiente
                         </RouterLink>
+                        <RouterLink :to="{name: 'volumes-ambiente', params: { ambiente: x.codigo } }">Ver volumes desse ambiente <i class="bi bi-box-seam"></i></RouterLink>
+
+                        </div>
                     </div>
                 </div>
 
