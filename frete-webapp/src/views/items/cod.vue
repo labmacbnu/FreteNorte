@@ -230,10 +230,10 @@ function desmarcar_como_infra(){
                                     <td class="text-end d-print-none justify-content-between"> 
 
                                         <button v-if="item.tipo != 'Permanente'" class="btn btn-danger mx-3" data-bs-target="#deletar" data-bs-toggle="modal" >Deletar</button>
-                                        <button class="btn btn-primary" @click="atualiza_item">Salvar</button>
+                                        <button class="btn btn-primary" @click="atualiza_item">Atualizar medidas e peso</button>
                                     </td>
                                 </tr>
-                                <template v-if="item.tipo == 'Permanente'">
+                                <template v-if="item.tipo == 'Permanente' && item.meta.volumado == false">
                                 <tr>
                                     <template v-if="item.ambiente.codigo != 'PERDIDO' &&  item.ambiente.codigo != 'INFRA'">
                                     <td class="text-end">
@@ -262,7 +262,7 @@ function desmarcar_como_infra(){
                                     </tr>
                                 </template>
                                 <tr>
-                                    <template v-if="item.ambiente.codigo != 'INFRA' && item.ambiente.codigo != 'PERDIDO'">
+                                    <template v-if="item.ambiente.codigo != 'INFRA' && item.ambiente.codigo != 'PERDIDO' && item.meta.volumado == false">
                                     <td class="text-end">
                                         <i class="bi bi-building-gear"></i>
                                     </td>
