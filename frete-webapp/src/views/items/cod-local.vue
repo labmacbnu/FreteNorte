@@ -1,11 +1,10 @@
 <script setup>
 import { RouterLink, useRoute, useRouter } from 'vue-router';
 import { db } from '@/backend'
-import { ref, toValue } from 'vue';
+import { computed, ref, toValue } from 'vue';
 import { useDocument } from 'vuefire';
 import { doc, updateDoc } from 'firebase/firestore';
-import SelectPlus from '@/components/SelectPlus.vue'
-import { update } from 'firebase/database';
+import SelectPlus from '@/components/SelectPlus.vue' 
 
 const route = useRoute()
 const router = useRouter()
@@ -31,6 +30,14 @@ const {
     promiseAmbientes
 } = useDocument(doc(db, 'agregados', 'ambientes'))
 
+
+const opcoes = computed(() =>{
+    const codigos = ["INFRA", "BAIXA" ]
+    if (ambientes_sul.value) {
+        codigos.push(...ambientes_sul.value.codigos)
+    }
+    return codigos
+})
 
 const novo_ambiente = ref("")
 
@@ -97,7 +104,7 @@ async function salvar() {
         <div class="col-8">
             <template v-if="!pendingAmbientes">
                 <SelectPlus @selected="x => novo_ambiente = x" placeholder="Digite o código do ambiente para pesquisar"
-                    name="ambiente" :options="ambientes_sul.codigos" :valor="novo_ambiente"></SelectPlus>
+                    name="ambiente" :options="opcoes" :valor="novo_ambiente"></SelectPlus>
             </template>
         </div>
         <div class="col-6">
