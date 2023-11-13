@@ -66,7 +66,7 @@ onMounted(() => {
 </script>
 <template>
     <div class="d-flex justify-content-between">
-    <h4 class="display-4">Criando um lote </h4> <button @click="front_save_lote" class=" fs-4 px-4 btn btn-success">Salvar</button>
+    <h3 class="">Criando um lote </h3> <button @click="front_save_lote" class="fs-4 px-4 btn btn-success">Salvar</button>
     </div>
     <div class="row">
         <div class="col-6 mb-2">
