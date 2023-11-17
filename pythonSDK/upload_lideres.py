@@ -32,7 +32,7 @@ def load_json_file(filename):
         content = json.load(fp)
     return content
 
-LIDERES = load_json_file("json/lideres.json")
+LIDERES = load_json_file("json0929/lideres.json")
 
 
 def insere_lider(email, data): 
