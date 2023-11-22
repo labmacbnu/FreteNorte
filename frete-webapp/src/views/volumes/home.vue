@@ -1,18 +1,15 @@
 <script setup>
-import { computed, inject, onBeforeMount, onMounted, ref } from 'vue';
-import Modal from '@/components/Modal.vue';
+import {  inject, ref } from 'vue';
 import ModalDelete from '@/components/ModalDelete.vue';
 import { useUserPermissionsStore } from '@/stores/user';
-import { useItemsAmbienteStore, orderedGroupBy } from '@/stores/items'; 
+import { useItemsAmbienteStore } from '@/stores/items'; 
 import {  registra_volume, apaga_volume, useVolumesEmailStore } from '@/stores/volumes';
 import AmbienteFlag from '@/components/AmbienteFlag.vue';
 import StatusList from '@/components/StatusList.vue';
 import QRCode from '@/components/QRCode.vue';
 import moment from 'moment';
+import VMedidasDisplay from '@/components/VMedidasDisplay.vue';
 
-import { db } from '@/backend/index.js';
-import { collection, where, doc, orderBy, query } from 'firebase/firestore';
-import { useCollection } from 'vuefire';
 import { RouterLink } from 'vue-router';
 
 const { globaluser, updateUser } = inject("globaluser")
