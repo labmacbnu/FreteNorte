@@ -115,7 +115,7 @@ onMounted(async () => {
 </script>
 
 <template> 
-<div class="container-xl" id="maincontainer"> 
+<div class="container-fluid" id="maincontainer"> 
     <div id="liveToast" :class="mensagem_level" class="toast align-items-center"
     role="alert" aria-live="assertive" aria-atomic="true">
     <div class="d-flex">
