@@ -67,7 +67,7 @@ function print(){
           <h4>Volume {{ volume.codigo }}</h4>
         </div>
         <div v-if="globaluser.email == volume.responsavel.id" class="col text-end">
-          <RouterLink :to="{name: 'volume-edit', params: {codigo: volume.codigo}}" class="btn btn-secondary">Editar este volume <i class="bi bi-pencil"></i></RouterLink>
+          <RouterLink :to="{name: 'volume-edit', params: {codigo: volume.codigo}}" class="btn btn-secondary d-print-none">Editar este volume <i class="bi bi-pencil"></i></RouterLink>
         </div>
       </div>
       <div class="row justify-content-start g-1">
