@@ -4,6 +4,7 @@ import StatusList from '@/components/StatusList.vue';
 import QRCode from '@/components/QRCode.vue';
 import moment from 'moment';
 import VMedidasDisplay from '@/components/VMedidasDisplay.vue';
+import { inject } from 'vue';
 
 defineProps({
     volumes: {
@@ -11,6 +12,8 @@ defineProps({
         required: true
     }
 })
+
+const {globaluser, updateUser} = inject("globaluser")
 
 const emits = defineEmits(["delete_callback"])
 
@@ -83,9 +86,15 @@ const emits = defineEmits(["delete_callback"])
                     <td :title="moment.unix(volume.data_criacao.seconds).format('DD/MM/YY HH:MM')">{{
                         moment.unix(volume.data_criacao.seconds).format("DD/MM/YY") }}</td>
                     <td class="d-print-none">
-                        <button class="btn btn-danger" data-bs-target="#apagare" data-bs-toggle="modal"
-                            @click="emits('delete_callback', volume.codigo)"><i class="bi bi-trash"
-                                title="Apagar volume"></i></button>
+                        <template v-if="globaluser.displayName == volume.responsavel.nome">
+                            <button title="Apagar volume" class="btn btn-danger" data-bs-target="#apagare" data-bs-toggle="modal"
+                                @click="emits('delete_callback', volume.codigo)"><i class="bi bi-trash"
+                                    ></i></button>
+                        </template>
+                        <template v-else>
+                            <button title="Apenas o criador do volume pode apagá-lo" class="btn btn-secondary disabled" disabled><i class="bi bi-trash"
+                                    ></i></button>
+                        </template>
                     </td>
                 </tr> 
         </template>
