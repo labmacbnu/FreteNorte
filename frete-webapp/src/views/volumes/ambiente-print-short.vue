@@ -1,9 +1,8 @@
 <script setup>
-import { computed, inject, onBeforeMount, onMounted, ref } from 'vue'; 
-import ModalDelete from '@/components/ModalDelete.vue';
+import {  inject, ref } from 'vue'; 
 import { useUserPermissionsStore } from '@/stores/user'; 
 import {  registra_volume, apaga_volume, useVolumesEmailStore } from '@/stores/volumes'; 
-import VolumesTable from '@/components/VolumesTable.vue';
+import EtiquetaVolume from '@/components/EtiquetaVolume.vue';
 
 import { useRoute } from 'vue-router';
 
@@ -64,33 +63,17 @@ const soft_volume_modal_ref = ref(null)
 
 <template> 
   <div class="row mb-3 align-items-end">
-    <div class="col-6">
-      <h1>Volumes do ambiente {{ route.params.ambiente }}</h1>
-    </div>
-    <!-- <div class="col">
-      <RouterLink :to="{name: 'volumes-print'}" class="text-secondary icon-link"><i class="bi-printer" bi></i> Versão para impressão</RouterLink>
-    </div> -->
-    <div class="col text-end">
-      <RouterLink class="icon-link" :to="{name: 'volumes-ambiente-print-short', params: {ambiente: route.params.ambiente }}">
-        <i class="bi bi-printer me-1"></i>Imprimir etiquetas</RouterLink>
-    </div>
+    <div class="col-12 d-print-none">
+      <h1>Etiquetas dos volumes do ambiente {{ route.params.ambiente }}</h1>
+    </div> 
   </div>
-  <div class="row">
-    <div class="col">
-     <VolumesTable :volumes="volumes" @delete_callback=" (codigo) => soft_volume_modal_ref = codigo " ></VolumesTable>
+  <div class="row g-0" v-if="!pending">
+    <div class="col p-0" v-for="volume in volumes" :key="volume.codigo">
+      <EtiquetaVolume :volume="volume" />
     </div>
   </div>
 
-
-<ModalDelete modalid="apagare" :delete_callback="() => soft_apaga_volume(soft_volume_modal_ref)">
-<template #titulo>
-  Apagar volume
-</template>
-<template #corpo>
-  Certeza que quer apagar o volume {{soft_volume_modal_ref}}?
-</template>
-
-</ModalDelete>  
+ 
 </template>
 <style>
 
