@@ -9,7 +9,7 @@ defineProps({
 })
 </script>
 <template>
-<div class="card my-1" style="width: 200px">
+<div class="card my-1 mx-1" style="width: 200px">
     <div class="card-header p-1 text-center"> 
         <small>{{ volume.codigo }}</small>
     </div>
@@ -29,5 +29,8 @@ defineProps({
         </div>
     </li> 
   </ul>
+  <div class="card-footer text-end">
+    Etiqueta SisLog
+  </div>
 </div>
 </template>
