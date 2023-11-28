@@ -15,61 +15,74 @@ defineProps({
 })
 </script>
 <template>
-    <div class="row justify-content-start g-1">
-        <div class="col-2 d-flex justify-content-start">
-            <QRCode :path="route.fullPath"></QRCode>
-        </div>
-        <div class="col-4">
-            <p class="mb-1"><b>Responsável:</b> {{ volume.responsavel.nome }}</p>
-            <p class="mb-1 d-print-none"><b>Criado em:</b> {{ moment.unix(volume.data_criacao.seconds).format("DD/MM/YY HH:MM") }}</p>
-            <h5 class="mt-3">Localização</h5>
-            <div class="hstack gap-2  justify-content-between">
-                <p class="px-3 text-center mb-1"><b>Origem</b>
-                    <AmbienteFlag v-bind="volume.origem"></AmbienteFlag>
-                </p>
-                <i class="bi bi-arrow-right d-print-block d-none"></i>
-                <i class="bi bi-truck fs-1 d-print-block d-none"></i>
-                <i class="bi bi-arrow-right"></i>
-                <p class="px-3 align-self-top text-center mb-1 d-print-none"><b>Atual</b>
-                    <AmbienteFlag v-bind="volume.localizacao_atual"></AmbienteFlag>
-                </p>
-                <i class="bi bi-arrow-right d-print-none"></i>
-                <p class="px-3 text-center mb-1"><b>Destino</b>
-                    <AmbienteFlag v-bind="volume.destino"></AmbienteFlag>
-                </p>
+    <div class="conteudo  border-top border-dark pt-2 mt-2">
+        <div class="row justify-content-start g-1">
+            <div class="col-2">
+                <div class="vstack">
+                    <small class="ms-auto me-auto">{{ volume.codigo }}</small>
+                    <QRCode class="ms-auto me-auto" :path="'/volumes/cod/' + volume.codigo"></QRCode>
+                </div>
+            </div>
+            <div class="col-4">
+                <h5 class="mt-3">Localização</h5>
+                <div class="hstack gap-2  justify-content-between">
+                    <p class="px-3 text-center mb-1"><b>Origem</b>
+                        <AmbienteFlag v-bind="volume.origem"></AmbienteFlag>
+                    </p>
+                    <i class="bi bi-arrow-right d-print-block d-none"></i>
+                    <i class="bi bi-truck fs-1 d-print-block d-none"></i>
+                    <i class="bi bi-arrow-right"></i>
+                    <p class="px-3 align-self-top text-center mb-1 d-print-none"><b>Atual</b>
+                        <AmbienteFlag v-bind="volume.localizacao_atual"></AmbienteFlag>
+                    </p>
+                    <i class="bi bi-arrow-right d-print-none"></i>
+                    <p class="px-3 text-center mb-1"><b>Destino</b>
+                        <AmbienteFlag v-bind="volume.destino"></AmbienteFlag>
+                    </p>
+                </div>
+
             </div>
 
-        </div>
+            <div class="col-6">
+                <h3>{{ volume.categoria }}</h3>
+                <p class="mb-1"><b>Responsável:</b> {{ volume.responsavel.nome }}</p>
+                <p class="mb-1 d-print-none"><b>Criado em:</b> {{ moment.unix(volume.data_criacao.seconds).format("DD/MM/YY HH: MM") }}</p>
+                <p class="fw-bold mb-0">Lista de itens</p>
+                <ul class="list-group">
+                    <li class="list-group-item justify-content-between d-flex" v-for="item in volume.items">
+                        <span>
+                            {{ item.descricao ? item.descricao : item.short_descricao }}
+                        </span>
+                        <span class="bagde text-secondary">{{ item.key }}</span>
+                    </li>
+                </ul>
+            </div>
 
-        <div class="col">
-            <p class="fw-bold mb-0">Lista de itens</p>
-            <ul class="list-group">
-                <li class="list-group-item justify-content-between d-flex" v-for="item in volume.items">
-                    <span>
-                        {{ item.descricao ? item.descricao : item.short_descricao }}
-                    </span>
-                    <span class="bagde text-secondary">{{ item.key }}</span>
-                </li>
-            </ul>
+            <div class="col-12" v-if="volume.observacao">
+                <p class="mt-3"><b class="fs-5">Observação:</b> {{ volume.observacao }}</p>
+            </div>
         </div>
-
-        <div class="col-12" v-if="volume.observacao">
-            <p class="mt-3"><b class="fs-5">Observação:</b> {{ volume.observacao }}</p>
+        <div class="row">
+            <div class="col-8">
+                <template v-for="(valor, key) in simbolos_nbr">
+                    <template v-if="volume.propriedades?.includes(key)">
+                        <figure class="figure">
+                            <img :src="valor" :title="key" :alt="key" class="figure-img img-fluid"
+                                style="max-width: 96px; max-height: 96px; object-fit: contain; object-position: center;" />
+                            <figcaption class="figure-caption text-center">{{ key }}</figcaption>
+                        </figure>
+                    </template>
+                </template>
+            </div>
+            <div class="col-4">
+                
+            </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col">
-            <template v-for="(valor, key) in simbolos_nbr">
-                <template v-if="volume.propriedades?.includes(key)">
-                    <figure class="figure">
-                        <img :src="valor" :title="key" :alt="key" class="figure-img img-fluid"
-                            style="max-width: 96px; max-height: 96px; object-fit: contain; object-position: center;" />
-                        <figcaption class="figure-caption text-center">{{ key }}</figcaption>
-                    </figure>
-            </template>
-        </template>
-    </div>
-</div>
 </template>
-<style> 
+<style> @media print {
+     div.conteudo {
+         break-inside: avoid;
+     }
+ }
 </style>
