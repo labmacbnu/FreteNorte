@@ -19,14 +19,14 @@ defineProps({
         <div class="row">
             <div class="col-6">
                 <div class="vstack gap-2  align-items-start">
-                    <div class="hstack">
+                    <div class="hstack  align-items-start">
                         <div class="vstack">
                             <small class="ms-auto me-auto">{{ volume.codigo }}</small>
                             <QRCode class="ms-auto me-auto" :path="'/volumes/cod/' + volume.codigo"></QRCode>
                         </div>
                         <div class="w-75">
-                            <h5 class="mt-3"><i class="bi bi-truck fs-3 me-2"></i>Transporte</h5>
-                            <div class="hstack gap-2  justify-content-between">
+                            <h5><i class="bi bi-truck fs-3 me-2"></i>Transporte</h5>
+                            <div class="hstack gap-2  justify-content-evenly">
                                 <p class="text-center mb-1"><b>Origem</b>
                                     <AmbienteFlag v-bind="volume.origem"></AmbienteFlag>
                                 </p>
