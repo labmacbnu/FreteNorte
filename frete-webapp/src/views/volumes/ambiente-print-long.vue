@@ -60,6 +60,9 @@ async function soft_apaga_volume(codigo) {
 
 const soft_volume_modal_ref = ref(null)
 
+function print() {
+  window.print()
+}
 </script>
 
 <template> 
@@ -67,6 +70,9 @@ const soft_volume_modal_ref = ref(null)
     <div class="col-12 d-print-none">
       <h1>Conteúdos dos volumes do ambiente {{ route.params.ambiente }}</h1>
     </div> 
+    <div class="col-12 d-print-none">
+      <p @click="print" role="button" class="d-print-none form-text">Essa página foi otimizada para impressão. Clique aqui para imprimir <i class="bi bi-printer"></i>.</p>
+</div>
   </div>
   <template v-if="!pending" v-for="volume in volumes" :key="volume.codigo">   
       <ConteudoVolume :volume="volume" />
