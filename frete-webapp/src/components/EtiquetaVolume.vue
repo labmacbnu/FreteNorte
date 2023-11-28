@@ -18,10 +18,11 @@ defineProps({
   </div>
   <ul class="list-group list-group-flush">
     <li class="list-group-item text-lowercase p-1" >
-        {{ volume.items[0].short_descricao }}
-    </li>
+        {{ volume.items[0].short_descricao }} ({{ volume.items[0].key }})
+    </li> 
     <li class="list-group-item text-center">
         <div class="hstack">
+          <i class="bi bi-truck me-1"></i>
             <AmbienteFlag  v-bind="volume.origem" />
             <i class="bi bi-arrow-right mx-2"></i>
             <AmbienteFlag  v-bind="volume.destino" />
