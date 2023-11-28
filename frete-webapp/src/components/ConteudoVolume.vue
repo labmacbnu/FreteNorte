@@ -25,19 +25,17 @@ defineProps({
                             <QRCode class="ms-auto me-auto" :path="'/volumes/cod/' + volume.codigo"></QRCode>
                         </div>
                         <div class="w-75">
-                            <h5 class="mt-3">Localização</h5>
+                            <h5 class="mt-3"><i class="bi bi-truck fs-3 me-2"></i>Transporte</h5>
                             <div class="hstack gap-2  justify-content-between">
-                                <p class="px-3 text-center mb-1"><b>Origem</b>
+                                <p class="text-center mb-1"><b>Origem</b>
                                     <AmbienteFlag v-bind="volume.origem"></AmbienteFlag>
                                 </p>
-                                <i class="bi bi-arrow-right d-print-block d-none"></i>
-                                <i class="bi bi-truck fs-1 d-print-block d-none"></i>
                                 <i class="bi bi-arrow-right"></i>
                                 <p class="px-3 align-self-top text-center mb-1 d-print-none"><b>Atual</b>
                                     <AmbienteFlag v-bind="volume.localizacao_atual"></AmbienteFlag>
                                 </p>
                                 <i class="bi bi-arrow-right d-print-none"></i>
-                                <p class="px-3 text-center mb-1"><b>Destino</b>
+                                <p class="text-center mb-1"><b>Destino</b>
                                     <AmbienteFlag v-bind="volume.destino"></AmbienteFlag>
                                 </p>
                             </div>
