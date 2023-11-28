@@ -139,6 +139,12 @@ const router = createRouter({
           name: 'volumes-ambiente-print-short',
           component: () => import('../views/volumes/ambiente-print-short.vue'),
           meta: { title: "Volumes por ambiente - Impressão Etiqueta Curta"}
+        }, 
+        {
+          path: 'ambiente/:ambiente/print',
+          name: 'volumes-ambiente-print-long',
+          component: () => import('../views/volumes/ambiente-print-long.vue'),
+          meta: { title: "Volumes por ambiente - Impressão Etiqueta"}
         }
       ]
     },
