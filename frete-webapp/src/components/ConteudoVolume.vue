@@ -44,7 +44,7 @@ defineProps({
                     <div> <!-- propriedades labels -->
                         <template v-for="(valor, key) in simbolos_nbr">
                             <template v-if="volume.propriedades?.includes(key)">
-                                <figure class="figure">
+                                <figure class="figure text-center mx-1">
                                     <img :src="valor" :title="key" :alt="key" class="figure-img img-fluid"
                                         style="max-width: 96px; max-height: 96px; object-fit: contain; object-position: center;" />
                                     <figcaption class="figure-caption text-center">{{ key }}</figcaption>
