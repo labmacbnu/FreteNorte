@@ -74,6 +74,10 @@ const soft_volume_modal_ref = ref(null)
       <RouterLink class="icon-link" :to="{name: 'volumes-ambiente-print-short', params: {ambiente: route.params.ambiente }}">
         <i class="bi bi-printer me-1"></i>Imprimir etiquetas</RouterLink>
     </div>
+    <div class="col text-end">
+      <RouterLink class="icon-link" :to="{name: 'volumes-ambiente-print-long', params: {ambiente: route.params.ambiente }}">
+        <i class="bi bi-printer me-1"></i>Imprimir conteúdos dos volumes</RouterLink>
+    </div>
   </div>
   <div class="row">
     <div class="col">
