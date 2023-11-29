@@ -1,5 +1,4 @@
 <script setup>
-import { RouterLink } from 'vue-router';
 import NavLink from './NavLink.vue';
 import { reactive } from 'vue';
 

@@ -126,8 +126,12 @@ onMounted(async () => {
     </div>
   </div> 
     
-  <TheNavigation></TheNavigation>  
-  <RouterView :key="route.path"/>
+  <!--<TheNavigation></TheNavigation>  -->
+  <!--<RouterView :key="route.path"/>-->
+  <div class="text-center">
+    <h1 class=" text-danger"><i class="bi bi-tools me-3"></i> Fechado para manutenção</h1>
+    <p  class="">SisLog está fechado para efetuar operações no banco de dados <i class="bi bi-server"></i></p>
+  </div>
 </div>
 </template>
 
