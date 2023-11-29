@@ -9,7 +9,7 @@ defineProps({
 })
 </script>
 <template>
-<div class="card my-1 mx-1" style="width: 200px">
+<div class="etiqueta card my-1 mx-1">
     <div class="card-header p-1 text-center"> 
         <small>{{ volume.codigo }}</small>
     </div>
@@ -34,3 +34,10 @@ defineProps({
   </div>
 </div>
 </template>
+<style scoped>
+.etiqueta{
+  width: 200px;
+  
+  break-inside: avoid;
+}
+</style>
