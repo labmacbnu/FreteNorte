@@ -59,6 +59,8 @@ const volumes = useCollection(q, { wait: true, maxRefDepth: 1 })
 const soft_volume_modal_ref = ref(null)
 
 const volumes_selecionados = ref([])
+
+const baseurl = ref("https://frete-norte-ufsc-blumenau.web.app/volumes/cod/")
 </script>
 <template>
   <div class="row">
@@ -132,16 +134,14 @@ const volumes_selecionados = ref([])
 
         <thead>
           <tr>
-            <th class="d-print-none">Código</th>
-            <th>Lista de items</th>
+            <th class="d-print-none">Código</th> 
             <th>Origem</th>
             <th>Atual</th>
             <th>Destino</th>
             <th>Categoria</th>
-            <th>Medidas <small>(A&times;L&times;C)</small></th>
-            <th>Peso</th> 
-            <th>Status</th>
-            <th>Criado em</th>
+            <th>Itens</th>
+            <th>Medidas <small>(A&times;L&times;C)</small></th> 
+            <th>Status</th> 
             <th>Criado por</th>
             <th class="d-print-none"></th>
           </tr>
@@ -155,12 +155,7 @@ const volumes_selecionados = ref([])
                     v-model="volumes_selecionados">
                   <label :for="'volcheck' + volume.codigo" class="form-check-label">{{ volume.codigo }}</label>
                 </div>
-              </td>
-              <td>
-                <a :href="'#items' + volume.codigo" class="btn btn-sm btn-primary" data-bs-toggle="collapse" role="button"
-                  aria-expanded="false" :aria-controls="'items' + volume.codigo">
-                  Ver itens</a>
-              </td>
+              </td> 
               <td>
                 <AmbienteFlag v-bind="volume.origem"></AmbienteFlag>
               </td>
@@ -173,29 +168,8 @@ const volumes_selecionados = ref([])
               <td>
                 {{ volume.categoria }}
               </td>
-              <td><VMedidasDisplay v-bind="volume.medidas"></VMedidasDisplay></td>
-              <td>{{ volume.peso ? volume.peso + 'kg' : null}} </td> 
               <td>
-                <StatusList :status="volume.status"></StatusList>
-              </td>
-              <td :title="moment.unix(volume.data_criacao.seconds).format('DD/MM/YY HH:MM')">
-                {{ moment.unix(volume.data_criacao.seconds).format("DD/MM/YY") }}
-              </td>
-              <td>
-                {{ volume.responsavel.nome }} 
-              </td>
-              <td class="d-print-none">
-                <RouterLink :to="{ name: 'volume-codigo', params: { codigo: volume.codigo } }"
-                  class="text-decoration-none text-success-emphasis">Ver volume <i class="bi bi-box-seam"></i>
-                </RouterLink>
-                <!-- <button class="btn btn-danger" data-bs-target="#apagare" data-bs-toggle="modal" 
-              @click="() => soft_volume_modal_ref = volume.codigo"><i class="bi bi-trash" title="Apagar volume"></i></button> -->
-              </td>
-            </tr>
-            <tr class="collapse" :id="'items' + volume.codigo">
-              <td></td>
-              <td colspan="2">
-                <ul class="list-group list-group-flush align-top">
+                <ul class="list-group list-group-flush">
                   <li v-for="(item, i) in volume.items" :key="'I' + i"
                     class="list-group-item justify-content-between d-flex">
                     <small>{{ item.short_descricao }}</small>
@@ -203,8 +177,17 @@ const volumes_selecionados = ref([])
                   </li>
                 </ul>
               </td>
-              <td colspan="7"></td>
-            </tr>
+              <td><VMedidasDisplay v-bind="volume.medidas"></VMedidasDisplay></td> 
+              <td>
+                <StatusList :status="volume.status"></StatusList>
+              </td> 
+              <td>
+                <span :title="'Criado em ' + moment.unix(volume.data_criacao.seconds).format('DD/MM/YY HH:MM')">{{ volume.responsavel.nome }} </span>
+              </td>
+              <td class="d-print-none">
+                <a :href=" baseurl +  volume.codigo " target="_blank" >Ver volume <i class="bi bi-box-seam"></i></a>
+              </td>
+            </tr> 
           </template>
         </tbody>
         <tfoot>
