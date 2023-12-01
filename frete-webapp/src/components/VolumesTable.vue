@@ -17,6 +17,14 @@ const {globaluser, updateUser} = inject("globaluser")
 
 const emits = defineEmits(["delete_callback"])
 
+
+function precisa_revisar(volume){
+    if(volume.observacao.includes("PRECISA AJUSTAR AS MEDIDAS")){
+        return true
+    } else {
+        return false
+    }
+}
 </script>
 
 <template>
@@ -39,7 +47,7 @@ const emits = defineEmits(["delete_callback"])
         </thead>
         <tbody>
             <template v-for="volume in volumes" :key="'volume' + volume.codigo">
-                <tr>
+                <tr :class="[precisa_revisar(volume)? 'revisar': '']" >
                     <td class="d-none d-print-table-cell text-center">
                         <QRCode :path="'/volumes/cod/' + volume.codigo"></QRCode>
                         <p>{{ volume.codigo }}</p>
@@ -99,4 +107,10 @@ const emits = defineEmits(["delete_callback"])
                 </tr> 
         </template>
     </tbody>
-</table></template>
+</table>
+</template>
+<style scoped>
+tr.revisar td {
+    background-color: var(--bs-warning);
+}
+</style>
