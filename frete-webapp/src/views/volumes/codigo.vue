@@ -8,13 +8,13 @@ import ConteudoVolume from '@/components/ConteudoVolume.vue'
 
 const route = useRoute()
 const router = useRouter()
-const codigo = ref( (route.params)? route.params.codigo: null)
+const codigo = ref((route.params) ? route.params.codigo : null)
 
 const { globaluser, updateUser } = inject("globaluser")
 
-watch( () => route.params.codigo, () =>{
+watch(() => route.params.codigo, () => {
   codigo.value = route.params.codigo
-}, {immediate: true})
+}, { immediate: true })
 
 const {
   // rename the Ref to something more meaningful
@@ -29,11 +29,23 @@ const {
 
 const responsavel = ref(null)
 
-function print(){
+function print() {
   window.print()
 }
 
+function checkprivileges() {
+  if (!globaluser) {
+    return false
+  }
+  if (globaluser.email == volume.value.responsavel.id) {
+    return true
+  } else if (globaluser.role == "Comissão de Logística" || globaluser.role == "Administrador") {
+    return true
+  } else {
+    return false
+  }
 
+}
 
 
 </script>
@@ -58,18 +70,21 @@ function print(){
       </div>
     </template>
     <template v-else>
-      <!-- Existe --> 
+      <!-- Existe -->
 
-    <div class="row">
+      <div class="row">
         <div class="col d-flex justify-content-between">
-            <h4>Volume {{ volume.codigo }}</h4>
-            <RouterLink v-if="volume.responsavel.id == globaluser.email" class="btn btn-secondary d-print-none" :to="{name: 'volume-edit', params: {codigo: volume.codigo}}"><i class="bi bi-pencil"></i> Editar Volume</RouterLink>
+          <h4>Volume {{ volume.codigo }}</h4>
+          <RouterLink v-if="checkprivileges" class="btn btn-secondary d-print-none"
+            :to="{ name: 'volume-edit', params: { codigo: volume.codigo } }"><i class="bi bi-pencil"></i> Editar Volume
+          </RouterLink>
         </div>
-    </div>
+      </div>
       <ConteudoVolume :volume="volume"></ConteudoVolume>
-      
+
     </template>
-    <p @click="print" role="button" class="d-print-none mt-4 form-text text-end">Essa página foi otimizada para impressão. Clique aqui para imprimir <i class="bi bi-printer"></i>.</p>
+    <p @click="print" role="button" class="d-print-none mt-4 form-text text-end">Essa página foi otimizada para impressão.
+      Clique aqui para imprimir <i class="bi bi-printer"></i>.</p>
   </template>
 </template>
 <style>
@@ -82,5 +97,4 @@ function print(){
 .codigo-span {
   min-width: 4.5em;
   max-width: 6em;
-}
-</style>
+}</style>
