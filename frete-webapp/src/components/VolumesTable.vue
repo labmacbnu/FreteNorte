@@ -19,7 +19,7 @@ const emits = defineEmits(["delete_callback"])
 
 
 function precisa_revisar(volume){
-    if(volume.observacao.includes("PRECISA AJUSTAR AS MEDIDAS")){
+    if(volume.observacao && volume.observacao.includes("PRECISA AJUSTAR AS MEDIDAS")){
         return true
     } else {
         return false
