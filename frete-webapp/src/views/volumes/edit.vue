@@ -171,12 +171,12 @@ function valida_inteiros(key_event) {
 
 
 async function editar_volume() {
-  const { peso, medidas, propriedades, observacao, embalagem, status } = toValue(volume_editado)
+  const { peso, medidas, propriedades, observacao, embalagem, status, categoria } = toValue(volume_editado)
   const { campus, codigo } = toValue(localizacao_atual)
   const collectionRef = (campus == "Sul") ? 'ambientes' : 'ambientes-norte'
 
   const loc_atual = doc(db, `${collectionRef}/${codigo}`)
-  const novos_dados = { peso, medidas, propriedades, localizacao_atual: loc_atual, observacao, embalagem, status }
+  const novos_dados = { peso, medidas, propriedades, localizacao_atual: loc_atual, observacao, embalagem, status, categoria }
   //console.log(JSON.stringify(novos_dados, null, 1)) 
   validate()
   for (const [key, value] of Object.entries(validation)) {
@@ -231,7 +231,12 @@ onMounted(() => {
 
       </div>
       <div class="col-6">
-        <p class="mb-2 fs-5"><b>Categoria:</b> {{ volume_editado.categoria }}</p>
+        <div class="mb-2">
+          <label for="categoriaSelect" class="fw-bold text-dark fs-5">Categoria</label>
+          <select class="form-select" id="categoriaSelect" v-model="volume_editado.categoria" > 
+            <option v-for="categoria in categorias.valores" :value="categoria">{{ categoria }}</option>
+          </select>
+        </div>
         <p class="fw-bold mb-1">Lista de itens</p>
         <ul class="list-group">
           <li class="list-group-item justify-content-between d-flex text-lowercase px-2 py-1"
@@ -265,14 +270,16 @@ onMounted(() => {
         <div class="row">
           <div class="col">
             <div class="form-check mb-1">
-              <input id="status_criado" disabled class="form-check-input" type="checkbox" value="Criado" v-model="volume_editado.status">
+              <input id="status_criado" disabled class="form-check-input" type="checkbox" value="Criado"
+                v-model="volume_editado.status">
               <label for="status_criado" class="form-check-label">
                 Criado
               </label>
             </div>
             <template v-for="(statusval, idx) in ['Embalado']" :key="'stas'+idx">
               <div class="form-check mb-1">
-                <input :id="'status_' + statusval" class="form-check-input" type="checkbox" :value="statusval" v-model="volume_editado.status">
+                <input :id="'status_' + statusval" class="form-check-input" type="checkbox" :value="statusval"
+                  v-model="volume_editado.status">
                 <label :for="'status_' + statusval" class="form-check-label">
                   {{ statusval }}
                 </label>
@@ -294,7 +301,8 @@ onMounted(() => {
               </label>
             </div>
             <div class="form-check mb-1" v-if="volume_editado.status.includes('Para Desmontagem')">
-              <input id="status_dismontado" class="form-check-input" type="checkbox" value="Desmontado" v-model="volume_editado.status">
+              <input id="status_dismontado" class="form-check-input" type="checkbox" value="Desmontado"
+                v-model="volume_editado.status">
               <label for="status_dismontado" class="form-check-label">
                 Desmontado
               </label>
@@ -383,5 +391,4 @@ onMounted(() => {
 <style>
 .listatodositems {
   height: 30vh;
-}
-</style>
+}</style>
