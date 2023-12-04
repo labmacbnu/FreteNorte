@@ -2,6 +2,7 @@
 import QRCode from '@/components/QRCode.vue'
 import AmbienteFlag from '@/components/AmbienteFlag.vue';
 import moment from 'moment'
+import VMedidasDisplay from '@/components/VMedidasDisplay.vue'
 import { simbolos_nbr } from '@/stores/volumes'
 import { useRoute } from 'vue-router';
 
@@ -26,7 +27,7 @@ defineProps({
                         </div>
                         <div class="w-75">
                             <h5><i class="bi bi-truck fs-3 me-2"></i>Transporte</h5>
-                            <div class="hstack gap-2  justify-content-evenly">
+                            <div class="hstack gap-2  justify-content-evenly mb-3">
                                 <p class="text-center mb-1"><b>Origem</b>
                                     <AmbienteFlag v-bind="volume.origem"></AmbienteFlag>
                                 </p>
@@ -38,7 +39,10 @@ defineProps({
                                 <p class="text-center mb-1"><b>Destino</b>
                                     <AmbienteFlag v-bind="volume.destino"></AmbienteFlag>
                                 </p>
+                        
                             </div>
+                            <h5><i class="bi bi-rulers fs-3 me-2"></i>Medidas</h5>
+                                <VMedidasDisplay v-bind="volume.medidas"></VMedidasDisplay>
                         </div>
                     </div>
                     <div> <!-- propriedades labels -->
