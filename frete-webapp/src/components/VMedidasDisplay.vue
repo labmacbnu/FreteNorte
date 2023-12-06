@@ -7,6 +7,7 @@ import { computed } from 'vue';
 const p = defineProps(['a','l','c'])
 
 const okay = computed(() => {
-    return p.a >= 10 && p.l >= 10 && p.c >= 10
+    const soma = p.a + p.l + p.c
+    return (p.a >= 10 && p.l >= 10 && p.c >= 10)  || (soma >= 50)
 })
 </script>
