@@ -5083,40 +5083,6 @@
     "localizacao_atual": "ambientes/B118",
     "deleted": false
   },
-  "2NUo7Fatt8QGjvOg0Ar6": {
-    "medidas": {
-      "a": 40,
-      "l": 40,
-      "c": 80
-    },
-    "categoria": "Eletrodomésticos",
-    "peso": null,
-    "items": [
-      "items/353311"
-    ],
-    "observacao": null,
-    "servicos": [
-      "Montagem e Desmontagem",
-      "Especializados"
-    ],
-    "status": [
-      "Criado",
-      "Para Desmontagem"
-    ],
-    "data_criacao": "2023-10-17T14:51:42.695000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": 15,
-      "enchimento": true
-    },
-    "responsavel": "usuarios/rita.valle@ufsc.br",
-    "origem": "ambientes/B003",
-    "destino": "ambientes-norte/A050",
-    "propriedades": [],
-    "codigo": "2NUo7Fatt8QGjvOg0Ar6",
-    "localizacao_atual": "ambientes/B003",
-    "deleted": false
-  },
   "2NW9KNkJNFFGpKwEY4Ls": {
     "medidas": {
       "a": 85,
@@ -6089,36 +6055,6 @@
     "propriedades": [],
     "codigo": "2qMa60dByT7SSsLWRLCp",
     "localizacao_atual": "ambientes/A203",
-    "deleted": false
-  },
-  "2rAuO1pQwcqU3tOAFSQ8": {
-    "medidas": {
-      "a": 30,
-      "l": 40,
-      "c": 120
-    },
-    "categoria": "Eletrodomésticos",
-    "peso": null,
-    "items": [
-      "items/322572"
-    ],
-    "observacao": "",
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-10-11T19:00:23.520000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": 2,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/larissa.carli@ufsc.br",
-    "origem": "ambientes/B020",
-    "destino": "ambientes-norte/A033",
-    "propriedades": [],
-    "codigo": "2rAuO1pQwcqU3tOAFSQ8",
-    "localizacao_atual": "ambientes/B020",
     "deleted": false
   },
   "2vB764dEZfdQsYpbqECA": {
@@ -14372,39 +14308,6 @@
     "localizacao_atual": "ambientes/A001",
     "deleted": false
   },
-  "6yL5aiJHnl8opwcbQCFO": {
-    "medidas": {
-      "a": 50,
-      "l": 50,
-      "c": 100
-    },
-    "categoria": "Eletrodomésticos",
-    "peso": 30,
-    "items": [
-      "items/353309",
-      "items/353310"
-    ],
-    "observacao": "",
-    "servicos": [
-      "Especializados"
-    ],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-10-23T14:31:41.278000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": 4,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/cristiane.costa@ufsc.br",
-    "origem": "ambientes/B002",
-    "destino": "ambientes-norte/A041",
-    "propriedades": [],
-    "codigo": "6yL5aiJHnl8opwcbQCFO",
-    "localizacao_atual": "ambientes/B002",
-    "deleted": false
-  },
   "6zFgQlkuwRKcxzi5UVSM": {
     "medidas": {
       "a": 85,
@@ -16575,41 +16478,6 @@
     ],
     "codigo": "80hJHkkQkRhq9GywkjSV",
     "localizacao_atual": "ambientes/C105.2",
-    "deleted": false
-  },
-  "81loPavbMV3bRqRVPgtr": {
-    "medidas": {
-      "a": 32,
-      "l": 22,
-      "c": 100
-    },
-    "categoria": "Eletrônicos",
-    "peso": null,
-    "items": [
-      "items/327602",
-      "items/359940",
-      "items/359941"
-    ],
-    "observacao": "",
-    "servicos": [
-      "Montagem e Desmontagem"
-    ],
-    "status": [
-      "Criado",
-      "Para Desmontagem"
-    ],
-    "data_criacao": "2023-10-16T13:58:40.094000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/marcel.agostini@ufsc.br",
-    "origem": "ambientes/A103",
-    "destino": "ambientes-norte/A106",
-    "propriedades": [],
-    "codigo": "81loPavbMV3bRqRVPgtr",
-    "localizacao_atual": "ambientes/A103",
     "deleted": false
   },
   "85S6OiXprctpiWrlM67N": {
@@ -19194,42 +19062,6 @@
     "propriedades": [],
     "codigo": "9QDC1fNVoLnayTesIGQH",
     "localizacao_atual": "ambientes/A302",
-    "deleted": false
-  },
-  "9QIBwQrzFH8tv4jqgcCH": {
-    "medidas": {
-      "a": 33,
-      "l": 24,
-      "c": 114
-    },
-    "items": [
-      "items/359952"
-    ],
-    "peso": 15,
-    "categoria": "Ar Condicionado",
-    "observacao": "Será necessário providenciar uma caixa com as medidas compatíveis e fita adesiva para lacrar a caixa.",
-    "servicos": [
-      "Montagem e Desmontagem",
-      "Especializados"
-    ],
-    "status": [
-      "Criado",
-      "Para Desmontagem"
-    ],
-    "data_criacao": "2023-10-11T18:13:28.903000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": 4,
-      "enchimento": true
-    },
-    "responsavel": "usuarios/flavio.jerez@ufsc.br",
-    "origem": "ambientes/B105",
-    "destino": "ambientes-norte/A131",
-    "propriedades": [
-      "Frágil"
-    ],
-    "codigo": "9QIBwQrzFH8tv4jqgcCH",
-    "localizacao_atual": "ambientes/B105",
     "deleted": false
   },
   "9QTB0rryRRgvH2HCRMdT": {
@@ -24304,6 +24136,76 @@
     "propriedades": [],
     "codigo": "AzDZEWk52bUv6SnXXv6u",
     "localizacao_atual": "ambientes/B003.1",
+    "deleted": false
+  },
+  "B001005E": {
+    "medidas": {
+      "a": 65,
+      "l": 50,
+      "c": 140
+    },
+    "categoria": "Maquinário Pesado",
+    "peso": null,
+    "items": [
+      "items/ocI6b5Rc6KDMTpbxoFFr"
+    ],
+    "observacao": "Esse equipamento encontra-se atualmente no LAFIF. Não sei informar o peso corretamente, mas sei que é muito pesado.",
+    "servicos": [
+      "Especializados"
+    ],
+    "status": [
+      "Criado"
+    ],
+    "data_criacao": "2023-12-13T20:48:11.248000+00:00",
+    "embalagem": {
+      "caixa": null,
+      "platico_bolha": 4,
+      "enchimento": null
+    },
+    "responsavel": "usuarios/fernanda.steffens@ufsc.br",
+    "origem": "ambientes/B001",
+    "codigo": "B001005E",
+    "propriedades": [
+      "Frágil",
+      "Proibido Empilhar"
+    ],
+    "destino": "ambientes-norte/A048",
+    "localizacao_atual": "ambientes/B001",
+    "deleted": false
+  },
+  "B001005F": {
+    "medidas": {
+      "a": 56,
+      "l": 186,
+      "c": 70
+    },
+    "categoria": "Maquinário Pesado",
+    "peso": null,
+    "items": [
+      "items/CE9QDJWt7qQWGehvg7Hx"
+    ],
+    "observacao": "Esse equipamento encontra-se atualmente no LAFIF. Não sei informar o peso corretamente, mas sei que é muito pesado.",
+    "servicos": [
+      "Especializados"
+    ],
+    "status": [
+      "Criado"
+    ],
+    "data_criacao": "2023-12-13T20:54:12.784000+00:00",
+    "embalagem": {
+      "caixa": null,
+      "platico_bolha": 4,
+      "enchimento": null
+    },
+    "responsavel": "usuarios/fernanda.steffens@ufsc.br",
+    "origem": "ambientes/B001",
+    "codigo": "B001005F",
+    "propriedades": [
+      "Proibido Empilhar",
+      "Cargas Pesadas"
+    ],
+    "destino": "ambientes-norte/A048",
+    "localizacao_atual": "ambientes/B001",
     "deleted": false
   },
   "B0060000": {
@@ -30143,6 +30045,92 @@
     "localizacao_atual": "ambientes/B013",
     "deleted": false
   },
+  "B01300B9": {
+    "medidas": {
+      "a": "27",
+      "l": "32",
+      "c": "43"
+    },
+    "categoria": "Reagentes",
+    "peso": null,
+    "items": [
+      "items/Itz8YeUZTawrzNlJDrya",
+      "items/arnLpTK4MxeGkpmLQ0qP",
+      "items/S7nUw2N3dqUvVQJuq90F",
+      "items/aGWT1L57ILw2uVtiFISy",
+      "items/dpv8XdwOfSi4S7UxhTAk",
+      "items/jbC2vFZ6FmrkoOzXZAwT"
+    ],
+    "observacao": "",
+    "servicos": [],
+    "status": [
+      "Criado"
+    ],
+    "data_criacao": "2023-12-13T14:29:18.459000+00:00",
+    "embalagem": {
+      "caixa": "caixa_P",
+      "platico_bolha": 6,
+      "enchimento": true
+    },
+    "responsavel": "usuarios/eduardo.zapp@ufsc.br",
+    "origem": "ambientes/B013",
+    "codigo": "B01300B9",
+    "propriedades": [
+      "Frágil",
+      "Inflamável",
+      "Proibido Empilhar",
+      "Proteger da Luz",
+      "Risco Ambiental",
+      "Proteger da Umidade",
+      "Proteger do Calor"
+    ],
+    "destino": "ambientes-norte/BS06",
+    "localizacao_atual": "ambientes/B013",
+    "deleted": false
+  },
+  "B01300BA": {
+    "medidas": {
+      "a": "27",
+      "l": "32",
+      "c": "43"
+    },
+    "categoria": "Reagentes",
+    "peso": null,
+    "items": [
+      "items/ZIXOfRxEoIIXgaCh56vX",
+      "items/obo2TM02slojKm4Feb8W",
+      "items/qmCx2cFjKoRcukLGyCPm",
+      "items/quHmXqTVzy0qkfMqL8Yy",
+      "items/tdfXxsFQqQQWmjleNwtG",
+      "items/ucOFTT6YR6vG0HkUx9ZZ"
+    ],
+    "observacao": "",
+    "servicos": [],
+    "status": [
+      "Criado"
+    ],
+    "data_criacao": "2023-12-13T14:30:05.517000+00:00",
+    "embalagem": {
+      "caixa": "caixa_P",
+      "platico_bolha": 6,
+      "enchimento": true
+    },
+    "responsavel": "usuarios/eduardo.zapp@ufsc.br",
+    "origem": "ambientes/B013",
+    "codigo": "B01300BA",
+    "propriedades": [
+      "Frágil",
+      "Inflamável",
+      "Proibido Empilhar",
+      "Proteger da Luz",
+      "Risco Ambiental",
+      "Proteger da Umidade",
+      "Proteger do Calor"
+    ],
+    "destino": "ambientes-norte/BS06",
+    "localizacao_atual": "ambientes/B013",
+    "deleted": false
+  },
   "B0150041": {
     "medidas": {
       "a": 40,
@@ -31800,6 +31788,130 @@
     "localizacao_atual": "ambientes/B106",
     "deleted": false
   },
+  "B1070000": {
+    "medidas": {
+      "a": 100,
+      "l": 25,
+      "c": 64
+    },
+    "categoria": "Ferramentas",
+    "peso": null,
+    "items": [
+      "items/363761"
+    ],
+    "observacao": "",
+    "servicos": [
+      "Montagem e Desmontagem"
+    ],
+    "status": [
+      "Criado",
+      "Para Desmontagem"
+    ],
+    "data_criacao": "2023-12-13T15:35:50.688000+00:00",
+    "embalagem": {
+      "caixa": null,
+      "platico_bolha": null,
+      "enchimento": null
+    },
+    "responsavel": "usuarios/josue.andrade@ufsc.br",
+    "origem": "ambientes/B107",
+    "codigo": "B1070000",
+    "propriedades": [],
+    "destino": "ambientes-norte/BS04",
+    "localizacao_atual": "ambientes/B107",
+    "deleted": false
+  },
+  "B1070001": {
+    "medidas": {
+      "a": 170,
+      "l": 100,
+      "c": 100
+    },
+    "categoria": "Mobília",
+    "peso": null,
+    "items": [
+      "items/337986",
+      "items/337987"
+    ],
+    "observacao": "",
+    "servicos": [],
+    "status": [
+      "Criado"
+    ],
+    "data_criacao": "2023-12-13T15:38:31.334000+00:00",
+    "embalagem": {
+      "caixa": null,
+      "platico_bolha": null,
+      "enchimento": null
+    },
+    "responsavel": "usuarios/josue.andrade@ufsc.br",
+    "origem": "ambientes/B107",
+    "codigo": "B1070001",
+    "propriedades": [],
+    "destino": "ambientes-norte/BS04",
+    "localizacao_atual": "ambientes/B107",
+    "deleted": false
+  },
+  "B1070002": {
+    "medidas": {
+      "a": 80,
+      "l": 60,
+      "c": 75
+    },
+    "categoria": "Mobília",
+    "peso": null,
+    "items": [
+      "items/327290"
+    ],
+    "observacao": "",
+    "servicos": [],
+    "status": [
+      "Criado"
+    ],
+    "data_criacao": "2023-12-13T15:39:17.279000+00:00",
+    "embalagem": {
+      "caixa": null,
+      "platico_bolha": null,
+      "enchimento": null
+    },
+    "responsavel": "usuarios/josue.andrade@ufsc.br",
+    "origem": "ambientes/B107",
+    "codigo": "B1070002",
+    "propriedades": [],
+    "destino": "ambientes-norte/BS04",
+    "localizacao_atual": "ambientes/B107",
+    "deleted": false
+  },
+  "B1070003": {
+    "medidas": {
+      "a": 60,
+      "l": 40,
+      "c": 60
+    },
+    "categoria": "Eletrônicos",
+    "peso": null,
+    "items": [
+      "items/327154"
+    ],
+    "observacao": "",
+    "servicos": [],
+    "status": [
+      "Criado"
+    ],
+    "data_criacao": "2023-12-13T15:40:04.391000+00:00",
+    "embalagem": {
+      "caixa": null,
+      "platico_bolha": null,
+      "enchimento": null
+    },
+    "responsavel": "usuarios/josue.andrade@ufsc.br",
+    "origem": "ambientes/B107",
+    "codigo": "B1070003",
+    "propriedades": [],
+    "destino": "ambientes-norte/BS04",
+    "localizacao_atual": "ambientes/B107",
+    "deleted": false
+  },
   "B1080000": {
     "medidas": {
       "a": 64,
@@ -32848,6 +32960,813 @@
     ],
     "destino": "ambientes-norte/A039",
     "localizacao_atual": "ambientes/B114",
+    "deleted": false
+  },
+  "B1170000": {
+    "medidas": {
+      "a": 56,
+      "l": 80,
+      "c": 95
+    },
+    "categoria": "Mobília",
+    "peso": null,
+    "items": [
+      "items/313738"
+    ],
+    "observacao": "",
+    "servicos": [],
+    "status": [
+      "Criado"
+    ],
+    "data_criacao": "2023-12-13T16:57:16.812000+00:00",
+    "embalagem": {
+      "caixa": null,
+      "platico_bolha": null,
+      "enchimento": null
+    },
+    "responsavel": "usuarios/alexandre.ferreira@ufsc.br",
+    "origem": "ambientes/B117",
+    "codigo": "B1170000",
+    "propriedades": [],
+    "destino": "ambientes-norte/A038",
+    "localizacao_atual": "ambientes/B117",
+    "deleted": false
+  },
+  "B1170001": {
+    "medidas": {
+      "a": "27",
+      "l": "32",
+      "c": "43"
+    },
+    "categoria": "Mobília",
+    "peso": 4,
+    "items": [
+      "items/348044"
+    ],
+    "observacao": "",
+    "servicos": [],
+    "status": [
+      "Criado"
+    ],
+    "data_criacao": "2023-12-13T17:22:05.658000+00:00",
+    "embalagem": {
+      "caixa": "caixa_P",
+      "platico_bolha": 1,
+      "enchimento": true
+    },
+    "responsavel": "usuarios/alexandre.ferreira@ufsc.br",
+    "origem": "ambientes/B117",
+    "codigo": "B1170001",
+    "propriedades": [],
+    "destino": "ambientes-norte/A038",
+    "localizacao_atual": "ambientes/B117",
+    "deleted": false
+  },
+  "B1170002": {
+    "medidas": {
+      "a": 91,
+      "l": 49,
+      "c": 171
+    },
+    "categoria": "Mobília",
+    "peso": null,
+    "items": [
+      "items/322763"
+    ],
+    "observacao": "",
+    "servicos": [],
+    "status": [
+      "Criado"
+    ],
+    "data_criacao": "2023-12-13T17:23:15.662000+00:00",
+    "embalagem": {
+      "caixa": null,
+      "platico_bolha": null,
+      "enchimento": null
+    },
+    "responsavel": "usuarios/alexandre.ferreira@ufsc.br",
+    "origem": "ambientes/B117",
+    "codigo": "B1170002",
+    "propriedades": [],
+    "destino": "ambientes-norte/A038",
+    "localizacao_atual": "ambientes/B117",
+    "deleted": false
+  },
+  "B1170003": {
+    "medidas": {
+      "a": 40,
+      "l": 90,
+      "c": 198
+    },
+    "categoria": "Mobília",
+    "peso": null,
+    "items": [
+      "items/338036"
+    ],
+    "observacao": "",
+    "servicos": [],
+    "status": [
+      "Criado"
+    ],
+    "data_criacao": "2023-12-13T17:26:25.431000+00:00",
+    "embalagem": {
+      "caixa": null,
+      "platico_bolha": null,
+      "enchimento": null
+    },
+    "responsavel": "usuarios/alexandre.ferreira@ufsc.br",
+    "origem": "ambientes/B117",
+    "codigo": "B1170003",
+    "propriedades": [],
+    "destino": "ambientes-norte/A038",
+    "localizacao_atual": "ambientes/B117",
+    "deleted": false
+  },
+  "B1170004": {
+    "medidas": {
+      "a": "27",
+      "l": "32",
+      "c": "43"
+    },
+    "categoria": "Maquinário Sensível",
+    "peso": 3,
+    "items": [
+      "items/338103"
+    ],
+    "observacao": "Embalar interior da capela",
+    "servicos": [],
+    "status": [
+      "Criado"
+    ],
+    "data_criacao": "2023-12-13T17:28:46.854000+00:00",
+    "embalagem": {
+      "caixa": "caixa_P",
+      "platico_bolha": 3,
+      "enchimento": null
+    },
+    "responsavel": "usuarios/alexandre.ferreira@ufsc.br",
+    "origem": "ambientes/B117",
+    "codigo": "B1170004",
+    "propriedades": [],
+    "destino": "ambientes-norte/A038",
+    "localizacao_atual": "ambientes/B117",
+    "deleted": false
+  },
+  "B1170005": {
+    "medidas": {
+      "a": 56,
+      "l": 80,
+      "c": 95
+    },
+    "categoria": "Mobília",
+    "peso": null,
+    "items": [
+      "items/313739",
+      "items/313749"
+    ],
+    "observacao": "Verificar destino final. Não existe espaço para esta equipamento no A038",
+    "servicos": [],
+    "status": [
+      "Criado"
+    ],
+    "data_criacao": "2023-12-13T17:31:09.869000+00:00",
+    "embalagem": {
+      "caixa": null,
+      "platico_bolha": null,
+      "enchimento": null
+    },
+    "responsavel": "usuarios/alexandre.ferreira@ufsc.br",
+    "origem": "ambientes/B117",
+    "codigo": "B1170005",
+    "propriedades": [],
+    "destino": "ambientes-norte/A038",
+    "localizacao_atual": "ambientes/B117",
+    "deleted": false
+  },
+  "B1170006": {
+    "medidas": {
+      "a": 90,
+      "l": 60,
+      "c": 55
+    },
+    "categoria": "Mobília",
+    "peso": null,
+    "items": [
+      "items/395768",
+      "items/395769",
+      "items/395770",
+      "items/395771",
+      "items/395772",
+      "items/395773"
+    ],
+    "observacao": "",
+    "servicos": [],
+    "status": [
+      "Criado"
+    ],
+    "data_criacao": "2023-12-13T17:35:41.945000+00:00",
+    "embalagem": {
+      "caixa": null,
+      "platico_bolha": null,
+      "enchimento": null
+    },
+    "responsavel": "usuarios/alexandre.ferreira@ufsc.br",
+    "origem": "ambientes/B117",
+    "codigo": "B1170006",
+    "propriedades": [],
+    "destino": "ambientes-norte/A038",
+    "localizacao_atual": "ambientes/B117",
+    "deleted": false
+  },
+  "B1170007": {
+    "medidas": {
+      "a": 56,
+      "l": 80,
+      "c": 95
+    },
+    "categoria": "Mobília",
+    "peso": null,
+    "items": [
+      "items/313760",
+      "items/313864",
+      "items/337933",
+      "items/337943",
+      "items/337952",
+      "items/337957",
+      "items/337966",
+      "items/337971",
+      "items/337973",
+      "items/356077",
+      "items/356110",
+      "items/356295"
+    ],
+    "observacao": "Verificar destino final. Provavelmente, não existe espaço para esta equipamento no A038.",
+    "servicos": [],
+    "status": [
+      "Criado"
+    ],
+    "data_criacao": "2023-12-13T17:38:02.754000+00:00",
+    "embalagem": {
+      "caixa": null,
+      "platico_bolha": null,
+      "enchimento": null
+    },
+    "responsavel": "usuarios/alexandre.ferreira@ufsc.br",
+    "origem": "ambientes/B117",
+    "codigo": "B1170007",
+    "propriedades": [],
+    "destino": "ambientes-norte/A038",
+    "localizacao_atual": "ambientes/B117",
+    "deleted": false
+  },
+  "B1170008": {
+    "medidas": {
+      "a": 200,
+      "l": 92,
+      "c": 42
+    },
+    "categoria": "Mobília",
+    "peso": null,
+    "items": [
+      "items/338253"
+    ],
+    "observacao": "",
+    "servicos": [],
+    "status": [
+      "Criado"
+    ],
+    "data_criacao": "2023-12-13T17:40:11.600000+00:00",
+    "embalagem": {
+      "caixa": null,
+      "platico_bolha": null,
+      "enchimento": null
+    },
+    "responsavel": "usuarios/alexandre.ferreira@ufsc.br",
+    "origem": "ambientes/B117",
+    "codigo": "B1170008",
+    "propriedades": [],
+    "destino": "ambientes-norte/A038",
+    "localizacao_atual": "ambientes/B117",
+    "deleted": false
+  },
+  "B1170009": {
+    "medidas": {
+      "a": 74,
+      "l": 60,
+      "c": 150
+    },
+    "categoria": "Mobília",
+    "peso": null,
+    "items": [
+      "items/352926"
+    ],
+    "observacao": "",
+    "servicos": [],
+    "status": [
+      "Criado"
+    ],
+    "data_criacao": "2023-12-13T17:44:34.563000+00:00",
+    "embalagem": {
+      "caixa": null,
+      "platico_bolha": null,
+      "enchimento": null
+    },
+    "responsavel": "usuarios/alexandre.ferreira@ufsc.br",
+    "origem": "ambientes/B117",
+    "codigo": "B1170009",
+    "propriedades": [],
+    "destino": "ambientes-norte/A038",
+    "localizacao_atual": "ambientes/B117",
+    "deleted": false
+  },
+  "B117000A": {
+    "medidas": {
+      "a": 4,
+      "l": 120,
+      "c": 300
+    },
+    "categoria": "Material de Escritório",
+    "peso": null,
+    "items": [
+      "items/359928"
+    ],
+    "observacao": "",
+    "servicos": [],
+    "status": [
+      "Criado"
+    ],
+    "data_criacao": "2023-12-13T17:45:59.331000+00:00",
+    "embalagem": {
+      "caixa": null,
+      "platico_bolha": null,
+      "enchimento": null
+    },
+    "responsavel": "usuarios/alexandre.ferreira@ufsc.br",
+    "origem": "ambientes/B117",
+    "codigo": "B117000A",
+    "propriedades": [],
+    "destino": "ambientes-norte/A038",
+    "localizacao_atual": "ambientes/B117",
+    "deleted": false
+  },
+  "B117000B": {
+    "medidas": {
+      "a": 73,
+      "l": 60,
+      "c": 140
+    },
+    "categoria": "Mobília",
+    "peso": null,
+    "items": [
+      "items/395765",
+      "items/395766",
+      "items/395767"
+    ],
+    "observacao": "",
+    "servicos": [],
+    "status": [
+      "Criado"
+    ],
+    "data_criacao": "2023-12-13T17:47:19.990000+00:00",
+    "embalagem": {
+      "caixa": null,
+      "platico_bolha": null,
+      "enchimento": null
+    },
+    "responsavel": "usuarios/alexandre.ferreira@ufsc.br",
+    "origem": "ambientes/B117",
+    "codigo": "B117000B",
+    "propriedades": [],
+    "destino": "ambientes-norte/A038",
+    "localizacao_atual": "ambientes/B117",
+    "deleted": false
+  },
+  "B117000C": {
+    "medidas": {
+      "a": "27",
+      "l": "32",
+      "c": "43"
+    },
+    "categoria": "Outros",
+    "peso": null,
+    "items": [
+      "items/338256"
+    ],
+    "observacao": "",
+    "servicos": [],
+    "status": [
+      "Criado"
+    ],
+    "data_criacao": "2023-12-13T17:48:27.398000+00:00",
+    "embalagem": {
+      "caixa": "caixa_P",
+      "platico_bolha": null,
+      "enchimento": null
+    },
+    "responsavel": "usuarios/alexandre.ferreira@ufsc.br",
+    "origem": "ambientes/B117",
+    "codigo": "B117000C",
+    "propriedades": [],
+    "destino": "ambientes-norte/A038",
+    "localizacao_atual": "ambientes/B117",
+    "deleted": false
+  },
+  "B117000D": {
+    "medidas": {
+      "a": 50,
+      "l": 40,
+      "c": 60
+    },
+    "categoria": "Maquinário Sensível",
+    "peso": 19,
+    "items": [
+      "items/363949"
+    ],
+    "observacao": "Equipamento demasiado grande para o tamanha de caixa apresentado. Verificar disponibilidade de caixa maior.",
+    "servicos": [],
+    "status": [
+      "Criado"
+    ],
+    "data_criacao": "2023-12-13T17:50:48.934000+00:00",
+    "embalagem": {
+      "caixa": "caixa_padrao",
+      "platico_bolha": 4,
+      "enchimento": null
+    },
+    "responsavel": "usuarios/alexandre.ferreira@ufsc.br",
+    "origem": "ambientes/B117",
+    "codigo": "B117000D",
+    "propriedades": [],
+    "destino": "ambientes-norte/A038",
+    "localizacao_atual": "ambientes/B117",
+    "deleted": false
+  },
+  "B117000E": {
+    "medidas": {
+      "a": 50,
+      "l": 80,
+      "c": 70
+    },
+    "categoria": "Maquinário Pesado",
+    "peso": 30,
+    "items": [
+      "items/353406"
+    ],
+    "observacao": "No momento de embalagem, verificar a existencia da caixa em madeira disponivel no laboratório. Será a mesma que irá realizar o transporte deste equipamento",
+    "servicos": [],
+    "status": [
+      "Criado"
+    ],
+    "data_criacao": "2023-12-13T17:59:48.340000+00:00",
+    "embalagem": {
+      "caixa": null,
+      "platico_bolha": null,
+      "enchimento": null
+    },
+    "responsavel": "usuarios/alexandre.ferreira@ufsc.br",
+    "origem": "ambientes/B117",
+    "codigo": "B117000E",
+    "propriedades": [],
+    "destino": "ambientes-norte/A038",
+    "localizacao_atual": "ambientes/B117",
+    "deleted": false
+  },
+  "B117000F": {
+    "medidas": {
+      "a": 40,
+      "l": 50,
+      "c": 40
+    },
+    "categoria": "Maquinário",
+    "peso": 10,
+    "items": [
+      "items/352957"
+    ],
+    "observacao": "",
+    "servicos": [],
+    "status": [
+      "Criado"
+    ],
+    "data_criacao": "2023-12-13T18:02:23.384000+00:00",
+    "embalagem": {
+      "caixa": "caixa_M",
+      "platico_bolha": null,
+      "enchimento": null
+    },
+    "responsavel": "usuarios/alexandre.ferreira@ufsc.br",
+    "origem": "ambientes/B117",
+    "codigo": "B117000F",
+    "propriedades": [],
+    "destino": "ambientes-norte/A038",
+    "localizacao_atual": "ambientes/B117",
+    "deleted": false
+  },
+  "B1170010": {
+    "medidas": {
+      "a": "27",
+      "l": "32",
+      "c": "43"
+    },
+    "categoria": "Maquinário Sensível",
+    "peso": 7,
+    "items": [
+      "items/364043",
+      "items/364044",
+      "items/364045",
+      "items/364046",
+      "items/364047"
+    ],
+    "observacao": "",
+    "servicos": [],
+    "status": [
+      "Criado"
+    ],
+    "data_criacao": "2023-12-13T18:08:03.259000+00:00",
+    "embalagem": {
+      "caixa": "caixa_P",
+      "platico_bolha": 2,
+      "enchimento": null
+    },
+    "responsavel": "usuarios/alexandre.ferreira@ufsc.br",
+    "origem": "ambientes/B117",
+    "codigo": "B1170010",
+    "propriedades": [],
+    "destino": "ambientes-norte/A038",
+    "localizacao_atual": "ambientes/B117",
+    "deleted": false
+  },
+  "B1170011": {
+    "medidas": {
+      "a": 92,
+      "l": 80,
+      "c": 200
+    },
+    "categoria": "Mobília",
+    "peso": 15,
+    "items": [
+      "items/MXivwOncRMWzBCNIYcOx"
+    ],
+    "observacao": "Verificar destino final. Não existe espaço no A038.",
+    "servicos": [],
+    "status": [
+      "Criado"
+    ],
+    "data_criacao": "2023-12-13T18:33:22.147000+00:00",
+    "embalagem": {
+      "caixa": null,
+      "platico_bolha": null,
+      "enchimento": null
+    },
+    "responsavel": "usuarios/alexandre.ferreira@ufsc.br",
+    "origem": "ambientes/B117",
+    "codigo": "B1170011",
+    "propriedades": [],
+    "destino": "ambientes-norte/A038",
+    "localizacao_atual": "ambientes/B117",
+    "deleted": false
+  },
+  "B1170012": {
+    "medidas": {
+      "a": 92,
+      "l": 80,
+      "c": 200
+    },
+    "categoria": "Mobília",
+    "peso": 15,
+    "items": [
+      "items/HQQAeYqOUqq5gUXxGfwl"
+    ],
+    "observacao": "Verificar destino final",
+    "servicos": [],
+    "status": [
+      "Criado"
+    ],
+    "data_criacao": "2023-12-13T18:35:46.989000+00:00",
+    "embalagem": {
+      "caixa": null,
+      "platico_bolha": null,
+      "enchimento": null
+    },
+    "responsavel": "usuarios/alexandre.ferreira@ufsc.br",
+    "origem": "ambientes/B117",
+    "codigo": "B1170012",
+    "propriedades": [],
+    "destino": "ambientes-norte/A038",
+    "localizacao_atual": "ambientes/B117",
+    "deleted": false
+  },
+  "B1170013": {
+    "medidas": {
+      "a": 92,
+      "l": 80,
+      "c": 200
+    },
+    "categoria": "Mobília",
+    "peso": null,
+    "items": [
+      "items/Vk6ceo9DrUFbwoJAOj92"
+    ],
+    "observacao": "Verificar destino final. Não existe espaço fisico no lab 038",
+    "servicos": [],
+    "status": [
+      "Criado"
+    ],
+    "data_criacao": "2023-12-13T18:36:52.373000+00:00",
+    "embalagem": {
+      "caixa": null,
+      "platico_bolha": null,
+      "enchimento": null
+    },
+    "responsavel": "usuarios/alexandre.ferreira@ufsc.br",
+    "origem": "ambientes/B117",
+    "codigo": "B1170013",
+    "propriedades": [],
+    "destino": "ambientes-norte/A038",
+    "localizacao_atual": "ambientes/B117",
+    "deleted": false
+  },
+  "B1170014": {
+    "medidas": {
+      "a": 50,
+      "l": 40,
+      "c": 60
+    },
+    "categoria": "Outros",
+    "peso": null,
+    "items": [
+      "items/7TO47QitMU3LaLEa54YG"
+    ],
+    "observacao": "Caixa destinada a conteúdo do armario de aço",
+    "servicos": [],
+    "status": [
+      "Criado"
+    ],
+    "data_criacao": "2023-12-13T18:50:56.561000+00:00",
+    "embalagem": {
+      "caixa": "caixa_padrao",
+      "platico_bolha": null,
+      "enchimento": null
+    },
+    "responsavel": "usuarios/alexandre.ferreira@ufsc.br",
+    "origem": "ambientes/B117",
+    "codigo": "B1170014",
+    "propriedades": [],
+    "destino": "ambientes-norte/A038",
+    "localizacao_atual": "ambientes/B117",
+    "deleted": false
+  },
+  "B1170015": {
+    "medidas": {
+      "a": 50,
+      "l": 40,
+      "c": 60
+    },
+    "categoria": "Outros",
+    "peso": null,
+    "items": [
+      "items/8fWLqVeaPSbrraOBWJR8"
+    ],
+    "observacao": "Caixa destinada ao transporte de tecidos que se encontram na estante de aço",
+    "servicos": [],
+    "status": [
+      "Criado"
+    ],
+    "data_criacao": "2023-12-13T18:58:40.368000+00:00",
+    "embalagem": {
+      "caixa": "caixa_padrao",
+      "platico_bolha": null,
+      "enchimento": null
+    },
+    "responsavel": "usuarios/alexandre.ferreira@ufsc.br",
+    "origem": "ambientes/B117",
+    "codigo": "B1170015",
+    "propriedades": [],
+    "destino": "ambientes-norte/A038",
+    "localizacao_atual": "ambientes/B117",
+    "deleted": false
+  },
+  "B1170016": {
+    "medidas": {
+      "a": 50,
+      "l": 40,
+      "c": 60
+    },
+    "categoria": "Outros",
+    "peso": null,
+    "items": [
+      "items/EO6eNhOu4ueVlO7cIlx9"
+    ],
+    "observacao": "Caixa destinada ao conteúdo do armário de contraplacado - \"Material didatico de Fibras\"",
+    "servicos": [],
+    "status": [
+      "Criado"
+    ],
+    "data_criacao": "2023-12-13T19:05:27.891000+00:00",
+    "embalagem": {
+      "caixa": "caixa_padrao",
+      "platico_bolha": 4,
+      "enchimento": null
+    },
+    "responsavel": "usuarios/alexandre.ferreira@ufsc.br",
+    "origem": "ambientes/B117",
+    "codigo": "B1170016",
+    "propriedades": [
+      "Frágil"
+    ],
+    "destino": "ambientes-norte/A038",
+    "localizacao_atual": "ambientes/B117",
+    "deleted": false
+  },
+  "B1170017": {
+    "medidas": {
+      "a": 92,
+      "l": 20,
+      "c": 28
+    },
+    "categoria": "Ar Condicionado",
+    "peso": null,
+    "items": [
+      "items/322563"
+    ],
+    "observacao": "Unidade interna ",
+    "servicos": [
+      "Especializados"
+    ],
+    "status": [
+      "Criado"
+    ],
+    "data_criacao": "2023-12-13T19:07:54.587000+00:00",
+    "embalagem": {
+      "caixa": null,
+      "platico_bolha": null,
+      "enchimento": null
+    },
+    "responsavel": "usuarios/alexandre.ferreira@ufsc.br",
+    "origem": "ambientes/B117",
+    "codigo": "B1170017",
+    "propriedades": [],
+    "destino": "ambientes-norte/A038",
+    "localizacao_atual": "ambientes/B117",
+    "deleted": false
+  },
+  "B1170018": {
+    "medidas": {
+      "a": 76,
+      "l": 26,
+      "c": 54
+    },
+    "categoria": "Ar Condicionado",
+    "peso": null,
+    "items": [
+      "items/KexU3GwlmGt53XCUxqYK"
+    ],
+    "observacao": "Unidade Externa",
+    "servicos": [],
+    "status": [
+      "Criado"
+    ],
+    "data_criacao": "2023-12-13T19:10:35.898000+00:00",
+    "embalagem": {
+      "caixa": null,
+      "platico_bolha": null,
+      "enchimento": null
+    },
+    "responsavel": "usuarios/alexandre.ferreira@ufsc.br",
+    "origem": "ambientes/B117",
+    "codigo": "B1170018",
+    "propriedades": [],
+    "destino": "ambientes-norte/A038",
+    "localizacao_atual": "ambientes/B117",
+    "deleted": false
+  },
+  "B1170019": {
+    "medidas": {
+      "a": 70,
+      "l": 60,
+      "c": 90
+    },
+    "categoria": "Outros",
+    "peso": null,
+    "items": [
+      "items/d7aB0JTS6RICCE29U7b9"
+    ],
+    "observacao": "Caixa destinada ao transporte de material de fiação.",
+    "servicos": [],
+    "status": [
+      "Criado"
+    ],
+    "data_criacao": "2023-12-13T19:13:00.130000+00:00",
+    "embalagem": {
+      "caixa": null,
+      "platico_bolha": null,
+      "enchimento": null
+    },
+    "responsavel": "usuarios/alexandre.ferreira@ufsc.br",
+    "origem": "ambientes/B117",
+    "codigo": "B1170019",
+    "propriedades": [],
+    "destino": "ambientes-norte/A038",
+    "localizacao_atual": "ambientes/B117",
     "deleted": false
   },
   "B1220024": {
@@ -37054,70 +37973,6 @@
     "localizacao_atual": "ambientes/C202",
     "deleted": false
   },
-  "C2020036": {
-    "medidas": {
-      "a": 50,
-      "l": 40,
-      "c": 60
-    },
-    "categoria": "Ar Condicionado",
-    "peso": null,
-    "items": [
-      "items/322601-3"
-    ],
-    "observacao": "",
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-12-05T20:21:01.738000+00:00",
-    "embalagem": {
-      "caixa": "caixa_padrao",
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/rafael.abreu@ufsc.br",
-    "origem": "ambientes/C202",
-    "codigo": "C2020036",
-    "propriedades": [
-      "Frágil"
-    ],
-    "destino": "ambientes-norte/B316",
-    "localizacao_atual": "ambientes/C202",
-    "deleted": false
-  },
-  "C2020037": {
-    "medidas": {
-      "a": 50,
-      "l": 40,
-      "c": 60
-    },
-    "categoria": "Ar Condicionado",
-    "peso": null,
-    "items": [
-      "items/322601-2"
-    ],
-    "observacao": "",
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-12-05T20:21:28.609000+00:00",
-    "embalagem": {
-      "caixa": "caixa_padrao",
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/rafael.abreu@ufsc.br",
-    "origem": "ambientes/C202",
-    "codigo": "C2020037",
-    "propriedades": [
-      "Frágil"
-    ],
-    "destino": "ambientes-norte/B316",
-    "localizacao_atual": "ambientes/C202",
-    "deleted": false
-  },
   "C2020038": {
     "medidas": {
       "a": 50,
@@ -38806,39 +39661,6 @@
     "propriedades": [],
     "codigo": "C5pmdpYNETtDpE7rOgOP",
     "localizacao_atual": "ambientes/B013",
-    "deleted": false
-  },
-  "C630TAbllt8vHiY7k2d3": {
-    "medidas": {
-      "a": 20,
-      "l": 30,
-      "c": 84
-    },
-    "categoria": "Maquinário",
-    "peso": null,
-    "items": [
-      "items/227868"
-    ],
-    "observacao": "verificar a parte externa.",
-    "servicos": [
-      "Montagem e Desmontagem"
-    ],
-    "status": [
-      "Criado",
-      "Para Desmontagem"
-    ],
-    "data_criacao": "2023-10-07T20:10:18.844000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/ana.forno@ufsc.br",
-    "origem": "ambientes/B017",
-    "destino": "ambientes-norte/A124",
-    "propriedades": [],
-    "codigo": "C630TAbllt8vHiY7k2d3",
-    "localizacao_atual": "ambientes/B017",
     "deleted": false
   },
   "C846Ozg4dECydTxFWcss": {
@@ -42157,38 +42979,6 @@
     "localizacao_atual": "ambientes/BC01",
     "deleted": false
   },
-  "DoN7vk5tn0wFTzFvCU31": {
-    "medidas": {
-      "a": 45,
-      "l": 45,
-      "c": 120
-    },
-    "categoria": "Mobília",
-    "peso": null,
-    "items": [
-      "items/353411"
-    ],
-    "observacao": "",
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-10-23T16:25:16.878000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": 5,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/tiago.busarello@ufsc.br",
-    "origem": "ambientes/B114",
-    "destino": "ambientes-norte/A039",
-    "propriedades": [
-      "Frágil"
-    ],
-    "codigo": "DoN7vk5tn0wFTzFvCU31",
-    "localizacao_atual": "ambientes/B114",
-    "deleted": false
-  },
   "DpWIqY3ETCyJv76vHpqG": {
     "medidas": {
       "a": 20,
@@ -43531,6 +44321,608 @@
     "localizacao_atual": "ambientes/B113",
     "deleted": false
   },
+  "EXB01000": {
+    "medidas": {
+      "a": 100,
+      "l": 25,
+      "c": 64
+    },
+    "categoria": "Mobília",
+    "peso": null,
+    "items": [
+      "items/363762"
+    ],
+    "observacao": "",
+    "servicos": [],
+    "status": [
+      "Criado"
+    ],
+    "data_criacao": "2023-12-13T15:41:22.303000+00:00",
+    "embalagem": {
+      "caixa": null,
+      "platico_bolha": null,
+      "enchimento": null
+    },
+    "responsavel": "usuarios/josue.andrade@ufsc.br",
+    "origem": "ambientes/EXB01",
+    "codigo": "EXB01000",
+    "propriedades": [],
+    "destino": "ambientes-norte/BS04",
+    "localizacao_atual": "ambientes/EXB01",
+    "deleted": false
+  },
+  "EXB01002": {
+    "medidas": {
+      "a": 200,
+      "l": 55,
+      "c": 100
+    },
+    "categoria": "Mobília",
+    "peso": null,
+    "items": [
+      "items/297175"
+    ],
+    "observacao": "",
+    "servicos": [],
+    "status": [
+      "Criado"
+    ],
+    "data_criacao": "2023-12-13T15:46:04.767000+00:00",
+    "embalagem": {
+      "caixa": null,
+      "platico_bolha": null,
+      "enchimento": null
+    },
+    "responsavel": "usuarios/josue.andrade@ufsc.br",
+    "origem": "ambientes/EXB01",
+    "codigo": "EXB01002",
+    "propriedades": [],
+    "destino": "ambientes-norte/BS04",
+    "localizacao_atual": "ambientes/EXB01",
+    "deleted": false
+  },
+  "EXB01003": {
+    "medidas": {
+      "a": 104,
+      "l": 60,
+      "c": 104
+    },
+    "categoria": "Mobília",
+    "peso": null,
+    "items": [
+      "items/297182"
+    ],
+    "observacao": "",
+    "servicos": [],
+    "status": [
+      "Criado"
+    ],
+    "data_criacao": "2023-12-13T15:46:36.318000+00:00",
+    "embalagem": {
+      "caixa": null,
+      "platico_bolha": null,
+      "enchimento": null
+    },
+    "responsavel": "usuarios/josue.andrade@ufsc.br",
+    "origem": "ambientes/EXB01",
+    "codigo": "EXB01003",
+    "propriedades": [],
+    "destino": "ambientes-norte/BS04",
+    "localizacao_atual": "ambientes/EXB01",
+    "deleted": false
+  },
+  "EXB01004": {
+    "medidas": {
+      "a": 104,
+      "l": 60,
+      "c": 104
+    },
+    "categoria": "Mobília",
+    "peso": null,
+    "items": [
+      "items/297183"
+    ],
+    "observacao": "",
+    "servicos": [],
+    "status": [
+      "Criado"
+    ],
+    "data_criacao": "2023-12-13T15:47:06.614000+00:00",
+    "embalagem": {
+      "caixa": null,
+      "platico_bolha": null,
+      "enchimento": null
+    },
+    "responsavel": "usuarios/josue.andrade@ufsc.br",
+    "origem": "ambientes/EXB01",
+    "codigo": "EXB01004",
+    "propriedades": [],
+    "destino": "ambientes-norte/BS04",
+    "localizacao_atual": "ambientes/EXB01",
+    "deleted": false
+  },
+  "EXB01005": {
+    "medidas": {
+      "a": 104,
+      "l": 60,
+      "c": 104
+    },
+    "categoria": "Mobília",
+    "peso": null,
+    "items": [
+      "items/9113"
+    ],
+    "observacao": "",
+    "servicos": [],
+    "status": [
+      "Criado"
+    ],
+    "data_criacao": "2023-12-13T15:47:37.726000+00:00",
+    "embalagem": {
+      "caixa": null,
+      "platico_bolha": null,
+      "enchimento": null
+    },
+    "responsavel": "usuarios/josue.andrade@ufsc.br",
+    "origem": "ambientes/EXB01",
+    "codigo": "EXB01005",
+    "propriedades": [],
+    "destino": "ambientes-norte/BS04",
+    "localizacao_atual": "ambientes/EXB01",
+    "deleted": false
+  },
+  "EXB01006": {
+    "medidas": {
+      "a": 176,
+      "l": 40,
+      "c": 93
+    },
+    "categoria": "Mobília",
+    "peso": null,
+    "items": [
+      "items/337988"
+    ],
+    "observacao": "",
+    "servicos": [],
+    "status": [
+      "Criado"
+    ],
+    "data_criacao": "2023-12-13T15:48:38.711000+00:00",
+    "embalagem": {
+      "caixa": null,
+      "platico_bolha": null,
+      "enchimento": null
+    },
+    "responsavel": "usuarios/josue.andrade@ufsc.br",
+    "origem": "ambientes/EXB01",
+    "codigo": "EXB01006",
+    "propriedades": [],
+    "destino": "ambientes-norte/BS04",
+    "localizacao_atual": "ambientes/EXB01",
+    "deleted": false
+  },
+  "EXB01007": {
+    "medidas": {
+      "a": 176,
+      "l": 40,
+      "c": 93
+    },
+    "categoria": "Mobília",
+    "peso": null,
+    "items": [
+      "items/337990"
+    ],
+    "observacao": "",
+    "servicos": [],
+    "status": [
+      "Criado"
+    ],
+    "data_criacao": "2023-12-13T15:49:11.599000+00:00",
+    "embalagem": {
+      "caixa": null,
+      "platico_bolha": null,
+      "enchimento": null
+    },
+    "responsavel": "usuarios/josue.andrade@ufsc.br",
+    "origem": "ambientes/EXB01",
+    "codigo": "EXB01007",
+    "propriedades": [],
+    "destino": "ambientes-norte/BS04",
+    "localizacao_atual": "ambientes/EXB01",
+    "deleted": false
+  },
+  "EXB01008": {
+    "medidas": {
+      "a": 176,
+      "l": 40,
+      "c": 93
+    },
+    "categoria": "Mobília",
+    "peso": null,
+    "items": [
+      "items/363913"
+    ],
+    "observacao": "",
+    "servicos": [],
+    "status": [
+      "Criado"
+    ],
+    "data_criacao": "2023-12-13T15:49:36.206000+00:00",
+    "embalagem": {
+      "caixa": null,
+      "platico_bolha": null,
+      "enchimento": null
+    },
+    "responsavel": "usuarios/josue.andrade@ufsc.br",
+    "origem": "ambientes/EXB01",
+    "codigo": "EXB01008",
+    "propriedades": [],
+    "destino": "ambientes-norte/BS04",
+    "localizacao_atual": "ambientes/EXB01",
+    "deleted": false
+  },
+  "EXB01009": {
+    "medidas": {
+      "a": 104,
+      "l": 40,
+      "c": 93
+    },
+    "categoria": "Mobília",
+    "peso": null,
+    "items": [
+      "items/363914"
+    ],
+    "observacao": "",
+    "servicos": [],
+    "status": [
+      "Criado"
+    ],
+    "data_criacao": "2023-12-13T15:50:00.254000+00:00",
+    "embalagem": {
+      "caixa": null,
+      "platico_bolha": null,
+      "enchimento": null
+    },
+    "responsavel": "usuarios/josue.andrade@ufsc.br",
+    "origem": "ambientes/EXB01",
+    "codigo": "EXB01009",
+    "propriedades": [],
+    "destino": "ambientes-norte/BS04",
+    "localizacao_atual": "ambientes/EXB01",
+    "deleted": false
+  },
+  "EXB0100A": {
+    "medidas": {
+      "a": 176,
+      "l": 40,
+      "c": 93
+    },
+    "categoria": "Mobília",
+    "peso": null,
+    "items": [
+      "items/363915"
+    ],
+    "observacao": "",
+    "servicos": [],
+    "status": [
+      "Criado"
+    ],
+    "data_criacao": "2023-12-13T15:50:21.286000+00:00",
+    "embalagem": {
+      "caixa": null,
+      "platico_bolha": null,
+      "enchimento": null
+    },
+    "responsavel": "usuarios/josue.andrade@ufsc.br",
+    "origem": "ambientes/EXB01",
+    "codigo": "EXB0100A",
+    "propriedades": [],
+    "destino": "ambientes-norte/BS04",
+    "localizacao_atual": "ambientes/EXB01",
+    "deleted": false
+  },
+  "EXB0100B": {
+    "medidas": {
+      "a": 176,
+      "l": 40,
+      "c": 93
+    },
+    "categoria": "Mobília",
+    "peso": null,
+    "items": [
+      "items/363916"
+    ],
+    "observacao": "",
+    "servicos": [],
+    "status": [
+      "Criado"
+    ],
+    "data_criacao": "2023-12-13T15:50:47.495000+00:00",
+    "embalagem": {
+      "caixa": null,
+      "platico_bolha": null,
+      "enchimento": null
+    },
+    "responsavel": "usuarios/josue.andrade@ufsc.br",
+    "origem": "ambientes/EXB01",
+    "codigo": "EXB0100B",
+    "propriedades": [],
+    "destino": "ambientes-norte/BS04",
+    "localizacao_atual": "ambientes/EXB01",
+    "deleted": false
+  },
+  "EXB0100C": {
+    "medidas": {
+      "a": 176,
+      "l": 40,
+      "c": 93
+    },
+    "categoria": "Mobília",
+    "peso": null,
+    "items": [
+      "items/363917"
+    ],
+    "observacao": "",
+    "servicos": [],
+    "status": [
+      "Criado"
+    ],
+    "data_criacao": "2023-12-13T15:51:25.799000+00:00",
+    "embalagem": {
+      "caixa": null,
+      "platico_bolha": null,
+      "enchimento": null
+    },
+    "responsavel": "usuarios/josue.andrade@ufsc.br",
+    "origem": "ambientes/EXB01",
+    "codigo": "EXB0100C",
+    "propriedades": [],
+    "destino": "ambientes-norte/BS04",
+    "localizacao_atual": "ambientes/EXB01",
+    "deleted": false
+  },
+  "EXB0100D": {
+    "medidas": {
+      "a": 176,
+      "l": 40,
+      "c": 93
+    },
+    "categoria": "Mobília",
+    "peso": null,
+    "items": [
+      "items/363918"
+    ],
+    "observacao": "",
+    "servicos": [],
+    "status": [
+      "Criado"
+    ],
+    "data_criacao": "2023-12-13T15:51:46.054000+00:00",
+    "embalagem": {
+      "caixa": null,
+      "platico_bolha": null,
+      "enchimento": null
+    },
+    "responsavel": "usuarios/josue.andrade@ufsc.br",
+    "origem": "ambientes/EXB01",
+    "codigo": "EXB0100D",
+    "propriedades": [],
+    "destino": "ambientes-norte/BS04",
+    "localizacao_atual": "ambientes/EXB01",
+    "deleted": false
+  },
+  "EXB0100E": {
+    "medidas": {
+      "a": 176,
+      "l": 40,
+      "c": 93
+    },
+    "categoria": "Mobília",
+    "peso": null,
+    "items": [
+      "items/363919"
+    ],
+    "observacao": "",
+    "servicos": [],
+    "status": [
+      "Criado"
+    ],
+    "data_criacao": "2023-12-13T15:52:10.494000+00:00",
+    "embalagem": {
+      "caixa": null,
+      "platico_bolha": null,
+      "enchimento": null
+    },
+    "responsavel": "usuarios/josue.andrade@ufsc.br",
+    "origem": "ambientes/EXB01",
+    "codigo": "EXB0100E",
+    "propriedades": [],
+    "destino": "ambientes-norte/BS04",
+    "localizacao_atual": "ambientes/EXB01",
+    "deleted": false
+  },
+  "EXB0100F": {
+    "medidas": {
+      "a": 176,
+      "l": 40,
+      "c": 93
+    },
+    "categoria": "Mobília",
+    "peso": null,
+    "items": [
+      "items/363920"
+    ],
+    "observacao": "",
+    "servicos": [],
+    "status": [
+      "Criado"
+    ],
+    "data_criacao": "2023-12-13T15:52:32.383000+00:00",
+    "embalagem": {
+      "caixa": null,
+      "platico_bolha": null,
+      "enchimento": null
+    },
+    "responsavel": "usuarios/josue.andrade@ufsc.br",
+    "origem": "ambientes/EXB01",
+    "codigo": "EXB0100F",
+    "propriedades": [],
+    "destino": "ambientes-norte/BS04",
+    "localizacao_atual": "ambientes/EXB01",
+    "deleted": false
+  },
+  "EXB01010": {
+    "medidas": {
+      "a": 176,
+      "l": 40,
+      "c": 93
+    },
+    "categoria": "Mobília",
+    "peso": null,
+    "items": [
+      "items/363921"
+    ],
+    "observacao": "",
+    "servicos": [],
+    "status": [
+      "Criado"
+    ],
+    "data_criacao": "2023-12-13T15:52:54.166000+00:00",
+    "embalagem": {
+      "caixa": null,
+      "platico_bolha": null,
+      "enchimento": null
+    },
+    "responsavel": "usuarios/josue.andrade@ufsc.br",
+    "origem": "ambientes/EXB01",
+    "codigo": "EXB01010",
+    "propriedades": [],
+    "destino": "ambientes-norte/BS04",
+    "localizacao_atual": "ambientes/EXB01",
+    "deleted": false
+  },
+  "EXB01011": {
+    "medidas": {
+      "a": 150,
+      "l": 18,
+      "c": 100
+    },
+    "categoria": "Ferramentas",
+    "peso": null,
+    "items": [
+      "items/338007"
+    ],
+    "observacao": "",
+    "servicos": [],
+    "status": [
+      "Criado"
+    ],
+    "data_criacao": "2023-12-13T15:53:42.822000+00:00",
+    "embalagem": {
+      "caixa": null,
+      "platico_bolha": null,
+      "enchimento": null
+    },
+    "responsavel": "usuarios/josue.andrade@ufsc.br",
+    "origem": "ambientes/EXB01",
+    "codigo": "EXB01011",
+    "propriedades": [],
+    "destino": "ambientes-norte/BS04",
+    "localizacao_atual": "ambientes/EXB01",
+    "deleted": false
+  },
+  "EXB01012": {
+    "medidas": {
+      "a": 150,
+      "l": 18,
+      "c": 100
+    },
+    "categoria": "Ferramentas",
+    "peso": null,
+    "items": [
+      "items/338008"
+    ],
+    "observacao": "",
+    "servicos": [],
+    "status": [
+      "Criado"
+    ],
+    "data_criacao": "2023-12-13T15:54:05.862000+00:00",
+    "embalagem": {
+      "caixa": null,
+      "platico_bolha": null,
+      "enchimento": null
+    },
+    "responsavel": "usuarios/josue.andrade@ufsc.br",
+    "origem": "ambientes/EXB01",
+    "codigo": "EXB01012",
+    "propriedades": [],
+    "destino": "ambientes-norte/BS04",
+    "localizacao_atual": "ambientes/EXB01",
+    "deleted": false
+  },
+  "EXB01013": {
+    "medidas": {
+      "a": 150,
+      "l": 18,
+      "c": 100
+    },
+    "categoria": "Ferramentas",
+    "peso": null,
+    "items": [
+      "items/338009"
+    ],
+    "observacao": "",
+    "servicos": [],
+    "status": [
+      "Criado"
+    ],
+    "data_criacao": "2023-12-13T15:54:23.326000+00:00",
+    "embalagem": {
+      "caixa": null,
+      "platico_bolha": null,
+      "enchimento": null
+    },
+    "responsavel": "usuarios/josue.andrade@ufsc.br",
+    "origem": "ambientes/EXB01",
+    "codigo": "EXB01013",
+    "propriedades": [],
+    "destino": "ambientes-norte/BS04",
+    "localizacao_atual": "ambientes/EXB01",
+    "deleted": false
+  },
+  "EXB01014": {
+    "medidas": {
+      "a": 30,
+      "l": 20,
+      "c": 50
+    },
+    "categoria": "Eletrônicos",
+    "peso": null,
+    "items": [
+      "items/348027",
+      "items/352891",
+      "items/352777"
+    ],
+    "observacao": "",
+    "servicos": [],
+    "status": [
+      "Criado"
+    ],
+    "data_criacao": "2023-12-13T15:55:21.768000+00:00",
+    "embalagem": {
+      "caixa": null,
+      "platico_bolha": null,
+      "enchimento": null
+    },
+    "responsavel": "usuarios/josue.andrade@ufsc.br",
+    "origem": "ambientes/EXB01",
+    "codigo": "EXB01014",
+    "propriedades": [],
+    "destino": "ambientes-norte/BS04",
+    "localizacao_atual": "ambientes/EXB01",
+    "deleted": false
+  },
   "EXEG35ujyR1jdvqGNtZr": {
     "medidas": {
       "a": 13,
@@ -44273,42 +45665,6 @@
     "localizacao_atual": "ambientes/B119",
     "deleted": false
   },
-  "EtYeOVWnAOYVU22yxQDe": {
-    "medidas": {
-      "a": 35,
-      "l": 25,
-      "c": 115
-    },
-    "items": [
-      "items/359951"
-    ],
-    "peso": 15,
-    "categoria": "Ar Condicionado",
-    "observacao": "Será necessário providenciar uma caixa com as medidas compatíveis e fita adesiva para lacrar a caixa.",
-    "servicos": [
-      "Montagem e Desmontagem",
-      "Especializados"
-    ],
-    "status": [
-      "Criado",
-      "Para Desmontagem"
-    ],
-    "data_criacao": "2023-10-11T18:05:24.852000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": 4,
-      "enchimento": true
-    },
-    "responsavel": "usuarios/flavio.jerez@ufsc.br",
-    "origem": "ambientes/B103",
-    "destino": "ambientes-norte/A132",
-    "propriedades": [
-      "Frágil"
-    ],
-    "codigo": "EtYeOVWnAOYVU22yxQDe",
-    "localizacao_atual": "ambientes/B103",
-    "deleted": false
-  },
   "EuVy41Ex7Ekq64R5YpEv": {
     "medidas": {
       "a": 74,
@@ -44669,36 +46025,6 @@
     "destino": "ambientes-norte/A001",
     "propriedades": [],
     "codigo": "F7bdk4Wh9rirO6b6Wjhl",
-    "localizacao_atual": "ambientes/A213",
-    "deleted": false
-  },
-  "F892SEaKkMHUYD7QRcTh": {
-    "medidas": {
-      "a": 29,
-      "l": 85,
-      "c": 25
-    },
-    "categoria": "Eletrodomésticos",
-    "peso": null,
-    "items": [
-      "items/322565"
-    ],
-    "observacao": "",
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-11-08T12:57:10.394000+00:00",
-    "embalagem": {
-      "caixa": "caixa_padrao",
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/grazyella.oliveira@ufsc.br",
-    "origem": "ambientes/A213",
-    "destino": "ambientes-norte/B004.05",
-    "propriedades": [],
-    "codigo": "F892SEaKkMHUYD7QRcTh",
     "localizacao_atual": "ambientes/A213",
     "deleted": false
   },
@@ -47747,40 +49073,6 @@
     "localizacao_atual": "ambientes/B004",
     "deleted": false
   },
-  "GaBZwKtUSJaDxHT3N4X0": {
-    "medidas": {
-      "a": 23,
-      "l": 32,
-      "c": 97
-    },
-    "categoria": "Eletrônicos",
-    "peso": 50,
-    "items": [
-      "items/353412"
-    ],
-    "observacao": "",
-    "servicos": [
-      "Montagem e Desmontagem",
-      "Especializados"
-    ],
-    "status": [
-      "Criado",
-      "Para Desmontagem"
-    ],
-    "data_criacao": "2023-09-22T13:58:38.900000+00:00",
-    "embalagem": {
-      "caixa": "caixa_padrao",
-      "platico_bolha": 2,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/claudia.merlini@ufsc.br",
-    "origem": "ambientes/B112",
-    "destino": "ambientes-norte/A051",
-    "propriedades": [],
-    "codigo": "GaBZwKtUSJaDxHT3N4X0",
-    "localizacao_atual": "ambientes/B112",
-    "deleted": false
-  },
   "Gag10YysLjMpO0JOA0mk": {
     "medidas": {
       "a": 50,
@@ -49069,36 +50361,6 @@
     ],
     "codigo": "HIIqc1Vc0CO9j1ZYCR6s",
     "localizacao_atual": "ambientes/B104",
-    "deleted": false
-  },
-  "HLfSS7bFbVLb3fOD4Yui": {
-    "medidas": {
-      "a": 33,
-      "l": 53,
-      "c": 83
-    },
-    "categoria": "Eletrônicos",
-    "peso": null,
-    "items": [
-      "items/322579"
-    ],
-    "observacao": null,
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-10-05T20:37:48.160000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/karine.lopes@ufsc.br",
-    "origem": "ambientes/A206.1",
-    "destino": "ambientes-norte/A024.1",
-    "propriedades": [],
-    "codigo": "HLfSS7bFbVLb3fOD4Yui",
-    "localizacao_atual": "ambientes/A206.1",
     "deleted": false
   },
   "HOTO4i42mLksmTTUsEmj": {
@@ -52277,42 +53539,6 @@
     "localizacao_atual": "ambientes/B106",
     "deleted": false
   },
-  "IwPhkEpQvZ7sLddFBxBa": {
-    "medidas": {
-      "a": 32,
-      "l": 22,
-      "c": 78
-    },
-    "items": [
-      "items/353408"
-    ],
-    "peso": 10,
-    "categoria": "Ar Condicionado",
-    "observacao": "Será necessário providenciar uma caixa com as medidas compatíveis e fita adesiva para lacrar a caixa.",
-    "servicos": [
-      "Montagem e Desmontagem",
-      "Especializados"
-    ],
-    "status": [
-      "Criado",
-      "Para Desmontagem"
-    ],
-    "data_criacao": "2023-10-11T18:15:25.103000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": 4,
-      "enchimento": true
-    },
-    "responsavel": "usuarios/flavio.jerez@ufsc.br",
-    "origem": "ambientes/B105",
-    "destino": "ambientes-norte/A131",
-    "propriedades": [
-      "Frágil"
-    ],
-    "codigo": "IwPhkEpQvZ7sLddFBxBa",
-    "localizacao_atual": "ambientes/B105",
-    "deleted": false
-  },
   "IwrGZJAu3kzns4chpbbI": {
     "medidas": {
       "a": 82,
@@ -54321,46 +55547,6 @@
     "localizacao_atual": "ambientes/B112",
     "deleted": false
   },
-  "KJ0K0TipClCjBXyYSIQA": {
-    "medidas": {
-      "a": 32,
-      "l": 25,
-      "c": 115
-    },
-    "categoria": "Eletrodomésticos",
-    "peso": 10,
-    "items": [
-      "items/337808"
-    ],
-    "observacao": "Desmontar e desmontar equipamento atualmente localizado no laboratório. Considerar o condensador externo com 70 x 30 x 60 cm, com aproximadamente 25 kg.",
-    "servicos": [
-      "Montagem e Desmontagem",
-      "Especializados"
-    ],
-    "status": [
-      "Criado",
-      "Para Desmontagem"
-    ],
-    "data_criacao": "2023-10-15T16:35:24.447000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": 2,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/marcio.rocha@ufsc.br",
-    "origem": "ambientes/B022",
-    "destino": "ambientes-norte/BS01",
-    "propriedades": [
-      "Gás Comprimido",
-      "Frágil",
-      "Proteger do Calor",
-      "Proteger da Umidade",
-      "Proibido Empilhar"
-    ],
-    "codigo": "KJ0K0TipClCjBXyYSIQA",
-    "localizacao_atual": "ambientes/B022",
-    "deleted": false
-  },
   "KJN1RHdR35XROqwIP4ma": {
     "medidas": {
       "a": 50,
@@ -54490,40 +55676,6 @@
     ],
     "codigo": "KOl5qhOu7OB7ajE7G915",
     "localizacao_atual": "ambientes/C105.2",
-    "deleted": false
-  },
-  "KPTq44NVBbCCEagw5xx9": {
-    "medidas": {
-      "a": 32,
-      "l": 22,
-      "c": 100
-    },
-    "categoria": "Eletrônicos",
-    "peso": null,
-    "items": [
-      "items/359945",
-      "items/353316"
-    ],
-    "observacao": "",
-    "servicos": [
-      "Montagem e Desmontagem"
-    ],
-    "status": [
-      "Criado",
-      "Para Desmontagem"
-    ],
-    "data_criacao": "2023-10-17T13:30:23.260000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/marcel.agostini@ufsc.br",
-    "origem": "ambientes/A202",
-    "destino": "ambientes-norte/B003",
-    "propriedades": [],
-    "codigo": "KPTq44NVBbCCEagw5xx9",
-    "localizacao_atual": "ambientes/A202",
     "deleted": false
   },
   "KQ16sEguZYReF3aRuZPd": {
@@ -56287,41 +57439,6 @@
     "localizacao_atual": "ambientes/C105.2",
     "deleted": false
   },
-  "LFVhiGKE6Rci7Ix9a8WJ": {
-    "medidas": {
-      "a": 32,
-      "l": 22,
-      "c": 100
-    },
-    "categoria": "Eletrônicos",
-    "peso": null,
-    "items": [
-      "items/322575",
-      "items/359944",
-      "items/322612"
-    ],
-    "observacao": "",
-    "servicos": [
-      "Montagem e Desmontagem"
-    ],
-    "status": [
-      "Criado",
-      "Para Desmontagem"
-    ],
-    "data_criacao": "2023-10-17T11:39:12.868000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/marcel.agostini@ufsc.br",
-    "origem": "ambientes/A107",
-    "destino": "ambientes-norte/B002",
-    "propriedades": [],
-    "codigo": "LFVhiGKE6Rci7Ix9a8WJ",
-    "localizacao_atual": "ambientes/A107",
-    "deleted": false
-  },
   "LGY4wbDIVLtIn2hWxUKi": {
     "medidas": {
       "a": 1,
@@ -56454,42 +57571,6 @@
     ],
     "codigo": "LNkuVO9MWMT1V0gMUZPo",
     "localizacao_atual": "ambientes/A002",
-    "deleted": false
-  },
-  "LNoZHj8FoCnKtNgRlGe7": {
-    "medidas": {
-      "a": 28,
-      "l": 16,
-      "c": 80
-    },
-    "items": [
-      "items/353314"
-    ],
-    "peso": 10,
-    "categoria": "Ar Condicionado",
-    "observacao": "Será necessário providenciar uma caixa com as medidas compatíveis e fita adesiva para lacrar a caixa.",
-    "servicos": [
-      "Montagem e Desmontagem",
-      "Especializados"
-    ],
-    "status": [
-      "Criado",
-      "Para Desmontagem"
-    ],
-    "data_criacao": "2023-10-11T18:10:16.056000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": 4,
-      "enchimento": true
-    },
-    "responsavel": "usuarios/flavio.jerez@ufsc.br",
-    "origem": "ambientes/B104",
-    "destino": "ambientes-norte/A130",
-    "propriedades": [
-      "Frágil"
-    ],
-    "codigo": "LNoZHj8FoCnKtNgRlGe7",
-    "localizacao_atual": "ambientes/B104",
     "deleted": false
   },
   "LOGNj6jjPziTa4SLYNF0": {
@@ -60917,38 +61998,6 @@
     "localizacao_atual": "ambientes/A208",
     "deleted": false
   },
-  "Na8RG8oexWhYFc6EGhzE": {
-    "medidas": {
-      "a": 30,
-      "l": 100,
-      "c": 30
-    },
-    "categoria": "Maquinário",
-    "peso": null,
-    "items": [
-      "items/227855"
-    ],
-    "observacao": "",
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-10-06T16:25:10.581000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": 3,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/catia.lange@ufsc.br",
-    "origem": "ambientes/B004",
-    "destino": "ambientes-norte/A043",
-    "propriedades": [
-      "Proteger da Umidade"
-    ],
-    "codigo": "Na8RG8oexWhYFc6EGhzE",
-    "localizacao_atual": "ambientes/B004",
-    "deleted": false
-  },
   "Nb2K9uCMfp81fJuKH9eO": {
     "medidas": {
       "a": 200,
@@ -61702,43 +62751,6 @@
     ],
     "codigo": "NyoRpsfWfR9R23UDruNe",
     "localizacao_atual": "ambientes/B119",
-    "deleted": false
-  },
-  "O0YuR6y9hAEO9fjKTh1M": {
-    "medidas": {
-      "a": 35,
-      "l": 100,
-      "c": 35
-    },
-    "categoria": "Eletrodomésticos",
-    "peso": null,
-    "items": [
-      "items/337809",
-      "items/337804"
-    ],
-    "observacao": null,
-    "servicos": [
-      "Montagem e Desmontagem"
-    ],
-    "status": [
-      "Criado",
-      "Para Desmontagem"
-    ],
-    "data_criacao": "2023-10-18T18:15:14.396000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": 3,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/elisa.p.missner@ufsc.br",
-    "origem": "ambientes/B115",
-    "destino": "ambientes-norte/A035",
-    "propriedades": [
-      "Frágil",
-      "Proibido Empilhar"
-    ],
-    "codigo": "O0YuR6y9hAEO9fjKTh1M",
-    "localizacao_atual": "ambientes/B115",
     "deleted": false
   },
   "O0zMD1NKvrdmhmuRSeHe": {
@@ -63859,39 +64871,6 @@
     "propriedades": [],
     "codigo": "OyyUdxWBTVcU4MgnrSQp",
     "localizacao_atual": "ambientes/A207",
-    "deleted": false
-  },
-  "P0pwscTtYimFyB0XGHgq": {
-    "medidas": {
-      "a": 33,
-      "l": 52,
-      "c": 107
-    },
-    "categoria": "Materiais elétricos",
-    "peso": null,
-    "items": [
-      "items/227811"
-    ],
-    "observacao": null,
-    "servicos": [
-      "Montagem e Desmontagem"
-    ],
-    "status": [
-      "Criado",
-      "Para Desmontagem"
-    ],
-    "data_criacao": "2023-10-07T20:46:29.146000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/ana.forno@ufsc.br",
-    "origem": "ambientes/B110",
-    "destino": "ambientes-norte/A126",
-    "propriedades": [],
-    "codigo": "P0pwscTtYimFyB0XGHgq",
-    "localizacao_atual": "ambientes/B110",
     "deleted": false
   },
   "P14v7iEqi7aVpi6IfjgQ": {
@@ -68068,42 +69047,6 @@
     ],
     "codigo": "REad2IyAVd4CZe0NL0KG",
     "localizacao_atual": "ambientes/A002",
-    "deleted": false
-  },
-  "RFrJISyvTMSaJ9UHbW0l": {
-    "medidas": {
-      "a": 28,
-      "l": 20,
-      "c": 95
-    },
-    "items": [
-      "items/322568"
-    ],
-    "peso": 10,
-    "categoria": "Ar Condicionado",
-    "observacao": "Será necessário providenciar uma caixa com as medidas compatíveis e fita adesiva para lacrar a caixa.",
-    "servicos": [
-      "Montagem e Desmontagem",
-      "Especializados"
-    ],
-    "status": [
-      "Criado",
-      "Para Desmontagem"
-    ],
-    "data_criacao": "2023-10-11T18:08:02.633000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": 4,
-      "enchimento": true
-    },
-    "responsavel": "usuarios/flavio.jerez@ufsc.br",
-    "origem": "ambientes/B104",
-    "destino": "ambientes-norte/A130",
-    "propriedades": [
-      "Frágil"
-    ],
-    "codigo": "RFrJISyvTMSaJ9UHbW0l",
-    "localizacao_atual": "ambientes/B104",
     "deleted": false
   },
   "RGhCSdihkAwqXoJR3ND8": {
@@ -72513,39 +73456,6 @@
     "propriedades": [],
     "codigo": "TinWXthyec1EYAiK8bs4",
     "localizacao_atual": "ambientes/B003.1",
-    "deleted": false
-  },
-  "TjYJZcHgKXl93en9a67s": {
-    "medidas": {
-      "a": 79,
-      "l": 25,
-      "c": 21
-    },
-    "categoria": "Eletrônicos",
-    "peso": null,
-    "items": [
-      "items/353302"
-    ],
-    "observacao": "",
-    "servicos": [
-      "Montagem e Desmontagem"
-    ],
-    "status": [
-      "Criado",
-      "Para Desmontagem"
-    ],
-    "data_criacao": "2023-10-04T21:11:11.266000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": 15,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/karine.lopes@ufsc.br",
-    "origem": "ambientes/A206",
-    "destino": "ambientes-norte/A024",
-    "propriedades": [],
-    "codigo": "TjYJZcHgKXl93en9a67s",
-    "localizacao_atual": "ambientes/A206",
     "deleted": false
   },
   "TjrpPS9Pox3NXFFvouIT": {
@@ -88930,312 +89840,6 @@
     "localizacao_atual": "ambientes/B016",
     "deleted": false
   },
-  "V322587": {
-    "medidas": {
-      "a": 1,
-      "l": 3,
-      "c": 2
-    },
-    "categoria": "Material de Escritório",
-    "peso": null,
-    "items": [
-      "items/322587"
-    ],
-    "observacao": "Criado pelo sistema. PRECISA AJUSTAR AS MEDIDAS. Volume original: volumes/KwrkfUXej3AaeLzYWEJb",
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-11-30T11:16:17.740651+00:00",
-    "embalagem": {
-      "caixa": "caixa_padrao",
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/ivan.matos@ufsc.br",
-    "origem": "ambientes/C305",
-    "codigo": "V322587",
-    "propriedades": [
-      "Proteger do Calor",
-      "Proteger da Umidade",
-      "Frágil"
-    ],
-    "destino": "ambientes-norte/B303",
-    "localizacao_atual": "ambientes/C305",
-    "deleted": false
-  },
-  "V322588": {
-    "medidas": {
-      "a": 1,
-      "l": 3,
-      "c": 2
-    },
-    "categoria": "Material de Escritório",
-    "peso": null,
-    "items": [
-      "items/322588"
-    ],
-    "observacao": "Criado pelo sistema. PRECISA AJUSTAR AS MEDIDAS. Volume original: volumes/Jd46w5DFuqG5kmB98OPu",
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-11-30T11:16:17.739050+00:00",
-    "embalagem": {
-      "caixa": "caixa_padrao",
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/ivan.matos@ufsc.br",
-    "origem": "ambientes/C302",
-    "codigo": "V322588",
-    "propriedades": [
-      "Proteger do Calor",
-      "Proteger da Umidade",
-      "Frágil"
-    ],
-    "destino": "ambientes-norte/B209",
-    "localizacao_atual": "ambientes/C302",
-    "deleted": false
-  },
-  "V322590": {
-    "medidas": {
-      "a": 1,
-      "l": 3,
-      "c": 2
-    },
-    "categoria": "Material de Escritório",
-    "peso": null,
-    "items": [
-      "items/322590"
-    ],
-    "observacao": "Criado pelo sistema. PRECISA AJUSTAR AS MEDIDAS. Volume original: volumes/gZbshStQicloW4AAg0oX",
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-11-30T11:16:17.746878+00:00",
-    "embalagem": {
-      "caixa": "caixa_padrao",
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/ivan.matos@ufsc.br",
-    "origem": "ambientes/C303",
-    "codigo": "V322590",
-    "propriedades": [
-      "Proteger do Calor",
-      "Proteger da Umidade",
-      "Frágil"
-    ],
-    "destino": "ambientes-norte/B210",
-    "localizacao_atual": "ambientes/C303",
-    "deleted": false
-  },
-  "V322591": {
-    "medidas": {
-      "a": 1,
-      "l": 3,
-      "c": 2
-    },
-    "categoria": "Material de Escritório",
-    "peso": null,
-    "items": [
-      "items/322591"
-    ],
-    "observacao": "Criado pelo sistema. PRECISA AJUSTAR AS MEDIDAS. Volume original: volumes/2QDkly2BfP0VmNoaFBIa",
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-11-30T11:16:17.725824+00:00",
-    "embalagem": {
-      "caixa": "caixa_padrao",
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/ivan.matos@ufsc.br",
-    "origem": "ambientes/C306",
-    "codigo": "V322591",
-    "propriedades": [
-      "Proteger do Calor",
-      "Proteger da Umidade",
-      "Frágil"
-    ],
-    "destino": "ambientes-norte/B203",
-    "localizacao_atual": "ambientes/C306",
-    "deleted": false
-  },
-  "V322592": {
-    "medidas": {
-      "a": 1,
-      "l": 3,
-      "c": 2
-    },
-    "categoria": "Material de Escritório",
-    "peso": null,
-    "items": [
-      "items/322592"
-    ],
-    "observacao": "Criado pelo sistema. PRECISA AJUSTAR AS MEDIDAS. Volume original: volumes/Jd46w5DFuqG5kmB98OPu",
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-11-30T11:16:17.738945+00:00",
-    "embalagem": {
-      "caixa": "caixa_padrao",
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/ivan.matos@ufsc.br",
-    "origem": "ambientes/C302",
-    "codigo": "V322592",
-    "propriedades": [
-      "Proteger do Calor",
-      "Proteger da Umidade",
-      "Frágil"
-    ],
-    "destino": "ambientes-norte/B209",
-    "localizacao_atual": "ambientes/C302",
-    "deleted": false
-  },
-  "V322596": {
-    "medidas": {
-      "a": 1,
-      "l": 3,
-      "c": 2
-    },
-    "categoria": "Material de Escritório",
-    "peso": null,
-    "items": [
-      "items/322596"
-    ],
-    "observacao": "Criado pelo sistema. PRECISA AJUSTAR AS MEDIDAS. Volume original: volumes/E4UggbXSg3MkqXm9BNd2",
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-11-30T11:16:17.735996+00:00",
-    "embalagem": {
-      "caixa": "caixa_padrao",
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/ivan.matos@ufsc.br",
-    "origem": "ambientes/C304",
-    "codigo": "V322596",
-    "propriedades": [
-      "Proteger do Calor",
-      "Proteger da Umidade",
-      "Frágil"
-    ],
-    "destino": "ambientes-norte/B214",
-    "localizacao_atual": "ambientes/C304",
-    "deleted": false
-  },
-  "V322597": {
-    "medidas": {
-      "a": 1,
-      "l": 3,
-      "c": 2
-    },
-    "categoria": "Material de Escritório",
-    "peso": null,
-    "items": [
-      "items/322597"
-    ],
-    "observacao": "Criado pelo sistema. PRECISA AJUSTAR AS MEDIDAS. Volume original: volumes/2QDkly2BfP0VmNoaFBIa",
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-11-30T11:16:17.725956+00:00",
-    "embalagem": {
-      "caixa": "caixa_padrao",
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/ivan.matos@ufsc.br",
-    "origem": "ambientes/C306",
-    "codigo": "V322597",
-    "propriedades": [
-      "Proteger do Calor",
-      "Proteger da Umidade",
-      "Frágil"
-    ],
-    "destino": "ambientes-norte/B203",
-    "localizacao_atual": "ambientes/C306",
-    "deleted": false
-  },
-  "V322610": {
-    "medidas": {
-      "a": 1,
-      "l": 3,
-      "c": 2
-    },
-    "categoria": "Material de Escritório",
-    "peso": null,
-    "items": [
-      "items/322610"
-    ],
-    "observacao": "Criado pelo sistema. PRECISA AJUSTAR AS MEDIDAS. Volume original: volumes/VBgch97uCgvQbBw8ZoU4",
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-11-30T11:16:17.744030+00:00",
-    "embalagem": {
-      "caixa": "caixa_padrao",
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/ivan.matos@ufsc.br",
-    "origem": "ambientes/C301",
-    "codigo": "V322610",
-    "propriedades": [
-      "Proteger do Calor",
-      "Proteger da Umidade",
-      "Frágil"
-    ],
-    "destino": "ambientes-norte/B208",
-    "localizacao_atual": "ambientes/C301",
-    "deleted": false
-  },
-  "V322611": {
-    "medidas": {
-      "a": 1,
-      "l": 3,
-      "c": 2
-    },
-    "categoria": "Material de Escritório",
-    "peso": null,
-    "items": [
-      "items/322611"
-    ],
-    "observacao": "Criado pelo sistema. PRECISA AJUSTAR AS MEDIDAS. Volume original: volumes/KwrkfUXej3AaeLzYWEJb",
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-11-30T11:16:17.740552+00:00",
-    "embalagem": {
-      "caixa": "caixa_padrao",
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/ivan.matos@ufsc.br",
-    "origem": "ambientes/C305",
-    "codigo": "V322611",
-    "propriedades": [
-      "Proteger do Calor",
-      "Proteger da Umidade",
-      "Frágil"
-    ],
-    "destino": "ambientes-norte/B303",
-    "localizacao_atual": "ambientes/C305",
-    "deleted": false
-  },
   "V322722": {
     "medidas": {
       "a": 171,
@@ -104076,40 +104680,6 @@
     "localizacao_atual": "ambientes/B024",
     "deleted": false
   },
-  "V353347": {
-    "medidas": {
-      "a": 1,
-      "l": 3,
-      "c": 2
-    },
-    "categoria": "Material de Escritório",
-    "peso": null,
-    "items": [
-      "items/353347"
-    ],
-    "observacao": "Criado pelo sistema. PRECISA AJUSTAR AS MEDIDAS. Volume original: volumes/VBgch97uCgvQbBw8ZoU4",
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-11-30T11:16:17.744139+00:00",
-    "embalagem": {
-      "caixa": "caixa_padrao",
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/ivan.matos@ufsc.br",
-    "origem": "ambientes/C301",
-    "codigo": "V353347",
-    "propriedades": [
-      "Proteger do Calor",
-      "Proteger da Umidade",
-      "Frágil"
-    ],
-    "destino": "ambientes-norte/B208",
-    "localizacao_atual": "ambientes/C301",
-    "deleted": false
-  },
   "V355910": {
     "medidas": {
       "a": 95,
@@ -116038,45 +116608,6 @@
     "localizacao_atual": "ambientes/B103",
     "deleted": false
   },
-  "VUP1DO7HYrNiEzw8UDmg": {
-    "medidas": {
-      "a": 20,
-      "l": 30,
-      "c": 85
-    },
-    "categoria": "Eletrodomésticos",
-    "peso": null,
-    "items": [
-      "items/227828"
-    ],
-    "observacao": "",
-    "servicos": [
-      "Montagem e Desmontagem"
-    ],
-    "status": [
-      "Criado",
-      "Para Desmontagem"
-    ],
-    "data_criacao": "2023-10-23T22:05:11.479000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/g.karina@ufsc.br",
-    "origem": "ambientes/A108",
-    "destino": "ambientes-norte/A004",
-    "propriedades": [
-      "Proteger do Calor",
-      "Proteger da Umidade",
-      "Frágil",
-      "Proibido Empilhar",
-      "Proteger da Luz"
-    ],
-    "codigo": "VUP1DO7HYrNiEzw8UDmg",
-    "localizacao_atual": "ambientes/A108",
-    "deleted": false
-  },
   "VWX2FZDBWUuDWXVYWkKi": {
     "medidas": {
       "a": 30,
@@ -118083,38 +118614,6 @@
     "localizacao_atual": "ambientes/B019",
     "deleted": false
   },
-  "WKG9ByiBtoLivVTm2Ihs": {
-    "medidas": {
-      "a": 69,
-      "l": 111,
-      "c": 41
-    },
-    "categoria": "Eletrônicos",
-    "peso": 39,
-    "items": [
-      "items/353344"
-    ],
-    "observacao": "",
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-09-28T13:33:30.151000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": 4,
-      "enchimento": true
-    },
-    "responsavel": "usuarios/fabricio.vilanova@ufsc.br",
-    "origem": "ambientes/C104",
-    "destino": "ambientes-norte/B313",
-    "propriedades": [
-      "Frágil"
-    ],
-    "codigo": "WKG9ByiBtoLivVTm2Ihs",
-    "localizacao_atual": "ambientes/C104",
-    "deleted": false
-  },
   "WKJW1Nc5YYYJrZrgpgT7": {
     "medidas": {
       "a": 30,
@@ -119042,44 +119541,6 @@
     ],
     "codigo": "WhAIWEaeIeoyFIAUGmgQ",
     "localizacao_atual": "ambientes/B119",
-    "deleted": false
-  },
-  "WhPppvQfbTjvnPAFiGxZ": {
-    "medidas": {
-      "a": 21,
-      "l": 30,
-      "c": 90
-    },
-    "categoria": "Eletrodomésticos",
-    "peso": null,
-    "items": [
-      "items/322571"
-    ],
-    "observacao": null,
-    "servicos": [
-      "Montagem e Desmontagem"
-    ],
-    "status": [
-      "Criado",
-      "Para Desmontagem"
-    ],
-    "data_criacao": "2023-10-23T22:08:11.249000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/g.karina@ufsc.br",
-    "origem": "ambientes/A110",
-    "destino": "ambientes-norte/A005",
-    "propriedades": [
-      "Proteger da Umidade",
-      "Proteger do Calor",
-      "Proibido Empilhar",
-      "Frágil"
-    ],
-    "codigo": "WhPppvQfbTjvnPAFiGxZ",
-    "localizacao_atual": "ambientes/A110",
     "deleted": false
   },
   "WiNrls6sT1uk6LWVvVjW": {
@@ -121744,39 +122205,6 @@
     "localizacao_atual": "ambientes/A001",
     "deleted": false
   },
-  "Y0TAPKZC0WrozzwL1kYH": {
-    "medidas": {
-      "a": 20,
-      "l": 30,
-      "c": 85
-    },
-    "categoria": "Maquinário",
-    "peso": null,
-    "items": [
-      "items/353325"
-    ],
-    "observacao": null,
-    "servicos": [
-      "Montagem e Desmontagem"
-    ],
-    "status": [
-      "Criado",
-      "Para Desmontagem"
-    ],
-    "data_criacao": "2023-10-07T20:15:24.167000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/ana.forno@ufsc.br",
-    "origem": "ambientes/B017",
-    "destino": "ambientes-norte/A124",
-    "propriedades": [],
-    "codigo": "Y0TAPKZC0WrozzwL1kYH",
-    "localizacao_atual": "ambientes/B017",
-    "deleted": false
-  },
   "Y1oVadEByx0rjcD3uTWA": {
     "medidas": {
       "a": 80,
@@ -122392,38 +122820,6 @@
     ],
     "codigo": "YDtR8NsokUmUCuFcjId5",
     "localizacao_atual": "ambientes/B118",
-    "deleted": false
-  },
-  "YENN7P8xRt04DUozWKfE": {
-    "medidas": {
-      "a": 30,
-      "l": 30,
-      "c": 70
-    },
-    "categoria": "Eletrônicos",
-    "peso": null,
-    "items": [
-      "items/420030"
-    ],
-    "observacao": "",
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-10-23T12:36:40.374000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/c.teixeira@ufsc.br",
-    "origem": "ambientes/B008",
-    "destino": "ambientes-norte/A046",
-    "propriedades": [
-      "Frágil"
-    ],
-    "codigo": "YENN7P8xRt04DUozWKfE",
-    "localizacao_atual": "ambientes/B008",
     "deleted": false
   },
   "YFcBxzDdKKh3CUugLHOn": {
@@ -134995,42 +135391,6 @@
     "localizacao_atual": "ambientes/B012",
     "deleted": false
   },
-  "eyAg19C6KEuKmWv653iq": {
-    "medidas": {
-      "a": 28,
-      "l": 85,
-      "c": 18
-    },
-    "categoria": "Outros",
-    "peso": null,
-    "items": [
-      "items/227839"
-    ],
-    "observacao": "",
-    "servicos": [
-      "Montagem e Desmontagem",
-      "Especializados"
-    ],
-    "status": [
-      "Criado",
-      "Para Desmontagem"
-    ],
-    "data_criacao": "2023-10-06T13:41:57.332000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": 2,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/lara.fernandes@ufsc.br",
-    "origem": "ambientes/B019",
-    "destino": "ambientes-norte/A123",
-    "propriedades": [
-      "Proibido Empilhar"
-    ],
-    "codigo": "eyAg19C6KEuKmWv653iq",
-    "localizacao_atual": "ambientes/B019",
-    "deleted": false
-  },
   "ez8254PKIRf5b6zq51sc": {
     "medidas": {
       "a": 50,
@@ -139744,45 +140104,6 @@
     "localizacao_atual": "ambientes/B103",
     "deleted": false
   },
-  "h9vZxM1D87MuyNabWOuO": {
-    "medidas": {
-      "a": 30,
-      "l": 50,
-      "c": 100
-    },
-    "categoria": "Eletrodomésticos",
-    "peso": 50,
-    "items": [
-      "items/337807"
-    ],
-    "observacao": "Reposição de Gases Refrigerantes.",
-    "servicos": [
-      "Montagem e Desmontagem"
-    ],
-    "status": [
-      "Criado",
-      "Para Desmontagem"
-    ],
-    "data_criacao": "2023-10-23T12:17:08.902000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": 3,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/w.santana@ufsc.br",
-    "origem": "ambientes/B018",
-    "destino": "ambientes-norte/A032",
-    "propriedades": [
-      "Gás Comprimido",
-      "Proteger do Calor",
-      "Proteger da Umidade",
-      "Frágil",
-      "Proibido Empilhar"
-    ],
-    "codigo": "h9vZxM1D87MuyNabWOuO",
-    "localizacao_atual": "ambientes/B018",
-    "deleted": false
-  },
   "hAuNzTRafyXnoKoGm4Kj": {
     "medidas": {
       "a": 40,
@@ -141055,38 +141376,6 @@
     ],
     "codigo": "hj1uipaQBMjkoSQzjI8g",
     "localizacao_atual": "ambientes/B016",
-    "deleted": false
-  },
-  "hj5RrP9PbRwdrchlBzoW": {
-    "medidas": {
-      "a": 29,
-      "l": 19,
-      "c": 92
-    },
-    "categoria": "Materiais elétricos",
-    "peso": 9,
-    "items": [
-      "items/322574"
-    ],
-    "observacao": "",
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-10-10T18:57:05.322000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": 2,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/daniel.cunha@ufsc.br",
-    "origem": "ambientes/B018.1",
-    "destino": "ambientes-norte/A053",
-    "propriedades": [
-      "Frágil"
-    ],
-    "codigo": "hj5RrP9PbRwdrchlBzoW",
-    "localizacao_atual": "ambientes/B018.1",
     "deleted": false
   },
   "hj7uHzjspfzfBAFjBKBt": {
@@ -143026,36 +143315,6 @@
     ],
     "codigo": "j0eQ5W2vMzX0L9S6aMsx",
     "localizacao_atual": "ambientes/A005",
-    "deleted": false
-  },
-  "j1DAFC6lctPI7fF0JEaI": {
-    "medidas": {
-      "a": 40,
-      "l": 60,
-      "c": 93
-    },
-    "categoria": "Eletrodomésticos",
-    "peso": 36,
-    "items": [
-      "items/337801"
-    ],
-    "observacao": "",
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-10-23T11:53:02.523000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/carlos.moratelli@ufsc.br",
-    "origem": "ambientes/B015",
-    "destino": "ambientes-norte/B016",
-    "propriedades": [],
-    "codigo": "j1DAFC6lctPI7fF0JEaI",
-    "localizacao_atual": "ambientes/B015",
     "deleted": false
   },
   "j2OGE9bmgVYhAuQJZkx6": {
@@ -146048,39 +146307,6 @@
     "localizacao_atual": "ambientes/B014",
     "deleted": false
   },
-  "kYGUMRuamPk5jjPP7Uw4": {
-    "medidas": {
-      "a": 20,
-      "l": 30,
-      "c": 85
-    },
-    "categoria": "Maquinário",
-    "peso": null,
-    "items": [
-      "items/353327"
-    ],
-    "observacao": "",
-    "servicos": [
-      "Montagem e Desmontagem"
-    ],
-    "status": [
-      "Criado",
-      "Para Desmontagem"
-    ],
-    "data_criacao": "2023-10-07T20:16:14.657000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/ana.forno@ufsc.br",
-    "origem": "ambientes/B017",
-    "destino": "ambientes-norte/A124",
-    "propriedades": [],
-    "codigo": "kYGUMRuamPk5jjPP7Uw4",
-    "localizacao_atual": "ambientes/B017",
-    "deleted": false
-  },
   "kYZJ68wuhxN4bQ2ZK0L7": {
     "medidas": {
       "a": 13,
@@ -148526,36 +148752,6 @@
     ],
     "codigo": "lauHBbfXnGNXM2B3GeHc",
     "localizacao_atual": "ambientes/B119",
-    "deleted": false
-  },
-  "lbbU4TkY5TPwkdfaMFfk": {
-    "medidas": {
-      "a": 80,
-      "l": 59,
-      "c": 50
-    },
-    "categoria": "Eletrodomésticos",
-    "peso": null,
-    "items": [
-      "items/337799"
-    ],
-    "observacao": "",
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-10-23T11:48:09.116000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/carlos.moratelli@ufsc.br",
-    "origem": "ambientes/B015",
-    "destino": "ambientes-norte/B016",
-    "propriedades": [],
-    "codigo": "lbbU4TkY5TPwkdfaMFfk",
-    "localizacao_atual": "ambientes/B015",
     "deleted": false
   },
   "lbgiHscquQtTPQVb9WSH": {
@@ -153718,38 +153914,6 @@
     "localizacao_atual": "ambientes/B003",
     "deleted": false
   },
-  "o5WJLfMVZW0LfspMObP1": {
-    "medidas": {
-      "a": 20,
-      "l": 20,
-      "c": 70
-    },
-    "categoria": "Eletrônicos",
-    "peso": null,
-    "items": [
-      "items/337803"
-    ],
-    "observacao": "",
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-10-23T12:24:59.612000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/c.teixeira@ufsc.br",
-    "origem": "ambientes/B021",
-    "destino": "ambientes-norte/A044",
-    "propriedades": [
-      "Frágil"
-    ],
-    "codigo": "o5WJLfMVZW0LfspMObP1",
-    "localizacao_atual": "ambientes/B021",
-    "deleted": false
-  },
   "o5qxsLCwCTmTk6vGrXoa": {
     "medidas": {
       "a": 20,
@@ -157133,37 +157297,6 @@
     "localizacao_atual": "ambientes/A002",
     "deleted": false
   },
-  "psGmeV1ZRVD1QDbd7B5h": {
-    "medidas": {
-      "a": 675,
-      "l": 235,
-      "c": 165
-    },
-    "categoria": "Eletrônicos",
-    "peso": null,
-    "items": [
-      "items/327612",
-      "items/327613"
-    ],
-    "observacao": "",
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-10-18T11:40:46.181000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/marcel.agostini@ufsc.br",
-    "origem": "ambientes/B125",
-    "destino": "ambientes-norte/A111",
-    "propriedades": [],
-    "codigo": "psGmeV1ZRVD1QDbd7B5h",
-    "localizacao_atual": "ambientes/B125",
-    "deleted": false
-  },
   "psjXLLlw1nWZ3uikOKBK": {
     "medidas": {
       "a": 50,
@@ -158825,41 +158958,6 @@
     "localizacao_atual": "ambientes/A302",
     "deleted": false
   },
-  "qjhtvVfLinqLQgCt2auE": {
-    "medidas": {
-      "a": 47,
-      "l": 40,
-      "c": 57
-    },
-    "categoria": "Eletrodomésticos",
-    "peso": null,
-    "items": [
-      "items/353303"
-    ],
-    "observacao": "",
-    "servicos": [
-      "Montagem e Desmontagem"
-    ],
-    "status": [
-      "Criado",
-      "Para Desmontagem"
-    ],
-    "data_criacao": "2023-11-06T13:44:38.572000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/felipe.iop@ufsc.br",
-    "origem": "ambientes/B120.1",
-    "destino": "ambientes-norte/A054",
-    "propriedades": [
-      "Frágil"
-    ],
-    "codigo": "qjhtvVfLinqLQgCt2auE",
-    "localizacao_atual": "ambientes/B120.1",
-    "deleted": false
-  },
   "qlBIP2QzOnsgaCfyrjHg": {
     "medidas": {
       "a": 60,
@@ -159941,41 +160039,6 @@
     "localizacao_atual": "ambientes/C105.2",
     "deleted": false
   },
-  "rHrFPZSUKEXpfCsljq3y": {
-    "medidas": {
-      "a": 29,
-      "l": 70,
-      "c": 20
-    },
-    "categoria": "Eletrodomésticos",
-    "peso": 7.7,
-    "items": [
-      "items/363979"
-    ],
-    "observacao": "Além da parte evaporadora há também a parte condensadora, com as seguintes dimensôes:  (LxAxP)mm\t660x500x255 e peso de 20,8kg",
-    "servicos": [
-      "Montagem e Desmontagem",
-      "Calibração",
-      "Especializados"
-    ],
-    "status": [
-      "Criado",
-      "Para Desmontagem"
-    ],
-    "data_criacao": "2023-10-13T12:59:17.435000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": 2,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/fernanda.steffens@ufsc.br",
-    "origem": "ambientes/B001",
-    "destino": "ambientes-norte/A048",
-    "propriedades": [],
-    "codigo": "rHrFPZSUKEXpfCsljq3y",
-    "localizacao_atual": "ambientes/B001",
-    "deleted": false
-  },
   "rIZTnNXBETAjsxnX6t6e": {
     "medidas": {
       "a": 30,
@@ -160712,45 +160775,6 @@
     "propriedades": [],
     "codigo": "rerQg5441TRCRQ8wtdly",
     "localizacao_atual": "ambientes/B001",
-    "deleted": false
-  },
-  "rg2uaJeXNeDsR7dTrmtX": {
-    "medidas": {
-      "a": 20,
-      "l": 35,
-      "c": 90
-    },
-    "categoria": "Eletrônicos",
-    "peso": null,
-    "items": [
-      "items/322566"
-    ],
-    "observacao": "",
-    "servicos": [
-      "Montagem e Desmontagem"
-    ],
-    "status": [
-      "Criado",
-      "Para Desmontagem"
-    ],
-    "data_criacao": "2023-10-23T21:53:55.164000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": 4,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/g.karina@ufsc.br",
-    "origem": "ambientes/A106",
-    "destino": "ambientes-norte/A008",
-    "propriedades": [
-      "Proteger da Umidade",
-      "Proteger do Calor",
-      "Proibido Empilhar",
-      "Proteger da Luz",
-      "Frágil"
-    ],
-    "codigo": "rg2uaJeXNeDsR7dTrmtX",
-    "localizacao_atual": "ambientes/A106",
     "deleted": false
   },
   "rhXwhttp4JxLtRSavFK8": {
@@ -165814,40 +165838,6 @@
     "localizacao_atual": "ambientes/C201",
     "deleted": false
   },
-  "uNof232kfDIDzclmEiXg": {
-    "medidas": {
-      "a": 32,
-      "l": 22,
-      "c": 100
-    },
-    "categoria": "Eletrônicos",
-    "peso": null,
-    "items": [
-      "items/322614",
-      "items/327603"
-    ],
-    "observacao": "",
-    "servicos": [
-      "Montagem e Desmontagem"
-    ],
-    "status": [
-      "Criado",
-      "Para Desmontagem"
-    ],
-    "data_criacao": "2023-10-17T11:01:02.137000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/marcel.agostini@ufsc.br",
-    "origem": "ambientes/A104",
-    "destino": "ambientes-norte/A107",
-    "propriedades": [],
-    "codigo": "uNof232kfDIDzclmEiXg",
-    "localizacao_atual": "ambientes/A104",
-    "deleted": false
-  },
   "uQfyq0eCIzQvTIY0XETN": {
     "medidas": {
       "a": 63,
@@ -169830,36 +169820,6 @@
     "localizacao_atual": "ambientes/B115",
     "deleted": false
   },
-  "wOCWYeqRzKwwXnshQb3z": {
-    "medidas": {
-      "a": 30,
-      "l": 30,
-      "c": 115
-    },
-    "categoria": "Eletrônicos",
-    "peso": null,
-    "items": [
-      "items/353342"
-    ],
-    "observacao": "",
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-10-10T18:32:26.185000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/f.vieira@ufsc.br",
-    "origem": "ambientes/B122",
-    "destino": "ambientes-norte/A103",
-    "propriedades": [],
-    "codigo": "wOCWYeqRzKwwXnshQb3z",
-    "localizacao_atual": "ambientes/B122",
-    "deleted": false
-  },
   "wPcYHAWuVK7rS3FzAlfI": {
     "medidas": {
       "a": 50,
@@ -171845,42 +171805,6 @@
     "localizacao_atual": "ambientes/C105.2",
     "deleted": false
   },
-  "xUa5qpVIuNUEHRCBjarN": {
-    "medidas": {
-      "a": 28,
-      "l": 18,
-      "c": 85
-    },
-    "categoria": "Eletrodomésticos",
-    "peso": null,
-    "items": [
-      "items/227831"
-    ],
-    "observacao": "",
-    "servicos": [
-      "Montagem e Desmontagem",
-      "Especializados"
-    ],
-    "status": [
-      "Criado",
-      "Para Desmontagem"
-    ],
-    "data_criacao": "2023-10-17T19:58:29.153000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": 3,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/rita.valle@ufsc.br",
-    "origem": "ambientes/B003.1",
-    "destino": "ambientes-norte/A052",
-    "propriedades": [
-      "Frágil"
-    ],
-    "codigo": "xUa5qpVIuNUEHRCBjarN",
-    "localizacao_atual": "ambientes/B003.1",
-    "deleted": false
-  },
   "xXjgLfdz1J8YgLNMk7ny": {
     "medidas": {
       "a": 50,
@@ -172863,42 +172787,6 @@
     ],
     "codigo": "xzcIarV67CJD89mQ1O5F",
     "localizacao_atual": "ambientes/B103",
-    "deleted": false
-  },
-  "xzxir6fpIojM4yPBZWK3": {
-    "medidas": {
-      "a": 28,
-      "l": 20,
-      "c": 92
-    },
-    "items": [
-      "items/322577"
-    ],
-    "peso": 10,
-    "categoria": "Ar Condicionado",
-    "observacao": "Será necessário providenciar uma caixa com as medidas compatíveis e fita adesiva para lacrar a caixa.",
-    "servicos": [
-      "Montagem e Desmontagem",
-      "Especializados"
-    ],
-    "status": [
-      "Criado",
-      "Para Desmontagem"
-    ],
-    "data_criacao": "2023-10-11T18:17:48.140000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": 4,
-      "enchimento": true
-    },
-    "responsavel": "usuarios/flavio.jerez@ufsc.br",
-    "origem": "ambientes/B106",
-    "destino": "ambientes-norte/A121",
-    "propriedades": [
-      "Frágil"
-    ],
-    "codigo": "xzxir6fpIojM4yPBZWK3",
-    "localizacao_atual": "ambientes/B106",
     "deleted": false
   },
   "y12ZEWTKxDokKwOlNEuH": {
@@ -175108,40 +174996,6 @@
     "localizacao_atual": "ambientes/B003.1",
     "deleted": false
   },
-  "z5oNs5X6Mmjzl1Qb0LCn": {
-    "medidas": {
-      "a": 50,
-      "l": 30,
-      "c": 90
-    },
-    "categoria": "Eletrônicos",
-    "peso": null,
-    "items": [
-      "items/322608",
-      "items/353326"
-    ],
-    "observacao": "",
-    "servicos": [
-      "Montagem e Desmontagem"
-    ],
-    "status": [
-      "Criado",
-      "Para Desmontagem"
-    ],
-    "data_criacao": "2023-10-16T13:34:55.239000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/marcel.agostini@ufsc.br",
-    "origem": "ambientes/A102",
-    "destino": "ambientes-norte/A105",
-    "propriedades": [],
-    "codigo": "z5oNs5X6Mmjzl1Qb0LCn",
-    "localizacao_atual": "ambientes/A102",
-    "deleted": false
-  },
   "z5vexNPjnbxequXxleAI": {
     "medidas": {
       "a": 74,
@@ -176701,41 +176555,6 @@
     "localizacao_atual": "ambientes/B001",
     "deleted": false
   },
-  "zskZKQonFlYz10DYCLeU": {
-    "medidas": {
-      "a": 90,
-      "l": 120,
-      "c": 180
-    },
-    "categoria": "Eletrônicos",
-    "peso": null,
-    "items": [
-      "items/353306",
-      "items/353307"
-    ],
-    "observacao": "",
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-10-19T17:19:55.060000+00:00",
-    "embalagem": {
-      "caixa": "caixa_padrao",
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/ivan.matos@ufsc.br",
-    "origem": "ambientes/C204",
-    "destino": "ambientes-norte/B213",
-    "propriedades": [
-      "Frágil",
-      "Proteger do Calor",
-      "Proteger da Umidade"
-    ],
-    "codigo": "zskZKQonFlYz10DYCLeU",
-    "localizacao_atual": "ambientes/C204",
-    "deleted": false
-  },
   "zuPZPnFOHXhvwXMFzilS": {
     "medidas": {
       "a": 50,
@@ -176877,45 +176696,6 @@
     ],
     "codigo": "zyZixi1t9umKO2xVszAu",
     "localizacao_atual": "ambientes/B119",
-    "deleted": false
-  },
-  "zzNG7xMjhirDralW2ihR": {
-    "medidas": {
-      "a": 29,
-      "l": 23,
-      "c": 80
-    },
-    "categoria": "Eletrodomésticos",
-    "peso": 8,
-    "items": [
-      "items/337806"
-    ],
-    "observacao": "Desmontar e desmontar equipamento atualmente localizado no laboratório. Considerar o condensador externo com 68 x 29 x 55 cm, com aproximadamente 25 kg.",
-    "servicos": [
-      "Montagem e Desmontagem",
-      "Especializados"
-    ],
-    "status": [
-      "Criado",
-      "Para Desmontagem"
-    ],
-    "data_criacao": "2023-10-15T16:31:46.588000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": 2,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/marcio.rocha@ufsc.br",
-    "origem": "ambientes/B022",
-    "destino": "ambientes-norte/BS01",
-    "propriedades": [
-      "Gás Comprimido",
-      "Proteger do Calor",
-      "Proteger da Umidade",
-      "Frágil"
-    ],
-    "codigo": "zzNG7xMjhirDralW2ihR",
-    "localizacao_atual": "ambientes/B022",
     "deleted": false
   }
 }
