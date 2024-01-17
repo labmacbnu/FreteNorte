@@ -74,6 +74,18 @@ defineProps({
                     <p class="fw-bold mb-0">Observação:</p>
                     <p>{{ volume.observacao }}</p>
                 </template>
+                <p class="fw-bold mb-2">Embalagem</p>
+                <div class="ms-3">
+                <p class="mb-1"> 
+                    Enchimento: {{ volume.embalagem.enchimento ? "Sim" : "Não" }}
+                </p>
+                <p class="mb-1">
+                    Plástico bolha: {{ volume.embalagem.platico_bolha ? volume.embalagem.platico_bolha + "m": 'Não' }}
+                </p>
+                <p class="mb-1">
+                   Caixa: {{ volume.embalagem.caixa ? volume.embalagem.caixa : 'Não' }} 
+                </p>
+                </div>
             </div>
 
         </div>
