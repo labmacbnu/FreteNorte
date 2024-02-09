@@ -67,7 +67,7 @@ defineProps({
                         <span>
                             {{ item.descricao ? item.descricao : item.short_descricao }}
                         </span>
-                        <span class="bagde text-secondary">{{ item.key }}</span>
+                        <RouterLink title="Link para o item" :to="{name: 'item-codigo', params: {codigo: item.key }}" class="bagde text-decoration-none">{{ item.key }}<i class="bi-link bi ms-1 d-print-none"></i></RouterLink>
                     </li>
                 </ul>
                 <template v-if="volume.observacao">
