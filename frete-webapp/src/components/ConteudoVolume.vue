@@ -41,11 +41,20 @@ defineProps({
                                 </p>
                         
                             </div>
-                            <h5><i class="bi bi-rulers fs-3 me-2"></i>Medidas</h5>
-                                <VMedidasDisplay v-bind="volume.medidas"></VMedidasDisplay>
+
+                            <div class="hstack gap-3">
+                                <div class="me-4">
+                                    <h5><i class="bi bi-rulers fs-3 me-2"></i>Medidas</h5>
+                                        <VMedidasDisplay v-bind="volume.medidas"></VMedidasDisplay>
+                                </div>
+                                <div class="ms-4">
+                                    <h5><i class="bi bi-wrench-adjustable fs-3 me-2"></i>Peso</h5>
+                                        <div class="">{{ volume.peso }} kg</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div> <!-- propriedades labels -->
+                    <div class="mt-1"> <!-- propriedades labels -->
                         <template v-for="(valor, key) in simbolos_nbr">
                             <template v-if="volume.propriedades?.includes(key)">
                                 <figure class="figure text-center mx-1">
