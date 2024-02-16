@@ -1,5 +1,5 @@
 <template>
-    <span class="text-nowrap" :class="[okay ? 'text-dark' : 'text-danger']">{{ p.a }}&times;{{ p.l }}&times;{{ p.c }} cm</span>
+    <span title="altura x largura x comprimento" class="text-nowrap" :class="[okay ? 'text-dark' : 'text-danger']">{{ p.a }}&times;{{ p.l }}&times;{{ p.c }} cm</span>
 </template>
 <script setup>
 import { computed } from 'vue';
