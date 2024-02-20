@@ -192,7 +192,7 @@ async function editar_volume() {
   await updateDoc(docRef, novos_dados)
 
   set_mensagem_popup("Volume editado com sucesso", "success")
-  router.push({ name: 'volumes' })
+  router.push({ name: 'volume-codigo', params: {codigo: volume_editado.value.codigo} })
 }
 
 onMounted(() => {
