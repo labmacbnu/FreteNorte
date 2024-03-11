@@ -18,6 +18,7 @@ import { ref } from 'vue';
 import { QrcodeStream } from 'vue-qrcode-reader-vue3';
 
 const emit = defineEmits(['decoded'])
+const props = defineProps({'autoreload': {type: Boolean, default: false}})
 
 const camera = ref("auto");
 const url = ref("")
@@ -39,6 +40,9 @@ function onDecode(result) {
     url.value = correcturl
     emit('decoded', correcturl)
     turnoff_camera()
+    if(props.autoreload){
+        setTimeout(() => turnon_camera(), 1200)
+    } 
 }
 
 function paintOutline(detectedCodes, ctx) {
