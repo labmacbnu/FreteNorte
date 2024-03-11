@@ -161,6 +161,15 @@ const router = createRouter({
       }
     },
     {
+      path: '/manyscan',
+      name: 'manyscan', 
+      component: () => import('@/views/ScanearMany.vue'),
+      meta: {
+        requiresAuth: true,
+        title: "Ler QR Codes"
+      }
+    },
+    {
       path: '/ajuda',
       name: 'ajuda',
       // route level code-splitting
