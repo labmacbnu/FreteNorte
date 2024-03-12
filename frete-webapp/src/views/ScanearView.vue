@@ -19,7 +19,10 @@ function update_url(new_url) {
 <template>
   <div class="row">
     <div class="col">
-      <QRCodeReader @decoded="update_url"></QRCodeReader>
+      <QRCodeReader @decoded="update_url">
+        <h3>QR Code lido com sucesso</h3>
+                    <p>Redirecionando para a página correspondente.</p> 
+      </QRCodeReader>
     </div>
   </div> 
 </template>
