@@ -20,6 +20,10 @@ const links = reactive([{
     rto: { name: 'qrcode' },
     icon: 'bi-qr-code-scan',
     label: 'Scanear'
+}, {
+    rto: { name: 'lotes-scan' },
+    icon: 'bi-boxes',
+    label: 'Lotes'
 },
 
 ])
