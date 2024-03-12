@@ -161,13 +161,23 @@ const router = createRouter({
       }
     },
     {
-      path: '/manyscan',
-      name: 'manyscan', 
-      component: () => import('@/views/ScanearMany.vue'),
+
+      path: '/lotes',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/volumes/view.vue'),
       meta: {
-        requiresAuth: true,
-        title: "Ler QR Codes"
-      }
+        requiresAuth: true
+      },
+      children: [
+        {
+        path: '',
+        name: 'lotes-scan', 
+        component: () => import('@/views/lotes/LotesScan.vue'),
+        meta: { title: "Ler QR Codes" }
+        }
+      ]
     },
     {
       path: '/ajuda',
