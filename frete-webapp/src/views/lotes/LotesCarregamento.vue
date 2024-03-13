@@ -1,22 +1,25 @@
 <script setup>
 import { computed, ref, toValue } from 'vue';
-import { useRouter } from 'vue-router' 
 import { useLotesStore } from '@/stores/lotes';
-const lotes = useLotesStore()
 import SelectPlus from '@/components/SelectPlus.vue';
+import { useCollection } from 'vuefire'
+import { db } from '@/backend/index'
+import { collection } from 'firebase/firestore'
 
-const caminhoes_info = [
-    {placa: "ABC-1234", motorista: "João", empresa: "Transportadora A"},
-    {placa: "DEF-5678", motorista: "Maria", empresa: "Transportadora B"},
-    {placa: "GHI-9101", motorista: "José", empresa: "Transportadora C"}
-] 
+const lotes = useLotesStore()
 
-const caminhoes = ["ABC-1234", "DEF-5678", "GHI-9101"]
+const {data: caminhoes_info, pending: caminhoes_pending} = useCollection(collection(db, 'caminhoes'))
+
+const caminhoes = computed(() => {
+    if(caminhoes_pending.value) return []
+    return caminhoes_info.value.map(x => x.placa)
+})
 
 const caminhao_selecionado = ref("")
 
 const info_selected = computed(() => {
-    return caminhoes_info.find(x => x.placa === caminhao_selecionado.value)
+    if(caminhoes_pending.value) return null
+    return caminhoes_info.value.find(x => x.placa === caminhao_selecionado.value)
 })
 
 function registerLote(){
@@ -58,4 +61,7 @@ function registerLote(){
         <button @click="registerLote" class="btn btn-success ms-3">Registrar lote</button>
     </div>
 </div>
+<div v-for="caminhao in caminhoes_info">
+    {{caminhao.id}} : {{ caminhao }} 
+    </div>
 </template>
