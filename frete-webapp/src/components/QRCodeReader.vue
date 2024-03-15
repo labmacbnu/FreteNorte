@@ -38,7 +38,7 @@ function onDecode(result) {
     emit('decoded', correcturl)
     turnoff_camera()
     if(props.autoreload){
-        setTimeout(() => turnon_camera(), 1200)
+        setTimeout(() => turnon_camera(), 400)
     } 
 }
 

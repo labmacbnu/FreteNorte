@@ -10,7 +10,7 @@ function update_url(new_url) {
   if(new_url.startsWith(prefix))
   {
     const fullPath = new_url.replace(prefix, "") 
-    setTimeout(() => router.push(fullPath), 1200)
+    setTimeout(() => router.push(fullPath), 400)
   }
 }
 
