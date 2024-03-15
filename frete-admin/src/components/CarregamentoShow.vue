@@ -1,5 +1,5 @@
 <template>
-<div class="card w-50" >
+<div class="card m-2" >
   <div class="card-body">
     <h5 class="card-title">{{carregamento.id}}</h5>
     <h6 class="card-subtitle mb-2 text-body-secondary">{{formata_data(carregamento.data_saida)}}</h6>
