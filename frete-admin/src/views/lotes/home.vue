@@ -9,8 +9,8 @@
         </div>
     </div>
     <div class="row">
-        <div class="col"> 
-            <CarregamentoShow v-for="carregamento in carregamentos" :key="carregamento.id" :carregamento="carregamento" />
+        <div v-for="carregamento in carregamentos" :key="carregamento.id" class="col-4"> 
+            <CarregamentoShow  :carregamento="carregamento" />
         </div>
     </div>
 </template>
