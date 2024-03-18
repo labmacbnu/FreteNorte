@@ -1,10 +1,12 @@
 <script setup>
-import { computed, ref, toValue } from 'vue';
+import { computed, ref, toValue, inject } from 'vue';
 import { useLotesStore } from '@/stores/lotes';
 import CarregamentoShow from '@/components/CarregamentoShow.vue';
 import { useCollection } from 'vuefire'
 import { db } from '@/backend/index'
-import { collection, query, where } from 'firebase/firestore'
+import { collection, query, where, doc, setDoc } from 'firebase/firestore'
+
+const {globaluser, updateUser} = inject('globaluser')
 
 const lotes = useLotesStore()
  
@@ -14,11 +16,15 @@ const carregamento_selecionado = ref(null)
 
 function registerLote(){
     const dados  = {
-        volumes: [...lotes.volumesCods],
-        caminhao: carregamento_selecionado.value
+        volumes: lotes.volumesCods.map(x => doc(db, 'volumes', x)),
+        carregamento: doc(db, 'carregamentos', carregamento_selecionado.value),
+        data_criado: new Date(),
+        responsavel: doc(db, 'usuarios', globaluser.value.email)
     }
     console.log("Lote registrado") 
-    console.log(dados)
+    const new_id = (dados.data_criado.getTime()).toString(36).toUpperCase() 
+    const new_docref = doc(db, 'lotes', new_id)
+    setDoc(new_docref, dados)
 }
  
 
