@@ -4,11 +4,11 @@ import { useLotesStore } from '@/stores/lotes';
 import CarregamentoShow from '@/components/CarregamentoShow.vue';
 import { useCollection } from 'vuefire'
 import { db } from '@/backend/index'
-import { collection } from 'firebase/firestore'
+import { collection, query, where } from 'firebase/firestore'
 
 const lotes = useLotesStore()
  
-const carregamentos = useCollection(collection(db, 'carregamentos'))
+const carregamentos = useCollection(query(collection(db, 'carregamentos'), where("status", 'in', ["agendado", "carregando"])))
 
 const carregamento_selecionado = ref(null)
 
@@ -38,6 +38,7 @@ function registerLote(){
     </div>
     <div class="col-sm-12 col-md-6 mt-2">
         <h4>Carregamento</h4>  
+        <p class="my-0 text-secondary">Selecione o carregamento.</p>
             <div v-for="carregamento in carregamentos" :key="carregamento.id">
                 <CarregamentoShow 
                 @select:carregamento=" x => carregamento_selecionado = x" 
