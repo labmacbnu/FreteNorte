@@ -59,25 +59,26 @@ function paintOutline(detectedCodes, ctx) {
     }
 }
 </script>
-<style>
-@media (max-width: 700px) {
+<style> 
     #qrcodereader {
-        width: 80vw;
-        height: 50vh;
+        width: 50vw;
+        height: 50vw;
+        max-width: 600px;
+        max-height: 600px;
         margin: auto;
-    }
-}
-
+    } 
+/*
 @media (min-width: 700px) {
     #qrcodereader {
-        width: 560px;
-        height: 600px;
+        width: 400px;
+        height: 400px;
         margin: auto;
     }
-}
+}*/
 
 #qrcodereader .overlay {
-    height: 50vh;
+    height: 50vw;
+    max-height: 600px;
     vertical-align: middle;
     text-align: center;
     background: rgba(137, 250, 114, 0.5);
