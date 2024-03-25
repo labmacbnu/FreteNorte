@@ -14,12 +14,13 @@ const carregamentos = useCollection(query(collection(db, 'carregamentos'), where
 
 const carregamento_selecionado = ref(null)
 
-function registerLote(){
+function registerLoteCarregamento(){
     const dados  = {
         volumes: lotes.volumesCods.map(x => doc(db, 'volumes', x)),
         carregamento: doc(db, 'carregamentos', carregamento_selecionado.value),
         data_criado: new Date(),
-        responsavel: doc(db, 'usuarios', globaluser.value.email)
+        responsavel: doc(db, 'usuarios', globaluser.value.email),
+        tipo: "Carregamento"
     }
     console.log("Lote registrado") 
     const new_id = (dados.data_criado.getTime()).toString(36).toUpperCase() 
@@ -56,7 +57,7 @@ function registerLote(){
 
     <div class="col-12 text-center pt-3">
         <RouterLink :to="{name: 'lotes-scan'}" class="btn btn-primary"><i class="bi bi-caret-left"></i> Voltar</RouterLink>
-        <button @click="registerLote" class="btn btn-success ms-3">Registrar lote</button>
+        <button @click="registerLoteCarregamento" class="btn btn-success ms-3">Registrar lote</button>
     </div>
 </div> 
 </template>
