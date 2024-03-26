@@ -29,7 +29,8 @@ function registerLoteDescarregamento(){
         data_criado: new Date(),
         responsavel: doc(db, 'usuarios', globaluser.value.email),
         tipo: "Descarregamento",
-        sala: doc(db, 'ambientes-norte', sala_selecionada.value)
+        sala: doc(db, 'ambientes-norte', sala_selecionada.value), 
+        n_volumes: lotes.volumesCods.length
     }
     console.log("Lote registrado") 
     const new_id = (dados.data_criado.getTime()).toString(36).toUpperCase() 

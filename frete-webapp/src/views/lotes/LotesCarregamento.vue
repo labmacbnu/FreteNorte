@@ -20,7 +20,8 @@ function registerLoteCarregamento(){
         carregamento: doc(db, 'carregamentos', carregamento_selecionado.value),
         data_criado: new Date(),
         responsavel: doc(db, 'usuarios', globaluser.value.email),
-        tipo: "Carregamento"
+        tipo: "Carregamento",
+        n_volumes: lotes.volumesCods.length
     }
     console.log("Lote registrado") 
     const new_id = (dados.data_criado.getTime()).toString(36).toUpperCase() 
