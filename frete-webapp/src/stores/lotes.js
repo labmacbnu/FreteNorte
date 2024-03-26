@@ -10,9 +10,12 @@ export const useLotesStore = defineStore('lotes', ()=>{
     function removeVolume(volume){
         volumesCods.value = volumesCods.value.filter( x => x != volume)
     }
+    function clear(){
+        volumesCods.value = []
+    }
 
     return {
-        volumesCods, addVolume, removeVolume
+        volumesCods, addVolume, removeVolume, clear
     }
 
 })

@@ -1,5 +1,6 @@
 <script setup>
 import { computed, ref, toValue, inject } from 'vue';
+import { useRouter } from 'vue-router'
 import { useLotesStore } from '@/stores/lotes';
 import CarregamentoShow from '@/components/CarregamentoShow.vue';
 import SelectPlus from '@/components/SelectPlus.vue';
@@ -9,6 +10,7 @@ import { collection, query, where, doc, setDoc } from 'firebase/firestore'
 import { useListaAmbientesNorteStore } from '@/stores/ambientes'
 
 const {globaluser, updateUser} = inject('globaluser')
+const router = useRouter()
 
 const lotes = useLotesStore()
  
@@ -22,7 +24,7 @@ const sala_selecionada = ref(null)
 
 
 
-function registerLoteDescarregamento(){
+async function registerLoteDescarregamento(){
     const dados  = {
         volumes: lotes.volumesCods.map(x => doc(db, 'volumes', x)),
         carregamento: doc(db, 'carregamentos', carregamento_selecionado.value),
@@ -35,8 +37,9 @@ function registerLoteDescarregamento(){
     console.log("Lote registrado") 
     const new_id = (dados.data_criado.getTime()).toString(36).toUpperCase() 
     const new_docref = doc(db, 'lotes', new_id)
-    setDoc(new_docref, dados)
-    console.log(dados)
+    await setDoc(new_docref, dados)
+    lotes.clear()
+    router.push({name: 'lotes-scan'}) 
 }
 </script>
 <template>
