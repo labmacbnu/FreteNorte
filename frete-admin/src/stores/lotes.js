@@ -1,6 +1,6 @@
 import { db } from '@/backend'
 import { ref, computed } from 'vue'
-import { addDoc, runTransaction, collection, doc, arrayUnion } from 'firebase/firestore'
+import { addDoc, runTransaction, collection, doc, arrayUnion, where, getAggregateFromServer, sum, query } from 'firebase/firestore'
 import moment from 'moment'
 
 export const loteModel = {
@@ -29,4 +29,14 @@ export async function save_lote(lote_data) {
         return true
     })
     return update
+}
+
+export async function getLotesFromCarregamento(carregamento_id){
+    const lotesRef = collection(db, "lotes")
+    const carregamentoRef = doc(db, 'carregamentos', carregamento_id)
+    const pesquisa = query(lotesRef, where('carregamento', '==', carregamentoRef))
+    const snapshot = await getAggregateFromServer(pesquisa,{
+        totalVolumes: sum('n_volumes')
+    })
+    return snapshot.data().totalVolumes
 }
