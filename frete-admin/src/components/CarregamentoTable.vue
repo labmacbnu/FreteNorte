@@ -9,6 +9,7 @@
                 <th>Empresa</th>
                 <th>Status</th>
                 <th>Volumes</th>
+                <th>Editar</th>
             </tr>
         </thead>
         <tbody>
@@ -20,6 +21,7 @@
                 <td>{{ carregamento.empresa.nome }}</td>
                 <td>{{ carregamento.status }}</td>
                 <td>{{ getlotedata(carregamento.id) }}</td>
+                <td><RouterLink :to="{name: 'lotes-edit', params: {id: carregamento.id }}"><i class="bi bi-pencil"></i></RouterLink></td>
             </tr>
         </tbody>
     </table> 
