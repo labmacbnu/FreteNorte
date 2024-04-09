@@ -10,7 +10,7 @@
     </div>
     <div class="row">
         <div class="col">
-            <form>
+            <form v-if="!pending">
                 <div class="row mb-2">
                     <label for="dataSaida" class="col-sm-2 col-form-label">Data de saída</label>
                     <div class="col-sm-10">
@@ -21,7 +21,7 @@
                     <label for="status" class="col-sm-2 col-form-label">Status</label>
                     <div class="col-sm-10">
                         <select v-model="carregamento.status" class="form-select" id="status">
-                             <option v-for="status in OPCOES_STATUS" :key="status" :value="status">{{ status }}</option>
+                            <option v-for="status in OPCOES_STATUS" :key="status" :value="status">{{ status }}</option>
                         </select>
                     </div>
                 </div>
@@ -56,18 +56,51 @@
             </form>
         </div>
         <div class="row">
+            <div class="col">
+                <button @click="editCarregamento" class="btn btn-danger">Apagar carregamento</button>
+            </div>
             <div class="col text-end">
-                <button @click="saveCarregamento" class="btn btn-primary">Salvar alterações</button>
+                <button @click="editCarregamento" class="btn btn-primary">Salvar alterações</button>
             </div>
         </div>
-    </div> 
+    </div>
+    <div class="row mt-4">
+        <div class="col-8">
+            <div class="accordion" id="statusDescription">
+                <div class="accordion-item">
+                    <h5 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        O que significam os status?
+                        </button>
+                    </h5>
+                    <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#statusDescription">
+                        <div class="accordion-body">
+
+                            <dl>
+                                <dt>agendado</dt>
+                                <dd>É o estado inicial de todo carregamento.</dd>
+                                <dt>carregando</dt>
+                                <dd>Quando o caminhão está no campus sendo carregado.</dd>
+                                <dt>carregado</dt>
+                                <dd>Quando o caminhão já está carregado e pronto para sair.</dd>
+                                <dt>descarregando</dt>
+                                <dd>Quando o caminhão está descarregando no novo campus.</dd>
+                                <dt>finalizado</dt>
+                                <dd>Quando o carregamento foi finalizado.</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </template>
 <script setup>
 import { reactive, ref, watch, toValue, onMounted, computed } from 'vue';
 import { RouterLink, useRouter, useRoute } from 'vue-router';
 import { useCollection, useDocument } from 'vuefire';
 import { db } from '@/backend';
-import { collection, getCountFromServer, doc, where, setDoc } from 'firebase/firestore';
+import { collection, getCountFromServer, doc, where, updateDoc } from 'firebase/firestore';
 import moment from 'moment';
 import { query } from 'firebase/database';
 
@@ -75,9 +108,9 @@ import { query } from 'firebase/database';
 const route = useRoute()
 const carregamento_id = ref(route.params.id)
 
-const {data: carregamento, promise} = useDocument(doc(db, 'carregamentos', carregamento_id.value), {maxRefDepth: 0});
+const { data: carregamento, promise, pending } = useDocument(doc(db, 'carregamentos', carregamento_id.value), { maxRefDepth: 0 });
 
- 
+
 
 // puxa as empresas
 const empresas = useCollection(collection(db, 'empresas'));
@@ -91,7 +124,7 @@ watch(empresa_id, (nv, ov) => {
 const pesquisa_caminhao = computed(() => query(collection(db, 'caminhoes'), where('empresa', '==', empresa.value)))
 
 const caminhoes = useCollection(collection(db, 'caminhoes'));
-const caminhoes_filtrados =  useCollection(pesquisa_caminhao);
+const caminhoes_filtrados = useCollection(pesquisa_caminhao);
 
 const caminhao_id = ref(null)
 const caminhao = ref(null)
@@ -116,10 +149,12 @@ watch(data_saida, (nv, ov) => {
 const router = useRouter()
 
 async function editCarregamento() {
-    const valores = toValue(edit_carregamento) 
+    const valores = toValue(carregamento)
+    valores.caminhao = caminhao.value
+    valores.empresa = empresa.value
     console.log(valores)
-    const newdoc = doc(db, 'carregamentos', valores.id)
-    await setDoc(newdoc, valores);
+    const docRef = doc(db, 'carregamentos', carregamento_id.value)
+    await updateDoc(docRef, valores)
     console.log('carregamento salvo')
     router.push({ name: 'lotes' })
 }
@@ -129,16 +164,17 @@ async function contarCarregamentos() {
     const snapshot = await getCountFromServer(coll);
     return snapshot.data().count
 }
- 
 
-const OPCOES_STATUS = ['agendado', 'carregado', 'carregando', 'descarregando', 'finalizado']
+
+const OPCOES_STATUS = ['agendado', 'carregando', 'carregado', 'descarregando', 'finalizado']
 
 /// Quando carregar o objeto, vamos fazer uns settings
-promise.value.then(() =>{
+promise.value.then(() => {
     data_saida.value = moment.unix(carregamento.value.data_saida.seconds).format('YYYY-MM-DDTHH:mm')
     const empresa_ref = carregamento.value.empresa
     const caminhao_ref = carregamento.value.caminhao
-    empresa_id.value = empresa_ref.split('/')[1] 
+    empresa_id.value = empresa_ref.split('/')[1]
     caminhao_id.value = caminhao_ref.split('/')[1]
 })
+
 </script>
