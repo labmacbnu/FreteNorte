@@ -104,6 +104,15 @@ const router = createRouter({
             requiresAuth: true,
             title: "Adicionar lote"
           }
+        },  
+        {
+          path: 'edit/:id',
+          name: 'lotes-edit',
+          component: () => import('@/views/lotes/edit.vue'),
+          meta: {
+            requiresAuth: true,
+            title: "Adicionar lote"
+          }
         }
       ]
     },
