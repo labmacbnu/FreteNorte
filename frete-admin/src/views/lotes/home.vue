@@ -9,10 +9,7 @@
                 carregamento</RouterLink>
         </div>
     </div>
-    <div class="row">
-        <!-- <div v-for="carregamento in carregamentos" :key="carregamento.id" class="col-sm-6 col-md-4"> 
-            <CarregamentoShow  :carregamento="carregamento" />
-        </div> -->
+    <div class="row"> 
         <div class="col">
             <CarregamentoTable :carregamentos="carregamentos" />
         </div>
@@ -39,15 +36,4 @@ function formata_data(data) {
 
 const {data: carregamentos, pending} = useCollection(collection(db, 'carregamentos'));
 
-// Código para criar os índices
-// const lotesRef = collection(db, "lotes")
-// const carregamentoRef = doc(db, 'carregamentos', 'C0002')
-// const pesquisa = query(lotesRef, where('carregamento', '==', carregamentoRef), where('tipo', '==', 'Descarregamento'))
-// const mylotes = useCollection(pesquisa, {maxRefDepth: 1})  
-
-// const k = ref(-1)
-// onMounted(async () => {
-//     const result = await getAggregateFromServer(pesquisa, {k: sum('n_volumes')})
-//     k.value = result.data().k 
-// })
 </script>
