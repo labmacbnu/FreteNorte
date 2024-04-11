@@ -57,10 +57,12 @@
         </div>
         <div class="row">
             <div class="col">
-                <button @click="editCarregamento" class="btn btn-danger">Apagar carregamento</button>
+                <button v-if="n==0" :disabled="n > 0" @click="deletaCarregamento" class="btn btn-danger">Apagar
+                    carregamento</button>
             </div>
             <div class="col text-end">
-                <button @click="editCarregamento" class="btn btn-primary">Salvar alterações</button>
+                <button title="Clique para salvar as alterações" @click="editCarregamento"
+                    class="btn btn-primary">Salvar alterações</button>
             </div>
         </div>
     </div>
@@ -69,8 +71,9 @@
             <div class="accordion" id="statusDescription">
                 <div class="accordion-item">
                     <h5 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        O que significam os status?
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            O que significam os status?
                         </button>
                     </h5>
                     <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#statusDescription">
@@ -100,9 +103,11 @@ import { reactive, ref, watch, toValue, onMounted, computed } from 'vue';
 import { RouterLink, useRouter, useRoute } from 'vue-router';
 import { useCollection, useDocument } from 'vuefire';
 import { db } from '@/backend';
-import { collection, getCountFromServer, doc, where, updateDoc } from 'firebase/firestore';
+import { collection, getCountFromServer, doc, where, updateDoc, deleteDoc } from 'firebase/firestore';
 import moment from 'moment';
 import { query } from 'firebase/database';
+import { getLotesFromCarregamento } from '@/stores/lotes'
+
 
 
 const route = useRoute()
@@ -159,6 +164,13 @@ async function editCarregamento() {
     router.push({ name: 'lotes' })
 }
 
+async function deletaCarregamento(){
+    const docRef = doc(db, 'carregamentos', carregamento_id.value)
+    await deleteDoc(docRef, {status: 'deletado'})
+    console.log(`Carregamento ${carregamento_id.value} deletado`)
+    router.push({ name: 'lotes' })
+}
+
 async function contarCarregamentos() {
     const coll = collection(db, "carregamentos");
     const snapshot = await getCountFromServer(coll);
@@ -175,6 +187,11 @@ promise.value.then(() => {
     const caminhao_ref = carregamento.value.caminhao
     empresa_id.value = empresa_ref.split('/')[1]
     caminhao_id.value = caminhao_ref.split('/')[1]
+})
+
+const n = ref(1_000_000)
+onMounted(async () => {
+    n.value = await getLotesFromCarregamento(carregamento_id.value)
 })
 
 </script>
