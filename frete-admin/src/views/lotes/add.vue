@@ -38,7 +38,8 @@
                 <div class="row mb-2">
                     <label for="empresa" class="col-sm-2 col-form-label">Empresa</label>
                     <div class="col-sm-10">
-                        <select v-model="empresa_id" class="form-select" id="empresa">
+                        <select v-model="empresa_id" class="form-select" id="empresa" >
+                            <option :value="null" disabled selected>Selecione uma empresa</option>
                             <option v-for="e in empresas" :key="e.id" :value="e.id">{{ e.nome }}</option>
                         </select>
                     </div>
@@ -48,7 +49,7 @@
                     <label for="caminhao" class="col-sm-2 col-form-label">Caminhão</label>
                     <div class="col-sm-10">
                         <select v-model="caminhao_id" class="form-select" id="caminhao">
-                            <option :value="null" disabled selected>Selecione uma empresa</option>
+                            <option :value="null" disabled selected>Selecione uma empresa primeiro</option>
                             <option v-for="c in caminhoes_filtrados" :key="c.id" :value="c.id">{{ c.placa }}</option>
                         </select>
                     </div>
@@ -67,7 +68,7 @@ import { reactive, ref, watch, toValue, onMounted, computed } from 'vue';
 import { RouterLink, useRouter } from 'vue-router';
 import { useCollection } from 'vuefire';
 import { db } from '@/backend';
-import { collection, getCountFromServer, doc, where, setDoc } from 'firebase/firestore';
+import { collection, getCountFromServer, doc, where, setDoc, orderBy, limit } from 'firebase/firestore';
 import moment from 'moment';
 import { query } from 'firebase/database';
 
@@ -119,17 +120,32 @@ async function saveCarregamento() {
     router.push({ name: 'lotes' })
 }
 
-async function contarCarregamentos() {
-    const coll = collection(db, "carregamentos");
-    const snapshot = await getCountFromServer(coll);
-    return snapshot.data().count
+async function idUltimoCarregamento() {
+    const pesquisa = query(collection(db, "carregamentos"), orderBy('data_criacao', 'desc'), limit(1));
+    const {data: ultimo, promise} = useCollection(pesquisa, { maxRefDepth: 0 }); 
+    await promise.value
+    return ultimo.value[0].id
+}
+
+function hexToDecimal(hexString) {
+    // Verifica se a string tem o formato correto
+    if (/^C[0-9A-Fa-f]{4}$/.test(hexString)) {
+        // Extrai o número hexadecimal da string
+        const hexNumber = hexString.slice(1);
+        // Converte o número hexadecimal para decimal e retorna
+        return parseInt(hexNumber, 16);
+    } else {
+        throw new Error('A string fornecida não está no formato correto.');
+    }
 }
 
 onMounted(async () => {
-    var count = await contarCarregamentos()
-    count++
-    const code = count.toString(16).padStart(4, '0')
+    var ultimo_id = await idUltimoCarregamento()
+    var N = hexToDecimal(ultimo_id)
+    N++
+    const code = N.toString(16).padStart(4, '0')
     const new_id = `C${code}`
+    console.log(`Novo ID: ${new_id}`)
     novo_carregamento.id = new_id
 })
 
