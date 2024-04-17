@@ -8,9 +8,14 @@ const loadJSON = (path) => JSON.parse(fs.readFileSync(new URL(path, import.meta.
 
 const VolumesLEMA = loadJSON('./volumes-lema.json'); 
 
-
-
+Object.entries(VolumesLEMA).forEach(([key, value]) => {
+    value['items'] = value['items'].map( item => {
+        doc(db, item)
+    })
+    console.log(key, value)
+})
+/*
 Object.entries(VolumesLEMA).forEach(async ([key, value]) => {
     const docRef = doc(db, 'volumes', key)
     await setDoc(docRef, value)
-})
+})*/
