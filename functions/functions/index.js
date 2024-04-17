@@ -169,3 +169,16 @@ exports.exportaVolumes = functions.https.onRequest(async (request, response) => 
         
 // emulator http://127.0.0.1:5001/frete-norte-ufsc-blumenau/us-central1/exportaVolumes
 
+exports.descarregaLotes = functions.firestore.document("lotes/{loteId}").onWrite(async (change, context) => {
+    const loteId = context.params.loteId
+    const lote = change.after.data()
+    const volumes = lote.volumes 
+    const tipo = lote.tipo 
+    if(tipo == "Descarregamento"){
+        const sala_ref = lote.sala
+        logger.log(`Lote modificado: ${loteId}. Descarregado em ${sala_ref._path.segments.join("/")}`)
+        volumes.forEach( async (volume) => {
+            volume.update({'localizacao_atual': sala_ref})
+        })
+    }
+})
