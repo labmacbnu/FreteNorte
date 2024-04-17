@@ -53,7 +53,7 @@ Object.entries(VolumesLEMA.ambientes).forEach(async ([key, value]) => {
 Object.entries(VolumesLEMA.volumes).forEach(async ([key, value]) => {
     const docRef = doc(db, 'volumes', key)
     const valor = value
-    valor.item = valor.items.map((item) => {
+    valor.items = valor.items.map((item) => {
         const [collection, id] = splitReference(item)
         const docRef = doc(db, collection, id)
         return docRef
