@@ -1,3242 +1,429 @@
 {
-  "0OGT5oFdSc81GUnIuZb1": {
-    "medidas": {
-      "a": 86,
-      "l": 63,
-      "c": 63
-    },
-    "categoria": "Mobília",
-    "peso": null,
-    "items": [
-      "items/353015"
-    ],
-    "observacao": null,
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-10-04T20:02:28.839000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "destino": "ambientes-norte/A127",
-    "propriedades": [],
-    "codigo": "0OGT5oFdSc81GUnIuZb1",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "0rwTpQQQnJDl5BQP6evz": {
-    "medidas": {
-      "a": 86,
-      "l": 63,
-      "c": 63
-    },
-    "categoria": "Mobília",
-    "peso": null,
-    "items": [
-      "items/353025"
-    ],
-    "observacao": null,
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-10-04T20:03:54.840000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "destino": "ambientes-norte/A127",
-    "propriedades": [],
-    "codigo": "0rwTpQQQnJDl5BQP6evz",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "28IMSvQaSg8z91kFvq4B": {
-    "medidas": {
-      "a": 86,
-      "l": 63,
-      "c": 63
-    },
-    "categoria": "Mobília",
-    "peso": null,
-    "items": [
-      "items/353028"
-    ],
-    "observacao": null,
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-10-04T20:04:27.288000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "destino": "ambientes-norte/A127",
-    "propriedades": [],
-    "codigo": "28IMSvQaSg8z91kFvq4B",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "5KazLta0zT2SNSp1QeTG": {
-    "medidas": {
-      "a": 86,
-      "l": 63,
-      "c": 63
-    },
-    "categoria": "Mobília",
-    "peso": null,
-    "items": [
-      "items/353039"
-    ],
-    "observacao": null,
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-10-04T20:06:41.289000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "destino": "ambientes-norte/A127",
-    "propriedades": [],
-    "codigo": "5KazLta0zT2SNSp1QeTG",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "66ji6kQjLIUabATvGFyw": {
-    "medidas": {
-      "a": 8,
-      "l": 20,
-      "c": 27
-    },
-    "categoria": "Periféricos de Informática",
-    "peso": 1,
-    "items": [
-      "items/338201"
-    ],
-    "observacao": "",
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-10-04T20:12:07.893000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "destino": "ambientes-norte/A127",
-    "propriedades": [
-      "Frágil"
-    ],
-    "codigo": "66ji6kQjLIUabATvGFyw",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "67RekUMXEOBtAsQc1QPY": {
-    "medidas": {
-      "a": 30,
-      "l": 40,
-      "c": 80
-    },
-    "categoria": "Transporte Particular",
-    "peso": null,
-    "items": [
-      "items/353417",
-      "items/353418",
-      "items/353419",
-      "items/353420",
-      "items/363862",
-      "items/363863",
-      "items/363864",
-      "items/363865"
-    ],
-    "observacao": "Notebooks do LEMA, serão levados por Jorge Cássio. ",
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-10-04T19:17:03.808000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "destino": "ambientes-norte/A127",
-    "propriedades": [
-      "Frágil"
-    ],
-    "codigo": "67RekUMXEOBtAsQc1QPY",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "7H77wpnmCXqFuKLwMHAR": {
-    "medidas": {
-      "a": 74,
-      "l": 77,
-      "c": 160
-    },
-    "categoria": "Mobília",
-    "peso": null,
-    "items": [
-      "items/352943"
-    ],
-    "observacao": null,
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-10-04T19:38:05.134000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "destino": "ambientes-norte/A127",
-    "propriedades": [],
-    "codigo": "7H77wpnmCXqFuKLwMHAR",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "7Klx2uHqgQZJhlUuKohg": {
-    "medidas": {
-      "a": 3,
-      "l": 125,
-      "c": 440
-    },
-    "categoria": "Mobília",
-    "peso": 30,
-    "items": [
-      "items/310566"
-    ],
-    "observacao": "",
-    "servicos": [
-      "Montagem e Desmontagem"
-    ],
-    "status": [
-      "Criado",
-      "Para Desmontagem"
-    ],
-    "data_criacao": "2023-09-27T16:32:03.611000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "destino": "ambientes-norte/A127",
-    "propriedades": [],
-    "codigo": "7Klx2uHqgQZJhlUuKohg",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "9Jko22PzUrRi9mHhQAJd": {
-    "medidas": {
-      "a": 74,
-      "l": 77,
-      "c": 160
-    },
-    "categoria": "Mobília",
-    "peso": null,
-    "items": [
-      "items/352944"
-    ],
-    "observacao": null,
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-10-04T19:38:47.863000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "destino": "ambientes-norte/A127",
-    "propriedades": [],
-    "codigo": "9Jko22PzUrRi9mHhQAJd",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "9lm0vg0UtYUNdbgYPhcs": {
-    "medidas": {
-      "a": 250,
-      "l": 90,
-      "c": 53
-    },
-    "categoria": "Mobília",
-    "peso": null,
-    "items": [
-      "items/338066"
-    ],
-    "observacao": "Armário inteiriço, com vidro nas portas.",
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-10-04T19:12:44.405000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "destino": "ambientes-norte/A127",
-    "propriedades": [
-      "Frágil"
-    ],
-    "codigo": "9lm0vg0UtYUNdbgYPhcs",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "9xJUVQm0tidKs4cd3tCr": {
-    "medidas": {
-      "a": 74,
-      "l": 77,
-      "c": 160
-    },
-    "categoria": "Mobília",
-    "peso": null,
-    "items": [
-      "items/352939"
-    ],
-    "observacao": null,
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-10-04T19:36:59.341000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "destino": "ambientes-norte/A127",
-    "propriedades": [],
-    "codigo": "9xJUVQm0tidKs4cd3tCr",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "AS1117VJsrQ7fDRdAlxQ": {
-    "medidas": {
-      "a": 86,
-      "l": 63,
-      "c": 63
-    },
-    "categoria": "Mobília",
-    "peso": null,
-    "items": [
-      "items/353017"
-    ],
-    "observacao": null,
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-10-04T20:02:50.239000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "destino": "ambientes-norte/A127",
-    "propriedades": [],
-    "codigo": "AS1117VJsrQ7fDRdAlxQ",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "AXV8UeIfdQ7m8LOg55c0": {
-    "medidas": {
-      "a": 80,
-      "l": 74,
-      "c": 50
-    },
-    "categoria": "Mobília",
-    "peso": null,
-    "items": [
-      "items/327589"
-    ],
-    "observacao": "",
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-09-27T21:59:20.632000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "destino": "ambientes-norte/A127",
-    "propriedades": [],
-    "codigo": "AXV8UeIfdQ7m8LOg55c0",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "B124004C": {
-    "medidas": {
-      "a": 45,
-      "l": 35,
-      "c": 43
-    },
-    "categoria": "Material de Escritório",
-    "peso": null,
-    "items": [
-      "items/r9Kdp47k2IBQCQOErgw5"
-    ],
-    "observacao": "Já é uma caixa de papelão. ",
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-12-01T19:31:20.826000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "codigo": "B124004C",
-    "propriedades": [],
-    "destino": "ambientes-norte/A127",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "B124004D": {
-    "medidas": {
-      "a": 18,
-      "l": 30,
-      "c": 40
-    },
-    "categoria": "Material de Escritório",
-    "peso": null,
-    "items": [
-      "items/MU0xChPbzFR92XlnBqB8"
-    ],
-    "observacao": "Já é uma caixa de papelão. ",
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-12-01T19:32:03.354000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "codigo": "B124004D",
-    "propriedades": [
-      "Frágil"
-    ],
-    "destino": "ambientes-norte/A127",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "B124004E": {
-    "medidas": {
-      "a": 13,
-      "l": 25,
-      "c": 35
-    },
-    "categoria": "Material de Escritório",
-    "peso": null,
-    "items": [
-      "items/Tm6926SXQZHnwGy3z4mn"
-    ],
-    "observacao": "Já é uma caixa de papelão. ",
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-12-01T19:32:48.819000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "codigo": "B124004E",
-    "propriedades": [
-      "Frágil"
-    ],
-    "destino": "ambientes-norte/A127",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "B124004F": {
-    "medidas": {
-      "a": 35,
-      "l": 28,
-      "c": 45
-    },
-    "categoria": "Material de Escritório",
-    "peso": null,
-    "items": [
-      "items/Fddnk4FbwJNJSUVSTiu8"
-    ],
-    "observacao": "Já é uma caixa de papelão. ",
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-12-01T19:33:14.083000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "codigo": "B124004F",
-    "propriedades": [
-      "Frágil"
-    ],
-    "destino": "ambientes-norte/A127",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "B1240050": {
-    "medidas": {
-      "a": 16,
-      "l": 31,
-      "c": 35
-    },
-    "categoria": "Material de Escritório",
-    "peso": null,
-    "items": [
-      "items/BZbSeEIyAMO5UVhqbQj7"
-    ],
-    "observacao": "Já é uma caixa de papelão. ",
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-12-01T19:33:38.726000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "codigo": "B1240050",
-    "propriedades": [
-      "Frágil"
-    ],
-    "destino": "ambientes-norte/A127",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "B1240051": {
-    "medidas": {
-      "a": 16,
-      "l": 31,
-      "c": 35
-    },
-    "categoria": "Material de Escritório",
-    "peso": null,
-    "items": [
-      "items/7s5trcJ9xHQp9OIvFk3U"
-    ],
-    "observacao": "Já é uma caixa de papelão. ",
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-12-01T19:34:08.834000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "codigo": "B1240051",
-    "propriedades": [
-      "Frágil"
-    ],
-    "destino": "ambientes-norte/A127",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "B1240052": {
-    "medidas": {
-      "a": 25,
-      "l": 30,
-      "c": 32
-    },
-    "categoria": "Material de Escritório",
-    "peso": null,
-    "items": [
-      "items/p9LvKCoKIFJ3y9qU5tRh"
-    ],
-    "observacao": "Já é uma caixa de papelão. ",
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-12-01T19:37:35.809000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "codigo": "B1240052",
-    "propriedades": [
-      "Frágil"
-    ],
-    "destino": "ambientes-norte/A127",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "B1240053": {
-    "medidas": {
-      "a": 40,
-      "l": 30,
-      "c": 40
-    },
-    "categoria": "Material de Escritório",
-    "peso": null,
-    "items": [
-      "items/raF7xUT9LcRZUQgwxfE5"
-    ],
-    "observacao": "Já é uma caixa de papelão. ",
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-12-01T19:38:03.145000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "codigo": "B1240053",
-    "propriedades": [
-      "Frágil"
-    ],
-    "destino": "ambientes-norte/A127",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "B1240054": {
-    "medidas": {
-      "a": 30,
-      "l": 25,
-      "c": 32
-    },
-    "categoria": "Material de Escritório",
-    "peso": null,
-    "items": [
-      "items/TON3RG3t9L7c0HQCMq38"
-    ],
-    "observacao": "Já é uma caixa de papelão. ",
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-12-01T19:38:30.311000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "codigo": "B1240054",
-    "propriedades": [
-      "Frágil"
-    ],
-    "destino": "ambientes-norte/A127",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "B1240055": {
-    "medidas": {
-      "a": 13,
-      "l": 28,
-      "c": 38
-    },
-    "categoria": "Material de Escritório",
-    "peso": null,
-    "items": [
-      "items/i4ZtUz614ignl0EVMQLT"
-    ],
-    "observacao": "Já é uma caixa de papelão. ",
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-12-01T19:39:01.154000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "codigo": "B1240055",
-    "propriedades": [
-      "Frágil"
-    ],
-    "destino": "ambientes-norte/A127",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "B1240056": {
-    "medidas": {
-      "a": 13,
-      "l": 28,
-      "c": 38
-    },
-    "categoria": "Material de Escritório",
-    "peso": null,
-    "items": [
-      "items/tFa3quUcK1OnBReLkQlw"
-    ],
-    "observacao": "Já é uma caixa de papelão. ",
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-12-01T19:39:21.882000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "codigo": "B1240056",
-    "propriedades": [
-      "Frágil"
-    ],
-    "destino": "ambientes-norte/A127",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "B1240057": {
-    "medidas": {
-      "a": 50,
-      "l": 40,
-      "c": 60
-    },
-    "categoria": "Material de Escritório",
-    "peso": null,
-    "items": [
-      "items/k0DYyJquofUrpORFpS58"
-    ],
-    "observacao": null,
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-12-01T19:39:39.077000+00:00",
-    "embalagem": {
-      "caixa": "caixa_padrao",
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "codigo": "B1240057",
-    "propriedades": [
-      "Frágil"
-    ],
-    "destino": "ambientes-norte/A127",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "B1240058": {
-    "medidas": {
-      "a": 25,
-      "l": 39,
-      "c": 37
-    },
-    "categoria": "Material de Escritório",
-    "peso": null,
-    "items": [
-      "items/L1yaij8ahvp9Rv7sKKJU"
-    ],
-    "observacao": "Já é uma caixa de papelão. ",
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-12-01T20:14:14.488000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "codigo": "B1240058",
-    "propriedades": [
-      "Frágil"
-    ],
-    "destino": "ambientes-norte/A127",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "B1240059": {
-    "medidas": {
-      "a": "27",
-      "l": "32",
-      "c": "43"
-    },
-    "categoria": "Livros",
-    "peso": null,
-    "items": [
-      "items/XRaU8i8VYIM1ZIVCNMZ9"
-    ],
-    "observacao": "",
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-12-01T20:25:46.323000+00:00",
-    "embalagem": {
-      "caixa": "caixa_P",
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "codigo": "B1240059",
-    "propriedades": [],
-    "destino": "ambientes-norte/A127",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "B124005A": {
-    "medidas": {
-      "a": "27",
-      "l": "32",
-      "c": "43"
-    },
-    "categoria": "Livros",
-    "peso": null,
-    "items": [
-      "items/qZolx8PLeZmfqX4olyM1"
-    ],
-    "observacao": null,
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-12-01T20:26:00.575000+00:00",
-    "embalagem": {
-      "caixa": "caixa_P",
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "codigo": "B124005A",
-    "propriedades": [],
-    "destino": "ambientes-norte/A127",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "B124005B": {
-    "medidas": {
-      "a": "27",
-      "l": "32",
-      "c": "43"
-    },
-    "categoria": "Livros",
-    "peso": null,
-    "items": [
-      "items/f6mhDhF8eTPmvWLoj6Sd"
-    ],
-    "observacao": null,
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-12-01T20:26:15.266000+00:00",
-    "embalagem": {
-      "caixa": "caixa_P",
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "codigo": "B124005B",
-    "propriedades": [],
-    "destino": "ambientes-norte/A127",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "B124005C": {
-    "medidas": {
-      "a": "27",
-      "l": "32",
-      "c": "43"
-    },
-    "categoria": "Livros",
-    "peso": null,
-    "items": [
-      "items/G64ryZ3tGu4ptnIkeuIQ"
-    ],
-    "observacao": null,
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-12-01T20:26:27.243000+00:00",
-    "embalagem": {
-      "caixa": "caixa_P",
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "codigo": "B124005C",
-    "propriedades": [],
-    "destino": "ambientes-norte/A127",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "B124005D": {
-    "medidas": {
-      "a": "27",
-      "l": "32",
-      "c": "43"
-    },
-    "categoria": "Livros",
-    "peso": null,
-    "items": [
-      "items/bIuztfjpIEV5nsmviKoZ"
-    ],
-    "observacao": null,
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-12-01T20:26:47.888000+00:00",
-    "embalagem": {
-      "caixa": "caixa_P",
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "codigo": "B124005D",
-    "propriedades": [],
-    "destino": "ambientes-norte/A127",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "B124005E": {
-    "medidas": {
-      "a": "27",
-      "l": "32",
-      "c": "43"
-    },
-    "categoria": "Livros",
-    "peso": null,
-    "items": [
-      "items/SyKG0CnD3UWrSGDw30ig"
-    ],
-    "observacao": null,
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-12-01T20:27:00.999000+00:00",
-    "embalagem": {
-      "caixa": "caixa_P",
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "codigo": "B124005E",
-    "propriedades": [],
-    "destino": "ambientes-norte/A127",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "B124005F": {
-    "medidas": {
-      "a": "27",
-      "l": "32",
-      "c": "43"
-    },
-    "categoria": "Livros",
-    "peso": null,
-    "items": [
-      "items/uR3XUhX4fhZ7QuDv6MSq"
-    ],
-    "observacao": null,
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-12-01T20:27:15.824000+00:00",
-    "embalagem": {
-      "caixa": "caixa_P",
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "codigo": "B124005F",
-    "propriedades": [],
-    "destino": "ambientes-norte/A127",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "B1240060": {
-    "medidas": {
-      "a": "27",
-      "l": "32",
-      "c": "43"
-    },
-    "categoria": "Livros",
-    "peso": null,
-    "items": [
-      "items/aSJhdbjekfimjeTR7hUS"
-    ],
-    "observacao": null,
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-12-01T20:27:30.540000+00:00",
-    "embalagem": {
-      "caixa": "caixa_P",
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "codigo": "B1240060",
-    "propriedades": [],
-    "destino": "ambientes-norte/A127",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "B1240061": {
-    "medidas": {
-      "a": "27",
-      "l": "32",
-      "c": "43"
-    },
-    "categoria": "Livros",
-    "peso": null,
-    "items": [
-      "items/tvbk4bjUSeJjZcIbognp"
-    ],
-    "observacao": null,
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-12-01T20:27:44.960000+00:00",
-    "embalagem": {
-      "caixa": "caixa_P",
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "codigo": "B1240061",
-    "propriedades": [],
-    "destino": "ambientes-norte/A127",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "B1240062": {
-    "medidas": {
-      "a": "27",
-      "l": "32",
-      "c": "43"
-    },
-    "categoria": "Livros",
-    "peso": null,
-    "items": [
-      "items/TDUwKhnEvU8DXLbtQYJf"
-    ],
-    "observacao": null,
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-12-01T20:28:00.457000+00:00",
-    "embalagem": {
-      "caixa": "caixa_P",
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "codigo": "B1240062",
-    "propriedades": [],
-    "destino": "ambientes-norte/A127",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "B1240063": {
-    "medidas": {
-      "a": "27",
-      "l": "32",
-      "c": "43"
-    },
-    "categoria": "Livros",
-    "peso": null,
-    "items": [
-      "items/OCZgKkCOooUFb7TfgsuN"
-    ],
-    "observacao": null,
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-12-01T20:28:11.561000+00:00",
-    "embalagem": {
-      "caixa": "caixa_P",
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "codigo": "B1240063",
-    "propriedades": [],
-    "destino": "ambientes-norte/A127",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "B1240064": {
-    "medidas": {
-      "a": "27",
-      "l": "32",
-      "c": "43"
-    },
-    "categoria": "Livros",
-    "peso": null,
-    "items": [
-      "items/4Pgqxth8XvfYp1c4Xj0N"
-    ],
-    "observacao": null,
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-12-01T20:28:23.772000+00:00",
-    "embalagem": {
-      "caixa": "caixa_P",
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "codigo": "B1240064",
-    "propriedades": [],
-    "destino": "ambientes-norte/A127",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "B1240065": {
-    "medidas": {
-      "a": 50,
-      "l": 40,
-      "c": 65
-    },
-    "categoria": "Outros",
-    "peso": null,
-    "items": [
-      "items/N2hfPQ7nf3eEc7rXOVRQ"
-    ],
-    "observacao": "MDF é pesadinho e tá solto. Talvez uma cinta para prender tudo junto. ",
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-12-01T20:29:09.489000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "codigo": "B1240065",
-    "propriedades": [],
-    "destino": "ambientes-norte/A127",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "B1240066": {
-    "medidas": {
-      "a": 38,
-      "l": 38,
-      "c": 63
-    },
-    "categoria": "Outros",
-    "peso": null,
-    "items": [
-      "items/zu0KjbrkapbGtSey8rqI"
-    ],
-    "observacao": "MDF é pesadinho. Talvez uma cinta para agrupar tudo.",
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-12-01T20:29:37.555000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "codigo": "B1240066",
-    "propriedades": [],
-    "destino": "ambientes-norte/A127",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "B1240067": {
-    "medidas": {
-      "a": 30,
-      "l": 56,
-      "c": 85
-    },
-    "categoria": "Outros",
-    "peso": null,
-    "items": [
-      "items/jVBMFV94Nx3DpwFIwyI7"
-    ],
-    "observacao": "Esse papel tbm é pesado. ",
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-12-01T20:30:17.418000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "codigo": "B1240067",
-    "propriedades": [],
-    "destino": "ambientes-norte/A127",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "B1240068": {
-    "medidas": {
-      "a": 50,
-      "l": 40,
-      "c": 60
-    },
-    "categoria": "Vidraria",
-    "peso": null,
-    "items": [
-      "items/ACoP0Vt4fU16peyLJu5D"
-    ],
-    "observacao": "Esse sólidos aqui tem histórico de quebrarem no transporte.",
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-12-01T20:32:17.210000+00:00",
-    "embalagem": {
-      "caixa": "caixa_padrao",
-      "platico_bolha": null,
-      "enchimento": true
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "codigo": "B1240068",
-    "propriedades": [
-      "Frágil"
-    ],
-    "destino": "ambientes-norte/A127",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "B1240069": {
-    "medidas": {
-      "a": 50,
-      "l": 40,
-      "c": 60
-    },
-    "categoria": "Vidraria",
-    "peso": null,
-    "items": [
-      "items/0qugLrqpgYfgVzHIyznY"
-    ],
-    "observacao": "Esse sólidos aqui tem histórico de quebrarem no transporte.",
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-12-01T20:32:33.579000+00:00",
-    "embalagem": {
-      "caixa": "caixa_padrao",
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "codigo": "B1240069",
-    "propriedades": [
-      "Frágil"
-    ],
-    "destino": "ambientes-norte/A127",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "B124006A": {
-    "medidas": {
-      "a": 50,
-      "l": 40,
-      "c": 60
-    },
-    "categoria": "Vidraria",
-    "peso": null,
-    "items": [
-      "items/4WDAtJIbk5GD7z0dcys8"
-    ],
-    "observacao": "Esse sólidos aqui tem histórico de quebrarem no transporte.",
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-12-01T20:32:49.590000+00:00",
-    "embalagem": {
-      "caixa": "caixa_padrao",
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "codigo": "B124006A",
-    "propriedades": [
-      "Frágil"
-    ],
-    "destino": "ambientes-norte/A127",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "B124006B": {
-    "medidas": {
-      "a": 50,
-      "l": 40,
-      "c": 60
-    },
-    "categoria": "Vidraria",
-    "peso": null,
-    "items": [
-      "items/s7NITeYimPIR058g6waX"
-    ],
-    "observacao": "Esse sólidos aqui tem histórico de quebrarem no transporte.",
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-12-01T20:33:04.711000+00:00",
-    "embalagem": {
-      "caixa": "caixa_padrao",
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "codigo": "B124006B",
-    "propriedades": [
-      "Frágil"
-    ],
-    "destino": "ambientes-norte/A127",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "B124006C": {
-    "medidas": {
-      "a": 50,
-      "l": 40,
-      "c": 60
-    },
-    "categoria": "Vidraria",
-    "peso": null,
-    "items": [
-      "items/ewfwitZeNSfqAeVcco8X"
-    ],
-    "observacao": "Esse sólidos aqui tem histórico de quebrarem no transporte.",
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-12-01T20:33:18.658000+00:00",
-    "embalagem": {
-      "caixa": "caixa_padrao",
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "codigo": "B124006C",
-    "propriedades": [
-      "Frágil"
-    ],
-    "destino": "ambientes-norte/A127",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "B54qwGVBxxKZjGBW5q2Q": {
-    "medidas": {
-      "a": 74,
-      "l": 77,
-      "c": 160
-    },
-    "categoria": "Mobília",
-    "peso": null,
-    "items": [
-      "items/352936"
-    ],
-    "observacao": "",
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-10-04T19:36:10.271000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "destino": "ambientes-norte/A127",
-    "propriedades": [],
-    "codigo": "B54qwGVBxxKZjGBW5q2Q",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "BTGPAx81Na3XCkGMkBCH": {
-    "medidas": {
-      "a": 86,
-      "l": 63,
-      "c": 63
-    },
-    "categoria": "Mobília",
-    "peso": null,
-    "items": [
-      "items/353037"
-    ],
-    "observacao": null,
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-10-04T20:06:05.017000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "destino": "ambientes-norte/A127",
-    "propriedades": [],
-    "codigo": "BTGPAx81Na3XCkGMkBCH",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "DugadEzzCRMKgkghRgmN": {
-    "medidas": {
-      "a": 86,
-      "l": 63,
-      "c": 63
-    },
-    "categoria": "Mobília",
-    "peso": null,
-    "items": [
-      "items/353043"
-    ],
-    "observacao": null,
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-10-04T20:07:21.301000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "destino": "ambientes-norte/A127",
-    "propriedades": [],
-    "codigo": "DugadEzzCRMKgkghRgmN",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "E7MtP658vpIOvrbRrNeF": {
-    "medidas": {
-      "a": 250,
-      "l": 90,
-      "c": 53
-    },
-    "categoria": "Mobília",
-    "peso": null,
-    "items": [
-      "items/338068"
-    ],
-    "observacao": "Armário inteiriço, com vidro nas portas.",
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-10-04T19:13:24.334000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "destino": "ambientes-norte/A127",
-    "propriedades": [
-      "Frágil"
-    ],
-    "codigo": "E7MtP658vpIOvrbRrNeF",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "GEBurneOEnQplVgNQ2UB": {
-    "medidas": {
-      "a": 250,
-      "l": 90,
-      "c": 53
-    },
-    "categoria": "Mobília",
-    "peso": null,
-    "items": [
-      "items/338064"
-    ],
-    "observacao": "Armário inteiriço, com vidro nas portas.",
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-10-04T19:11:45.589000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "destino": "ambientes-norte/A127",
-    "propriedades": [
-      "Frágil"
-    ],
-    "codigo": "GEBurneOEnQplVgNQ2UB",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "Ht5T699lAFU6fKds0g6p": {
-    "medidas": {
-      "a": 74,
-      "l": 77,
-      "c": 160
-    },
-    "categoria": "Mobília",
-    "peso": null,
-    "items": [
-      "items/352937"
-    ],
-    "observacao": null,
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-10-04T19:36:30.860000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "destino": "ambientes-norte/A127",
-    "propriedades": [],
-    "codigo": "Ht5T699lAFU6fKds0g6p",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "I6WeBagtO3pocB8Mk6U9": {
-    "medidas": {
-      "a": 86,
-      "l": 63,
-      "c": 63
-    },
-    "categoria": "Mobília",
-    "peso": null,
-    "items": [
-      "items/353034"
-    ],
-    "observacao": null,
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-10-04T20:05:38.521000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "destino": "ambientes-norte/A127",
-    "propriedades": [],
-    "codigo": "I6WeBagtO3pocB8Mk6U9",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "JPndlMYyXa0pAEdfuSa1": {
-    "medidas": {
-      "a": 86,
-      "l": 63,
-      "c": 63
-    },
-    "categoria": "Mobília",
-    "peso": null,
-    "items": [
-      "items/353016"
-    ],
-    "observacao": null,
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-10-04T20:02:40.223000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "destino": "ambientes-norte/A127",
-    "propriedades": [],
-    "codigo": "JPndlMYyXa0pAEdfuSa1",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "K32kEE9uxvUyDglyddbj": {
-    "medidas": {
-      "a": 86,
-      "l": 63,
-      "c": 63
-    },
-    "categoria": "Mobília",
-    "peso": null,
-    "items": [
-      "items/353035"
-    ],
-    "observacao": null,
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-10-04T20:05:47.665000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "destino": "ambientes-norte/A127",
-    "propriedades": [],
-    "codigo": "K32kEE9uxvUyDglyddbj",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "L9tq9zzeBaeeVqYyjxIN": {
-    "medidas": {
-      "a": 86,
-      "l": 63,
-      "c": 63
-    },
-    "categoria": "Mobília",
-    "peso": null,
-    "items": [
-      "items/353009"
-    ],
-    "observacao": null,
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-10-04T20:01:54.543000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "destino": "ambientes-norte/A127",
-    "propriedades": [],
-    "codigo": "L9tq9zzeBaeeVqYyjxIN",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "LYiSIkgICUqXDfguFcu3": {
-    "medidas": {
-      "a": 74,
-      "l": 77,
-      "c": 160
-    },
-    "categoria": "Mobília",
-    "peso": null,
-    "items": [
-      "items/352948"
-    ],
-    "observacao": null,
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-10-04T19:39:39.048000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "destino": "ambientes-norte/A127",
-    "propriedades": [],
-    "codigo": "LYiSIkgICUqXDfguFcu3",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "PuaS9gUlC8EM7aa9VPSY": {
-    "medidas": {
-      "a": 86,
-      "l": 63,
-      "c": 63
-    },
-    "categoria": "Mobília",
-    "peso": null,
-    "items": [
-      "items/353011"
-    ],
-    "observacao": null,
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-10-04T20:02:06.059000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "destino": "ambientes-norte/A127",
-    "propriedades": [],
-    "codigo": "PuaS9gUlC8EM7aa9VPSY",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "RoUZJ9Iz9vVDXHbOGjDy": {
-    "medidas": {
-      "a": 74,
-      "l": 77,
-      "c": 160
-    },
-    "categoria": "Mobília",
-    "peso": null,
-    "items": [
-      "items/352932"
-    ],
-    "observacao": "",
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-10-04T19:30:02.489000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "destino": "ambientes-norte/A127",
-    "propriedades": [],
-    "codigo": "RoUZJ9Iz9vVDXHbOGjDy",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "SMrWZG8kqwjySJdWBpXv": {
-    "medidas": {
-      "a": 74,
-      "l": 77,
-      "c": 160
-    },
-    "categoria": "Mobília",
-    "peso": null,
-    "items": [
-      "items/352934"
-    ],
-    "observacao": "",
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-10-04T19:34:19.613000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "destino": "ambientes-norte/A127",
-    "propriedades": [],
-    "codigo": "SMrWZG8kqwjySJdWBpXv",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "SwQDv4a3zfo6xoPcgNV0": {
-    "medidas": {
-      "a": 170,
-      "l": 90,
-      "c": 48
-    },
-    "categoria": "Mobília",
-    "peso": null,
-    "items": [
-      "items/352984"
-    ],
-    "observacao": "",
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-10-04T19:17:48.546000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "destino": "ambientes-norte/A127",
-    "propriedades": [],
-    "codigo": "SwQDv4a3zfo6xoPcgNV0",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "UF1v15p100VQxQ2S68Am": {
-    "medidas": {
-      "a": 74,
-      "l": 77,
-      "c": 160
-    },
-    "categoria": "Mobília",
-    "peso": null,
-    "items": [
-      "items/352933"
-    ],
-    "observacao": null,
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-10-04T19:30:17.024000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "destino": "ambientes-norte/A127",
-    "propriedades": [],
-    "codigo": "UF1v15p100VQxQ2S68Am",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "V353414E": {
-    "medidas": {
-      "a": 70,
-      "l": 85,
-      "c": 32
-    },
-    "categoria": "Ar Condicionado",
-    "peso": 44,
-    "items": [
-      "items/353414-E"
-    ],
-    "observacao": "Criado pelo sistema",
-    "servicos": [
-      "Montagem e Desmontagem",
-      "Especializados"
-    ],
-    "status": [
-      "Criado",
-      "Para Desmontagem"
-    ],
-    "data_criacao": "2023-12-14T16:08:38.636856+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": true
-    },
-    "responsavel": "usuarios/j.cassio@ufsc.br",
-    "origem": "ambientes/B124",
-    "codigo": "V353414E",
-    "propriedades": [
-      "Frágil",
-      "Proibido Empilhar"
-    ],
-    "destino": "ambientes-norte/A127",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "V353414I": {
-    "medidas": {
-      "a": 32,
-      "l": 105,
-      "c": 24
-    },
-    "categoria": "Ar Condicionado",
-    "peso": 13,
-    "items": [
-      "items/353414-I"
-    ],
-    "observacao": "Criado pelo sistema",
-    "servicos": [
-      "Montagem e Desmontagem",
-      "Especializados"
-    ],
-    "status": [
-      "Criado",
-      "Para Desmontagem"
-    ],
-    "data_criacao": "2023-12-14T16:08:38.636840+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": true
-    },
-    "responsavel": "usuarios/j.cassio@ufsc.br",
-    "origem": "ambientes/B124",
-    "codigo": "V353414I",
-    "propriedades": [
-      "Frágil",
-      "Proibido Empilhar"
-    ],
-    "destino": "ambientes-norte/A127",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "V9zwL80eMpi3SzWZwJp4": {
-    "medidas": {
-      "a": 74,
-      "l": 80,
-      "c": 60
-    },
-    "categoria": "Mobília",
-    "peso": null,
-    "items": [
-      "items/327299"
-    ],
-    "observacao": "",
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-10-04T19:15:17.288000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "destino": "ambientes-norte/A127",
-    "propriedades": [],
-    "codigo": "V9zwL80eMpi3SzWZwJp4",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "VaJWQXpNBenUVtJYrkxM": {
-    "medidas": {
-      "a": 130,
-      "l": 183,
-      "c": 10
-    },
-    "categoria": "Outros",
-    "peso": null,
-    "items": [
-      "items/172704"
-    ],
-    "observacao": "Lousa digital. ",
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-10-04T19:21:26.852000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "destino": "ambientes-norte/A127",
-    "propriedades": [
-      "Frágil"
-    ],
-    "codigo": "VaJWQXpNBenUVtJYrkxM",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "XJPJBPKq8HGZLh6xP5Mo": {
-    "medidas": {
-      "a": 250,
-      "l": 90,
-      "c": 53
-    },
-    "categoria": "Mobília",
-    "peso": null,
-    "items": [
-      "items/338062"
-    ],
-    "observacao": "Armário inteiriço, com vidro nas portas.",
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-10-04T19:11:01.085000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "destino": "ambientes-norte/A127",
-    "propriedades": [
-      "Frágil"
-    ],
-    "codigo": "XJPJBPKq8HGZLh6xP5Mo",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "YiKFBHtyR7wR7v2smGK5": {
-    "medidas": {
-      "a": 86,
-      "l": 63,
-      "c": 63
-    },
-    "categoria": "Mobília",
-    "peso": null,
-    "items": [
-      "items/353018"
-    ],
-    "observacao": null,
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-10-04T20:03:01.471000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "destino": "ambientes-norte/A127",
-    "propriedades": [],
-    "codigo": "YiKFBHtyR7wR7v2smGK5",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "aXfbn0dgSfhca1SYlVZR": {
-    "medidas": {
-      "a": 170,
-      "l": 90,
-      "c": 48
-    },
-    "categoria": "Mobília",
-    "peso": null,
-    "items": [
-      "items/352982"
-    ],
-    "observacao": "",
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-10-31T19:34:21.826000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "destino": "ambientes-norte/A127",
-    "propriedades": [],
-    "codigo": "aXfbn0dgSfhca1SYlVZR",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "b9UDW6NQIczEzeKfF9dz": {
-    "medidas": {
-      "a": 86,
-      "l": 63,
-      "c": 63
-    },
-    "categoria": "Mobília",
-    "peso": null,
-    "items": [
-      "items/353019"
-    ],
-    "observacao": null,
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-10-04T20:03:20.536000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "destino": "ambientes-norte/A127",
-    "propriedades": [],
-    "codigo": "b9UDW6NQIczEzeKfF9dz",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "bjcXCIArHR6MRsYpbC6j": {
-    "medidas": {
-      "a": 86,
-      "l": 63,
-      "c": 63
-    },
-    "categoria": "Mobília",
-    "peso": null,
-    "items": [
-      "items/353014"
-    ],
-    "observacao": null,
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-10-04T20:02:18.383000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "destino": "ambientes-norte/A127",
-    "propriedades": [],
-    "codigo": "bjcXCIArHR6MRsYpbC6j",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "blSNz1g26wxKLI7XymdU": {
-    "medidas": {
-      "a": 86,
-      "l": 63,
-      "c": 63
-    },
-    "categoria": "Mobília",
-    "peso": null,
-    "items": [
-      "items/353024"
-    ],
-    "observacao": null,
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-10-04T20:03:45.440000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "destino": "ambientes-norte/A127",
-    "propriedades": [],
-    "codigo": "blSNz1g26wxKLI7XymdU",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "c6VU3NInmPOlLLLIoeQb": {
-    "medidas": {
-      "a": 250,
-      "l": 90,
-      "c": 53
-    },
-    "categoria": "Mobília",
-    "peso": null,
-    "items": [
-      "items/338061"
-    ],
-    "observacao": "Armário inteiriço, com vidro nas portas.",
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-10-04T19:10:39.324000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "destino": "ambientes-norte/A127",
-    "propriedades": [
-      "Frágil"
-    ],
-    "codigo": "c6VU3NInmPOlLLLIoeQb",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "cRv2HieWL0y03teK0ZHo": {
-    "medidas": {
-      "a": 250,
-      "l": 90,
-      "c": 53
-    },
-    "categoria": "Mobília",
-    "peso": null,
-    "items": [
-      "items/338059"
-    ],
-    "observacao": "Armário inteiriço, com vidro nas portas.",
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-10-04T19:10:18.676000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "destino": "ambientes-norte/A127",
-    "propriedades": [
-      "Frágil"
-    ],
-    "codigo": "cRv2HieWL0y03teK0ZHo",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "eSSbj3YIczKwG8uCBe6t": {
-    "medidas": {
-      "a": 86,
-      "l": 63,
-      "c": 63
-    },
-    "categoria": "Mobília",
-    "peso": null,
-    "items": [
-      "items/353005"
-    ],
-    "observacao": null,
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-10-04T20:00:43.278000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "destino": "ambientes-norte/A127",
-    "propriedades": [],
-    "codigo": "eSSbj3YIczKwG8uCBe6t",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "ewhbtGoXSYECk5EOaC8Z": {
-    "medidas": {
-      "a": 86,
-      "l": 63,
-      "c": 63
-    },
-    "categoria": "Mobília",
-    "peso": null,
-    "items": [
-      "items/353004"
-    ],
-    "observacao": null,
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-10-04T20:00:31.789000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "destino": "ambientes-norte/A127",
-    "propriedades": [],
-    "codigo": "ewhbtGoXSYECk5EOaC8Z",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "fWS0eGIF7fvlbgENM0sm": {
-    "medidas": {
-      "a": 86,
-      "l": 63,
-      "c": 63
-    },
-    "categoria": "Mobília",
-    "peso": null,
-    "items": [
-      "items/353031"
-    ],
-    "observacao": null,
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-10-04T20:04:51.712000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "destino": "ambientes-norte/A127",
-    "propriedades": [],
-    "codigo": "fWS0eGIF7fvlbgENM0sm",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "g1hGCh6F4HmrYialna6g": {
-    "medidas": {
-      "a": 86,
-      "l": 63,
-      "c": 63
-    },
-    "categoria": "Mobília",
-    "peso": null,
-    "items": [
-      "items/353042"
-    ],
-    "observacao": null,
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-10-04T20:07:11.522000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "destino": "ambientes-norte/A127",
-    "propriedades": [],
-    "codigo": "g1hGCh6F4HmrYialna6g",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "hDJVI99RhdgmsacyLqhp": {
-    "medidas": {
-      "a": 86,
-      "l": 63,
-      "c": 63
-    },
-    "categoria": "Mobília",
-    "peso": null,
-    "items": [
-      "items/353041"
-    ],
-    "observacao": null,
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-10-04T20:07:02.954000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "destino": "ambientes-norte/A127",
-    "propriedades": [],
-    "codigo": "hDJVI99RhdgmsacyLqhp",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "hvXevnwZbZWYzDf3MBne": {
-    "medidas": {
-      "a": 74,
-      "l": 77,
-      "c": 160
-    },
-    "categoria": "Mobília",
-    "peso": null,
-    "items": [
-      "items/352946"
-    ],
-    "observacao": null,
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-10-04T19:39:26.790000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "destino": "ambientes-norte/A127",
-    "propriedades": [],
-    "codigo": "hvXevnwZbZWYzDf3MBne",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "iUBOl5oUSeCOfhcIXYKc": {
-    "medidas": {
-      "a": 250,
-      "l": 90,
-      "c": 53
-    },
-    "categoria": "Mobília",
-    "peso": null,
-    "items": [
-      "items/338060"
-    ],
-    "observacao": "Armário inteiriço, com vidro nas portas.",
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-10-04T19:09:16.819000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "destino": "ambientes-norte/A127",
-    "propriedades": [
-      "Frágil"
-    ],
-    "codigo": "iUBOl5oUSeCOfhcIXYKc",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "jPWUOXhrBYqjeo5Mv1BZ": {
-    "medidas": {
-      "a": 74,
-      "l": 77,
-      "c": 160
-    },
-    "categoria": "Mobília",
-    "peso": null,
-    "items": [
-      "items/352940"
-    ],
-    "observacao": "",
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-10-04T19:37:21.301000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "destino": "ambientes-norte/A127",
-    "propriedades": [],
-    "codigo": "jPWUOXhrBYqjeo5Mv1BZ",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "jRPAVkqfk7ZkqBbVeP7F": {
-    "medidas": {
-      "a": 74,
-      "l": 77,
-      "c": 160
-    },
-    "categoria": "Mobília",
-    "peso": null,
-    "items": [
-      "items/352942"
-    ],
-    "observacao": null,
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-10-04T19:37:53.158000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "destino": "ambientes-norte/A127",
-    "propriedades": [],
-    "codigo": "jRPAVkqfk7ZkqBbVeP7F",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "jsLhQnRv9EevwJacqmYO": {
-    "medidas": {
-      "a": 25,
-      "l": 65,
-      "c": 100
-    },
-    "categoria": "Maquinário",
-    "peso": 32,
-    "items": [
-      "items/391913"
-    ],
-    "observacao": "Contém tubo laser de vidro frágil. ",
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-10-04T20:10:30.334000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "destino": "ambientes-norte/A127",
-    "propriedades": [
-      "Frágil",
-      "Proibido Empilhar",
-      "Proteger da Umidade"
-    ],
-    "codigo": "jsLhQnRv9EevwJacqmYO",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "kVfCsaiW3nQqxlAG4kVM": {
-    "medidas": {
-      "a": 74,
-      "l": 77,
-      "c": 160
-    },
-    "categoria": "Mobília",
-    "peso": null,
-    "items": [
-      "items/352945"
-    ],
-    "observacao": null,
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-10-04T19:39:15.039000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "destino": "ambientes-norte/A127",
-    "propriedades": [],
-    "codigo": "kVfCsaiW3nQqxlAG4kVM",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "lR6UpDRRFXUTHWQ0ZqcN": {
-    "medidas": {
-      "a": 40,
-      "l": 15,
-      "c": 30
-    },
-    "categoria": "Transporte Particular",
-    "peso": null,
-    "items": [
-      "items/352916"
-    ],
-    "observacao": "Será transportado por Jorge Cassio",
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-10-04T20:11:15.605000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "destino": "ambientes-norte/A127",
-    "propriedades": [],
-    "codigo": "lR6UpDRRFXUTHWQ0ZqcN",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "ljuBuBXt2qKEhIVpvywB": {
-    "medidas": {
-      "a": 74,
-      "l": 80,
-      "c": 60
-    },
-    "categoria": "Mobília",
-    "peso": null,
-    "items": [
-      "items/363682"
-    ],
-    "observacao": null,
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-10-04T19:15:41.591000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "destino": "ambientes-norte/A127",
-    "propriedades": [],
-    "codigo": "ljuBuBXt2qKEhIVpvywB",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "mnQVKxeIE2BFki2Uo9zB": {
-    "medidas": {
-      "a": 86,
-      "l": 63,
-      "c": 63
-    },
-    "categoria": "Mobília",
-    "peso": null,
-    "items": [
-      "items/353020"
-    ],
-    "observacao": null,
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-10-04T20:03:33.072000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "destino": "ambientes-norte/A127",
-    "propriedades": [],
-    "codigo": "mnQVKxeIE2BFki2Uo9zB",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "mv8cS8bLvD3dYsJktdls": {
-    "medidas": {
-      "a": 52,
-      "l": 47,
-      "c": 43
-    },
-    "categoria": "Maquinário",
-    "peso": null,
-    "items": [
-      "items/364162"
-    ],
-    "observacao": "",
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-10-04T20:08:51.459000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "destino": "ambientes-norte/A127",
-    "propriedades": [
-      "Frágil"
-    ],
-    "codigo": "mv8cS8bLvD3dYsJktdls",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "nuMOkfyVhhuTyQ19TjfL": {
-    "medidas": {
-      "a": 86,
-      "l": 63,
-      "c": 63
-    },
-    "categoria": "Mobília",
-    "peso": null,
-    "items": [
-      "items/353040"
-    ],
-    "observacao": null,
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-10-04T20:06:50.842000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "destino": "ambientes-norte/A127",
-    "propriedades": [],
-    "codigo": "nuMOkfyVhhuTyQ19TjfL",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "oADz7zFSyrHAq9CaGPVu": {
-    "medidas": {
-      "a": 74,
-      "l": 77,
-      "c": 160
-    },
-    "categoria": "Mobília",
-    "peso": null,
-    "items": [
-      "items/352941"
-    ],
-    "observacao": null,
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-10-04T19:37:38.069000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "destino": "ambientes-norte/A127",
-    "propriedades": [],
-    "codigo": "oADz7zFSyrHAq9CaGPVu",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "pzk6O06m0RZBtW7NFKWM": {
-    "medidas": {
-      "a": 86,
-      "l": 63,
-      "c": 63
-    },
-    "categoria": "Mobília",
-    "peso": null,
-    "items": [
-      "items/353007"
-    ],
-    "observacao": null,
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-10-04T20:01:06.398000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "destino": "ambientes-norte/A127",
-    "propriedades": [],
-    "codigo": "pzk6O06m0RZBtW7NFKWM",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "qNUbnxs67XmQphqGxdBB": {
-    "medidas": {
-      "a": 74,
-      "l": 77,
-      "c": 160
-    },
-    "categoria": "Mobília",
-    "peso": null,
-    "items": [
-      "items/352935"
-    ],
-    "observacao": null,
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-10-04T19:34:38.637000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "destino": "ambientes-norte/A127",
-    "propriedades": [],
-    "codigo": "qNUbnxs67XmQphqGxdBB",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "rPWOiyL5GcDqEb1Xv0HR": {
-    "medidas": {
-      "a": 86,
-      "l": 63,
-      "c": 63
-    },
-    "categoria": "Mobília",
-    "peso": null,
-    "items": [
-      "items/353006"
-    ],
-    "observacao": null,
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-10-04T20:00:53.342000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "destino": "ambientes-norte/A127",
-    "propriedades": [],
-    "codigo": "rPWOiyL5GcDqEb1Xv0HR",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "riRBd3ODhIvRc6g37dzB": {
-    "medidas": {
-      "a": 250,
-      "l": 90,
-      "c": 53
-    },
-    "categoria": "Mobília",
-    "peso": null,
-    "items": [
-      "items/338065"
-    ],
-    "observacao": "Armário inteiriço, com vidro nas portas.",
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-10-04T19:12:15.109000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "destino": "ambientes-norte/A127",
-    "propriedades": [
-      "Frágil"
-    ],
-    "codigo": "riRBd3ODhIvRc6g37dzB",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "s4asKLq6To3Pgn321eGf": {
-    "medidas": {
-      "a": 170,
-      "l": 90,
-      "c": 48
-    },
-    "categoria": "Mobília",
-    "peso": null,
-    "items": [
-      "items/352981"
-    ],
-    "observacao": null,
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-09-27T21:59:49.850000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "destino": "ambientes-norte/A127",
-    "propriedades": [],
-    "codigo": "s4asKLq6To3Pgn321eGf",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "u42RBePlUwJmh6liY0OG": {
-    "medidas": {
-      "a": 250,
-      "l": 90,
-      "c": 53
-    },
-    "categoria": "Mobília",
-    "peso": null,
-    "items": [
-      "items/338067"
-    ],
-    "observacao": "Armário inteiriço, com vidro nas portas.",
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-10-04T19:13:06.286000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "destino": "ambientes-norte/A127",
-    "propriedades": [
-      "Frágil"
-    ],
-    "codigo": "u42RBePlUwJmh6liY0OG",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "vqrFWNuYf1Hp9GMqgopE": {
-    "medidas": {
-      "a": 86,
-      "l": 63,
-      "c": 63
-    },
-    "categoria": "Mobília",
-    "peso": null,
-    "items": [
-      "items/353029"
-    ],
-    "observacao": null,
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-10-04T20:04:39.777000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "destino": "ambientes-norte/A127",
-    "propriedades": [],
-    "codigo": "vqrFWNuYf1Hp9GMqgopE",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "w1sHb7zKmbDqaAICq4MH": {
-    "medidas": {
-      "a": 86,
-      "l": 63,
-      "c": 63
-    },
-    "categoria": "Mobília",
-    "peso": null,
-    "items": [
-      "items/353026"
-    ],
-    "observacao": null,
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-10-04T20:04:16.865000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "destino": "ambientes-norte/A127",
-    "propriedades": [],
-    "codigo": "w1sHb7zKmbDqaAICq4MH",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "x0CwppWeyUOKXMjzzZuq": {
-    "medidas": {
-      "a": 86,
-      "l": 63,
-      "c": 63
-    },
-    "categoria": "Mobília",
-    "peso": null,
-    "items": [
-      "items/353008"
-    ],
-    "observacao": null,
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-10-04T20:01:39.991000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "destino": "ambientes-norte/A127",
-    "propriedades": [],
-    "codigo": "x0CwppWeyUOKXMjzzZuq",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "xvUq7u7cNa3j07aT8oyF": {
-    "medidas": {
-      "a": 86,
-      "l": 63,
-      "c": 63
-    },
-    "categoria": "Mobília",
-    "peso": null,
-    "items": [
-      "items/353001"
-    ],
-    "observacao": "",
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-10-04T20:00:08.286000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "destino": "ambientes-norte/A127",
-    "propriedades": [],
-    "codigo": "xvUq7u7cNa3j07aT8oyF",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "y1dVNtvoHrVjmPGLcgZO": {
-    "medidas": {
-      "a": 86,
-      "l": 63,
-      "c": 63
-    },
-    "categoria": "Mobília",
-    "peso": null,
-    "items": [
-      "items/353038"
-    ],
-    "observacao": null,
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-10-04T20:06:15.605000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "destino": "ambientes-norte/A127",
-    "propriedades": [],
-    "codigo": "y1dVNtvoHrVjmPGLcgZO",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "ydpCSnLs0qcigWaNYQju": {
-    "medidas": {
-      "a": 250,
-      "l": 90,
-      "c": 53
-    },
-    "categoria": "Mobília",
-    "peso": null,
-    "items": [
-      "items/338063"
-    ],
-    "observacao": "Armário inteiriço, com vidro nas portas.",
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-10-04T19:11:26.429000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "destino": "ambientes-norte/A127",
-    "propriedades": [
-      "Frágil"
-    ],
-    "codigo": "ydpCSnLs0qcigWaNYQju",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "ygaFCctsnuVAoPAHB2CD": {
-    "medidas": {
-      "a": 86,
-      "l": 63,
-      "c": 63
-    },
-    "categoria": "Mobília",
-    "peso": null,
-    "items": [
-      "items/353033"
-    ],
-    "observacao": null,
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-10-04T20:05:15.993000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "destino": "ambientes-norte/A127",
-    "propriedades": [],
-    "codigo": "ygaFCctsnuVAoPAHB2CD",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  },
-  "zDuZiucONlAtDcjMJnBK": {
-    "medidas": {
-      "a": 74,
-      "l": 80,
-      "c": 60
-    },
-    "categoria": "Mobília",
-    "peso": null,
-    "items": [
-      "items/363688"
-    ],
-    "observacao": null,
-    "servicos": [],
-    "status": [
-      "Criado"
-    ],
-    "data_criacao": "2023-10-04T19:15:56.488000+00:00",
-    "embalagem": {
-      "caixa": null,
-      "platico_bolha": null,
-      "enchimento": null
-    },
-    "responsavel": "usuarios/l.f.bossa@ufsc.br",
-    "origem": "ambientes/B124",
-    "destino": "ambientes-norte/A127",
-    "propriedades": [],
-    "codigo": "zDuZiucONlAtDcjMJnBK",
-    "localizacao_atual": "ambientes/B124",
-    "deleted": false
-  }
+    "volumes": {
+        "V353341E": {
+            "medidas": {
+                "a": 70,
+                "l": 85,
+                "c": 32
+            },
+            "categoria": "Ar Condicionado",
+            "peso": 44,
+            "items": [
+                "items/353341-E"
+            ],
+            "observacao": "Criado pelo sistema",
+            "servicos": [
+                "Montagem e Desmontagem",
+                "Especializados"
+            ],
+            "status": [
+                "Criado",
+                "Para Desmontagem"
+            ],
+            "data_criacao": "2023-12-14T16:08:38.618717+00:00",
+            "embalagem": {
+                "caixa": null,
+                "platico_bolha": null,
+                "enchimento": true
+            },
+            "responsavel": "usuarios/l.f.bossa@ufsc.br",
+            "origem": "ambientes/B123",
+            "codigo": "V353341E",
+            "propriedades": [
+                "Frágil",
+                "Proibido Empilhar"
+            ],
+            "destino": "ambientes-norte/A102",
+            "localizacao_atual": "ambientes/B123",
+            "deleted": false
+        },
+        "V353341I": {
+            "medidas": {
+                "a": 32,
+                "l": 105,
+                "c": 24
+            },
+            "categoria": "Ar Condicionado",
+            "peso": 13,
+            "items": [
+                "items/353341-I"
+            ],
+            "observacao": "Criado pelo sistema",
+            "servicos": [
+                "Montagem e Desmontagem",
+                "Especializados"
+            ],
+            "status": [
+                "Criado",
+                "Para Desmontagem"
+            ],
+            "data_criacao": "2023-12-14T16:08:38.618702+00:00",
+            "embalagem": {
+                "caixa": null,
+                "platico_bolha": null,
+                "enchimento": true
+            },
+            "responsavel": "usuarios/l.f.bossa@ufsc.br",
+            "origem": "ambientes/B123",
+            "codigo": "V353341I",
+            "propriedades": [
+                "Frágil",
+                "Proibido Empilhar"
+            ],
+            "destino": "ambientes-norte/A102",
+            "localizacao_atual": "ambientes/B123",
+            "deleted": false
+        },
+        "B1230028": {
+            "medidas": {
+                "a": 75,
+                "l": 80,
+                "c": 60
+            },
+            "categoria": "Mobília",
+            "peso": null,
+            "items": [
+                "items/363637"
+            ],
+            "observacao": "",
+            "servicos": [],
+            "status": [
+                "Criado"
+            ],
+            "data_criacao": "2023-12-01T18:38:02.364000+00:00",
+            "embalagem": {
+                "caixa": null,
+                "platico_bolha": null,
+                "enchimento": null
+            },
+            "responsavel": "usuarios/l.f.bossa@ufsc.br",
+            "origem": "ambientes/B123",
+            "codigo": "B1230028",
+            "propriedades": [],
+            "destino": "ambientes-norte/A102",
+            "localizacao_atual": "ambientes/B123",
+            "deleted": false
+        },
+        "V363741": {
+            "medidas": {
+                "a": 87,
+                "l": 51,
+                "c": 55
+            },
+            "categoria": "Mobília",
+            "peso": null,
+            "items": [
+                "items/363741"
+            ],
+            "observacao": "Criado pelo sistema. Volume original: volumes/ZUViUA8AZt6x6bFb9qEU",
+            "servicos": [],
+            "status": [
+                "Criado"
+            ],
+            "data_criacao": "2023-11-24T14:39:30.679262+00:00",
+            "embalagem": {
+                "caixa": null,
+                "platico_bolha": null,
+                "enchimento": null
+            },
+            "responsavel": "usuarios/l.f.bossa@ufsc.br",
+            "origem": "ambientes/B123",
+            "codigo": "V363741",
+            "propriedades": [],
+            "destino": "ambientes-norte/A102",
+            "localizacao_atual": "ambientes/B123",
+            "deleted": false
+        },
+        "V347859": {
+            "medidas": {
+                "a": 87,
+                "l": 51,
+                "c": 55
+            },
+            "categoria": "Mobília",
+            "peso": null,
+            "items": [
+                "items/347859"
+            ],
+            "observacao": "Criado pelo sistema. Volume original: volumes/ZUViUA8AZt6x6bFb9qEU",
+            "servicos": [],
+            "status": [
+                "Criado"
+            ],
+            "data_criacao": "2023-11-24T14:39:30.679189+00:00",
+            "embalagem": {
+                "caixa": null,
+                "platico_bolha": null,
+                "enchimento": null
+            },
+            "responsavel": "usuarios/l.f.bossa@ufsc.br",
+            "origem": "ambientes/B123",
+            "codigo": "V347859",
+            "propriedades": [],
+            "destino": "ambientes-norte/A102",
+            "localizacao_atual": "ambientes/B123",
+            "deleted": false
+        },
+        "Mp4qqn9Lmzowei87GmSn": {
+            "medidas": {
+                "a": 42,
+                "l": 18,
+                "c": 52
+            },
+            "items": [
+                "items/363873"
+            ],
+            "peso": 16,
+            "categoria": "Computadores",
+            "observacao": null,
+            "servicos": [],
+            "status": [
+                "Criado"
+            ],
+            "data_criacao": "2023-10-04T20:27:54.896000+00:00",
+            "embalagem": {
+                "caixa": null,
+                "platico_bolha": 1,
+                "enchimento": null
+            },
+            "responsavel": "usuarios/l.f.bossa@ufsc.br",
+            "origem": "ambientes/B123",
+            "destino": "ambientes-norte/A102",
+            "propriedades": [
+                "Proteger do Calor",
+                "Proteger da Umidade",
+                "Frágil"
+            ],
+            "codigo": "Mp4qqn9Lmzowei87GmSn",
+            "localizacao_atual": "ambientes/B123",
+            "deleted": false
+        }
+    },
+    "items": {
+        "353341-E": {
+            "origem": "B123",
+            "edificio": "BNU03 - Bloco Acadêmico B",
+            "short_descricao": "Unidade Externa",
+            "key": "353341-E",
+            "tipo": "Parte",
+            "ambiente": "ambientes/B123",
+            "meta": {
+                "volume": "volumes/V353341E",
+                "updated": "2023-12-14T19:08:38.618662+00:00",
+                "inteiro": true,
+                "volumado": true,
+                "partes": []
+            },
+            "detalhes": {
+                "patrimonio": 533245,
+                "medidas": "70 x 85 x 32 (AxLxC)",
+                "valor": 4320,
+                "n_controle": NaN,
+                "descricao": "CONDICIONADOR DE AR SPLIT INVERTER - Unidade Externa",
+                "peso": 44,
+                "n_serie": "4715B18367611/000001232595",
+                "cod_barras": 353341,
+                "incorporacao": null,
+                "conservacao": "EM USO",
+                "transf_local": null,
+                "situacao": "Ativo"
+            },
+            "responsavel": "Ana Julia Dal Forno"
+        },
+        "353341-I": {
+            "origem": "B123",
+            "edificio": "BNU03 - Bloco Acadêmico B",
+            "short_descricao": "Unidade Interna",
+            "key": "353341-I",
+            "tipo": "Parte",
+            "ambiente": "ambientes/B123",
+            "meta": {
+                "volume": "volumes/V353341I",
+                "updated": "2023-12-14T19:08:38.618606+00:00",
+                "inteiro": true,
+                "volumado": true,
+                "partes": []
+            },
+            "detalhes": {
+                "patrimonio": 533245,
+                "medidas": "32 x 105 x 24 (AxLxC)",
+                "valor": 4320,
+                "n_controle": NaN,
+                "descricao": "CONDICIONADOR DE AR SPLIT INVERTER - Unidade Interna",
+                "peso": 13,
+                "n_serie": "4715B18367611/000001232595",
+                "cod_barras": 353341,
+                "incorporacao": null,
+                "conservacao": "EM USO",
+                "transf_local": null,
+                "situacao": "Ativo"
+            },
+            "responsavel": "Ana Julia Dal Forno"
+        },
+        "363637": {
+            "origem": "B123",
+            "edificio": "BNU03 - Bloco Acadêmico B",
+            "short_descricao": "MESA RETA 4 PÉS, 800(L)X600(P)X740(A)MM ",
+            "key": 363637,
+            "tipo": "Permanente",
+            "ambiente": "ambientes/B123",
+            "meta": {
+                "volume": "volumes/B1230028",
+                "updated": "2023-09-14T11:40:32+00:00",
+                "inteiro": true,
+                "volumado": true,
+                "partes": []
+            },
+            "detalhes": {
+                "patrimonio": 555681,
+                "medidas": "75 x 60 x 80 (AxCxL)",
+                "valor": 390,
+                "n_controle": NaN,
+                "descricao": "MESA RETA 4 PÉS, 800(L)X600(P)X740(A)MM  - MARCA: TECNO2000; MODELO: BREMEN. MESA RETANGULAR, EM MADEIRA MDP REVESTIDA NA COR CINZA CLARO, ESTRUTURA EM AÇO COM PINTURA EPÓXI-PÓ NA COR ALUMÍNIO NATURAL. DIMENSÕES: 80X 60 X 74 CM.",
+                "peso": "",
+                "n_serie": NaN,
+                "cod_barras": 363637,
+                "incorporacao": "2019-04-01T00:00:00+00:00",
+                "conservacao": "EM USO",
+                "transf_local": null,
+                "situacao": "Ativo"
+            },
+            "responsavel": "Luiz Rafael dos Santos"
+        },
+        "363741": {
+            "origem": "B123",
+            "edificio": "BNU03 - Bloco Acadêmico B",
+            "short_descricao": "CADEIRA DE DIÁLOGO FIXA SEM BRAÇOS",
+            "key": 363741,
+            "tipo": "Permanente",
+            "ambiente": "ambientes/B123",
+            "meta": {
+                "volume": "volumes/V363741",
+                "updated": "2023-09-14T11:40:32+00:00",
+                "inteiro": true,
+                "volumado": true,
+                "partes": []
+            },
+            "detalhes": {
+                "patrimonio": 554285,
+                "medidas": "87 x 55 x 51 (AxCxL)",
+                "valor": 205.98,
+                "n_controle": NaN,
+                "descricao": "CADEIRA DE DIÁLOGO FIXA SEM BRAÇOS - MARCA: FLEXFORM; MODELO: DOTY/CL.DOTY.C.EF. ESTOFADA, EMPILHÁVEL, SEM BRAÇOS, MONTADA SOBRE ARMAÇÃO TUBULAR DE AÇO, DE COR PRETA, ASSENTO 460MM X 460 MM, ENCOSTO 400MM, TECIDO DE CREPE 100% POLIESTER, ESTRUTURA CONFECCIONADA EM AÇO CARBONO, TINTURA COM TRATAMENTO ANTIFERRUGEM.",
+                "peso": "",
+                "n_serie": NaN,
+                "cod_barras": 363741,
+                "incorporacao": "2019-03-12T00:00:00+00:00",
+                "conservacao": "EM USO",
+                "transf_local": "2019-05-21T00:00:00+00:00",
+                "situacao": "Ativo"
+            },
+            "responsavel": "Luiz Rafael dos Santos"
+        },
+        "347859": {
+            "origem": "B123",
+            "edificio": "BNU03 - Bloco Acadêmico B",
+            "key": 347859,
+            "short_descricao": "CADEIRA DE DIÁLOGO FIXA SEM BRAÇOS",
+            "tipo": "Permanente",
+            "ambiente": "ambientes/B123",
+            "meta": {
+                "volume": "volumes/V347859",
+                "updated": "2023-09-14T11:40:32+00:00",
+                "inteiro": true,
+                "volumado": true,
+                "partes": []
+            },
+            "detalhes": {
+                "patrimonio": 554091,
+                "medidas": "87 x 55 x 51 (AxCxL)",
+                "valor": 205.98,
+                "n_controle": NaN,
+                "descricao": "CADEIRA DE DIÁLOGO FIXA SEM BRAÇOS - MARCA: FLEXFORM; MODELO: DOTY/CL.DOTY.C.EF. ESTOFADA, EMPILHÁVEL, SEM BRAÇOS, MONTADA SOBRE ARMAÇÃO TUBULAR DE AÇO, DE COR PRETA, ASSENTO 460MM X 460 MM, ENCOSTO 400MM, TECIDO DE CREPE 100% POLIESTER, ESTRUTURA CONFECCIONADA EM AÇO CARBONO, TINTURA COM TRATAMENTO ANTIFERRUGEM.",
+                "incorporacao": "2019-03-07T00:00:00+00:00",
+                "n_serie": NaN,
+                "cod_barras": 347859,
+                "conservacao": "EM USO",
+                "transf_local": "2019-05-21T00:00:00+00:00",
+                "peso": "15",
+                "situacao": "Ativo"
+            },
+            "responsavel": "Luiz Rafael dos Santos"
+        },
+        "363873": {
+            "origem": "B123",
+            "edificio": "BNU03 - Bloco Acadêmico B",
+            "short_descricao": "COMPUTADOR DESKTOP (SFF) DE USO GERAL",
+            "key": 363873,
+            "tipo": "Permanente",
+            "ambiente": "ambientes/B123",
+            "meta": {
+                "volume": "volumes/Mp4qqn9Lmzowei87GmSn",
+                "updated": "2023-09-14T11:40:32+00:00",
+                "inteiro": true,
+                "volumado": true,
+                "partes": []
+            },
+            "detalhes": {
+                "patrimonio": 555253,
+                "medidas": "18 x 42 x 52 CM",
+                "valor": 14782.5,
+                "n_controle": NaN,
+                "descricao": "COMPUTADOR DESKTOP (SFF) DE USO GERAL - MARCA: DELL; MODELO: DELL PRECISION T5820. COMPUTADOR DESKTOP (WORKSTATION) PARA ENGENHARIA. COR PRETA. COM WINDOWS 10 PRO 64 BITS; PROCESSADOR: INTEL SKL 2133; DISCO RÍGIDO: 1 HDD 2TB 7.200RPM E 1 SSD 256GB; DRIVE DVD +-RW; MEMÓRIA RAM: 32 GB DDR4-2400; PLACA DE VÍDEO QUADRO P1000 2X; ALTO-FALANTE INTEGRADO; PLACA BLUETOOTH; TECLADO: PADRÃO ABNT2, USB; MOUSE: ÓTICO, USB; ACOMPANHA: MOUSEPAD. INTERFACE DE REDE SEM FIO; CABOS, MANUAL E CDS. BIVOLT.",
+                "incorporacao": "2019-03-21T00:00:00+00:00",
+                "n_serie": "7BWK5V2",
+                "cod_barras": 363873,
+                "conservacao": "EM USO",
+                "transf_local": null,
+                "peso": "16",
+                "situacao": "Ativo"
+            },
+            "responsavel": "Luiz Rafael dos Santos"
+        }
+    },
+    "usuarios": {
+        "l.f.bossa@ufsc.br": {
+            "nome": "Luiz Fernando Bossa",
+            "usuario_de": [
+                "B124"
+            ],
+            "ambientes": [
+                "B123"
+            ],
+            "role": "Administrador"
+        }
+    },
+    "ambientes": {
+        "B123": {
+            "codigo": "B123",
+            "edificio": "BNU03 - Bloco Acadêmico B",
+            "items": 27,
+            "nome": "LABMAC - LABORATÓRIO DE MATEMÁTICA APLICADA E COMPUTACIONAL (1º Andar)",
+            "status": "Em uso",
+            "campus": "Sul",
+            "lider": "usuarios/l.f.bossa@ufsc.br"
+        }
+    },
+    "ambientes-norte": {
+        "A102": {
+            "origem": [
+                "B123"
+            ],
+            "codigo": "A102",
+            "nome": "Laboratório de Matemática Aplicada e Computacional (LABMAC)",
+            "campus": "Norte",
+            "detalhes": {
+                "observacoes": "",
+                "ala": "Esquerda",
+                "setor_responsavel": "MAT",
+                "dimensao_m": 37.1,
+                "nomenclatura": "LABMAC",
+                "pavimento": "Superior",
+                "descricao": "",
+                "sigla": "",
+                "tipo_de_ambiente": "Laboratório",
+                "construcao": "Bloco A"
+            }
+        }
+    }
 }
