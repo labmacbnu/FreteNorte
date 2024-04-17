@@ -32,3 +32,4 @@ pythonSDK/.env
 frete-webapp/.firebase/hosting.ZGlzdA.cache
 pythonSDK/xlsx
 __pycache__
+frete-admin/scripts/firebaseConfig.mjs
