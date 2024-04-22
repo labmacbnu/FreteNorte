@@ -169,7 +169,7 @@ exports.exportaVolumes = functions.https.onRequest(async (request, response) => 
         
 // emulator http://127.0.0.1:5001/frete-norte-ufsc-blumenau/us-central1/exportaVolumes
 
-exports.descarregaLotes = functions.firestore.document("lotes/{loteId}").onWrite(async (change, context) => {
+exports.processaLotes = functions.firestore.document("lotes/{loteId}").onWrite(async (change, context) => {
     const loteId = context.params.loteId
     const lote = change.after.data()
     const volumes = lote.volumes 
@@ -179,6 +179,36 @@ exports.descarregaLotes = functions.firestore.document("lotes/{loteId}").onWrite
         logger.log(`Lote modificado: ${loteId}. Descarregado em ${sala_ref._path.segments.join("/")}`)
         volumes.forEach( async (volume) => {
             volume.update({'localizacao_atual': sala_ref})
+            const volume_id = volume.id
+            const movimento_ref = db.doc(`movimentos/${volume_id}`)
+            const movimento_data = { 
+                descarregado: { 
+                    data_hora: lote.data_criacao,
+                    resposavel: lote.responsavel,
+                    sala: sala_ref,
+                    carregamento: lote.carregamento
+                }
+            } 
+            movimento_ref.set(movimento_data, { merge: true })
+            
+
         })
-    }
+    } else if (tipo == "Carregamento"){ 
+        const carregamento = lote.carregamento
+        logger.log(`Lote modificado: ${loteId}. Carregado em ${carregamento._path.segments.join("/")}`)
+        volumes.forEach( async (volume) => { 
+            const volume_id = volume.id
+            const movimento_ref = db.doc(`movimentos/${volume_id}`)
+            const movimento_data = { 
+                carregado: { 
+                    data_hora: lote.data_criacao, 
+                    resposavel: lote.responsavel,
+                    carregamento: lote.carregamento
+                }
+            } 
+
+            movimento_ref.set(movimento_data, { merge: true })
+
+    })
+}
 })
