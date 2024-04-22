@@ -4,11 +4,11 @@ const db = getFirestore(firebaseApp)
 connectFirestoreEmulator(db, 'localhost', 8080)
 
 const bossa_ref = doc(db, 'usuarios', 'l.f.bossa@ufsc.br')
-const carregamento_ref = doc(db, 'carreganebtis', 'C0003')
+const carregamento_ref = doc(db, 'carregamentos', 'C0003')
 const volumes_cods = ['V363741', 'V353341I', 'B1230028', 'V353341E']
 const volumes_refs = volumes_cods.map((cod) => doc(db, 'volumes', cod))
 const data_criacao = new Date()
-const tipo = "Descarregamento"
+const tipo = "Carregamento"
 const n_volumes = volumes_refs.length
 
 const data = {
