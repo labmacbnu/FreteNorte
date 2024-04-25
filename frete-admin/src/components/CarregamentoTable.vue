@@ -1,4 +1,16 @@
 <template>
+    <div class="row">
+        <div class="col text-end mb-3">
+            <span class="me-2 fw-bold">
+            Filtrar por status
+            </span>
+            <div class="form-check form-check-inline" v-for="status in possiveis_status" :key="'div' + status">
+                <input :id="'check-' + status" type="checkbox" class="form-check-input"
+                    v-model="status_selecionados[status]">
+                <label :for="'check-' + status" class="form-check-label">{{ status }}</label>
+            </div>
+        </div>
+    </div>
     <table class="table">
         <thead>
             <tr>
@@ -13,7 +25,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr v-for="carregamento in props.carregamentos" :key="carregamento.id">
+            <tr v-for="carregamento in carregamentos_filtrados" :key="carregamento.id">
                 <td>{{ carregamento.id }}</td>
                 <td>{{ formata_data(carregamento.data_criacao) }}</td>
                 <td>{{ formata_data(carregamento.data_saida) }}</td>
@@ -21,16 +33,20 @@
                 <td>{{ carregamento.empresa.nome }}</td>
                 <td>{{ carregamento.status }}</td>
                 <td>{{ getlotedata(carregamento.id) }}</td>
-                <td><RouterLink :to="{name: 'lotes-edit', params: {id: carregamento.id }}"><i class="bi bi-pencil"></i></RouterLink></td>
+                <td>
+                    <RouterLink :to="{ name: 'lotes-edit', params: { id: carregamento.id } }"><i class="bi bi-pencil"></i>
+                    </RouterLink>
+                </td>
             </tr>
         </tbody>
-    </table> 
+    </table>
 </template>
 <script setup>
-import { onMounted, reactive } from 'vue';
+import { onMounted, reactive, computed } from 'vue';
 import moment from 'moment';
 import { getLotesFromCarregamento } from '@/stores/lotes'
 import { db } from '@/backend';
+import { terminate } from 'firebase/firestore';
 
 function formata_data(data) {
     const momento = moment.unix(data.seconds)
@@ -41,7 +57,23 @@ const props = defineProps({
     carregamentos: Array
 });
 
-function getlotedata(id){ 
+const possiveis_status = ['agendado', 'carregando', 'carregado', 'descarregando', 'finalizado']
+
+const status_selecionados = reactive({
+    agendado: true,
+    carregando: true,
+    carregado: true,
+    descarregando: true,
+    finalizado: false
+
+})
+
+const carregamentos_filtrados = computed(() => {
+    return props.carregamentos.filter(carregamento => status_selecionados[carregamento.status])
+})
+
+
+function getlotedata(id) {
     return dados[id]
 }
 
@@ -51,6 +83,6 @@ onMounted(async () => {
     for (const carregamento of props.carregamentos) {
         const lotes = await getLotesFromCarregamento(carregamento.id)
         dados[carregamento.id] = lotes
-    }  
+    }
 })
 </script>
