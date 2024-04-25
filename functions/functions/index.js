@@ -169,9 +169,9 @@ exports.exportaVolumes = functions.https.onRequest(async (request, response) => 
         
 // emulator http://127.0.0.1:5001/frete-norte-ufsc-blumenau/us-central1/exportaVolumes
 
-exports.processaLotes = functions.firestore.document("lotes/{loteId}").onWrite(async (change, context) => {
+exports.processaLotes = functions.firestore.document("lotes/{loteId}").onCreate(async (change, context) => {
     const loteId = context.params.loteId
-    const lote = change.after.data()
+    const lote = change.after.data() 
     const volumes = lote.volumes 
     const tipo = lote.tipo 
     if(tipo == "Descarregamento"){
