@@ -15,14 +15,11 @@
         </div>
     </div> 
 </template>
-<script setup>
-import { ref, onMounted } from 'vue';
+<script setup> 
 import { RouterLink } from 'vue-router';
 import { useCollection } from 'vuefire';
 import { db } from '@/backend';
-import { query, collection, where, doc, getAggregateFromServer, sum } from 'firebase/firestore';  
-import CarregamentoShow from '@/components/CarregamentoShow.vue';
-import { getLotesFromCarregamento } from '@/stores/lotes'
+import { collection } from 'firebase/firestore';   
 
 
 import CarregamentoTable from '@/components/CarregamentoTable.vue';
