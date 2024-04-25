@@ -143,7 +143,11 @@ async function idUltimoCarregamento() {
     const pesquisa = query(collection(db, "carregamentos"), orderBy('data_criacao', 'desc'), limit(1));
     const {data: ultimo, promise} = useCollection(pesquisa, { maxRefDepth: 0 }); 
     await promise.value
+    if (ultimo.value.length === 0) {
+        return 'C0000'
+    }
     return ultimo.value[0].id
+
 }
 
 function validarEntradas(){
