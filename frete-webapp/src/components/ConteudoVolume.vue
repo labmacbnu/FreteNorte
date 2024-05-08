@@ -18,7 +18,7 @@ defineProps({
 <template>
     <div class="conteudo  border-bottom border-dark pt-2 mt-2">
         <div class="row">
-            <div class="col-6">
+            <div class="col-md-6 col-12">
                 <div class="vstack gap-2  align-items-start">
                     <div class="hstack  align-items-start">
                         <div class="vstack">
@@ -67,7 +67,7 @@ defineProps({
                     </div>
                 </div>
             </div>
-            <div class="col-6">
+            <div class="col-md-6 col-12">
                 <h3>{{ volume.categoria }}</h3>
                 <p class="mb-1"><b>Responsável:</b> {{ volume.responsavel.nome }}</p>
                 <p class="fw-bold mb-0">Lista de itens</p>
