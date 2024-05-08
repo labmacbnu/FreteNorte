@@ -17,7 +17,7 @@ defineProps({
 </script>
 <template>
     <div class="conteudo  border-bottom border-dark pt-2 mt-2">
-        <div class="row">
+        <div class="row g-4">
             <div class="col-md-6 col-12">
                 <div class="vstack gap-2  align-items-start">
                     <div class="hstack  align-items-start">
@@ -25,14 +25,14 @@ defineProps({
                             <small class="ms-auto me-auto">{{ volume.codigo }}</small>
                             <QRCode class="ms-auto me-auto" :path="'/volumes/cod/' + volume.codigo"></QRCode>
                         </div>
-                        <div class="w-75">
+                        <div class="w-auto">
                             <h5><i class="bi bi-truck fs-3 me-2"></i>Transporte</h5>
                             <div class="hstack gap-2  justify-content-evenly mb-3">
                                 <p class="text-center mb-1"><b>Origem</b>
                                     <AmbienteFlag v-bind="volume.origem"></AmbienteFlag>
                                 </p>
                                 <i class="bi bi-arrow-right"></i>
-                                <p class="px-3 align-self-top text-center mb-1 d-print-none"><b>Atual</b>
+                                <p class="px-1 align-self-top text-center mb-1 d-print-none"><b>Atual</b>
                                     <AmbienteFlag v-bind="volume.localizacao_atual"></AmbienteFlag>
                                 </p>
                                 <i class="bi bi-arrow-right d-print-none"></i>
