@@ -72,18 +72,19 @@ const soft_volume_modal_ref = ref(null)
   <div class="row">
     <div class="col">
       <div class="vstack">
-      <RouterLink class="mb-2 icon-link"
-        :to="{ name: 'volumes-ambiente-print-14', params: { ambiente: route.params.ambiente } }">
-        <i class="bi bi-printer me-1"></i>Imprimir etiquetas adesivas 14
-      </RouterLink>
-      <RouterLink class="mb-2 icon-link"
-        :to="{ name: 'volumes-ambiente-print-short', params: { ambiente: route.params.ambiente } }">
-        <i class="bi bi-printer me-1"></i>Imprimir etiquetas verticais
-      </RouterLink>
-      <RouterLink class="mb-2 icon-link"
-        :to="{ name: 'volumes-ambiente-print-long', params: { ambiente: route.params.ambiente } }">
-        <i class="bi bi-printer me-1"></i>Imprimir conteúdos dos volumes
-      </RouterLink>
+        <p class="mb-1">Páginas para impressão</p>
+        <RouterLink class="mb-2 icon-link"
+          :to="{ name: 'volumes-ambiente-print-14', params: { ambiente: route.params.ambiente } }">
+          <i class="bi bi-printer me-1"></i>Imprimir etiquetas adesivas 14
+        </RouterLink>
+        <RouterLink class="mb-2 icon-link"
+          :to="{ name: 'volumes-ambiente-print-short', params: { ambiente: route.params.ambiente } }">
+          <i class="bi bi-printer me-1"></i>Imprimir etiquetas verticais
+        </RouterLink>
+        <RouterLink class="mb-2 icon-link"
+          :to="{ name: 'volumes-ambiente-print-long', params: { ambiente: route.params.ambiente } }">
+          <i class="bi bi-printer me-1"></i>Imprimir conteúdos dos volumes
+        </RouterLink>
     </div>
     </div>
   </div>
