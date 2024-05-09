@@ -41,8 +41,9 @@ function print() {
       <h1>Etiquetas dos volumes do ambiente {{ route.params.ambiente }}</h1>
     </div>
     <div class="col-12 d-print-none">
-      <p @click="print" role="button" class="d-print-none form-text">Essa página foi otimizada para impressão de etiquetas 14. Clique
+      <p @click="print" role="button" class="d-print-none">Essa página foi otimizada para impressão de etiquetas 14. Clique
         aqui para imprimir <i class="bi bi-printer"></i>.</p>
+        <p class="">Imprima em Letter Paper com margens superior e inferior 21mm, margens esquerda e direita 4mm.</p>
     </div>
     <div class="col"> 
       <p class="mb-1">Selecione as categorias a exibir</p>
