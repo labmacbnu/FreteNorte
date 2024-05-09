@@ -1,12 +1,36 @@
 <script setup>
 import QRCode from './QRCodeS.vue';
 import AmbienteFlag from './AmbienteFlag.vue';
+import  QuadradoColorido from './QuadradoColorido.vue';
+import  provisorios  from './provisorios.json';
+
 defineProps({
   volume: {
     type: Object,
     required: true
   }
-})
+}) 
+
+function find_destino(codigo){
+  return provisorios.alocacoes[codigo]
+}
+
+const COLOR1 = {
+  '0E': 'blue',
+  '0D': 'red',
+  '1E': 'yellow',
+  '1D': 'black',
+}
+
+function cor1(destino){
+  const amb_destino = provisorios.ambientes[destino]
+  return COLOR1[`${amb_destino.andar}${amb_destino.lado}`]
+}
+
+function cor2(destino){  
+  return provisorios.ambientes[destino].cor
+}
+
 </script>
 <template>
 <div class="etiqueta py-1">  
@@ -17,7 +41,7 @@ defineProps({
     <div class="vstack ms-1 caminho align-items-center justify-content-center">
       <i class="bi bi-truck d-inline"></i> 
       <AmbienteFlag v-bind="volume.origem"></AmbienteFlag>
-      <i class="bi bi-arrow-down"></i>
+      <i class="bi bi-arrow-down">{{ find_destino(volume.origem.codigo) }}</i>
        <AmbienteFlag v-bind="volume.destino"></AmbienteFlag>
     </div>
     <!-- Conteudo -->
@@ -28,11 +52,12 @@ defineProps({
         </div>
         <div class="text-truncate c-codigo">
           {{volume.items[0].id}}
-        </div>
+        </div> 
+        <QuadradoColorido :cor1=" cor1(find_destino(volume.origem.codigo))" cor2="magenta" altura="1cm"></QuadradoColorido>
       </div>
     </div>
   </div>
-</div>
+</div> 
 </template>
 <style scoped>
 .etiqueta{
