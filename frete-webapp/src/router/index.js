@@ -152,6 +152,12 @@ const router = createRouter({
           component: () => import('../views/volumes/ambiente-print-etiqueta14.vue'),
           meta: { title: "Volumes por ambiente - Impressão Etiqueta 14"}
         },
+        {
+          path: 'mapacores',
+          name: 'volumes-mapacores',
+          component: () => import('../views/MapaCores.vue'),
+          meta: { title: "Mapa de Cores"}
+        }
 
         
       ]
