@@ -151,12 +151,6 @@ const router = createRouter({
           name: 'volumes-ambiente-print-14',
           component: () => import('../views/volumes/ambiente-print-etiqueta14.vue'),
           meta: { title: "Volumes por ambiente - Impressão Etiqueta 14"}
-        },
-        {
-          path: 'mapacores',
-          name: 'volumes-mapacores',
-          component: () => import('../views/MapaCores.vue'),
-          meta: { title: "Mapa de Cores"}
         }
 
         
@@ -173,6 +167,14 @@ const router = createRouter({
         requiresAuth: true,
         title: "Ler QR Code"
       }
+    },
+    {
+      path: '/mapacores',
+      name: 'mapacores',
+      component: () => import('../views/MapaCores.vue'),
+      meta: { 
+        requiresAuth: false,
+        title: "Mapa de Cores"}
     },
     {
 
