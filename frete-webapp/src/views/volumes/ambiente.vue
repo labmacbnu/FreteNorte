@@ -1,8 +1,8 @@
 <script setup>
-import { computed, inject, onBeforeMount, onMounted, ref } from 'vue'; 
+import { computed, inject, onBeforeMount, onMounted, ref } from 'vue';
 import ModalDelete from '@/components/ModalDelete.vue';
-import { useUserPermissionsStore } from '@/stores/user'; 
-import {  registra_volume, apaga_volume, useVolumesEmailStore } from '@/stores/volumes'; 
+import { useUserPermissionsStore } from '@/stores/user';
+import { registra_volume, apaga_volume, useVolumesEmailStore } from '@/stores/volumes';
 import VolumesTable from '@/components/VolumesTable.vue';
 
 import { useRoute } from 'vue-router';
@@ -13,19 +13,19 @@ import { useCollection } from 'vuefire';
 import { RouterLink } from 'vue-router';
 
 const { globaluser, updateUser } = inject("globaluser")
-const permissoes = useUserPermissionsStore() 
+const permissoes = useUserPermissionsStore()
 
 const route = useRoute()
 
 const thisAmbienteRef = doc(db, "ambientes", route.params.ambiente)
-const q = query(collection(db, "volumes"), where('origem', '==', thisAmbienteRef), where('deleted', '==', false),   orderBy("data_criacao", "desc"))
-const {data: volumes, pending, promise} = useCollection(q)
+const q = query(collection(db, "volumes"), where('origem', '==', thisAmbienteRef), where('deleted', '==', false), orderBy("data_criacao", "desc"))
+const { data: volumes, pending, promise } = useCollection(q)
 
 function click_row(i) {
   document.getElementById("check" + i).click()
 }
 
- 
+
 
 
 async function salvar_volume() {
@@ -48,12 +48,12 @@ async function salvar_volume() {
     return false
   }
 }
- 
 
-async function soft_apaga_volume(codigo) { 
+
+async function soft_apaga_volume(codigo) {
   console.log(`Apagando volume ${codigo}`)
   const volume_registry = volumes.value.find(x => x.codigo == codigo)
-  const items_do_volume = volume_registry.items 
+  const items_do_volume = volume_registry.items
   const uptime = apaga_volume(codigo)
   return true
 }
@@ -62,55 +62,60 @@ const soft_volume_modal_ref = ref(null)
 
 </script>
 
-<template> 
+<template>
   <div class="row mb-3 align-items-end">
     <div class="col-6">
       <h1>Volumes do ambiente {{ route.params.ambiente }}</h1>
     </div>
-    <!-- <div class="col">
-      <RouterLink :to="{name: 'volumes-print'}" class="text-secondary icon-link"><i class="bi-printer" bi></i> Versão para impressão</RouterLink>
-    </div> -->
-    <div class="col text-end">
-      <RouterLink class="icon-link" :to="{name: 'volumes-ambiente-print-short', params: {ambiente: route.params.ambiente }}">
-        <i class="bi bi-printer me-1"></i>Imprimir etiquetas</RouterLink>
+
+  </div>
+  <div class="row">
+    <div class="col">
+      <div class="vstack">
+      <RouterLink class="mb-2 icon-link"
+        :to="{ name: 'volumes-ambiente-print-14', params: { ambiente: route.params.ambiente } }">
+        <i class="bi bi-printer me-1"></i>Imprimir etiquetas adesivas 14
+      </RouterLink>
+      <RouterLink class="mb-2 icon-link"
+        :to="{ name: 'volumes-ambiente-print-short', params: { ambiente: route.params.ambiente } }">
+        <i class="bi bi-printer me-1"></i>Imprimir etiquetas verticais
+      </RouterLink>
+      <RouterLink class="mb-2 icon-link"
+        :to="{ name: 'volumes-ambiente-print-long', params: { ambiente: route.params.ambiente } }">
+        <i class="bi bi-printer me-1"></i>Imprimir conteúdos dos volumes
+      </RouterLink>
     </div>
-    <div class="col text-end">
-      <RouterLink class="icon-link" :to="{name: 'volumes-ambiente-print-long', params: {ambiente: route.params.ambiente }}">
-        <i class="bi bi-printer me-1"></i>Imprimir conteúdos dos volumes</RouterLink>
     </div>
   </div>
   <div class="row">
     <div class="col">
-     <VolumesTable :volumes="volumes" @delete_callback=" (codigo) => soft_volume_modal_ref = codigo " ></VolumesTable>
+      <VolumesTable :volumes="volumes" @delete_callback="(codigo) => soft_volume_modal_ref = codigo"></VolumesTable>
     </div>
   </div>
 
 
-<ModalDelete modalid="apagare" :delete_callback="() => soft_apaga_volume(soft_volume_modal_ref)">
-<template #titulo>
-  Apagar volume
-</template>
-<template #corpo>
-  Certeza que quer apagar o volume {{soft_volume_modal_ref}}?
-</template>
+  <ModalDelete modalid="apagare" :delete_callback="() => soft_apaga_volume(soft_volume_modal_ref)">
+    <template #titulo>
+      Apagar volume
+    </template>
+    <template #corpo>
+      Certeza que quer apagar o volume {{ soft_volume_modal_ref }}?
+    </template>
 
-</ModalDelete>  
+  </ModalDelete>
 </template>
 <style>
-
 .listinhadelete {
   max-height: 20vh;
 }
+
 .text-elipse {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
 .p-lista-nao-volumados {
   width: 5em;
 }
-
-
-
 </style>
- 
