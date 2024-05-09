@@ -29,30 +29,30 @@ C306	119
 """
 
 properties = """
-3	0	E
-4	0	E
-5	0	D
-6	0	D
-7	0	D
-12	0	E
-13	0	D
-14	0	D
-15	0	D
-16	0	E
-17	0	E
-103	1	E
-104	1	E
-105	1	D
-106	1	D
-107	1	D
-111	1	E
-112	1	E
-113	1	D
-114	1	D
-115	1	D
-116	1	E
-118	1	E
-119	1	E
+5	0	D	lime
+6	0	D	orange
+7	0	D	gray
+13	0	D	green
+14	0	D	navy
+15	0	D	pink
+3	0	E	lime
+4	0	E	orange
+12	0	E	gray
+16	0	E	green
+17	0	E	navy
+105	1	D	lime
+106	1	D	orange
+107	1	D	gray
+113	1	D	green
+114	1	D	navy
+115	1	D	pink
+103	1	E	lime
+104	1	E	orange
+111	1	E	gray
+112	1	E	green
+116	1	E	navy
+118	1	E	pink
+119	1	E	brown
 """
 
 data_dict = {}
@@ -62,10 +62,11 @@ for line in mapping.strip().split("\n"):
 
 provisorios = {}
 for line in properties.strip().split("\n"):
-    sala, andar, lado = line.split("\t")
+    sala, andar, lado, cor2 = line.split("\t")
     provisorios[sala] = {
         "andar": int(andar),
-        "lado": lado
+        "lado": lado,
+        "cor": cor2
     }
 
 PROVISORIOS = {
