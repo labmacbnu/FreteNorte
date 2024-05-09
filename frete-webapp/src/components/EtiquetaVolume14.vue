@@ -53,7 +53,7 @@ function cor2(destino){
         <div class="text-truncate c-codigo">
           {{volume.items[0].id}}
         </div> 
-        <QuadradoColorido :cor1=" cor1(find_destino(volume.origem.codigo))" cor2="magenta" altura="1cm"></QuadradoColorido>
+        <QuadradoColorido :cor1=" cor1(find_destino(volume.origem.codigo))" :cor2="cor2(find_destino(volume.origem.codigo))" altura="1cm"></QuadradoColorido>
       </div>
     </div>
   </div>
