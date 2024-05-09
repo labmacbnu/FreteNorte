@@ -137,6 +137,12 @@ onMounted(async () => {
   padding-top: 100px;
 }
 }
+@media print {
+  #maincontainer{
+    padding: 0px;
+  }
+  
+}
 
 
 #liveToast { 
