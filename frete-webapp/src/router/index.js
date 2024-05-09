@@ -145,7 +145,15 @@ const router = createRouter({
           name: 'volumes-ambiente-print-long',
           component: () => import('../views/volumes/ambiente-print-long.vue'),
           meta: { title: "Volumes por ambiente - Impressão Etiqueta"}
-        }
+        },
+        {
+          path: 'ambiente/:ambiente/print-etiqueta14',
+          name: 'volumes-ambiente-print-14',
+          component: () => import('../views/volumes/ambiente-print-etiqueta14.vue'),
+          meta: { title: "Volumes por ambiente - Impressão Etiqueta 14"}
+        },
+
+        
       ]
     },
     {
