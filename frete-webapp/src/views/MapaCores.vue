@@ -26,7 +26,7 @@ function cor2(destino) {
 const impressao = ref(false)
 
 const tamanhos = computed(() => {
-    return impressao.value ?  { altura: '15cm', largura: '20cm' } : { altura: '1cm', largura: '2cm' }
+    return impressao.value ?  { altura: '10cm', largura: '20cm' } : { altura: '1cm', largura: '2cm' }
 })
 
 </script>
@@ -38,8 +38,8 @@ const tamanhos = computed(() => {
         </div>
     </div>
     <template v-for="destino, origem in provisorios.alocacoes">
-        <div>
-            <h3>
+        <div class="linha">
+            <h3 class="mb-1">
                 {{ origem }} <i class="bi bi-arrow-right"></i> {{ destino }}
             </h3>
             <QuadradoColorido :cor1="cor1(destino)" :cor2="cor2(destino)" :altura="tamanhos.altura"
@@ -47,3 +47,10 @@ const tamanhos = computed(() => {
         </div>
     </template>
 </template>
+<style scoped> 
+@media print {
+    .linha{
+        page-break-inside: avoid;
+    }
+}
+</style>
