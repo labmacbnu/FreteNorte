@@ -34,6 +34,7 @@ function cor2(destino) {
 }
 
 const impressao = ref(false)
+const imprime_tabela_bool = ref(true)
 
 const tamanhos = computed(() => {
     return impressao.value ? { altura: '10cm', largura: '20cm' } : { altura: '1cm', largura: '2cm' }
@@ -45,19 +46,27 @@ function print() {
 
 async function handlePrint() {
     impressao.value = true
+    imprime_tabela.value = true
     await nextTick()
     print()
 
 }
 
+
+function imprime_tabela(){
+    imprime_tabela_bool.value = false
+    nextTick()
+    print()
+}
+
 </script>
 <template>
-    <div class="row d-print-none">
+    <div class="row" :class="{'d-print-none': imprime_tabela_bool}">
         <div class="col">
             <h1>Código de cores</h1>
         </div>
     </div>
-    <div class="d-print-none row">
+    <div class="row"  :class="{'d-print-none': imprime_tabela_bool}">
         <div class="col">
             <p>
                 A cor do primeiro quadrado identifica a região do prédio
@@ -101,7 +110,7 @@ async function handlePrint() {
                 </tbody>
             </table>
         </div>
-        <div class="col">
+        <div class="col" :class="{'d-print-none': !imprime_tabela_bool}">
             <p>A segunda cor serve para distinguir as salas em cada região.</p>
             <table class="table tabelinha align-middle">
                 <thead>
@@ -120,7 +129,13 @@ async function handlePrint() {
                 </tbody>
             </table>
         </div>
-        <div class="col me-auto"></div>
+        <div class="col me-auto d-print-none">
+            <p>
+                <a @click="imprime_tabela" class="text-primary" role="button">
+                    <i class="bi bi-printer"></i> Imprimir tabela de cores
+                </a>
+            </p>
+        </div>
 
     </div>
     <div class="row d-print-none mb-3">
@@ -138,7 +153,7 @@ async function handlePrint() {
         </div>
     </div>
     <template v-for="destino, origem in provisorios.alocacoes">
-        <div class="linha">
+        <div class="linha"  :class="{'d-print-none': !imprime_tabela_bool}">
             <h3 class="mb-1">
                 {{ origem }} <i class="bi bi-arrow-right"></i> {{ destino }}
             </h3>
