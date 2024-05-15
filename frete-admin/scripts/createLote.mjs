@@ -1,4 +1,4 @@
-import { getFirestore, doc, collection, setDoc, connectFirestoreEmulator } from 'firebase/firestore' 
+import { getFirestore, doc, collection, setDoc, connectFirestoreEmulator, enableIndexedDbPersistence } from 'firebase/firestore' 
 import { firebaseApp } from './firebaseConfig.mjs'
 const db = getFirestore(firebaseApp)
 connectFirestoreEmulator(db, 'localhost', 8080)
@@ -9,6 +9,7 @@ const volumes_cods = ['V363741', 'V353341I', 'B1230028', 'V353341E']
 const volumes_refs = volumes_cods.map((cod) => doc(db, 'volumes', cod))
 const data_criacao = new Date()
 const tipo = "Carregamento"
+//const tipo = "Descarregamento"
 const n_volumes = volumes_refs.length
 
 const data = {
@@ -24,3 +25,5 @@ const data = {
 const new_id = (data_criacao.getTime()).toString(36).toUpperCase() 
 const docRef = doc(db, 'lotes', new_id)
 await setDoc(docRef, data)
+ 
+console.log("Script Terminado")
