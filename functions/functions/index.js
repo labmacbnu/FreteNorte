@@ -171,13 +171,14 @@ exports.exportaVolumes = functions.https.onRequest(async (request, response) => 
 
 exports.processaLotes = functions.firestore.document("lotes/{loteId}").onCreate(async (change, context) => {
     const loteId = context.params.loteId
-    const lote = change.after.data() 
+    const lote = change.data() 
     const volumes = lote.volumes 
     const tipo = lote.tipo 
     if(tipo == "Descarregamento"){
         const sala_ref = lote.sala
         logger.log(`Lote modificado: ${loteId}. Descarregado em ${sala_ref._path.segments.join("/")}`)
-        volumes.forEach( async (volume) => {
+        const volumes_ids = volumes.map( (volume) => volume.id)
+        const promessas = volumes.map( async (volume) => {
             volume.update({'localizacao_atual': sala_ref})
             const volume_id = volume.id
             const movimento_ref = db.doc(`movimentos/${volume_id}`)
@@ -190,13 +191,13 @@ exports.processaLotes = functions.firestore.document("lotes/{loteId}").onCreate(
                 }
             } 
             movimento_ref.set(movimento_data, { merge: true })
-            
-
         })
+        Promise.all(promessas).then(logger.log(`Volumes atualizados: ${volumes_ids}`))
     } else if (tipo == "Carregamento"){ 
         const carregamento = lote.carregamento
         logger.log(`Lote modificado: ${loteId}. Carregado em ${carregamento._path.segments.join("/")}`)
-        volumes.forEach( async (volume) => { 
+        const volumes_ids = volumes.map( (volume) => volume.id)
+        const promessas = volumes.map( async (volume) => { 
             const volume_id = volume.id
             const movimento_ref = db.doc(`movimentos/${volume_id}`)
             const movimento_data = { 
@@ -208,7 +209,7 @@ exports.processaLotes = functions.firestore.document("lotes/{loteId}").onCreate(
             } 
 
             movimento_ref.set(movimento_data, { merge: true })
-
     })
+    Promise.all(promessas).then(logger.log(`Volumes atualizados: ${volumes_ids}`))
 }
 })
