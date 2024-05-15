@@ -8,6 +8,10 @@ defineProps({
   volume: {
     type: Object,
     required: true
+  },
+  k: {
+    type: Number,
+    default: 0    
   }
 }) 
 
@@ -47,11 +51,14 @@ function cor2(destino){
     <!-- Conteudo -->
     <div class="conteudo">
       <div class="stack">
+        <div style="font-size: x-small;">
+          {{ volume.id }}
+        </div>
         <div class="c-titulo text-lowercase text-truncate">
-          {{volume.items[0].short_descricao}}
+          {{volume.items[k].short_descricao}}
         </div>
         <div class="text-truncate c-codigo">
-          {{volume.items[0].id}}
+          {{volume.items[k].id}}
         </div> 
         <QuadradoColorido :cor1=" cor1(find_destino(volume.origem.codigo))" :cor2="cor2(find_destino(volume.origem.codigo))" altura="1cm"></QuadradoColorido>
       </div>
