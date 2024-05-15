@@ -14,7 +14,7 @@ const router = useRouter()
 
 const lotes = useLotesStore()
  
-const carregamentos = useCollection(query(collection(db, 'carregamentos'), where("status", 'in', ["carregado"])))
+const carregamentos = useCollection(query(collection(db, 'carregamentos'), where("status", 'in', ["carregado", "descarregando"])))
 
 const carregamento_selecionado = ref(null)
 
