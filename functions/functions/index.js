@@ -184,7 +184,7 @@ exports.processaLotes = functions.firestore.document("lotes/{loteId}").onCreate(
             const movimento_ref = db.doc(`movimentos/${volume_id}`)
             const movimento_data = { 
                 descarregado: { 
-                    data_hora: lote.data_criacao,
+                    data_hora: lote.data_criado,
                     resposavel: lote.responsavel,
                     sala: sala_ref,
                     carregamento: lote.carregamento
@@ -202,7 +202,7 @@ exports.processaLotes = functions.firestore.document("lotes/{loteId}").onCreate(
             const movimento_ref = db.doc(`movimentos/${volume_id}`)
             const movimento_data = { 
                 carregado: { 
-                    data_hora: lote.data_criacao, 
+                    data_hora: lote.data_criado, 
                     resposavel: lote.responsavel,
                     carregamento: lote.carregamento
                 }
