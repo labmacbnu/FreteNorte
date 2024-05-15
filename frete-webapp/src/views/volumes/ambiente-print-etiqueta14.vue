@@ -5,7 +5,7 @@ import { useRoute } from 'vue-router';
 
 import { db } from '@/backend/index.js';
 import { collection, where, doc, orderBy, query } from 'firebase/firestore';
-import { useCollection } from 'vuefire'; 
+import { useCollection } from 'vuefire';
 import { computed, reactive } from 'vue';
 
 const route = useRoute()
@@ -41,27 +41,32 @@ function print() {
       <h1>Etiquetas dos volumes do ambiente {{ route.params.ambiente }}</h1>
     </div>
     <div class="col-12 d-print-none">
-      <p @click="print" role="button" class="d-print-none text-primary">Essa página foi otimizada para impressão de etiquetas 14. Clique
+      <p @click="print" role="button" class="d-print-none text-primary">Essa página foi otimizada para impressão de
+        etiquetas 14. Clique
         aqui para imprimir <i class="bi bi-printer"></i>.</p>
-        <p class="">Imprima em Letter Paper com margens superior e inferior 21mm, margens esquerda e direita 4mm.</p>
+      <p class="">Imprima em Letter Paper com margens superior e inferior 21mm, margens esquerda e direita 4mm.</p>
     </div>
-    <div class="col"> 
+    <div class="col">
       <p class="mb-1">Selecione as categorias a exibir</p>
       <template v-for="categoria in Object.keys(selecionados)">
         <div class="form-check form-switch form-check-inline">
           <input class="form-check-input" type="checkbox" :id="'check' + categoria" v-model="selecionados[categoria]">
-          <label class="form-check-label" :for="'check' + categoria">{{categoria}}</label>
-        </div> 
-      </template> 
+          <label class="form-check-label" :for="'check' + categoria">{{ categoria }}</label>
+        </div>
+      </template>
     </div>
   </div>
   <div id="etiquetacontainer">
-    <EtiquetaVolume v-for="volume in volumes_filtrados" :key="volume.codigo" :volume="volume"></EtiquetaVolume>
+    <template v-for="volume in volumes_filtrados"  >
+      <template v-for="k in volume.items.length" :key="k + '/' + volume.id"> 
+        <EtiquetaVolume :volume="volume" :k="k-1"></EtiquetaVolume> 
+      </template>
+    </template>
   </div>
 </template>
 <style>
 body {
-  font-size: 12pt;   
+  font-size: 12pt;
   margin: 0;
   padding: 0;
 }
@@ -69,17 +74,19 @@ body {
 .etiqueta:nth-child(odd) {
   margin-right: 9.9mm;
 }
+
 .etiqueta {
   border: 0.5px solid black;
   margin-bottom: 1pt;
 }
- 
- #etiquetacontainer{ 
+
+#etiquetacontainer {
   width: 213.1mm;
   /* display: flex; */
 
 
-} 
+}
+
 /* Tamanho da folha
 largura 215mm
 altura 280mm 
