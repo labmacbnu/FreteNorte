@@ -189,16 +189,16 @@ const router = createRouter({
       children: [
         {
         path: '',
+        name: 'lotes-home', 
+        component: () => import('@/views/lotes/LotesHome.vue'),
+        meta: { title: "Lotes" }
+        },
+        {
+        path: 'scan',
         name: 'lotes-scan', 
         component: () => import('@/views/lotes/LotesScan.vue'),
         meta: { title: "Ler QR Codes" }
-        },
-        {
-          path: 'carregamento',
-          name: 'lotes-carregamento',
-          component: () => import('@/views/lotes/LotesCarregamento.vue'),
-          meta: { title: "Carregamento de Lotes" }
-        },
+        }, 
         {
           path: 'descarregamento',
           name: 'lotes-descarregamento',
