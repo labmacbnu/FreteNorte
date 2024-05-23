@@ -210,6 +210,18 @@ const router = createRouter({
           name: 'lotes-carregamento',
           component: () => import('@/views/lotes/LotesCarregamento.vue'),
           meta: { title: "Carregamento de Lotes" }
+        },
+        {
+          path: 'cod/:codigo',
+          name: 'lotes-codigo',
+          component: () => import('@/views/lotes/LotesCodigo.vue'),
+          meta: { title: "Lote por código" }
+        },
+        {
+          path: 'cod/:codigo/edit',
+          name: 'lotes-editar',
+          component: () => import('@/views/lotes/LotesEditar.vue'),
+          meta: { title: "Editar lote por código" }
         }
       ]
     },
