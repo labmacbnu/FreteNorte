@@ -3,7 +3,7 @@
         <div class="col-12">
             <div class="hstack justify-content-between">
                 <h1>Editando lote {{ loteCodigo }}</h1>
-                <button class="btn btn-primary">Salvar edições</button>
+                <button @click="handleSave" class="btn btn-primary">Salvar edições</button>
             </div>
             <p class="text-secondary">Edite as informações do lote.</p>
             <h5 for="nome">Nome do lote</h5>
@@ -56,16 +56,16 @@
             </ul>
         </div>
         {{ loteEditado }}<br />
-        {{ removeList }}
+        {{ removeList }} <br/> 
 
     </div>
 
 </template>
 <script setup>
-import { reactive } from 'vue'
+import { computed, reactive } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { db } from '@/backend/index'
-import { collection, doc, query, where } from 'firebase/firestore'
+import { collection, doc, query, where, arrayRemove, updateDoc } from 'firebase/firestore'
 import { useCollection, useDocument } from 'vuefire'
 
 import moment from 'moment'
@@ -101,4 +101,19 @@ promise.value.then(() => {
     loteEditado.volumes = lote.value.volumes.map(x => x.id)
     loteEditado.carregamento = lote.value.carregamento.id
 })
+
+async function handleSave() { 
+    const carregamentoRef = doc(db, 'carregamentos', loteEditado.carregamento)
+    const loteRef = doc(db, 'lotes', loteCodigo)
+    const updates = {
+        nome: loteEditado.nome,
+        carregamento: carregamentoRef
+    }
+    if(removeList.length > 0) {
+        updates.volumes = arrayRemove(...removeList.map(x => doc(db, 'volumes', x)))
+    }
+
+    await updateDoc(loteRef, { ...updates })
+    router.push({name: 'lotes-codigo', params: {codigo: loteCodigo}})    
+}
 </script>
