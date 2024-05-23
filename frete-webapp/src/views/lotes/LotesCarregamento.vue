@@ -11,17 +11,21 @@ const {globaluser, updateUser} = inject('globaluser')
 const router = useRouter()
 const lotes = useLotesStore()
  
-const carregamentos = useCollection(query(collection(db, 'carregamentos'), where("status", 'in', ["agendado", "carregando"])))
+//const carregamentos = useCollection(query(collection(db, 'carregamentos'), where("status", 'in', ["agendado", "carregando"])))
 
-const carregamento_selecionado = ref(null)
+//const carregamento_selecionado = ref(null)
+
+const nome_lote = ref("")
+const nome_invalido = ref(false)
 
 async function registerLoteCarregamento(){
     const dados  = {
         volumes: lotes.volumesCods.map(x => doc(db, 'volumes', x)),
-        carregamento: doc(db, 'carregamentos', carregamento_selecionado.value),
+        carregamento: doc(db, 'carregamentos', "C0000"),
         data_criado: new Date(),
         responsavel: doc(db, 'usuarios', globaluser.value.email),
         tipo: "Carregamento",
+        nome: nome_lote.value,
         n_volumes: lotes.volumesCods.length
     }
     console.log("Lote registrado") 
@@ -32,6 +36,17 @@ async function registerLoteCarregamento(){
     router.push({name: 'lotes-scan'})
 }
  
+function handleRegistro(){ 
+    if(nome_lote.value == ""){
+        nome_invalido.value = true
+        setTimeout(() => {
+            nome_invalido.value = false
+        }, 2000)
+    } else {
+        registerLoteCarregamento()
+        nome_lote.value = ""
+    }
+}
 
 </script>
 <template>
@@ -48,20 +63,16 @@ async function registerLoteCarregamento(){
       </ul>
     </div>
     <div class="col-sm-12 col-md-6 mt-2">
-        <h4>Carregamento</h4>  
-        <p class="my-0 text-secondary">Selecione o carregamento.</p>
-            <div v-for="carregamento in carregamentos" :key="carregamento.id">
-                <CarregamentoShow 
-                @select:carregamento=" x => carregamento_selecionado = x" 
-                :carregamento="carregamento"
-                :selecionado="carregamento_selecionado === carregamento.id"
-                     />
-            </div> 
+        <h4>Nome do lote</h4>  
+        <p v-if="nome_invalido" class="my-0 text-danger">Nome do lote não pode ser vazio.</p>
+        <p v-else class="my-0 text-secondary">Digite um nome para identificar o lote.</p>
+            <input type="text" class="form-control" v-model="nome_lote" placeholder="Cadeiras, mesas, armários, etc..."
+            :class="{'border-danger': nome_invalido}" /> 
     </div>
 
     <div class="col-12 text-center pt-3">
         <RouterLink :to="{name: 'lotes-scan'}" class="btn btn-primary"><i class="bi bi-caret-left"></i> Voltar</RouterLink>
-        <button @click="registerLoteCarregamento" class="btn btn-success ms-3">Registrar lote</button>
+        <button @click="handleRegistro" class="btn btn-success ms-3">Registrar lote</button>
     </div>
 </div> 
 </template>
