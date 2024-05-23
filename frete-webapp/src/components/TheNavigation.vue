@@ -21,7 +21,7 @@ const links = reactive([{
     icon: 'bi-qr-code-scan',
     label: 'Scanear'
 }, {
-    rto: { name: 'lotes-scan' },
+    rto: { name: 'lotes-home' },
     icon: 'bi-boxes',
     label: 'Lotes'
 },
