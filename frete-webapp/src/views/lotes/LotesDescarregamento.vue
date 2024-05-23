@@ -14,9 +14,9 @@ const router = useRouter()
 
 const lotes = useLotesStore()
  
-const carregamentos = useCollection(query(collection(db, 'carregamentos'), where("status", 'in', ["carregado", "descarregando"])))
+//const carregamentos = useCollection(query(collection(db, 'carregamentos'), where("status", 'in', ["carregado", "descarregando"])))
 
-const carregamento_selecionado = ref(null)
+//const carregamento_selecionado = ref(null)
 
 const salas = useListaAmbientesNorteStore()
  
@@ -27,7 +27,7 @@ const sala_selecionada = ref(null)
 async function registerLoteDescarregamento(){
     const dados  = {
         volumes: lotes.volumesCods.map(x => doc(db, 'volumes', x)),
-        carregamento: doc(db, 'carregamentos', carregamento_selecionado.value),
+        //carregamento: doc(db, 'carregamentos', carregamento_selecionado.value),
         data_criado: new Date(),
         responsavel: doc(db, 'usuarios', globaluser.value.email),
         tipo: "Descarregamento",
@@ -55,7 +55,7 @@ async function registerLoteDescarregamento(){
         </li>
       </ul>
     </div>
-    <div class="col-sm-12 col-md-4 mt-2"> 
+    <!-- <div class="col-sm-12 col-md-4 mt-2"> 
         <h4>Carregamento</h4>  
         <p class="my-0 text-secondary">Selecione o carregamento.</p>
             <div v-for="carregamento in carregamentos" :key="carregamento.id">
@@ -65,7 +65,7 @@ async function registerLoteDescarregamento(){
                 :selecionado="carregamento_selecionado === carregamento.id"
                      />
             </div> 
-    </div>
+    </div> -->
     <div class="col-sm-12 col-md-4 mt-2">
         <h4>Sala</h4>  
         <p class="my-0 text-secondary">Selecione a sala que serão descarregados os volumes.</p>
