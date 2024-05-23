@@ -16,7 +16,7 @@
                 <li class="list-group-item d-flex justify-content-between align-items-center"
                     v-for="lote in lotesNaoCarregados">
                     <div class="ms-2 me-auto">
-                        <small class="d-block text-secondary">{{ lote.id }}</small>
+                        <RouterLink :to="{name: 'lotes-codigo', params: {codigo: lote.id}}" class="d-block text-secondary">{{ lote.id }}</RouterLink>
                         {{ lote.nome }}
                     </div>
                     <span class="badge bg-primary rounded-pill">{{ lote.n_volumes }} volume</span>
