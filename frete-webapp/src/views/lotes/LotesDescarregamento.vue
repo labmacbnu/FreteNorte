@@ -39,7 +39,7 @@ async function registerLoteDescarregamento(){
     const new_docref = doc(db, 'lotes', new_id)
     await setDoc(new_docref, dados)
     lotes.clear()
-    router.push({name: 'lotes-scan'}) 
+    router.push({name: 'lotes-home'}) 
 }
 </script>
 <template>
