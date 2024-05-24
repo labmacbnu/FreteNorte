@@ -145,7 +145,7 @@ const data_saida = ref(null)
 
 
 watch(data_saida, (nv, ov) => {
-    carregamento.data_saida = moment.utc(nv).toDate()
+    carregamento.data_saida = moment(`${nv}-0300`).toDate()
 })
 
 
@@ -157,6 +157,7 @@ async function editCarregamento() {
     const valores = toValue(carregamento)
     valores.caminhao = caminhao.value
     valores.empresa = empresa.value
+    valores.data_saida = moment(data_saida.value).toDate()
     console.log(valores)
     const docRef = doc(db, 'carregamentos', carregamento_id.value)
     await updateDoc(docRef, valores)
