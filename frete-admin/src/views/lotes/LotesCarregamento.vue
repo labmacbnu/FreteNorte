@@ -1,0 +1,1 @@
+../../../../frete-webapp/src/views/lotes/LotesCarregamento.vue
