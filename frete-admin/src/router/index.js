@@ -151,6 +151,12 @@ const router = createRouter({
         component: () => import('@/views/lotes/LotesHome.vue'),
         meta: { title: "Lotes" }
         }, 
+        {
+          path: 'cod/:codigo',
+          name: 'lotes-codigo',
+          component: () => import('@/views/lotes/LotesCodigo.vue'),
+          meta: { title: "Lote por código" }
+        },
       ]
     },
     {
