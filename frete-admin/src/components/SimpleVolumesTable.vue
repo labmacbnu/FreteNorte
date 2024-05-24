@@ -8,6 +8,12 @@ defineProps({
     }
 })
 
+function createLink(codigo){
+    const href = window.location.origin
+    const url = href.replace("admin-frete-norte", "frete-norte")
+    return url + "/volumes/cod/" + codigo
+}
+
 
 
 </script>
@@ -28,9 +34,9 @@ defineProps({
             <template v-for="volume in volumes" :key="'volume' + volume.id">
                 <tr>
                     <td class="d-print-none">
-                        <RouterLink class="" :to="{ name: 'volume-codigo', params: { codigo: volume.codigo } }">
+                        <a class="link" :href="createLink(volume.id)">
                             {{ volume.codigo }}
-                        </RouterLink>
+                        </a>
                     </td>
                     <td class="text-center">
                         <AmbienteFlag v-bind="volume.origem"></AmbienteFlag>
