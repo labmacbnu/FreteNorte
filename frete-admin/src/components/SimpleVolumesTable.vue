@@ -47,10 +47,9 @@ defineProps({
                             <template v-for="item in volume.items">
                                 <li v-if="item" class="list-group-item justify-content-between d-flex">
                                     <small class="text-lowercase">{{ item.short_descricao }}</small>
-                                    <RouterLink :to="{ name: 'item-codigo', params: { codigo: item.key } }"
-                                        class="badge text-primary rounded-pill span-lista-volumes text-elipse">{{
+                                    <small  class="badge text-primary rounded-pill span-lista-volumes text-elipse">{{
                 item.key }}
-                                    </RouterLink>
+                                    </small>
                                 </li>
                             </template>
                         </ul>
