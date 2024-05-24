@@ -126,6 +126,55 @@ const router = createRouter({
       ]
     },
     {
+
+      path: '/lotes',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/volumes/view.vue'),
+      meta: {
+        requiresAuth: true
+      },
+      children: [
+        {
+        path: '',
+        name: 'lotes-home', 
+        component: () => import('@/views/lotes/LotesHome.vue'),
+        meta: { title: "Lotes" }
+        },
+        {
+        path: 'scan',
+        name: 'lotes-scan', 
+        component: () => import('@/views/lotes/LotesScan.vue'),
+        meta: { title: "Ler QR Codes" }
+        }, 
+        {
+          path: 'descarregamento',
+          name: 'lotes-descarregamento',
+          component: () => import('@/views/lotes/LotesDescarregamento.vue'),
+          meta: { title: "Descarregamento de Lotes" }
+        },
+        {
+          path: 'carregamento',
+          name: 'lotes-carregamento',
+          component: () => import('@/views/lotes/LotesCarregamento.vue'),
+          meta: { title: "Carregamento de Lotes" }
+        },
+        {
+          path: 'cod/:codigo',
+          name: 'lotes-codigo',
+          component: () => import('@/views/lotes/LotesCodigo.vue'),
+          meta: { title: "Lote por código" }
+        },
+        {
+          path: 'cod/:codigo/edit',
+          name: 'lotes-editar',
+          component: () => import('@/views/lotes/LotesEditar.vue'),
+          meta: { title: "Editar lote por código" }
+        }
+      ]
+    },
+    {
       path: '/ajuda',
       name: 'ajuda',
       // route level code-splitting
