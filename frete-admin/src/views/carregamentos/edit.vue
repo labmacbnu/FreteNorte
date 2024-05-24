@@ -4,7 +4,7 @@
             <h1>Editar o carregamento {{ carregamento_id }}</h1>
         </div>
         <div class="col-4 text-end">
-            <RouterLink :to="{ name: 'lotes' }" class="btn btn-secondary"><i class="bi bi-arrow-left"></i> Voltar
+            <RouterLink :to="{ name: 'carregamentos' }" class="btn btn-secondary"><i class="bi bi-arrow-left"></i> Voltar
             </RouterLink>
         </div>
     </div>
@@ -161,7 +161,7 @@ async function editCarregamento() {
     const docRef = doc(db, 'carregamentos', carregamento_id.value)
     await updateDoc(docRef, valores)
     console.log('carregamento salvo')
-    router.push({ name: 'lotes' })
+    router.push({ name: 'carregamentos' })
 }
 
 async function deletaCarregamento(){

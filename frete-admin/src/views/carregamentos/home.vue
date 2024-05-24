@@ -5,12 +5,12 @@
 
         </div>
         <div class="col-4 text-end">
-            <RouterLink :to="{ name: 'lotes-add' }" class="btn btn-primary"><i class="bi bi-plus"></i>Adicionar
+            <RouterLink :to="{ name: 'carregamentos-add' }" class="btn btn-primary"><i class="bi bi-plus"></i>Adicionar
                 carregamento</RouterLink>
         </div>
     </div>
     <div class="row"> 
-        <div class="col">
+        <div class="col-auto">
             <CarregamentoTable :carregamentos="carregamentos" />
         </div>
     </div> 

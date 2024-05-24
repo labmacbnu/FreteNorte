@@ -4,7 +4,7 @@
             <h1>Adicionar um carregamento</h1>
         </div>
         <div class="col-4 text-end">
-            <RouterLink :to="{ name: 'lotes' }" class="btn btn-secondary"><i class="bi bi-arrow-left"></i> Voltar
+            <RouterLink :to="{ name: 'carregamentos' }" class="btn btn-secondary"><i class="bi bi-arrow-left"></i> Voltar
             </RouterLink>
         </div>
     </div>
@@ -136,7 +136,7 @@ async function saveCarregamento() {
     const newdoc = doc(db, 'carregamentos', valores.id)
     await setDoc(newdoc, valores);
     console.log('carregamento salvo')
-    router.push({ name: 'lotes' })
+    router.push({ name: 'carregamentos' })
 }
 
 async function idUltimoCarregamento() {
