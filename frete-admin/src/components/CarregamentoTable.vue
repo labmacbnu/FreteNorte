@@ -26,7 +26,11 @@
         </thead>
         <tbody>
             <tr v-for="carregamento in carregamentos_filtrados" :key="carregamento.id">
-                <td>{{ carregamento.id }}</td>
+                <td>
+                    <RouterLink :to="{ name: 'carregamentos-view', params: { id: carregamento.id } }">
+                        {{ carregamento.id }}
+                    </RouterLink>
+                </td>
                 <td>{{ formata_data(carregamento.data_criacao) }}</td>
                 <td>{{ formata_data(carregamento.data_saida) }}</td>
                 <td>{{ carregamento.saida }}</td>
