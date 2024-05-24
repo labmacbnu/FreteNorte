@@ -1,5 +1,5 @@
 <template>
-    <div class="row">
+    <div class="row"  v-if="!pending" >
         <div class="col-12">
             <div class="hstack justify-content-between">
                 <h1>Lote {{ loteCodigo }}</h1>
@@ -7,29 +7,33 @@
                 </RouterLink>
             </div>
 
-            <p class="fs-3" v-if="!pending"> {{ lote.nome }}</p>
+            <p class="fs-3"> {{ lote.nome }}</p>
 
         </div>
         <div class="col-12">
-            <h3>Volumes desse lote</h3>
-            <VolumesTable v-if="!pending" :volumes="lote.volumes"></VolumesTable>
+            <h3>Volumes desse lote</h3> 
+            <VolumesTable masterkey="VS" :volumes="volumes"></VolumesTable> 
         </div>
-
     </div>
 
 </template>
-<script setup>
-import { reactive, ref } from 'vue'
+<script setup> 
 import { useRoute, useRouter } from 'vue-router'
 import { db } from '@/backend/index'
-import { doc, getDoc } from 'firebase/firestore'
+import { doc } from 'firebase/firestore'
 import { useDocument } from 'vuefire'
 import VolumesTable from '@/components/SimpleVolumesTable.vue'
-
-const router = useRouter()
+import { reactive } from 'vue'
+ 
 const route = useRoute()
 const loteCodigo = route.params.codigo
 
-const { data: lote, pending, promise } = useDocument(doc(db, 'lotes', loteCodigo), { wait: true })
+const { data: lote, pending, promise } = useDocument(doc(db, 'lotes', loteCodigo))
 
+const volumes = reactive([])
+
+promise.value.then(() => {
+    console.log(lote.value.volumes)
+    volumes.push(...lote.value.volumes)
+})
 </script>
