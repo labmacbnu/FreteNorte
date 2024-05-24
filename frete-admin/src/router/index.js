@@ -122,6 +122,15 @@ const router = createRouter({
             requiresAuth: true,
             title: "Visualizar carregamento"
           }
+        },
+        {
+          path: 'cod/:id/addlote',
+          name: 'carregamentos-add-lote',
+          component: () => import('@/views/carregamentos/add-lote.vue'),
+          meta: {
+            requiresAuth: true,
+            title: "Adicionar lote ao carregamento"
+          }
         }
       ]
     },
