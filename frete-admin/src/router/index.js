@@ -90,7 +90,7 @@ const router = createRouter({
         {
           path: '',
           name: 'carregamentos',
-          component: () => import('@/views/lotes/home.vue'),
+          component: () => import('@/views/carregamentos/home.vue'),
           meta:{
             requiresAuth: true,
             title: "Carregamentos"
@@ -99,7 +99,7 @@ const router = createRouter({
         {
           path: 'add',
           name: 'carregamentos-add',
-          component: () => import('@/views/lotes/add.vue'),
+          component: () => import('@/views/carregamentos/add.vue'),
           meta: {
             requiresAuth: true,
             title: "Adicionar carregamento"
@@ -108,7 +108,7 @@ const router = createRouter({
         {
           path: 'edit/:id',
           name: 'carregamentos-edit',
-          component: () => import('@/views/lotes/edit.vue'),
+          component: () => import('@/views/carregamentos/edit.vue'),
           meta: {
             requiresAuth: true,
             title: "Editar carregamento"
