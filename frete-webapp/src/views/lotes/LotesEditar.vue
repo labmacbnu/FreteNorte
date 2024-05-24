@@ -65,7 +65,7 @@
 import { computed, reactive } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { db } from '@/backend/index'
-import { collection, doc, query, where, arrayRemove, updateDoc } from 'firebase/firestore'
+import { collection, doc, query, where, arrayRemove, updateDoc, increment } from 'firebase/firestore'
 import { useCollection, useDocument } from 'vuefire'
 
 import moment from 'moment'
@@ -111,6 +111,7 @@ async function handleSave() {
     }
     if(removeList.length > 0) {
         updates.volumes = arrayRemove(...removeList.map(x => doc(db, 'volumes', x)))
+        updates.n_volumes = increment(-removeList.length)
     }
 
     await updateDoc(loteRef, { ...updates })
