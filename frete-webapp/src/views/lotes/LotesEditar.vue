@@ -54,10 +54,7 @@
                     </div>
                 </li>
             </ul>
-        </div>
-        {{ loteEditado }}<br />
-        {{ removeList }} <br/> 
-
+        </div> 
     </div>
 
 </template>
