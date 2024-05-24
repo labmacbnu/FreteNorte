@@ -122,7 +122,7 @@ const baseurl = ref("https://frete-norte-ufsc-blumenau.web.app/volumes/cod/")
   <div class="row">
     <div class="col d-flex justify-content-between">
       <h4>Exibindo os volumes</h4>
-      <RouterLink :to="{ name: 'lotes-add', query: { volumes: volumes_selecionados } }" class="btn btn-lg btn-success">
+      <RouterLink :to="{ name: 'carregamentos-add', query: { volumes: volumes_selecionados } }" class="btn btn-lg btn-success">
         <i class="bi bi-boxes me-2"></i>Criar Lote
       </RouterLink>
     </div>
