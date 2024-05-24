@@ -1,1 +1,0 @@
-../../../../frete-webapp/src/views/lotes/LotesCodigo.vue
