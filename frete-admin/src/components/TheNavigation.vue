@@ -27,6 +27,10 @@ const links = reactive([{
     rto: {name: 'carregamentos'},
     icon: 'bi-truck',
     label: "Transporte"
+},  {
+    rto: {name: 'lotes-home'},
+    icon: 'bi-boxes',
+    label: "Lotes"
 },  
 {
     rto: {name: 'ajuda'},
