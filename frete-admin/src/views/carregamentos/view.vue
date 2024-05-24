@@ -4,7 +4,7 @@
         <h1>
             Carregamento {{ carregCod }}
         </h1>
-        <RouterLink :to="{name: 'carregamentos-add-lote', params: {id: carregCod}}" class="btn btn-primary">Add</RouterLink>
+        <RouterLink :to="{name: 'carregamentos-add-lote', params: {id: carregCod}}" class="btn btn-primary">Adicionar lote</RouterLink>
     </div>
 
     <ul class="list-group">
