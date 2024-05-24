@@ -113,6 +113,15 @@ const router = createRouter({
             requiresAuth: true,
             title: "Editar carregamento"
           }
+        },
+        {
+          path: 'cod/:id',
+          name: 'carregamentos-view',
+          component: () => import('@/views/carregamentos/view.vue'),
+          meta: {
+            requiresAuth: true,
+            title: "Visualizar carregamento"
+          }
         }
       ]
     },
