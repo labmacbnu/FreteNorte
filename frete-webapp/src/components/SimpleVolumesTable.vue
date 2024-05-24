@@ -25,7 +25,7 @@ defineProps({
             </tr>
         </thead>
         <tbody>
-            <template v-for="volume in volumes" :key="'volume' + volume.codigo">
+            <template v-for="volume in volumes" :key="'volume' + volume.id">
                 <tr>
                     <td class="d-print-none">
                         <RouterLink class="" :to="{ name: 'volume-codigo', params: { codigo: volume.codigo } }">
