@@ -68,9 +68,8 @@ import { reactive, ref, watch, toValue, onMounted, computed } from 'vue';
 import { RouterLink, useRouter } from 'vue-router';
 import { useCollection } from 'vuefire';
 import { db } from '@/backend';
-import { collection, getCountFromServer, doc, where, setDoc, orderBy, limit } from 'firebase/firestore';
-import moment from 'moment';
-import { query } from 'firebase/database';
+import { collection, getCountFromServer, doc, where, setDoc, orderBy, limit, query } from 'firebase/firestore';
+import moment from 'moment'; 
 
 // puxa as empresas
 const empresas = useCollection(collection(db, 'empresas'));
@@ -113,7 +112,7 @@ const dados_validos = reactive({
 const data_saida = ref(null)
 
 watch(data_saida, (nv, ov) => {
-    novo_carregamento.data_saida = moment.utc(nv).toDate()
+    novo_carregamento.data_saida = moment(`${nv}-0300`).toDate()
 })
 
 const router = useRouter()
