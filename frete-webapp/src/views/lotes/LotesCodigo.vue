@@ -3,7 +3,7 @@
         <div class="col-12">
             <div class="hstack justify-content-between">
                 <h1>Lote {{ loteCodigo }}</h1>
-                <RouterLink class="btn btn-primary" :to="{ name: 'lotes-editar', params: { codigo: loteCodigo } }">Editar
+                <RouterLink class="btn btn-primary" :to="{ name: 'lotes-editar', params: { codigo: loteCodigo } }"><i class="bi-pencil bi"></i> Editar
                 </RouterLink>
             </div>
 
