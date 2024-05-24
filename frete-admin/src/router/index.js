@@ -84,34 +84,34 @@ const router = createRouter({
         ]
     },
     {
-      path: '/lotes',
+      path: '/carregamentos',
       component: () =>  import('@/views/volumes/view.vue'),
       children: [
         {
           path: '',
-          name: 'lotes',
+          name: 'carregamentos',
           component: () => import('@/views/lotes/home.vue'),
           meta:{
             requiresAuth: true,
-            title: "Lotes"
+            title: "Carregamentos"
           }
         },  
         {
           path: 'add',
-          name: 'lotes-add',
+          name: 'carregamentos-add',
           component: () => import('@/views/lotes/add.vue'),
           meta: {
             requiresAuth: true,
-            title: "Adicionar lote"
+            title: "Adicionar carregamento"
           }
         },  
         {
           path: 'edit/:id',
-          name: 'lotes-edit',
+          name: 'carregamentos-edit',
           component: () => import('@/views/lotes/edit.vue'),
           meta: {
             requiresAuth: true,
-            title: "Adicionar lote"
+            title: "Editar carregamento"
           }
         }
       ]
