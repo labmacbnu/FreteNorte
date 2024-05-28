@@ -8,10 +8,14 @@
             </div>
 
             <p class="fs-3"> {{ lote.nome }}</p>
+            <p>Registrado por {{ lote.responsavel.nome }}</p>
 
         </div>
         <div class="col-12">
+            <div class="hstack justify-content-between">
             <h3>Volumes desse lote</h3> 
+            <RouterLink class="btn btn-primary" :to="{name: 'lotes-codigo-add-volume', params: {codigo: lote.id}}"><i class="bi bi-plus"></i> Adicionar volumes</RouterLink>
+            </div>
             <VolumesTable masterkey="VS" :volumes="volumes"></VolumesTable> 
         </div>
     </div>
