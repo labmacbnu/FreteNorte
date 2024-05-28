@@ -228,18 +228,6 @@ const router = createRouter({
           name: 'lotes-codigo-add-volume',
           component: () => import('@/views/lotes/LotesCodigoAddVolumes.vue'),
           meta: { title: "Adicionar volumes ao lote" }
-        },
-        {
-          path: 'cod/:codigo/print-etiqueta14',
-          name: 'lotes-print-14',
-          component: () => import('@/views/lotes/LotesPrint14.vue'),
-          meta: { title: "Imprimir etiqueta de lote 14" }
-        },
-        {
-          path: 'add',
-          name: 'lotes-add',
-          component: () => import('@/views/lotes/LotesAdd.vue'),
-          meta: { title: "Adicionar lote" }
         }
       ]
     },
