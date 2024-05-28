@@ -10,6 +10,7 @@
             <input name="nome" type="text" v-model="loteEditado.nome" class="form-control mb-3"
                 placeholder="Nome do lote">
             <h5 class="mb-2">Carregamento</h5>
+            <p class="text-secondary">Clique para selecionar o carregamento. O carregamento selecionado ficará em destaque.</p>
             <ul v-if="!pendingCarregamentos" class="list-group list-group-horizontal">
                 <li :class="{ 'active': loteEditado.carregamento == 'C0000' }"
                     class="list-group-item d-flex justify-content-between align-items-center"
@@ -55,6 +56,9 @@
                 </li>
             </ul>
         </div> 
+        <div v-if="loteEditado.volumes.length == 0" class="col-12 text-end mt-4">
+            <button @click="handleDelete" class="btn btn-danger"><i class="bi-trash bi"></i> Apagar lote</button>
+        </div> 
     </div>
 
 </template>
@@ -62,7 +66,7 @@
 import { computed, reactive } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { db } from '@/backend/index'
-import { collection, doc, query, where, arrayRemove, updateDoc, increment } from 'firebase/firestore'
+import { collection, doc, query, where, arrayRemove, updateDoc, increment, deleteDoc } from 'firebase/firestore'
 import { useCollection, useDocument } from 'vuefire'
 
 import moment from 'moment'
@@ -113,5 +117,10 @@ async function handleSave() {
 
     await updateDoc(loteRef, { ...updates })
     router.push({name: 'lotes-codigo', params: {codigo: loteCodigo}})    
+}
+async function handleDelete(){
+    const loteRef = doc(db, 'lotes', loteCodigo)
+    await deleteDoc(loteRef)
+    router.push({name: 'lotes-home'})
 }
 </script>
