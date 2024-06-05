@@ -63,7 +63,7 @@ import { computed, ref } from 'vue'
 const carregamentoZero = doc(db, 'carregamentos', "C0000")
 const { data: lotesNaoCarregados, pending } = useCollection(query(collection(db, 'lotes'), where("carregamento", "==", carregamentoZero)))
 
-const { data: lotesCarregados, pending: pendingCarregados } = useCollection(query(collection(db, 'lotes'), where("carregamento", "!=", carregamentoZero), limit(10)))
+const { data: lotesCarregados, pending: pendingCarregados } = useCollection(query(collection(db, 'lotes'), where("carregamento", "!=", carregamentoZero), orderBy("carregamento", "desc"), limit(10)))
 
 
 const linkAdmin = computed(() => {
