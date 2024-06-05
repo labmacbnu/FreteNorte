@@ -200,6 +200,12 @@ const router = createRouter({
         meta: { title: "Ler QR Codes" }
         }, 
         {
+        path: 'list',
+        name: 'lotes-list', 
+        component: () => import('@/views/lotes/LotesList.vue'),
+        meta: { title: "Ver todos os lotes" }
+        }, 
+        {
           path: 'descarregamento',
           name: 'lotes-descarregamento',
           component: () => import('@/views/lotes/LotesDescarregamento.vue'),
