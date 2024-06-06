@@ -26,7 +26,9 @@
         "C302": "116",
         "C303": "103",
         "C304": "104",
-        "C305": "111"
+        "C305": "111",
+        "SALA INTEGRE JUNIOR": "14",
+        "SANITÁRIO INTEGRE JUNIOR": "14"
     },
     "ambientes": {
         "5": {
