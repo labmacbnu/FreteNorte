@@ -28,7 +28,8 @@
         "C304": "104",
         "C305": "111",
         "SALA INTEGRE JUNIOR": "14",
-        "SANITÁRIO INTEGRE JUNIOR": "14"
+        "SANITÁRIO INTEGRE JUNIOR": "14",
+        "CC02": "7"
     },
     "ambientes": {
         "5": {
