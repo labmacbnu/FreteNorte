@@ -1,0 +1,2199 @@
+{
+    "LWJPHK76": {
+        "n_volumes": 0,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-05-23T20:29:07.842000+00:00",
+        "sala": "ambientes-norte/A003",
+        "volumes": [],
+        "responsavel": "usuarios/l.f.bossa@ufsc.br"
+    },
+    "LWPDIKXJ": {
+        "n_volumes": 36,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-05-27T19:40:37.111000+00:00",
+        "sala": "ambientes-norte/A001",
+        "volumes": [
+            "volumes/C302002F",
+            "volumes/C3020032",
+            "volumes/C302002E",
+            "volumes/C105210B",
+            "volumes/C1052107",
+            "volumes/C1052108",
+            "volumes/C105210C",
+            "volumes/C105210A",
+            "volumes/C105210E",
+            "volumes/C1052109",
+            "volumes/C105210D",
+            "volumes/V363605",
+            "volumes/V322733",
+            "volumes/V363607",
+            "volumes/V347893",
+            "volumes/V363611",
+            "volumes/V352999",
+            "volumes/odUduEnrKeI9GMuyBw8y",
+            "volumes/V322729",
+            "volumes/V363616",
+            "volumes/V352987",
+            "volumes/V363619",
+            "volumes/V322770",
+            "volumes/V363606",
+            "volumes/V363610",
+            "volumes/V363608",
+            "volumes/V363609",
+            "volumes/V317072",
+            "volumes/V322740",
+            "volumes/V317074",
+            "volumes/V352991",
+            "volumes/V363612",
+            "volumes/V317083",
+            "volumes/V317073",
+            "volumes/V317075",
+            "volumes/V317085"
+        ],
+        "responsavel": "usuarios/giullia.pimentel@ufsc.br"
+    },
+    "LWQG2NQP": {
+        "n_volumes": 1,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-05-28T13:39:59.281000+00:00",
+        "sala": "ambientes-norte/A001",
+        "volumes": [
+            "volumes/V353240"
+        ],
+        "responsavel": "usuarios/patricia.barthel@ufsc.br"
+    },
+    "LWQGTBNR": {
+        "n_volumes": 24,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-05-28T14:00:43.335000+00:00",
+        "sala": "ambientes-norte/A001",
+        "volumes": [
+            "volumes/V327247",
+            "volumes/V353247",
+            "volumes/V327268",
+            "volumes/V327448",
+            "volumes/V363756",
+            "volumes/V327456",
+            "volumes/V327262",
+            "volumes/V327452",
+            "volumes/V327272",
+            "volumes/V327254",
+            "volumes/V327263",
+            "volumes/V327478",
+            "volumes/V327454",
+            "volumes/V327266",
+            "volumes/V353243",
+            "volumes/V327257",
+            "volumes/V317146",
+            "volumes/V338182",
+            "volumes/V327450",
+            "volumes/dyygQuuxc3NQlYf3Pbo2",
+            "volumes/V327267",
+            "volumes/V327259",
+            "volumes/V327255",
+            "volumes/V327269"
+        ],
+        "responsavel": "usuarios/patricia.barthel@ufsc.br"
+    },
+    "LWQN20QZ": {
+        "n_volumes": 4,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-05-28T16:55:26.795000+00:00",
+        "sala": "ambientes-norte/A001",
+        "volumes": [
+            "volumes/V327430",
+            "volumes/V310338",
+            "volumes/V310326",
+            "volumes/V310339"
+        ],
+        "responsavel": "usuarios/leandro.c.rocha@ufsc.br"
+    },
+    "LWQN2UTY": {
+        "n_volumes": 4,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-05-28T16:56:05.782000+00:00",
+        "sala": "ambientes-norte/A001",
+        "volumes": [
+            "volumes/V327425",
+            "volumes/V337855",
+            "volumes/V312877",
+            "volumes/V312859"
+        ],
+        "responsavel": "usuarios/leandro.c.rocha@ufsc.br"
+    },
+    "LWQN5TX3": {
+        "n_volumes": 4,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-05-28T16:58:24.567000+00:00",
+        "sala": "ambientes-norte/A001",
+        "volumes": [
+            "volumes/V327559",
+            "volumes/V312873",
+            "volumes/V317036",
+            "volumes/V353052"
+        ],
+        "responsavel": "usuarios/leandro.c.rocha@ufsc.br"
+    },
+    "LWQN79JQ": {
+        "n_volumes": 16,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-05-28T16:59:31.478000+00:00",
+        "sala": "ambientes-norte/A001",
+        "volumes": [
+            "volumes/V353053",
+            "volumes/V327551",
+            "volumes/V347832",
+            "volumes/V359968",
+            "volumes/V312868",
+            "volumes/V312846",
+            "volumes/V310307",
+            "volumes/V327560",
+            "volumes/V312861",
+            "volumes/V353027",
+            "volumes/V327427",
+            "volumes/V310347",
+            "volumes/V353059",
+            "volumes/V359963",
+            "volumes/V327561",
+            "volumes/V327443"
+        ],
+        "responsavel": "usuarios/patricia.barthel@ufsc.br"
+    },
+    "LWQN8DXK": {
+        "n_volumes": 3,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-05-28T17:00:23.816000+00:00",
+        "sala": "ambientes-norte/A001",
+        "volumes": [
+            "volumes/V327412",
+            "volumes/V327543",
+            "volumes/V359965"
+        ],
+        "responsavel": "usuarios/leandro.c.rocha@ufsc.br"
+    },
+    "LWQN9T6F": {
+        "n_volumes": 2,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-05-28T17:01:30.231000+00:00",
+        "sala": "ambientes-norte/A001",
+        "volumes": [
+            "volumes/V337772",
+            "volumes/V322611E"
+        ],
+        "responsavel": "usuarios/patricia.barthel@ufsc.br"
+    },
+    "LWQN9T81": {
+        "n_volumes": 6,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-05-28T17:01:30.289000+00:00",
+        "sala": "ambientes-norte/A001",
+        "volumes": [
+            "volumes/C3060034",
+            "volumes/V327444",
+            "volumes/V327557",
+            "volumes/V359970",
+            "volumes/V312866",
+            "volumes/V364260"
+        ],
+        "responsavel": "usuarios/leandro.c.rocha@ufsc.br"
+    },
+    "LWQNJ3MY": {
+        "n_volumes": 1,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-05-28T17:08:43.690000+00:00",
+        "sala": "ambientes-norte/A001",
+        "volumes": [
+            "volumes/V317091"
+        ],
+        "responsavel": "usuarios/patricia.barthel@ufsc.br"
+    },
+    "LWQNKVUD": {
+        "n_volumes": 1,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-05-28T17:10:06.901000+00:00",
+        "sala": "ambientes-norte/B005",
+        "volumes": [
+            "volumes/V317090"
+        ],
+        "responsavel": "usuarios/leandro.c.rocha@ufsc.br"
+    },
+    "LWQNNOXE": {
+        "n_volumes": 1,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-05-28T17:12:17.906000+00:00",
+        "sala": "ambientes-norte/A001",
+        "volumes": [
+            "volumes/V338144"
+        ],
+        "responsavel": "usuarios/patricia.barthel@ufsc.br"
+    },
+    "LWQNPDAJ": {
+        "n_volumes": 4,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-05-28T17:13:36.139000+00:00",
+        "sala": "ambientes-norte/B004",
+        "volumes": [
+            "volumes/V317132",
+            "volumes/V317112",
+            "volumes/V317113",
+            "volumes/V317122"
+        ],
+        "responsavel": "usuarios/leandro.c.rocha@ufsc.br"
+    },
+    "LWQNYIAE": {
+        "n_volumes": 12,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-05-28T17:20:42.518000+00:00",
+        "sala": "ambientes-norte/B005",
+        "volumes": [
+            "volumes/V360024",
+            "volumes/V317143",
+            "volumes/C3050036",
+            "volumes/V360025",
+            "volumes/V360020",
+            "volumes/V360026",
+            "volumes/V317123",
+            "volumes/C3050035",
+            "volumes/V317126",
+            "volumes/V317149",
+            "volumes/V360023",
+            "volumes/V317129"
+        ],
+        "responsavel": "usuarios/leandro.c.rocha@ufsc.br"
+    },
+    "LWQNZPE2": {
+        "n_volumes": 2,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-05-28T17:21:38.378000+00:00",
+        "sala": "ambientes-norte/B005",
+        "volumes": [
+            "volumes/V360021",
+            "volumes/V317136"
+        ],
+        "responsavel": "usuarios/leandro.c.rocha@ufsc.br"
+    },
+    "LWQS49S4": {
+        "n_volumes": 13,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-05-28T19:17:09.892000+00:00",
+        "sala": "ambientes-norte/A001",
+        "volumes": [
+            "volumes/C3020033",
+            "volumes/C303002E",
+            "volumes/V338188",
+            "volumes/V338194",
+            "volumes/V318903",
+            "volumes/V405324",
+            "volumes/C3040036",
+            "volumes/C3050037",
+            "volumes/V314886",
+            "volumes/V315044",
+            "volumes/V337721",
+            "volumes/V337750",
+            "volumes/C3060033"
+        ],
+        "responsavel": "usuarios/patricia.barthel@ufsc.br"
+    },
+    "LWQS5WUZ": {
+        "n_volumes": 2,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-05-28T19:18:26.459000+00:00",
+        "sala": "ambientes-norte/A001",
+        "volumes": [
+            "volumes/C3040036",
+            "volumes/C303002E"
+        ],
+        "responsavel": "usuarios/patricia.barthel@ufsc.br"
+    },
+    "LWQS5X6Q": {
+        "n_volumes": 4,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-05-28T19:18:26.882000+00:00",
+        "sala": "ambientes-norte/B005",
+        "volumes": [
+            "volumes/C3040036",
+            "volumes/C303002E",
+            "volumes/C3060033",
+            "volumes/V337721"
+        ],
+        "responsavel": "usuarios/leandro.c.rocha@ufsc.br"
+    },
+    "LWQS7CJ7": {
+        "n_volumes": 2,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-05-28T19:19:33.427000+00:00",
+        "sala": "ambientes-norte/B004",
+        "volumes": [
+            "volumes/C3040036",
+            "volumes/V338139"
+        ],
+        "responsavel": "usuarios/leandro.c.rocha@ufsc.br"
+    },
+    "LWQS8DWY": {
+        "n_volumes": 3,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-05-28T19:20:21.874000+00:00",
+        "sala": "ambientes-norte/B004",
+        "volumes": [
+            "volumes/C3040036",
+            "volumes/V338117",
+            "volumes/V338139"
+        ],
+        "responsavel": "usuarios/leandro.c.rocha@ufsc.br"
+    },
+    "LWQS940N": {
+        "n_volumes": 1,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-05-28T19:20:55.703000+00:00",
+        "sala": "ambientes-norte/B004",
+        "volumes": [
+            "volumes/C3040036"
+        ],
+        "responsavel": "usuarios/leandro.c.rocha@ufsc.br"
+    },
+    "LWQSA00R": {
+        "n_volumes": 3,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-05-28T19:21:37.179000+00:00",
+        "sala": "ambientes-norte/B004",
+        "volumes": [
+            "volumes/C3040036",
+            "volumes/V314926",
+            "volumes/C3020033"
+        ],
+        "responsavel": "usuarios/leandro.c.rocha@ufsc.br"
+    },
+    "LWQSAU7Q": {
+        "n_volumes": 2,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-05-28T19:22:16.310000+00:00",
+        "sala": "ambientes-norte/B004",
+        "volumes": [
+            "volumes/C3020033",
+            "volumes/C3040036"
+        ],
+        "responsavel": "usuarios/leandro.c.rocha@ufsc.br"
+    },
+    "LWQSAUZB": {
+        "n_volumes": 2,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-05-28T19:22:17.303000+00:00",
+        "sala": "ambientes-norte/B004",
+        "volumes": [
+            "volumes/C3020033",
+            "volumes/C3040036"
+        ],
+        "responsavel": "usuarios/leandro.c.rocha@ufsc.br"
+    },
+    "LWQSAVO2": {
+        "n_volumes": 2,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-05-28T19:22:18.194000+00:00",
+        "sala": "ambientes-norte/B004",
+        "volumes": [
+            "volumes/C3020033",
+            "volumes/C3040036"
+        ],
+        "responsavel": "usuarios/leandro.c.rocha@ufsc.br"
+    },
+    "LWQSBUYL": {
+        "n_volumes": 8,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-05-28T19:23:03.933000+00:00",
+        "sala": "ambientes-norte/B005",
+        "volumes": [
+            "volumes/C3020033",
+            "volumes/V363958",
+            "volumes/V148398",
+            "volumes/V398001",
+            "volumes/dyygQuuxc3NQlYf3Pbo2",
+            "volumes/V364159",
+            "volumes/V363828",
+            "volumes/V363783"
+        ],
+        "responsavel": "usuarios/leandro.c.rocha@ufsc.br"
+    },
+    "LWQSBVWL": {
+        "n_volumes": 8,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-05-28T19:23:05.157000+00:00",
+        "sala": "ambientes-norte/B005",
+        "volumes": [
+            "volumes/C3020033",
+            "volumes/V363958",
+            "volumes/V148398",
+            "volumes/V398001",
+            "volumes/dyygQuuxc3NQlYf3Pbo2",
+            "volumes/V364159",
+            "volumes/V363828",
+            "volumes/V363783"
+        ],
+        "responsavel": "usuarios/leandro.c.rocha@ufsc.br"
+    },
+    "LWQSCIRJ": {
+        "n_volumes": 3,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-05-28T19:23:34.783000+00:00",
+        "sala": "ambientes-norte/B005",
+        "volumes": [
+            "volumes/C3040036",
+            "volumes/V363794",
+            "volumes/V337773"
+        ],
+        "responsavel": "usuarios/leandro.c.rocha@ufsc.br"
+    },
+    "LWQSDJLE": {
+        "n_volumes": 2,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-05-28T19:24:22.514000+00:00",
+        "sala": "ambientes-norte/B005",
+        "volumes": [
+            "volumes/V364128",
+            "volumes/C3040036"
+        ],
+        "responsavel": "usuarios/leandro.c.rocha@ufsc.br"
+    },
+    "LWQSF37T": {
+        "n_volumes": 6,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-05-28T19:25:34.601000+00:00",
+        "sala": "ambientes-norte/B005",
+        "volumes": [
+            "volumes/C3040036",
+            "volumes/V405321",
+            "volumes/V363856",
+            "volumes/V398000",
+            "volumes/V364160",
+            "volumes/C3020033"
+        ],
+        "responsavel": "usuarios/leandro.c.rocha@ufsc.br"
+    },
+    "LWQSFTE2": {
+        "n_volumes": 3,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-05-28T19:26:08.522000+00:00",
+        "sala": "ambientes-norte/B005",
+        "volumes": [
+            "volumes/C3020033",
+            "volumes/V405323",
+            "volumes/V368203"
+        ],
+        "responsavel": "usuarios/leandro.c.rocha@ufsc.br"
+    },
+    "LWQSFUFG": {
+        "n_volumes": 3,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-05-28T19:26:09.868000+00:00",
+        "sala": "ambientes-norte/B005",
+        "volumes": [
+            "volumes/C3020033",
+            "volumes/V405323",
+            "volumes/V368203"
+        ],
+        "responsavel": "usuarios/leandro.c.rocha@ufsc.br"
+    },
+    "LWQSFW9L": {
+        "n_volumes": 3,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-05-28T19:26:12.249000+00:00",
+        "sala": "ambientes-norte/B005",
+        "volumes": [
+            "volumes/C3020033",
+            "volumes/V405323",
+            "volumes/V368203"
+        ],
+        "responsavel": "usuarios/leandro.c.rocha@ufsc.br"
+    },
+    "LWQSFWE8": {
+        "n_volumes": 3,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-05-28T19:26:12.416000+00:00",
+        "sala": "ambientes-norte/B005",
+        "volumes": [
+            "volumes/C3020033",
+            "volumes/V405323",
+            "volumes/V368203"
+        ],
+        "responsavel": "usuarios/leandro.c.rocha@ufsc.br"
+    },
+    "LWQSFXAU": {
+        "n_volumes": 3,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-05-28T19:26:13.590000+00:00",
+        "sala": "ambientes-norte/B005",
+        "volumes": [
+            "volumes/C3020033",
+            "volumes/V405323",
+            "volumes/V368203"
+        ],
+        "responsavel": "usuarios/leandro.c.rocha@ufsc.br"
+    },
+    "LWQSHP9O": {
+        "n_volumes": 7,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-05-28T19:27:36.492000+00:00",
+        "sala": "ambientes-norte/B005",
+        "volumes": [
+            "volumes/C3020033",
+            "volumes/V364129",
+            "volumes/V363841",
+            "volumes/V363820",
+            "volumes/V363787",
+            "volumes/C3010041",
+            "volumes/C3040036"
+        ],
+        "responsavel": "usuarios/leandro.c.rocha@ufsc.br"
+    },
+    "LWQSJTES": {
+        "n_volumes": 7,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-05-28T19:29:15.172000+00:00",
+        "sala": "ambientes-norte/B005",
+        "volumes": [
+            "volumes/17YiwINiqVzaywbYHYoc",
+            "volumes/V312867",
+            "volumes/V310306",
+            "volumes/V353069",
+            "volumes/C303002E",
+            "volumes/V363706",
+            "volumes/V353065"
+        ],
+        "responsavel": "usuarios/leandro.c.rocha@ufsc.br"
+    },
+    "LWQSKBVR": {
+        "n_volumes": 0,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-05-28T19:29:39.111000+00:00",
+        "sala": "ambientes-norte/B005",
+        "volumes": [],
+        "responsavel": "usuarios/carolina.silva@ufsc.br"
+    },
+    "LWQSL5AA": {
+        "n_volumes": 3,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-05-28T19:30:17.218000+00:00",
+        "sala": "ambientes-norte/B005",
+        "volumes": [
+            "volumes/0WUEuzvyNHpessagNt5U",
+            "volumes/7RqLhRWlvCfZU2Uyhh8S",
+            "volumes/V327288"
+        ],
+        "responsavel": "usuarios/leandro.c.rocha@ufsc.br"
+    },
+    "LWQSL9RT": {
+        "n_volumes": 3,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-05-28T19:30:23.033000+00:00",
+        "sala": "ambientes-norte/B005",
+        "volumes": [
+            "volumes/0WUEuzvyNHpessagNt5U",
+            "volumes/7RqLhRWlvCfZU2Uyhh8S",
+            "volumes/V327288"
+        ],
+        "responsavel": "usuarios/leandro.c.rocha@ufsc.br"
+    },
+    "LWQSLBZK": {
+        "n_volumes": 3,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-05-28T19:30:25.904000+00:00",
+        "sala": "ambientes-norte/B005",
+        "volumes": [
+            "volumes/0WUEuzvyNHpessagNt5U",
+            "volumes/7RqLhRWlvCfZU2Uyhh8S",
+            "volumes/V327288"
+        ],
+        "responsavel": "usuarios/leandro.c.rocha@ufsc.br"
+    },
+    "LWQSNJUA": {
+        "n_volumes": 4,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-05-28T19:32:09.394000+00:00",
+        "sala": "ambientes-norte/B005",
+        "volumes": [
+            "volumes/V327549",
+            "volumes/KDxqZbazD6359ZlBSEVc",
+            "volumes/V337858",
+            "volumes/mYSHdhHmEbvEX0evOrwX"
+        ],
+        "responsavel": "usuarios/leandro.c.rocha@ufsc.br"
+    },
+    "LWQSQ3AX": {
+        "n_volumes": 7,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-05-28T19:34:07.929000+00:00",
+        "sala": "ambientes-norte/B005",
+        "volumes": [
+            "volumes/misxkEhR1SEz8GfcIsOB",
+            "volumes/V310343",
+            "volumes/DyQHkkP3CA4WYz0yMyeN",
+            "volumes/V337854",
+            "volumes/1sD47ErnfA5zQPemf2i4",
+            "volumes/V312853",
+            "volumes/V312849"
+        ],
+        "responsavel": "usuarios/leandro.c.rocha@ufsc.br"
+    },
+    "LWQSQ69L": {
+        "n_volumes": 16,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-05-28T19:34:11.769000+00:00",
+        "sala": "ambientes-norte/B005",
+        "volumes": [
+            "volumes/V337882",
+            "volumes/V312875",
+            "volumes/V337856",
+            "volumes/V310305",
+            "volumes/V310349",
+            "volumes/V337862",
+            "volumes/V317048",
+            "volumes/KQ16sEguZYReF3aRuZPd",
+            "volumes/2yxLNsRhIoi5LhdhxEWo",
+            "volumes/UeEDMGT8J8do2E8BPrsv",
+            "volumes/LOGNj6jjPziTa4SLYNF0",
+            "volumes/DyQHkkP3CA4WYz0yMyeN",
+            "volumes/V310278",
+            "volumes/V363998",
+            "volumes/V310265",
+            "volumes/V353047"
+        ],
+        "responsavel": "usuarios/carolina.silva@ufsc.br"
+    },
+    "LWRS2GPQ": {
+        "n_volumes": 3,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-05-29T12:03:31.742000+00:00",
+        "sala": "ambientes-norte/B005",
+        "volumes": [
+            "volumes/V387165",
+            "volumes/V384457",
+            "volumes/V331806"
+        ],
+        "responsavel": "usuarios/leandro.c.rocha@ufsc.br"
+    },
+    "LWRS3NGG": {
+        "n_volumes": 3,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-05-29T12:04:27.136000+00:00",
+        "sala": "ambientes-norte/B004",
+        "volumes": [
+            "volumes/MlGscBbf5elLRAEeBaRB",
+            "volumes/pHu0F1sBm61LKSyBCuaB",
+            "volumes/S5NVGlhLto93xG2NPrvh"
+        ],
+        "responsavel": "usuarios/leandro.c.rocha@ufsc.br"
+    },
+    "LWRS5LJ2": {
+        "n_volumes": 4,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-05-29T12:05:57.950000+00:00",
+        "sala": "ambientes-norte/B005",
+        "volumes": [
+            "volumes/C3010041",
+            "volumes/C3060033",
+            "volumes/V338138",
+            "volumes/V322611I"
+        ],
+        "responsavel": "usuarios/leandro.c.rocha@ufsc.br"
+    },
+    "LWRSA1G3": {
+        "n_volumes": 8,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-05-29T12:09:25.203000+00:00",
+        "sala": "ambientes-norte/B005",
+        "volumes": [
+            "volumes/V322596E",
+            "volumes/C3010040",
+            "volumes/V338125",
+            "volumes/V359816",
+            "volumes/C3010041",
+            "volumes/V368203",
+            "volumes/V363820",
+            "volumes/C3050037"
+        ],
+        "responsavel": "usuarios/leandro.c.rocha@ufsc.br"
+    },
+    "LWRSA5XU": {
+        "n_volumes": 8,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-05-29T12:09:31.026000+00:00",
+        "sala": "ambientes-norte/B005",
+        "volumes": [
+            "volumes/V322596E",
+            "volumes/C3010040",
+            "volumes/V338125",
+            "volumes/V359816",
+            "volumes/C3010041",
+            "volumes/V368203",
+            "volumes/V363820",
+            "volumes/C3050037"
+        ],
+        "responsavel": "usuarios/leandro.c.rocha@ufsc.br"
+    },
+    "LWRSC8E3": {
+        "n_volumes": 13,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-05-29T12:11:07.515000+00:00",
+        "sala": "ambientes-norte/B005",
+        "volumes": [
+            "volumes/V363816",
+            "volumes/C3010041",
+            "volumes/C3010040",
+            "volumes/V314940",
+            "volumes/V318887",
+            "volumes/pHu0F1sBm61LKSyBCuaB",
+            "volumes/S5NVGlhLto93xG2NPrvh",
+            "volumes/aJSmuW3GVE5itJdWGM2I",
+            "volumes/MlGscBbf5elLRAEeBaRB",
+            "volumes/C2020031",
+            "volumes/p1VMJEvFT946D6ZoH0wS",
+            "volumes/YvPptLvBvUMUmjVn4Fux",
+            "volumes/j2X9xuWiKjFvERnAgEdX"
+        ],
+        "responsavel": "usuarios/leandro.c.rocha@ufsc.br"
+    },
+    "LWRSFL48": {
+        "n_volumes": 8,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-05-29T12:13:43.976000+00:00",
+        "sala": "ambientes-norte/B005",
+        "volumes": [
+            "volumes/e2gnBWFbgihTLWJYZ1hl",
+            "volumes/YvPptLvBvUMUmjVn4Fux",
+            "volumes/pHu0F1sBm61LKSyBCuaB",
+            "volumes/ahPfsqzqaMh6Fn5GHhOe",
+            "volumes/j2X9xuWiKjFvERnAgEdX",
+            "volumes/p1VMJEvFT946D6ZoH0wS",
+            "volumes/9xiWu7X9BNKb5gfz0n52",
+            "volumes/aJSmuW3GVE5itJdWGM2I"
+        ],
+        "responsavel": "usuarios/leandro.c.rocha@ufsc.br"
+    },
+    "LWRSGZUX": {
+        "n_volumes": 7,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-05-29T12:14:49.737000+00:00",
+        "sala": "ambientes-norte/B005",
+        "volumes": [
+            "volumes/YvPptLvBvUMUmjVn4Fux",
+            "volumes/S5NVGlhLto93xG2NPrvh",
+            "volumes/pHu0F1sBm61LKSyBCuaB",
+            "volumes/j2X9xuWiKjFvERnAgEdX",
+            "volumes/aJSmuW3GVE5itJdWGM2I",
+            "volumes/p1VMJEvFT946D6ZoH0wS",
+            "volumes/e2gnBWFbgihTLWJYZ1hl"
+        ],
+        "responsavel": "usuarios/leandro.c.rocha@ufsc.br"
+    },
+    "LWRSMF0Z": {
+        "n_volumes": 8,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-05-29T12:19:02.675000+00:00",
+        "sala": "ambientes-norte/B005",
+        "volumes": [
+            "volumes/V343251",
+            "volumes/V314883",
+            "volumes/C3050037",
+            "volumes/C303002E",
+            "volumes/C3010041",
+            "volumes/C3060034",
+            "volumes/V315064",
+            "volumes/C3040036"
+        ],
+        "responsavel": "usuarios/leandro.c.rocha@ufsc.br"
+    },
+    "LWRSQ0IR": {
+        "n_volumes": 4,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-05-29T12:21:50.499000+00:00",
+        "sala": "ambientes-norte/B005",
+        "volumes": [
+            "volumes/llM12qRq7CTNJEafpaxp",
+            "volumes/MlGscBbf5elLRAEeBaRB",
+            "volumes/QcFiagkaPumJzigIxRHg",
+            "volumes/6u8tOGvz2PadaXPTsyix"
+        ],
+        "responsavel": "usuarios/leandro.c.rocha@ufsc.br"
+    },
+    "LWRSSNW8": {
+        "n_volumes": 3,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-05-29T12:23:54.104000+00:00",
+        "sala": "ambientes-norte/B005",
+        "volumes": [
+            "volumes/7tzH2UbjxnvlgFmexbZz",
+            "volumes/BU2oNGGFSyk4hlWzJADs",
+            "volumes/Ze4CqCBSb3JbZEnjFyS8"
+        ],
+        "responsavel": "usuarios/leandro.c.rocha@ufsc.br"
+    },
+    "LWRSUGXQ": {
+        "n_volumes": 3,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-05-29T12:25:18.398000+00:00",
+        "sala": "ambientes-norte/B005",
+        "volumes": [
+            "volumes/9xiWu7X9BNKb5gfz0n52",
+            "volumes/C3050037",
+            "volumes/p1VMJEvFT946D6ZoH0wS"
+        ],
+        "responsavel": "usuarios/leandro.c.rocha@ufsc.br"
+    },
+    "LWRWL37V": {
+        "n_volumes": 4,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-05-29T14:09:59.179000+00:00",
+        "sala": "ambientes-norte/B004",
+        "volumes": [
+            "volumes/NPqwlehpsKRSpWABOIok",
+            "volumes/WWK8kg6A10V2KUgUw9de",
+            "volumes/lny68kG9y1peF6pNeh0k",
+            "volumes/0xTYHP2CEhZPNkNKY5Cr"
+        ],
+        "responsavel": "usuarios/leandro.c.rocha@ufsc.br"
+    },
+    "LWRWVDME": {
+        "n_volumes": 4,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-05-29T14:17:59.222000+00:00",
+        "sala": "ambientes-norte/B004",
+        "volumes": [
+            "volumes/C3020033",
+            "volumes/C2020038",
+            "volumes/V322591I",
+            "volumes/V327386"
+        ],
+        "responsavel": "usuarios/leandro.c.rocha@ufsc.br"
+    },
+    "LWRX2H66": {
+        "n_volumes": 4,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-05-29T14:23:30.414000+00:00",
+        "sala": "ambientes-norte/B004",
+        "volumes": [
+            "volumes/9OhdzWQmSXKr1Hac3RpS",
+            "volumes/jqBBvU2le7DEPtxiI6BV",
+            "volumes/0oYZ0DlLivA10jefIhRq",
+            "volumes/K8rOei7Gn4CPWRapaL1g"
+        ],
+        "responsavel": "usuarios/leandro.c.rocha@ufsc.br"
+    },
+    "LX8XP9BH": {
+        "n_volumes": 0,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-06-10T12:13:18.317000+00:00",
+        "sala": "ambientes-norte/A001",
+        "volumes": [],
+        "responsavel": "usuarios/giullia.pimentel@ufsc.br"
+    },
+    "LX8YERWG": {
+        "n_volumes": 18,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-06-10T12:33:08.800000+00:00",
+        "sala": "ambientes-norte/A001",
+        "volumes": [
+            "volumes/oCA8mv3Qt2kuBazw6ZLF",
+            "volumes/V347883",
+            "volumes/V352989",
+            "volumes/XNVKmg7yVyHWMR9gR1on",
+            "volumes/V363603",
+            "volumes/V347882",
+            "volumes/C209000E",
+            "volumes/V347884",
+            "volumes/r7vpO4pwalrO9zr2n7Uw",
+            "volumes/uABSdmsqr799osM13mFU",
+            "volumes/Ya8OKoewCVSKzzBpMgzm",
+            "volumes/doDhkZQ1On6jrVZP3kLc",
+            "volumes/iX248lyqtmecYgKmq5cX",
+            "volumes/v2toRPw4iYTTEZAMO6rY",
+            "volumes/u9hHZZcjUmUbcxwxH2p3",
+            "volumes/El4ruza3dDZl6qT8AED6",
+            "volumes/KhvRJbgrHxbuvAdaXgdD",
+            "volumes/nfywBbjMgcxWzG7eiWKw"
+        ],
+        "responsavel": "usuarios/giullia.pimentel@ufsc.br"
+    },
+    "LX8YSDGT": {
+        "n_volumes": 10,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-06-10T12:43:43.277000+00:00",
+        "sala": "ambientes-norte/A001",
+        "volumes": [
+            "volumes/ZMwNWzRVQayjBPB8Es3Y",
+            "volumes/IRDXfzygBOyuvlUJlhRs",
+            "volumes/C2010042",
+            "volumes/pstHC0cFk9k2EnBDCekh",
+            "volumes/2fsSNpHH1ebZRNXhPwuX",
+            "volumes/Tpc5LFTDGLItO2KcDAvY",
+            "volumes/x2N2ufkXmKw1iVDQ67ue",
+            "volumes/Sykk3cLjNwjiFkUY0QCl",
+            "volumes/E4FCfVrVAtP2kiA7A209",
+            "volumes/2FLU1Qp1wx9n6kfoSCsF"
+        ],
+        "responsavel": "usuarios/giullia.pimentel@ufsc.br"
+    },
+    "LX8Z1OX0": {
+        "n_volumes": 8,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-06-10T12:50:58.020000+00:00",
+        "sala": "ambientes-norte/A001",
+        "volumes": [
+            "volumes/E4FCfVrVAtP2kiA7A209",
+            "volumes/C201003F",
+            "volumes/at1gLdtStjs4iHr9Dm5e",
+            "volumes/7yidsQlZpwyzMcZK8R1e",
+            "volumes/pJgqTkJn5CDhoB9ZLT7V",
+            "volumes/zP89CnctcHaPTGqtjCoM",
+            "volumes/ErlNjgIwpraGKd9y3JVG",
+            "volumes/C2010041"
+        ],
+        "responsavel": "usuarios/giullia.pimentel@ufsc.br"
+    },
+    "LX98FKHJ": {
+        "n_volumes": 1,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-06-10T17:13:42.007000+00:00",
+        "sala": "ambientes-norte/B005",
+        "volumes": [
+            "volumes/C3080026"
+        ],
+        "responsavel": "usuarios/patricia.barthel@ufsc.br"
+    },
+    "LX98QF8Q": {
+        "n_volumes": 22,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-06-10T17:22:08.426000+00:00",
+        "sala": "ambientes-norte/B005",
+        "volumes": [
+            "volumes/C201005D",
+            "volumes/C3080029",
+            "volumes/C3080053",
+            "volumes/C308002F",
+            "volumes/C308003E",
+            "volumes/C3080044",
+            "volumes/C3080025",
+            "volumes/C3080030",
+            "volumes/C3080031",
+            "volumes/C203002E",
+            "volumes/5JPWrUFlyQnMxj0fDRJm",
+            "volumes/C308005C",
+            "volumes/C308005B",
+            "volumes/C3080048",
+            "volumes/C2040048",
+            "volumes/C203003F",
+            "volumes/C3080042",
+            "volumes/C2050054",
+            "volumes/C201005A",
+            "volumes/C203002F",
+            "volumes/C308002E",
+            "volumes/C308002C"
+        ],
+        "responsavel": "usuarios/patricia.barthel@ufsc.br"
+    },
+    "LX98UEP7": {
+        "n_volumes": 13,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-06-10T17:25:14.347000+00:00",
+        "sala": "ambientes-norte/B005",
+        "volumes": [
+            "volumes/C308003E",
+            "volumes/C308001C",
+            "volumes/C3080021",
+            "volumes/C201005B",
+            "volumes/uNWuU6b4oCAFEuW9Z4ZY",
+            "volumes/C308004E",
+            "volumes/C308002E",
+            "volumes/C201005A",
+            "volumes/C2010052",
+            "volumes/C201004B",
+            "volumes/O0zMD1NKvrdmhmuRSeHe",
+            "volumes/C205004E",
+            "volumes/C203003C"
+        ],
+        "responsavel": "usuarios/patricia.barthel@ufsc.br"
+    },
+    "LX98XZ6V": {
+        "n_volumes": 15,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-06-10T17:28:00.871000+00:00",
+        "sala": "ambientes-norte/B005",
+        "volumes": [
+            "volumes/C308001C",
+            "volumes/C205004A",
+            "volumes/C2010059",
+            "volumes/C203002D",
+            "volumes/C2050038",
+            "volumes/C203003E",
+            "volumes/C3080033",
+            "volumes/C3080058",
+            "volumes/C3080056",
+            "volumes/C3080057",
+            "volumes/C3080035",
+            "volumes/C308002D",
+            "volumes/C2041053",
+            "volumes/C3080039",
+            "volumes/C203003D"
+        ],
+        "responsavel": "usuarios/patricia.barthel@ufsc.br"
+    },
+    "LX991YF4": {
+        "n_volumes": 8,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-06-10T17:31:06.496000+00:00",
+        "sala": "ambientes-norte/B005",
+        "volumes": [
+            "volumes/C203003D",
+            "volumes/C201005C",
+            "volumes/C3080041",
+            "volumes/C2010053",
+            "volumes/C3080040",
+            "volumes/C2010055",
+            "volumes/C2010058",
+            "volumes/C2050049"
+        ],
+        "responsavel": "usuarios/patricia.barthel@ufsc.br"
+    },
+    "LX995MSY": {
+        "n_volumes": 11,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-06-10T17:33:58.066000+00:00",
+        "sala": "ambientes-norte/B005",
+        "volumes": [
+            "volumes/C2050052",
+            "volumes/C2050050",
+            "volumes/C308001D",
+            "volumes/C2010056",
+            "volumes/C3080038",
+            "volumes/C205004D",
+            "volumes/C3080020",
+            "volumes/C308003F",
+            "volumes/C205004C",
+            "volumes/C2040049",
+            "volumes/C2040048"
+        ],
+        "responsavel": "usuarios/patricia.barthel@ufsc.br"
+    },
+    "LX9983LC": {
+        "n_volumes": 4,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-06-10T17:35:53.136000+00:00",
+        "sala": "ambientes-norte/B005",
+        "volumes": [
+            "volumes/C308004F",
+            "volumes/C205003C",
+            "volumes/C2040048",
+            "volumes/C2050053"
+        ],
+        "responsavel": "usuarios/patricia.barthel@ufsc.br"
+    },
+    "LX99CKQE": {
+        "n_volumes": 8,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-06-10T17:39:21.974000+00:00",
+        "sala": "ambientes-norte/B005",
+        "volumes": [
+            "volumes/C3080019",
+            "volumes/Uq0oiYxNtHL9aVUQITun",
+            "volumes/drhkeRzk7ic8EIQeIVqK",
+            "volumes/SIJ01005",
+            "volumes/SIJ01000",
+            "volumes/C308004A",
+            "volumes/C2050035",
+            "volumes/C2010056"
+        ],
+        "responsavel": "usuarios/patricia.barthel@ufsc.br"
+    },
+    "LX99DG20": {
+        "n_volumes": 1,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-06-10T17:40:02.568000+00:00",
+        "sala": "ambientes-norte/B005",
+        "volumes": [
+            "volumes/C2040049"
+        ],
+        "responsavel": "usuarios/patricia.barthel@ufsc.br"
+    },
+    "LX99FZQK": {
+        "n_volumes": 6,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-06-10T17:42:01.388000+00:00",
+        "sala": "ambientes-norte/B005",
+        "volumes": [
+            "volumes/SIJ01001",
+            "volumes/C2050036",
+            "volumes/C308001B",
+            "volumes/C2050039",
+            "volumes/C2040048",
+            "volumes/C3080022"
+        ],
+        "responsavel": "usuarios/patricia.barthel@ufsc.br"
+    },
+    "LX99LAMO": {
+        "n_volumes": 7,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-06-10T17:46:08.784000+00:00",
+        "sala": "ambientes-norte/B005",
+        "volumes": [
+            "volumes/C2040048",
+            "volumes/SIJ01006",
+            "volumes/C3080055",
+            "volumes/C3080037",
+            "volumes/C308004B",
+            "volumes/C3080036",
+            "volumes/C2050037"
+        ],
+        "responsavel": "usuarios/patricia.barthel@ufsc.br"
+    },
+    "LX9D4OID": {
+        "n_volumes": 0,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-06-10T19:25:12.085000+00:00",
+        "sala": "ambientes-norte/A001",
+        "volumes": [],
+        "responsavel": "usuarios/weliton.hodecker@ufsc.br"
+    },
+    "LX9D9XXP": {
+        "n_volumes": 22,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-06-10T19:29:17.581000+00:00",
+        "sala": "ambientes-norte/A005",
+        "volumes": [
+            "volumes/bOA6OCncMxBY4HG8r11A",
+            "volumes/V337863",
+            "volumes/C2041043",
+            "volumes/V327418",
+            "volumes/V312847",
+            "volumes/C204103E",
+            "volumes/C205003E",
+            "volumes/V364255",
+            "volumes/V327410",
+            "volumes/V327562",
+            "volumes/V353012",
+            "volumes/V359956",
+            "volumes/7yVYrgQmP8HalCKaDXQz",
+            "volumes/doW0EMqI8pZjJCsgGz1j",
+            "volumes/C2010060",
+            "volumes/imGkdad25pH2tyzS2GCa",
+            "volumes/pNLUGkp5nKtUHZO9K9Bv",
+            "volumes/lwp3xardcDxTZtAKmNVu",
+            "volumes/V317053",
+            "volumes/dJqwsY1NDhdLQTTVb7hL",
+            "volumes/dAqq0AHrLGo1bzNa4I6o",
+            "volumes/3ykKuMIGOJx7kB8K9Kgr"
+        ],
+        "responsavel": "usuarios/weliton.hodecker@ufsc.br"
+    },
+    "LX9DBFH2": {
+        "n_volumes": 5,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-06-10T19:30:26.966000+00:00",
+        "sala": "ambientes-norte/A005",
+        "volumes": [
+            "volumes/chJH1rYXa9zIe3YoqtNC",
+            "volumes/mKddYxRSLTjUybesib7e",
+            "volumes/C2010049",
+            "volumes/C101008F",
+            "volumes/C2030032"
+        ],
+        "responsavel": "usuarios/weliton.hodecker@ufsc.br"
+    },
+    "LX9DGXDN": {
+        "n_volumes": 17,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-06-10T19:34:43.451000+00:00",
+        "sala": "ambientes-norte/A005",
+        "volumes": [
+            "volumes/C2010043",
+            "volumes/UwFpNxiwYGCM9dLNUCGy",
+            "volumes/C205003D",
+            "volumes/PnKniVsBkvxOUB2mFjPe",
+            "volumes/MGOcWeopx7fg4Xmotc3j",
+            "volumes/nZtGQArjDGtc5OPfkCcz",
+            "volumes/C1060065",
+            "volumes/IABBpA0CorYQOy6laQl6",
+            "volumes/SQVD3x7TSUKr8FFh2HrZ",
+            "volumes/V312840",
+            "volumes/C1052117",
+            "volumes/C105211D",
+            "volumes/C105211C",
+            "volumes/aGs3AwcAu4aIe93wusKD",
+            "volumes/PbpbXww1G8apE6ZJdtRR",
+            "volumes/5qEe2BkqZl4QZJEsI98b",
+            "volumes/YGhGxYVNSEq8zU8I12bV"
+        ],
+        "responsavel": "usuarios/weliton.hodecker@ufsc.br"
+    },
+    "LX9DKTIN": {
+        "n_volumes": 9,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-06-10T19:37:45.071000+00:00",
+        "sala": "ambientes-norte/A005",
+        "volumes": [
+            "volumes/C105211B",
+            "volumes/C201004A",
+            "volumes/C2030036",
+            "volumes/e8AtsrxJIJJcLVBF69xA",
+            "volumes/C2050030",
+            "volumes/C1060070",
+            "volumes/7LAAVwIfy2SGL6z2HpMN",
+            "volumes/C2041046",
+            "volumes/KYe5CbIbBR8xQSIPKTow"
+        ],
+        "responsavel": "usuarios/weliton.hodecker@ufsc.br"
+    },
+    "LX9DQFN2": {
+        "n_volumes": 21,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-06-10T19:42:07.022000+00:00",
+        "sala": "ambientes-norte/A001",
+        "volumes": [
+            "volumes/V312847",
+            "volumes/V327416",
+            "volumes/C1052113",
+            "volumes/C2041045",
+            "volumes/fSH0esTJ7hEJidkEUnC1",
+            "volumes/V327419",
+            "volumes/C105211F",
+            "volumes/fExsJiH81gos4nnfIxe0",
+            "volumes/V327414",
+            "volumes/V327415",
+            "volumes/C2050040",
+            "volumes/G5EHLqJtWtjoCg5DEeVS",
+            "volumes/oZoiKVMuNJmtNBSnwLEQ",
+            "volumes/goLfbnXjwBCkPNd5pMcx",
+            "volumes/uJ1g2MVyY5NLWbPW6Nhw",
+            "volumes/C1052115",
+            "volumes/C2050030",
+            "volumes/V327413",
+            "volumes/C2041047",
+            "volumes/C2041048",
+            "volumes/WYSExO3C1QPOBhFEaKw7"
+        ],
+        "responsavel": "usuarios/weliton.hodecker@ufsc.br"
+    },
+    "LXAC1M60": {
+        "n_volumes": 1,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-06-11T11:42:35.640000+00:00",
+        "sala": "ambientes-norte/B005",
+        "volumes": [
+            "volumes/XP5Gozr2ZjdK8yP9yxwl"
+        ],
+        "responsavel": "usuarios/leandro.c.rocha@ufsc.br"
+    },
+    "LXAC4IT8": {
+        "n_volumes": 1,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-06-11T11:44:51.260000+00:00",
+        "sala": "ambientes-norte/B006",
+        "volumes": [
+            "volumes/DS0imtiSlB5CkSjlKv18"
+        ],
+        "responsavel": "usuarios/patricia.barthel@ufsc.br"
+    },
+    "LXACFRNA": {
+        "n_volumes": 5,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-06-11T11:53:35.926000+00:00",
+        "sala": "ambientes-norte/B006",
+        "volumes": [
+            "volumes/QD3zHteIM9obc2PYnq0c",
+            "volumes/DS0imtiSlB5CkSjlKv18",
+            "volumes/XP5Gozr2ZjdK8yP9yxwl",
+            "volumes/XKick0Qu1y5fr15JI1jk",
+            "volumes/2T6xNQj6HJJfiIpYOnoU"
+        ],
+        "responsavel": "usuarios/leandro.c.rocha@ufsc.br"
+    },
+    "LXACMFR4": {
+        "n_volumes": 2,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-06-11T11:58:47.104000+00:00",
+        "sala": "ambientes-norte/B006",
+        "volumes": [
+            "volumes/C1060061",
+            "volumes/D8s7fFlivJxEoj9XrorC"
+        ],
+        "responsavel": "usuarios/leandro.c.rocha@ufsc.br"
+    },
+    "LXACOAJL": {
+        "n_volumes": 1,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-06-11T12:00:13.665000+00:00",
+        "sala": "ambientes-norte/B006",
+        "volumes": [
+            "volumes/Iag8KtD5Ie42KzfGC5Rn"
+        ],
+        "responsavel": "usuarios/leandro.c.rocha@ufsc.br"
+    },
+    "LXACQDHX": {
+        "n_volumes": 1,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-06-11T12:01:50.805000+00:00",
+        "sala": "ambientes-norte/A001",
+        "volumes": [
+            "volumes/s62OKwWkoPRNWieNE0XZ"
+        ],
+        "responsavel": "usuarios/patricia.barthel@ufsc.br"
+    },
+    "LXACTUZA": {
+        "n_volumes": 1,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-06-11T12:04:33.430000+00:00",
+        "sala": "ambientes-norte/B006",
+        "volumes": [
+            "volumes/widOSdAoLfF419r7z4Bn"
+        ],
+        "responsavel": "usuarios/leandro.c.rocha@ufsc.br"
+    },
+    "LXACVPNT": {
+        "n_volumes": 1,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-06-11T12:05:59.849000+00:00",
+        "sala": "ambientes-norte/B005",
+        "volumes": [
+            "volumes/SFkLZEbteXhcG5JsZHOs"
+        ],
+        "responsavel": "usuarios/leandro.c.rocha@ufsc.br"
+    },
+    "LXAD2N9R": {
+        "n_volumes": 4,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-06-11T12:11:23.343000+00:00",
+        "sala": "ambientes-norte/B005",
+        "volumes": [
+            "volumes/ePHFWsGpmqIz02lm76t2",
+            "volumes/wcf69mBuQPie8KrpiuLE",
+            "volumes/SJmF7ktyaYoIysrmh7HT",
+            "volumes/NlK11mPPcg9qmTMqv1U7"
+        ],
+        "responsavel": "usuarios/leandro.c.rocha@ufsc.br"
+    },
+    "LXAD7GO5": {
+        "n_volumes": 3,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-06-11T12:15:08.069000+00:00",
+        "sala": "ambientes-norte/B005",
+        "volumes": [
+            "volumes/wS5f2KDY0uVsNv90vUfZ",
+            "volumes/tKr2Wr2f67q8toYi841O",
+            "volumes/2ayhOetFjIgrEJ1mghQ1"
+        ],
+        "responsavel": "usuarios/leandro.c.rocha@ufsc.br"
+    },
+    "LXADBUWP": {
+        "n_volumes": 1,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-06-11T12:18:33.145000+00:00",
+        "sala": "ambientes-norte/B005",
+        "volumes": [
+            "volumes/BwASkhhzHYf3Ef7rQ0cO"
+        ],
+        "responsavel": "usuarios/leandro.c.rocha@ufsc.br"
+    },
+    "LXADE5C5": {
+        "n_volumes": 1,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-06-11T12:20:19.973000+00:00",
+        "sala": "ambientes-norte/B005",
+        "volumes": [
+            "volumes/rCfbEZVWRPUDsgtgD3ah"
+        ],
+        "responsavel": "usuarios/leandro.c.rocha@ufsc.br"
+    },
+    "LXADK1RC": {
+        "n_volumes": 2,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-06-11T12:24:55.272000+00:00",
+        "sala": "ambientes-norte/B005",
+        "volumes": [
+            "volumes/NuKXuwyi8c5dudMAGvCV",
+            "volumes/C2050034"
+        ],
+        "responsavel": "usuarios/leandro.c.rocha@ufsc.br"
+    },
+    "LXADX83H": {
+        "n_volumes": 5,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-06-11T12:35:10.013000+00:00",
+        "sala": "ambientes-norte/B005",
+        "volumes": [
+            "volumes/I4ZWVNe0HSF5U4gAXUgZ",
+            "volumes/C2050032",
+            "volumes/C2050033",
+            "volumes/K5eJFqsyqXcl0JjOaaNx",
+            "volumes/k0AwO9lUwW7ITDobxoem"
+        ],
+        "responsavel": "usuarios/leandro.c.rocha@ufsc.br"
+    },
+    "LXAHWWNT": {
+        "n_volumes": 9,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-06-11T14:26:53.657000+00:00",
+        "sala": "ambientes-norte/B014",
+        "volumes": [
+            "volumes/C2030031",
+            "volumes/CfrfDqrnpxSqbnu1ztkw",
+            "volumes/roz5KhEPA7kAlsuCyOog",
+            "volumes/R65g5x9S00zsPXWIrRgx",
+            "volumes/C106007C",
+            "volumes/C2010061",
+            "volumes/Rk6Xy9Ai7Mdf0rUTGLCz",
+            "volumes/C1060084",
+            "volumes/C106007A"
+        ],
+        "responsavel": "usuarios/leandro.c.rocha@ufsc.br"
+    },
+    "LXAHWZ2D": {
+        "n_volumes": 9,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-06-11T14:26:56.773000+00:00",
+        "sala": "ambientes-norte/B014",
+        "volumes": [
+            "volumes/C2030031",
+            "volumes/CfrfDqrnpxSqbnu1ztkw",
+            "volumes/roz5KhEPA7kAlsuCyOog",
+            "volumes/R65g5x9S00zsPXWIrRgx",
+            "volumes/C106007C",
+            "volumes/C2010061",
+            "volumes/Rk6Xy9Ai7Mdf0rUTGLCz",
+            "volumes/C1060084",
+            "volumes/C106007A"
+        ],
+        "responsavel": "usuarios/leandro.c.rocha@ufsc.br"
+    },
+    "LXAHYCV5": {
+        "n_volumes": 6,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-06-11T14:28:01.313000+00:00",
+        "sala": "ambientes-norte/B014",
+        "volumes": [
+            "volumes/C1060072",
+            "volumes/C106007A",
+            "volumes/C106007C",
+            "volumes/tfTofcsqITgDK0tQXrAd",
+            "volumes/Rk6Xy9Ai7Mdf0rUTGLCz",
+            "volumes/R65g5x9S00zsPXWIrRgx"
+        ],
+        "responsavel": "usuarios/leandro.c.rocha@ufsc.br"
+    },
+    "LXAI3VY7": {
+        "n_volumes": 10,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-06-11T14:32:19.327000+00:00",
+        "sala": "ambientes-norte/B014",
+        "volumes": [
+            "volumes/C1060082",
+            "volumes/C1060085",
+            "volumes/C308004C",
+            "volumes/C1060076",
+            "volumes/C1060077",
+            "volumes/C2010061",
+            "volumes/C1060080",
+            "volumes/C1060079",
+            "volumes/C106007B",
+            "volumes/C3080034"
+        ],
+        "responsavel": "usuarios/leandro.c.rocha@ufsc.br"
+    },
+    "LXAI4W56": {
+        "n_volumes": 4,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-06-11T14:33:06.234000+00:00",
+        "sala": "ambientes-norte/B014",
+        "volumes": [
+            "volumes/C106005C",
+            "volumes/C3080030",
+            "volumes/C3080032",
+            "volumes/C1052116"
+        ],
+        "responsavel": "usuarios/leandro.c.rocha@ufsc.br"
+    },
+    "LXAI5OBS": {
+        "n_volumes": 4,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-06-11T14:33:42.760000+00:00",
+        "sala": "ambientes-norte/B014",
+        "volumes": [
+            "volumes/C1052116",
+            "volumes/C1060083",
+            "volumes/C2010057",
+            "volumes/C106007F"
+        ],
+        "responsavel": "usuarios/leandro.c.rocha@ufsc.br"
+    },
+    "LXAI7DII": {
+        "n_volumes": 6,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-06-11T14:35:02.058000+00:00",
+        "sala": "ambientes-norte/B014",
+        "volumes": [
+            "volumes/ioMNQdhLnmkmYKFe1pxV",
+            "volumes/C1060075",
+            "volumes/LZP8rwfo9N2aN8tHblYe",
+            "volumes/C1060063",
+            "volumes/C1060071",
+            "volumes/C1010070"
+        ],
+        "responsavel": "usuarios/leandro.c.rocha@ufsc.br"
+    },
+    "LXAID7OJ": {
+        "n_volumes": 11,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-06-11T14:39:34.435000+00:00",
+        "sala": "ambientes-norte/B014",
+        "volumes": [
+            "volumes/apLmoO0ziQHDJ4GSuRXs",
+            "volumes/Gy0P7Xzm4ZBSPK3Oid0w",
+            "volumes/C106006A",
+            "volumes/C1060073",
+            "volumes/C2010054",
+            "volumes/C106007E",
+            "volumes/C1052112",
+            "volumes/C1060066",
+            "volumes/C106006E",
+            "volumes/C2050051",
+            "volumes/C106005E"
+        ],
+        "responsavel": "usuarios/leandro.c.rocha@ufsc.br"
+    },
+    "LXAILHFQ": {
+        "n_volumes": 10,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-06-11T14:46:00.326000+00:00",
+        "sala": "ambientes-norte/B014",
+        "volumes": [
+            "volumes/C1020050",
+            "volumes/C1020054",
+            "volumes/C1010082",
+            "volumes/C102004E",
+            "volumes/C102004D",
+            "volumes/C106007D",
+            "volumes/C102004F",
+            "volumes/C106008D",
+            "volumes/C1020058",
+            "volumes/C1060074"
+        ],
+        "responsavel": "usuarios/leandro.c.rocha@ufsc.br"
+    },
+    "LXAIVP5Z": {
+        "n_volumes": 11,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-06-11T14:53:56.903000+00:00",
+        "sala": "ambientes-norte/B014",
+        "volumes": [
+            "volumes/u5fYCMx6Kk0u9OV2Hz5u",
+            "volumes/8F7iHNVBklOTxG7yx6mv",
+            "volumes/C1010073",
+            "volumes/C1010072",
+            "volumes/C101007B",
+            "volumes/C101007A",
+            "volumes/C1010084",
+            "volumes/C101008D",
+            "volumes/C102005B",
+            "volumes/C1020046",
+            "volumes/C102005A"
+        ],
+        "responsavel": "usuarios/leandro.c.rocha@ufsc.br"
+    },
+    "LXAJ2JAD": {
+        "n_volumes": 5,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-06-11T14:59:15.877000+00:00",
+        "sala": "ambientes-norte/B014",
+        "volumes": [
+            "volumes/agMH6KeILxRe6FV6layK",
+            "volumes/nfywBbjMgcxWzG7eiWKw",
+            "volumes/Xjzn1lecqsmz0J1uUxfu",
+            "volumes/C1020048",
+            "volumes/C1020047"
+        ],
+        "responsavel": "usuarios/leandro.c.rocha@ufsc.br"
+    },
+    "LXAJ6GDC": {
+        "n_volumes": 9,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-06-11T15:02:18.720000+00:00",
+        "sala": "ambientes-norte/B014",
+        "volumes": [
+            "volumes/C1020049",
+            "volumes/UnXBwiuWb5QVi0kafSBg",
+            "volumes/frMRUZNB2QArB2V7p1iN",
+            "volumes/C1060068",
+            "volumes/C1020061",
+            "volumes/C106006B",
+            "volumes/C1010086",
+            "volumes/C1060081",
+            "volumes/C102005D"
+        ],
+        "responsavel": "usuarios/leandro.c.rocha@ufsc.br"
+    },
+    "LXAJ7Y5H": {
+        "n_volumes": 6,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-06-11T15:03:28.421000+00:00",
+        "sala": "ambientes-norte/B014",
+        "volumes": [
+            "volumes/C102005F",
+            "volumes/C1020055",
+            "volumes/ioMNQdhLnmkmYKFe1pxV",
+            "volumes/nfywBbjMgcxWzG7eiWKw",
+            "volumes/C102005C",
+            "volumes/C102005E"
+        ],
+        "responsavel": "usuarios/leandro.c.rocha@ufsc.br"
+    },
+    "LXAJO38Q": {
+        "n_volumes": 11,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-06-11T15:16:01.514000+00:00",
+        "sala": "ambientes-norte/B014",
+        "volumes": [
+            "volumes/C106006D",
+            "volumes/C1060067",
+            "volumes/C1020057",
+            "volumes/C1010079",
+            "volumes/VulsjBlX4yft591Jtep2",
+            "volumes/C1010087",
+            "volumes/C1020059",
+            "volumes/CUTTAVNYlLsWRRAJiBip",
+            "volumes/C1060056",
+            "volumes/C1020060",
+            "volumes/DD3PcCR7qWUMdhpVZjcY"
+        ],
+        "responsavel": "usuarios/leandro.c.rocha@ufsc.br"
+    },
+    "LXAQWJOM": {
+        "n_volumes": 3,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-06-11T18:38:33.382000+00:00",
+        "sala": "ambientes-norte/B006",
+        "volumes": [
+            "volumes/bKLcL57Gr8FELv3zwg4t",
+            "volumes/bQC3X8XrJZ8rCJUT3jmz",
+            "volumes/R58EQkhh8ylpYE375zAk"
+        ],
+        "responsavel": "usuarios/leandro.c.rocha@ufsc.br"
+    },
+    "LXAR0Y6P": {
+        "n_volumes": 4,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-06-11T18:41:58.801000+00:00",
+        "sala": "ambientes-norte/B006",
+        "volumes": [
+            "volumes/C1060091",
+            "volumes/V353306I",
+            "volumes/V347813",
+            "volumes/C1060087"
+        ],
+        "responsavel": "usuarios/leandro.c.rocha@ufsc.br"
+    },
+    "LXAR3WIC": {
+        "n_volumes": 3,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-06-11T18:44:16.596000+00:00",
+        "sala": "ambientes-norte/B005",
+        "volumes": [
+            "volumes/V322795",
+            "volumes/YxRp8TR5tnv7qjsTCuq9",
+            "volumes/V317084"
+        ],
+        "responsavel": "usuarios/leandro.c.rocha@ufsc.br"
+    },
+    "LXARA72X": {
+        "n_volumes": 7,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-06-11T18:49:10.233000+00:00",
+        "sala": "ambientes-norte/B014",
+        "volumes": [
+            "volumes/V327599",
+            "volumes/UL3nc4H8xrPwB5ASZICf",
+            "volumes/C203003B",
+            "volumes/VHRXo6oYXrzQxHYybrRH",
+            "volumes/C106008E",
+            "volumes/C106008F",
+            "volumes/C1060092"
+        ],
+        "responsavel": "usuarios/leandro.c.rocha@ufsc.br"
+    },
+    "LXARE4CH": {
+        "n_volumes": 3,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-06-11T18:52:13.313000+00:00",
+        "sala": "ambientes-norte/B005",
+        "volumes": [
+            "volumes/WiNrls6sT1uk6LWVvVjW",
+            "volumes/vW9bFDkQeqBsd9O3nbR5",
+            "volumes/P7RIYJ8E1UF4d5LdLRAU"
+        ],
+        "responsavel": "usuarios/leandro.c.rocha@ufsc.br"
+    },
+    "LXARIO43": {
+        "n_volumes": 2,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-06-11T18:55:45.555000+00:00",
+        "sala": "ambientes-norte/B005",
+        "volumes": [
+            "volumes/C1060090",
+            "volumes/nfywBbjMgcxWzG7eiWKw"
+        ],
+        "responsavel": "usuarios/leandro.c.rocha@ufsc.br"
+    },
+    "LXARM76G": {
+        "n_volumes": 3,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-06-11T18:58:30.232000+00:00",
+        "sala": "ambientes-norte/B005",
+        "volumes": [
+            "volumes/C2041038",
+            "volumes/CcSwkq2p18yrFsKaPFPc",
+            "volumes/sHrIQrzBDJM68d6XrPoc"
+        ],
+        "responsavel": "usuarios/leandro.c.rocha@ufsc.br"
+    },
+    "LXARTC2M": {
+        "n_volumes": 6,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-06-11T19:04:03.166000+00:00",
+        "sala": "ambientes-norte/B005",
+        "volumes": [
+            "volumes/ZS63jfpNOF3ZFJVBaXRu",
+            "volumes/ltk49k48xAb86fkMX3N9",
+            "volumes/C1060094",
+            "volumes/z409ZDfDs0FQNPdaBUhe",
+            "volumes/vW9bFDkQeqBsd9O3nbR5",
+            "volumes/l9LsdGX6LoM8VgY3k2aB"
+        ],
+        "responsavel": "usuarios/leandro.c.rocha@ufsc.br"
+    },
+    "LXAS3CX3": {
+        "n_volumes": 8,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-06-11T19:11:50.823000+00:00",
+        "sala": "ambientes-norte/B005",
+        "volumes": [
+            "volumes/48QA76bWkvZNzY3JWPXy",
+            "volumes/ZJ9gP4grJEBArDqAPoi2",
+            "volumes/LEmJZ4Cxxf3T2eUAMjZo",
+            "volumes/T4mctz4frPEEfv7snhsZ",
+            "volumes/V348000",
+            "volumes/C1060095",
+            "volumes/ffPZRAzKJa3yG6BCm4sW",
+            "volumes/V352990"
+        ],
+        "responsavel": "usuarios/leandro.c.rocha@ufsc.br"
+    },
+    "LXBTC2OQ": {
+        "n_volumes": 3,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-06-12T12:34:23.258000+00:00",
+        "sala": "ambientes-norte/B012",
+        "volumes": [
+            "volumes/Y3aZHbCZs1vWAEJ7A2B8",
+            "volumes/krxRFO87HmlaWNatmpk3",
+            "volumes/Im05AZl5cWU3IKvdfAUc"
+        ],
+        "responsavel": "usuarios/leandro.c.rocha@ufsc.br"
+    },
+    "LXBUJKIZ": {
+        "n_volumes": 4,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-06-12T13:08:12.587000+00:00",
+        "sala": "ambientes-norte/B012",
+        "volumes": [
+            "volumes/beuXI6kodlLE3EqhdqW9",
+            "volumes/V353079",
+            "volumes/FA6jgpPzHmC6L16iwRBF",
+            "volumes/fKdsu6I85oFm5Im8tce6"
+        ],
+        "responsavel": "usuarios/leandro.c.rocha@ufsc.br"
+    },
+    "LXC3WU9T": {
+        "n_volumes": 4,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-06-12T17:30:28.289000+00:00",
+        "sala": "ambientes-norte/A001",
+        "volumes": [
+            "volumes/C1051016",
+            "volumes/C1051017",
+            "volumes/XxH4tKyM0bTVJyQdptVM",
+            "volumes/s3hS1zsNjXKQpA5BSX1X"
+        ],
+        "responsavel": "usuarios/weliton.hodecker@ufsc.br"
+    },
+    "LXM9RBYJ": {
+        "n_volumes": 43,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-06-19T20:11:50.731000+00:00",
+        "sala": "ambientes-norte/A007",
+        "volumes": [
+            "volumes/C1052120",
+            "volumes/C105211F",
+            "volumes/C105211E",
+            "volumes/C105211B",
+            "volumes/C105211C",
+            "volumes/C105211A",
+            "volumes/C1052118",
+            "volumes/C1052116",
+            "volumes/C1052114",
+            "volumes/C1052112",
+            "volumes/C1052110",
+            "volumes/C105210E",
+            "volumes/C105210C",
+            "volumes/C105210A",
+            "volumes/C1052108",
+            "volumes/C1052106",
+            "volumes/C1052104",
+            "volumes/C1052102",
+            "volumes/C1052100",
+            "volumes/C10520FE",
+            "volumes/C10520FC",
+            "volumes/C10520FA",
+            "volumes/C10520F7",
+            "volumes/C10520F5",
+            "volumes/C10520F3",
+            "volumes/C10520F1",
+            "volumes/C10520EF",
+            "volumes/C10520EC",
+            "volumes/0t4rCeiRToUtX4IvNTSq",
+            "volumes/Ihw9mFEMoUtwLaYAeEwu",
+            "volumes/ttm9viklQk0HoYNFkhEI",
+            "volumes/2bMtNRCVToS2zNMlyUs2",
+            "volumes/CKXWmqXlzfbLXnDgFoVa",
+            "volumes/omcgbMBTmG61GAU0oVDy",
+            "volumes/J01u1evI62GNUQPLxN2B",
+            "volumes/FiXAACHYQ07wtNO7JI9S",
+            "volumes/gB1WtgoWaeKBqk5XUVWA",
+            "volumes/80hJHkkQkRhq9GywkjSV",
+            "volumes/R59LLAS4SaSRaP5teTFy",
+            "volumes/p2P90AwPuUPbjxa7XGcv",
+            "volumes/XhI1KNvbm9hIxw5rmxC4",
+            "volumes/lVyLkMaxlf4xBBdVwXvJ",
+            "volumes/qfJ0c656hrRxu4hffNuh"
+        ],
+        "responsavel": "usuarios/patricia.barthel@ufsc.br"
+    },
+    "LXM9S9AD": {
+        "n_volumes": 6,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-06-19T20:12:33.925000+00:00",
+        "sala": "ambientes-norte/A007",
+        "volumes": [
+            "volumes/qfJ0c656hrRxu4hffNuh",
+            "volumes/MgXLYFYsZI5ZCGzzmXIx",
+            "volumes/FixCCmzN0Tw2K66v00qE",
+            "volumes/xtEUIyvdcqLjADuh5xih",
+            "volumes/ttNi2mTNbO20dgDcFztI",
+            "volumes/VMafzKwLgcPo3U6nJVfK"
+        ],
+        "responsavel": "usuarios/patricia.barthel@ufsc.br"
+    },
+    "LXM9TTQO": {
+        "n_volumes": 18,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-06-19T20:13:47.088000+00:00",
+        "sala": "ambientes-norte/A007",
+        "volumes": [
+            "volumes/VMafzKwLgcPo3U6nJVfK",
+            "volumes/k9jFzRzRcpdWCtEYOTDx",
+            "volumes/suG8Qszdk3IDRSxmPs09",
+            "volumes/nhbGK0ReITTHYRJCqOy2",
+            "volumes/kn7WBa6odTOMU29744rp",
+            "volumes/II8D3eLW0JbwFNRnRmJM",
+            "volumes/tZSeLV8zxW1zFDzwOpm8",
+            "volumes/WqHsiuyyZOqW0jxv23Id",
+            "volumes/edkUvjupYl27HJ8y5peV",
+            "volumes/v8ZGJEtaohNum07cxWUk",
+            "volumes/ivNR5xV9yagsqjBT3X43",
+            "volumes/2XKuyxrfOPFe69F9yWa2",
+            "volumes/ecPT1UrEcrpKZ0rIxQJI",
+            "volumes/YoRLjX6yN85hXNxcrxGZ",
+            "volumes/wLmtf4jaFNbKnCg2deVV",
+            "volumes/NJfz1LoR8ul2AqWOlWYm",
+            "volumes/I9ckGCUUCfsyo7b8ODZZ",
+            "volumes/PukbVCoNjKBHHeOe3Nve"
+        ],
+        "responsavel": "usuarios/patricia.barthel@ufsc.br"
+    },
+    "LXM9Z7P6": {
+        "n_volumes": 84,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-06-19T20:17:58.458000+00:00",
+        "sala": "ambientes-norte/A007",
+        "volumes": [
+            "volumes/PukbVCoNjKBHHeOe3Nve",
+            "volumes/aHDS4hQKohBsjJq8PhER",
+            "volumes/3ribXzrqSBJSt2v29siH",
+            "volumes/kgnrjlt6C1DDMh7GT5DO",
+            "volumes/hYgk640td1geFNakMJDQ",
+            "volumes/tbMeZy5AMf1HNXCKoqmT",
+            "volumes/eTUXdWgflfmlqOmQwZ0U",
+            "volumes/VqokCnNAbFQIKtdxnINA",
+            "volumes/VpZD3DVrVtOvJa5FlFsa",
+            "volumes/bL3aJSOIkUqpaPxmf9zN",
+            "volumes/a82ZZVhM2n0HGJ8TKncE",
+            "volumes/8D1WjHUQTpA78T9FVhhy",
+            "volumes/LjMZerGiZHFcWhF8lad2",
+            "volumes/ylc3ifW5garK7mqh6thn",
+            "volumes/6ODgJPvhVws65SkOZj7f",
+            "volumes/aX2aEJze6yJG2ayPdoTz",
+            "volumes/WVXR2FsqlKpKujOG4oNx",
+            "volumes/veUYFvhIfisoOauiTiF0",
+            "volumes/wECWbBZrKMGhdrN03b3r",
+            "volumes/vkHOYgm3vk0GUiNn3mJf",
+            "volumes/1xd6LmxUiJROOl3Bk6hc",
+            "volumes/oy5vLx0Ikd3r8ZkQf11e",
+            "volumes/Qj9BIONIESvW3T4dvXcf",
+            "volumes/iKcD2BhClcaiUrZIZ3Sl",
+            "volumes/0yApveIdmlpvIiTLOnTN",
+            "volumes/5JJaoQTUYL2XF9k8Iflq",
+            "volumes/kuzAG2ALRhts7yB7tkwy",
+            "volumes/iMsKRL0slE964PiHGWIO",
+            "volumes/XoGNBKgju6QlYJ6JpBLy",
+            "volumes/r2Bpvx3wN1p4m18Vhiy2",
+            "volumes/BouX61pht6JYiorvBqRt",
+            "volumes/vyQZdirxVaXnKdmp5yHq",
+            "volumes/9WsM7rWvEUqPsEgN3Mg3",
+            "volumes/wtj3GPK9jDYR956CVlV8",
+            "volumes/kYZJ68wuhxN4bQ2ZK0L7",
+            "volumes/EXEG35ujyR1jdvqGNtZr",
+            "volumes/DiI4CcPSyau2il530oIt",
+            "volumes/TPspvwLx1tSiVXxEdzUB",
+            "volumes/n5qgE1CttLcuHpuCzk2d",
+            "volumes/ASNICuXFWLFSK6oYXskr",
+            "volumes/pAYIH5WLtqRir68wmRbf",
+            "volumes/DRDWEyESovocLsF3JAds",
+            "volumes/hFOOSTlMFijjL2QBmhie",
+            "volumes/bB12DywilTCvBaoc3eTm",
+            "volumes/mVRP7VVK60r81Zaj0Z6t",
+            "volumes/n1iLwJSSby9mUVNDUYUI",
+            "volumes/6FAuEfCjHAAfWmZgIQ2L",
+            "volumes/Q3C2uV6gxCWqEzm4FyW0",
+            "volumes/vJBEHnkgUicyTg4FWXuB",
+            "volumes/1XfVtGrvn6bmeIhNOHUf",
+            "volumes/Ob1R54uQAta9uZ2Vs8B3",
+            "volumes/YM9IxGbv06il03jJYQwt",
+            "volumes/uRqLUulTXpNaYY1fwMcN",
+            "volumes/vcotyCpiUOZCY0NfzIY4",
+            "volumes/DqUNdcKtH1Tu3QwwgIc1",
+            "volumes/4sQIDWnfATcred4vu3Xa",
+            "volumes/KdRRuLAUmnE4ku7n4hfz",
+            "volumes/K4U6XzQpjA82ceSb9BvL",
+            "volumes/GlD41BNh9PJ74tzTpOnp",
+            "volumes/o9dGmGzwPsdkdOQ2rm0z",
+            "volumes/IllztjNRK3vwaGpmCBYL",
+            "volumes/QMV4E7KzAuf3nT6pv8JS",
+            "volumes/4gpElf00FVsZMDkzefZ3",
+            "volumes/9veRiBiv31OfEBnQje5d",
+            "volumes/XOguyB21B6YIFfDP6w2d",
+            "volumes/kK2EfK24sjhoY9Hgel0O",
+            "volumes/233FjRZsU0Eg622ItuXS",
+            "volumes/UEX6v6v5NZUFYJRproRV",
+            "volumes/5ctIto6zxgX97Cb7UYp1",
+            "volumes/3pgDyy1XbE1NjVBpDvVj",
+            "volumes/054rY6uFuX3MYwzl4RkR",
+            "volumes/xDv9EX9t5OFXCW5g4CnE",
+            "volumes/kYgVIAJn1NYdfHHBijfZ",
+            "volumes/rG72kq447fslmPWJddl1",
+            "volumes/vHis0QwosPtYceYY6oBy",
+            "volumes/2KoDjG7o3OrncJS5S4kT",
+            "volumes/ST79mXfPdJf7UfROypch",
+            "volumes/Vg7n866TAXq2zGWQHBdp",
+            "volumes/Oc94SnLfrxifiBbIrpTy",
+            "volumes/8VdOvzLI5SXQPC8ceH7x",
+            "volumes/RsTbAfRq7XQ98oRJDP1l",
+            "volumes/9WFwuoOb9SvxqIXXheUq",
+            "volumes/V1seXV1tK9Het4whpB06",
+            "volumes/tKyeoVyCiz0cCbsybu72"
+        ],
+        "responsavel": "usuarios/patricia.barthel@ufsc.br"
+    },
+    "LXMA1WB0": {
+        "n_volumes": 6,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-06-19T20:20:03.660000+00:00",
+        "sala": "ambientes-norte/A007",
+        "volumes": [
+            "volumes/I27QUdtx3eSMRu2sknw9",
+            "volumes/XcANYRqqrLJPVE4VGQVF",
+            "volumes/W5euBsJYLDufgsLwZFNO",
+            "volumes/kDScm3aKM5ztPnYbxZ4B",
+            "volumes/dia13ayAPX0RYUGUWV5g",
+            "volumes/FyNNWxMSWcyunqo0AAEX"
+        ],
+        "responsavel": "usuarios/patricia.barthel@ufsc.br"
+    },
+    "LXMA4YP8": {
+        "n_volumes": 40,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-06-19T20:22:26.732000+00:00",
+        "sala": "ambientes-norte/A007",
+        "volumes": [
+            "volumes/xTlbe0K2wudrYY9J2QyU",
+            "volumes/I27QUdtx3eSMRu2sknw9",
+            "volumes/dia13ayAPX0RYUGUWV5g",
+            "volumes/RT9fOSkITWRNFsJRvyxh",
+            "volumes/3EikYAfBCERewQoci4CD",
+            "volumes/uWvcvyx1zOEUBt4Dtb4T",
+            "volumes/V1seXV1tK9Het4whpB06",
+            "volumes/MP8cTGjoVKLCqb39Mmp6",
+            "volumes/yJVuZpHYQcfNvhrvaf9l",
+            "volumes/8GHLOqdA7s5pTrqZYIxE",
+            "volumes/UF1ktsmtWgqsdcFkn6OK",
+            "volumes/yL85epHg3otoowiIkQmp",
+            "volumes/qQeikXeUy2KraOa77Uz6",
+            "volumes/Gp7XeqvtD7Aw5h4PpxI4",
+            "volumes/3yAvj0j0VKxj9gjMVW7d",
+            "volumes/OwoxgZ4S0LebbPDnsZnK",
+            "volumes/HWdDpWnzXnEov4boP3bj",
+            "volumes/sZYuSpV58wFRL2eTXv2n",
+            "volumes/xyyqUOhAMpcTiN7XMlW8",
+            "volumes/mzUvTAxy8uMlwyS8l9el",
+            "volumes/UEOSOWijlhmS4aLrObsc",
+            "volumes/79LCv7FAJyNiAMpP1XhX",
+            "volumes/EN3J019ufon6S8h51OIJ",
+            "volumes/M6XMjiTcGIkh6BHm3MRi",
+            "volumes/f5FZYCWfde9PLFztMKug",
+            "volumes/jVLMiIK7D20QXePKZwQj",
+            "volumes/4vi6xiyLv1lYrjWntKsN",
+            "volumes/pdnLWCHR6AYnP4m731US",
+            "volumes/rCd732mx23mBDdA9NHYK",
+            "volumes/KOl5qhOu7OB7ajE7G915",
+            "volumes/MfYfp5eP9VWsWPejEw3x",
+            "volumes/0lMeQfVNAaZ7v8m8OvEN",
+            "volumes/fk79lykl6PGELKYPgJrx",
+            "volumes/qRwX87NY5OIGdJT0Yayl",
+            "volumes/Pr12OQcSZmGGeMacptYk",
+            "volumes/7FLGeziN2koTuwduxpEH",
+            "volumes/EYDsQuxHRV0hBougSuGI",
+            "volumes/WUNgL9M2k9C919z4ofJt",
+            "volumes/3J8wAuJG0FuBXyJGK48s",
+            "volumes/cuk2JlhZ9b3faRQWYIUA"
+        ],
+        "responsavel": "usuarios/patricia.barthel@ufsc.br"
+    },
+    "LXMA6CWT": {
+        "n_volumes": 9,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-06-19T20:23:31.805000+00:00",
+        "sala": "ambientes-norte/A007",
+        "volumes": [
+            "volumes/s3jHbKTbxqNTdUWtuhw7",
+            "volumes/T28OE42ckXXNwmKaecGR",
+            "volumes/Y4RBOwpKNyL7wW2wjY1v",
+            "volumes/vQVcg5DDjw9VaVi4a2To",
+            "volumes/DBBwFaMuZta0ZlrihsCU",
+            "volumes/b1b5mCYp8vWUrnkNZnNT",
+            "volumes/RC37hESjRuPFARTx5oka",
+            "volumes/5k2K3IFPWw4ptwjU5V9E",
+            "volumes/3DCl9efGSyZhEbLkYWZI"
+        ],
+        "responsavel": "usuarios/patricia.barthel@ufsc.br"
+    },
+    "LXMABHXJ": {
+        "n_volumes": 98,
+        "tipo": "Descarregamento",
+        "data_criado": "2024-06-19T20:27:31.591000+00:00",
+        "sala": "ambientes-norte/A007",
+        "volumes": [
+            "volumes/sytxX7qHv772UC8vaNtm",
+            "volumes/dFdR9CVE1LGkDUVgpj4I",
+            "volumes/8zcPj7ThqtvToPwptQrm",
+            "volumes/bOqgjZ65yJkcCWPr8VNw",
+            "volumes/K1twXCNygMkjxbru3VIr",
+            "volumes/mA6KbkmgCuvne1Bu22kO",
+            "volumes/W14jTPrxbCTKIH8Bu9VI",
+            "volumes/DeXjzfkVpLKv5vTUKqpZ",
+            "volumes/RsjkaIma8ybLClbz4dBD",
+            "volumes/706e70GLgSizXgje0UHc",
+            "volumes/ebWbn7D3kVnFoiOCs9xc",
+            "volumes/KO32nPBgJcGEJveUVUa7",
+            "volumes/6lEVUyiE5urH0oggRl4I",
+            "volumes/7hXfGSlfEyuDljDUIqxP",
+            "volumes/MOPlNQSOmlOqR3Jjzl1l",
+            "volumes/7xSYQq3SUGfByrxrOVIw",
+            "volumes/e4pstkgPs7BwwXntoqUX",
+            "volumes/sH2f6kjhtLnB3BbFDWhe",
+            "volumes/mLHmcGRDX0NtoLP9AhqA",
+            "volumes/ym2OkWYbdEkq6dQqAxLS",
+            "volumes/z2CeUJwDOEdtfdrz5XFZ",
+            "volumes/c9L5nkJKufqhZuKuP8HA",
+            "volumes/Pi0Yr4miuovCkQLHcSW9",
+            "volumes/6UNKLYB5tvRuT9hQquvX",
+            "volumes/DPHa8Ct62KApznScjHOZ",
+            "volumes/Xs9zxd7PkD2jijIHpXrR",
+            "volumes/B7fFfhnfne7SNxEIONeL",
+            "volumes/mkwNY0tGYjMLIcq0O2T9",
+            "volumes/uRkNtYmbaiIYUpuHqaHG",
+            "volumes/g3wkrn2ecITaZju7103i",
+            "volumes/LFAx1bBJPhXU7GknonSa",
+            "volumes/X6tX4exR8mA2gRlZV18f",
+            "volumes/xk4hpEqumByYV3sycRz0",
+            "volumes/hVW30CpXzqg51d7QM9nF",
+            "volumes/Fkf2QJ4BPDrLR9QQJUeW",
+            "volumes/3ribXzrqSBJSt2v29siH",
+            "volumes/aHDS4hQKohBsjJq8PhER",
+            "volumes/PukbVCoNjKBHHeOe3Nve",
+            "volumes/I9ckGCUUCfsyo7b8ODZZ",
+            "volumes/NJfz1LoR8ul2AqWOlWYm",
+            "volumes/Rfa6ciAiEPN781Nqiisf",
+            "volumes/YoRLjX6yN85hXNxcrxGZ",
+            "volumes/19QOEYxf47w9Bx2yyS5K",
+            "volumes/P14v7iEqi7aVpi6IfjgQ",
+            "volumes/FpD1o2gImpbSk1AXZomK",
+            "volumes/LyDory3NlboabYAPipPT",
+            "volumes/KYbV6lCB2U4oXJWpWdce",
+            "volumes/D0EsuSwOhGFbrQ3f1I05",
+            "volumes/FDXXmU6bNYgMPkiMnPLB",
+            "volumes/F1lsHuCFNSZd3WFYPCHI",
+            "volumes/m5R8Uv2VaylWFY2oEN51",
+            "volumes/4QvUFDMtxEDPa3iC4VMw",
+            "volumes/oSpl9gpeePj08DnXqQbr",
+            "volumes/k9jFzRzRcpdWCtEYOTDx",
+            "volumes/VMafzKwLgcPo3U6nJVfK",
+            "volumes/CgCej3IWRBRVtDQR9hVO",
+            "volumes/e1bunfNTYuJFzp3fS0r2",
+            "volumes/NNVVGfych0HL7UaTwD0Y",
+            "volumes/ezuFT1oGxEjIOSd6DoZK",
+            "volumes/y1qLZA6BZHuGGJGxrExL",
+            "volumes/IMjzVfgGkL3A7k9dlyYi",
+            "volumes/S1j5lMOZypc0iziH7piO",
+            "volumes/iG8Y5gdXYgOqpDGHDIjO",
+            "volumes/80hJHkkQkRhq9GywkjSV",
+            "volumes/gB1WtgoWaeKBqk5XUVWA",
+            "volumes/6D7X0EUgZtYBX24f3l1O",
+            "volumes/WFLIhVbJ2SwOneMB3rYO",
+            "volumes/ARqE3w7YyfEcG9N6Uco6",
+            "volumes/yIFEOhSC3LfxCvG8jmDo",
+            "volumes/xY3R6RekchxEpkXaKC2W",
+            "volumes/SACISFlf11bTSzOIcB2R",
+            "volumes/qILKpkFviRCEqZrFckfl",
+            "volumes/iFeNIZdY8aiGTL8jvviV",
+            "volumes/C10520EE",
+            "volumes/C10520F0",
+            "volumes/C10520F2",
+            "volumes/C10520F4",
+            "volumes/C10520F6",
+            "volumes/C10520F9",
+            "volumes/C10520FB",
+            "volumes/C10520FD",
+            "volumes/C10520FF",
+            "volumes/C1052101",
+            "volumes/C1052103",
+            "volumes/C1052105",
+            "volumes/C1052107",
+            "volumes/C1052109",
+            "volumes/C105210B",
+            "volumes/C105210D",
+            "volumes/C105210F",
+            "volumes/C1052111",
+            "volumes/C1052113",
+            "volumes/C1052115",
+            "volumes/C1052117",
+            "volumes/C1052119",
+            "volumes/C105211B",
+            "volumes/C105211D",
+            "volumes/C105211F"
+        ],
+        "responsavel": "usuarios/patricia.barthel@ufsc.br"
+    }
+}
