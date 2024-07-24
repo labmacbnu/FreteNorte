@@ -28,7 +28,7 @@ export async function loginWithGoogle() {
     const provider = new GoogleAuthProvider();
     const auth = getAuth(firebaseApp); 
 
-    var result = await signInWithRedirect(auth, provider)
+    var result = await signInWithPopup(auth, provider)
     if (!result.errorCode) {
         // This gives you a Google Access Token. You can use it to access the Google API.
         const credential = GoogleAuthProvider.credentialFromResult(result);
