@@ -1,7 +1,7 @@
 <script setup>
 import { onBeforeMount, ref, computed, reactive, watch } from 'vue';
 import { useAmbientesStore, create_ambiente, add_lider_ambiente } from '../stores/ambientes';
-import Modal from '../components/Modal.vue';
+import Modal from '@/components/Modal.vue';
 import ProgressBar from '@/components/ProgressBar.vue';
 import FreteLink from '@/components/FreteLink.vue';
 import { useUsuariosStore } from '../stores/users';
