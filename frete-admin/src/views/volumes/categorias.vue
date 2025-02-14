@@ -35,14 +35,14 @@ function deleta(i){
     <h3>Categorias dos volumes</h3> 
     <template v-if="!pending">
     <ul class="list-group">
+        <li class="list-group-item">
+            <input v-model="nova_categoria" @keypress.enter="inputa" class="form-control" placeholder="Digite uma nova categoria, pressione enter para adicionar">
+        </li>
         <li class="list-group-item d-flex justify-content-between align-items-center"
          v-for="(categoria, idx) in categorias.valores">
          {{ categoria }}
          <span role="button" class="badge bg-danger rounded-pill"
          @click="deleta(idx)"><i class="bi bi-trash fs-3"></i></span>
-        </li>
-        <li class="list-group-item">
-            <input v-model="nova_categoria" @keypress.enter="inputa" class="form-control" placeholder="Digite uma nova categoria">
         </li>
     </ul>
     </template>
