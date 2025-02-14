@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia'
 import { computed, reactive, ref } from 'vue';
-import { getFirestore, doc, addDoc, collection, getDocs, updateDoc, arrayRemove, arrayUnion } from 'firebase/firestore'
+import { getFirestore, doc, addDoc, collection, getDocs, setDoc, updateDoc, arrayRemove, arrayUnion } from 'firebase/firestore'
 import { firebaseApp } from '../firebaseConfig'
 import { useCollection } from 'vuefire';
 
@@ -82,6 +82,12 @@ export const useUsuariosStore = defineStore("userscontrol", () => {
         return uptime
     }
 
+    async function add_user(user) {
+        const docref = doc(db, "usuarios", user.email)
+        const uptime = await setDoc(docref, user)
+        return uptime
+    }
 
-    return {usuarios, update_user, edit_array, add_ambiente, remove_ambiente, update_role}
+
+    return {usuarios, update_user, edit_array, add_ambiente, remove_ambiente, update_role, add_user}
 })
